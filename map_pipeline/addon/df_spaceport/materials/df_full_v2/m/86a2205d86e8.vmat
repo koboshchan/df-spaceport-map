@@ -1,0 +1,17 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_H_FutureTech_Furniture_Project_80323dbe85fc.png"
+	TextureNormal "materials/df_full_v2/t/T_H_FutureTech_Furniture_Project_f0502d9cc540.png"
+	TextureRoughness "materials/df_full_v2/t/T_H_FutureTech_Furniture_Project_184d2535a140.png"
+	TextureMetalness "materials/df_full_v2/t/T_H_FutureTech_Furniture_Project_184d2535a140.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_H_FutureTech_Furniture_Project_184d2535a140.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

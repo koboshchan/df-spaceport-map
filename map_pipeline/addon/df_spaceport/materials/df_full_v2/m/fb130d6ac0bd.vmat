@@ -1,0 +1,17 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_H_FutureTech_Label_Waste_04_CC_94a7f96f67bc.png"
+	TextureNormal "materials/df_full_v2/t/T_H_FutureTech_Label_Waste_04_N__b2ecc8034b52.png"
+	TextureRoughness "materials/df_full_v2/t/T_H_FutureTech_Label_Waste_04_MR_79298b649ed1.png"
+	TextureMetalness "materials/df_full_v2/t/T_H_FutureTech_Label_Waste_04_MR_79298b649ed1.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_H_FutureTech_Label_Waste_04_MR_79298b649ed1.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

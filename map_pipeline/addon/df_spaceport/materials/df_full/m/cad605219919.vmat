@@ -1,0 +1,19 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full/t/T_I_Crack_Decal_01_CC_HD.png_c626d63e2ccb.png"
+	TextureNormal "materials/df_full/t/T_I_Crack_Decal_01_N_HD.png_4c650b8d13cf.png"
+	TextureRoughness "materials/df_full/t/T_I_Crack_Decal_01_MRA_HD.png_4a5e5cda79ab.png"
+	TextureMetalness "materials/df_full/t/T_I_Crack_Decal_01_MRA_HD.png_4a5e5cda79ab.png"
+	TextureAmbientOcclusion "materials/df_full/t/T_I_Crack_Decal_01_MRA_HD.png_4a5e5cda79ab.png"
+	TextureSelfIllumMask "materials/df_full/t/T_I_Crack_Decal_01_CC_HD.png_c626d63e2ccb.png"
+	g_vSelfIllumTint "[1.000000 1.000000 1.000000]"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

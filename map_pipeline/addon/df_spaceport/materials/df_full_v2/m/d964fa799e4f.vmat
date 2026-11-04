@@ -1,0 +1,21 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_Industrial_Vehicle_AerialWorkP_76941999136d.png"
+	TextureNormal "materials/df_full_v2/t/T_Industrial_Vehicle_AerialWorkP_96c5f73276cf.png"
+	TextureRoughness "materials/df_full_v2/t/T_Industrial_Vehicle_AerialWorkP_6f0a69b03c21.png"
+	TextureMetalness "materials/df_full_v2/t/T_Industrial_Vehicle_AerialWorkP_6f0a69b03c21.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_Industrial_Vehicle_AerialWorkP_6f0a69b03c21.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+
+	F_SELF_ILLUM 1
+	TextureSelfIllumMask "materials/df_full_v2/t/T_Industrial_Vehicle_AerialWorkP_76941999136d.png"
+	g_vSelfIllumTint "[0.65 0.65 0.65]"
+}

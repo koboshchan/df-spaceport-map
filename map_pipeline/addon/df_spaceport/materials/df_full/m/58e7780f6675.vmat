@@ -1,0 +1,19 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full/t/T_H_Transport_Utility_Trademark__4999232053e8.png"
+	TextureNormal "materials/df_full/t/T_H_Transport_Utility_Trademark__5d71d43c6c19.png"
+	TextureRoughness "materials/df_full/t/T_H_Transport_Utility_Trademark__b60101f3e44a.png"
+	TextureMetalness "materials/df_full/t/T_H_Transport_Utility_Trademark__b60101f3e44a.png"
+	TextureAmbientOcclusion "materials/df_full/t/T_H_Transport_Utility_Trademark__b60101f3e44a.png"
+	TextureSelfIllumMask "materials/df_full/t/T_H_Transport_Utility_Trademark__4999232053e8.png"
+	g_vSelfIllumTint "[1.000000 1.000000 1.000000]"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

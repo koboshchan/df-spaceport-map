@@ -1,0 +1,17 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_M_Bulidng_Ironwirerailing_C_HD_8cd2a6265615.png"
+	TextureNormal "materials/df_full_v2/t/T_M_Bulidng_Ironwirerailing_N_HD_01fb3657141d.png"
+	TextureRoughness "materials/df_full_v2/t/T_M_Bulidng_Ironwirerailing_MRA__b8e175a09156.png"
+	TextureMetalness "materials/df_full_v2/t/T_M_Bulidng_Ironwirerailing_MRA__b8e175a09156.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_M_Bulidng_Ironwirerailing_MRA__b8e175a09156.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

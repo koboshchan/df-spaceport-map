@@ -1,0 +1,16 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_VMGen_BaseColorMap_a424142d7f5_b12648ee19a4.png"
+	TextureNormal "materials/df_full_v2/t/T_VMGen_NormalMap_22692188d0f9b0_9103e84c2e38.png"
+	TextureRoughness "[0.500000 0.500000 0.500000 0.500000]"
+	TextureMetalness "[0.000000 0.000000 0.000000 0.000000]"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

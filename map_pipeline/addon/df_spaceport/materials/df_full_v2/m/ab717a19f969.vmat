@@ -1,0 +1,17 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_H_Marble_01_CH_HD.png_71f9e16f4da2.png"
+	TextureNormal "materials/df_full_v2/t/T_H_Marble_01_N_HD.png_78a3f96a3c38.png"
+	TextureRoughness "materials/df_full_v2/t/T_H_Marble_01_MRA_HD.png_0e8005aef7b2.png"
+	TextureMetalness "materials/df_full_v2/t/T_H_Marble_01_MRA_HD.png_0e8005aef7b2.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_H_Marble_01_MRA_HD.png_0e8005aef7b2.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

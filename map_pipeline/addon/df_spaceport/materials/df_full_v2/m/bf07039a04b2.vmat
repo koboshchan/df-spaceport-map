@@ -1,0 +1,17 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_H_Industrial_Tools_OxygenConta_a1bceec4f3a0.png"
+	TextureNormal "materials/df_full_v2/t/T_H_Industrial_Tools_OxygenConta_72857dfd0b58.png"
+	TextureRoughness "materials/df_full_v2/t/T_H_Industrial_Tools_OxygenConta_0349cef7f2cf.png"
+	TextureMetalness "materials/df_full_v2/t/T_H_Industrial_Tools_OxygenConta_0349cef7f2cf.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_H_Industrial_Tools_OxygenConta_0349cef7f2cf.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

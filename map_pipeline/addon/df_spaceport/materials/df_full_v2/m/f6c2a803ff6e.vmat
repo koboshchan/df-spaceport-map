@@ -1,0 +1,17 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_H_RadarStation_Props_Paper_01a_63fb13986c3c.png"
+	TextureNormal "materials/df_full_v2/t/T_H_RadarStation_Props_Paper_01a_731a35f4b03a.png"
+	TextureRoughness "materials/df_full_v2/t/T_H_RadarStation_Props_Paper_01a_fb2a3749715d.png"
+	TextureMetalness "materials/df_full_v2/t/T_H_RadarStation_Props_Paper_01a_fb2a3749715d.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_H_RadarStation_Props_Paper_01a_fb2a3749715d.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

@@ -1,0 +1,17 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_GEN_Wooden_Base_04_C_HD.png_b65df22ff5a1.png"
+	TextureNormal "materials/df_full_v2/t/T_GEN_Wooden_Base_04_N_HD.png_480533cf695a.png"
+	TextureRoughness "materials/df_full_v2/t/T_GEN_Wooden_Base_04_MRA_HD.png_b5a810732090.png"
+	TextureMetalness "materials/df_full_v2/t/T_GEN_Wooden_Base_04_MRA_HD.png_b5a810732090.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_GEN_Wooden_Base_04_MRA_HD.png_b5a810732090.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

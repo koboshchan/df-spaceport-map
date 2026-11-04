@@ -1,0 +1,17 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_H_FutureTech_Resort_SpiceBox_0_0f6073300b1f.png"
+	TextureNormal "materials/df_full_v2/t/T_H_FutureTech_Resort_SpiceBox_0_eacb42ea1f92.png"
+	TextureRoughness "materials/df_full_v2/t/T_H_FutureTech_Resort_SpiceBox_0_4d812e210a22.png"
+	TextureMetalness "materials/df_full_v2/t/T_H_FutureTech_Resort_SpiceBox_0_4d812e210a22.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_H_FutureTech_Resort_SpiceBox_0_4d812e210a22.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

@@ -1,0 +1,17 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_M_GEN_Metal_Pillar_03_CH_HD.pn_fd2849b793aa.png"
+	TextureNormal "materials/df_full_v2/t/T_H_FutureTech_Furniture_Radar_0_5ac23872b95b.png"
+	TextureRoughness "materials/df_full_v2/t/T_H_FutureTech_Furniture_Radar_0_bc87c520afb7.png"
+	TextureMetalness "materials/df_full_v2/t/T_H_FutureTech_Furniture_Radar_0_bc87c520afb7.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_H_FutureTech_Furniture_Radar_0_bc87c520afb7.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

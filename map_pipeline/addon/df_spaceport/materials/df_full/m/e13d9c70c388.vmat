@@ -1,0 +1,19 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full/t/T_Generic_Lighting_WallLamp_02_C_ce18e214a6eb.png"
+	TextureNormal "materials/df_full/t/T_Generic_Lighting_WallLamp_02_N_6a05afaa5331.png"
+	TextureRoughness "materials/df_full/t/T_Generic_Lighting_WallLamp_02_C_ce18e214a6eb.png"
+	TextureMetalness "materials/df_full/t/T_Generic_Lighting_WallLamp_02_C_ce18e214a6eb.png"
+	TextureAmbientOcclusion "materials/df_full/t/T_Generic_Lighting_WallLamp_02_C_ce18e214a6eb.png"
+	TextureSelfIllumMask "materials/df_full/t/T_Generic_Lighting_WallLamp_02_E_d8a82b044ef2.png"
+	g_vSelfIllumTint "[1.000000 1.000000 1.000000]"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

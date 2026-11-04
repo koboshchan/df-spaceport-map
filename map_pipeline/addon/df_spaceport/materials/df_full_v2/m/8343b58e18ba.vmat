@@ -1,0 +1,17 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_H_Government_Office_CoffeeMach_f3ff81bf720c.png"
+	TextureNormal "materials/df_full_v2/t/T_H_Government_Office_CoffeeMach_f91d6b95cc22.png"
+	TextureRoughness "materials/df_full_v2/t/T_H_Government_Office_CoffeeMach_2ab5f3010eeb.png"
+	TextureMetalness "materials/df_full_v2/t/T_H_Government_Office_CoffeeMach_2ab5f3010eeb.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_H_Government_Office_CoffeeMach_2ab5f3010eeb.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

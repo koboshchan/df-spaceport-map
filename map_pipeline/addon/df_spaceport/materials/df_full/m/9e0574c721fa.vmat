@@ -1,0 +1,19 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full/t/T_Customiz_DoubleDoor_03_C_HD.pn_28e5a53841dc.png"
+	TextureNormal "materials/df_full/t/T_Customiz_DoubleDoor_03_N_HD.pn_bd9da3082459.png"
+	TextureRoughness "materials/df_full/t/T_Customiz_DoubleDoor_03_MRA_HD._3f55161f349f.png"
+	TextureMetalness "materials/df_full/t/T_Customiz_DoubleDoor_03_MRA_HD._3f55161f349f.png"
+	TextureAmbientOcclusion "materials/df_full/t/T_Customiz_DoubleDoor_03_MRA_HD._3f55161f349f.png"
+	TextureSelfIllumMask "materials/df_full/t/T_Customiz_DoubleDoor_03_C_HD.pn_28e5a53841dc.png"
+	g_vSelfIllumTint "[1.000000 1.000000 1.000000]"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

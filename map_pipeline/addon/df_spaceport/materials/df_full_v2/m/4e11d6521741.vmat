@@ -1,0 +1,22 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+
+	TextureColor "materials/df_full_v2/t/T_VMGen_BaseColorMap_7fad9eb3742_f209fb3aefcc.png"
+	TextureNormal "materials/df_full_v2/t/T_VMGen_NRMap_932e3462fc6eb3501d_ade46cd70352.png"
+	TextureRoughness "materials/df_full_v2/t/T_SpaceCenter_Building_ExterWall_515f830ac4f5.png"
+	TextureMetalness "materials/df_full_v2/t/T_SpaceCenter_Building_ExterWall_515f830ac4f5.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_SpaceCenter_Building_ExterWall_515f830ac4f5.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+
+	F_SELF_ILLUM 1
+	TextureSelfIllumMask "materials/df_full_v2/t/T_VMGen_BaseColorMap_7fad9eb3742_f209fb3aefcc.png"
+	g_vSelfIllumTint "[0.65 0.65 0.65]"
+}

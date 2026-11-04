@@ -1,0 +1,13 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "[0.080000 0.220000 0.320000 1.000000]"
+	TextureRoughness "[0.450000 0.450000 0.450000 0.450000]"
+	TextureMetalness "[0.050000 0.050000 0.050000 0.050000]"
+}

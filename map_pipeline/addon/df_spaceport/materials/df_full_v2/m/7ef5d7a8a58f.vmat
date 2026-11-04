@@ -1,0 +1,19 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_Transport_Airplane_Lighting_04_4678b9584555.png"
+	TextureNormal "materials/df_full_v2/t/T_Transport_Airplane_Lighting_04_59ff0cfac49a.png"
+	TextureRoughness "materials/df_full_v2/t/T_Transport_Airplane_Lighting_04_4678b9584555.png"
+	TextureMetalness "materials/df_full_v2/t/T_Transport_Airplane_Lighting_04_4678b9584555.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_Transport_Airplane_Lighting_04_4678b9584555.png"
+	TextureSelfIllumMask "materials/df_full_v2/t/T_Transport_Airplane_Lighting_04_e337bfcb8ea6.png"
+	g_vSelfIllumTint "[1.000000 1.000000 1.000000]"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

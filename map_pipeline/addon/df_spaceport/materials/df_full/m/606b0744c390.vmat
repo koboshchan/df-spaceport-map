@@ -1,0 +1,19 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full/t/T_H_IceLand_Building_Wall_01c_CH_30e360419e68.png"
+	TextureNormal "materials/df_full/t/T_H_IceLand_Building_Wall_01c_N__ea345e7f87c7.png"
+	TextureRoughness "materials/df_full/t/T_H_IceLand_Building_Wall_01c_MR_3901757dc250.png"
+	TextureMetalness "materials/df_full/t/T_H_IceLand_Building_Wall_01c_MR_3901757dc250.png"
+	TextureAmbientOcclusion "materials/df_full/t/T_H_IceLand_Building_Wall_01c_MR_3901757dc250.png"
+	TextureSelfIllumMask "materials/df_full/t/T_H_IceLand_Building_Wall_01c_CH_30e360419e68.png"
+	g_vSelfIllumTint "[1.000000 1.000000 1.000000]"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

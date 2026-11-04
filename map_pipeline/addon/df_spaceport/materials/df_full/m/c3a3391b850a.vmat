@@ -1,0 +1,19 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full/t/T_GEN_Metal_Base_01_CH_HD.png_5a36b17b95df.png"
+	TextureNormal "materials/df_full/t/T_GEN_Metal_Base_01_N_HD.png_6f2204772688.png"
+	TextureRoughness "materials/df_full/t/T_Building_Storage_Metal_05_MRA__fc0efcbc97a5.png"
+	TextureMetalness "materials/df_full/t/T_Building_Storage_Metal_05_MRA__fc0efcbc97a5.png"
+	TextureAmbientOcclusion "materials/df_full/t/T_Building_Storage_Metal_05_MRA__fc0efcbc97a5.png"
+	TextureSelfIllumMask "materials/df_full/t/T_Building_Storage_Metal_05_MRA__fc0efcbc97a5.png"
+	g_vSelfIllumTint "[1.000000 1.000000 1.000000]"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

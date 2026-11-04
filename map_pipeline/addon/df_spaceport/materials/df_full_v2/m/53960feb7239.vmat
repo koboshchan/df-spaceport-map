@@ -1,0 +1,17 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_M_Government_Office_StorageBas_00a1a8c3de93.png"
+	TextureNormal "materials/df_full_v2/t/T_M_Government_Office_StorageBas_5f894b2dbe81.png"
+	TextureRoughness "materials/df_full_v2/t/T_M_Government_Office_StorageBas_29e054665a90.png"
+	TextureMetalness "materials/df_full_v2/t/T_M_Government_Office_StorageBas_29e054665a90.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_M_Government_Office_StorageBas_29e054665a90.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

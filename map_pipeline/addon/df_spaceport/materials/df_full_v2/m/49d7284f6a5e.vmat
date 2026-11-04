@@ -1,0 +1,19 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	g_vEmissiveColor "[0.020000 0.017000 0.012000 1.000000]"
+
+	TextureColor "materials/df_full_v2/t/T_Nature_Rock_Large_Cliff_32_CH__4721bae5786c.png"
+	TextureNormal "materials/df_full_v2/t/T_Nature_detailRock_01_N_HD.png_b93a647c2390.png"
+	TextureRoughness "materials/df_full_v2/t/T_Nature_Rock_Large_Cliff_32_NAR_51b50ae1cc01.png"
+	TextureMetalness "materials/df_full_v2/t/T_Nature_Rock_Large_Cliff_32_NAR_51b50ae1cc01.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_Nature_Rock_Large_Cliff_32_NAR_51b50ae1cc01.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

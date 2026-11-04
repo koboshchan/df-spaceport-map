@@ -1,0 +1,19 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full/t/T_M_Government_Office_CleanRobot_2a5e4107cab1.png"
+	TextureNormal "materials/df_full/t/T_M_Government_Office_CleanRobot_a3b894ff619e.png"
+	TextureRoughness "materials/df_full/t/T_M_Government_Office_CleanRobot_941d7a419444.png"
+	TextureMetalness "materials/df_full/t/T_M_Government_Office_CleanRobot_941d7a419444.png"
+	TextureAmbientOcclusion "materials/df_full/t/T_M_Government_Office_CleanRobot_941d7a419444.png"
+	TextureSelfIllumMask "materials/df_full/t/T_M_Government_Office_CleanRobot_2a5e4107cab1.png"
+	g_vSelfIllumTint "[1.000000 1.000000 1.000000]"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

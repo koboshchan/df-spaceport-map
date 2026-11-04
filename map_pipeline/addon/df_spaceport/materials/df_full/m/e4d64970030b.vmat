@@ -1,0 +1,19 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full/t/T_Nature_Rock_TiledBase_Iceland__6c2ba2639ebd.png"
+	TextureNormal "materials/df_full/t/T_IceLand_Nature_Rock_Medium_Bea_424d21a7c5b6.png"
+	TextureRoughness "materials/df_full/t/T_IceLand_Nature_Rock_Medium_Bea_424d21a7c5b6.png"
+	TextureMetalness "materials/df_full/t/T_IceLand_Nature_Rock_Medium_Bea_424d21a7c5b6.png"
+	TextureAmbientOcclusion "materials/df_full/t/T_IceLand_Nature_Rock_Medium_Bea_424d21a7c5b6.png"
+	TextureSelfIllumMask "materials/df_full/t/T_RockStains_CA.png_90ec1467ebb1.png"
+	g_vSelfIllumTint "[1.000000 1.000000 1.000000]"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

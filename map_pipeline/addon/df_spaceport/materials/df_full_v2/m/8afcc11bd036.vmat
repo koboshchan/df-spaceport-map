@@ -1,0 +1,17 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_H_FutureTech_Telephone_01_C_HD_92013612d1ca.png"
+	TextureNormal "materials/df_full_v2/t/T_H_FutureTech_Telephone_01_N_HD_fe814be17cee.png"
+	TextureRoughness "materials/df_full_v2/t/T_H_FutureTech_Telephone_01_MRA__0981251e71c7.png"
+	TextureMetalness "materials/df_full_v2/t/T_H_FutureTech_Telephone_01_MRA__0981251e71c7.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_H_FutureTech_Telephone_01_MRA__0981251e71c7.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

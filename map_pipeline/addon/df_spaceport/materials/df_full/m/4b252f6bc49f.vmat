@@ -1,0 +1,19 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full/t/T_I_WalkwaySystem_Terrace_256_01_3ef5b81cc476.png"
+	TextureNormal "materials/df_full/t/T_I_WalkwaySystem_Terrace_256_01_42393a85b0db.png"
+	TextureRoughness "materials/df_full/t/T_I_WalkwaySystem_Terrace_256_01_cae0c4e49119.png"
+	TextureMetalness "materials/df_full/t/T_I_WalkwaySystem_Terrace_256_01_cae0c4e49119.png"
+	TextureAmbientOcclusion "materials/df_full/t/T_I_WalkwaySystem_Terrace_256_01_cae0c4e49119.png"
+	TextureSelfIllumMask "materials/df_full/t/T_I_WalkwaySystem_Terrace_256_01_3ef5b81cc476.png"
+	g_vSelfIllumTint "[1.000000 1.000000 1.000000]"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

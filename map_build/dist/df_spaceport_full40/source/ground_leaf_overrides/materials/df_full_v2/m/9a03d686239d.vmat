@@ -1,0 +1,8 @@
+Layer0
+{
+    shader "csgo_complex.vfx"
+    F_ADDITIVE_BLEND 1
+    F_TRANSLUCENT 1
+    g_flOpacityScale "0.0"
+    TextureColor "materials/df_full_v2/t/df_hidden_ground_leaf.png"
+}

@@ -1,0 +1,22 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+
+	TextureColor "materials/df_full_v2/t/T_RoadCurb_01_C_HD.png_e61037fa74aa.png"
+	TextureNormal "materials/df_full_v2/t/T_RoadCurb_01_N_HD.png_8b3b87a2726c.png"
+	TextureRoughness "materials\df_full_v2\t/T_RoadCurb_01_MRA_HD.png_acbb5d079fcb_rough.png"
+	TextureMetalness "materials\df_full_v2\t/T_RoadCurb_01_MRA_HD.png_acbb5d079fcb_metal.png"
+	TextureAmbientOcclusion "materials\df_full_v2\t/T_RoadCurb_01_MRA_HD.png_acbb5d079fcb_ao.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+
+	F_SELF_ILLUM 1
+	TextureSelfIllumMask "materials/df_full_v2/t/T_RoadCurb_01_C_HD.png_e61037fa74aa.png"
+	g_vSelfIllumTint "[0.65 0.65 0.65]"
+}

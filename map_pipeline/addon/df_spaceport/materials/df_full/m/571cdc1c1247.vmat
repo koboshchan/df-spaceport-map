@@ -1,0 +1,19 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full/t/T_FutureTech_Vehicle_ConceptCar__74276184365a.png"
+	TextureNormal "materials/df_full/t/T_FutureTech_Vehicle_ConceptCar__8fd78e5e1424.png"
+	TextureRoughness "materials/df_full/t/T_FutureTech_Vehicle_ConceptCar__2efefd69a959.png"
+	TextureMetalness "materials/df_full/t/T_FutureTech_Vehicle_ConceptCar__2efefd69a959.png"
+	TextureAmbientOcclusion "materials/df_full/t/T_FutureTech_Vehicle_ConceptCar__2efefd69a959.png"
+	TextureSelfIllumMask "materials/df_full/t/T_FutureTech_Vehicle_ConceptCar__74276184365a.png"
+	g_vSelfIllumTint "[1.000000 1.000000 1.000000]"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

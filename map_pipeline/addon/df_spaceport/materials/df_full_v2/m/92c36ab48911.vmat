@@ -1,0 +1,17 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_VMGen_BaseColorMap_f8523588d0f_f1a2d6409dab.png"
+	TextureNormal "materials/df_full_v2/t/T_VMGen_NormalMap_60984fec020b6d_262c19fdb919.png"
+	TextureRoughness "materials/df_full_v2/t/T_VMGen_MRAMap_28316f8515ffb49d0_6d1c7559bf6d.png"
+	TextureMetalness "materials/df_full_v2/t/T_VMGen_MRAMap_28316f8515ffb49d0_6d1c7559bf6d.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_VMGen_MRAMap_28316f8515ffb49d0_6d1c7559bf6d.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

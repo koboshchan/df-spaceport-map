@@ -1,0 +1,12 @@
+Layer0
+{
+    shader "csgo_glass.vfx"
+    F_RENDER_BACKFACES 1
+    F_DO_NOT_CAST_SHADOWS 1
+    g_bFogEnabled "1"
+    GlassMaskColor "[0.96 0.98 1.0 0]"
+    GlassMaskTransmission "[0.84 0.84 0.84 0]"
+    GlassMaskTranslucency "[0.22 0.22 0.22 0]"
+    TextureRoughness "[0.22 0.22 0.22 0]"
+    TextureNormal "materials/df_full_v2/t/T_Default_StandardNormal.png_1264fc15f450.png"
+}

@@ -1,0 +1,19 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_H_IceLand_Lighting_StreetLamp__7b613c990ca5.png"
+	TextureNormal "materials/df_full_v2/t/T_H_IceLand_Lighting_StreetLamp__b46bed1353f8.png"
+	TextureRoughness "materials/df_full_v2/t/T_H_IceLand_Lighting_StreetLamp__7b613c990ca5.png"
+	TextureMetalness "materials/df_full_v2/t/T_H_IceLand_Lighting_StreetLamp__7b613c990ca5.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_H_IceLand_Lighting_StreetLamp__7b613c990ca5.png"
+	TextureSelfIllumMask "materials/df_full_v2/t/T_H_IceLand_Lighting_StreetLamp__ccacb0862dfe.png"
+	g_vSelfIllumTint "[1.000000 1.000000 1.000000]"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

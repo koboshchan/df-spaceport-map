@@ -1,0 +1,17 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_M_Commercial_Resort_Vase_05_C__86efbcf38190.png"
+	TextureNormal "materials/df_full_v2/t/T_M_Commercial_Resort_Vase_05_N__e9db04d86eec.png"
+	TextureRoughness "materials/df_full_v2/t/T_M_Commercial_Resort_Vase_05_MR_0166cf20d18d.png"
+	TextureMetalness "materials/df_full_v2/t/T_M_Commercial_Resort_Vase_05_MR_0166cf20d18d.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_M_Commercial_Resort_Vase_05_MR_0166cf20d18d.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

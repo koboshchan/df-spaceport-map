@@ -1,0 +1,22 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+
+	TextureColor "materials/df_full_v2/t/T_H_FutureTech_Tools_MetalShelf__5245e7c042bc.png"
+	TextureNormal "materials/df_full_v2/t/T_H_FutureTech_Tools_MetalShelf__53544105dcf6.png"
+	TextureRoughness "materials\df_full_v2\t/T_H_FutureTech_Tools_MetalShelf__13a0d7392868_rough.png"
+	TextureMetalness "materials\df_full_v2\t/T_H_FutureTech_Tools_MetalShelf__13a0d7392868_metal.png"
+	TextureAmbientOcclusion "materials\df_full_v2\t/T_H_FutureTech_Tools_MetalShelf__13a0d7392868_ao.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+
+	F_SELF_ILLUM 1
+	TextureSelfIllumMask "materials/df_full_v2/t/T_H_FutureTech_Tools_MetalShelf__5245e7c042bc.png"
+	g_vSelfIllumTint "[0.65 0.65 0.65]"
+}

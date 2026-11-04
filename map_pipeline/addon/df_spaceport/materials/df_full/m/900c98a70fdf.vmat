@@ -1,0 +1,19 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full/t/T_Default_White_SRGB.png_ebf26ecd6c47.png"
+	TextureNormal "materials/df_full/t/T_Glass_Frosted_Ribbing.png_8d751d4be639.png"
+	TextureRoughness "materials/df_full/t/T_Window_Glass_00_MRA_HD.png_2fcfc75cb3d2.png"
+	TextureMetalness "materials/df_full/t/T_Window_Glass_00_MRA_HD.png_2fcfc75cb3d2.png"
+	TextureAmbientOcclusion "materials/df_full/t/T_Window_Glass_00_MRA_HD.png_2fcfc75cb3d2.png"
+	TextureSelfIllumMask "materials/df_full/t/T_Window_Dirt.png_5bf5734a851b.png"
+	g_vSelfIllumTint "[1.000000 1.000000 1.000000]"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

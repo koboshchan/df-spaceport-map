@@ -1,0 +1,19 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full/t/T_H_Industrial_ISS_Rocket_01_02__f5b907040fe3.png"
+	TextureNormal "materials/df_full/t/T_H_Industrial_ISS_Rocket_01_02__6b336173d344.png"
+	TextureRoughness "materials/df_full/t/T_H_Industrial_ISS_Rocket_01_02__3b3155a4a358.png"
+	TextureMetalness "materials/df_full/t/T_H_Industrial_ISS_Rocket_01_02__3b3155a4a358.png"
+	TextureAmbientOcclusion "materials/df_full/t/T_H_Industrial_ISS_Rocket_01_02__3b3155a4a358.png"
+	TextureSelfIllumMask "materials/df_full/t/T_H_Industrial_ISS_Rocket_01_02__f5b907040fe3.png"
+	g_vSelfIllumTint "[1.000000 1.000000 1.000000]"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

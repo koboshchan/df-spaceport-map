@@ -1,0 +1,17 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_BS_Ranger_IceLand_Props_Paper__5bc650d1e1fb.png"
+	TextureNormal "materials/df_full_v2/t/T_BS_Ranger_IceLand_Props_Paper__10d57e168e7d.png"
+	TextureRoughness "materials/df_full_v2/t/T_Black.png_0834c3834585.png"
+	TextureMetalness "materials/df_full_v2/t/T_Black.png_0834c3834585.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_Black.png_0834c3834585.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

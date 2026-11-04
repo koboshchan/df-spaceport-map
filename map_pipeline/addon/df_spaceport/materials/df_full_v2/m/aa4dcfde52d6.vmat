@@ -1,0 +1,16 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_I_Abrasion_Decal_01_N_HD.png_8141cd417612.png"
+	TextureNormal "materials/df_full_v2/t/T_I_Abrasion_Decal_01_N_HD.png_8141cd417612.png"
+	TextureRoughness "[0.500000 0.500000 0.500000 0.500000]"
+	TextureMetalness "[0.000000 0.000000 0.000000 0.000000]"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

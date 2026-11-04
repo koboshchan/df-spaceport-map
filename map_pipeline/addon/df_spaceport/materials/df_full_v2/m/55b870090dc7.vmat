@@ -1,0 +1,17 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_H_FutureTech_Road_Decal_02_C_H_b7601de91739.png"
+	TextureNormal "materials/df_full_v2/t/T_H_FutureTech_Road_Decal_02_N_H_a416ffaebaa1.png"
+	TextureRoughness "materials/df_full_v2/t/T_Wall_02_Detail_N_HD.png_03e047c9737d.png"
+	TextureMetalness "materials/df_full_v2/t/T_Wall_02_Detail_N_HD.png_03e047c9737d.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_Wall_02_Detail_N_HD.png_03e047c9737d.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

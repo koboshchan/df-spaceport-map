@@ -1,0 +1,12 @@
+Layer0
+{
+    shader "csgo_glass.vfx"
+    F_RENDER_BACKFACES 1
+    F_DO_NOT_CAST_SHADOWS 1
+    g_bFogEnabled "1"
+    GlassMaskColor "[0.96 0.98 1.0 0]"
+    GlassMaskTransmission "[0.96 0.96 0.96 0]"
+    GlassMaskTranslucency "[0.07 0.07 0.07 0]"
+    TextureRoughness "[0.08 0.08 0.08 0]"
+    TextureNormal "materials/df_full_v2/t/T_H_FutureTech_GlassDoor_01_A_NR_9fa389a19817.png"
+}

@@ -1,0 +1,11 @@
+Layer0
+{
+    shader "csgo_complex.vfx"
+    F_TRANSLUCENT 1
+    F_RENDER_BACKFACES 1
+    F_DO_NOT_CAST_SHADOWS 1
+    g_flOpacityScale "0.28"
+    TextureColor "materials/df_full_v2/t/T_DamageMask_2.png_1dd4a7543587.png"
+    TextureTranslucency "materials/df_full_v2/t/T_DamageMask_2.png_1dd4a7543587.png"
+    TextureNormal "materials/df_full_v2/t/T_Window_BrokenGlass_01_N_HD.png_89e83b973fd9.png"
+}

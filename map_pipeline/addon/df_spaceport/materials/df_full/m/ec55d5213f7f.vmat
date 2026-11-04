@@ -1,0 +1,19 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full/t/T_Branding_Sticker_Number_11_CC__ca48275d0fb3.png"
+	TextureNormal "materials/df_full/t/T_Branding_Sticker_Number_11_N_H_27b478f26837.png"
+	TextureRoughness "materials/df_full/t/T_Branding_Sticker_Number_11_C.p_7127082f5b8a.png"
+	TextureMetalness "materials/df_full/t/T_Branding_Sticker_Number_11_C.p_7127082f5b8a.png"
+	TextureAmbientOcclusion "materials/df_full/t/T_Branding_Sticker_Number_11_C.p_7127082f5b8a.png"
+	TextureSelfIllumMask "materials/df_full/t/T_Branding_Sticker_Number_11_CC__ca48275d0fb3.png"
+	g_vSelfIllumTint "[1.000000 1.000000 1.000000]"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

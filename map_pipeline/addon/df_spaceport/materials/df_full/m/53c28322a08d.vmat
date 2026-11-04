@@ -1,0 +1,19 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full/t/T_I_WallDamaged_Decal_16_C_HD.pn_dd7e3c3993d9.png"
+	TextureNormal "materials/df_full/t/T_I_WallDamaged_Decal_16_N_HD.pn_16ac4b4bbb8c.png"
+	TextureRoughness "materials/df_full/t/T_Default_StandardNormal.png_1264fc15f450.png"
+	TextureMetalness "materials/df_full/t/T_Default_StandardNormal.png_1264fc15f450.png"
+	TextureAmbientOcclusion "materials/df_full/t/T_Default_StandardNormal.png_1264fc15f450.png"
+	TextureSelfIllumMask "materials/df_full/t/T_I_WallDamaged_Decal_16_C_HD.pn_dd7e3c3993d9.png"
+	g_vSelfIllumTint "[1.000000 1.000000 1.000000]"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

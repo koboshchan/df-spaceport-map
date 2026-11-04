@@ -1,0 +1,19 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full/t/T_DECOR_DatePalm_Dry_Leaf_T0_HD._45d1f1d996a9.png"
+	TextureNormal "materials/df_full/t/T_DECOR_DatePalm_Dry_Leaf_T1_HD._7d39efe72726.png"
+	TextureRoughness "materials/df_full/t/T_Default_White.png_06960e791395.png"
+	TextureMetalness "materials/df_full/t/T_Default_White.png_06960e791395.png"
+	TextureAmbientOcclusion "materials/df_full/t/T_Default_White.png_06960e791395.png"
+	TextureSelfIllumMask "materials/df_full/t/T_DECOR_DatePalm_Dry_Leaf_T0_HD._45d1f1d996a9.png"
+	g_vSelfIllumTint "[1.000000 1.000000 1.000000]"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

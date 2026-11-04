@@ -1,0 +1,17 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_I_Dirt_Decal_05_CC_HD.png_25faad98be6b.png"
+	TextureNormal "materials/df_full_v2/t/T_I_Dirt_Decal_05_N_HD.png_7647c7ddc4d6.png"
+	TextureRoughness "materials/df_full_v2/t/T_I_Dirt_Decal_05_MRA_HD.png_ec8568d6bfe7.png"
+	TextureMetalness "materials/df_full_v2/t/T_I_Dirt_Decal_05_MRA_HD.png_ec8568d6bfe7.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_I_Dirt_Decal_05_MRA_HD.png_ec8568d6bfe7.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

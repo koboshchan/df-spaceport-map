@@ -1,0 +1,22 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+
+	TextureColor "materials/df_full_v2/t/T_GEN_Rubber_Painting_02A_C_HD.p_cdb9f923977a.png"
+	TextureNormal "materials/df_full_v2/t/T_GEN_Rubber_Painting_02_N_HD.pn_08a629ace865.png"
+	TextureRoughness "materials\df_full_v2\t/T_GEN_Rubber_Painting_02_MRA_HD._e832e14c11c3_rough.png"
+	TextureMetalness "materials\df_full_v2\t/T_GEN_Rubber_Painting_02_MRA_HD._e832e14c11c3_metal.png"
+	TextureAmbientOcclusion "materials\df_full_v2\t/T_GEN_Rubber_Painting_02_MRA_HD._e832e14c11c3_ao.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+
+	F_SELF_ILLUM 1
+	TextureSelfIllumMask "materials/df_full_v2/t/T_GEN_Rubber_Painting_02A_C_HD.p_cdb9f923977a.png"
+	g_vSelfIllumTint "[0.65 0.65 0.65]"
+}

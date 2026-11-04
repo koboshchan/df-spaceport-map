@@ -1,0 +1,17 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_H_FutureTech_Fencing_01_C_CC_H_53e59847931f.png"
+	TextureNormal "materials/df_full_v2/t/T_H_FutureTech_Fencing_01_C_N_HD_01a69dfd750d.png"
+	TextureRoughness "materials/df_full_v2/t/T_H_FutureTech_Fencing_01_C_MRA__b6095a86c775.png"
+	TextureMetalness "materials/df_full_v2/t/T_H_FutureTech_Fencing_01_C_MRA__b6095a86c775.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_H_FutureTech_Fencing_01_C_MRA__b6095a86c775.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

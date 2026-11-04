@@ -1,0 +1,12 @@
+Layer0
+{
+    shader "csgo_glass.vfx"
+    F_RENDER_BACKFACES 1
+    F_DO_NOT_CAST_SHADOWS 1
+    g_bFogEnabled "1"
+    GlassMaskColor "[0.96 0.98 1.0 0]"
+    GlassMaskTransmission "[0.75 0.75 0.75 0]"
+    GlassMaskTranslucency "[0.3 0.3 0.3 0]"
+    TextureRoughness "[0.32 0.32 0.32 0]"
+    TextureNormal "materials/df_full_v2/t/T_Glass_Frosted_Ribbing.png_8d751d4be639.png"
+}

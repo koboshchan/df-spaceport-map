@@ -1,0 +1,17 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_M_Building_Industrial_MarbleWa_c8931f3c17a1.png"
+	TextureNormal "materials/df_full_v2/t/T_M_Building_Commercial_DemageWa_196075b6f145.png"
+	TextureRoughness "materials/df_full_v2/t/T_M_Building_Commercial_DemageWa_7d3b2af595d8.png"
+	TextureMetalness "materials/df_full_v2/t/T_M_Building_Commercial_DemageWa_7d3b2af595d8.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_M_Building_Commercial_DemageWa_7d3b2af595d8.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

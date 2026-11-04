@@ -1,0 +1,17 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_H_GEN_Props_Industrial_Venting_796589d52132.png"
+	TextureNormal "materials/df_full_v2/t/T_H_GEN_Props_Industrial_Venting_6ba0c50f3718.png"
+	TextureRoughness "materials/df_full_v2/t/T_H_GEN_Props_Industrial_Venting_1c725d0c80ac.png"
+	TextureMetalness "materials/df_full_v2/t/T_H_GEN_Props_Industrial_Venting_1c725d0c80ac.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_H_GEN_Props_Industrial_Venting_1c725d0c80ac.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

@@ -1,0 +1,19 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full/t/T_Generic_Lighting_Chandelier_01_cc1c6a5f52ca.png"
+	TextureNormal "materials/df_full/t/T_Generic_Lighting_Chandelier_01_2352a2aed14d.png"
+	TextureRoughness "materials/df_full/t/T_Generic_Lighting_Chandelier_01_cc1c6a5f52ca.png"
+	TextureMetalness "materials/df_full/t/T_Generic_Lighting_Chandelier_01_cc1c6a5f52ca.png"
+	TextureAmbientOcclusion "materials/df_full/t/T_Generic_Lighting_Chandelier_01_cc1c6a5f52ca.png"
+	TextureSelfIllumMask "materials/df_full/t/T_Generic_Lighting_Chandelier_01_887640ac3cec.png"
+	g_vSelfIllumTint "[1.000000 1.000000 1.000000]"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}

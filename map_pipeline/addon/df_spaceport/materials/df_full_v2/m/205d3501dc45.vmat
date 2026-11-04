@@ -1,0 +1,17 @@
+Layer0
+{
+	shader "csgo_complex.vfx"
+
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	g_bFogEnabled "1"
+
+	TextureColor "materials/df_full_v2/t/T_RoadFacility_Tunnel_04b_metal__064995020e2a.png"
+	TextureNormal "materials/df_full_v2/t/T_M_GEN_Metal_Wall_07_N_HD.png_88b8f66d746b.png"
+	TextureRoughness "materials/df_full_v2/t/T_M_GEN_Metal_Wall_07_MRA_HD.png_836114af3f5b.png"
+	TextureMetalness "materials/df_full_v2/t/T_M_GEN_Metal_Wall_07_MRA_HD.png_836114af3f5b.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_M_GEN_Metal_Wall_07_MRA_HD.png_836114af3f5b.png"
+	F_ALPHA_TEST 1
+	g_flAlphaTestReference "0.500000"
+}
