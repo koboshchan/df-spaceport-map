@@ -1,0 +1,46 @@
+{
+  "name": "spaceport-pre-github-good-20261104-1224",
+  "default_map": "df_spaceport_player_scale_raytrace",
+  "recorded_on": "2026-11-05",
+  "runtime_baseline": {
+    "package": "map_build/dist/df_spaceport_server_ready_20261104_v2.zip",
+    "built_at": "2026-11-04T12:24:14+08:00",
+    "workspace_addon": "map_build/dist/df_spaceport_full40/addon",
+    "installed_addon": "D:/SteamLibrary/steamapps/common/Counter-Strike Global Offensive/game/csgo_addons/df_spaceport"
+  },
+  "source_baseline": {
+    "snapshot": ".tmp/github_map_only_20261104/map_pipeline/addon/df_spaceport",
+    "workspace_source": "map_pipeline/addon/df_spaceport",
+    "installed_content": "D:/SteamLibrary/steamapps/common/Counter-Strike Global Offensive/content/csgo_addons/df_spaceport",
+    "file_count": 5977,
+    "workspace_mismatches": 0,
+    "installed_mismatches": 0
+  },
+  "verification": {
+    "runtime_map_loaded": true,
+    "local_server_started": true,
+    "server_slots": 16
+  },
+  "preserved_broken_state": {
+    "installed_addon": "D:/SteamLibrary/steamapps/common/Counter-Strike Global Offensive/game/csgo_addons/df_spaceport_broken_20261105_0130",
+    "workspace_addon": "map_build/backup/rollback-20261105-0130/df_spaceport_full40_addon_broken"
+  },
+  "map_files": [
+    {
+      "path": "addon/maps/df_spaceport_player_scale_raytrace.vpk",
+      "sha256": "9522F40E5C283361045EA7B4BEC0639EF2C622A8DEB3E14E0EE9C06C50E7855B"
+    },
+    {
+      "path": "addon/maps/df_spaceport_player_scale_raytrace_000.vpk",
+      "sha256": "5EDCCEDE807C68842E903560833208333597BF29FF84AAD234356E4688C36424"
+    },
+    {
+      "path": "addon/maps/df_spaceport_player_scale_raytrace_001.vpk",
+      "sha256": "F5B2520FCA565C01C323D53943FD7951A9CEFB0CF7925B415B4FC3292AD48E74"
+    },
+    {
+      "path": "addon/maps/df_spaceport_player_scale_raytrace_002.vpk",
+      "sha256": "C3CF9742739CE11D9E6764532A22836EB2BE895434C26F274DF76B928A98A55C"
+    }
+  ]
+}

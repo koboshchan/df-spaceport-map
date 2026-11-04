@@ -1,0 +1,12 @@
+*.vpk
+*.vpk_c
+*.vmdl_c
+*.vmat_c
+*.vtex_c
+*.fbx
+*.blend
+*.mdmp
+*.pyc
+__pycache__/
+map_build/**/addon/
+map_build/**/analysis/

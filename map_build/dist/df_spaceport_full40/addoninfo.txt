@@ -1,0 +1,5 @@
+"AddonInfo"
+{
+    "maps" "df_spaceport_player_scale_raytrace"
+    "IsPlayable" "1"
+}

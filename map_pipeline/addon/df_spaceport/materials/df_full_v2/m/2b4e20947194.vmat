@@ -1,17 +1,18 @@
 Layer0
 {
-	shader "csgo_complex.vfx"
+    shader "csgo_water.vfx"
 
-	F_PAINT_VERTEX_COLORS 0
-	F_ADDITIVE_BLEND 0
-	F_ALPHA_TEST 0
-	g_bFogEnabled "1"
+    F_ANIMATED_NORMALS 1
+    F_FRESNEL 1
 
-	TextureColor "materials/df_full_v2/t/SpaceCenter_OilMask_2.png_aead6d604036.png"
-	TextureNormal "materials/df_full_v2/t/T_Seafoam_03_NSH.png_10ce9e1661df.png"
-	TextureRoughness "materials/df_full_v2/t/SpaceCenter_OilMask_2.png_aead6d604036.png"
-	TextureMetalness "materials/df_full_v2/t/SpaceCenter_OilMask_2.png_aead6d604036.png"
-	TextureAmbientOcclusion "materials/df_full_v2/t/SpaceCenter_OilMask_2.png_aead6d604036.png"
-	F_ALPHA_TEST 1
-	g_flAlphaTestReference "0.500000"
+    g_flReflectionAmount "0.900000"
+    g_flRefractionAmount "1.000000"
+    g_flWaterDepth "400.000000"
+    g_flWaterStart "1.000000"
+    g_vWaterFogColor "[0.030000 0.075000 0.055000 0.000000]"
+    g_tNormal "materials/dev/water_normal_mks_558bf690.vtex_c"
+
+    mapbuilder.nonsolid 1
+    mapbuilder.water 1
+    PhysicsSurfaceProperties "water"
 }
