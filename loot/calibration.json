@@ -1,0 +1,611 @@
+{
+  "horizontal_report": {
+    "status": "APPROXIMATE_HORIZONTAL_IMAGE_REGISTRATION_ONLY",
+    "safe_for_automatic_placements": false,
+    "native_input_order": "DF[X,Y,Z]; Z not included in2Dfit",
+    "output_order": "CS2[x,y]; native Source2 units",
+    "fit_count": 8,
+    "fit_structure_clusters": 2,
+    "withheld_count": 2,
+    "withheld_structure_clusters": 2,
+    "axis_evidence": "DF Y approximately +CS2x; DF X approximately -CS2y",
+    "similarity": {
+      "matrix_row_native_X_Y_1_to_cs2_x_y_1": [
+        [
+          -3.4482713381257087e-06,
+          -0.0099874599476309,
+          0.0
+        ],
+        [
+          0.0099874599476309,
+          -3.448271338124179e-06,
+          0.0
+        ],
+        [
+          -6175.213929341675,
+          -4410.229498300076,
+          1.0
+        ]
+      ],
+      "native_scale": 0.009987460542906121,
+      "fit_rmse_cs2": 0.4285357483546435,
+      "fit_max_cs2": 0.6248336063126915,
+      "withheld_errors_cs2": [
+        0.6445842438945277,
+        1.1313694885818948
+      ],
+      "per_point_errors_cs2": [
+        0.4286061982077038,
+        0.5929252506494845,
+        0.4651720463959898,
+        0.6248336063126915,
+        0.23391652582912392,
+        0.32641342651107513,
+        0.16867868216451815,
+        0.37062412595215055,
+        0.6445842438945277,
+        1.1313694885818948
+      ]
+    },
+    "affine": {
+      "matrix_row_native_X_Y_1_to_cs2_x_y": [
+        [
+          -4.278629003801236e-06,
+          -0.009984346750016332
+        ],
+        [
+          0.009987060178399532,
+          2.6322051331289564e-05
+        ],
+        [
+          -6175.331364188783,
+          -4428.600267319573
+        ]
+      ],
+      "fit_rmse_cs2": 0.41972217312822957,
+      "fit_max_cs2": 0.6221864387368695,
+      "withheld_errors_cs2": [
+        0.5252122448020438,
+        1.5803004176601818
+      ],
+      "per_point_errors_cs2": [
+        0.38257156259979574,
+        0.6019873845834236,
+        0.5120769882629068,
+        0.6221864387368695,
+        0.3105138513683141,
+        0.22131035265892174,
+        0.19294383665934162,
+        0.2619552529905136,
+        0.5252122448020438,
+        1.5803004176601818
+      ]
+    },
+    "compiled_origin_001_axis_swap_hypothesis": {
+      "matrix": [
+        [
+          0.0,
+          -0.01
+        ],
+        [
+          0.01,
+          0.0
+        ],
+        [
+          -6181.919922,
+          -4418.049805
+        ]
+      ],
+      "fit_rmse_cs2": 0.5564273986356232,
+      "withheld_errors_cs2": [
+        0.507770785236188,
+        0.7734958049841896
+      ],
+      "verified_exact": false
+    },
+    "uncertainty": "At least±1THGLzoom2pixel and±2CS2compositepixels for most picks; westroof±3CS2pixels. Additional silhouette/parapet/meshimage mismatch unknown. Residuals are not total accuracy guarantees.",
+    "vertical": {
+      "status": "UNVERIFIED",
+      "matrix": null,
+      "confidence": "none",
+      "reason": "No independently identified same physical3Danchor. TopdownimagehasnoZ, THGLziplineZnotmapped to namedcompiledactors. MultiplefloorintersectionsperXY. Isotropic.01andZoffset220.485992notvalidated."
+    },
+    "placements_edited": false,
+    "independent_cross_check": {
+      "worker": "f9712711",
+      "method": "PhasecorrelationofhypothesiswarpedTHGLvsheightshadedcompiledgeometry",
+      "result": "6usablepatchesresponse>0.12, offsets0.4-1.8compositepixel, about<=1.2CS2units; sharedcompoundcauseway area only",
+      "caveat": "Notindependentexactworldvertexmatches; imagecorrelationresponseisnotphysicalheightverification",
+      "historical_artifacts_not_included": [
+        "hyp.py",
+        "hyp_overlay.png"
+      ]
+    },
+    "recommended_deliverable": "Horizontalapproximatecalibrationwithreportedresiduals only. No verifiedfullXYZmatrix. Caller mustnotcopyautomaticplacementsuntilverticalregisteredorspecificallyhandlingfloorswithknownanchors.",
+    "geometry_export_caveat": "Late original full-map export log contains System.OutOfMemoryException during world-node model loading, despite exitCode0 and written full40.gltf. Treat full40.gltf/baked-native.npz as partial, not complete map geometry. Sequential native-cell exports are a separate bounded recovery. Horizontal checks apply only to visually observed matched structures."
+  },
+  "statistical_z_report": {
+    "status": "NOT_TIGHT_DO_NOT_SNAP",
+    "scale_assumption": 0.01,
+    "xy_formula": [
+      ".01*DF_Y-6181.919922",
+      "-.01*DF_X-4418.049805"
+    ],
+    "offset": 220.48600418824782,
+    "offset_fit_method": "Global offset search -400..800 at .1; maximize equal-item training support within2; median-refine <=2-unit consensus. No nearest-below before offset.",
+    "train": {
+      "n": 180,
+      "with_floor_hits": 180,
+      "missing_hits": 0,
+      "p50": 0.008848640012146802,
+      "p90": 6.5630228683440945,
+      "p95": 8.774019998259984,
+      "within_1": 0.8444444444444444,
+      "within_2": 0.8888888888888888,
+      "within_3": 0.8944444444444445,
+      "within_5": 0.8944444444444445
+    },
+    "withheld": {
+      "n": 67,
+      "with_floor_hits": 67,
+      "missing_hits": 0,
+      "p50": 0.007900609118564716,
+      "p90": 1.3651365912290885,
+      "p95": 6.6790317102171795,
+      "within_1": 0.8656716417910447,
+      "within_2": 0.9253731343283582,
+      "within_3": 0.9253731343283582,
+      "within_5": 0.9253731343283582
+    },
+    "all": {
+      "n": 247,
+      "with_floor_hits": 247,
+      "missing_hits": 0,
+      "p50": 0.0087080531397703,
+      "p90": 1.9216536265222794,
+      "p95": 8.77401950211085,
+      "within_1": 0.8502024291497976,
+      "within_2": 0.8987854251012146,
+      "within_3": 0.902834008097166,
+      "within_5": 0.902834008097166
+    },
+    "per_type": {
+      "c_ammo_crate": {
+        "n": 16,
+        "with_floor_hits": 16,
+        "missing_hits": 0,
+        "p50": 0.005513489109475245,
+        "p90": 3.809017831511923,
+        "p95": 6.699026898273765,
+        "within_1": 0.875,
+        "within_2": 0.875,
+        "within_3": 0.875,
+        "within_5": 0.875,
+        "signed_median": 0.0016546131286698795
+      },
+      "c_briefcase": {
+        "n": 12,
+        "with_floor_hits": 12,
+        "missing_hits": 0,
+        "p50": 0.3869960914960302,
+        "p90": 1.066206191457485,
+        "p95": 1.097718922440545,
+        "within_1": 0.75,
+        "within_2": 1.0,
+        "within_3": 1.0,
+        "within_5": 1.0,
+        "signed_median": -0.27034348043267714
+      },
+      "c_climbing_bag": {
+        "n": 9,
+        "with_floor_hits": 9,
+        "missing_hits": 0,
+        "p50": 0.010322708803954583,
+        "p90": 0.13322110304931706,
+        "p95": 0.35124787513721556,
+        "within_1": 1.0,
+        "within_2": 1.0,
+        "within_3": 1.0,
+        "within_5": 1.0,
+        "signed_median": 0.0013779314689175148
+      },
+      "c_computer_case": {
+        "n": 18,
+        "with_floor_hits": 18,
+        "missing_hits": 0,
+        "p50": 0.006258364627768742,
+        "p90": 0.9270227249345993,
+        "p95": 2.11002337236033,
+        "within_1": 0.9444444444444444,
+        "within_2": 0.9444444444444444,
+        "within_3": 0.9444444444444444,
+        "within_5": 0.9444444444444444,
+        "signed_median": 0.004289033509847662
+      },
+      "c_courier_carton": {
+        "n": 21,
+        "with_floor_hits": 21,
+        "missing_hits": 0,
+        "p50": 0.17402174455725117,
+        "p90": 7.974022022314841,
+        "p95": 8.774022543259548,
+        "within_1": 0.8095238095238095,
+        "within_2": 0.8571428571428571,
+        "within_3": 0.8571428571428571,
+        "within_5": 0.8571428571428571,
+        "signed_median": -0.002333196487347422
+      },
+      "c_drawer": {
+        "n": 19,
+        "with_floor_hits": 19,
+        "missing_hits": 0,
+        "p50": 0.017970604857083572,
+        "p90": 0.9260242639267631,
+        "p95": 1.7180277695146917,
+        "within_1": 0.9473684210526315,
+        "within_2": 0.9473684210526315,
+        "within_3": 0.9473684210526315,
+        "within_5": 0.9473684210526315,
+        "signed_median": 0.0010976473358629835
+      },
+      "c_field_supply_box": {
+        "n": 8,
+        "with_floor_hits": 8,
+        "missing_hits": 0,
+        "p50": 0.02457127803796766,
+        "p90": 1.1010013279378028,
+        "p95": 1.3074932382161788,
+        "within_1": 0.875,
+        "within_2": 1.0,
+        "within_3": 1.0,
+        "within_5": 1.0,
+        "signed_median": 0.012249512391711903
+      },
+      "c_flight_case": {
+        "n": 11,
+        "with_floor_hits": 11,
+        "missing_hits": 0,
+        "p50": 0.03129908051317898,
+        "p90": 0.07946549933379288,
+        "p95": 0.09005558097800304,
+        "within_1": 1.0,
+        "within_2": 1.0,
+        "within_3": 1.0,
+        "within_5": 1.0,
+        "signed_median": -0.03129908051317498
+      },
+      "c_large_weapon_crate": {
+        "n": 15,
+        "with_floor_hits": 15,
+        "missing_hits": 0,
+        "p50": 0.010893636291115172,
+        "p90": 4.3560249620164,
+        "p95": 6.644029338309386,
+        "within_1": 0.8666666666666667,
+        "within_2": 0.8666666666666667,
+        "within_3": 0.8666666666666667,
+        "within_5": 0.8666666666666667,
+        "signed_median": -0.0005476796160763797
+      },
+      "c_pile_of_medical_supplies": {
+        "n": 8,
+        "with_floor_hits": 8,
+        "missing_hits": 0,
+        "p50": 0.0037353647954745384,
+        "p90": 0.454328150979043,
+        "p95": 0.9271610453174709,
+        "within_1": 0.875,
+        "within_2": 1.0,
+        "within_3": 1.0,
+        "within_5": 1.0,
+        "signed_median": -0.0034422555148791306
+      },
+      "c_premium_storage_box": {
+        "n": 15,
+        "with_floor_hits": 15,
+        "missing_hits": 0,
+        "p50": 0.027849347094814902,
+        "p90": 13.878012597627865,
+        "p95": 23.63900308794447,
+        "within_1": 0.8666666666666667,
+        "within_2": 0.8666666666666667,
+        "within_3": 0.8666666666666667,
+        "within_5": 0.8666666666666667,
+        "signed_median": -0.0003145211953317073
+      },
+      "c_premium_suitcase": {
+        "n": 13,
+        "with_floor_hits": 13,
+        "missing_hits": 0,
+        "p50": 0.002785059608413576,
+        "p90": 0.04294612483915333,
+        "p95": 11.689028314283785,
+        "within_1": 0.9230769230769231,
+        "within_2": 0.9230769230769231,
+        "within_3": 0.9230769230769231,
+        "within_5": 0.9230769230769231,
+        "signed_median": -0.0011119041658367301
+      },
+      "c_safe": {
+        "n": 12,
+        "with_floor_hits": 12,
+        "missing_hits": 0,
+        "p50": 0.007407728239371636,
+        "p90": 0.06923213402995716,
+        "p95": 3.0535889658098494,
+        "within_1": 0.9166666666666666,
+        "within_2": 0.9166666666666666,
+        "within_3": 0.9166666666666666,
+        "within_5": 0.9166666666666666,
+        "signed_median": -0.0024565832227310125
+      },
+      "c_server": {
+        "n": 8,
+        "with_floor_hits": 8,
+        "missing_hits": 0,
+        "p50": 0.004710912834738679,
+        "p90": 0.00789191336630779,
+        "p95": 0.00789191336630779,
+        "within_1": 1.0,
+        "within_2": 1.0,
+        "within_3": 1.0,
+        "within_5": 1.0,
+        "signed_median": 0.0013338578003097012
+      },
+      "c_small_safe": {
+        "n": 8,
+        "with_floor_hits": 8,
+        "missing_hits": 0,
+        "p50": 0.008145080589585518,
+        "p90": 1.485538569713489,
+        "p95": 1.6228035199013489,
+        "within_1": 0.75,
+        "within_2": 1.0,
+        "within_3": 1.0,
+        "within_5": 1.0,
+        "signed_median": 0.0022358564907833944
+      },
+      "c_storage_box": {
+        "n": 25,
+        "with_floor_hits": 25,
+        "missing_hits": 0,
+        "p50": 0.25596513168804336,
+        "p90": 8.77401938564338,
+        "p95": 8.774021873303246,
+        "within_1": 0.6,
+        "within_2": 0.76,
+        "within_3": 0.8,
+        "within_5": 0.8,
+        "signed_median": 0.0006739560302175818
+      },
+      "c_tool_cabinet": {
+        "n": 11,
+        "with_floor_hits": 11,
+        "missing_hits": 0,
+        "p50": 0.014201478840334403,
+        "p90": 8.774019872970996,
+        "p95": 16.194013085789877,
+        "within_1": 0.6363636363636364,
+        "within_2": 0.6363636363636364,
+        "within_3": 0.6363636363636364,
+        "within_5": 0.6363636363636364,
+        "signed_median": 0.002099563888407374
+      },
+      "c_travel_bag": {
+        "n": 14,
+        "with_floor_hits": 14,
+        "missing_hits": 0,
+        "p50": 0.011850285395965443,
+        "p90": 4.8051356310095805,
+        "p95": 13.018516613432059,
+        "within_1": 0.8571428571428571,
+        "within_2": 0.8571428571428571,
+        "within_3": 0.8571428571428571,
+        "within_5": 0.8571428571428571,
+        "signed_median": -0.0005460690406282609
+      },
+      "c_weapon_crates": {
+        "n": 4,
+        "with_floor_hits": 4,
+        "missing_hits": 0,
+        "p50": 0.0028125727370706954,
+        "p90": 0.006810828268970682,
+        "p95": 0.007511737791853077,
+        "within_1": 1.0,
+        "within_2": 1.0,
+        "within_3": 1.0,
+        "within_5": 1.0,
+        "signed_median": 0.002812572737059843
+      }
+    },
+    "offset_modes": [
+      {
+        "offset": 220.70000000014113,
+        "train_within_2": 0.8944444444444445,
+        "train_clipped_loss": 1.1926470676583167
+      },
+      {
+        "offset": 229.10000000014304,
+        "train_within_2": 0.4166666666666667,
+        "train_clipped_loss": 4.0392705635920905
+      },
+      {
+        "offset": 208.7000000001384,
+        "train_within_2": 0.22777777777777777,
+        "train_clipped_loss": 6.921613075052057
+      },
+      {
+        "offset": 215.60000000013997,
+        "train_within_2": 0.2222222222222222,
+        "train_clipped_loss": 4.194086493001341
+      },
+      {
+        "offset": 234.2000000001442,
+        "train_within_2": 0.21666666666666667,
+        "train_clipped_loss": 5.455737777702983
+      },
+      {
+        "offset": 258.10000000014963,
+        "train_within_2": 0.14444444444444443,
+        "train_clipped_loss": 8.505489952156227
+      },
+      {
+        "offset": 242.80000000014616,
+        "train_within_2": 0.12222222222222222,
+        "train_clipped_loss": 8.06683357546557
+      },
+      {
+        "offset": 250.60000000014793,
+        "train_within_2": 0.11666666666666667,
+        "train_clipped_loss": 8.38387632770872
+      },
+      {
+        "offset": 201.6000000001368,
+        "train_within_2": 0.07777777777777778,
+        "train_clipped_loss": 8.433192064723242
+      },
+      {
+        "offset": 263.10000000015077,
+        "train_within_2": 0.044444444444444446,
+        "train_clipped_loss": 8.971453204640635
+      },
+      {
+        "offset": 196.60000000013565,
+        "train_within_2": 0.044444444444444446,
+        "train_clipped_loss": 9.31590894464677
+      },
+      {
+        "offset": 268.1000000001519,
+        "train_within_2": 0.011111111111111112,
+        "train_clipped_loss": 9.634116502332922
+      }
+    ],
+    "ambiguity": {
+      "within_3_counts": {
+        "0": 24,
+        "1": 124,
+        "2": 82,
+        "3": 17
+      },
+      "multiple_floor_clusters_within_3": 99,
+      "within_0.1_cluster_counts": {
+        "0": 71,
+        "1": 175,
+        "2": 1
+      },
+      "within_0.5_cluster_counts": {
+        "0": 61,
+        "1": 148,
+        "2": 37,
+        "3": 1
+      },
+      "within_1_cluster_counts": {
+        "0": 37,
+        "1": 167,
+        "2": 41,
+        "3": 2
+      },
+      "within_2_cluster_counts": {
+        "0": 25,
+        "1": 146,
+        "2": 63,
+        "3": 13
+      },
+      "within_3_cluster_counts": {
+        "0": 24,
+        "1": 124,
+        "2": 82,
+        "3": 17
+      },
+      "note": "Height clusters separated by >.1 units are not necessarily different storeys; they can be nearby collision slab/furniture layers."
+    },
+    "negative_control": {
+      "method": "100 seeded random permutations of native Z against actual sampled XY columns, refit global offset on same training mask each time, evaluate heldout.",
+      "withheld_within2_p50": 0.5074626865671642,
+      "withheld_within2_p95": 0.5828358208955223,
+      "withheld_within2_max": 0.6567164179104478,
+      "real_within2": 0.9253731343283582,
+      "permutation_p": 0.009900990099009901,
+      "null_to_real_ratio": 0.5483870967741936
+    },
+    "tightness_gate": {
+      "prespecified_before_results": "heldout >=85% within3; p95<=5; within2 > null95+15 percentagepoints",
+      "pass_gate": false
+    },
+    "caveats": [
+      "Scale .01 assumed by user, not independently vertical-verified.",
+      "Native loot origins and asset pivots may differ from floor contact. Per-type biases retained.",
+      "Collision group contains default surfaces; material provenance beyond sky group unavailable.",
+      "Upward surfaces can be furniture/roof; no semantic walkability or floor identity guaranteed.",
+      "World collision resource completeness vs all external cells not independently proven."
+    ],
+    "original_sha256": "9162c3d04d55d8188c0742c95ca256db258f8e27b541e8eb6e2d07b44a201987",
+    "counts": {
+      "within_1": 210,
+      "within_2": 222,
+      "within_3": 223,
+      "within_5": 223,
+      "within_10": 242,
+      "over_3": 24,
+      "over_5": 24
+    },
+    "beneath_diagnostic": {
+      "not_applied": true,
+      "drop_over3": 93,
+      "drop_over10": 68,
+      "no_floor_beneath": 42,
+      "note": "Strict beneath without tolerance can miss a virtually coincident floor slightly ABOVE corrected origin, then jump to lower storey."
+    },
+    "additional_spatial_block_validation": {
+      "method": "4 quadrants split at median XY; train other3, test1; offset hypotheses180..270",
+      "blocks": [
+        {
+          "block": 0,
+          "n": 69,
+          "offset": 220.48601606857156,
+          "p50": 0.004248688865260419,
+          "p90": 0.8772903454539234,
+          "p95": 0.9794946689756725,
+          "within2": 0.9855072463768116,
+          "within3": 0.9855072463768116
+        },
+        {
+          "block": 1,
+          "n": 54,
+          "offset": 220.48485030770001,
+          "p50": 0.006864795459762263,
+          "p90": 1.1180962115541064,
+          "p95": 22.900159038561778,
+          "within2": 0.9259259259259259,
+          "within3": 0.9259259259259259
+        },
+        {
+          "block": 2,
+          "n": 54,
+          "offset": 220.4857934604718,
+          "p50": 0.009218061842943825,
+          "p90": 0.9571438447518208,
+          "p95": 1.2070181878132176,
+          "within2": 1.0,
+          "within3": 1.0
+        },
+        {
+          "block": 3,
+          "n": 70,
+          "offset": 220.48489389689203,
+          "p50": 0.5107938545285435,
+          "p90": 8.775130145014819,
+          "p95": 8.775132760586372,
+          "within2": 0.7142857142857143,
+          "within3": 0.7285714285714285
+        }
+      ]
+    }
+  },
+  "source_hashes": {
+    "draft-placements.json": "9162c3d04d55d8188c0742c95ca256db258f8e27b541e8eb6e2d07b44a201987",
+    "calibration/horizontal-registration-report.json": "f80c1ac985ef1fd07391edf33bb0856628941bf97b65142255475709a2cbc3b6",
+    "calibration/statistical-z/candidate-unsnapped.json": "2e54648c092599dbf84f319c98969dc240544d337314012e80e2b83d6f54d442",
+    "calibration/statistical-z/offset-statistics.json": "aaa80f6d5d7ba941f0b3874241391dcbc5b91078e7d20a5b20c5df81bf641819"
+  }
+}

@@ -1,0 +1,655 @@
+{
+  "threshold_cs2_units": 5,
+  "count": 24,
+  "snapped": false,
+  "loot": [
+    {
+      "id": "c_travel_bag@-450988:684051",
+      "type": "c_travel_bag",
+      "df_native_position": [
+        -450988,
+        684051,
+        -24551
+      ],
+      "cs2_position": [
+        658.5900780000002,
+        91.83019500000046,
+        -25.023995811752172
+      ],
+      "rotation": null,
+      "asset": "props_collect_travellingbag_893_3P",
+      "source_static": true,
+      "placement_review": {
+        "snapped": false,
+        "status": "REVIEW_Z_RESIDUAL_OVER_5",
+        "requires_review": true,
+        "nearest_floor_signed_residual": 25.024006758756748,
+        "residual_definition": "nearest sampled upward collision height minus unsnapped origin Z; diagnostic only",
+        "nearest_floor_z": 1.0947004577360411e-05,
+        "nearby_floor_clusters_within3": 0,
+        "calibration_split": "train"
+      }
+    },
+    {
+      "id": "c_travel_bag@-463706:689429",
+      "type": "c_travel_bag",
+      "df_native_position": [
+        -463706,
+        689429,
+        -22704
+      ],
+      "cs2_position": [
+        712.3700779999999,
+        219.01019500000075,
+        -6.5539958117521735
+      ],
+      "rotation": null,
+      "asset": "props_collect_travellingbag_893_3P",
+      "source_static": true,
+      "placement_review": {
+        "snapped": false,
+        "status": "REVIEW_Z_RESIDUAL_OVER_5",
+        "requires_review": true,
+        "nearest_floor_signed_residual": 6.554021919795691,
+        "residual_definition": "nearest sampled upward collision height minus unsnapped origin Z; diagnostic only",
+        "nearest_floor_z": 2.610804351733977e-05,
+        "nearby_floor_clusters_within3": 0,
+        "calibration_split": "train"
+      }
+    },
+    {
+      "id": "c_courier_carton@-464229:695260",
+      "type": "c_courier_carton",
+      "df_native_position": [
+        -464229,
+        695260,
+        -22926
+      ],
+      "cs2_position": [
+        770.6800780000003,
+        224.2401950000003,
+        -8.773995811752172
+      ],
+      "rotation": null,
+      "asset": "props_collect_express_box_894_3P_Xmas",
+      "source_static": true,
+      "placement_review": {
+        "snapped": false,
+        "status": "REVIEW_Z_RESIDUAL_OVER_5",
+        "requires_review": true,
+        "nearest_floor_signed_residual": 8.77402254325954,
+        "residual_definition": "nearest sampled upward collision height minus unsnapped origin Z; diagnostic only",
+        "nearest_floor_z": 2.67315073659586e-05,
+        "nearby_floor_clusters_within3": 0,
+        "calibration_split": "train"
+      }
+    },
+    {
+      "id": "c_courier_carton@-464475:694805",
+      "type": "c_courier_carton",
+      "df_native_position": [
+        -464475,
+        694805,
+        -22926
+      ],
+      "cs2_position": [
+        766.1300780000001,
+        226.70019500000035,
+        -8.773995811752172
+      ],
+      "rotation": null,
+      "asset": "props_collect_express_box_894_3P_Xmas",
+      "source_static": true,
+      "placement_review": {
+        "snapped": false,
+        "status": "REVIEW_Z_RESIDUAL_OVER_5",
+        "requires_review": true,
+        "nearest_floor_signed_residual": 8.774022836514499,
+        "residual_definition": "nearest sampled upward collision height minus unsnapped origin Z; diagnostic only",
+        "nearest_floor_z": 2.702476232661132e-05,
+        "nearby_floor_clusters_within3": 0,
+        "calibration_split": "withheld"
+      }
+    },
+    {
+      "id": "c_courier_carton@-463792:695541",
+      "type": "c_courier_carton",
+      "df_native_position": [
+        -463792,
+        695541,
+        -22846
+      ],
+      "cs2_position": [
+        773.4900779999998,
+        219.87019500000042,
+        -7.973995811752189
+      ],
+      "rotation": null,
+      "asset": "props_collect_express_box_894_3P_Xmas",
+      "source_static": true,
+      "placement_review": {
+        "snapped": false,
+        "status": "REVIEW_Z_RESIDUAL_OVER_5",
+        "requires_review": true,
+        "nearest_floor_signed_residual": 7.974022022314842,
+        "residual_definition": "nearest sampled upward collision height minus unsnapped origin Z; diagnostic only",
+        "nearest_floor_z": 2.6210562653062388e-05,
+        "nearby_floor_clusters_within3": 0,
+        "calibration_split": "withheld"
+      }
+    },
+    {
+      "id": "c_storage_box@-461971:696068",
+      "type": "c_storage_box",
+      "df_native_position": [
+        -461971,
+        696068,
+        -22926
+      ],
+      "cs2_position": [
+        778.7600780000002,
+        201.66019500000039,
+        -8.773995811752172
+      ],
+      "rotation": null,
+      "asset": "props_collect_box_553_3P",
+      "source_static": true,
+      "placement_review": {
+        "snapped": false,
+        "status": "REVIEW_Z_RESIDUAL_OVER_5",
+        "requires_review": true,
+        "nearest_floor_signed_residual": 8.774019851513264,
+        "residual_definition": "nearest sampled upward collision height minus unsnapped origin Z; diagnostic only",
+        "nearest_floor_z": 2.4039761091976773e-05,
+        "nearby_floor_clusters_within3": 0,
+        "calibration_split": "train"
+      }
+    },
+    {
+      "id": "c_storage_box@-464235:691675",
+      "type": "c_storage_box",
+      "df_native_position": [
+        -464235,
+        691675,
+        -22926
+      ],
+      "cs2_position": [
+        734.830078,
+        224.3001950000007,
+        -8.773995811752172
+      ],
+      "rotation": null,
+      "asset": "props_collect_box_553_3P",
+      "source_static": true,
+      "placement_review": {
+        "snapped": false,
+        "status": "REVIEW_Z_RESIDUAL_OVER_5",
+        "requires_review": true,
+        "nearest_floor_signed_residual": 8.774022550412607,
+        "residual_definition": "nearest sampled upward collision height minus unsnapped origin Z; diagnostic only",
+        "nearest_floor_z": 2.67386604338568e-05,
+        "nearby_floor_clusters_within3": 0,
+        "calibration_split": "train"
+      }
+    },
+    {
+      "id": "c_storage_box@-460994:694372",
+      "type": "c_storage_box",
+      "df_native_position": [
+        -460994,
+        694372,
+        -22926
+      ],
+      "cs2_position": [
+        761.8000780000002,
+        191.89019500000086,
+        -8.773995811752172
+      ],
+      "rotation": null,
+      "asset": "props_collect_box_553_3P",
+      "source_static": true,
+      "placement_review": {
+        "snapped": false,
+        "status": "REVIEW_Z_RESIDUAL_OVER_5",
+        "requires_review": true,
+        "nearest_floor_signed_residual": 8.774018686838573,
+        "residual_definition": "nearest sampled upward collision height minus unsnapped origin Z; diagnostic only",
+        "nearest_floor_z": 2.2875086400531803e-05,
+        "nearby_floor_clusters_within3": 0,
+        "calibration_split": "train"
+      }
+    },
+    {
+      "id": "c_storage_box@-475575:691990",
+      "type": "c_storage_box",
+      "df_native_position": [
+        -475575,
+        691990,
+        -22841
+      ],
+      "cs2_position": [
+        737.9800780000005,
+        337.70019500000035,
+        -7.923995811752178
+      ],
+      "rotation": null,
+      "asset": "props_collect_box_553_3P",
+      "source_static": true,
+      "placement_review": {
+        "snapped": false,
+        "status": "REVIEW_Z_RESIDUAL_OVER_5",
+        "requires_review": true,
+        "nearest_floor_signed_residual": 7.924036068748016,
+        "residual_definition": "nearest sampled upward collision height minus unsnapped origin Z; diagnostic only",
+        "nearest_floor_z": 4.025699583854009e-05,
+        "nearby_floor_clusters_within3": 0,
+        "calibration_split": "train"
+      }
+    },
+    {
+      "id": "c_storage_box@-464091:694921",
+      "type": "c_storage_box",
+      "df_native_position": [
+        -464091,
+        694921,
+        -22926
+      ],
+      "cs2_position": [
+        767.290078,
+        222.8601950000002,
+        -8.773995811752172
+      ],
+      "rotation": null,
+      "asset": "props_collect_box_553_3P",
+      "source_static": true,
+      "placement_review": {
+        "snapped": false,
+        "status": "REVIEW_Z_RESIDUAL_OVER_5",
+        "requires_review": true,
+        "nearest_floor_signed_residual": 8.774022378750743,
+        "residual_definition": "nearest sampled upward collision height minus unsnapped origin Z; diagnostic only",
+        "nearest_floor_z": 2.6566998570039593e-05,
+        "nearby_floor_clusters_within3": 0,
+        "calibration_split": "train"
+      }
+    },
+    {
+      "id": "c_tool_cabinet@-461989:695605",
+      "type": "c_tool_cabinet",
+      "df_native_position": [
+        -461989,
+        695605,
+        -22926
+      ],
+      "cs2_position": [
+        774.1300780000001,
+        201.84019500000068,
+        -8.773995811752172
+      ],
+      "rotation": null,
+      "asset": "props_collect_983_3P",
+      "source_static": true,
+      "placement_review": {
+        "snapped": false,
+        "status": "REVIEW_Z_RESIDUAL_OVER_5",
+        "requires_review": true,
+        "nearest_floor_signed_residual": 8.774019872971005,
+        "residual_definition": "nearest sampled upward collision height minus unsnapped origin Z; diagnostic only",
+        "nearest_floor_z": 2.4061218833089696e-05,
+        "nearby_floor_clusters_within3": 0,
+        "calibration_split": "train"
+      }
+    },
+    {
+      "id": "c_tool_cabinet@-450602:684594",
+      "type": "c_tool_cabinet",
+      "df_native_position": [
+        -450602,
+        684594,
+        -24410
+      ],
+      "cs2_position": [
+        664.0200780000005,
+        87.97019500000079,
+        -23.613995811752176
+      ],
+      "rotation": null,
+      "asset": "props_collect_983_3P",
+      "source_static": true,
+      "placement_review": {
+        "snapped": false,
+        "status": "REVIEW_Z_RESIDUAL_OVER_5",
+        "requires_review": true,
+        "nearest_floor_signed_residual": 23.61400629860875,
+        "residual_definition": "nearest sampled upward collision height minus unsnapped origin Z; diagnostic only",
+        "nearest_floor_z": 1.0486856573962077e-05,
+        "nearby_floor_clusters_within3": 0,
+        "calibration_split": "train"
+      }
+    },
+    {
+      "id": "c_tool_cabinet@-468647:691635",
+      "type": "c_tool_cabinet",
+      "df_native_position": [
+        -468647,
+        691635,
+        -22718
+      ],
+      "cs2_position": [
+        734.4300780000003,
+        268.4201950000006,
+        -6.693995811752188
+      ],
+      "rotation": null,
+      "asset": "props_collect_983_3P",
+      "source_static": true,
+      "placement_review": {
+        "snapped": false,
+        "status": "REVIEW_Z_RESIDUAL_OVER_5",
+        "requires_review": true,
+        "nearest_floor_signed_residual": 6.694027809927267,
+        "residual_definition": "nearest sampled upward collision height minus unsnapped origin Z; diagnostic only",
+        "nearest_floor_z": 3.199817507825036e-05,
+        "nearby_floor_clusters_within3": 0,
+        "calibration_split": "train"
+      }
+    },
+    {
+      "id": "c_tool_cabinet@-469595:695716",
+      "type": "c_tool_cabinet",
+      "df_native_position": [
+        -469595,
+        695716,
+        -22718
+      ],
+      "cs2_position": [
+        775.2400779999998,
+        277.90019500000017,
+        -6.693995811752188
+      ],
+      "rotation": null,
+      "asset": "props_collect_983_3P",
+      "source_static": true,
+      "placement_review": {
+        "snapped": false,
+        "status": "REVIEW_Z_RESIDUAL_OVER_5",
+        "requires_review": true,
+        "nearest_floor_signed_residual": 6.69402894003092,
+        "residual_definition": "nearest sampled upward collision height minus unsnapped origin Z; diagnostic only",
+        "nearest_floor_z": 3.312827873164521e-05,
+        "nearby_floor_clusters_within3": 0,
+        "calibration_split": "train"
+      }
+    },
+    {
+      "id": "c_drawer@-462665:694627",
+      "type": "c_drawer",
+      "df_native_position": [
+        -462665,
+        694627,
+        -22926
+      ],
+      "cs2_position": [
+        764.3500780000004,
+        208.6001950000009,
+        -8.773995811752172
+      ],
+      "rotation": null,
+      "asset": "props_collect_box_558B_3P",
+      "source_static": true,
+      "placement_review": {
+        "snapped": false,
+        "status": "REVIEW_Z_RESIDUAL_OVER_5",
+        "requires_review": true,
+        "nearest_floor_signed_residual": 8.774020678826062,
+        "residual_definition": "nearest sampled upward collision height minus unsnapped origin Z; diagnostic only",
+        "nearest_floor_z": 2.4867073889516932e-05,
+        "nearby_floor_clusters_within3": 0,
+        "calibration_split": "withheld"
+      }
+    },
+    {
+      "id": "c_large_weapon_crate@-469186:694588",
+      "type": "c_large_weapon_crate",
+      "df_native_position": [
+        -469186,
+        694588,
+        -22713
+      ],
+      "cs2_position": [
+        763.9600780000001,
+        273.810195,
+        -6.643995811752177
+      ],
+      "rotation": null,
+      "asset": "props_collect_box_557_3P",
+      "source_static": true,
+      "placement_review": {
+        "snapped": false,
+        "status": "REVIEW_Z_RESIDUAL_OVER_5",
+        "requires_review": true,
+        "nearest_floor_signed_residual": 6.644028452465002,
+        "residual_definition": "nearest sampled upward collision height minus unsnapped origin Z; diagnostic only",
+        "nearest_floor_z": 3.2640712825027994e-05,
+        "nearby_floor_clusters_within3": 0,
+        "calibration_split": "withheld"
+      }
+    },
+    {
+      "id": "c_large_weapon_crate@-471663:693925",
+      "type": "c_large_weapon_crate",
+      "df_native_position": [
+        -471663,
+        693925,
+        -22713
+      ],
+      "cs2_position": [
+        757.330078,
+        298.58019500000046,
+        -6.643995811752177
+      ],
+      "rotation": null,
+      "asset": "props_collect_box_557_3P",
+      "source_static": true,
+      "placement_review": {
+        "snapped": false,
+        "status": "REVIEW_Z_RESIDUAL_OVER_5",
+        "requires_review": true,
+        "nearest_floor_signed_residual": 6.644031405279638,
+        "residual_definition": "nearest sampled upward collision height minus unsnapped origin Z; diagnostic only",
+        "nearest_floor_z": 3.5593527461422544e-05,
+        "nearby_floor_clusters_within3": 0,
+        "calibration_split": "train"
+      }
+    },
+    {
+      "id": "c_premium_storage_box@-445059:681624",
+      "type": "c_premium_storage_box",
+      "df_native_position": [
+        -445059,
+        681624,
+        -24675
+      ],
+      "cs2_position": [
+        634.3200779999997,
+        32.540195000000494,
+        -26.26399581175218
+      ],
+      "rotation": null,
+      "asset": "props_collect_flightcase_924_3P",
+      "source_static": true,
+      "placement_review": {
+        "snapped": false,
+        "status": "REVIEW_Z_RESIDUAL_OVER_5",
+        "requires_review": true,
+        "nearest_floor_signed_residual": 26.263999690837274,
+        "residual_definition": "nearest sampled upward collision height minus unsnapped origin Z; diagnostic only",
+        "nearest_floor_z": 3.879085091590005e-06,
+        "nearby_floor_clusters_within3": 0,
+        "calibration_split": "train"
+      }
+    },
+    {
+      "id": "c_premium_storage_box@-449130:685970",
+      "type": "c_premium_storage_box",
+      "df_native_position": [
+        -449130,
+        685970,
+        -24300
+      ],
+      "cs2_position": [
+        677.7800779999998,
+        73.25019500000053,
+        -22.51399581175218
+      ],
+      "rotation": null,
+      "asset": "props_collect_flightcase_924_3P",
+      "source_static": true,
+      "placement_review": {
+        "snapped": false,
+        "status": "REVIEW_Z_RESIDUAL_OVER_5",
+        "requires_review": true,
+        "nearest_floor_signed_residual": 22.514004543847555,
+        "residual_definition": "nearest sampled upward collision height minus unsnapped origin Z; diagnostic only",
+        "nearest_floor_z": 8.73209537475338e-06,
+        "nearby_floor_clusters_within3": 0,
+        "calibration_split": "train"
+      }
+    },
+    {
+      "id": "c_ammo_crate@-465981:694100",
+      "type": "c_ammo_crate",
+      "df_native_position": [
+        -465981,
+        694100,
+        -22720
+      ],
+      "cs2_position": [
+        759.080078,
+        241.76019500000075,
+        -6.7139958117521985
+      ],
+      "rotation": null,
+      "asset": "props_collect_box_683_3P",
+      "source_static": true,
+      "placement_review": {
+        "snapped": false,
+        "status": "REVIEW_Z_RESIDUAL_OVER_5",
+        "requires_review": true,
+        "nearest_floor_signed_residual": 6.714024631806794,
+        "residual_definition": "nearest sampled upward collision height minus unsnapped origin Z; diagnostic only",
+        "nearest_floor_z": 2.882005459495208e-05,
+        "nearby_floor_clusters_within3": 0,
+        "calibration_split": "train"
+      }
+    },
+    {
+      "id": "c_ammo_crate@-468516:693810",
+      "type": "c_ammo_crate",
+      "df_native_position": [
+        -468516,
+        693810,
+        -22718
+      ],
+      "cs2_position": [
+        756.1800780000003,
+        267.1101950000002,
+        -6.693995811752188
+      ],
+      "rotation": null,
+      "asset": "props_collect_box_683_3P",
+      "source_static": true,
+      "placement_review": {
+        "snapped": false,
+        "status": "REVIEW_Z_RESIDUAL_OVER_5",
+        "requires_review": true,
+        "nearest_floor_signed_residual": 6.694027653762765,
+        "residual_definition": "nearest sampled upward collision height minus unsnapped origin Z; diagnostic only",
+        "nearest_floor_z": 3.184201057658233e-05,
+        "nearby_floor_clusters_within3": 0,
+        "calibration_split": "train"
+      }
+    },
+    {
+      "id": "c_computer_case@-464559:695363",
+      "type": "c_computer_case",
+      "df_native_position": [
+        -464559,
+        695363,
+        -22926
+      ],
+      "cs2_position": [
+        771.7100780000001,
+        227.5401950000005,
+        -8.773995811752172
+      ],
+      "rotation": null,
+      "asset": "props_collect_box_559_3P",
+      "source_static": true,
+      "placement_review": {
+        "snapped": false,
+        "status": "REVIEW_Z_RESIDUAL_OVER_5",
+        "requires_review": true,
+        "nearest_floor_signed_residual": 8.774022936650239,
+        "residual_definition": "nearest sampled upward collision height minus unsnapped origin Z; diagnostic only",
+        "nearest_floor_z": 2.712489806545881e-05,
+        "nearby_floor_clusters_within3": 0,
+        "calibration_split": "train"
+      }
+    },
+    {
+      "id": "c_safe@-473090:692366",
+      "type": "c_safe",
+      "df_native_position": [
+        -473090,
+        692366,
+        -22718
+      ],
+      "cs2_position": [
+        741.7400779999998,
+        312.8501950000009,
+        -6.693995811752188
+      ],
+      "rotation": null,
+      "asset": "props_collect_box_546_3P",
+      "source_static": true,
+      "placement_review": {
+        "snapped": false,
+        "status": "REVIEW_Z_RESIDUAL_OVER_5",
+        "requires_review": true,
+        "nearest_floor_signed_residual": 6.694033106396686,
+        "residual_definition": "nearest sampled upward collision height minus unsnapped origin Z; diagnostic only",
+        "nearest_floor_z": 3.7294644498345696e-05,
+        "nearby_floor_clusters_within3": 0,
+        "calibration_split": "withheld"
+      }
+    },
+    {
+      "id": "c_premium_suitcase@-453637:653835",
+      "type": "c_premium_suitcase",
+      "df_native_position": [
+        -453637,
+        653835,
+        -24963
+      ],
+      "cs2_position": [
+        356.4300780000003,
+        118.32019500000024,
+        -29.143995811752177
+      ],
+      "rotation": null,
+      "asset": "props_collect_box_545_3P",
+      "source_static": true,
+      "placement_review": {
+        "snapped": false,
+        "status": "REVIEW_Z_RESIDUAL_OVER_5",
+        "requires_review": true,
+        "nearest_floor_signed_residual": 29.144009916615598,
+        "residual_definition": "nearest sampled upward collision height minus unsnapped origin Z; diagnostic only",
+        "nearest_floor_z": 1.410486342207067e-05,
+        "nearby_floor_clusters_within3": 0,
+        "calibration_split": "train"
+      }
+    }
+  ]
+}
