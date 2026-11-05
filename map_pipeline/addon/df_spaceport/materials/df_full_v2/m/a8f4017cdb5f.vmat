@@ -13,8 +13,6 @@ Layer0
 	TextureRoughness "materials\df_full_v2\t/T_H_IceLand_Building_Wall_01c_MR_3901757dc250_rough.png"
 	TextureMetalness "materials\df_full_v2\t/T_H_IceLand_Building_Wall_01c_MR_3901757dc250_metal.png"
 	TextureAmbientOcclusion "materials\df_full_v2\t/T_H_IceLand_Building_Wall_01c_MR_3901757dc250_ao.png"
-	F_ALPHA_TEST 1
-	g_flAlphaTestReference "0.500000"
 
 	F_SELF_ILLUM 1
 	TextureSelfIllumMask "materials/df_full_v2/t/T_H_IceLand_Building_Wall_01c_CH_30e360419e68.png"
