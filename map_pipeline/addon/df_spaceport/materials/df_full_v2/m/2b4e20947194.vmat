@@ -1,18 +1,38 @@
 Layer0
 {
-    shader "csgo_water.vfx"
+	shader "csgo_complex.vfx"
 
-    F_ANIMATED_NORMALS 1
-    F_FRESNEL 1
+	F_PAINT_VERTEX_COLORS 0
+	F_ADDITIVE_BLEND 0
+	F_ALPHA_TEST 0
+	F_SPECULAR 1
+	F_SPECULAR_CUBE_MAP 1
+	F_DETAIL_TEXTURE 4
+	F_SELF_ILLUM 1
+	g_bFogEnabled "1"
+	g_flCubeMapScalar "1.000000"
+	g_flMetalness "0.160000"
+	g_flDetailBlendFactor "0.900000"
+	g_flBumpStrength "1.300000"
+	g_vColorTint "[1.000000 1.000000 1.000000 1.000000]"
+	g_vTexCoordScale "[11.000 11.000]"
+	g_vDetailTexCoordScale "[3.500 3.500]"
+	g_vSelfIllumTint "[0.200000 0.440000 0.520000]"
+	g_flSelfIllumScale "0.380000"
+	g_flSelfIllumBrightness "0.850000"
 
-    g_flReflectionAmount "0.900000"
-    g_flRefractionAmount "1.000000"
-    g_flWaterDepth "400.000000"
-    g_flWaterStart "1.000000"
-    g_vWaterFogColor "[0.030000 0.075000 0.055000 0.000000]"
-    g_tNormal "materials/dev/water_normal_mks_558bf690.vtex_c"
+	TextureColor "materials/df_full_v2/t/df_water_oil_color_hd.png"
+	TextureNormal "materials/df_full_v2/t/T_WaterMicroNormal_01.png_a6f43033698e.png"
+	TextureDetail "materials/df_full_v2/t/df_water_detail_color_hd.png"
+	TextureNormalDetail "materials/df_full_v2/t/T_WaterDetail_03.png_8925edf6a037.png"
+	TextureDetailMask "materials/df_full_v2/t/df_water_ao.png"
+	TextureRoughness "materials/df_full_v2/t/df_water_roughness_hd.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/df_water_ao.png"
+	TextureSelfIllumMask "materials/df_full_v2/t/df_water_detail_color_hd.png"
 
-    mapbuilder.nonsolid 1
-    mapbuilder.water 1
-    PhysicsSurfaceProperties "water"
+	DynamicParams
+	{
+		g_vTexCoordOffset "frac( float2( 0.014, 0.009 ) * time() )"
+		g_vDetailTexCoordOffset "frac( float2( -0.011, 0.016 ) * time() )"
+	}
 }

@@ -13,8 +13,6 @@ Layer0
 	TextureRoughness "materials\df_full_v2\t/T_H_Fence_SoundproofWall_02b_MRA_bd88e6f10a84_rough.png"
 	TextureMetalness "materials\df_full_v2\t/T_H_Fence_SoundproofWall_02b_MRA_bd88e6f10a84_metal.png"
 	TextureAmbientOcclusion "materials\df_full_v2\t/T_H_Fence_SoundproofWall_02b_MRA_bd88e6f10a84_ao.png"
-	F_ALPHA_TEST 1
-	g_flAlphaTestReference "0.500000"
 
 	F_SELF_ILLUM 1
 	TextureSelfIllumMask "materials/df_full_v2/t/T_H_Fence_SoundproofWall_02b_C_H_f4bc4e2df0ec.png"
