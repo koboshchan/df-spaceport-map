@@ -7,11 +7,9 @@ Layer0
 	F_ALPHA_TEST 0
 	g_bFogEnabled "1"
 
-	TextureColor "materials/df_full_v2/t/T_RoadFacility_Tunnel_04b_metal__064995020e2a.png"
-	TextureNormal "materials/df_full_v2/t/T_Building_FutureTech_BigDoor_06_5b3dfea9961e.png"
-	TextureRoughness "materials/df_full_v2/t/T_H_Industrial_Mechanical_Concre_d482e95395e1.png"
-	TextureMetalness "materials/df_full_v2/t/T_H_Industrial_Mechanical_Concre_d482e95395e1.png"
-	TextureAmbientOcclusion "materials/df_full_v2/t/T_H_Industrial_Mechanical_Concre_d482e95395e1.png"
-	F_ALPHA_TEST 1
-	g_flAlphaTestReference "0.500000"
+	TextureColor "materials/df_full_v2/t/T_H_Industrial_Container_02A_Color_Masked.png"
+	TextureNormal "materials/df_full_v2/t/T_H_Industrial_Container_02A_NA__b7de6ec70c06.png"
+	TextureRoughness "materials/df_full_v2/t/T_H_Industrial_Container_02A_Mas_a513c7d7657b.png"
+	TextureMetalness "materials/df_full_v2/t/T_H_Industrial_Container_02A_Mas_a513c7d7657b.png"
+	TextureAmbientOcclusion "materials/df_full_v2/t/T_H_Industrial_Container_02A_NA__b7de6ec70c06.png"
 }
