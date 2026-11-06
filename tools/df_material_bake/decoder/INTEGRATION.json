@@ -1,0 +1,32 @@
+{
+  "sourceCommit": "2cb2fc8443ae4b5907db6bd18708004a53258dd6",
+  "bundleSHA256": "86e86f8180033e583a5ad6c1822c3606ea948839f4ed9dbaabb7e41d2ddcd323",
+  "importedFiles": [
+    "HANDOFF.md",
+    "README.md",
+    "decoder.py",
+    "desktop_worker.py",
+    "desktop_worker157.py",
+    "evidence/exit.json",
+    "evidence/exit157.json",
+    "evidence/fixture-manifest.json",
+    "evidence/historical56-manifest.json",
+    "evidence/optional2229-candidate.json",
+    "evidence/prefix2229-candidate.json",
+    "evidence/started.json",
+    "evidence/started157.json",
+    "evidence/test-receipt-next.log",
+    "evidence/worker.log",
+    "evidence/worker157.log",
+    "optional_analysis.py",
+    "prefix_analysis.py",
+    "run_pilot.py",
+    "test_decoder.py",
+    "test_optional.py"
+  ],
+  "excluded": [
+    ".gitignore",
+    "launch157.py"
+  ],
+  "scope": "bounded framing and historical structural candidates only; semantics unsupported"
+}

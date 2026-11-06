@@ -1,0 +1,78 @@
+{
+  "status": "STRUCTURAL_CANDIDATE_NOT_SCHEMA_PROOF",
+  "firstU32": 24,
+  "arrays": [
+    {
+      "countOffset": 4,
+      "count": 9,
+      "values": [
+        0,
+        0,
+        0,
+        5,
+        0,
+        50332162,
+        50332675,
+        50333188,
+        4294967295
+      ]
+    },
+    {
+      "countOffset": 44,
+      "count": 10,
+      "values": [
+        0,
+        0,
+        0,
+        5,
+        8,
+        50332417,
+        50332930,
+        50333443,
+        67109632,
+        4294967295
+      ]
+    },
+    {
+      "countOffset": 88,
+      "count": 6,
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        4294967295
+      ]
+    },
+    {
+      "countOffset": 116,
+      "count": 5,
+      "values": [
+        0,
+        0,
+        0,
+        23399949,
+        22220616
+      ]
+    },
+    {
+      "countOffset": 140,
+      "count": 8,
+      "values": [
+        0,
+        0,
+        0,
+        5,
+        6,
+        50331649,
+        67109376,
+        4294967295
+      ]
+    }
+  ],
+  "bytes": 176,
+  "sha256": "f69a0bff2a50f9fa07bea74c99f7e70fb18c5dfe2967189106cba8b1ca326fdb",
+  "semanticRoles": "UNSUPPORTED",
+  "formatVersion": "UNSUPPORTED"
+}

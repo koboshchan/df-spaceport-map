@@ -1,0 +1,69 @@
+{
+  "status": "STRUCTURAL_CANDIDATE_NOT_SCHEMA_PROOF",
+  "blocks": [
+    {
+      "keyByte": 112,
+      "offset": 0,
+      "bytes": 6,
+      "sha256": "b0283fffd6f02529ba0665b73d273e411e9cc916b5b34757689d680f421157c0",
+      "semanticStatus": "UNSUPPORTED_UNMATCHED_SERIALIZER",
+      "uninterpretedBytes": [
+        1,
+        4,
+        5,
+        4,
+        8,
+        0
+      ]
+    },
+    {
+      "keyByte": 117,
+      "offset": 11,
+      "bytes": 81,
+      "sha256": "9d5661fe80766f4f0533a4c753ec56f34c455f3f8996be94f0c34cc49013f24e",
+      "semanticStatus": "UNSUPPORTED_UNMATCHED_SERIALIZER",
+      "candidateStringArray": [
+        {
+          "arrayIndex": 0,
+          "text": "",
+          "bindingSlotStatus": "UNSUPPORTED"
+        },
+        {
+          "arrayIndex": 1,
+          "text": "View",
+          "bindingSlotStatus": "UNSUPPORTED"
+        },
+        {
+          "arrayIndex": 2,
+          "text": "InstancedDecalData",
+          "bindingSlotStatus": "UNSUPPORTED"
+        },
+        {
+          "arrayIndex": 3,
+          "text": "Material",
+          "bindingSlotStatus": "UNSUPPORTED"
+        },
+        {
+          "arrayIndex": 4,
+          "text": "SceneTexturesStruct",
+          "bindingSlotStatus": "UNSUPPORTED"
+        },
+        {
+          "arrayIndex": 5,
+          "text": "",
+          "bindingSlotStatus": "UNSUPPORTED"
+        }
+      ]
+    }
+  ],
+  "bytes": 101,
+  "sha256": "4cfaf4c6d8e32e7ef6d871be503ddebb7b7a4f4914fb35ecbb4ce61cbb942561",
+  "fixtureScope": "HISTORICAL_2229_NOT_ALL157",
+  "rawPayloadSHA256": "8779d53af9648a83ef03b0200a2290de3abce7384ce964d497008af8ba5c4504",
+  "RDEFAvailable": false,
+  "uniformMemberDeclarations": "UNSUPPORTED",
+  "namedResourceBinding": "UNSUPPORTED",
+  "operationIR": "UNSUPPORTED",
+  "frozenImageRootBounds": "UNSUPPORTED",
+  "sourceMatch": "UNAVAILABLE"
+}
