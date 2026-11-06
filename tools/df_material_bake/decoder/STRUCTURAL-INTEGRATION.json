@@ -1,0 +1,14 @@
+{
+  "sourceCommit": "9eca52518a2326ed3a530f3b83e3bbee284f4fc8",
+  "bundleSHA256": "ad1b2a38b644a749cefba0a9df0ab5bfe3d84e406cea0984928bb33efe5ac85d",
+  "independentReproductions": 157,
+  "semanticDecodes": 0,
+  "unsupported": [
+    "field mapping",
+    "binding slots",
+    "uniform members",
+    "frozen roots",
+    "operation IR"
+  ],
+  "note": "six-byte key112 is not the seven-byte stock 4.27 mirror; no serializer equivalence established"
+}
