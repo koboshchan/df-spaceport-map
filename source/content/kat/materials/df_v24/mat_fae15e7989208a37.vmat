@@ -1,0 +1,15 @@
+Layer0
+{
+    shader "csgo_complex.vfx"
+
+
+
+
+    TextureColor "materials/df_v24/t/d8c835b9b7b0afe732d0aaca.png"
+    TextureNormal "materials/df_v24/t/normal.png"
+    TextureRoughness "materials/df_v24/t/rough.png"
+    TextureMetalness "materials/df_v24/t/black.png"
+    TextureAmbientOcclusion "materials/df_v24/t/white.png"
+    TextureTranslucency "materials/df_v24/t/alpha_fae15e7989208a37.png"
+    F_TRANSLUCENT 1
+}

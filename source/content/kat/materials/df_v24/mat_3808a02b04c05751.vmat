@@ -1,0 +1,10 @@
+Layer0
+{
+    shader "csgo_refract.vfx"
+
+    TextureNormal "materials/df_v24/t/normal.png"
+
+
+
+
+}

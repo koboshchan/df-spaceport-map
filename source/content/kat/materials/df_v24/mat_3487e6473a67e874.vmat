@@ -1,0 +1,13 @@
+Layer0
+{
+    shader "csgo_complex.vfx"
+    F_PAINT_VERTEX_COLORS 1
+    F_ALPHA_TEST 0
+    F_TRANSLUCENT 0
+    F_METALNESS_TEXTURE 1
+    TextureColor "materials/df_v24/t/approved_dumpster_slot1_color.png"
+    TextureNormal "materials/df_v24/t/approved_dumpster_slot1_normal.png"
+    TextureRoughness "materials/df_v24/t/approved_dumpster_slot1_rough.png"
+    TextureMetalness "materials/df_v24/t/approved_dumpster_slot1_metal.png"
+    TextureAmbientOcclusion "materials/df_v24/t/white.png"
+}

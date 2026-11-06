@@ -9,3 +9,7 @@
 __pycache__/
 map_build/**/addon/
 map_build/**/analysis/
+
+# Source-tool local scratch only; build scripts remain eligible.
+source-tools/__pycache__/
+source-tools/.scratch/

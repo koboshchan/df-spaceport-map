@@ -1,0 +1,5 @@
+
+# New source workflow uses ordinary Git, never automatic LFS.
+source-tools/** -filter -diff -merge text=auto
+
+source/** -filter -diff -merge -text

@@ -1,0 +1,17 @@
+Layer0
+{
+    shader "csgo_static_overlay.vfx"
+
+
+
+
+    TextureColor "materials/df_v24/t/615edf0dad191d69aa057730.png"
+    TextureNormal "materials/df_v24/t/normal.png"
+    TextureRoughness "materials/df_v24/t/rough.png"
+    TextureMetalness "materials/df_v24/t/black.png"
+    TextureAmbientOcclusion "materials/df_v24/t/white.png"
+    TextureTranslucency "materials/df_v24/t/alpha_75201dcecf2b4501.png"
+    F_LIT 1
+    F_BLEND_MODE 1
+    TextureSelfIllumMask "materials/df_v24/t/alpha_75201dcecf2b4501.png"
+}

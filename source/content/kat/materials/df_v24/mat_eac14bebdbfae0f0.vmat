@@ -1,0 +1,16 @@
+Layer0
+{
+    shader "csgo_foliage.vfx"
+
+
+
+
+    TextureColor "materials/df_v24/t/08aaa1bbdaf8223e62ca5c14.png"
+    TextureNormal "materials/df_v24/t/normal.png"
+    TextureRoughness "materials/df_v24/t/rough.png"
+
+    TextureAmbientOcclusion "materials/df_v24/t/white.png"
+
+    TextureTranslucency "materials/df_v24/t/alpha_eac14bebdbfae0f0.png"
+    F_ALPHA_TEST 1
+}

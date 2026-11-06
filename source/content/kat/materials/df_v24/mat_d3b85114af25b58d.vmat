@@ -1,0 +1,14 @@
+Layer0
+{
+    shader "csgo_glass.vfx"
+
+    TextureNormal "materials/df_v24/t/normal.png"
+    TextureRoughness "materials/df_v24/t/rough.png"
+
+
+
+    GlassMaskTranslucency "materials/df_v24/t/alpha_d3b85114af25b58d.png"
+    GlassMaskTransmission "materials/df_v24/t/alpha_d3b85114af25b58d.png"
+    GlassMaskColor "materials/df_v24/t/a19f624d5a6400cb45da3c09.png"
+    GlassTintColor "materials/df_v24/t/a19f624d5a6400cb45da3c09.png"
+}

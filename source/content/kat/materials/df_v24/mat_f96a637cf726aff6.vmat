@@ -1,0 +1,16 @@
+Layer0
+{
+    shader "csgo_unlitgeneric.vfx"
+
+
+
+
+    TextureColor "materials/df_v24/t/fallbackgray.png"
+
+
+
+
+    TextureTranslucency "materials/df_v24/t/alpha_f96a637cf726aff6.png"
+    F_TRANSLUCENT 1
+    TextureSelfIllumMask "materials/df_v24/t/alpha_f96a637cf726aff6.png"
+}

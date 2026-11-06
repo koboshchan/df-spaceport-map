@@ -1,0 +1,32 @@
+Layer0
+{
+    shader "csgo_environment_blend.vfx"
+
+
+
+
+
+
+    TextureColor1 "materials/df_v24/t/fallbackgray.png"
+    TextureNormal1 "materials/df_v24/t/normal.png"
+    TextureRoughness1 "materials/df_v24/t/rough.png"
+    TextureMetalness1 "materials/df_v24/t/black.png"
+    TextureAmbientOcclusion1 "materials/df_v24/t/white.png"
+    TextureColor2 "materials/df_v24/t/fallbackgray.png"
+    TextureNormal2 "materials/df_v24/t/normal.png"
+    TextureRoughness2 "materials/df_v24/t/rough.png"
+    TextureMetalness2 "materials/df_v24/t/black.png"
+    TextureAmbientOcclusion2 "materials/df_v24/t/white.png"
+    TextureColor3 "materials/df_v24/t/fallbackgray.png"
+    TextureNormal3 "materials/df_v24/t/normal.png"
+    TextureRoughness3 "materials/df_v24/t/rough.png"
+    TextureMetalness3 "materials/df_v24/t/black.png"
+    TextureAmbientOcclusion3 "materials/df_v24/t/white.png"
+    TextureTranslucency1 "materials/df_v24/t/alpha_ceedd15e6c5d8ebc.png"
+    TextureHeight1 "materials/df_v24/t/alpha_ceedd15e6c5d8ebc.png"
+    TextureHeight2 "materials/df_v24/t/alpha_ceedd15e6c5d8ebc.png"
+    TextureHeight3 "materials/df_v24/t/alpha_ceedd15e6c5d8ebc.png"
+    TextureTintMask1 "materials/df_v24/t/alpha_ceedd15e6c5d8ebc.png"
+    TextureTintMask2 "materials/df_v24/t/alpha_ceedd15e6c5d8ebc.png"
+    TextureTintMask3 "materials/df_v24/t/alpha_ceedd15e6c5d8ebc.png"
+}

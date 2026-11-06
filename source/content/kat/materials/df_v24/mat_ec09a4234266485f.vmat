@@ -1,0 +1,17 @@
+Layer0
+{
+    shader "csgo_water.vfx"
+
+
+
+
+    TextureColor "materials/df_v24/t/fallbackgray.png"
+    TextureNormal "materials/df_v24/t/normal.png"
+
+
+
+
+    F_FLOW_NORMALS 1
+    TextureNoise "materials/df_v24/t/fallbackgray.png"
+    TextureFlow "materials/df_v24/t/alpha_ec09a4234266485f.png"
+}
