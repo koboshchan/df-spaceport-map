@@ -1,0 +1,26 @@
+{
+  "id": "m_6acafff3f71fc268",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Tools/SM_H_Industrial_Tools_Hydraulicforklift_01.SM_H_Industrial_Tools_Hydraulicforklift_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\Tools\\SM_H_Industrial_Tools_Hydraulicforklift_01.glb",
+  "sourceSHA256": "B19B723F980BC77836D166ABE2AB48E4B74DC0DDCACBDE55F4045F860DB48D3C",
+  "model": "models/df_v24/m_6acafff3f71fc268.vmdl",
+  "materials": {
+    "mat_f009c01f9fde4975": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Tools/00_Materials/HD/MI_H_Industrial_Tools_Hydraulicforklift_01_HD.MI_H_Industrial_Tools_Hydraulicforklift_01_HD"
+  },
+  "vertices": 3184,
+  "polygons": 2419,
+  "bounds": [
+    [
+      -10.228109359741211,
+      -26.897705078125,
+      -0.481217622756958
+    ],
+    [
+      10.228109359741211,
+      26.51844024658203,
+      41.455543518066406
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

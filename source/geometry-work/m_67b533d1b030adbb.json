@@ -1,0 +1,28 @@
+{
+  "id": "m_67b533d1b030adbb",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech_Ma1/SM_H_FutureTech_Resort_Flowerpot_01.SM_H_FutureTech_Resort_Flowerpot_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech_Ma1\\SM_H_FutureTech_Resort_Flowerpot_01.glb",
+  "sourceSHA256": "9C467B389DD6A349C228791919554D5CAED6662E0DE7DEB2CB15EF4F18F0562C",
+  "model": "models/df_v24/m_67b533d1b030adbb.vmdl",
+  "materials": {
+    "mat_dfeb1654507e0c46": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Resort_Flowerpot_05B_HD.MI_H_FutureTech_Resort_Flowerpot_05B_HD",
+    "mat_747e11a81c0878a6": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Resort_Flowerpot_05_HD.MI_H_FutureTech_Resort_Flowerpot_05_HD",
+    "mat_e7062a2d8edc5ee1": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Furniture_Flowerpot_01B_HD.MI_H_FutureTech_Furniture_Flowerpot_01B_HD"
+  },
+  "vertices": 535,
+  "polygons": 346,
+  "bounds": [
+    [
+      -5.418410301208496,
+      -5.4184088706970215,
+      0.3918742537498474
+    ],
+    [
+      5.418412208557129,
+      5.418412685394287,
+      22.61960792541504
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

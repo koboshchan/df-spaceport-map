@@ -1,0 +1,27 @@
+{
+  "id": "m_7e3d21e8c2a035ff",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/WalkwaySystem/SM_H_Building_FutureTech_TransferStation_InterWall_01G.SM_H_Building_FutureTech_TransferStation_InterWall_01G",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\WalkwaySystem\\SM_H_Building_FutureTech_TransferStation_InterWall_01G.glb",
+  "sourceSHA256": "E9FCEC42DC26984A81500330BC34528CF6253CBBD21FF654649D02691C109D71",
+  "model": "models/df_v24/m_7e3d21e8c2a035ff.vmdl",
+  "materials": {
+    "mat_33602b4bfdc71367": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_C_HD.MI_I_WalkwaySystem_MetalFloor_01_C_HD",
+    "mat_c9e75ab9b7623828": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_HD.MI_I_WalkwaySystem_MetalFloor_01_HD"
+  },
+  "vertices": 259,
+  "polygons": 156,
+  "bounds": [
+    [
+      -46.82059860229492,
+      4.394531060825102e-05,
+      -0.8593945503234863
+    ],
+    [
+      0.0001768112269928679,
+      103.68966674804688,
+      8.221899032592773
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

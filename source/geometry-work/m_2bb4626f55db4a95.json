@@ -1,0 +1,32 @@
+{
+  "id": "m_2bb4626f55db4a95",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_HLight_01_InterWall_04H.SM_H_Building_FutureTech_HLight_01_InterWall_04H",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_HLight_01_InterWall_04H.glb",
+  "sourceSHA256": "C1FB2D807B9231F54AF3F65DDD4D40DBB1A47B69AA83B0D6806A13D594CC1559",
+  "model": "models/df_v24/m_2bb4626f55db4a95.vmdl",
+  "materials": {
+    "mat_659a24691983afc5": "DeltaForce/Content/Environment/MatBlend/Metal/Iris/00_Materials/MI_Building_Storage_Metal_05B_HD.MI_Building_Storage_Metal_05B_HD",
+    "mat_32ca6a0c15e17941": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_HLight_01_InterWall_02_HD.MI_H_Building_FutureTech_HLight_01_InterWall_02_HD",
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_1b58319710d2fd64": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_06_HD.MI_GEN_Metal_Painting_06_HD",
+    "mat_5c162a1cab107fa4": "DeltaForce/Content/Environment/Structures/HAAVK/Window/00_Materials/HD/MI_H_Window_01_HD.MI_H_Window_01_HD",
+    "mat_742c7fee90c86bab": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_04_HD.MI_GEN_Metal_Base_04_HD"
+  },
+  "vertices": 21113,
+  "polygons": 12144,
+  "bounds": [
+    [
+      -2838.337646484375,
+      29.516626358032227,
+      183.82257080078125
+    ],
+    [
+      -1023.4796142578125,
+      1580.1248779296875,
+      1492.8763427734375
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

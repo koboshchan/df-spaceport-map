@@ -1,0 +1,26 @@
+{
+  "id": "m_2a3f6fd04428b56a",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/SM_BS_Oleander_255cm_HD.SM_BS_Oleander_255cm_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Bush\\SM_BS_Oleander_255cm_HD.glb",
+  "sourceSHA256": "928B1BDB1BB68B2C9511DC69621E489982D7A89B59E0335EC0E772C7EF4AE2A4",
+  "model": "models/df_v24/m_2a3f6fd04428b56a.vmdl",
+  "materials": {
+    "mat_50163d829c0c7d31": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/00_Materials/MI_BS_Oleander_255cm_Leaf_HD.MI_BS_Oleander_255cm_Leaf_HD"
+  },
+  "vertices": 4150,
+  "polygons": 3051,
+  "bounds": [
+    [
+      -54.42573547363281,
+      -40.415977478027344,
+      -8.083770751953125
+    ],
+    [
+      49.21459197998047,
+      40.27186584472656,
+      89.99920654296875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

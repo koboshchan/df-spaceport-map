@@ -1,0 +1,456 @@
+{
+  "selectionId": "selection-286",
+  "actor": {
+    "Type": "BP_InteractorContainer_Rocket_C",
+    "Name": "BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DeltaForce/Content/BluePrints/Interact/BP_InteractorContainer_Rocket.BP_InteractorContainer_Rocket_C'",
+    "Outer": {
+      "ObjectName": "Level'SpaceCenter_BFR:PersistentLevel'",
+      "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.50"
+    },
+    "Template": {
+      "ObjectName": "BP_InteractorContainer_Rocket_C'Default__BP_InteractorContainer_Rocket_C'",
+      "ObjectPath": "DeltaForce/Content/BluePrints/Interact/BP_InteractorContainer_Rocket.2"
+    },
+    "Properties": {
+      "SM_H_FutureTech_Furniture_Controller_02": {
+        "ObjectName": "StaticMeshComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.SM_H_FutureTech_Furniture_Controller_02'",
+        "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.87"
+      },
+      "SM_H_FutureTech_Furniture_Controller_01": {
+        "ObjectName": "StaticMeshComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.SM_H_FutureTech_Furniture_Controller_01'",
+        "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.86"
+      },
+      "Box": {
+        "ObjectName": "BoxComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.Box'",
+        "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.5"
+      },
+      "InteractorSkeletalMesh": {
+        "ObjectName": "InteractorSkeletalMeshComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.InteractorSkeletalMesh'",
+        "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.49"
+      },
+      "EditOnlyBox": null,
+      "InteractorPoint": {
+        "ObjectName": "SceneComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.InteractorPoint'",
+        "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.63"
+      },
+      "AnimSwitcher": {
+        "ObjectName": "BP_ContainerAnimSwitcherComponent_C'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.AnimSwitcher'",
+        "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.12"
+      },
+      "OpenProcess": {
+        "ObjectName": "BP_ContainerOperatorProcessComponent_C'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.OpenProcess'",
+        "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.14"
+      },
+      "ProcessPawnClose": {
+        "ObjectName": "InteractorProcessPawnAnimComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.ProcessPawnClose'",
+        "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.47"
+      },
+      "ProcessPawnOpen": {
+        "ObjectName": "BP_ProcessPawnOpenContainer_C'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.ProcessPawnOpen'",
+        "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.25"
+      },
+      "CloseProcess": {
+        "ObjectName": "BP_ContainerOperatorProcessComponent_C'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.CloseProcess'",
+        "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.13"
+      },
+      "ProcessPawnPickup": {
+        "ObjectName": "InteractorProcessPawnAnimComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.ProcessPawnPickup'",
+        "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.48"
+      },
+      "SmallAreaConfig": null,
+      "BigArea": null,
+      "TextRender": null,
+      "LootDebug": null,
+      "地图": "EnumLootMapName::NewEnumerator3",
+      "地图大区域": "EnumDamArea::NewEnumerator53",
+      "地图小区域自定义名称": "发射区",
+      "Loot容器分类": "EnumLootBoxType::NewEnumerator42",
+      "唯一性": "航天城_合同_发射区_航空储物箱_29-53",
+      "SaveID": 954,
+      "DefaultSceneRoot": {
+        "ObjectName": "SceneComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.DefaultSceneRoot'",
+        "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.62"
+      },
+      "StackCount": 1,
+      "bLockedAfterContractEnd": false,
+      "PrimaryActorTick": {
+        "AggregateClass": {
+          "ObjectName": "Class'InventoryPickup_OpenBox'",
+          "ObjectPath": "/Script/DFMGameplay"
+        },
+        "OwnerLevel": {
+          "ObjectName": "Level'SpaceCenter_BFR:PersistentLevel'",
+          "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.50"
+        }
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.DefaultSceneRoot'",
+        "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.62"
+      },
+      "Tags": [
+        "SOL_QA_929001_2_1"
+      ],
+      "BlueprintCreatedComponents": [
+        {
+          "ObjectName": "SceneComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.DefaultSceneRoot'",
+          "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.62"
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "InteractorProcessPawnAnimComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.ProcessPawnPickup'",
+          "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.48"
+        },
+        {
+          "ObjectName": "BP_ContainerOperatorProcessComponent_C'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.CloseProcess'",
+          "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.13"
+        },
+        {
+          "ObjectName": "BP_ProcessPawnOpenContainer_C'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.ProcessPawnOpen'",
+          "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.25"
+        },
+        {
+          "ObjectName": "InteractorProcessPawnAnimComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.ProcessPawnClose'",
+          "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.47"
+        },
+        {
+          "ObjectName": "BP_ContainerOperatorProcessComponent_C'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.OpenProcess'",
+          "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.14"
+        },
+        {
+          "ObjectName": "BP_ContainerAnimSwitcherComponent_C'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.AnimSwitcher'",
+          "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.12"
+        },
+        {
+          "ObjectName": "SceneComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.InteractorPoint'",
+          "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.63"
+        },
+        null,
+        {
+          "ObjectName": "InteractorSkeletalMeshComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.InteractorSkeletalMesh'",
+          "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.49"
+        },
+        {
+          "ObjectName": "BoxComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.Box'",
+          "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.5"
+        },
+        {
+          "ObjectName": "StaticMeshComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.SM_H_FutureTech_Furniture_Controller_01'",
+          "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.86"
+        },
+        {
+          "ObjectName": "StaticMeshComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.SM_H_FutureTech_Furniture_Controller_02'",
+          "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.87"
+        }
+      ]
+    }
+  },
+  "exactExcludedMatch": false,
+  "originalExclusionCounts": {
+    "coded-event": 3,
+    "contract": 15
+  },
+  "originalExcludedRecords": [
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/DynamicRequest/Event/SpaceCenter_Event_Long1_4.SpaceCenter_Event_Long1_4:PersistentLevel.BP_Interactor_Container_SafeBox_Code2_2",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/DynamicRequest/Event/SpaceCenter_Event_Long1_4.umap",
+      "reason": "coded-event"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/DynamicRequest/Event/SpaceCenter_Event_Long1_4.SpaceCenter_Event_Long1_4:PersistentLevel.BP_Interactor_Container_SafeBox_Code3_5",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/DynamicRequest/Event/SpaceCenter_Event_Long1_4.umap",
+      "reason": "coded-event"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/DynamicRequest/Event/SpaceCenter_Event_Long1_4.SpaceCenter_Event_Long1_4:PersistentLevel.BP_Interactor_Container_SafeBox_Code_2",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/DynamicRequest/Event/SpaceCenter_Event_Long1_4.umap",
+      "reason": "coded-event"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox2_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-87false_BLoot0",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox2_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-92false_BLoot0",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox2_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-97false_BLoot0",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-87false_BLoot0",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-87false_BLoot0_0",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-87false_BLoot0_1",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-87false_BLoot0_2",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-92false_BLoot0",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-92false_BLoot0_3",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-92false_BLoot0_4",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-92false_BLoot0_5",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-97false_BLoot0",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-97false_BLoot0_6",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-97false_BLoot0_7",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-97false_BLoot0_8",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract"
+    }
+  ],
+  "excludedSourceTagEvidence": [
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/DynamicRequest/Event/SpaceCenter_Event_Long1_4.SpaceCenter_Event_Long1_4:PersistentLevel.BP_Interactor_Container_SafeBox_Code2_2",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/DynamicRequest/Event/SpaceCenter_Event_Long1_4.umap",
+      "reason": "coded-event",
+      "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\DynamicRequest\\Event\\SpaceCenter_Event_Long1_4\\000017-BP_Interactor_Container_SafeBox_Code2_2.source.json",
+      "tags": null,
+      "class": "BP_Interactor_Container_SafeBox_Code_C"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/DynamicRequest/Event/SpaceCenter_Event_Long1_4.SpaceCenter_Event_Long1_4:PersistentLevel.BP_Interactor_Container_SafeBox_Code3_5",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/DynamicRequest/Event/SpaceCenter_Event_Long1_4.umap",
+      "reason": "coded-event",
+      "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\DynamicRequest\\Event\\SpaceCenter_Event_Long1_4\\000018-BP_Interactor_Container_SafeBox_Code3_5.source.json",
+      "tags": null,
+      "class": "BP_Interactor_Container_SafeBox_Code_C"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/DynamicRequest/Event/SpaceCenter_Event_Long1_4.SpaceCenter_Event_Long1_4:PersistentLevel.BP_Interactor_Container_SafeBox_Code_2",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/DynamicRequest/Event/SpaceCenter_Event_Long1_4.umap",
+      "reason": "coded-event",
+      "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\DynamicRequest\\Event\\SpaceCenter_Event_Long1_4\\000019-BP_Interactor_Container_SafeBox_Code_2.source.json",
+      "tags": null,
+      "class": "BP_Interactor_Container_SafeBox_Code_C"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox2_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-87false_BLoot0",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract",
+      "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\QA\\QA_x26_y17_3\\000032-BP_Interactor_SingleItemContainer_SafeBox2_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-87false_BLoot0.source.json",
+      "tags": [
+        "SingleItemContainerSafeBox",
+        "SOL_QA_924101_2_1",
+        "PVSFORM-123454344"
+      ],
+      "class": "BP_Interactor_SingleItemContainer_SafeBox2_C"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox2_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-92false_BLoot0",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract",
+      "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\QA\\QA_x26_y17_3\\000033-BP_Interactor_SingleItemContainer_SafeBox2_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-92false_BLoot0.source.json",
+      "tags": [
+        "SingleItemContainerSafeBox",
+        "SOL_QA_924101_2_1",
+        "PVSFORM2071176480"
+      ],
+      "class": "BP_Interactor_SingleItemContainer_SafeBox2_C"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox2_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-97false_BLoot0",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract",
+      "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\QA\\QA_x26_y17_3\\000034-BP_Interactor_SingleItemContainer_SafeBox2_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-97false_BLoot0.source.json",
+      "tags": [
+        "SingleItemContainerSafeBox",
+        "SOL_QA_924101_2_1",
+        "PVSFORM-219040536"
+      ],
+      "class": "BP_Interactor_SingleItemContainer_SafeBox2_C"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-87false_BLoot0",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract",
+      "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\QA\\QA_x26_y17_3\\000035-BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-87false_BLoot0.source.json",
+      "tags": [
+        "SingleItemContainerSafeBox",
+        "SOL_QA_924101_2_1",
+        "PVSFORM1137445184"
+      ],
+      "class": "BP_Interactor_SingleItemContainer_SafeBox_C"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-87false_BLoot0_0",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract",
+      "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\QA\\QA_x26_y17_3\\000036-BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-87false_BLoot0_0.source.json",
+      "tags": [
+        "SingleItemContainerSafeBox",
+        "SOL_QA_924101_2_1",
+        "PVSFORM-29441168"
+      ],
+      "class": "BP_Interactor_SingleItemContainer_SafeBox_C"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-87false_BLoot0_1",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract",
+      "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\QA\\QA_x26_y17_3\\000037-BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-87false_BLoot0_1.source.json",
+      "tags": [
+        "SingleItemContainerSafeBox",
+        "SOL_QA_924101_2_1",
+        "PVSFORM2131290960"
+      ],
+      "class": "BP_Interactor_SingleItemContainer_SafeBox_C"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-87false_BLoot0_2",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract",
+      "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\QA\\QA_x26_y17_3\\000038-BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-87false_BLoot0_2.source.json",
+      "tags": [
+        "SingleItemContainerSafeBox",
+        "SOL_QA_924101_2_1",
+        "PVSFORM-1392053736"
+      ],
+      "class": "BP_Interactor_SingleItemContainer_SafeBox_C"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-92false_BLoot0",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract",
+      "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\QA\\QA_x26_y17_3\\000039-BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-92false_BLoot0.source.json",
+      "tags": [
+        "SingleItemContainerSafeBox",
+        "SOL_QA_924101_2_1",
+        "PVSFORM-1795264024"
+      ],
+      "class": "BP_Interactor_SingleItemContainer_SafeBox_C"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-92false_BLoot0_3",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract",
+      "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\QA\\QA_x26_y17_3\\000040-BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-92false_BLoot0_3.source.json",
+      "tags": [
+        "SingleItemContainerSafeBox",
+        "SOL_QA_924101_2_1",
+        "PVSFORM349704768"
+      ],
+      "class": "BP_Interactor_SingleItemContainer_SafeBox_C"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-92false_BLoot0_4",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract",
+      "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\QA\\QA_x26_y17_3\\000041-BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-92false_BLoot0_4.source.json",
+      "tags": [
+        "SingleItemContainerSafeBox",
+        "SOL_QA_924101_2_1",
+        "PVSFORM-747891968"
+      ],
+      "class": "BP_Interactor_SingleItemContainer_SafeBox_C"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-92false_BLoot0_5",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract",
+      "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\QA\\QA_x26_y17_3\\000042-BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-92false_BLoot0_5.source.json",
+      "tags": [
+        "SingleItemContainerSafeBox",
+        "SOL_QA_924101_2_1",
+        "PVSFORM648882096"
+      ],
+      "class": "BP_Interactor_SingleItemContainer_SafeBox_C"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-97false_BLoot0",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract",
+      "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\QA\\QA_x26_y17_3\\000043-BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-97false_BLoot0.source.json",
+      "tags": [
+        "SingleItemContainerSafeBox",
+        "SOL_QA_924101_2_1",
+        "PVSFORM129023872"
+      ],
+      "class": "BP_Interactor_SingleItemContainer_SafeBox_C"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-97false_BLoot0_6",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract",
+      "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\QA\\QA_x26_y17_3\\000044-BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-97false_BLoot0_6.source.json",
+      "tags": [
+        "SingleItemContainerSafeBox",
+        "SOL_QA_924101_2_1",
+        "PVSFORM1356656256"
+      ],
+      "class": "BP_Interactor_SingleItemContainer_SafeBox_C"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-97false_BLoot0_7",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract",
+      "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\QA\\QA_x26_y17_3\\000045-BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-97false_BLoot0_7.source.json",
+      "tags": [
+        "SingleItemContainerSafeBox",
+        "SOL_QA_924101_2_1",
+        "PVSFORM-1404088648"
+      ],
+      "class": "BP_Interactor_SingleItemContainer_SafeBox_C"
+    },
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.QA_x26_y17_3:PersistentLevel.BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-97false_BLoot0_8",
+      "level": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/QA/QA_x26_y17_3.umap",
+      "reason": "contract",
+      "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\QA\\QA_x26_y17_3\\000046-BP_Interactor_SingleItemContainer_SafeBox_C_航天城_合同_总裁室极盗合同保险柜_小保险箱_93-97false_BLoot0_8.source.json",
+      "tags": [
+        "SingleItemContainerSafeBox",
+        "SOL_QA_924101_2_1",
+        "PVSFORM-679302936"
+      ],
+      "class": "BP_Interactor_SingleItemContainer_SafeBox_C"
+    }
+  ],
+  "conclusion": "Not one of original18 excluded exact actors. Original15contract exclusions all single-item safe classes in QA_x26_y17_3, 3coded-event safe classes in Event_Long1_4. Rocket actor in GenericConfig distinct class/package/identity. QA tag independently demonstrates quest association but does not alone prove equivalence to original exclusions or runtime activation. Sourcezero inherited template proven separately. No deletion or identity resurrection performed."
+}

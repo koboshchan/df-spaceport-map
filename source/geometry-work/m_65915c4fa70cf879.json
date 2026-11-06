@@ -1,0 +1,30 @@
+{
+  "id": "m_65915c4fa70cf879",
+  "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/cutscenes/SpaceCenter_V02/AF20/AF20_all/AF20.AF20",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\cutscenes\\SpaceCenter_V02\\AF20\\AF20_all\\AF20.glb",
+  "sourceSHA256": "7FAD040FF6C66E95212D8E69AFCAE6081E571EAA72194945653574908C992D3D",
+  "model": "models/df_v24/m_65915c4fa70cf879.vmdl",
+  "materials": {
+    "mat_9be6f456afc3b3b7": "DeltaForce/Content/Maps/SpaceCenter_Ma1/cutscenes/SpaceCenter_V02/AF20/carrier_wing_A10_drivable_05.carrier_wing_A10_drivable_05",
+    "mat_2d2a90426dfed36c": "DeltaForce/Content/Maps/SpaceCenter_Ma1/cutscenes/SpaceCenter_V02/AF20/carrier_wing_A10_drivable_02.carrier_wing_A10_drivable_02",
+    "mat_5d0c91ef9de340c1": "DeltaForce/Content/Maps/SpaceCenter_Ma1/cutscenes/SpaceCenter_V02/AF20/carrier_wing_A10_drivable_04.carrier_wing_A10_drivable_04",
+    "mat_ef83e929ca340352": "DeltaForce/Content/Maps/SpaceCenter_Ma1/cutscenes/SpaceCenter_V02/AF20/carrier_wing_A10_drivable_03.carrier_wing_A10_drivable_03",
+    "mat_720ab257b2aa3537": "DeltaForce/Content/Maps/SpaceCenter_Ma1/cutscenes/SpaceCenter_V02/AF20/carrier_wing_A10_drivable_01.carrier_wing_A10_drivable_01"
+  },
+  "vertices": 35357,
+  "polygons": 35056,
+  "bounds": [
+    [
+      -258.05908203125,
+      -299.5096130371094,
+      43.495689392089844
+    ],
+    [
+      250.55401611328125,
+      299.5096130371094,
+      168.627685546875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "m_1cb465848101f8b7",
+  "objectPath": "DeltaForce/Content/Models/Props/BoxFill/BP_InteractorContainer_PlasticCrate_Fill/BP_InteractorContainer_PlasticCrate_Fill_3P.BP_InteractorContainer_PlasticCrate_Fill_3P",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Props\\BoxFill\\BP_InteractorContainer_PlasticCrate_Fill\\BP_InteractorContainer_PlasticCrate_Fill_3P.glb",
+  "sourceSHA256": "F88D201323BB9DA7B9E7E38FC9CCF032B010BF890A2916C60C9AE6841551B743",
+  "model": "models/df_v24/m_1cb465848101f8b7.vmdl",
+  "materials": {
+    "mat_59533a1549c88459": "DeltaForce/Content/Models/Props/BoxFill/BP_InteractorContainer_PlasticCrate_Fill/Materials/BP_InteractorContainer_PlasticCrate_Fill.BP_InteractorContainer_PlasticCrate_Fill"
+  },
+  "vertices": 385,
+  "polygons": 275,
+  "bounds": [
+    [
+      -11.88957691192627,
+      -7.927546501159668,
+      2.097534418106079
+    ],
+    [
+      11.739002227783203,
+      7.76620626449585,
+      10.203968048095703
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

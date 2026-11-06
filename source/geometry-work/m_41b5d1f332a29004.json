@@ -1,0 +1,26 @@
+{
+  "id": "m_41b5d1f332a29004",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/SM_H_Building_FutureTech_WaterWall_06.SM_H_Building_FutureTech_WaterWall_06",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter_Ma1\\SM_H_Building_FutureTech_WaterWall_06.glb",
+  "sourceSHA256": "EC1D434D7145631AF2F2B2B35B35F4DEED4204BE6CC6CAE1B9912D4B5D503ED9",
+  "model": "models/df_v24/m_41b5d1f332a29004.vmdl",
+  "materials": {
+    "mat_bdad21a2b864908d": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Fencing_01_A_HD.MI_H_FutureTech_Fencing_01_A_HD"
+  },
+  "vertices": 1582,
+  "polygons": 1540,
+  "bounds": [
+    [
+      -4.365351676940918,
+      -4.53268575668335,
+      -823.8138427734375
+    ],
+    [
+      2171.922607421875,
+      2295.687744140625,
+      38.954288482666016
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

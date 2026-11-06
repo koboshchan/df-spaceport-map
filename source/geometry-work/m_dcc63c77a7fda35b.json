@@ -1,0 +1,26 @@
+{
+  "id": "m_dcc63c77a7fda35b",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/SM_H_Industrial_ISS_LaunchLauncher_01P.SM_H_Industrial_ISS_LaunchLauncher_01P",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\ISS\\SM_H_Industrial_ISS_LaunchLauncher_01P.glb",
+  "sourceSHA256": "C557CF6B1E65460B8638B3F01B0851536A249863E5C02D19477D6EAC4D44A7AA",
+  "model": "models/df_v24/m_dcc63c77a7fda35b.vmdl",
+  "materials": {
+    "mat_c9e75ab9b7623828": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_HD.MI_I_WalkwaySystem_MetalFloor_01_HD"
+  },
+  "vertices": 4816,
+  "polygons": 2420,
+  "bounds": [
+    [
+      -937.417724609375,
+      158.88699340820312,
+      245.51693725585938
+    ],
+    [
+      935.166015625,
+      1691.839599609375,
+      286.2301330566406
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

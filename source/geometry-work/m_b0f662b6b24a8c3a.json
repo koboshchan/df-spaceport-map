@@ -1,0 +1,26 @@
+{
+  "id": "m_b0f662b6b24a8c3a",
+  "objectPath": "DeltaForce/Content/Environment/Props/SafeHouseP/Military/Modified/SM_BS_Military_Modified_ScalPlate_01.SM_BS_Military_Modified_ScalPlate_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\SafeHouseP\\Military\\Modified\\SM_BS_Military_Modified_ScalPlate_01.glb",
+  "sourceSHA256": "D9C5CE4CB6A0266A9C19AE36F4E4A3CE75799106D804D9F55480E5391450F5D5",
+  "model": "models/df_v24/m_b0f662b6b24a8c3a.vmdl",
+  "materials": {
+    "mat_1d337c2b2d380b84": "DeltaForce/Content/Environment/Props/SafeHouseP/Military/Modified/00_Materials/HD/MI_BS_Military_Modified_ScalPlate_01_HD.MI_BS_Military_Modified_ScalPlate_01_HD"
+  },
+  "vertices": 60,
+  "polygons": 58,
+  "bounds": [
+    [
+      -17.415552139282227,
+      0.013265639543533325,
+      -8.169076910896091e-16
+    ],
+    [
+      -0.013265280984342098,
+      26.671167373657227,
+      0.15298199653625488
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

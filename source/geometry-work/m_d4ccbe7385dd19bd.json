@@ -1,0 +1,26 @@
+{
+  "id": "m_d4ccbe7385dd19bd",
+  "objectPath": "DeltaForce/Content/Environment/Vehicle/00_Mesh/SM_FutureTech_Vehicle_ConceptCar_01/SM_FutureTech_Vehicle_ConceptCar_01_Glass_L1.SM_FutureTech_Vehicle_ConceptCar_01_Glass_L1",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Vehicle\\00_Mesh\\SM_FutureTech_Vehicle_ConceptCar_01\\SM_FutureTech_Vehicle_ConceptCar_01_Glass_L1.glb",
+  "sourceSHA256": "D7A9070ECE6714158FDD8DEF671A2704F89A36D2EA56CA20BEE1474372AF2C20",
+  "model": "models/df_v24/m_d4ccbe7385dd19bd.vmdl",
+  "materials": {
+    "mat_72590ade8e1e4d74": "DeltaForce/Content/Environment/Vehicle/00_Materials/HD/MI_Generic_Vehicle_Glass_01_HD.MI_Generic_Vehicle_Glass_01_HD"
+  },
+  "vertices": 62,
+  "polygons": 52,
+  "bounds": [
+    [
+      -32.03720474243164,
+      -40.57039260864258,
+      37.20576095581055
+    ],
+    [
+      -25.673812866210938,
+      -10.976511001586914,
+      50.323001861572266
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

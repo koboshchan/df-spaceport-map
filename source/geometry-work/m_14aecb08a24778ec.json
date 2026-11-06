@@ -1,0 +1,33 @@
+{
+  "id": "m_14aecb08a24778ec",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS_Ma1/SM_H_Industrial_ISS_Rocket_01A_Ruin.SM_H_Industrial_ISS_Rocket_01A_Ruin",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\ISS_Ma1\\SM_H_Industrial_ISS_Rocket_01A_Ruin.glb",
+  "sourceSHA256": "4A9FF2E4DD12E8306C6349B035A0FBF39285A6281FA5446DD21E2872FF03670F",
+  "model": "models/df_v24/m_14aecb08a24778ec.vmdl",
+  "materials": {
+    "mat_9bdb24987f1f044d": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Rocket_01_Ruin_01_HD.MI_H_Industrial_ISS_Rocket_01_Ruin_01_HD",
+    "mat_e63b66ea2e822a00": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Rocket_01_Ruin_02_HD.MI_H_Industrial_ISS_Rocket_01_Ruin_02_HD",
+    "mat_37a0f2376644ad3a": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Rocket_01_Ruin_03_HD.MI_H_Industrial_ISS_Rocket_01_Ruin_03_HD",
+    "mat_852f11b16f4160dc": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Rocket_01_Ruin_05_HD.MI_H_Industrial_ISS_Rocket_01_Ruin_05_HD",
+    "mat_87eecbd81464be92": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Rocket_01_Ruin_06_HD.MI_H_Industrial_ISS_Rocket_01_Ruin_06_HD",
+    "mat_45d144f4cad1c766": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Rocket_01_Ruin_04_HD.MI_H_Industrial_ISS_Rocket_01_Ruin_04_HD",
+    "mat_a702a800ac49a885": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Transport/00_Materials/HD/MI_H_Building_Transport_Cabine_01A_Roof_02_HD.MI_H_Building_Transport_Cabine_01A_Roof_02_HD",
+    "mat_56cb770ad165767d": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01C_HD.MI_GEN_Metal_Base_01C_HD"
+  },
+  "vertices": 49141,
+  "polygons": 48008,
+  "bounds": [
+    [
+      -71.50347137451172,
+      -88.73566436767578,
+      -123.18343353271484
+    ],
+    [
+      503.36083984375,
+      92.81211853027344,
+      85.00787353515625
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

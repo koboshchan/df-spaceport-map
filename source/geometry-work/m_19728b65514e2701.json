@@ -1,0 +1,28 @@
+{
+  "id": "m_19728b65514e2701",
+  "objectPath": "DeltaForce/Content/Environment/Props/Battlefield/Rock/SM_Destructible_Rock_Fragments_02B.SM_Destructible_Rock_Fragments_02B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Battlefield\\Rock\\SM_Destructible_Rock_Fragments_02B.glb",
+  "sourceSHA256": "CE4E8B835CFE4DDEC1EAB173F1C1D4234D3EFBA5F513F2428A0A2153305389B6",
+  "model": "models/df_v24/m_19728b65514e2701.vmdl",
+  "materials": {
+    "mat_0044ae8d93c01f70": "DeltaForce/Content/Environment/MatBlend/Asphalt/HAAVK/00_Materials/MI_H_Building_FutureTech_Ground_27a_HD.MI_H_Building_FutureTech_Ground_27a_HD",
+    "mat_07338a05d2d5bc0d": "DeltaForce/Content/Environment/Props/Battlefield/Rock/00_Materials/HD/MI_Destructible_Rock_Fragments_01_HD.MI_Destructible_Rock_Fragments_01_HD",
+    "mat_939db1c0062d8212": "DeltaForce/Content/Environment/Props/Battlefield/Rock/00_Materials/HD/MI_Destructible_Rock_Fragments_Decal_01_HD.MI_Destructible_Rock_Fragments_Decal_01_HD"
+  },
+  "vertices": 979,
+  "polygons": 843,
+  "bounds": [
+    [
+      -53.14848709106445,
+      -40.66283416748047,
+      -3.8299660682678223
+    ],
+    [
+      60.36936569213867,
+      34.0180778503418,
+      12.069061279296875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

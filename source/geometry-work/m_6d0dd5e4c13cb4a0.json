@@ -1,0 +1,26 @@
+{
+  "id": "m_6d0dd5e4c13cb4a0",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Generic/SM_H_FutureTech_Tools_01J.SM_H_FutureTech_Tools_01J",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Generic\\SM_H_FutureTech_Tools_01J.glb",
+  "sourceSHA256": "0E0F495B350E1EC0FBBD26F77778FDE442E99D85DBB61F8452473918BA38717E",
+  "model": "models/df_v24/m_6d0dd5e4c13cb4a0.vmdl",
+  "materials": {
+    "mat_3e2dd0067d059103": "DeltaForce/Content/Environment/Props/HAAVK/Generic/00_Materials/HD/MI_H_FutureTech_Tools_01_HD.MI_H_FutureTech_Tools_01_HD"
+  },
+  "vertices": 281,
+  "polygons": 309,
+  "bounds": [
+    [
+      -0.4612365961074829,
+      -0.29001152515411377,
+      0.015335540287196636
+    ],
+    [
+      0.46121746301651,
+      0.28910478949546814,
+      7.082088470458984
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

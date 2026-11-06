@@ -1,0 +1,26 @@
+{
+  "id": "m_61974069b7a10c63",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_SpaceCenter_WaterMesh_x13_y4.SM_SpaceCenter_WaterMesh_x13_y4",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_SpaceCenter_WaterMesh_x13_y4.glb",
+  "sourceSHA256": "07584358E38796B5B5E4470BFDF9600FD337B6ED71D1E8D308C1764FF9F05195",
+  "model": "models/df_v24/m_61974069b7a10c63.vmdl",
+  "materials": {
+    "mat_d1d459d882955bb0": "DeltaForce/Content/MaterialLib/Materials_HD/Water/MaterialInstances/MI_WaterHD_FutureTech_01.MI_WaterHD_FutureTech_01"
+  },
+  "vertices": 4458,
+  "polygons": 8476,
+  "bounds": [
+    [
+      -2371.0654296875,
+      -3418.965576171875,
+      -90.60877990722656
+    ],
+    [
+      976.934326171875,
+      541.0341796875,
+      -90.60877990722656
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

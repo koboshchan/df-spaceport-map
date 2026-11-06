@@ -1,0 +1,28 @@
+{
+  "id": "m_58b51e7f3d98d2d6",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_Building_FutureTech_CtControl_01/SM_H_Building_FutureTech_CtControl_01_InterWall_03A.SM_H_Building_FutureTech_CtControl_01_InterWall_03A",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_Building_FutureTech_CtControl_01\\SM_H_Building_FutureTech_CtControl_01_InterWall_03A.glb",
+  "sourceSHA256": "09006EA1904B32D2C69D184D9B14BD259498EF179B586E70C8BC4ED9508C81E3",
+  "model": "models/df_v24/m_58b51e7f3d98d2d6.vmdl",
+  "materials": {
+    "mat_2321ffa234259f93": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Checkred_04_HD.MI_GEN_Marble_Checkred_04_HD",
+    "mat_69b9ff7a811ece89": "DeltaForce/Content/Environment/Structures/Morocco/Decal/00_Materials/MI_C_WallDamaged_Decal_01A_HD.MI_C_WallDamaged_Decal_01A_HD",
+    "mat_de3029fbed7cc67f": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Layer_01_HD.MI_GEN_Marble_Layer_01_HD"
+  },
+  "vertices": 28645,
+  "polygons": 15983,
+  "bounds": [
+    [
+      561.0158081054688,
+      692.7229614257812,
+      -1.332027554512024
+    ],
+    [
+      1340.63427734375,
+      1651.2232666015625,
+      143.16542053222656
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

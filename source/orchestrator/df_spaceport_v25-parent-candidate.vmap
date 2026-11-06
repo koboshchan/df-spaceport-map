@@ -1,0 +1,1517 @@
+<!-- dmx encoding keyvalues2 4 format vmap 40 -->
+"CMapRootElement"
+{
+	"id" "elementid" "86bb082b-9d5f-4900-97a0-cd0374f06b2c"
+	"name" "string" ""
+	"isprefab" "bool" "0"
+	"editorbuild" "int" "10112"
+	"editorversion" "int" "400"
+	"itemFile" "string" ""
+	"defaultcamera" "element" "0a0f2850-837f-4682-be97-771701c5faec"
+	"3dcameras" "element" "18ed80cc-71b0-47b5-b393-630b78d7b996"
+	"world" "element" "560f325f-baca-44d6-b706-31ba3a7984f0"
+	"visbility" "element" "cfb7bb87-c32e-4932-b2b3-1915f46651a7"
+	"mapVariables" "element" "4f3c1ea0-4dc2-4081-917b-ab400c01e9f7"
+	"rootSelectionSet" "element" "6976ea4f-b36a-4aa5-bd69-6e6db498b314"
+	"m_referencedmeshsnapshots" "element_array"
+	[
+	]
+	"m_bIsCordoning" "bool" "0"
+	"m_bCordonsVisible" "bool" "0"
+	"nodeinstancedata" "element_array"
+	[
+	]
+}
+
+"CStoredCamera"
+{
+	"id" "elementid" "0a0f2850-837f-4682-be97-771701c5faec"
+	"name" "string" "defaultcamera"
+	"position" "vector3" "-24.201981 -581.534607 525.243347"
+	"lookat" "vector3" "-23.367903 -581.622253 524.69873"
+}
+
+"CStoredCameras"
+{
+	"id" "elementid" "18ed80cc-71b0-47b5-b393-630b78d7b996"
+	"name" "string" "3dcameras"
+	"activecamera" "int" "-1"
+	"cameras" "element_array"
+	[
+	]
+}
+
+"CMapWorld"
+{
+	"id" "elementid" "560f325f-baca-44d6-b706-31ba3a7984f0"
+	"name" "string" "world"
+	"nodeID" "int" "1"
+	"referenceID" "uint64" "0x0"
+	"children" "element_array"
+	[
+		"element" "240acb50-60a8-5371-8ec8-8c5444c2efe9",
+		"element" "3e72c58b-cd97-5321-939f-91c9214e1aa0",
+		"element" "1e697ad5-0b8b-5d05-9f10-04e3a2f70084",
+		"element" "84c8473d-0496-5025-be11-d47db6d5e022",
+		"element" "629d5d26-385c-5194-be87-54b8e7ef13e8",
+		"element" "f5b21f9f-0c46-5055-8298-fe84f45c7c92",
+		"element" "5b821114-5753-5e2d-ba10-44eae5469a4b",
+		"element" "03604b77-6e0c-5d29-b47c-99aeab574cc5",
+		"element" "df770d5e-a883-51ee-b401-5132c6fc412c",
+		"element" "cd2deca8-d5d2-5470-9754-32f7f7ade550",
+		"element" "cfa08f31-ce12-53e3-bada-8fd609d0b4dd",
+		"element" "e5063b9b-4965-5e14-bb54-1055a34968e2",
+		"element" "116a9937-152a-57d4-8e0d-9f65e1d9d9ac",
+		"element" "1edf74e5-66bc-5493-929b-55d2c55741e4",
+		"element" "a22c0174-7805-560c-b6c8-c9bc143769ac",
+		"element" "83c94db3-e73b-58f2-bafa-bd79fe0a28a3",
+		"element" "b8428ee7-2432-5603-8c7f-d5b0b13b7bff",
+		"element" "5bd5da47-b118-5c20-9323-6b41112a5e78",
+		"element" "c50e1022-bb96-52ee-a91b-937b10508926",
+		"element" "7931ebdd-b04d-53ac-bf3d-7164825e1031",
+		"element" "187e14f2-f635-5a80-8ef0-1c552e7aac39",
+		"element" "4e2cd7c2-948d-5a59-98fa-02bbe9714fa8",
+		"element" "d6f69df2-8e6a-5546-8b23-092ec537d955",
+		"element" "9c607ff0-e730-52a1-87c5-72d629afc4f0",
+		"element" "5afe112f-5ad8-55d8-a964-e01f99a59658",
+		"element" "f833229e-cfdf-5f79-b96f-17face2c0954",
+		"element" "1098541e-8d42-5baf-918e-5e45360b7d7c",
+		"element" "11375a89-b007-526e-a4f7-ccda95b49f37",
+		"element" "a2c9b05f-1649-56ea-b759-919b78c73c04",
+		"element" "e5ca0417-d023-5217-a7b9-dc20b4a4c846",
+		"element" "92279363-b63e-5169-82cd-c46fac32068a",
+		"element" "4b9fcf7b-b668-5304-af2c-4a2646f1b22c",
+		"element" "1a1ba336-4604-5517-8d1f-ae5ca4c0e63c",
+		"element" "6e40ab51-5dcc-5950-a8a1-9c0f2ba52822",
+		"element" "23420f0e-bc70-5a3a-bb2a-434ff8017b7f",
+		"element" "02cd5016-e96c-5d89-a852-50da3f3597cc",
+		"element" "945c0adc-6c31-5b29-9e2b-5ae445fb64bc",
+		"element" "3bc584b4-b0ac-5394-bfa2-d89d8e422c6a",
+		"element" "6d056ba5-c6c3-5984-9164-3d076e1480c3",
+		"element" "fc71b7d4-d971-5dbd-921f-3e5202aae5f9",
+		"element" "15c74de4-1010-5403-b28e-f1b7a52a0a7f",
+		"element" "a474713e-f750-597e-8511-461ca3cfd2ba"
+	]
+	"variableTargetKeys" "string_array"
+	[
+	]
+	"variableNames" "string_array"
+	[
+	]
+	"relayPlugData" "element" "97c3a816-8517-4b89-ab8d-191873cbfc12"
+	"connectionsData" "element_array"
+	[
+	]
+	"entity_properties" "element" "474dd790-5f0b-4930-aa41-4ed9aa01a086"
+	"nextDecalID" "int" "0"
+	"fixupEntityNames" "bool" "1"
+	"mapUsageType" "string" "standard"
+	"origin" "vector3" "0 0 0"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"transformLocked" "bool" "0"
+	"force_hidden" "bool" "0"
+	"editorOnly" "bool" "0"
+}
+
+"CVisibilityMgr"
+{
+	"id" "elementid" "cfb7bb87-c32e-4932-b2b3-1915f46651a7"
+	"name" "string" "visbility"
+	"nodeID" "int" "0"
+	"referenceID" "uint64" "0x0"
+	"children" "element_array"
+	[
+	]
+	"variableTargetKeys" "string_array"
+	[
+	]
+	"variableNames" "string_array"
+	[
+	]
+	"nodes" "element_array"
+	[
+	]
+	"hiddenFlags" "int_array"
+	[
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0",
+		"0"
+	]
+	"origin" "vector3" "0 0 0"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"transformLocked" "bool" "0"
+	"force_hidden" "bool" "0"
+	"editorOnly" "bool" "0"
+}
+
+"CMapVariableSet"
+{
+	"id" "elementid" "4f3c1ea0-4dc2-4081-917b-ab400c01e9f7"
+	"name" "string" "mapVariables"
+	"variableNames" "string_array"
+	[
+	]
+	"variableValues" "string_array"
+	[
+	]
+	"variableTypeNames" "string_array"
+	[
+	]
+	"variableTypeParameters" "string_array"
+	[
+	]
+	"m_ChoiceGroups" "element_array"
+	[
+	]
+}
+
+"CMapSelectionSet"
+{
+	"id" "elementid" "6976ea4f-b36a-4aa5-bd69-6e6db498b314"
+	"name" "string" "rootSelectionSet"
+	"children" "element_array"
+	[
+	]
+	"selectionSetName" "string" ""
+	"selectionSetData" "element" ""
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "240acb50-60a8-5371-8ec8-8c5444c2efe9"
+	"name" "string" "df_v25_origin"
+	"nodeID" "int" "4000000"
+	"origin" "vector3" "0 0 0"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "6b18fa97-7621-4ef2-9c4e-6cf048cd7457"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "3e72c58b-cd97-5321-939f-91c9214e1aa0"
+	"name" "string" "df_v25_child0"
+	"nodeID" "int" "4000002"
+	"origin" "vector3" "0 0 0"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "a97ec8bd-5aff-4095-84fe-a0b502ccae0a"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "1e697ad5-0b8b-5d05-9f10-04e3a2f70084"
+	"name" "string" "df_v25_child1"
+	"nodeID" "int" "4000003"
+	"origin" "vector3" "0 0 0"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "75ad0a3e-727e-4797-9668-dc11ad02887a"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "84c8473d-0496-5025-be11-d47db6d5e022"
+	"name" "string" "df_v25_child2"
+	"nodeID" "int" "4000004"
+	"origin" "vector3" "0 0 0"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "497be351-7f94-4aff-ab7f-e0e456f08256"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "629d5d26-385c-5194-be87-54b8e7ef13e8"
+	"name" "string" "df_v25_child3"
+	"nodeID" "int" "4000005"
+	"origin" "vector3" "0 0 0"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "dbb7a6c6-2fb0-48c3-bceb-0cd16d8cd2ec"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "f5b21f9f-0c46-5055-8298-fe84f45c7c92"
+	"name" "string" "df_v25_child4"
+	"nodeID" "int" "4000006"
+	"origin" "vector3" "0 0 0"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "6f228f30-c0d2-40a3-9894-1ccc33106df0"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "5b821114-5753-5e2d-ba10-44eae5469a4b"
+	"name" "string" "df_v25_child5"
+	"nodeID" "int" "4000007"
+	"origin" "vector3" "0 0 0"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "1acff718-b384-4ac6-998b-e02e70a4cdc9"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "03604b77-6e0c-5d29-b47c-99aeab574cc5"
+	"name" "string" "df_v25_load_children"
+	"nodeID" "int" "4000001"
+	"origin" "vector3" "0 0 0"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "442bd8aa-0d90-488c-9c01-f2f6c65a4eff"
+	"connectionsData" "element_array"
+	[
+		"element" "bc3e916b-fd0f-442a-befc-8cc11f197d8a",
+		"element" "99917cb5-92d0-4425-a385-e601be3cf29e",
+		"element" "1191b97a-199a-4b80-b202-e9dbfd36d2be",
+		"element" "3ae16774-8449-4fc0-887f-baaf4fe207ec",
+		"element" "bdd61d21-4d29-4956-a6b0-7db95eefeab4",
+		"element" "516ea79e-cd65-4ca6-bc01-3cef82495eed"
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "df770d5e-a883-51ee-b401-5132c6fc412c"
+	"name" "string" "df_v25_sun"
+	"nodeID" "int" "4100000"
+	"origin" "vector3" "0 0 0"
+	"angles" "qangle" "315 135 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "d6f24552-c600-4db7-b429-77e14650a54e"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "cd2deca8-d5d2-5470-9754-32f7f7ade550"
+	"name" "string" "df_v25_sky"
+	"nodeID" "int" "4100100"
+	"origin" "vector3" "0 0 0"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "f58d9f98-0c0b-47bb-a04a-969bfd54f6be"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "cfa08f31-ce12-53e3-bada-8fd609d0b4dd"
+	"name" "string" "df_v25_spawn0"
+	"nodeID" "int" "4100101"
+	"origin" "vector3" "-9642.324 -1183.0449 -86.35036"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "302f74d0-9060-45df-882b-74739bf6a7bd"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "e5063b9b-4965-5e14-bb54-1055a34968e2"
+	"name" "string" "df_v25_spawn1"
+	"nodeID" "int" "4100102"
+	"origin" "vector3" "6850.793 7794.0723 -205.10965"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "3edb7724-c0d4-42d9-a31e-e81d5c293306"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "116a9937-152a-57d4-8e0d-9f65e1d9d9ac"
+	"name" "string" "df_v25_spawn2"
+	"nodeID" "int" "4100103"
+	"origin" "vector3" "9957.744 2481.207 -196.51047"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "69efb09e-1b0e-43ab-817c-cf95670a55d4"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "1edf74e5-66bc-5493-929b-55d2c55741e4"
+	"name" "string" "df_v25_spawn3"
+	"nodeID" "int" "4100104"
+	"origin" "vector3" "-9706.324 -1311.0449 -86.35988"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "f23e503c-2ceb-491e-af9b-0729f9ca04b3"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "a22c0174-7805-560c-b6c8-c9bc143769ac"
+	"name" "string" "df_v25_spawn4"
+	"nodeID" "int" "4100105"
+	"origin" "vector3" "6850.793 7922.0723 -205.10965"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "e947fd24-97d9-464b-a43a-bd63a27f0836"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "83c94db3-e73b-58f2-bafa-bd79fe0a28a3"
+	"name" "string" "df_v25_spawn5"
+	"nodeID" "int" "4100106"
+	"origin" "vector3" "-9910.793 5338 59.08008"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "3476f34e-ec16-4731-8f71-4ad4afe6722b"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "b8428ee7-2432-5603-8c7f-d5b0b13b7bff"
+	"name" "string" "df_v25_spawn6"
+	"nodeID" "int" "4100107"
+	"origin" "vector3" "6534.4414 -3688.207 -213.2285"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "f2b925a4-bb86-4a8b-b606-ea6171924d13"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "5bd5da47-b118-5c20-9323-6b41112a5e78"
+	"name" "string" "df_v25_spawn7"
+	"nodeID" "int" "4100108"
+	"origin" "vector3" "9893.744 2545.207 -196.52252"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "e746a975-9113-4a86-b071-0c18415cc4c3"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "c50e1022-bb96-52ee-a91b-937b10508926"
+	"name" "string" "df_v25_spawn8"
+	"nodeID" "int" "4100109"
+	"origin" "vector3" "-9770.324 -1247.0449 -86.35985"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "92cebfdb-b950-4f5c-8bdb-f47d1b912c80"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "7931ebdd-b04d-53ac-bf3d-7164825e1031"
+	"name" "string" "df_v25_spawn9"
+	"nodeID" "int" "4100110"
+	"origin" "vector3" "6914.793 7858.0723 -203.23068"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "47bb52dd-b74a-4f8d-bcc1-aef1525fa36d"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "187e14f2-f635-5a80-8ef0-1c552e7aac39"
+	"name" "string" "df_v25_spawn10"
+	"nodeID" "int" "4100111"
+	"origin" "vector3" "10021.744 2545.207 -196.49806"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "6e036580-1f59-42f9-93aa-c83276bda15b"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "4e2cd7c2-948d-5a59-98fa-02bbe9714fa8"
+	"name" "string" "df_v25_spawn11"
+	"nodeID" "int" "4100112"
+	"origin" "vector3" "-9846.793 5274 59.08008"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "a7308517-f426-4702-b6a8-819c9ba5b6f0"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "d6f69df2-8e6a-5546-8b23-092ec537d955"
+	"name" "string" "df_v25_spawn12"
+	"nodeID" "int" "4100113"
+	"origin" "vector3" "6598.4414 -3688.207 -213.22826"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "2a439330-cb19-4351-9849-c85c44651700"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "9c607ff0-e730-52a1-87c5-72d629afc4f0"
+	"name" "string" "df_v25_spawn13"
+	"nodeID" "int" "4100114"
+	"origin" "vector3" "3523.6758 3953.8477 13.000092"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "d6198a49-ff8d-4f96-8334-7a9068bdf88f"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "5afe112f-5ad8-55d8-a964-e01f99a59658"
+	"name" "string" "df_v25_spawn14"
+	"nodeID" "int" "4100115"
+	"origin" "vector3" "-1292.6953 7667.5254 163.52805"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "5a11a58a-fcf8-4757-be7b-9b9eebbb171f"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "f833229e-cfdf-5f79-b96f-17face2c0954"
+	"name" "string" "df_v25_spawn15"
+	"nodeID" "int" "4100116"
+	"origin" "vector3" "-9706.324 -1247.0449 -86.35985"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "3b679728-e768-47ad-b56d-46a544ae2870"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "1098541e-8d42-5baf-918e-5e45360b7d7c"
+	"name" "string" "df_v25_spawn16"
+	"nodeID" "int" "4100117"
+	"origin" "vector3" "10021.744 2609.207 -196.4986"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "2aeffdaa-5061-4702-9d26-ee46dbf25456"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "11375a89-b007-526e-a4f7-ccda95b49f37"
+	"name" "string" "df_v25_spawn17"
+	"nodeID" "int" "4100118"
+	"origin" "vector3" "6598.4414 -3752.207 -213.22833"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "d97fe086-77e4-49a9-80a3-44933fff7e87"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "a2c9b05f-1649-56ea-b759-919b78c73c04"
+	"name" "string" "df_v25_spawn18"
+	"nodeID" "int" "4100119"
+	"origin" "vector3" "3523.6758 3889.8477 13.000092"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "a54d5cc9-9f36-4078-8eb3-30992039a1f4"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "e5ca0417-d023-5217-a7b9-dc20b4a4c846"
+	"name" "string" "df_v25_spawn19"
+	"nodeID" "int" "4100120"
+	"origin" "vector3" "-9910.793 5210 59.08008"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "85e7cb76-7e84-4b47-bb1a-46b34bff57df"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "92279363-b63e-5169-82cd-c46fac32068a"
+	"name" "string" "df_v25_spawn20"
+	"nodeID" "int" "4100121"
+	"origin" "vector3" "6598.4414 -3624.207 -213.22821"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "6cd68a90-65cf-40a8-9f5c-abc0ddd86992"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "4b9fcf7b-b668-5304-af2c-4a2646f1b22c"
+	"name" "string" "df_v25_spawn21"
+	"nodeID" "int" "4100122"
+	"origin" "vector3" "9957.744 2609.207 -196.51047"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "80a0ce16-a0ee-4493-a264-8229dc39b5b8"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "1a1ba336-4604-5517-8d1f-ae5ca4c0e63c"
+	"name" "string" "df_v25_spawn22"
+	"nodeID" "int" "4100123"
+	"origin" "vector3" "-9706.324 -1183.0449 -86.339516"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "27b01dbb-60a6-4287-bf3d-ba172fac2ebb"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "6e40ab51-5dcc-5950-a8a1-9c0f2ba52822"
+	"name" "string" "df_v25_spawn23"
+	"nodeID" "int" "4100124"
+	"origin" "vector3" "6786.793 7858.0723 -205.02771"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "c803908e-e025-49d5-a911-19c7fc88a0d7"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "23420f0e-bc70-5a3a-bb2a-434ff8017b7f"
+	"name" "string" "df_v25_spawn24"
+	"nodeID" "int" "4100125"
+	"origin" "vector3" "-9974.793 5274 59.08008"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "8a5d57e4-7ade-4d3e-b1d3-5bd2e2bef712"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "02cd5016-e96c-5d89-a852-50da3f3597cc"
+	"name" "string" "df_v25_spawn25"
+	"nodeID" "int" "4100126"
+	"origin" "vector3" "6662.4414 -3688.207 -213.22803"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "29720068-f473-43d7-898a-7691f56d789e"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "945c0adc-6c31-5b29-9e2b-5ae445fb64bc"
+	"name" "string" "df_v25_spawn26"
+	"nodeID" "int" "4100127"
+	"origin" "vector3" "3587.6758 3953.8477 13.000092"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "62a2eac8-7cf1-4d30-8efd-524cde33d0c6"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "3bc584b4-b0ac-5394-bfa2-d89d8e422c6a"
+	"name" "string" "df_v25_spawn27"
+	"nodeID" "int" "4100128"
+	"origin" "vector3" "-1228.6953 7667.5254 170.00821"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "96681230-c16f-43b5-ad0e-e21b05190430"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "6d056ba5-c6c3-5984-9164-3d076e1480c3"
+	"name" "string" "df_v25_spawn28"
+	"nodeID" "int" "4100129"
+	"origin" "vector3" "-9642.324 -1247.0449 -86.35985"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "3101efd4-5537-4d67-93a8-5717136f04bb"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "fc71b7d4-d971-5dbd-921f-3e5202aae5f9"
+	"name" "string" "df_v25_spawn29"
+	"nodeID" "int" "4100130"
+	"origin" "vector3" "6850.793 7858.0723 -205.10965"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "31ecffd4-f81b-4e8e-bdae-52f398a2d6fa"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "15c74de4-1010-5403-b28e-f1b7a52a0a7f"
+	"name" "string" "df_v25_spawn30"
+	"nodeID" "int" "4100131"
+	"origin" "vector3" "9957.744 2545.207 -196.51047"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "18abdf7c-0a7d-40ff-8499-5ba975877e10"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "a474713e-f750-597e-8511-461ca3cfd2ba"
+	"name" "string" "df_v25_spawn31"
+	"nodeID" "int" "4100132"
+	"origin" "vector3" "-9910.793 5274 60.964783"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "c4dfde2b-2fda-4a35-9c9f-66e8f30d4a67"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"DmePlugList"
+{
+	"id" "elementid" "97c3a816-8517-4b89-ab8d-191873cbfc12"
+	"name" "string" "relayPlugData"
+	"names" "string_array"
+	[
+	]
+	"dataTypes" "int_array"
+	[
+	]
+	"plugTypes" "int_array"
+	[
+	]
+	"descriptions" "string_array"
+	[
+	]
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "474dd790-5f0b-4930-aa41-4ed9aa01a086"
+	"name" "string" "entity_properties"
+	"classname" "string" "worldspawn"
+	"targetname" "string" ""
+	"skyname" "string" "sky_day01_01"
+	"startdark" "string" "0"
+	"startcolor" "string" "0 0 0"
+	"pvstype" "string" "0"
+	"newunit" "string" "0"
+	"maxpropscreenwidth" "string" "-1"
+	"minpropscreenwidth" "string" "0"
+	"vrchaperone" "string" "0"
+	"vrmovement" "string" "0"
+	"baked_light_index_min" "string" "0"
+	"baked_light_index_max" "string" "256"
+	"max_lightmap_resolution" "string" "0"
+	"lightmap_queries" "string" "1"
+	"steamaudio_reverb_rebake_option" "string" "1"
+	"steamaudio_reverb_grid_type" "string" "0"
+	"steamaudio_reverb_grid_spacing" "string" "6"
+	"steamaudio_reverb_height_above_floor" "string" "1.5"
+	"steamaudio_reverb_rays" "string" "32768"
+	"steamaudio_reverb_bounces" "string" "32"
+	"steamaudio_reverb_ir_duration" "string" "1.0"
+	"steamaudio_reverb_ambisonic_order" "string" "1"
+	"steamaudio_pathing_rebake_option" "string" "1"
+	"steamaudio_pathing_grid_type" "string" "0"
+	"steamaudio_pathing_grid_spacing" "string" "6"
+	"steamaudio_pathing_height_above_floor" "string" "1.5"
+	"steamaudio_pathing_visibility_samples" "string" "1"
+	"steamaudio_pathing_visibility_radius" "string" "0.0"
+	"steamaudio_pathing_visibility_threshold" "string" "0.1"
+	"steamaudio_pathing_visibility_pathrange" "string" "100.0"
+	"prefab_has_runtime_entity_by_default" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "6b18fa97-7621-4ef2-9c4e-6cf048cd7457"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_spawngroup_landmark"
+	"targetname" "string" "df_v25_origin"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "a97ec8bd-5aff-4095-84fe-a0b502ccae0a"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_spawngroup_load_unload"
+	"targetname" "string" "df_v25_child0"
+	"mapname" "string" "df_spaceport_v25_part0"
+	"landmark" "string" "df_v25_origin"
+	"autoactivate" "string" "1"
+	"timeoutInterval" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "75ad0a3e-727e-4797-9668-dc11ad02887a"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_spawngroup_load_unload"
+	"targetname" "string" "df_v25_child1"
+	"mapname" "string" "df_spaceport_v25_part1"
+	"landmark" "string" "df_v25_origin"
+	"autoactivate" "string" "1"
+	"timeoutInterval" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "497be351-7f94-4aff-ab7f-e0e456f08256"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_spawngroup_load_unload"
+	"targetname" "string" "df_v25_child2"
+	"mapname" "string" "df_spaceport_v25_part2"
+	"landmark" "string" "df_v25_origin"
+	"autoactivate" "string" "1"
+	"timeoutInterval" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "dbb7a6c6-2fb0-48c3-bceb-0cd16d8cd2ec"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_spawngroup_load_unload"
+	"targetname" "string" "df_v25_child3"
+	"mapname" "string" "df_spaceport_v25_part3"
+	"landmark" "string" "df_v25_origin"
+	"autoactivate" "string" "1"
+	"timeoutInterval" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "6f228f30-c0d2-40a3-9894-1ccc33106df0"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_spawngroup_load_unload"
+	"targetname" "string" "df_v25_child4"
+	"mapname" "string" "df_spaceport_v25_part4"
+	"landmark" "string" "df_v25_origin"
+	"autoactivate" "string" "1"
+	"timeoutInterval" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "1acff718-b384-4ac6-998b-e02e70a4cdc9"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_spawngroup_load_unload"
+	"targetname" "string" "df_v25_child5"
+	"mapname" "string" "df_spaceport_v25_part5"
+	"landmark" "string" "df_v25_origin"
+	"autoactivate" "string" "1"
+	"timeoutInterval" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "442bd8aa-0d90-488c-9c01-f2f6c65a4eff"
+	"name" "string" "entity_properties"
+	"classname" "string" "logic_auto"
+	"targetname" "string" "df_v25_load_children"
+	"spawnflags" "string" "1"
+}
+
+"DmeConnectionData"
+{
+	"id" "elementid" "bc3e916b-fd0f-442a-befc-8cc11f197d8a"
+	"name" "string" "load_child0"
+	"outputName" "string" "OnMapSpawn"
+	"targetType" "int" "7"
+	"targetName" "string" "df_v25_child0"
+	"inputName" "string" "StartSpawnGroupLoad"
+	"overrideParam" "string" ""
+	"delay" "float" "0"
+	"timesToFire" "int" "-1"
+}
+
+"DmeConnectionData"
+{
+	"id" "elementid" "99917cb5-92d0-4425-a385-e601be3cf29e"
+	"name" "string" "load_child1"
+	"outputName" "string" "OnMapSpawn"
+	"targetType" "int" "7"
+	"targetName" "string" "df_v25_child1"
+	"inputName" "string" "StartSpawnGroupLoad"
+	"overrideParam" "string" ""
+	"delay" "float" "0"
+	"timesToFire" "int" "-1"
+}
+
+"DmeConnectionData"
+{
+	"id" "elementid" "1191b97a-199a-4b80-b202-e9dbfd36d2be"
+	"name" "string" "load_child2"
+	"outputName" "string" "OnMapSpawn"
+	"targetType" "int" "7"
+	"targetName" "string" "df_v25_child2"
+	"inputName" "string" "StartSpawnGroupLoad"
+	"overrideParam" "string" ""
+	"delay" "float" "0"
+	"timesToFire" "int" "-1"
+}
+
+"DmeConnectionData"
+{
+	"id" "elementid" "3ae16774-8449-4fc0-887f-baaf4fe207ec"
+	"name" "string" "load_child3"
+	"outputName" "string" "OnMapSpawn"
+	"targetType" "int" "7"
+	"targetName" "string" "df_v25_child3"
+	"inputName" "string" "StartSpawnGroupLoad"
+	"overrideParam" "string" ""
+	"delay" "float" "0"
+	"timesToFire" "int" "-1"
+}
+
+"DmeConnectionData"
+{
+	"id" "elementid" "bdd61d21-4d29-4956-a6b0-7db95eefeab4"
+	"name" "string" "load_child4"
+	"outputName" "string" "OnMapSpawn"
+	"targetType" "int" "7"
+	"targetName" "string" "df_v25_child4"
+	"inputName" "string" "StartSpawnGroupLoad"
+	"overrideParam" "string" ""
+	"delay" "float" "0"
+	"timesToFire" "int" "-1"
+}
+
+"DmeConnectionData"
+{
+	"id" "elementid" "516ea79e-cd65-4ca6-bc01-3cef82495eed"
+	"name" "string" "load_child5"
+	"outputName" "string" "OnMapSpawn"
+	"targetType" "int" "7"
+	"targetName" "string" "df_v25_child5"
+	"inputName" "string" "StartSpawnGroupLoad"
+	"overrideParam" "string" ""
+	"delay" "float" "0"
+	"timesToFire" "int" "-1"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "d6f24552-c600-4db7-b429-77e14650a54e"
+	"name" "string" "entity_properties"
+	"classname" "string" "light_environment"
+	"targetname" "string" "df_v25_sun"
+	"brightness" "string" "3"
+	"directlight" "string" "3"
+	"skytexture" "string" "df_v25_sky"
+	"castshadows" "string" "1"
+	"enabled" "string" "1"
+	"clientSideEntity" "string" "1"
+	"baked_light_indexing" "string" "1"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "f58d9f98-0c0b-47bb-a04a-969bfd54f6be"
+	"name" "string" "entity_properties"
+	"classname" "string" "env_sky"
+	"targetname" "string" "df_v25_sky"
+	"skyname" "string" "materials/skybox/sky_de_nuke.vmat"
+	"tint_color" "string" "255 255 255"
+	"brightnessscale" "string" "1.0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "302f74d0-9060-45df-882b-74739bf6a7bd"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_terrorist"
+	"targetname" "string" "df_v25_spawn0"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "3edb7724-c0d4-42d9-a31e-e81d5c293306"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_terrorist"
+	"targetname" "string" "df_v25_spawn1"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "69efb09e-1b0e-43ab-817c-cf95670a55d4"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_terrorist"
+	"targetname" "string" "df_v25_spawn2"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "f23e503c-2ceb-491e-af9b-0729f9ca04b3"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_terrorist"
+	"targetname" "string" "df_v25_spawn3"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "e947fd24-97d9-464b-a43a-bd63a27f0836"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_terrorist"
+	"targetname" "string" "df_v25_spawn4"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "3476f34e-ec16-4731-8f71-4ad4afe6722b"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_terrorist"
+	"targetname" "string" "df_v25_spawn5"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "f2b925a4-bb86-4a8b-b606-ea6171924d13"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_terrorist"
+	"targetname" "string" "df_v25_spawn6"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "e746a975-9113-4a86-b071-0c18415cc4c3"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_terrorist"
+	"targetname" "string" "df_v25_spawn7"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "92cebfdb-b950-4f5c-8bdb-f47d1b912c80"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_terrorist"
+	"targetname" "string" "df_v25_spawn8"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "47bb52dd-b74a-4f8d-bcc1-aef1525fa36d"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_terrorist"
+	"targetname" "string" "df_v25_spawn9"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "6e036580-1f59-42f9-93aa-c83276bda15b"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_terrorist"
+	"targetname" "string" "df_v25_spawn10"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "a7308517-f426-4702-b6a8-819c9ba5b6f0"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_terrorist"
+	"targetname" "string" "df_v25_spawn11"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "2a439330-cb19-4351-9849-c85c44651700"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_terrorist"
+	"targetname" "string" "df_v25_spawn12"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "d6198a49-ff8d-4f96-8334-7a9068bdf88f"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_terrorist"
+	"targetname" "string" "df_v25_spawn13"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "5a11a58a-fcf8-4757-be7b-9b9eebbb171f"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_terrorist"
+	"targetname" "string" "df_v25_spawn14"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "3b679728-e768-47ad-b56d-46a544ae2870"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_terrorist"
+	"targetname" "string" "df_v25_spawn15"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "2aeffdaa-5061-4702-9d26-ee46dbf25456"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_counterterrorist"
+	"targetname" "string" "df_v25_spawn16"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "d97fe086-77e4-49a9-80a3-44933fff7e87"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_counterterrorist"
+	"targetname" "string" "df_v25_spawn17"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "a54d5cc9-9f36-4078-8eb3-30992039a1f4"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_counterterrorist"
+	"targetname" "string" "df_v25_spawn18"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "85e7cb76-7e84-4b47-bb1a-46b34bff57df"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_counterterrorist"
+	"targetname" "string" "df_v25_spawn19"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "6cd68a90-65cf-40a8-9f5c-abc0ddd86992"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_counterterrorist"
+	"targetname" "string" "df_v25_spawn20"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "80a0ce16-a0ee-4493-a264-8229dc39b5b8"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_counterterrorist"
+	"targetname" "string" "df_v25_spawn21"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "27b01dbb-60a6-4287-bf3d-ba172fac2ebb"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_counterterrorist"
+	"targetname" "string" "df_v25_spawn22"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "c803908e-e025-49d5-a911-19c7fc88a0d7"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_counterterrorist"
+	"targetname" "string" "df_v25_spawn23"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "8a5d57e4-7ade-4d3e-b1d3-5bd2e2bef712"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_counterterrorist"
+	"targetname" "string" "df_v25_spawn24"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "29720068-f473-43d7-898a-7691f56d789e"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_counterterrorist"
+	"targetname" "string" "df_v25_spawn25"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "62a2eac8-7cf1-4d30-8efd-524cde33d0c6"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_counterterrorist"
+	"targetname" "string" "df_v25_spawn26"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "96681230-c16f-43b5-ad0e-e21b05190430"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_counterterrorist"
+	"targetname" "string" "df_v25_spawn27"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "3101efd4-5537-4d67-93a8-5717136f04bb"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_counterterrorist"
+	"targetname" "string" "df_v25_spawn28"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "31ecffd4-f81b-4e8e-bdae-52f398a2d6fa"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_counterterrorist"
+	"targetname" "string" "df_v25_spawn29"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "18abdf7c-0a7d-40ff-8499-5ba975877e10"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_counterterrorist"
+	"targetname" "string" "df_v25_spawn30"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "c4dfde2b-2fda-4a35-9c9f-66e8f30d4a67"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_player_counterterrorist"
+	"targetname" "string" "df_v25_spawn31"
+	"enabled" "string" "1"
+	"priority" "string" "0"
+}

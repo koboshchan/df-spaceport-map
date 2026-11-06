@@ -1,0 +1,26 @@
+{
+  "id": "m_779f2fa099d6672c",
+  "objectPath": "DeltaForce/Content/Maps/BuildMaps_HD/SpaceCenter_Ma1/Runtime/HLOD/MergedAssets/HLOD0_X57_Y-30_Proxy.HLOD0_X57_Y-30_Proxy",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Maps\\BuildMaps_HD\\SpaceCenter_Ma1\\Runtime\\HLOD\\MergedAssets\\HLOD0_X57_Y-30_Proxy.glb",
+  "sourceSHA256": "978F7930FB3032F8E19C70C1B9912150EF88E09F9EA03CE5C649479874D10D7F",
+  "model": "models/df_v24/m_779f2fa099d6672c.vmdl",
+  "materials": {
+    "mat_1fca4711d6ff6084": "DeltaForce/Content/Maps/BuildMaps_HD/SpaceCenter_Ma1/Runtime/HLOD/MergedAssets/HLOD0_X57_Y-30_Proxy.M_HLOD0_X57_Y-30_Proxy"
+  },
+  "vertices": 430,
+  "polygons": 589,
+  "bounds": [
+    [
+      263634.9375,
+      132115.765625,
+      -8519.5302734375
+    ],
+    [
+      267213.5625,
+      135035.03125,
+      -7329.8115234375
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

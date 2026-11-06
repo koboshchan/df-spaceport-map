@@ -1,0 +1,26 @@
+{
+  "id": "m_2dd2c57579cdfc13",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/Office/SM_H_FutureTech_RingBinder_01.SM_H_FutureTech_RingBinder_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\Office\\SM_H_FutureTech_RingBinder_01.glb",
+  "sourceSHA256": "32C77067521ACB90FD700BDE9C74E71DAE950428030EE02CE0BE7ED7C01FDDC2",
+  "model": "models/df_v24/m_2dd2c57579cdfc13.vmdl",
+  "materials": {
+    "mat_abfcd4e2fa57e01c": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/Office/00_Materials/HD/MI_H_FutureTech_RingBinder_01_HD.MI_H_FutureTech_RingBinder_01_HD"
+  },
+  "vertices": 519,
+  "polygons": 664,
+  "bounds": [
+    [
+      -8.985529899597168,
+      -7.475522041320801,
+      0.0036317110061645508
+    ],
+    [
+      8.985529899597168,
+      5.668083667755127,
+      1.2403655052185059
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "m_6be5ee1d96fe0e1a",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech_Ma1/SM_H_Props_FutureTech_Chandelier_01.SM_H_Props_FutureTech_Chandelier_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech_Ma1\\SM_H_Props_FutureTech_Chandelier_01.glb",
+  "sourceSHA256": "5AC049617E928E8E8CD079713712ED61E0418B37B3234F27C68BA6343BB132D8",
+  "model": "models/df_v24/m_6be5ee1d96fe0e1a.vmdl",
+  "materials": {
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD",
+    "mat_d90eeabf4f6d9342": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_HOrange_01_InterWall_03_HD.MI_H_Building_FutureTech_HOrange_01_InterWall_03_HD",
+    "mat_66d6d7a25da60739": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Lighting_02_HD.MI_GEN_Lighting_02_HD"
+  },
+  "vertices": 6039,
+  "polygons": 7860,
+  "bounds": [
+    [
+      -97.97256469726562,
+      -97.89974975585938,
+      -5.350679874420166
+    ],
+    [
+      97.97289276123047,
+      98.0272445678711,
+      9.310230255126953
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

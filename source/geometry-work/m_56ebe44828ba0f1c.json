@@ -1,0 +1,31 @@
+{
+  "id": "m_56ebe44828ba0f1c",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/SM_H_Industrial_ISS_Rocket_01_04.SM_H_Industrial_ISS_Rocket_01_04",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\ISS\\SM_H_Industrial_ISS_Rocket_01_04.glb",
+  "sourceSHA256": "157CE243B338574A336B5E4EB5C309F6FF24B20460C004C89CFCC171D223304D",
+  "model": "models/df_v24/m_56ebe44828ba0f1c.vmdl",
+  "materials": {
+    "mat_6335089357e18e1c": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Rocket_01_02_HD.MI_H_Industrial_ISS_Rocket_01_02_HD",
+    "mat_06b9972dbfe4848c": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Rocket_01_HD.MI_H_Industrial_ISS_Rocket_01_HD",
+    "mat_cf1a7fb8c94bdd95": "DeltaForce/Content/Environment/Props/Branding/00_Materials/HD/MI_Branding_Sticker_Number_02G_HD.MI_Branding_Sticker_Number_02G_HD",
+    "mat_05560ecdc24586bf": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Rocket_01_06_HD.MI_H_Industrial_ISS_Rocket_01_06_HD",
+    "mat_ce515409d0a82492": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD",
+    "mat_2bea667a7b4421a8": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Rocket_01_03_HD.MI_H_Industrial_ISS_Rocket_01_03_HD"
+  },
+  "vertices": 5672,
+  "polygons": 4705,
+  "bounds": [
+    [
+      -88.9178695678711,
+      -73.41570281982422,
+      0.0004989859298802912
+    ],
+    [
+      88.91791534423828,
+      73.41604614257812,
+      150.31951904296875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

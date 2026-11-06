@@ -1,0 +1,26 @@
+{
+  "id": "m_52d896e188998f24",
+  "objectPath": "DeltaForce/Content/Effects/Common/Mesh/Ray/SM_EFX_LightRay_Cone.SM_EFX_LightRay_Cone",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Effects\\Common\\Mesh\\Ray\\SM_EFX_LightRay_Cone.glb",
+  "sourceSHA256": "9012F22FE771656BD1621E5E15A013B1AB082700DB510EAC282741F0B1D83A6E",
+  "model": "models/df_v24/m_52d896e188998f24.vmdl",
+  "materials": {
+    "mat_87fa7d325eb743c4": "Engine/Content/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+  },
+  "vertices": 444,
+  "polygons": 792,
+  "bounds": [
+    [
+      -16.89625358581543,
+      -16.896249771118164,
+      -54.0
+    ],
+    [
+      16.89625358581543,
+      16.896255493164062,
+      -1.1999980211257935
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

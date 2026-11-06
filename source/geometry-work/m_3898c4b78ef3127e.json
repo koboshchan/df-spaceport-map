@@ -1,0 +1,27 @@
+{
+  "id": "m_3898c4b78ef3127e",
+  "objectPath": "DeltaForce/Content/Maps/Iceland/Asset/Props/SM_H_IceLand_Props_IndustrialSlipRope_01e.SM_H_IceLand_Props_IndustrialSlipRope_01e",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Maps\\Iceland\\Asset\\Props\\SM_H_IceLand_Props_IndustrialSlipRope_01e.glb",
+  "sourceSHA256": "CD97CA0F8838A9C35FC554D21227CE8BD32E8F0CFFFC0E2963B6C01D832AF6DD",
+  "model": "models/df_v24/m_3898c4b78ef3127e.vmdl",
+  "materials": {
+    "mat_6b6a031aafd7ec7e": "DeltaForce/Content/Maps/Iceland/Asset/Props/00_Materials/HD/MI_H_IceLand_Props_IndustrialSlipRope_01b_HD.MI_H_IceLand_Props_IndustrialSlipRope_01b_HD",
+    "mat_bb147f41127b041c": "DeltaForce/Content/Maps/Iceland/Asset/Props/00_Materials/HD/MI_H_IceLand_Props_IndustrialSlipRope_01e_HD.MI_H_IceLand_Props_IndustrialSlipRope_01e_HD"
+  },
+  "vertices": 1169,
+  "polygons": 1586,
+  "bounds": [
+    [
+      -1.387912631034851,
+      -0.8844577670097351,
+      -9.846529960632324
+    ],
+    [
+      1.1867293119430542,
+      0.958868145942688,
+      1.6978683471679688
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

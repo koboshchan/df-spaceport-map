@@ -1,0 +1,26 @@
+{
+  "id": "m_5dbe85469ab5b768",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation/Bush/SM_BS_NeedlePalm_360cm.SM_BS_NeedlePalm_360cm",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation\\Bush\\SM_BS_NeedlePalm_360cm.glb",
+  "sourceSHA256": "8EE8A1164CBBF37C636DE479B390EEDC6514168D658836C3BD273119C3A05EE2",
+  "model": "models/df_v24/m_5dbe85469ab5b768.vmdl",
+  "materials": {
+    "mat_5fbc1da251f06d7a": "DeltaForce/Content/Environment/Biome/Vegetation/Bush/00_Materials/MI_BS_DwarfPalmetto.MI_BS_DwarfPalmetto"
+  },
+  "vertices": 748,
+  "polygons": 645,
+  "bounds": [
+    [
+      -101.37728881835938,
+      -79.99452209472656,
+      -3.2875618934631348
+    ],
+    [
+      109.74691009521484,
+      81.90966033935547,
+      133.18804931640625
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

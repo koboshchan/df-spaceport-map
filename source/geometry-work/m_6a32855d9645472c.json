@@ -1,0 +1,30 @@
+{
+  "id": "m_6a32855d9645472c",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/SM_I_RoadFacility_Ground_L_04N.SM_I_RoadFacility_Ground_L_04N",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter_Ma1\\SM_I_RoadFacility_Ground_L_04N.glb",
+  "sourceSHA256": "52BB91E1697A0A06D507242CF559F6DFD904E9CCF7619CE0E78A36A3A8A46474",
+  "model": "models/df_v24/m_6a32855d9645472c.vmdl",
+  "materials": {
+    "mat_ba296184c60d3451": "DeltaForce/Content/Environment/Props/Morocco/Industrial/Construction/00_Materials/HD/MI_M_Industrial_Construction_Pillars_01_HD.MI_M_Industrial_Construction_Pillars_01_HD",
+    "mat_fda3182f76a0dd4d": "DeltaForce/Content/Environment/MatBlend/Concrete/Iris/00_Materials/HD/MI_M_Building_Concrete_Damaged_01d_HD.MI_M_Building_Concrete_Damaged_01d_HD",
+    "mat_1aecad9143cf349f": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Tide/00_Materials/HD/MI_H_Building_Tide_DeepJail_04_01_HD.MI_H_Building_Tide_DeepJail_04_01_HD",
+    "mat_81141676929f02f1": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Tide/00_Materials/HD/MI_H_Building_Tide_PrisonMain_14_Layer_01c_HD.MI_H_Building_Tide_PrisonMain_14_Layer_01c_HD",
+    "mat_7a8e78bc10930f9c": "DeltaForce/Content/Environment/Props/Industrial/Construction/00_Materials/HD/MI_H_Industrial_Construction_Pipe_01b_HD.MI_H_Industrial_Construction_Pipe_01b_HD"
+  },
+  "vertices": 5877,
+  "polygons": 8074,
+  "bounds": [
+    [
+      -1818.1383056640625,
+      -3176.744384765625,
+      -610.8897705078125
+    ],
+    [
+      -49.406307220458984,
+      -2996.072265625,
+      240.06552124023438
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

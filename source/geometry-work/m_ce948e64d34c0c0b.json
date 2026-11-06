@@ -1,0 +1,35 @@
+{
+  "id": "m_ce948e64d34c0c0b",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_Bridge_01E.SM_H_Building_FutureTech_Bridge_01E",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_Bridge_01E.glb",
+  "sourceSHA256": "57B072F300B79D28583A460F7F4C2D579F4FD3AC741336082FFAF5371EE79C16",
+  "model": "models/df_v24/m_ce948e64d34c0c0b.vmdl",
+  "materials": {
+    "mat_ddf04e7ac5f806c7": "DeltaForce/Content/Environment/Decal/Other/00_Materials/MI_I_Other_Decal_15_HD.MI_I_Other_Decal_15_HD",
+    "mat_5c93c24fe8668312": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_DecalAlpha_01_HD.MI_H_Building_FutureTech_DecalAlpha_01_HD",
+    "mat_652a606455361a38": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_DecalAlpha_04_HD.MI_H_Building_FutureTech_DecalAlpha_04_HD",
+    "mat_0d6c0522c86d44a5": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_DecalAlpha_05_HD.MI_H_Building_FutureTech_DecalAlpha_05_HD",
+    "mat_e4b98a46952197ac": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_DecalAlpha_02_HD.MI_H_Building_FutureTech_DecalAlpha_02_HD",
+    "mat_ebe2c68b91602cff": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Road_Decal_02_HD.MI_H_FutureTech_Road_Decal_02_HD",
+    "mat_7b88a125fc2f07ab": "DeltaForce/Content/Environment/Decal/Dirt/00_Materials/MI_I_Dirt_Decal_01_HD.MI_I_Dirt_Decal_01_HD",
+    "mat_eef0225227be04b4": "DeltaForce/Content/Environment/Decal/Dirt/00_Materials/MI_I_Dirt_Decal_02_HD.MI_I_Dirt_Decal_02_HD",
+    "mat_0cc8878c06a78d0e": "DeltaForce/Content/Environment/Decal/Dirt/00_Materials/HD/MI_I_Dirt_Decal_14_HD.MI_I_Dirt_Decal_14_HD",
+    "mat_34f0c37cb0abd498": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Industrial/00_Materials/HD/MI_H_Building_Industrial_Posun_02f_HD.MI_H_Building_Industrial_Posun_02f_HD"
+  },
+  "vertices": 19650,
+  "polygons": 15476,
+  "bounds": [
+    [
+      -1101.621826171875,
+      -2241.371826171875,
+      -8.070204734802246
+    ],
+    [
+      1108.9942626953125,
+      99.2425765991211,
+      542.2996215820312
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

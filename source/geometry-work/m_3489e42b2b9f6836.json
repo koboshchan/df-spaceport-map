@@ -1,0 +1,26 @@
+{
+  "id": "m_3489e42b2b9f6836",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Generic/SM_H_FutureTech_Tools_Screw_02.SM_H_FutureTech_Tools_Screw_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Generic\\SM_H_FutureTech_Tools_Screw_02.glb",
+  "sourceSHA256": "1B4F147100B7B9F23F40E46ECEBDB953B8C6B4CB74EF8CB0EA4E57531991C9D9",
+  "model": "models/df_v24/m_3489e42b2b9f6836.vmdl",
+  "materials": {
+    "mat_2916e26ac0010a8a": "DeltaForce/Content/Environment/Props/HAAVK/Generic/00_Materials/HD/MI_H_FutureTech_Tools_Screw_01_HD.MI_H_FutureTech_Tools_Screw_01_HD"
+  },
+  "vertices": 2051,
+  "polygons": 2038,
+  "bounds": [
+    [
+      -11.616520881652832,
+      -9.470111846923828,
+      -0.03214475139975548
+    ],
+    [
+      11.65242862701416,
+      9.470112800598145,
+      1.1746370792388916
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

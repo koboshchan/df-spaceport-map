@@ -1,0 +1,26 @@
+{
+  "id": "m_d1a76560d4a910ca",
+  "objectPath": "DeltaForce/Content/Environment/Props/Commercial/Resort/SM_Commercial_Resort_Sofa_06_01.SM_Commercial_Resort_Sofa_06_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Commercial\\Resort\\SM_Commercial_Resort_Sofa_06_01.glb",
+  "sourceSHA256": "A2A13B6601D7510136114983C3D06866359F608D31F0E5418F379D13CB1F218C",
+  "model": "models/df_v24/m_d1a76560d4a910ca.vmdl",
+  "materials": {
+    "mat_6d89ff97219e22b6": "DeltaForce/Content/Environment/Props/Commercial/Resort/00_Materials/HD/MI_Commercial_Resort_Sofa_06_01_HD.MI_Commercial_Resort_Sofa_06_01_HD"
+  },
+  "vertices": 1317,
+  "polygons": 1866,
+  "bounds": [
+    [
+      -19.20130729675293,
+      -17.56991195678711,
+      2.7465819130156888e-06
+    ],
+    [
+      19.20130729675293,
+      21.242937088012695,
+      33.81523895263672
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

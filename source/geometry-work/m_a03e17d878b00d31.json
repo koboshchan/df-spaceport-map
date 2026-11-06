@@ -1,0 +1,31 @@
+{
+  "id": "m_a03e17d878b00d31",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_Dock_04.SM_H_Building_FutureTech_Dock_04",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_Dock_04.glb",
+  "sourceSHA256": "05DA17D41E20E9DBEA3B1CAFB6AC22FD66BF9935332E54765863E0DD44C06B1D",
+  "model": "models/df_v24/m_a03e17d878b00d31.vmdl",
+  "materials": {
+    "mat_99147ede1cfdbb6f": "DeltaForce/Content/Environment/Structures/HAAVK/Door/00_Materials/HD/MI_H_Customiz_SlidingDoor_01c_HD.MI_H_Customiz_SlidingDoor_01c_HD",
+    "mat_5f34bbc7c211be54": "DeltaForce/Content/Environment/Structures/HAAVK/Door/00_Materials/HD/MI_H_Customiz_SlidingDoor_01A_HD.MI_H_Customiz_SlidingDoor_01A_HD",
+    "mat_498a00951cbfa2d5": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_WatchTower_01_06_HD.MI_H_Building_FutureTech_WatchTower_01_06_HD",
+    "mat_38f3a85edb7e19ad": "DeltaForce/Content/Environment/Structures/HAAVK/Decal/WellLid/00_Materials/HD/MI_H_Decal_WellLid_01_HD.MI_H_Decal_WellLid_01_HD",
+    "mat_acfe0c8c271d1ddb": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_WatchTower_01_05_HD.MI_H_Building_FutureTech_WatchTower_01_05_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD"
+  },
+  "vertices": 62837,
+  "polygons": 47313,
+  "bounds": [
+    [
+      -685.0224609375,
+      -554.9373779296875,
+      215.56326293945312
+    ],
+    [
+      926.9326171875,
+      561.58544921875,
+      800.1813354492188
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

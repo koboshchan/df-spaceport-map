@@ -1,0 +1,29 @@
+{
+  "id": "m_ab0c6e44db1217f9",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_Building_FutureTech_H_01/SM_H_Building_FutureTech_HStairs_03_ExterWall_01.SM_H_Building_FutureTech_HStairs_03_ExterWall_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_Building_FutureTech_H_01\\SM_H_Building_FutureTech_HStairs_03_ExterWall_01.glb",
+  "sourceSHA256": "ECD4B256E16B9BACFFB14209AF92330CE27051410ADB4FB7A2CFE35085037CD1",
+  "model": "models/df_v24/m_ab0c6e44db1217f9.vmdl",
+  "materials": {
+    "mat_eb43be9355e144f5": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_HStairs_03_ExterWall_01_01B_HD.MI_H_Building_FutureTech_HStairs_03_ExterWall_01_01B_HD",
+    "mat_33602b4bfdc71367": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_C_HD.MI_I_WalkwaySystem_MetalFloor_01_C_HD",
+    "mat_5c162a1cab107fa4": "DeltaForce/Content/Environment/Structures/HAAVK/Window/00_Materials/HD/MI_H_Window_01_HD.MI_H_Window_01_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD"
+  },
+  "vertices": 5998,
+  "polygons": 5810,
+  "bounds": [
+    [
+      -1026.805908203125,
+      -1429.303955078125,
+      132.45204162597656
+    ],
+    [
+      -863.2799682617188,
+      -843.1442260742188,
+      967.679931640625
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

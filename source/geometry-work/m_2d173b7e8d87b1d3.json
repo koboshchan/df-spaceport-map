@@ -1,0 +1,26 @@
+{
+  "id": "m_2d173b7e8d87b1d3",
+  "objectPath": "DeltaForce/Content/Models/Props/Collect/Prop_Collect_BossRelic_1398/Prop_Collect_BossRelic_1398_Lay.Prop_Collect_BossRelic_1398_Lay",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Props\\Collect\\Prop_Collect_BossRelic_1398\\Prop_Collect_BossRelic_1398_Lay.glb",
+  "sourceSHA256": "F6F2843543893326225F38507B5E74E2976E49394B3663C35239C3ED448AE744",
+  "model": "models/df_v24/m_2d173b7e8d87b1d3.vmdl",
+  "materials": {
+    "mat_4cc7323194dec062": "DeltaForce/Content/Models/Props/Collect/Prop_Collect_BossRelic_1398/Material/Prop_Collect_BossRelic_1398.Prop_Collect_BossRelic_1398"
+  },
+  "vertices": 1671,
+  "polygons": 1669,
+  "bounds": [
+    [
+      -0.7144073843955994,
+      -1.1682353019714355,
+      0.060947973281145096
+    ],
+    [
+      0.7144073247909546,
+      1.113210916519165,
+      3.5155463218688965
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

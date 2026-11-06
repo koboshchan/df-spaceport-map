@@ -1,0 +1,26 @@
+{
+  "id": "m_a46145064391bb8d",
+  "objectPath": "DeltaForce/Content/Effects/Common/Mesh/Plane/SM_EFX_Plane_Sandstorm_01.SM_EFX_Plane_Sandstorm_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Effects\\Common\\Mesh\\Plane\\SM_EFX_Plane_Sandstorm_01.glb",
+  "sourceSHA256": "5A9CEC5D8D5C7A5508ECAE055115C67CD709EC9195B2B4C1B79F71ECBC56E32A",
+  "model": "models/df_v24/m_a46145064391bb8d.vmdl",
+  "materials": {
+    "mat_87fa7d325eb743c4": "Engine/Content/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+  },
+  "vertices": 25,
+  "polygons": 32,
+  "bounds": [
+    [
+      -854.5003662109375,
+      -18432.0,
+      52.72382736206055
+    ],
+    [
+      -3.0363566875457764,
+      18432.0,
+      9098.763671875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

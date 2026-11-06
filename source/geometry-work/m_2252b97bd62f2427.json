@@ -1,0 +1,27 @@
+{
+  "id": "m_2252b97bd62f2427",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_Platform_03C.SM_H_Building_FutureTech_Platform_03C",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_Platform_03C.glb",
+  "sourceSHA256": "A9E8A29DEFF8D05BFD6E67A969D1D16ED6FEC634666DC865F5ACC2BC13FDCF77",
+  "model": "models/df_v24/m_2252b97bd62f2427.vmdl",
+  "materials": {
+    "mat_8b5d279a6d2e73a7": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_D_HD.MI_I_WalkwaySystem_MetalFloor_01_D_HD",
+    "mat_33602b4bfdc71367": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_C_HD.MI_I_WalkwaySystem_MetalFloor_01_C_HD"
+  },
+  "vertices": 16128,
+  "polygons": 12440,
+  "bounds": [
+    [
+      -216.15557861328125,
+      -126.53306579589844,
+      -109.4949951171875
+    ],
+    [
+      0.4411669969558716,
+      126.5330810546875,
+      0.0007058715564198792
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

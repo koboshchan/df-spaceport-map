@@ -1,0 +1,29 @@
+{
+  "canonical": "props_collect_flightcase_924_3P",
+  "state": "opened",
+  "id": "l_7895ef582679e90c",
+  "objectPath": "DeltaForce/Content/Models/Props/Collect/props_collect_flightcase_924/props_collect_flightcase_924_3P.uasset|opened",
+  "source": "E:\\df-extract-20261105\\loot-skeletal\\static-paired-v3\\props_collect_flightcase_924_3P\\opened.glb",
+  "sourceSHA256": "e09c3c03e4c804ce9a8d4d58f05626e6a3c4dd7452643fea46dfadf852050f49",
+  "model": "models/df_v24/l_7895ef582679e90c.vmdl",
+  "materials": {
+    "mat_4013208bbe54403e": "DeltaForce/Content/Models/Props/Collect/props_collect_flightcase_924/Materials/props_collect_flightcase_924.props_collect_flightcase_924",
+    "mat_3d5e665c872a4acc": "DeltaForce/Content/Models/Props/Collect/props_collect_flightcase_924/Materials/props_collect_flightcase_924_02.props_collect_flightcase_924_02"
+  },
+  "vertices": 3080,
+  "polygons": 2512,
+  "bounds": [
+    [
+      -21.780012130737305,
+      -16.432239532470703,
+      -5.064257948106388e-06
+    ],
+    [
+      21.780012130737305,
+      15.570329666137695,
+      34.29682922363281
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

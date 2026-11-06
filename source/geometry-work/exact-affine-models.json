@@ -1,0 +1,5402 @@
+[
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube100.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_6ece56ac2d304a28.vmdl",
+    "id": "a_6ece56ac2d304a28",
+    "positionCS2": [
+      -7798.521397054254,
+      3764.8013550656906,
+      357.6572351370005
+    ],
+    "origin": [
+      -7798.521397054254,
+      3764.8013550656906,
+      357.6572351370005
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.08647310733795166,
+    "windingReversed": false,
+    "maxLinearCheckError": 7.629630996207971e-06,
+    "bakeReason": "source shear needs exact baked model 0.07024286951764779",
+    "localLinearMatrix": [
+      [
+        0.04376662150025368,
+        -13.690727233886719,
+        8.434025176029536e-07
+      ],
+      [
+        4.185578346252441,
+        0.0003622976946644485,
+        0.00010697848483687267
+      ],
+      [
+        -0.0019975292962044477,
+        -4.044009571657625e-08,
+        0.0015089827356860042
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube10_20.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_aac1ff26c6d2e09f.vmdl",
+    "id": "a_aac1ff26c6d2e09f",
+    "positionCS2": [
+      9004.612420085032,
+      5530.521582279936,
+      566.548516976025
+    ],
+    "origin": [
+      9004.612420085032,
+      5530.521582279936,
+      566.548516976025
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 1.1699358224868774,
+    "windingReversed": false,
+    "maxLinearCheckError": 6.103515625000011e-05,
+    "bakeReason": "source shear needs exact baked model 0.3276179647141369",
+    "localLinearMatrix": [
+      [
+        2.1855560135009e-06,
+        -0.01165979728102684,
+        0.0007308608037419617
+      ],
+      [
+        51.203678131103516,
+        0.00031641285750083625,
+        -1.98334291781066e-05
+      ],
+      [
+        0.0,
+        0.004049461334943771,
+        1.9593571424484253
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube118_43.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_b2b890cbdf543e47.vmdl",
+    "id": "a_b2b890cbdf543e47",
+    "positionCS2": [
+      -9083.768400815461,
+      3567.723298235971,
+      160.85527150197686
+    ],
+    "origin": [
+      -9083.768400815461,
+      3567.723298235971,
+      160.85527150197686
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 1.676688313484192,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.0518509433364194e-05,
+    "bakeReason": "source shear needs exact baked model 0.00010760032240330672",
+    "localLinearMatrix": [
+      [
+        -1.8218092163025124e-17,
+        5.924055201944611e-08,
+        0.16750232875347137
+      ],
+      [
+        0.0,
+        20.435707092285156,
+        -1.802379119908437e-05
+      ],
+      [
+        -0.4898259937763214,
+        0.0,
+        -2.220446049250313e-16
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube11_30.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_6e5a9602141e1be1.vmdl",
+    "id": "a_6e5a9602141e1be1",
+    "positionCS2": [
+      8446.027503603575,
+      3740.6916431786667,
+      513.3880456775432
+    ],
+    "origin": [
+      8446.027503603575,
+      3740.6916431786667,
+      513.3880456775432
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 3.605846881866455,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.9082797281243946e-06,
+    "bakeReason": "source shear needs exact baked model 0.982837747151843",
+    "localLinearMatrix": [
+      [
+        0.011407677084207535,
+        -0.03536726161837578,
+        1.3270735053083627e-06
+      ],
+      [
+        -0.00017859868239611387,
+        0.0005837187054567039,
+        51.20357894897461
+      ],
+      [
+        -1.928322434425354,
+        -0.19480684399604797,
+        3.6451680784921336e-07
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube120.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_85bbc20c1bb99c50.vmdl",
+    "id": "a_85bbc20c1bb99c50",
+    "positionCS2": [
+      -9068.49000564919,
+      4227.388649832312,
+      105.61926093217335
+    ],
+    "origin": [
+      -9068.49000564919,
+      4227.388649832312,
+      105.61926093217335
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.6368758082389832,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.4551915228366852e-11,
+    "bakeReason": "source shear needs exact baked model 0.00013234846643654373",
+    "localLinearMatrix": [
+      [
+        1.0,
+        9.127283192356117e-06,
+        3.063536403724587e-12
+      ],
+      [
+        -5.759586088061042e-07,
+        15.847116470336914,
+        5.319006049830932e-06
+      ],
+      [
+        -2.220446049250313e-16,
+        -3.39687176165171e-08,
+        0.0401887521147728
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube121.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_4b53b39d356e9cc3.vmdl",
+    "id": "a_4b53b39d356e9cc3",
+    "positionCS2": [
+      -7839.696622562682,
+      4306.410014964378,
+      105.61924025632834
+    ],
+    "origin": [
+      -7839.696622562682,
+      4306.410014964378,
+      105.61924025632834
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.6368757486343384,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.057712467907031e-05,
+    "bakeReason": "source shear needs exact baked model 0.058428265115636396",
+    "localLinearMatrix": [
+      [
+        -0.009808177128434181,
+        -15.847114562988281,
+        -1.649208934395574e-05
+      ],
+      [
+        0.9999881386756897,
+        -0.00035326011129654944,
+        0.00236809765920043
+      ],
+      [
+        -0.00039666189695708454,
+        4.301056577560303e-08,
+        0.04018828272819519
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube123.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_87a45c7d5434e036.vmdl",
+    "id": "a_87a45c7d5434e036",
+    "positionCS2": [
+      548.4591681731399,
+      4194.40368747685,
+      112.74385738092678
+    ],
+    "origin": [
+      548.4591681731399,
+      4194.40368747685,
+      112.74385738092678
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.1670430600643158,
+    "windingReversed": false,
+    "maxLinearCheckError": 7.62939453125e-06,
+    "bakeReason": "source shear needs exact baked model 0.9519818268501542",
+    "localLinearMatrix": [
+      [
+        -3.5526483058929443,
+        -2.5719511995703215e-06,
+        -2.7789595127105713
+      ],
+      [
+        1.2472133903429494e-06,
+        -0.03999999910593033,
+        9.700398777567898e-07
+      ],
+      [
+        1.3802815675735474,
+        9.938341918314109e-07,
+        2.25516939163208
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube124_41.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_a206048335b50068.vmdl",
+    "id": "a_a206048335b50068",
+    "positionCS2": [
+      528.4566473730083,
+      4335.782398114767,
+      112.74386384247555
+    ],
+    "origin": [
+      528.4566473730083,
+      4335.782398114767,
+      112.74386384247555
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.20307093858718872,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.0789593218788873e-05,
+    "bakeReason": "source shear needs exact baked model 0.9519818844866251",
+    "localLinearMatrix": [
+      [
+        -4.318882942199707,
+        -3.0084704576438526e-06,
+        -2.7789621353149414
+      ],
+      [
+        1.5162121371758985e-06,
+        -0.03999999910593033,
+        9.763239177118521e-07
+      ],
+      [
+        1.6779799461364746,
+        1.3480758980222163e-06,
+        2.2551703453063965
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube125_67.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_e1fa943f1d8b536a.vmdl",
+    "id": "a_e1fa943f1d8b536a",
+    "positionCS2": [
+      -923.1254962548264,
+      2161.6884120832256,
+      110.45247378124077
+    ],
+    "origin": [
+      -923.1254962548264,
+      2161.6884120832256,
+      110.45247378124077
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.16704313457012177,
+    "windingReversed": false,
+    "maxLinearCheckError": 7.62939453125347e-06,
+    "bakeReason": "source shear needs exact baked model 0.9519818488069224",
+    "localLinearMatrix": [
+      [
+        3.5526483058929443,
+        3.2114051862208726e-08,
+        2.7789604663848877
+      ],
+      [
+        -2.852248826457071e-06,
+        0.03999999910593033,
+        -2.231092594229267e-06
+      ],
+      [
+        1.3802813291549683,
+        -8.30054764749651e-15,
+        2.2551698684692383
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube126.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_7033fe7360d8807f.vmdl",
+    "id": "a_7033fe7360d8807f",
+    "positionCS2": [
+      290.33919112032163,
+      4133.75498077771,
+      199.26547693858083
+    ],
+    "origin": [
+      290.33919112032163,
+      4133.75498077771,
+      199.26547693858083
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.5139709711074829,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.525890547737774e-05,
+    "bakeReason": "source shear needs exact baked model 0.9983018710038641",
+    "localLinearMatrix": [
+      [
+        -11.22933292388916,
+        2.202296495437622,
+        0.2059226930141449
+      ],
+      [
+        -0.017208850011229515,
+        -0.038050293922424316,
+        0.005037521943449974
+      ],
+      [
+        5.089071750640869,
+        -0.8539606928825378,
+        0.9951404929161072
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube127.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_d57f29055914a40f.vmdl",
+    "id": "a_d57f29055914a40f",
+    "positionCS2": [
+      -923.0179593211506,
+      4194.527407519257,
+      112.74371817440715
+    ],
+    "origin": [
+      -923.0179593211506,
+      4194.527407519257,
+      112.74371817440715
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.1670430600643158,
+    "windingReversed": false,
+    "maxLinearCheckError": 7.629394531250867e-06,
+    "bakeReason": "source shear needs exact baked model 0.9519819009541407",
+    "localLinearMatrix": [
+      [
+        3.552647590637207,
+        -7.717280823271722e-06,
+        -2.7789628505706787
+      ],
+      [
+        -1.2211470448164619e-06,
+        0.03999999910593033,
+        9.570146630721865e-07
+      ],
+      [
+        -1.3802809715270996,
+        3.3865642308228416e-06,
+        2.2551705837249756
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube128.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_b97ab1172f036253.vmdl",
+    "id": "a_b97ab1172f036253",
+    "positionCS2": [
+      -659.4303068604495,
+      4131.752459509822,
+      199.178137156945
+    ],
+    "origin": [
+      -659.4303068604495,
+      4131.752459509822,
+      199.178137156945
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.5139709711074829,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.525890547737774e-05,
+    "bakeReason": "source shear needs exact baked model 0.9964166543568612",
+    "localLinearMatrix": [
+      [
+        7.798630237579346,
+        2.18691349029541,
+        -5.297186374664307
+      ],
+      [
+        -0.017162462696433067,
+        0.03807654604315758,
+        0.004905165638774633
+      ],
+      [
+        -2.3037071228027344,
+        -0.8479834198951721,
+        3.133218288421631
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube129.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_79058dcfe38f1fdc.vmdl",
+    "id": "a_79058dcfe38f1fdc",
+    "positionCS2": [
+      -614.3629999300465,
+      4272.512414978351,
+      199.28794097541322
+    ],
+    "origin": [
+      -614.3629999300465,
+      4272.512414978351,
+      199.28794097541322
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.5139709711074829,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.525890547737774e-05,
+    "bakeReason": "source shear needs exact baked model 0.9964166543568612",
+    "localLinearMatrix": [
+      [
+        7.798630237579346,
+        2.18691349029541,
+        -5.297186374664307
+      ],
+      [
+        -0.017162462696433067,
+        0.03807654604315758,
+        0.004905165638774633
+      ],
+      [
+        -2.3037071228027344,
+        -0.8479834198951721,
+        3.133218288421631
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube12_31.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_ab94fb29eeb2b6bd.vmdl",
+    "id": "a_ab94fb29eeb2b6bd",
+    "positionCS2": [
+      8446.16251342441,
+      5503.049052697781,
+      513.3957840875519
+    ],
+    "origin": [
+      8446.16251342441,
+      5503.049052697781,
+      513.3957840875519
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 3.605846881866455,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.9082797281243946e-06,
+    "bakeReason": "source shear needs exact baked model 0.9828465865130062",
+    "localLinearMatrix": [
+      [
+        -0.011409198865294456,
+        -0.03536710888147354,
+        -9.646499421478438e-08
+      ],
+      [
+        0.00017147761536762118,
+        2.641649916768074e-05,
+        -51.20357894897461
+      ],
+      [
+        1.928313970565796,
+        -0.19483284652233124,
+        6.136851425253553e-06
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube130.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_4f846db108cd5b0b.vmdl",
+    "id": "a_4f846db108cd5b0b",
+    "positionCS2": [
+      -1123.2003323302197,
+      4336.491133796109,
+      52.405021442570614
+    ],
+    "origin": [
+      -1123.2003323302197,
+      4336.491133796109,
+      52.405021442570614
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.33631303906440735,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.5258789062501735e-05,
+    "bakeReason": "source shear needs exact baked model 0.9716727792506193",
+    "localLinearMatrix": [
+      [
+        5.374680995941162,
+        -4.5947867874929216e-06,
+        -5.4768548011779785
+      ],
+      [
+        -1.862271119534853e-06,
+        0.03999999910593033,
+        1.8917113493444049e-06
+      ],
+      [
+        -1.6043174266815186,
+        2.160661097150296e-06,
+        3.199155330657959
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube131.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_64e9fefa345fe8e8.vmdl",
+    "id": "a_64e9fefa345fe8e8",
+    "positionCS2": [
+      -903.015547529154,
+      4336.491135748307,
+      112.74376611903062
+    ],
+    "origin": [
+      -903.015547529154,
+      4336.491135748307,
+      112.74376611903062
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.20307093858718872,
+    "windingReversed": false,
+    "maxLinearCheckError": 7.864199877963372e-06,
+    "bakeReason": "source shear needs exact baked model 0.9519819009541407",
+    "localLinearMatrix": [
+      [
+        4.318882465362549,
+        -7.717280823271722e-06,
+        -2.7789628505706787
+      ],
+      [
+        -1.4845240912109148e-06,
+        0.03999999910593033,
+        9.570146630721865e-07
+      ],
+      [
+        -1.677979826927185,
+        3.3865642308228416e-06,
+        2.2551705837249756
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube132.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_17740f3fb171a9a0.vmdl",
+    "id": "a_17740f3fb171a9a0",
+    "positionCS2": [
+      -1123.2003818849334,
+      4194.527419796097,
+      52.405021442570614
+    ],
+    "origin": [
+      -1123.2003818849334,
+      4194.527419796097,
+      52.405021442570614
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.33631303906440735,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.5258789062501735e-05,
+    "bakeReason": "source shear needs exact baked model 0.9716727792506193",
+    "localLinearMatrix": [
+      [
+        5.374680995941162,
+        -4.5947867874929216e-06,
+        -5.4768548011779785
+      ],
+      [
+        -1.862271119534853e-06,
+        0.03999999910593033,
+        1.8917113493444049e-06
+      ],
+      [
+        -1.6043174266815186,
+        2.160661097150296e-06,
+        3.199155330657959
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube133.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_e55c2d752a8cc451.vmdl",
+    "id": "a_e55c2d752a8cc451",
+    "positionCS2": [
+      244.68675404699752,
+      4272.804914633423,
+      199.39555458946234
+    ],
+    "origin": [
+      244.68675404699752,
+      4272.804914633423,
+      199.39555458946234
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.5139709711074829,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.525890547737774e-05,
+    "bakeReason": "source shear needs exact baked model 0.9983018710038641",
+    "localLinearMatrix": [
+      [
+        -11.22933292388916,
+        2.202296495437622,
+        0.2059226930141449
+      ],
+      [
+        -0.017208850011229515,
+        -0.038050293922424316,
+        0.005037521943449974
+      ],
+      [
+        5.089071750640869,
+        -0.8539606928825378,
+        0.9951404929161072
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube134.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_93aa01d12b61a2d3.vmdl",
+    "id": "a_93aa01d12b61a2d3",
+    "positionCS2": [
+      -665.0055665735854,
+      2224.1259136512817,
+      199.43926139322411
+    ],
+    "origin": [
+      -665.0055665735854,
+      2224.1259136512817,
+      199.43926139322411
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.5139709115028381,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.5259050994725946e-05,
+    "bakeReason": "source shear needs exact baked model 0.998301871373925",
+    "localLinearMatrix": [
+      [
+        11.22933292388916,
+        -2.202296495437622,
+        -0.20592273771762848
+      ],
+      [
+        0.01720375381410122,
+        0.038051292300224304,
+        -0.005037427879869938
+      ],
+      [
+        5.089071750640869,
+        -0.8539607524871826,
+        0.9951404929161072
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube135.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_ef8f48555c90ef16.vmdl",
+    "id": "a_ef8f48555c90ef16",
+    "positionCS2": [
+      -903.1230146015005,
+      2022.098399999988,
+      110.4524648187089
+    ],
+    "origin": [
+      -903.1230146015005,
+      2022.098399999988,
+      110.4524648187089
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.20307093858718872,
+    "windingReversed": false,
+    "maxLinearCheckError": 7.62939453125347e-06,
+    "bakeReason": "source shear needs exact baked model 0.9519818844866251",
+    "localLinearMatrix": [
+      [
+        4.318882942199707,
+        2.965381099784281e-06,
+        2.7789621353149414
+      ],
+      [
+        -3.4758520541799953e-06,
+        0.03999999910593033,
+        -2.2373769752448425e-06
+      ],
+      [
+        1.6779799461364746,
+        1.3242826071291347e-06,
+        2.2551703453063965
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube136.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_0380ce07225c1ab3.vmdl",
+    "id": "a_0380ce07225c1ab3",
+    "positionCS2": [
+      748.5342825419793,
+      2162.1159019887564,
+      50.113610231433995
+    ],
+    "origin": [
+      748.5342825419793,
+      2162.1159019887564,
+      50.113610231433995
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.33631303906440735,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.52587890625e-05,
+    "bakeReason": "source shear needs exact baked model 0.971672779250606",
+    "localLinearMatrix": [
+      [
+        -5.374680995941162,
+        6.952646344871027e-06,
+        5.4768548011779785
+      ],
+      [
+        4.2919932639051694e-06,
+        -0.03999999910593033,
+        -4.3687350625987165e-06
+      ],
+      [
+        -1.6043174266815186,
+        3.1942665827955352e-06,
+        3.199155330657959
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube137.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_31f1954acb4f8ab6.vmdl",
+    "id": "a_31f1954acb4f8ab6",
+    "positionCS2": [
+      548.3519534469233,
+      2162.115889905428,
+      110.45246768553898
+    ],
+    "origin": [
+      548.3519534469233,
+      2162.115889905428,
+      110.45246768553898
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.1670430600643158,
+    "windingReversed": false,
+    "maxLinearCheckError": 7.629394531263878e-06,
+    "bakeReason": "source shear needs exact baked model 0.951981900954149",
+    "localLinearMatrix": [
+      [
+        -3.552647590637207,
+        4.245657692081295e-06,
+        2.7789628505706787
+      ],
+      [
+        2.8427680263121147e-06,
+        -0.03999999910593033,
+        -2.2186486603459343e-06
+      ],
+      [
+        -1.3802809715270996,
+        2.0277482235542266e-06,
+        2.2551705837249756
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube138.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_d2254a52afbd5df7.vmdl",
+    "id": "a_d2254a52afbd5df7",
+    "positionCS2": [
+      284.7644087918452,
+      2224.8908999270643,
+      203.23118369003078
+    ],
+    "origin": [
+      284.7644087918452,
+      2224.8908999270643,
+      203.23118369003078
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.5139709711074829,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.52588181663027e-05,
+    "bakeReason": "source shear needs exact baked model 0.9964166531485769",
+    "localLinearMatrix": [
+      [
+        -7.798630237579346,
+        -2.18691349029541,
+        5.297185897827148
+      ],
+      [
+        0.017166001722216606,
+        -0.03807555511593819,
+        -0.004907570313662291
+      ],
+      [
+        -2.3037071228027344,
+        -0.8479835987091064,
+        3.133218288421631
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube139.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_beb22a72770ff887.vmdl",
+    "id": "a_beb22a72770ff887",
+    "positionCS2": [
+      239.69695608972688,
+      2085.1996465094853,
+      203.34095013071692
+    ],
+    "origin": [
+      239.69695608972688,
+      2085.1996465094853,
+      203.34095013071692
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.5139709711074829,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.52588181663027e-05,
+    "bakeReason": "source shear needs exact baked model 0.9964166531485769",
+    "localLinearMatrix": [
+      [
+        -7.798630237579346,
+        -2.18691349029541,
+        5.297185897827148
+      ],
+      [
+        0.017166001722216606,
+        -0.03807555511593819,
+        -0.004907570313662291
+      ],
+      [
+        -2.3037071228027344,
+        -0.8479835987091064,
+        3.133218288421631
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube13_32.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_f9781ee274323668.vmdl",
+    "id": "a_f9781ee274323668",
+    "positionCS2": [
+      9566.054874907219,
+      3740.6916431786667,
+      519.5903142857469
+    ],
+    "origin": [
+      9566.054874907219,
+      3740.6916431786667,
+      519.5903142857469
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 3.605846881866455,
+    "windingReversed": false,
+    "maxLinearCheckError": 5.963374150388733e-08,
+    "bakeReason": "source shear needs exact baked model 0.9834498892567206",
+    "localLinearMatrix": [
+      [
+        -0.011635884642601013,
+        -0.035343971103429794,
+        2.9170048492233036e-06
+      ],
+      [
+        0.0002542304282542318,
+        0.001297373091802001,
+        51.20357894897461
+      ],
+      [
+        -1.92705237865448,
+        0.19870389997959137,
+        -6.506655154225882e-06
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube14.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_5c70e4de661589c6.vmdl",
+    "id": "a_5c70e4de661589c6",
+    "positionCS2": [
+      9566.189884727995,
+      5503.049052697781,
+      519.5980526957565
+    ],
+    "origin": [
+      9566.189884727995,
+      5503.049052697781,
+      519.5980526957565
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 3.605846881866455,
+    "windingReversed": false,
+    "maxLinearCheckError": 5.96119202889698e-08,
+    "bakeReason": "source shear needs exact baked model 0.9834669464552457",
+    "localLinearMatrix": [
+      [
+        0.011635884642601013,
+        -0.035343971103429794,
+        -1.2852984809796908e-06
+      ],
+      [
+        -0.0002700996119529009,
+        0.0005553519004024565,
+        -51.20357894897461
+      ],
+      [
+        1.92705237865448,
+        0.19870389997959137,
+        -3.284311560491915e-06
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube140.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_2163731ff84dfe1b.vmdl",
+    "id": "a_2163731ff84dfe1b",
+    "positionCS2": [
+      748.5342513210198,
+      2020.1521498287038,
+      50.11364760921788
+    ],
+    "origin": [
+      748.5342513210198,
+      2020.1521498287038,
+      50.11364760921788
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.33631303906440735,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.52587890625e-05,
+    "bakeReason": "source shear needs exact baked model 0.971672779250606",
+    "localLinearMatrix": [
+      [
+        -5.374680995941162,
+        6.952646344871027e-06,
+        5.4768548011779785
+      ],
+      [
+        4.2919932639051694e-06,
+        -0.03999999910593033,
+        -4.3687350625987165e-06
+      ],
+      [
+        -1.6043174266815186,
+        3.1942665827955352e-06,
+        3.199155330657959
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube141.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_c2c2347312c2cb5f.vmdl",
+    "id": "a_c2c2347312c2cb5f",
+    "positionCS2": [
+      528.3494241162552,
+      2020.152149772417,
+      110.4524126350716
+    ],
+    "origin": [
+      528.3494241162552,
+      2020.152149772417,
+      110.4524126350716
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.20307093858718872,
+    "windingReversed": false,
+    "maxLinearCheckError": 7.864199877964214e-06,
+    "bakeReason": "source shear needs exact baked model 0.9519819009541489",
+    "localLinearMatrix": [
+      [
+        -4.318882465362549,
+        4.245657692081295e-06,
+        2.7789628505706787
+      ],
+      [
+        3.4558959214336937e-06,
+        -0.03999999910593033,
+        -2.2186486603459343e-06
+      ],
+      [
+        -1.677979826927185,
+        2.0277482235542266e-06,
+        2.2551705837249756
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube142.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_062c1ed3257c9d90.vmdl",
+    "id": "a_062c1ed3257c9d90",
+    "positionCS2": [
+      -619.3530235552171,
+      2085.0759057990217,
+      199.56933244223728
+    ],
+    "origin": [
+      -619.3530235552171,
+      2085.0759057990217,
+      199.56933244223728
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.5139709115028381,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.5259050994725946e-05,
+    "bakeReason": "source shear needs exact baked model 0.998301871373925",
+    "localLinearMatrix": [
+      [
+        11.22933292388916,
+        -2.202296495437622,
+        -0.20592273771762848
+      ],
+      [
+        0.01720375381410122,
+        0.038051292300224304,
+        -0.005037427879869938
+      ],
+      [
+        5.089071750640869,
+        -0.8539607524871826,
+        0.9951404929161072
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube146.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_80ca5a9286d3f952.vmdl",
+    "id": "a_80ca5a9286d3f952",
+    "positionCS2": [
+      6006.712450173189,
+      2202.6487104835105,
+      439.0424522040739
+    ],
+    "origin": [
+      6006.712450173189,
+      2202.6487104835105,
+      439.0424522040739
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 7.638888359069824,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.075599670410156e-05,
+    "bakeReason": "source shear needs exact baked model 0.00012142630611133562",
+    "localLinearMatrix": [
+      [
+        -6.691282880018747e-16,
+        3.013485908508301,
+        -1.6236559531535022e-05
+      ],
+      [
+        0.0,
+        1.0882894940777987e-07,
+        0.13367559015750885
+      ],
+      [
+        18.96308135986328,
+        0.0,
+        -1.0832169037612582e-14
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube147.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_3375e54a6e8becf8.vmdl",
+    "id": "a_3375e54a6e8becf8",
+    "positionCS2": [
+      8004.01505022007,
+      2202.6487104835105,
+      439.0424522040739
+    ],
+    "origin": [
+      8004.01505022007,
+      2202.6487104835105,
+      439.0424522040739
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 7.638888359069824,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.075599670410156e-05,
+    "bakeReason": "source shear needs exact baked model 0.00011768232840163511",
+    "localLinearMatrix": [
+      [
+        0.0,
+        3.013485908508301,
+        -1.5735933629912324e-05
+      ],
+      [
+        0.0,
+        1.0547339712729809e-07,
+        0.13367559015750885
+      ],
+      [
+        18.96308135986328,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube148.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_bce1943961c6244a.vmdl",
+    "id": "a_bce1943961c6244a",
+    "positionCS2": [
+      8004.01505022007,
+      2202.6487104835105,
+      480.23855383029877
+    ],
+    "origin": [
+      8004.01505022007,
+      2202.6487104835105,
+      480.23855383029877
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 7.638888835906982,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.075599670410156e-05,
+    "bakeReason": "source shear needs exact baked model 0.000191081426393402",
+    "localLinearMatrix": [
+      [
+        -3.013485908508301,
+        -4.815237389266258e-06,
+        8.118286132230423e-06
+      ],
+      [
+        5.441447470388994e-08,
+        2.72073243934301e-08,
+        0.13367559015750885
+      ],
+      [
+        -3.03010456264019e-05,
+        18.96308135986328,
+        -2.5543111405568197e-05
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube149.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_a79ce7c835e59672.vmdl",
+    "id": "a_a79ce7c835e59672",
+    "positionCS2": [
+      7005.98251892018,
+      3051.899999999994,
+      480.23855383029877
+    ],
+    "origin": [
+      7005.98251892018,
+      3051.899999999994,
+      480.23855383029877
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 9.03476619720459,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.051757812500022e-05,
+    "bakeReason": "source shear needs exact baked model 0.00019437805793292749",
+    "localLinearMatrix": [
+      [
+        2.1038101749581983e-06,
+        2.1038110844529e-06,
+        -9.1690034866333
+      ],
+      [
+        -0.051961999386548996,
+        -2.7676607672333375e-08,
+        -1.1037644753741915e-07
+      ],
+      [
+        -1.0100348845298868e-05,
+        18.96308135986328,
+        4.02809091610834e-05
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube15.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_dc42ebd72ce4191d.vmdl",
+    "id": "a_dc42ebd72ce4191d",
+    "positionCS2": [
+      9004.994978734816,
+      3740.6916431786667,
+      596.6106385697276
+    ],
+    "origin": [
+      9004.994978734816,
+      3740.6916431786667,
+      596.6106385697276
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 1.1699358224868774,
+    "windingReversed": false,
+    "maxLinearCheckError": 9.317772109982395e-10,
+    "bakeReason": "source shear needs exact baked model 0.330525161943328",
+    "localLinearMatrix": [
+      [
+        -0.0007449889671988785,
+        -0.011659767478704453,
+        -1.121823243011022e-05
+      ],
+      [
+        2.4571218091296032e-05,
+        -0.0016243838472291827,
+        51.20357894897461
+      ],
+      [
+        -1.9593560695648193,
+        0.004127732943743467,
+        4.911787527817069e-06
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube150.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_fa2c53739611ac07.vmdl",
+    "id": "a_fa2c53739611ac07",
+    "positionCS2": [
+      6006.712450173189,
+      2202.6487104835105,
+      480.23855383029877
+    ],
+    "origin": [
+      6006.712450173189,
+      2202.6487104835105,
+      480.23855383029877
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 7.638888835906982,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.075599670410156e-05,
+    "bakeReason": "source shear needs exact baked model 0.0007643254367784328",
+    "localLinearMatrix": [
+      [
+        3.013485908508301,
+        2.6263054773469074e-13,
+        3.225914610993641e-07
+      ],
+      [
+        -2.162237056069216e-09,
+        1.0882894940777987e-07,
+        0.13367559015750885
+      ],
+      [
+        0.0,
+        -18.96308135986328,
+        0.00010217244562227279
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube151.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_f1dcaa1262db41ea.vmdl",
+    "id": "a_f1dcaa1262db41ea",
+    "positionCS2": [
+      7005.98251892018,
+      1364.456185811985,
+      480.23855383029877
+    ],
+    "origin": [
+      7005.98251892018,
+      1364.456185811985,
+      480.23855383029877
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 9.03476619720459,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.051757812500022e-05,
+    "bakeReason": "source shear needs exact baked model 0.0003887561005486395",
+    "localLinearMatrix": [
+      [
+        2.1038101749581983e-06,
+        -1.0519072475290159e-06,
+        -9.1690034866333
+      ],
+      [
+        0.051961999386548996,
+        -5.535325442451722e-08,
+        1.1037644753741915e-07
+      ],
+      [
+        -2.0200697690597735e-05,
+        -18.96308135986328,
+        2.01404545805417e-05
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube16.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_6147166cc5d36297.vmdl",
+    "id": "a_6147166cc5d36297",
+    "positionCS2": [
+      9005.129988555593,
+      5503.049052697781,
+      596.618355817267
+    ],
+    "origin": [
+      9005.129988555593,
+      5503.049052697781,
+      596.618355817267
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 1.1699358224868774,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.814697379422858e-06,
+    "bakeReason": "source shear needs exact baked model 0.3278258942745938",
+    "localLinearMatrix": [
+      [
+        0.0007313429960049689,
+        -0.011659796349704266,
+        -2.0218935787852388e-06
+      ],
+      [
+        -1.525637253507739e-05,
+        0.0002927256573457271,
+        -51.20357894897461
+      ],
+      [
+        1.9593608379364014,
+        0.004052125383168459,
+        1.187927836099334e-07
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube17_107.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_aeaf945e3681d27f.vmdl",
+    "id": "a_aeaf945e3681d27f",
+    "positionCS2": [
+      7179.7184480683645,
+      8502.636532399949,
+      131.7593292206402
+    ],
+    "origin": [
+      7179.7184480683645,
+      8502.636532399949,
+      131.7593292206402
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 1.1326080560684204,
+    "windingReversed": false,
+    "maxLinearCheckError": 0.001953125,
+    "bakeReason": "recompose failed 1121.4307384664517",
+    "localLinearMatrix": [
+      [
+        3.269177595299766e-09,
+        1.9837603758787736e-05,
+        -1.824178695678711
+      ],
+      [
+        -2.2533718890827004e-08,
+        1147.0264892578125,
+        3.212968067600741e-06
+      ],
+      [
+        0.0005413009785115719,
+        3.915607464932691e-07,
+        9.200733508407666e-09
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube22.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_c798fe20d5211d89.vmdl",
+    "id": "a_c798fe20d5211d89",
+    "positionCS2": [
+      8036.810996760323,
+      2226.0383999999904,
+      924.4885704069893
+    ],
+    "origin": [
+      8036.810996760323,
+      2226.0383999999904,
+      924.4885704069893
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 7.587671756744385,
+    "windingReversed": false,
+    "maxLinearCheckError": 7.62939453125e-06,
+    "bakeReason": "source shear needs exact baked model 0.0007335568826729454",
+    "localLinearMatrix": [
+      [
+        -1.0242917141059425e-17,
+        2.495873019370265e-08,
+        0.024577436968684196
+      ],
+      [
+        0.0,
+        62.542972564697266,
+        -1.8028962585958652e-05
+      ],
+      [
+        -4.9362077713012695,
+        0.0,
+        -5.839649485069672e-16
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube23.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_d301f4f82a44d68b.vmdl",
+    "id": "a_d301f4f82a44d68b",
+    "positionCS2": [
+      10069.32592249199,
+      2226.0383999999904,
+      924.4885704069893
+    ],
+    "origin": [
+      10069.32592249199,
+      2226.0383999999904,
+      924.4885704069893
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 7.587671756744385,
+    "windingReversed": false,
+    "maxLinearCheckError": 7.62939453125e-06,
+    "bakeReason": "source shear needs exact baked model 0.0007335568826729454",
+    "localLinearMatrix": [
+      [
+        -1.0242917141059425e-17,
+        2.495873019370265e-08,
+        0.024577436968684196
+      ],
+      [
+        0.0,
+        62.542972564697266,
+        -1.8028962585958652e-05
+      ],
+      [
+        -4.9362077713012695,
+        0.0,
+        -5.839649485069672e-16
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube24.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_857f7e97ca00f5dc.vmdl",
+    "id": "a_857f7e97ca00f5dc",
+    "positionCS2": [
+      9053.900977607991,
+      3302.3034185215656,
+      924.4885704069893
+    ],
+    "origin": [
+      9053.900977607991,
+      3302.3034185215656,
+      924.4885704069893
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 7.277738571166992,
+    "windingReversed": false,
+    "maxLinearCheckError": 7.629394531472045e-06,
+    "bakeReason": "source shear needs exact baked model 0.0007808831048095393",
+    "localLinearMatrix": [
+      [
+        -1.0242917141059425e-17,
+        -0.044245727360248566,
+        1.4155586924857744e-08
+      ],
+      [
+        0.0,
+        3.455076875980012e-05,
+        33.32204818725586
+      ],
+      [
+        -4.9362077713012695,
+        0.0,
+        -5.839649485069672e-16
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube25.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_4dfd0e08eef64d55.vmdl",
+    "id": "a_4dfd0e08eef64d55",
+    "positionCS2": [
+      9053.900977607991,
+      1147.332141496212,
+      924.4885704069893
+    ],
+    "origin": [
+      9053.900977607991,
+      1147.332141496212,
+      924.4885704069893
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 7.277738571166992,
+    "windingReversed": false,
+    "maxLinearCheckError": 7.629394531472045e-06,
+    "bakeReason": "source shear needs exact baked model 0.0007808831048095393",
+    "localLinearMatrix": [
+      [
+        -1.0242917141059425e-17,
+        -0.044245727360248566,
+        -1.4155586924857744e-08
+      ],
+      [
+        0.0,
+        3.455076875980012e-05,
+        -33.32204818725586
+      ],
+      [
+        4.9362077713012695,
+        0.0,
+        -5.839649485069672e-16
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube3.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_eabf85818f3545b4.vmdl",
+    "id": "a_eabf85818f3545b4",
+    "positionCS2": [
+      10032.569982802786,
+      4631.061599999986,
+      434.4095368449789
+    ],
+    "origin": [
+      10032.569982802786,
+      4631.061599999986,
+      434.4095368449789
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 6.443052291870117,
+    "windingReversed": false,
+    "maxLinearCheckError": 6.115436553955078e-05,
+    "bakeReason": "source shear needs exact baked model 0.980573734096977",
+    "localLinearMatrix": [
+      [
+        0.010680853389203548,
+        0.0,
+        -0.06332240253686905
+      ],
+      [
+        0.0,
+        51.203529357910156,
+        0.0
+      ],
+      [
+        1.932194471359253,
+        0.0,
+        0.3259100019931793
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube4.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_3eb0134513b57a74.vmdl",
+    "id": "a_3eb0134513b57a74",
+    "positionCS2": [
+      7969.5899991960905,
+      4631.061599999986,
+      432.16867812510736
+    ],
+    "origin": [
+      7969.5899991960905,
+      4631.061599999986,
+      432.16867812510736
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 6.443051815032959,
+    "windingReversed": false,
+    "maxLinearCheckError": 6.103701886672839e-05,
+    "bakeReason": "source shear needs exact baked model 0.9751669162104415",
+    "localLinearMatrix": [
+      [
+        0.00937704462558031,
+        0.0,
+        0.06352856010198593
+      ],
+      [
+        0.0,
+        51.203529357910156,
+        0.0
+      ],
+      [
+        -1.938485026359558,
+        0.0,
+        0.2861262261867523
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube42_67.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_2f32373f3bcf07a3.vmdl",
+    "id": "a_2f32373f3bcf07a3",
+    "positionCS2": [
+      -5493.482647200028,
+      4746.905585186585,
+      141.3169200000002
+    ],
+    "origin": [
+      -5493.482647200028,
+      4746.905585186585,
+      141.3169200000002
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 2.1535568237304688,
+    "windingReversed": false,
+    "maxLinearCheckError": 4.76837158203125e-07,
+    "bakeReason": "source shear needs exact baked model 0.999957681173048",
+    "localLinearMatrix": [
+      [
+        0.12652674317359924,
+        -0.04185302555561066,
+        0.0
+      ],
+      [
+        16.350643157958984,
+        28.632600784301758,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.5
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube45.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_00766082b1ed47fc.vmdl",
+    "id": "a_00766082b1ed47fc",
+    "positionCS2": [
+      2837.0791315075767,
+      3815.370903690433,
+      139.85856000000058
+    ],
+    "origin": [
+      2837.0791315075767,
+      3815.370903690433,
+      139.85856000000058
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.4457446038722992,
+    "windingReversed": false,
+    "maxLinearCheckError": 2.980232260973992e-08,
+    "bakeReason": "source shear needs exact baked model 0.0001864831499303781",
+    "localLinearMatrix": [
+      [
+        -3.1332428989117034e-06,
+        -53.01963806152344,
+        0.0
+      ],
+      [
+        0.016814321279525757,
+        7.394277417915873e-06,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.5
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube46.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_dc08e4ab0bf208ce.vmdl",
+    "id": "a_dc08e4ab0bf208ce",
+    "positionCS2": [
+      3008.483738912386,
+      3822.5034070962283,
+      139.85856000000058
+    ],
+    "origin": [
+      3008.483738912386,
+      3822.5034070962283,
+      139.85856000000058
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.25333547592163086,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.8189894035458565e-12,
+    "bakeReason": "source shear needs exact baked model 0.0005594493723375761",
+    "localLinearMatrix": [
+      [
+        -10.210614204406738,
+        -2.7767948267864995e-05,
+        0.0
+      ],
+      [
+        1.43067438784783e-06,
+        -0.04962198808789253,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.5
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube47.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_e5190fce3ec49ef1.vmdl",
+    "id": "a_e5190fce3ec49ef1",
+    "positionCS2": [
+      4214.731344195898,
+      3848.400902910769,
+      158.96246580000025
+    ],
+    "origin": [
+      4214.731344195898,
+      3848.400902910769,
+      158.96246580000025
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.6218303442001343,
+    "windingReversed": false,
+    "maxLinearCheckError": 2.9802322387695312e-08,
+    "bakeReason": "source shear needs exact baked model 0.00018648314981175413",
+    "localLinearMatrix": [
+      [
+        4.3709901547117624e-06,
+        53.01963806152344,
+        0.0
+      ],
+      [
+        -0.023456605151295662,
+        -7.394277417915873e-06,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.5
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube5.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_3f77c414f2b1a7e5.vmdl",
+    "id": "a_3f77c414f2b1a7e5",
+    "positionCS2": [
+      8445.464970389614,
+      3713.837883443397,
+      483.2999224618743
+    ],
+    "origin": [
+      8445.464970389614,
+      3713.837883443397,
+      483.2999224618743
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 3.605846881866455,
+    "windingReversed": false,
+    "maxLinearCheckError": 6.115436553955078e-05,
+    "bakeReason": "source shear needs exact baked model 0.9828381881195104",
+    "localLinearMatrix": [
+      [
+        1.2328778211667668e-06,
+        -0.035367269068956375,
+        -0.011407589539885521
+      ],
+      [
+        51.203678131103516,
+        0.0005414055776782334,
+        0.00017462849791627377
+      ],
+      [
+        0.0,
+        -0.19480575621128082,
+        1.928318977355957
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube6.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_6c6e6a55ce1711da.vmdl",
+    "id": "a_6c6e6a55ce1711da",
+    "positionCS2": [
+      8445.644991190056,
+      5530.521582279936,
+      483.32593819215344
+    ],
+    "origin": [
+      8445.644991190056,
+      5530.521582279936,
+      483.32593819215344
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 3.605846881866455,
+    "windingReversed": false,
+    "maxLinearCheckError": 6.115436553955078e-05,
+    "bakeReason": "source shear needs exact baked model 0.9828381881195104",
+    "localLinearMatrix": [
+      [
+        1.2328778211667668e-06,
+        -0.035367269068956375,
+        -0.011407589539885521
+      ],
+      [
+        51.203678131103516,
+        0.0005414055776782334,
+        0.00017462849791627377
+      ],
+      [
+        0.0,
+        -0.19480575621128082,
+        1.928318977355957
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube65.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_297b28f9ac0aafc0.vmdl",
+    "id": "a_297b28f9ac0aafc0",
+    "positionCS2": [
+      -8841.766520836798,
+      -1637.6287345896126,
+      -70.11998333969768
+    ],
+    "origin": [
+      -8841.766520836798,
+      -1637.6287345896126,
+      -70.11998333969768
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.6603430509567261,
+    "windingReversed": false,
+    "maxLinearCheckError": 4.672030911985737e-06,
+    "bakeReason": "source shear needs exact baked model 0.9963126090223036",
+    "localLinearMatrix": [
+      [
+        3.765395164489746,
+        -3.6639907360076904,
+        -1.0732909440994263
+      ],
+      [
+        1.340911865234375,
+        1.4318108558654785,
+        -0.2873728275299072
+      ],
+      [
+        -0.15995068848133087,
+        -0.7508513331413269,
+        0.0782599076628685
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube66.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_d7aa8bb8aa047cf7.vmdl",
+    "id": "a_d7aa8bb8aa047cf7",
+    "positionCS2": [
+      -8440.433997585409,
+      -1546.953767096711,
+      -70.00607869716623
+    ],
+    "origin": [
+      -8440.433997585409,
+      -1546.953767096711,
+      -70.00607869716623
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.6766478419303894,
+    "windingReversed": false,
+    "maxLinearCheckError": 8.58306884765625e-06,
+    "bakeReason": "source shear needs exact baked model 0.9963260428678246",
+    "localLinearMatrix": [
+      [
+        4.078742027282715,
+        2.6824755668640137,
+        1.0874173641204834
+      ],
+      [
+        0.41239964962005615,
+        2.860222101211548,
+        0.198942169547081
+      ],
+      [
+        0.1630730777978897,
+        -0.7515126466751099,
+        0.07803469151258469
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube7.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_9aa258fc272735c0.vmdl",
+    "id": "a_9aa258fc272735c0",
+    "positionCS2": [
+      9565.492503520043,
+      3713.837883443397,
+      489.5021840159234
+    ],
+    "origin": [
+      9565.492503520043,
+      3713.837883443397,
+      489.5021840159234
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 3.6058475971221924,
+    "windingReversed": false,
+    "maxLinearCheckError": 6.103562190951096e-05,
+    "bakeReason": "source shear needs exact baked model 0.9834590359977785",
+    "localLinearMatrix": [
+      [
+        2.1855560135009e-06,
+        -0.03534397855401039,
+        0.01163580920547247
+      ],
+      [
+        51.203678131103516,
+        0.0009646635735407472,
+        -0.00026211945805698633
+      ],
+      [
+        -2.087372877213056e-06,
+        0.19870302081108093,
+        1.927048921585083
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube75_208.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_bb25504df3637af8.vmdl",
+    "id": "a_bb25504df3637af8",
+    "positionCS2": [
+      -2289.451514982007,
+      1950.372000000003,
+      86.9485570447323
+    ],
+    "origin": [
+      -2289.451514982007,
+      1950.372000000003,
+      86.9485570447323
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.9638302326202393,
+    "windingReversed": false,
+    "maxLinearCheckError": 9.5367431640625e-07,
+    "bakeReason": "source shear needs exact baked model 0.836937534635045",
+    "localLinearMatrix": [
+      [
+        15.330151557922363,
+        0.0,
+        -0.3937845826148987
+      ],
+      [
+        0.0,
+        0.24815651774406433,
+        0.0
+      ],
+      [
+        0.40055742859840393,
+        0.0,
+        0.24306528270244598
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube76.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_c048876d715928c1.vmdl",
+    "id": "a_c048876d715928c1",
+    "positionCS2": [
+      1699.1686239436385,
+      1950.372000000003,
+      86.9485570447323
+    ],
+    "origin": [
+      1699.1686239436385,
+      1950.372000000003,
+      86.9485570447323
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.9638302326202393,
+    "windingReversed": false,
+    "maxLinearCheckError": 9.5367431640625e-07,
+    "bakeReason": "source shear needs exact baked model 0.836937534634948",
+    "localLinearMatrix": [
+      [
+        -15.330151557922363,
+        -1.7052252587745897e-06,
+        0.3937845826148987
+      ],
+      [
+        1.6989675941658788e-06,
+        -0.24815651774406433,
+        -4.364127192957312e-08
+      ],
+      [
+        0.40055742859840393,
+        3.2843241657049826e-24,
+        0.24306528270244598
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube79.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_57e739c703e60b94.vmdl",
+    "id": "a_57e739c703e60b94",
+    "positionCS2": [
+      -2289.451514982007,
+      1554.8445008546696,
+      86.9485570447323
+    ],
+    "origin": [
+      -2289.451514982007,
+      1554.8445008546696,
+      86.9485570447323
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.9638302326202393,
+    "windingReversed": false,
+    "maxLinearCheckError": 9.5367431640625e-07,
+    "bakeReason": "source shear needs exact baked model 0.836937534635045",
+    "localLinearMatrix": [
+      [
+        15.330151557922363,
+        0.0,
+        -0.3937845826148987
+      ],
+      [
+        0.0,
+        0.24815651774406433,
+        0.0
+      ],
+      [
+        0.40055742859840393,
+        0.0,
+        0.24306528270244598
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube8.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_15d54292a377bcaa.vmdl",
+    "id": "a_15d54292a377bcaa",
+    "positionCS2": [
+      9565.672408729908,
+      5530.521582279936,
+      489.5281997462007
+    ],
+    "origin": [
+      9565.672408729908,
+      5530.521582279936,
+      489.5281997462007
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 3.6058475971221924,
+    "windingReversed": false,
+    "maxLinearCheckError": 6.103562190951096e-05,
+    "bakeReason": "source shear needs exact baked model 0.9834590359977785",
+    "localLinearMatrix": [
+      [
+        2.1855560135009e-06,
+        -0.03534397855401039,
+        0.01163580920547247
+      ],
+      [
+        51.203678131103516,
+        0.0009646635735407472,
+        -0.00026211945805698633
+      ],
+      [
+        -2.087372877213056e-06,
+        0.19870302081108093,
+        1.927048921585083
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube81.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_23f14157ac3a23d7.vmdl",
+    "id": "a_23f14157ac3a23d7",
+    "positionCS2": [
+      1699.1686239436385,
+      1554.8445008546696,
+      86.9485570447323
+    ],
+    "origin": [
+      1699.1686239436385,
+      1554.8445008546696,
+      86.9485570447323
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.9638302326202393,
+    "windingReversed": false,
+    "maxLinearCheckError": 9.5367431640625e-07,
+    "bakeReason": "source shear needs exact baked model 0.836937534634948",
+    "localLinearMatrix": [
+      [
+        -15.330151557922363,
+        -1.7052252587745897e-06,
+        0.3937845826148987
+      ],
+      [
+        1.6989675941658788e-06,
+        -0.24815651774406433,
+        -4.364127192957312e-08
+      ],
+      [
+        0.40055742859840393,
+        3.2843241657049826e-24,
+        0.24306528270244598
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube9.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_f54f8162c617d803.vmdl",
+    "id": "a_f54f8162c617d803",
+    "positionCS2": [
+      9004.432445520855,
+      3713.837883443397,
+      566.5225012457468
+    ],
+    "origin": [
+      9004.432445520855,
+      3713.837883443397,
+      566.5225012457468
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 1.1699358224868774,
+    "windingReversed": false,
+    "maxLinearCheckError": 6.103515625000011e-05,
+    "bakeReason": "source shear needs exact baked model 0.3276179647141369",
+    "localLinearMatrix": [
+      [
+        2.1855560135009e-06,
+        -0.01165979728102684,
+        0.0007308608037419617
+      ],
+      [
+        51.203678131103516,
+        0.00031641285750083625,
+        -1.98334291781066e-05
+      ],
+      [
+        0.0,
+        0.004049461334943771,
+        1.9593571424484253
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube91.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_cb538fbe87b24895.vmdl",
+    "id": "a_cb538fbe87b24895",
+    "positionCS2": [
+      -1278.5184000000008,
+      875.2946279060561,
+      853.3053921319915
+    ],
+    "origin": [
+      -1278.5184000000008,
+      875.2946279060561,
+      853.3053921319915
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 54.051963806152344,
+    "windingReversed": false,
+    "maxLinearCheckError": 6.115427839819517e-05,
+    "bakeReason": "source shear needs exact baked model 0.9995756895872216",
+    "localLinearMatrix": [
+      [
+        -0.035093799233436584,
+        -0.3535539209842682,
+        0.0
+      ],
+      [
+        2.4091222286224365,
+        -24.27065086364746,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        31.729873657226562
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube94.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_1296f29d8e47d2d5.vmdl",
+    "id": "a_1296f29d8e47d2d5",
+    "positionCS2": [
+      -8130.756650097581,
+      4429.552438761195,
+      281.7007473846252
+    ],
+    "origin": [
+      -8130.756650097581,
+      4429.552438761195,
+      281.7007473846252
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.4250359833240509,
+    "windingReversed": false,
+    "maxLinearCheckError": 4.656621754853119e-10,
+    "bakeReason": "source shear needs exact baked model 0.8747482810805232",
+    "localLinearMatrix": [
+      [
+        12.779038429260254,
+        -6.210339620338345e-07,
+        -8.551982318749651e-05
+      ],
+      [
+        -1.605522629688494e-05,
+        0.03101859986782074,
+        1.948760747909546
+      ],
+      [
+        8.975879595141123e-09,
+        -0.00038832577411085367,
+        1.0478761196136475
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube95.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_7069b985c66d43f9.vmdl",
+    "id": "a_7069b985c66d43f9",
+    "positionCS2": [
+      -8286.299120586162,
+      4429.552379565779,
+      281.6972206763776
+    ],
+    "origin": [
+      -8286.299120586162,
+      4429.552379565779,
+      281.6972206763776
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.4250360429286957,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.814697267401357e-06,
+    "bakeReason": "source shear needs exact baked model 0.8747482810805233",
+    "localLinearMatrix": [
+      [
+        12.779038429260254,
+        -6.210339620338345e-07,
+        -8.551983046345413e-05
+      ],
+      [
+        -1.605522629688494e-05,
+        0.03101859986782074,
+        1.9487608671188354
+      ],
+      [
+        8.975879595141123e-09,
+        -0.00038832577411085367,
+        1.047876238822937
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube96.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_99335aa9a364dfd3.vmdl",
+    "id": "a_99335aa9a364dfd3",
+    "positionCS2": [
+      -8947.350036859483,
+      4516.974903761264,
+      275.51534417143284
+    ],
+    "origin": [
+      -8947.350036859483,
+      4516.974903761264,
+      275.51534417143284
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.4250359833240509,
+    "windingReversed": false,
+    "maxLinearCheckError": 4.656615093522912e-10,
+    "bakeReason": "source shear needs exact baked model 0.8747482811334104",
+    "localLinearMatrix": [
+      [
+        -7.0613104981021024e-06,
+        0.03101859986782074,
+        1.948760747909546
+      ],
+      [
+        -12.779038429260254,
+        2.836805208517035e-07,
+        1.7822383597376756e-05
+      ],
+      [
+        2.2838554319901375e-17,
+        -0.00038832577411085367,
+        1.0478761196136475
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube97.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_ad148c1228ff4ea3.vmdl",
+    "id": "a_ad148c1228ff4ea3",
+    "positionCS2": [
+      -8947.350022873434,
+      4672.517396267969,
+      275.5118115558007
+    ],
+    "origin": [
+      -8947.350022873434,
+      4672.517396267969,
+      275.5118115558007
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.4250360429286957,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.814697265625e-06,
+    "bakeReason": "source shear needs exact baked model 0.8747482811334103",
+    "localLinearMatrix": [
+      [
+        -7.0613104981021024e-06,
+        0.03101859986782074,
+        1.9487608671188354
+      ],
+      [
+        -12.779038429260254,
+        2.836805208517035e-07,
+        1.7822387235355563e-05
+      ],
+      [
+        2.2838554319901375e-17,
+        -0.00038832577411085367,
+        1.047876238822937
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube98.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_08fc85c12d66059f.vmdl",
+    "id": "a_08fc85c12d66059f",
+    "positionCS2": [
+      -8939.318395718146,
+      3777.603285434714,
+      228.7560527508249
+    ],
+    "origin": [
+      -8939.318395718146,
+      3777.603285434714,
+      228.7560527508249
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.42503589391708374,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.5266237824995157e-05,
+    "bakeReason": "source shear needs exact baked model 0.6543117443723493",
+    "localLinearMatrix": [
+      [
+        -1.141931024717519e-17,
+        0.00328235374763608,
+        0.3264204263687134
+      ],
+      [
+        -9.90826416015625,
+        -1.420434415527161e-16,
+        0.0
+      ],
+      [
+        0.0,
+        -0.002990016480907798,
+        12.771659851074219
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube99.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_f3eac733c17573bd.vmdl",
+    "id": "a_f3eac733c17573bd",
+    "positionCS2": [
+      -8939.318395718146,
+      3933.145789719216,
+      228.75254363736167
+    ],
+    "origin": [
+      -8939.318395718146,
+      3933.145789719216,
+      228.75254363736167
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.4250359535217285,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.52587890625e-05,
+    "bakeReason": "source shear needs exact baked model 0.6543117443723493",
+    "localLinearMatrix": [
+      [
+        -1.141931024717519e-17,
+        0.00328235374763608,
+        0.32642048597335815
+      ],
+      [
+        -9.90826416015625,
+        -1.420434415527161e-16,
+        0.0
+      ],
+      [
+        0.0,
+        -0.002990016480907798,
+        12.771661758422852
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube_90.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_d8c2d8aedf0e4443.vmdl",
+    "id": "a_d8c2d8aedf0e4443",
+    "positionCS2": [
+      8011.0174790581805,
+      -1420.5892061960476,
+      -39.26259641015986
+    ],
+    "origin": [
+      8011.0174790581805,
+      -1420.5892061960476,
+      -39.26259641015986
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.7448991537094116,
+    "windingReversed": false,
+    "maxLinearCheckError": 6.103518535382352e-05,
+    "bakeReason": "source shear needs exact baked model 0.9962110854911145",
+    "localLinearMatrix": [
+      [
+        -0.04775286465883255,
+        0.41347062587738037,
+        0.0
+      ],
+      [
+        -37.543853759765625,
+        4.667725086212158,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.04868499934673309
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_0.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_ef1579faac75f261.vmdl",
+    "id": "a_ef1579faac75f261",
+    "positionCS2": [
+      -8719.461344830313,
+      -637.750789922633,
+      -47.055599999999686
+    ],
+    "origin": [
+      -8719.461344830313,
+      -637.750789922633,
+      -47.055599999999686
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.07036583125591278,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.1920928955078125e-07,
+    "bakeReason": "source shear needs exact baked model 0.00010392825008787233",
+    "localLinearMatrix": [
+      [
+        -5.092184066772461,
+        -7.20481330063194e-06,
+        0.0
+      ],
+      [
+        1.7837739960668841e-06,
+        -0.06909199804067612,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_01_51.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_28317c9152d733b0.vmdl",
+    "id": "a_28317c9152d733b0",
+    "positionCS2": [
+      -9088.596315953619,
+      -637.7507930831925,
+      -47.055599999999686
+    ],
+    "origin": [
+      -9088.596315953619,
+      -637.7507930831925,
+      -47.055599999999686
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.05951680988073349,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.1920928955078125e-07,
+    "bakeReason": "source shear needs exact baked model 0.00010392825008787231",
+    "localLinearMatrix": [
+      [
+        -4.307069778442383,
+        -7.20481330063194e-06,
+        0.0
+      ],
+      [
+        1.508751211076742e-06,
+        -0.06909199804067612,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_1.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_90c58a7bbbed487b.vmdl",
+    "id": "a_90c58a7bbbed487b",
+    "positionCS2": [
+      -8429.12130928124,
+      -554.8045510044321,
+      -47.055599999999686
+    ],
+    "origin": [
+      -8429.12130928124,
+      -554.8045510044321,
+      -47.055599999999686
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.06486650556325912,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.0517578125e-05,
+    "bakeReason": "source shear needs exact baked model 0.00010144009699751698",
+    "localLinearMatrix": [
+      [
+        1.6329511254298268e-06,
+        20.07868003845215,
+        0.0
+      ],
+      [
+        -0.016153082251548767,
+        -6.9846646510995924e-06,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_33.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_ffb1b78398d462a9.vmdl",
+    "id": "a_ffb1b78398d462a9",
+    "positionCS2": [
+      -8429.12139198897,
+      -170.51592152318335,
+      -47.055599999999686
+    ],
+    "origin": [
+      -8429.12139198897,
+      -170.51592152318335,
+      -47.055599999999686
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.07590106874704361,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.051759267691176e-05,
+    "bakeReason": "source shear needs exact baked model 0.00010144009699751697",
+    "localLinearMatrix": [
+      [
+        1.9107355910819024e-06,
+        20.07868003845215,
+        0.0
+      ],
+      [
+        -0.018900912255048752,
+        -6.9846646510995924e-06,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_34.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_f9a42d71ba64e294.vmdl",
+    "id": "a_f9a42d71ba64e294",
+    "positionCS2": [
+      -8429.121469501319,
+      228.65641484392108,
+      -47.055599999999686
+    ],
+    "origin": [
+      -8429.121469501319,
+      228.65641484392108,
+      -47.055599999999686
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.07590106874704361,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.051759267691176e-05,
+    "bakeReason": "source shear needs exact baked model 0.00023331221786706993",
+    "localLinearMatrix": [
+      [
+        4.4032685764250346e-06,
+        20.07868003845215,
+        0.0
+      ],
+      [
+        -0.018900912255048752,
+        -6.953311640245374e-06,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_35.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_66097d90b710eb3e.vmdl",
+    "id": "a_66097d90b710eb3e",
+    "positionCS2": [
+      -8429.12133126732,
+      624.6676761363924,
+      -47.055599999999686
+    ],
+    "origin": [
+      -8429.12133126732,
+      624.6676761363924,
+      -47.055599999999686
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.07590106874704361,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.051759267691176e-05,
+    "bakeReason": "source shear needs exact baked model 0.00025360023570811707",
+    "localLinearMatrix": [
+      [
+        4.786735189554747e-06,
+        20.07868003845215,
+        0.0
+      ],
+      [
+        -0.018900912255048752,
+        -6.9484881350945216e-06,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_36.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_44cdee34aa90a5b3.vmdl",
+    "id": "a_44cdee34aa90a5b3",
+    "positionCS2": [
+      -8429.121409384476,
+      1022.1073509642738,
+      -47.055599999999686
+    ],
+    "origin": [
+      -8429.121409384476,
+      1022.1073509642738,
+      -47.055599999999686
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.07590106874704361,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.051759267691176e-05,
+    "bakeReason": "source shear needs exact baked model 0.00025360023570811707",
+    "localLinearMatrix": [
+      [
+        4.786735189554747e-06,
+        20.07868003845215,
+        0.0
+      ],
+      [
+        -0.018900912255048752,
+        -6.9484881350945216e-06,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_37.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_4e9b88752b7a92a6.vmdl",
+    "id": "a_4e9b88752b7a92a6",
+    "positionCS2": [
+      -8429.121344305488,
+      1415.6211271506618,
+      -47.055599999999686
+    ],
+    "origin": [
+      -8429.121344305488,
+      1415.6211271506618,
+      -47.055599999999686
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.07590106874704361,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.051759267691176e-05,
+    "bakeReason": "source shear needs exact baked model 0.00025360023570811707",
+    "localLinearMatrix": [
+      [
+        4.786735189554747e-06,
+        20.07868003845215,
+        0.0
+      ],
+      [
+        -0.018900912255048752,
+        -6.9484881350945216e-06,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_38.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_62a591f9ecf6e837.vmdl",
+    "id": "a_62a591f9ecf6e837",
+    "positionCS2": [
+      -8722.9714041017,
+      2098.934711804526,
+      146.55479040000046
+    ],
+    "origin": [
+      -8722.9714041017,
+      2098.934711804526,
+      146.55479040000046
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.14150217175483704,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.1920928955078125e-07,
+    "bakeReason": "source shear needs exact baked model 0.00010392825008787233",
+    "localLinearMatrix": [
+      [
+        -10.240127563476562,
+        -7.20481330063194e-06,
+        0.0
+      ],
+      [
+        3.587080527722719e-06,
+        -0.06909199804067612,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_39.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_5e53f384b05f7b74.vmdl",
+    "id": "a_5e53f384b05f7b74",
+    "positionCS2": [
+      -8087.369344794599,
+      2098.93498739996,
+      146.55479040000046
+    ],
+    "origin": [
+      -8087.369344794599,
+      2098.93498739996,
+      146.55479040000046
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.15676219761371613,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.5259254716682097e-05,
+    "bakeReason": "source shear needs exact baked model 0.00010392825008787233",
+    "localLinearMatrix": [
+      [
+        -11.344454765319824,
+        -7.20481330063194e-06,
+        0.0
+      ],
+      [
+        3.9739225030643865e-06,
+        -0.06909199804067612,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_40.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_d9f892f10c2a5f82.vmdl",
+    "id": "a_d9f892f10c2a5f82",
+    "positionCS2": [
+      -7606.00442803427,
+      2098.9350681031065,
+      146.55479040000046
+    ],
+    "origin": [
+      -7606.00442803427,
+      2098.9350681031065,
+      146.55479040000046
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.14150217175483704,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.1920928955078125e-07,
+    "bakeReason": "source shear needs exact baked model 0.00010392825008787233",
+    "localLinearMatrix": [
+      [
+        -10.240127563476562,
+        -7.20481330063194e-06,
+        0.0
+      ],
+      [
+        3.587080527722719e-06,
+        -0.06909199804067612,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_41.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_8321a8e9a7b35c95.vmdl",
+    "id": "a_8321a8e9a7b35c95",
+    "positionCS2": [
+      -7329.614285883348,
+      1916.7634945511527,
+      147.78666720000092
+    ],
+    "origin": [
+      -7329.614285883348,
+      1916.7634945511527,
+      147.78666720000092
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.07075107842683792,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.051757812500347e-05,
+    "bakeReason": "source shear needs exact baked model 0.00015216014438862075",
+    "localLinearMatrix": [
+      [
+        2.68700910055486e-06,
+        -20.07868003845215,
+        0.0
+      ],
+      [
+        0.017618460580706596,
+        7.044958238111576e-06,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_42.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_0730387c63e10b2b.vmdl",
+    "id": "a_0730387c63e10b2b",
+    "positionCS2": [
+      -7241.931620534131,
+      1826.842409251316,
+      147.78666720000092
+    ],
+    "origin": [
+      -7241.931620534131,
+      1826.842409251316,
+      147.78666720000092
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.07075108587741852,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.1920928955078125e-07,
+    "bakeReason": "source shear needs exact baked model 0.0001732137163607131",
+    "localLinearMatrix": [
+      [
+        -5.120063781738281,
+        -1.1991941391897853e-05,
+        0.0
+      ],
+      [
+        1.7977407651414978e-06,
+        -0.06909199804067612,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_43.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_1a307171cd504ecb.vmdl",
+    "id": "a_1a307171cd504ecb",
+    "positionCS2": [
+      -8840.37636622411,
+      2601.573000327422,
+      146.7523656000003
+    ],
+    "origin": [
+      -8840.37636622411,
+      2601.573000327422,
+      146.7523656000003
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.07075108587741852,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.1920928955078125e-07,
+    "bakeReason": "source shear needs exact baked model 0.0001732137163607131",
+    "localLinearMatrix": [
+      [
+        -5.120063781738281,
+        -1.1991941391897853e-05,
+        0.0
+      ],
+      [
+        1.7977407651414978e-06,
+        -0.06909199804067612,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_44.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_10893e14a145cd83.vmdl",
+    "id": "a_10893e14a145cd83",
+    "positionCS2": [
+      -8471.17388254052,
+      2601.5728714514407,
+      146.7523656000003
+    ],
+    "origin": [
+      -8471.17388254052,
+      2601.5728714514407,
+      146.7523656000003
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.07075108587741852,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.1920928955078125e-07,
+    "bakeReason": "source shear needs exact baked model 0.0001732137163607131",
+    "localLinearMatrix": [
+      [
+        -5.120063781738281,
+        -1.1991941391897853e-05,
+        0.0
+      ],
+      [
+        1.7977407651414978e-06,
+        -0.06909199804067612,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_45.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_60835587035a2488.vmdl",
+    "id": "a_60835587035a2488",
+    "positionCS2": [
+      -8102.916863834806,
+      2601.5731160023133,
+      146.7523656000003
+    ],
+    "origin": [
+      -8102.916863834806,
+      2601.5731160023133,
+      146.7523656000003
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.07102853804826736,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.1920928955078125e-07,
+    "bakeReason": "source shear needs exact baked model 0.0001732137163607131",
+    "localLinearMatrix": [
+      [
+        -5.140142440795898,
+        -1.1991941391897853e-05,
+        0.0
+      ],
+      [
+        1.8047908270091284e-06,
+        -0.06909199804067612,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_46.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_31a393253a0b689b.vmdl",
+    "id": "a_31a393253a0b689b",
+    "positionCS2": [
+      -7734.0292460107885,
+      2601.572987236228,
+      146.7523656000003
+    ],
+    "origin": [
+      -7734.0292460107885,
+      2601.572987236228,
+      146.7523656000003
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.07102853804826736,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.1920928955078125e-07,
+    "bakeReason": "source shear needs exact baked model 0.0001732137163607131",
+    "localLinearMatrix": [
+      [
+        -5.140142440795898,
+        -1.1991941391897853e-05,
+        0.0
+      ],
+      [
+        1.8047908270091284e-06,
+        -0.06909199804067612,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_47.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_ca10b207468bb1a8.vmdl",
+    "id": "a_ca10b207468bb1a8",
+    "positionCS2": [
+      -7546.0417585975665,
+      2785.4876313050336,
+      146.7523656000003
+    ],
+    "origin": [
+      -7546.0417585975665,
+      2785.4876313050336,
+      146.7523656000003
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.07102853059768677,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.051759267691176e-05,
+    "bakeReason": "source shear needs exact baked model 0.00010144009699751697",
+    "localLinearMatrix": [
+      [
+        1.7880740870168665e-06,
+        20.07868003845215,
+        0.0
+      ],
+      [
+        -0.01768755167722702,
+        -6.9846646510995924e-06,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_48.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_e040c03cc4f311aa.vmdl",
+    "id": "a_e040c03cc4f311aa",
+    "positionCS2": [
+      -7546.041991067148,
+      3154.89276283473,
+      146.7523656000003
+    ],
+    "origin": [
+      -7546.041991067148,
+      3154.89276283473,
+      146.7523656000003
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.07102853059768677,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.051759267691176e-05,
+    "bakeReason": "source shear needs exact baked model 0.00025360023570811707",
+    "localLinearMatrix": [
+      [
+        4.479446488403482e-06,
+        20.07868003845215,
+        0.0
+      ],
+      [
+        -0.01768755167722702,
+        -6.9484881350945216e-06,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_49.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_d7e940ba5ef03d47.vmdl",
+    "id": "a_d7e940ba5ef03d47",
+    "positionCS2": [
+      -7546.041862579907,
+      3522.9816088539083,
+      146.7523656000003
+    ],
+    "origin": [
+      -7546.041862579907,
+      3522.9816088539083,
+      146.7523656000003
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.07102853059768677,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.051759267691176e-05,
+    "bakeReason": "source shear needs exact baked model 0.00025360023570811707",
+    "localLinearMatrix": [
+      [
+        4.479446488403482e-06,
+        20.07868003845215,
+        0.0
+      ],
+      [
+        -0.01768755167722702,
+        -6.9484881350945216e-06,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_50.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_7bb77dbc98323c98.vmdl",
+    "id": "a_7bb77dbc98323c98",
+    "positionCS2": [
+      -6973.8442640612775,
+      2767.229069103225,
+      151.48791360000087
+    ],
+    "origin": [
+      -6973.8442640612775,
+      2767.229069103225,
+      151.48791360000087
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.1553748995065689,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.051757812500347e-05,
+    "bakeReason": "source shear needs exact baked model 0.00025360023570811707",
+    "localLinearMatrix": [
+      [
+        9.798787687032018e-06,
+        20.07868003845215,
+        0.0
+      ],
+      [
+        -0.03869151696562767,
+        -6.9484881350945216e-06,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_51.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_b4b6ea7f36674ceb.vmdl",
+    "id": "a_b4b6ea7f36674ceb",
+    "positionCS2": [
+      -6861.09742895246,
+      3572.3691881039995,
+      154.30674240000099
+    ],
+    "origin": [
+      -6861.09742895246,
+      3572.3691881039995,
+      154.30674240000099
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.08323656022548676,
+    "windingReversed": false,
+    "maxLinearCheckError": 7.630325796988134e-06,
+    "bakeReason": "source shear needs exact baked model 0.0003117847469369638",
+    "localLinearMatrix": [
+      [
+        -6.023603916168213,
+        2.1517969798878767e-05,
+        0.0
+      ],
+      [
+        2.0803963707294315e-06,
+        -0.06909199804067612,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_52.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_16f988ceafd66334.vmdl",
+    "id": "a_16f988ceafd66334",
+    "positionCS2": [
+      -8722.9714041017,
+      2098.934711804526,
+      113.52619440000035
+    ],
+    "origin": [
+      -8722.9714041017,
+      2098.934711804526,
+      113.52619440000035
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.14150217175483704,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.1920928955078125e-07,
+    "bakeReason": "source shear needs exact baked model 0.00010392825008787233",
+    "localLinearMatrix": [
+      [
+        -10.240127563476562,
+        -7.20481330063194e-06,
+        0.0
+      ],
+      [
+        3.587080527722719e-06,
+        -0.06909199804067612,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_53.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_c69a2f19fd2cac97.vmdl",
+    "id": "a_c69a2f19fd2cac97",
+    "positionCS2": [
+      -8087.369344794599,
+      2098.93498739996,
+      113.52619440000035
+    ],
+    "origin": [
+      -8087.369344794599,
+      2098.93498739996,
+      113.52619440000035
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.15676219761371613,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.5259254716682097e-05,
+    "bakeReason": "source shear needs exact baked model 0.00010392825008787233",
+    "localLinearMatrix": [
+      [
+        -11.344454765319824,
+        -7.20481330063194e-06,
+        0.0
+      ],
+      [
+        3.9739225030643865e-06,
+        -0.06909199804067612,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_54.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_75de3b1de31980a8.vmdl",
+    "id": "a_75de3b1de31980a8",
+    "positionCS2": [
+      -7606.00442803427,
+      2098.9350681031065,
+      113.52619440000035
+    ],
+    "origin": [
+      -7606.00442803427,
+      2098.9350681031065,
+      113.52619440000035
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.14150217175483704,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.1920928955078125e-07,
+    "bakeReason": "source shear needs exact baked model 0.00010392825008787233",
+    "localLinearMatrix": [
+      [
+        -10.240127563476562,
+        -7.20481330063194e-06,
+        0.0
+      ],
+      [
+        3.587080527722719e-06,
+        -0.06909199804067612,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_55.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_f8ae870996586693.vmdl",
+    "id": "a_f8ae870996586693",
+    "positionCS2": [
+      -7329.614285883348,
+      1916.7634945511527,
+      114.75806400000147
+    ],
+    "origin": [
+      -7329.614285883348,
+      1916.7634945511527,
+      114.75806400000147
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.07075107842683792,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.051757812500347e-05,
+    "bakeReason": "source shear needs exact baked model 0.00015216014438862075",
+    "localLinearMatrix": [
+      [
+        2.68700910055486e-06,
+        -20.07868003845215,
+        0.0
+      ],
+      [
+        0.017618460580706596,
+        7.044958238111576e-06,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_56.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_94acd8771162d7f5.vmdl",
+    "id": "a_94acd8771162d7f5",
+    "positionCS2": [
+      -7241.931620534131,
+      1826.842409251316,
+      114.75806400000147
+    ],
+    "origin": [
+      -7241.931620534131,
+      1826.842409251316,
+      114.75806400000147
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.07075108587741852,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.1920928955078125e-07,
+    "bakeReason": "source shear needs exact baked model 0.0001732137163607131",
+    "localLinearMatrix": [
+      [
+        -5.120063781738281,
+        -1.1991941391897853e-05,
+        0.0
+      ],
+      [
+        1.7977407651414978e-06,
+        -0.06909199804067612,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_57.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_111283e79b06c7fa.vmdl",
+    "id": "a_111283e79b06c7fa",
+    "positionCS2": [
+      -8840.37636622411,
+      2601.573000327422,
+      113.72377680000136
+    ],
+    "origin": [
+      -8840.37636622411,
+      2601.573000327422,
+      113.72377680000136
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.07075108587741852,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.1920928955078125e-07,
+    "bakeReason": "source shear needs exact baked model 0.0001732137163607131",
+    "localLinearMatrix": [
+      [
+        -5.120063781738281,
+        -1.1991941391897853e-05,
+        0.0
+      ],
+      [
+        1.7977407651414978e-06,
+        -0.06909199804067612,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_58.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_1e3f4fd0c4fbec03.vmdl",
+    "id": "a_1e3f4fd0c4fbec03",
+    "positionCS2": [
+      -8471.17388254052,
+      2601.5728714514407,
+      113.72377680000136
+    ],
+    "origin": [
+      -8471.17388254052,
+      2601.5728714514407,
+      113.72377680000136
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.07075108587741852,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.1920928955078125e-07,
+    "bakeReason": "source shear needs exact baked model 0.0001732137163607131",
+    "localLinearMatrix": [
+      [
+        -5.120063781738281,
+        -1.1991941391897853e-05,
+        0.0
+      ],
+      [
+        1.7977407651414978e-06,
+        -0.06909199804067612,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_59.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_fda663f785f1d868.vmdl",
+    "id": "a_fda663f785f1d868",
+    "positionCS2": [
+      -8102.916863834806,
+      2601.5731160023133,
+      113.72377680000136
+    ],
+    "origin": [
+      -8102.916863834806,
+      2601.5731160023133,
+      113.72377680000136
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.07102853804826736,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.1920928955078125e-07,
+    "bakeReason": "source shear needs exact baked model 0.0001732137163607131",
+    "localLinearMatrix": [
+      [
+        -5.140142440795898,
+        -1.1991941391897853e-05,
+        0.0
+      ],
+      [
+        1.8047908270091284e-06,
+        -0.06909199804067612,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_60.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_8639aabaa99d86ff.vmdl",
+    "id": "a_8639aabaa99d86ff",
+    "positionCS2": [
+      -7734.0292460107885,
+      2601.572987236228,
+      113.72377680000136
+    ],
+    "origin": [
+      -7734.0292460107885,
+      2601.572987236228,
+      113.72377680000136
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.07102853804826736,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.1920928955078125e-07,
+    "bakeReason": "source shear needs exact baked model 0.0001732137163607131",
+    "localLinearMatrix": [
+      [
+        -5.140142440795898,
+        -1.1991941391897853e-05,
+        0.0
+      ],
+      [
+        1.8047908270091284e-06,
+        -0.06909199804067612,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_61.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_8e004dde933a39f7.vmdl",
+    "id": "a_8e004dde933a39f7",
+    "positionCS2": [
+      -7546.0417585975665,
+      2785.4876313050336,
+      113.72377680000136
+    ],
+    "origin": [
+      -7546.0417585975665,
+      2785.4876313050336,
+      113.72377680000136
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.07102853059768677,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.051759267691176e-05,
+    "bakeReason": "source shear needs exact baked model 0.00010144009699751697",
+    "localLinearMatrix": [
+      [
+        1.7880740870168665e-06,
+        20.07868003845215,
+        0.0
+      ],
+      [
+        -0.01768755167722702,
+        -6.9846646510995924e-06,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_62.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_cade29c9182faf7f.vmdl",
+    "id": "a_cade29c9182faf7f",
+    "positionCS2": [
+      -7546.041991067148,
+      3154.89276283473,
+      113.72377680000136
+    ],
+    "origin": [
+      -7546.041991067148,
+      3154.89276283473,
+      113.72377680000136
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.07102853059768677,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.051759267691176e-05,
+    "bakeReason": "source shear needs exact baked model 0.00025360023570811707",
+    "localLinearMatrix": [
+      [
+        4.479446488403482e-06,
+        20.07868003845215,
+        0.0
+      ],
+      [
+        -0.01768755167722702,
+        -6.9484881350945216e-06,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_63.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_2a7a1968451ccc6b.vmdl",
+    "id": "a_2a7a1968451ccc6b",
+    "positionCS2": [
+      -7546.041862579907,
+      3522.9816088539083,
+      113.72377680000136
+    ],
+    "origin": [
+      -7546.041862579907,
+      3522.9816088539083,
+      113.72377680000136
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.07102853059768677,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.051759267691176e-05,
+    "bakeReason": "source shear needs exact baked model 0.00023331221786706996",
+    "localLinearMatrix": [
+      [
+        4.120596713619307e-06,
+        20.07868003845215,
+        0.0
+      ],
+      [
+        -0.01768755167722702,
+        -6.953311640245374e-06,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_64.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_ccc0fc95b114f15b.vmdl",
+    "id": "a_ccc0fc95b114f15b",
+    "positionCS2": [
+      -6973.8442640612775,
+      2767.229069103225,
+      118.45932480000101
+    ],
+    "origin": [
+      -6973.8442640612775,
+      2767.229069103225,
+      118.45932480000101
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.1553748995065689,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.051757812500347e-05,
+    "bakeReason": "source shear needs exact baked model 0.00025360023570811707",
+    "localLinearMatrix": [
+      [
+        9.798787687032018e-06,
+        20.07868003845215,
+        0.0
+      ],
+      [
+        -0.03869151696562767,
+        -6.9484881350945216e-06,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_65.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_f9509e2cb3f559ce.vmdl",
+    "id": "a_f9509e2cb3f559ce",
+    "positionCS2": [
+      -6861.09742895246,
+      3572.3691881039995,
+      117.8384616000003
+    ],
+    "origin": [
+      -6861.09742895246,
+      3572.3691881039995,
+      117.8384616000003
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.08323656022548676,
+    "windingReversed": false,
+    "maxLinearCheckError": 7.630325796988134e-06,
+    "bakeReason": "source shear needs exact baked model 0.0003117847469369638",
+    "localLinearMatrix": [
+      [
+        -6.023603916168213,
+        2.1517969798878767e-05,
+        0.0
+      ],
+      [
+        2.0803963707294315e-06,
+        -0.06909199804067612,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_66.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_ea77cb80670f3744.vmdl",
+    "id": "a_ea77cb80670f3744",
+    "positionCS2": [
+      -9836.563524757454,
+      -155.83469298118143,
+      -48.871771919999446
+    ],
+    "origin": [
+      -9836.563524757454,
+      -155.83469298118143,
+      -48.871771919999446
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.3570353090763092,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.0517578125e-05,
+    "bakeReason": "source shear needs exact baked model 0.00010144009699751697",
+    "localLinearMatrix": [
+      [
+        8.988015906652436e-06,
+        20.07868003845215,
+        0.0
+      ],
+      [
+        -0.08890906721353531,
+        -6.9846646510995924e-06,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_67.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_4865fea0b224e246.vmdl",
+    "id": "a_4865fea0b224e246",
+    "positionCS2": [
+      -7368.764227865351,
+      4109.039513100375,
+      244.35033840000142
+    ],
+    "origin": [
+      -7368.764227865351,
+      4109.039513100375,
+      244.35033840000142
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.14056849479675293,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.1920928955078125e-07,
+    "bakeReason": "source shear needs exact baked model 0.0003043202783729456",
+    "localLinearMatrix": [
+      [
+        10.17255973815918,
+        -2.1002228095312603e-05,
+        0.0
+      ],
+      [
+        -3.5142365959472954e-06,
+        0.06909199804067612,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_68.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "model": "models/df_v24/a_6bb789a2efa518db.vmdl",
+    "id": "a_6bb789a2efa518db",
+    "positionCS2": [
+      -7368.764227865351,
+      4109.039513100375,
+      212.24283840000135
+    ],
+    "origin": [
+      -7368.764227865351,
+      4109.039513100375,
+      212.24283840000135
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 0.14056849479675293,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.1920928955078125e-07,
+    "bakeReason": "source shear needs exact baked model 0.0003043202783729456",
+    "localLinearMatrix": [
+      [
+        10.17255973815918,
+        -2.1002228095312603e-05,
+        0.0
+      ],
+      [
+        -3.5142365959472954e-06,
+        0.06909199804067612,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.19999998807907104
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors_HD/InterActor/InterActor_x26_y16_1_HD.InterActor_x26_y16_1_HD:PersistentLevel.BP_LightTrigger2_4.SM_H_FutureTech_Lighting_DecorativeLamp_02_C",
+    "instanceIndex": null,
+    "meshObjectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/Lighting/SM_H_FutureTech_Lighting_DecorativeLamp_02_C.SM_H_FutureTech_Lighting_DecorativeLamp_02_C",
+    "model": "models/df_v24/a_d5de4fe9013f56a5.vmdl",
+    "id": "a_d5de4fe9013f56a5",
+    "positionCS2": [
+      -2205.24838636769,
+      -11352.883035109873,
+      -71.32309127999906
+    ],
+    "origin": [
+      -2205.24838636769,
+      -11352.883035109873,
+      -71.32309127999906
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 3.5199995040893555,
+    "windingReversed": false,
+    "maxLinearCheckError": 3.815162898494067e-06,
+    "bakeReason": "source shear needs exact baked model 0.02651236970054452",
+    "localLinearMatrix": [
+      [
+        -1.1496750116348267,
+        -2.951361466330127e-06,
+        -0.6764021515846252
+      ],
+      [
+        -1.1122465133666992,
+        3.2171487873711158e-06,
+        0.7373161911964417
+      ],
+      [
+        0.0,
+        2.1999998092651367,
+        -9.599310942576267e-06
+      ]
+    ]
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors_HD/InterActor/InterActor_x26_y16_1_HD.InterActor_x26_y16_1_HD:PersistentLevel.BP_LightTrigger2_4.SM_H_FutureTech_Lighting_DecorativeLamp_02_C1",
+    "instanceIndex": null,
+    "meshObjectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/Lighting/SM_H_FutureTech_Lighting_DecorativeLamp_02_C.SM_H_FutureTech_Lighting_DecorativeLamp_02_C",
+    "model": "models/df_v24/a_c049327cc64a9d06.vmdl",
+    "id": "a_c049327cc64a9d06",
+    "positionCS2": [
+      -2280.9608817397093,
+      -11409.695527986012,
+      -79.41957580799863
+    ],
+    "origin": [
+      -2280.9608817397093,
+      -11409.695527986012,
+      -79.41957580799863
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "bakedCS2LocalTransform": true,
+    "collisionEnabled": true,
+    "linearDeterminant": 3.5199997425079346,
+    "windingReversed": false,
+    "maxLinearCheckError": 1.9073486328125e-06,
+    "bakeReason": "source shear needs exact baked model 0.11020973671605198",
+    "localLinearMatrix": [
+      [
+        1.1358412504196167,
+        0.200277179479599,
+        0.6700940132141113
+      ],
+      [
+        1.0913541316986084,
+        0.19243890047073364,
+        -0.743398129940033
+      ],
+      [
+        -0.3820270299911499,
+        2.166576862335205,
+        9.226590918842703e-06
+      ]
+    ]
+  }
+]

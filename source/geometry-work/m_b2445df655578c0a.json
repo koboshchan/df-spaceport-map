@@ -1,0 +1,26 @@
+{
+  "id": "m_b2445df655578c0a",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Government/Office/SM_M_Government_Office_Pen_01.SM_M_Government_Office_Pen_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Government\\Office\\SM_M_Government_Office_Pen_01.glb",
+  "sourceSHA256": "2C25FA0AB789FC8BB5153E021EFF0C3A9D9D5DFA64E68D5CB60A914B5AE6A9CE",
+  "model": "models/df_v24/m_b2445df655578c0a.vmdl",
+  "materials": {
+    "mat_9d2f82fa8ec212e0": "DeltaForce/Content/Environment/Props/Morocco/Government/Office/00_Materials/HD/MI_M_Government_Office_Pen_01_HD.MI_M_Government_Office_Pen_01_HD"
+  },
+  "vertices": 1043,
+  "polygons": 1244,
+  "bounds": [
+    [
+      -0.29676151275634766,
+      -0.32268252968788147,
+      -0.005112762562930584
+    ],
+    [
+      0.29623717069625854,
+      0.35290729999542236,
+      7.197745323181152
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

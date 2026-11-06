@@ -1,0 +1,38 @@
+{
+  "resources": {
+    "materials/tools/toolsnodraw.vmat_c": {
+      "pack": "E:\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\core\\pak01_dir.vpk",
+      "bytes": 2905,
+      "sha256": "db8dfa626f6ff7168a659dc486014de1f7fc7997d19c5212fdc43262f60a93a8",
+      "CRCVerified": true,
+      "references": [
+        "materials/default/default_normal_tga_7652cb.vtex_c",
+        "materials/default/default_normal_tga_b3f4ec4c.vtex_c",
+        "materials/tools/toolsnodraw_color_tga_e2430b46.vtex_c"
+      ]
+    },
+    "materials/tools/toolsnodraw_color_tga_e2430b46.vtex_c": {
+      "pack": "E:\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\core\\pak01_dir.vpk",
+      "bytes": 4700,
+      "sha256": "7d736d19bc646410bac02129db23a9f48d1c31ce528a9df2d93ee24862a5c087",
+      "CRCVerified": true,
+      "references": []
+    },
+    "materials/default/default_normal_tga_b3f4ec4c.vtex_c": {
+      "pack": "E:\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\core\\pak01_dir.vpk",
+      "bytes": 2224,
+      "sha256": "bf4ab93faaa52e22ef7c76aa19166ff20b6ad3a0c08b678f80f2010d62d091ab",
+      "CRCVerified": true,
+      "references": []
+    },
+    "materials/default/default_normal_tga_7652cb.vtex_c": {
+      "pack": "E:\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\core\\pak01_dir.vpk",
+      "bytes": 2176,
+      "sha256": "9599756329014a3b686ed755be24fd042034da1e1e40fe68cd5d887429dc127b",
+      "CRCVerified": true,
+      "references": []
+    }
+  },
+  "missing": [],
+  "success": true
+}

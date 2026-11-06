@@ -1,0 +1,28 @@
+{
+  "id": "m_7acb5b89b7be59c8",
+  "objectPath": "DeltaForce/Content/Environment/Gameplay/Feature/SM_H_Government_Office_Safe_01A.SM_H_Government_Office_Safe_01A",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Gameplay\\Feature\\SM_H_Government_Office_Safe_01A.glb",
+  "sourceSHA256": "D997A76EDCEBD9BC7DE244887E529F346B785EE7133E3FEF6B087F9B3255E002",
+  "model": "models/df_v24/m_7acb5b89b7be59c8.vmdl",
+  "materials": {
+    "mat_211b9dc666c30b4a": "DeltaForce/Content/Environment/Gameplay/Feature/00_Materials/HD/MI_H_Government_Office_Safe_01_HD.MI_H_Government_Office_Safe_01_HD",
+    "mat_cd827dfda3c65f82": "DeltaForce/Content/Environment/Gameplay/Feature/00_Materials/HD/MI_H_Government_Office_Safe_02_HD.MI_H_Government_Office_Safe_02_HD",
+    "mat_9f22a454fe4c1f51": "DeltaForce/Content/Environment/Gameplay/Feature/00_Materials/HD/MI_Feature_FileCabinet_01B_Decal_HD.MI_Feature_FileCabinet_01B_Decal_HD"
+  },
+  "vertices": 306,
+  "polygons": 238,
+  "bounds": [
+    [
+      -9.014083862304688,
+      -7.200006008148193,
+      -2.0599363779183477e-06
+    ],
+    [
+      9.014086723327637,
+      7.200002670288086,
+      11.520003318786621
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,13 @@
+import pathlib,json,hashlib,datetime
+R=pathlib.Path('E:/df-v25-build-20261106');O=R/'orchestrator'
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+p=R/'ladder-stage/full-v25-handoff/CENTRAL-HANDOFF.json';assert sha(p)=='c084d4513303264112bb5448741f50f06800984f0ed1c083b92006ba93e2c7e4'
+h=json.loads(p.read_text());verified=[]
+for section in ['inputs','sourceReceipts','compiledProofs']:
+ for k,v in h[section].items():
+  a=pathlib.Path(v['path']);assert a.stat().st_size==v['bytes'] and sha(a)==v['sha256'];verified.append({'section':section,'key':k,'path':str(a),'sha256':v['sha256']})
+d=h['dependencies'];assert sha(pathlib.Path(d['path']))==d['sha256']
+v=R/'visibility-stage';ready=json.loads((v/'READY-source-exclusions.json').read_text());assert sha(v/'exclusion-manifest.json')==ready['baseSHA256'];assert ready['unionCount']==360
+gate={'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'authorization':'Full conversion and compile authorized, no ask; NO install','order':['verified material bindings','exact proven render+PHYS exclusions','sky and exact 32 spawns','536 ladder boxes and 10 front-climb meshes','all-asset/full-map compile'],'materials':{'status':'BLOCKED_EXACT_BINDING','authoritativeRoot':str(R/'material-work/raw-graph-probe'),'proof':'native hashes VT stack tokens shader math proven; named VT resource and runtime uniform mapping NOT proven','next':'d007b190 finite one Props + one Light native table crosscheck then real MI pilot','forbidden':'No 3float4 ordinal promotion or silent fallback'},'visibility':{'status':'SOURCE_READY_NOT_PROMOTED','union':360,'bothRenderPhysics':358,'renderOnlyKeepPhysics':2,'preserveUnconfirmedRow':24326,'preserve':['floor hit40','500 door masks','221 attachments','all nontargets'],'receipt':str(v/'READY-source-exclusions.json')},'skySpawns':{'status':'SOURCE_READY_NOT_PROMOTED','parentCandidate':str(O/'df_spaceport_v25-parent-candidate.vmap'),'bake':'UNPROVEN linked-world route; no baked claim'},'ladders':{'status':'HANDOFF_HASHES_VERIFIED_NOT_PROMOTED','handoffSHA256':sha(p),'verified':verified,'instructions':h['promotionInstructions'],'postCompileGates':h['boundedGates']},'errorAsset':'UNIDENTIFIED; marks47/48 background cannot fix by inference','regressionRisk':'Repeated client scenesystem.dll+77936 C0000005 null write preserved; not solved','execution':{'Eonly':True,'fullComputeRAM':True,'noRAMGuards':True,'detachedLongJobs':True,'persistentLogs':True,'centralExclusivePromotionCompile':True,'noLiveActions':True}}
+(O/'build-gates.json').write_text(json.dumps(gate,indent=2))
+print(json.dumps({'verifiedLadderFiles':len(verified)+1,'visibilityBaseSHA256':ready['baseSHA256'],'materialGate':gate['materials']['status'],'promotionStarted':False}))

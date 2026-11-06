@@ -1,0 +1,26 @@
+{
+  "id": "m_d9e9c23729320b6c",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Government/Cloth/SM_M_Government_Cloth_Unclaimed_01.SM_M_Government_Cloth_Unclaimed_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Government\\Cloth\\SM_M_Government_Cloth_Unclaimed_01.glb",
+  "sourceSHA256": "02357AD3194CEE949127B8C757DF4018CFF3F8DF69E951039C48DA1651995FBF",
+  "model": "models/df_v24/m_d9e9c23729320b6c.vmdl",
+  "materials": {
+    "mat_bdc7457cb8a12d93": "DeltaForce/Content/Environment/Props/Morocco/Government/00_Materials/HD/MI_M_Government_Cloth_Unclaimed_01_HD.MI_M_Government_Cloth_Unclaimed_01_HD"
+  },
+  "vertices": 862,
+  "polygons": 1350,
+  "bounds": [
+    [
+      -20.215362548828125,
+      -9.145785331726074,
+      -0.05800793319940567
+    ],
+    [
+      15.902175903320312,
+      11.513545036315918,
+      2.478728771209717
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

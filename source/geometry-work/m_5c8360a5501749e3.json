@@ -1,0 +1,26 @@
+{
+  "id": "m_5c8360a5501749e3",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_Dock_06b_InterWall_Glass.SM_H_Building_FutureTech_Dock_06b_InterWall_Glass",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_Dock_06b_InterWall_Glass.glb",
+  "sourceSHA256": "89F22771198685879E26A1BEA4146DCD5B490FF5E89F22185457FEAF1155BB56",
+  "model": "models/df_v24/m_5c8360a5501749e3.vmdl",
+  "materials": {
+    "mat_3568c3d4868e875d": "DeltaForce/Content/Environment/Structures/Window/00_Materials/HD/MI_Window_Glass_02_HD.MI_Window_Glass_02_HD"
+  },
+  "vertices": 20,
+  "polygons": 12,
+  "bounds": [
+    [
+      -0.12621092796325684,
+      -0.00017578124243300408,
+      -0.006361084058880806
+    ],
+    [
+      -0.00017578124243300408,
+      283.86517333984375,
+      144.49234008789062
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

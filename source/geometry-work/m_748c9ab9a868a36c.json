@@ -1,0 +1,26 @@
+{
+  "id": "m_748c9ab9a868a36c",
+  "objectPath": "DeltaForce/Content/Environment/Gameplay/Feature/SM_Feature_Shovel_01.SM_Feature_Shovel_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Gameplay\\Feature\\SM_Feature_Shovel_01.glb",
+  "sourceSHA256": "5A21605487A4DA7386D3900015E0C9FE22DDC1077DBA7FE0681B38ED1D10731A",
+  "model": "models/df_v24/m_748c9ab9a868a36c.vmdl",
+  "materials": {
+    "mat_db3c4b17316fc990": "DeltaForce/Content/Environment/Gameplay/Feature/00_Materials/HD/MI_Feature_Shovel_01_HD.MI_Feature_Shovel_01_HD"
+  },
+  "vertices": 1467,
+  "polygons": 1830,
+  "bounds": [
+    [
+      -4.095720291137695,
+      -0.24107474088668823,
+      3.2725647820981696e-13
+    ],
+    [
+      4.095717430114746,
+      4.7449445724487305,
+      43.326717376708984
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

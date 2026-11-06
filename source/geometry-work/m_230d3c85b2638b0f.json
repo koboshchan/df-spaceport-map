@@ -1,0 +1,35 @@
+{
+  "id": "m_230d3c85b2638b0f",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/SM_H_Building_FutureTech_HTerrace_02.SM_H_Building_FutureTech_HTerrace_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter\\SM_H_Building_FutureTech_HTerrace_02.glb",
+  "sourceSHA256": "7DBB203C3767BEF3C31CB9D2D6EAC143E8445AC533BBC5B683CB2DFD71BC18F6",
+  "model": "models/df_v24/m_230d3c85b2638b0f.vmdl",
+  "materials": {
+    "mat_9ae0cbbe320a2e30": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Checkred_02_HD.MI_GEN_Marble_Checkred_02_HD",
+    "mat_a3e35d5d925fdd27": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_HTerrace_01_01A_HD.MI_H_Building_FutureTech_HTerrace_01_01A_HD",
+    "mat_40b9dd6e452c79fe": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_C_Building_WallInside_01_HD.MI_C_Building_WallInside_01_HD",
+    "mat_f5f6a4bc7cf71b80": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Concrete_Checkred_02_HD.MI_GEN_Concrete_Checkred_02_HD",
+    "mat_ccf7d54540b23a7e": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01B_HD.MI_GEN_Metal_Base_01B_HD",
+    "mat_cf4bffa2e71ba398": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Concrete_Base_02_HD.MI_GEN_Concrete_Base_02_HD",
+    "mat_389db5688a50652e": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_GEN_Grass_Base_01_HD.MI_GEN_Grass_Base_01_HD",
+    "mat_4951146017f824b0": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Checkred_03_HD.MI_GEN_Marble_Checkred_03_HD",
+    "mat_38b39ab9bd6e8fae": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_03_HD.MI_GEN_Metal_Painting_03_HD",
+    "mat_3ad5fc978e7d2b72": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_Terrace_256_01_HD.MI_I_WalkwaySystem_Terrace_256_01_HD"
+  },
+  "vertices": 19887,
+  "polygons": 14537,
+  "bounds": [
+    [
+      -1463.26904296875,
+      -1573.452392578125,
+      137.35348510742188
+    ],
+    [
+      1463.3822021484375,
+      1573.41015625,
+      431.2423095703125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

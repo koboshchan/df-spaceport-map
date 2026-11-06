@@ -1,0 +1,26 @@
+{
+  "id": "m_4aca3343e2f16c4d",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/SM_I_WalkwaySystem_PaintingRailing_64xC90_02.SM_I_WalkwaySystem_PaintingRailing_64xC90_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\WalkwaySystem\\SM_I_WalkwaySystem_PaintingRailing_64xC90_02.glb",
+  "sourceSHA256": "6B98CE2D5C652B8CF58958E13B749256AAA7DEF34463D5F59ECF8B7D5A95BA79",
+  "model": "models/df_v24/m_4aca3343e2f16c4d.vmdl",
+  "materials": {
+    "mat_e82318e6d0b903c0": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Brakkesh/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_B_HD.MI_I_WalkwaySystem_MetalFloor_01_B_HD"
+  },
+  "vertices": 718,
+  "polygons": 436,
+  "bounds": [
+    [
+      -6.764497756958008,
+      -23.040176391601562,
+      -0.10149852931499481
+    ],
+    [
+      16.275510787963867,
+      -1.7166136956348055e-07,
+      40.70785903930664
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

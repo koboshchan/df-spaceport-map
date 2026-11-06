@@ -1,0 +1,26 @@
+{
+  "id": "m_00d31782591776c9",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Government/Lighting/SM_H_Industrial_Lighting_WallLamp_02B.SM_H_Industrial_Lighting_WallLamp_02B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Government\\Lighting\\SM_H_Industrial_Lighting_WallLamp_02B.glb",
+  "sourceSHA256": "1E390CBC564D1152BD6BEEAAF8F3EE3664E4FB991B69450518A9F9A3F93ABC09",
+  "model": "models/df_v24/m_00d31782591776c9.vmdl",
+  "materials": {
+    "mat_9c001e474ed521e1": "DeltaForce/Content/Environment/Props/HAAVK/Government/Lighting/00_Materials/HD/MI_H_Industrial_Lighting_WallLamp_02_HD.MI_H_Industrial_Lighting_WallLamp_02_HD"
+  },
+  "vertices": 1138,
+  "polygons": 782,
+  "bounds": [
+    [
+      -18.111492156982422,
+      -12.211240768432617,
+      -10.105231285095215
+    ],
+    [
+      18.111492156982422,
+      2.0599363779183477e-06,
+      2.0616421699523926
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

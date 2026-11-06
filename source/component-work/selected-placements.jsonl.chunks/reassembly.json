@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "bytes": 145611332,
+  "sha256": "3b2bf70ee73d4ad27b8eddf343820ee64685b160dd483dc85896ec11a0bb96ae",
+  "parts": [
+    {
+      "name": "part-0000.jsonl",
+      "bytes": 52427138,
+      "sha256": "c6e996e42ff961f88e981b34c4f0f50cd1ef3867b74c566b7d91ba685835fec5"
+    },
+    {
+      "name": "part-0001.jsonl",
+      "bytes": 52426995,
+      "sha256": "a13caee37a8b27f8b701cf19f33207aec48fe5a58875d2482496a7459feabc25"
+    },
+    {
+      "name": "part-0002.jsonl",
+      "bytes": 40757199,
+      "sha256": "da614c881e2e3fd21dc24f40d11a1a58479bedb028a3e032ce74651a5944121c"
+    }
+  ]
+}

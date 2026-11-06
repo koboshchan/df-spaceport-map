@@ -1,0 +1,26 @@
+{
+  "id": "m_840802dd0f74648e",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Generic/SM_M_Generic_WarningLamp_01.SM_M_Generic_WarningLamp_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Generic\\SM_M_Generic_WarningLamp_01.glb",
+  "sourceSHA256": "E2A8223E1F2F14F3404D4C32DE39A5EAA79BCFBA7272BFFA71791EB6A5F2A607",
+  "model": "models/df_v24/m_840802dd0f74648e.vmdl",
+  "materials": {
+    "mat_0b809afb2fcf31a0": "DeltaForce/Content/Environment/Props/Morocco/Generic/00_Materials/HD/MI_M_Generic_WarningLamp_01_01_HD.MI_M_Generic_WarningLamp_01_01_HD"
+  },
+  "vertices": 830,
+  "polygons": 901,
+  "bounds": [
+    [
+      -2.5498414039611816,
+      -2.5498416423797607,
+      -5.1688886060219374e-08
+    ],
+    [
+      2.5498762130737305,
+      2.549872875213623,
+      5.726064205169678
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

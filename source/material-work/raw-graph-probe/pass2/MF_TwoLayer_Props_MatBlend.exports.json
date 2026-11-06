@@ -1,0 +1,3144 @@
+{
+  "path": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.uasset",
+  "exports": [
+    {
+      "index": 0,
+      "name": "MaterialExpressionMaterialFunctionCall_0",
+      "cls": -1,
+      "template": null,
+      "size": 70,
+      "offset": 13629,
+      "type": "RawProbe",
+      "source": {
+        "Type": "MaterialExpressionMaterialFunctionCall",
+        "Name": "MaterialExpressionMaterialFunctionCall_0",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "MaterialFunction": {
+            "ObjectName": "MaterialFunction'BreakOutFloat4Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat4Components.0"
+          },
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": {
+        "start": 0,
+        "end": 70,
+        "size": 70,
+        "consumed": 70,
+        "tail": 0,
+        "rawSHA256": "E92CE16F5B2AE53F11978AE10C4EF92027D1496D73675A4FD2FF23EF8D979296",
+        "tagNames": [
+          "MaterialFunction",
+          "Function"
+        ],
+        "unversioned": false,
+        "rawHex": "5E000000000000006500000000000000040000000000000000EBFFFFFF3B0000000000000065000000000000000400000000000000003F000000630000000000000000000000"
+      }
+    },
+    {
+      "index": 1,
+      "name": "MaterialExpressionMaterialFunctionCall_1",
+      "cls": -1,
+      "template": null,
+      "size": 70,
+      "offset": 13699,
+      "type": "RawProbe",
+      "source": {
+        "Type": "MaterialExpressionMaterialFunctionCall",
+        "Name": "MaterialExpressionMaterialFunctionCall_1",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "MaterialFunction": {
+            "ObjectName": "MaterialFunction'BlendAngleCorrectedNormals'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BlendAngleCorrectedNormals.0"
+          },
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": {
+        "start": 70,
+        "end": 140,
+        "size": 70,
+        "consumed": 70,
+        "tail": 0,
+        "rawSHA256": "611ACFA579F6B4E7C8A00E42080606C222D6F27FAFADEFB6D638740626E2FD55",
+        "tagNames": [
+          "MaterialFunction",
+          "Function"
+        ],
+        "unversioned": false,
+        "rawHex": "5E000000000000006500000000000000040000000000000000EDFFFFFF3B0000000000000065000000000000000400000000000000003F000000630000000000000000000000"
+      }
+    },
+    {
+      "index": 2,
+      "name": "MaterialExpressionMaterialFunctionCall_11",
+      "cls": -1,
+      "template": null,
+      "size": 70,
+      "offset": 13769,
+      "type": "RawProbe",
+      "source": {
+        "Type": "MaterialExpressionMaterialFunctionCall",
+        "Name": "MaterialExpressionMaterialFunctionCall_11",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "MaterialFunction": {
+            "ObjectName": "MaterialFunction'BlendAngleCorrectedNormals'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BlendAngleCorrectedNormals.0"
+          },
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": {
+        "start": 140,
+        "end": 210,
+        "size": 70,
+        "consumed": 70,
+        "tail": 0,
+        "rawSHA256": "611ACFA579F6B4E7C8A00E42080606C222D6F27FAFADEFB6D638740626E2FD55",
+        "tagNames": [
+          "MaterialFunction",
+          "Function"
+        ],
+        "unversioned": false,
+        "rawHex": "5E000000000000006500000000000000040000000000000000EDFFFFFF3B0000000000000065000000000000000400000000000000003F000000630000000000000000000000"
+      }
+    },
+    {
+      "index": 3,
+      "name": "MaterialExpressionMaterialFunctionCall_13",
+      "cls": -1,
+      "template": null,
+      "size": 70,
+      "offset": 13839,
+      "type": "RawProbe",
+      "source": {
+        "Type": "MaterialExpressionMaterialFunctionCall",
+        "Name": "MaterialExpressionMaterialFunctionCall_13",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "MaterialFunction": {
+            "ObjectName": "MaterialFunction'FlattenNormal'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Texturing/FlattenNormal.0"
+          },
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": {
+        "start": 210,
+        "end": 280,
+        "size": 70,
+        "consumed": 70,
+        "tail": 0,
+        "rawSHA256": "6EA26EEEBF239AE1866E9CF6244B131655AAD0A1F9B9C75094781908AD88ACCE",
+        "tagNames": [
+          "MaterialFunction",
+          "Function"
+        ],
+        "unversioned": false,
+        "rawHex": "5E000000000000006500000000000000040000000000000000EEFFFFFF3B0000000000000065000000000000000400000000000000003F000000630000000000000000000000"
+      }
+    },
+    {
+      "index": 4,
+      "name": "MaterialExpressionMaterialFunctionCall_15",
+      "cls": -1,
+      "template": null,
+      "size": 70,
+      "offset": 13909,
+      "type": "RawProbe",
+      "source": {
+        "Type": "MaterialExpressionMaterialFunctionCall",
+        "Name": "MaterialExpressionMaterialFunctionCall_15",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "MaterialFunction": {
+            "ObjectName": "MaterialFunction'MatLayerBlend_Standard'",
+            "ObjectPath": "Engine/Content/Functions/MaterialLayerFunctions/MatLayerBlend_Standard.0"
+          },
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": {
+        "start": 280,
+        "end": 350,
+        "size": 70,
+        "consumed": 70,
+        "tail": 0,
+        "rawSHA256": "5CFE924C6890DB6409F39C2A0EB82F8456D2C8EB2E71852F8E79307A681C7597",
+        "tagNames": [
+          "MaterialFunction",
+          "Function"
+        ],
+        "unversioned": false,
+        "rawHex": "5E000000000000006500000000000000040000000000000000E9FFFFFF3B0000000000000065000000000000000400000000000000003F000000630000000000000000000000"
+      }
+    },
+    {
+      "index": 5,
+      "name": "MaterialExpressionMaterialFunctionCall_19",
+      "cls": -1,
+      "template": null,
+      "size": 70,
+      "offset": 13979,
+      "type": "RawProbe",
+      "source": {
+        "Type": "MaterialExpressionMaterialFunctionCall",
+        "Name": "MaterialExpressionMaterialFunctionCall_19",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "MaterialFunction": {
+            "ObjectName": "MaterialFunction'BreakOutFloat4Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat4Components.0"
+          },
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": {
+        "start": 350,
+        "end": 420,
+        "size": 70,
+        "consumed": 70,
+        "tail": 0,
+        "rawSHA256": "E92CE16F5B2AE53F11978AE10C4EF92027D1496D73675A4FD2FF23EF8D979296",
+        "tagNames": [
+          "MaterialFunction",
+          "Function"
+        ],
+        "unversioned": false,
+        "rawHex": "5E000000000000006500000000000000040000000000000000EBFFFFFF3B0000000000000065000000000000000400000000000000003F000000630000000000000000000000"
+      }
+    },
+    {
+      "index": 6,
+      "name": "MaterialExpressionMaterialFunctionCall_2",
+      "cls": -1,
+      "template": null,
+      "size": 70,
+      "offset": 14049,
+      "type": "RawProbe",
+      "source": {
+        "Type": "MaterialExpressionMaterialFunctionCall",
+        "Name": "MaterialExpressionMaterialFunctionCall_2",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "MaterialFunction": {
+            "ObjectName": "MaterialFunction'BreakOutFloat4Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat4Components.0"
+          },
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": {
+        "start": 420,
+        "end": 490,
+        "size": 70,
+        "consumed": 70,
+        "tail": 0,
+        "rawSHA256": "E92CE16F5B2AE53F11978AE10C4EF92027D1496D73675A4FD2FF23EF8D979296",
+        "tagNames": [
+          "MaterialFunction",
+          "Function"
+        ],
+        "unversioned": false,
+        "rawHex": "5E000000000000006500000000000000040000000000000000EBFFFFFF3B0000000000000065000000000000000400000000000000003F000000630000000000000000000000"
+      }
+    },
+    {
+      "index": 7,
+      "name": "MaterialExpressionMaterialFunctionCall_20",
+      "cls": -1,
+      "template": null,
+      "size": 70,
+      "offset": 14119,
+      "type": "RawProbe",
+      "source": {
+        "Type": "MaterialExpressionMaterialFunctionCall",
+        "Name": "MaterialExpressionMaterialFunctionCall_20",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "MaterialFunction": {
+            "ObjectName": "MaterialFunction'BreakOutFloat3Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.0"
+          },
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": {
+        "start": 490,
+        "end": 560,
+        "size": 70,
+        "consumed": 70,
+        "tail": 0,
+        "rawSHA256": "EA250015E4F7FAD27D859777700EB395A64E54850D953E22EA6399A764060F7B",
+        "tagNames": [
+          "MaterialFunction",
+          "Function"
+        ],
+        "unversioned": false,
+        "rawHex": "5E000000000000006500000000000000040000000000000000ECFFFFFF3B0000000000000065000000000000000400000000000000003F000000630000000000000000000000"
+      }
+    },
+    {
+      "index": 8,
+      "name": "MaterialExpressionMaterialFunctionCall_3",
+      "cls": -1,
+      "template": null,
+      "size": 70,
+      "offset": 14189,
+      "type": "RawProbe",
+      "source": {
+        "Type": "MaterialExpressionMaterialFunctionCall",
+        "Name": "MaterialExpressionMaterialFunctionCall_3",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "MaterialFunction": {
+            "ObjectName": "MaterialFunction'MF_NewHeightBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/MF_NewHeightBlend.12"
+          },
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": {
+        "start": 560,
+        "end": 630,
+        "size": 70,
+        "consumed": 70,
+        "tail": 0,
+        "rawSHA256": "1FDCDD783974A85FBE8CD0034F71D9E1B69DFFE14FB4D39309FC5F209D2E544A",
+        "tagNames": [
+          "MaterialFunction",
+          "Function"
+        ],
+        "unversioned": false,
+        "rawHex": "5E000000000000006500000000000000040000000000000000E8FFFFFF3B0000000000000065000000000000000400000000000000003F000000630000000000000000000000"
+      }
+    },
+    {
+      "index": 9,
+      "name": "MaterialExpressionMaterialFunctionCall_38",
+      "cls": -1,
+      "template": null,
+      "size": 70,
+      "offset": 14259,
+      "type": "RawProbe",
+      "source": {
+        "Type": "MaterialExpressionMaterialFunctionCall",
+        "Name": "MaterialExpressionMaterialFunctionCall_38",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "MaterialFunction": {
+            "ObjectName": "MaterialFunction'MatLayerBlend_Standard'",
+            "ObjectPath": "Engine/Content/Functions/MaterialLayerFunctions/MatLayerBlend_Standard.0"
+          },
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": {
+        "start": 630,
+        "end": 700,
+        "size": 70,
+        "consumed": 70,
+        "tail": 0,
+        "rawSHA256": "5CFE924C6890DB6409F39C2A0EB82F8456D2C8EB2E71852F8E79307A681C7597",
+        "tagNames": [
+          "MaterialFunction",
+          "Function"
+        ],
+        "unversioned": false,
+        "rawHex": "5E000000000000006500000000000000040000000000000000E9FFFFFF3B0000000000000065000000000000000400000000000000003F000000630000000000000000000000"
+      }
+    },
+    {
+      "index": 10,
+      "name": "MaterialExpressionMaterialFunctionCall_4",
+      "cls": -1,
+      "template": null,
+      "size": 70,
+      "offset": 14329,
+      "type": "RawProbe",
+      "source": {
+        "Type": "MaterialExpressionMaterialFunctionCall",
+        "Name": "MaterialExpressionMaterialFunctionCall_4",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "MaterialFunction": {
+            "ObjectName": "MaterialFunction'MakeFloat3'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.0"
+          },
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": {
+        "start": 700,
+        "end": 770,
+        "size": 70,
+        "consumed": 70,
+        "tail": 0,
+        "rawSHA256": "5CB8A9C91B158ABD0E07CBF75537FBB1908D288A16084150F79C278007966A24",
+        "tagNames": [
+          "MaterialFunction",
+          "Function"
+        ],
+        "unversioned": false,
+        "rawHex": "5E000000000000006500000000000000040000000000000000EAFFFFFF3B0000000000000065000000000000000400000000000000003F000000630000000000000000000000"
+      }
+    },
+    {
+      "index": 11,
+      "name": "MaterialExpressionMaterialFunctionCall_8",
+      "cls": -1,
+      "template": null,
+      "size": 70,
+      "offset": 14399,
+      "type": "RawProbe",
+      "source": {
+        "Type": "MaterialExpressionMaterialFunctionCall",
+        "Name": "MaterialExpressionMaterialFunctionCall_8",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "MaterialFunction": {
+            "ObjectName": "MaterialFunction'BreakOutFloat4Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat4Components.0"
+          },
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": {
+        "start": 770,
+        "end": 840,
+        "size": 70,
+        "consumed": 70,
+        "tail": 0,
+        "rawSHA256": "E92CE16F5B2AE53F11978AE10C4EF92027D1496D73675A4FD2FF23EF8D979296",
+        "tagNames": [
+          "MaterialFunction",
+          "Function"
+        ],
+        "unversioned": false,
+        "rawHex": "5E000000000000006500000000000000040000000000000000EBFFFFFF3B0000000000000065000000000000000400000000000000003F000000630000000000000000000000"
+      }
+    },
+    {
+      "index": 12,
+      "name": "MaterialExpressionMaterialFunctionCall_9",
+      "cls": -1,
+      "template": null,
+      "size": 70,
+      "offset": 14469,
+      "type": "RawProbe",
+      "source": {
+        "Type": "MaterialExpressionMaterialFunctionCall",
+        "Name": "MaterialExpressionMaterialFunctionCall_9",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "MaterialFunction": {
+            "ObjectName": "MaterialFunction'MakeFloat3'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.0"
+          },
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": {
+        "start": 840,
+        "end": 910,
+        "size": 70,
+        "consumed": 70,
+        "tail": 0,
+        "rawSHA256": "5CB8A9C91B158ABD0E07CBF75537FBB1908D288A16084150F79C278007966A24",
+        "tagNames": [
+          "MaterialFunction",
+          "Function"
+        ],
+        "unversioned": false,
+        "rawHex": "5E000000000000006500000000000000040000000000000000EAFFFFFF3B0000000000000065000000000000000400000000000000003F000000630000000000000000000000"
+      }
+    },
+    {
+      "index": 13,
+      "name": "MaterialExpressionQualitySwitch_0",
+      "cls": -2,
+      "template": null,
+      "size": 575,
+      "offset": 14539,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionQualitySwitch",
+      "source": {
+        "Type": "MaterialExpressionQualitySwitch",
+        "Name": "MaterialExpressionQualitySwitch_0",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionQualitySwitch'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "Default": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionLinearInterpolate_6"
+          },
+          "Inputs": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionLinearInterpolate_6"
+          },
+          "Inputs[1]": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionLinearInterpolate_6"
+          },
+          "Inputs[2]": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionLinearInterpolate_6"
+          },
+          "Inputs[3]": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionLinearInterpolate_6"
+          },
+          "Inputs[4]": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionLinearInterpolate_6"
+          },
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 14,
+      "name": "MaterialExpressionQualitySwitch_1",
+      "cls": -2,
+      "template": null,
+      "size": 486,
+      "offset": 15114,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionQualitySwitch",
+      "source": {
+        "Type": "MaterialExpressionQualitySwitch",
+        "Name": "MaterialExpressionQualitySwitch_1",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionQualitySwitch'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "Default": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionLinearInterpolate_3"
+          },
+          "Inputs": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionLinearInterpolate_3"
+          },
+          "Inputs[1]": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionLinearInterpolate_3"
+          },
+          "Inputs[2]": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionLinearInterpolate_3"
+          },
+          "Inputs[3]": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionLinearInterpolate_3"
+          },
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 15,
+      "name": "MaterialExpressionQualitySwitch_3",
+      "cls": -2,
+      "template": null,
+      "size": 575,
+      "offset": 15600,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionQualitySwitch",
+      "source": {
+        "Type": "MaterialExpressionQualitySwitch",
+        "Name": "MaterialExpressionQualitySwitch_3",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionQualitySwitch'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "Default": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionMaterialFunctionCall_11"
+          },
+          "Inputs": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionMaterialFunctionCall_11"
+          },
+          "Inputs[1]": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionMaterialFunctionCall_11"
+          },
+          "Inputs[2]": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionMaterialFunctionCall_11"
+          },
+          "Inputs[3]": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionMaterialFunctionCall_1"
+          },
+          "Inputs[4]": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionMaterialFunctionCall_1"
+          },
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 16,
+      "name": "MaterialExpressionScalarParameter_0",
+      "cls": -3,
+      "template": null,
+      "size": 168,
+      "offset": 16175,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionScalarParameter",
+      "source": {
+        "Type": "MaterialExpressionScalarParameter",
+        "Name": "MaterialExpressionScalarParameter_0",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "DefaultValue": 1.0,
+          "ParameterName": "Texcoord_03_B",
+          "ExpressionGUID": "E46D9D91-4218B206-A8E12B82-3A2E836F",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 17,
+      "name": "MaterialExpressionScalarParameter_1",
+      "cls": -3,
+      "template": null,
+      "size": 168,
+      "offset": 16343,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionScalarParameter",
+      "source": {
+        "Type": "MaterialExpressionScalarParameter",
+        "Name": "MaterialExpressionScalarParameter_1",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "DefaultValue": 1.0,
+          "ParameterName": "HeightBlend Origin",
+          "ExpressionGUID": "C9CC0135-462F5D1A-50F070A4-D70447C2",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 18,
+      "name": "MaterialExpressionScalarParameter_10",
+      "cls": -3,
+      "template": null,
+      "size": 139,
+      "offset": 16511,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionScalarParameter",
+      "source": {
+        "Type": "MaterialExpressionScalarParameter",
+        "Name": "MaterialExpressionScalarParameter_10",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "ParameterName": "DetailNormalScale",
+          "ExpressionGUID": "9AB6C993-460BBB23-28DA7CA7-F0E24ABF",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 19,
+      "name": "MaterialExpressionScalarParameter_11",
+      "cls": -3,
+      "template": null,
+      "size": 168,
+      "offset": 16650,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionScalarParameter",
+      "source": {
+        "Type": "MaterialExpressionScalarParameter",
+        "Name": "MaterialExpressionScalarParameter_11",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "DefaultValue": 1.0,
+          "ParameterName": "Heightblend Cover Scale",
+          "ExpressionGUID": "D52E11AF-4A8C33DF-C9976A90-AE6119EE",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 20,
+      "name": "MaterialExpressionScalarParameter_12",
+      "cls": -3,
+      "template": null,
+      "size": 139,
+      "offset": 16818,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionScalarParameter",
+      "source": {
+        "Type": "MaterialExpressionScalarParameter",
+        "Name": "MaterialExpressionScalarParameter_12",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "ParameterName": "Layer01Metal",
+          "ExpressionGUID": "773AA92C-4A685BAD-CE35BFB9-512D8640",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 21,
+      "name": "MaterialExpressionScalarParameter_13",
+      "cls": -3,
+      "template": null,
+      "size": 139,
+      "offset": 16957,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionScalarParameter",
+      "source": {
+        "Type": "MaterialExpressionScalarParameter",
+        "Name": "MaterialExpressionScalarParameter_13",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "ParameterName": "Heightblend Offset",
+          "ExpressionGUID": "B81BB4FE-492FBE08-E538508D-601990A0",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 22,
+      "name": "MaterialExpressionScalarParameter_14",
+      "cls": -3,
+      "template": null,
+      "size": 139,
+      "offset": 17096,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionScalarParameter",
+      "source": {
+        "Type": "MaterialExpressionScalarParameter",
+        "Name": "MaterialExpressionScalarParameter_14",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "ParameterName": "Layer02Metal",
+          "ExpressionGUID": "1456294D-408B920F-23A6DBA8-091026AC",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 23,
+      "name": "MaterialExpressionScalarParameter_19",
+      "cls": -3,
+      "template": null,
+      "size": 168,
+      "offset": 17235,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionScalarParameter",
+      "source": {
+        "Type": "MaterialExpressionScalarParameter",
+        "Name": "MaterialExpressionScalarParameter_19",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "DefaultValue": 1.0,
+          "ParameterName": "HeightBlend Origin_TintColor",
+          "ExpressionGUID": "78E37CE5-40F9949C-1F16D68C-7E803C9C",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 24,
+      "name": "MaterialExpressionScalarParameter_2",
+      "cls": -3,
+      "template": null,
+      "size": 168,
+      "offset": 17403,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionScalarParameter",
+      "source": {
+        "Type": "MaterialExpressionScalarParameter",
+        "Name": "MaterialExpressionScalarParameter_2",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "DefaultValue": 1.0,
+          "ParameterName": "Texcoord_01_R",
+          "ExpressionGUID": "FB66CBCC-44A2BCCE-452C5189-76F2518D",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 25,
+      "name": "MaterialExpressionScalarParameter_20",
+      "cls": -3,
+      "template": null,
+      "size": 168,
+      "offset": 17571,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionScalarParameter",
+      "source": {
+        "Type": "MaterialExpressionScalarParameter",
+        "Name": "MaterialExpressionScalarParameter_20",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "DefaultValue": 1.0,
+          "ParameterName": "HeightBlend Origin OverCover",
+          "ExpressionGUID": "84953420-4AC3B4F9-ADD1239B-09D8F61B",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 26,
+      "name": "MaterialExpressionScalarParameter_3",
+      "cls": -3,
+      "template": null,
+      "size": 168,
+      "offset": 17739,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionScalarParameter",
+      "source": {
+        "Type": "MaterialExpressionScalarParameter",
+        "Name": "MaterialExpressionScalarParameter_3",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "DefaultValue": 1.0,
+          "ParameterName": "Texcoord_02_G",
+          "ExpressionGUID": "4E00E3E8-44EAE969-B4BE1989-96886AE5",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 27,
+      "name": "MaterialExpressionScalarParameter_4",
+      "cls": -3,
+      "template": null,
+      "size": 168,
+      "offset": 17907,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionScalarParameter",
+      "source": {
+        "Type": "MaterialExpressionScalarParameter",
+        "Name": "MaterialExpressionScalarParameter_4",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "DefaultValue": 5.0,
+          "ParameterName": "Heightblend Hardness",
+          "ExpressionGUID": "379848B6-4A121716-7285A98B-AB5C8B9E",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 28,
+      "name": "MaterialExpressionScalarParameter_5",
+      "cls": -3,
+      "template": null,
+      "size": 168,
+      "offset": 18075,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionScalarParameter",
+      "source": {
+        "Type": "MaterialExpressionScalarParameter",
+        "Name": "MaterialExpressionScalarParameter_5",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "DefaultValue": 4.0,
+          "ParameterName": "DetailNormalTiling",
+          "ExpressionGUID": "284F9400-4F6A5B9C-024890A8-1A7EEBFF",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 29,
+      "name": "MaterialExpressionScalarParameter_6",
+      "cls": -3,
+      "template": null,
+      "size": 168,
+      "offset": 18243,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionScalarParameter",
+      "source": {
+        "Type": "MaterialExpressionScalarParameter",
+        "Name": "MaterialExpressionScalarParameter_6",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "DefaultValue": 1.0,
+          "ParameterName": "Layer01Roughness",
+          "ExpressionGUID": "A46D3AA0-4EB01429-68A22C96-CD9158DB",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 30,
+      "name": "MaterialExpressionScalarParameter_8",
+      "cls": -3,
+      "template": null,
+      "size": 168,
+      "offset": 18411,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionScalarParameter",
+      "source": {
+        "Type": "MaterialExpressionScalarParameter",
+        "Name": "MaterialExpressionScalarParameter_8",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "DefaultValue": 1.0,
+          "ParameterName": "Layer02Roughness",
+          "ExpressionGUID": "3D802F65-4699016B-E7BBCBBC-9C0443F4",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 31,
+      "name": "MaterialExpressionScalarParameter_9",
+      "cls": -3,
+      "template": null,
+      "size": 168,
+      "offset": 18579,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionScalarParameter",
+      "source": {
+        "Type": "MaterialExpressionScalarParameter",
+        "Name": "MaterialExpressionScalarParameter_9",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "DefaultValue": 1.0,
+          "ParameterName": "Heightblend Base Scale",
+          "ExpressionGUID": "55A009EA-4F28D88F-D1C535BA-27813E99",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 32,
+      "name": "MaterialExpressionStaticSwitchParameter_0",
+      "cls": -4,
+      "template": null,
+      "size": 343,
+      "offset": 18747,
+      "type": "CUE4Parse.UE4.Assets.Exports.UObject",
+      "source": {
+        "Type": "MaterialExpressionStaticSwitchParameter",
+        "Name": "MaterialExpressionStaticSwitchParameter_0",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionStaticSwitchParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "A": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionMaterialFunctionCall_13"
+          },
+          "B": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionConstant3Vector_0"
+          },
+          "DefaultValue": true,
+          "ParameterName": "Use WetPass",
+          "ExpressionGUID": "65DA93ED-43EA0104-DD1C5A98-3B871408",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 33,
+      "name": "MaterialExpressionStaticSwitchParameter_1",
+      "cls": -4,
+      "template": null,
+      "size": 317,
+      "offset": 19090,
+      "type": "CUE4Parse.UE4.Assets.Exports.UObject",
+      "source": {
+        "Type": "MaterialExpressionStaticSwitchParameter",
+        "Name": "MaterialExpressionStaticSwitchParameter_1",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionStaticSwitchParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "A": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 1,
+            "MaskR": 1,
+            "MaskG": 1,
+            "MaskB": 1,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionAtlasBatchNumericArgument_0"
+          },
+          "B": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 1,
+            "MaskR": 1,
+            "MaskG": 1,
+            "MaskB": 1,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionVectorParameter_0"
+          },
+          "ParameterName": "UseAtlas",
+          "ExpressionGUID": "E4198267-4FB52EDE-4533AF84-2A4D77AC",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 34,
+      "name": "MaterialExpressionStaticSwitchParameter_11",
+      "cls": -4,
+      "template": null,
+      "size": 317,
+      "offset": 19407,
+      "type": "CUE4Parse.UE4.Assets.Exports.UObject",
+      "source": {
+        "Type": "MaterialExpressionStaticSwitchParameter",
+        "Name": "MaterialExpressionStaticSwitchParameter_11",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionStaticSwitchParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "A": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionMaterialFunctionCall_3"
+          },
+          "B": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionSaturate_2"
+          },
+          "ParameterName": "OpenNewHeightBlend",
+          "ExpressionGUID": "769DB1A3-4E5830BE-5B4159AA-C5F27464",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 35,
+      "name": "MaterialExpressionStaticSwitchParameter_12",
+      "cls": -4,
+      "template": null,
+      "size": 317,
+      "offset": 19724,
+      "type": "CUE4Parse.UE4.Assets.Exports.UObject",
+      "source": {
+        "Type": "MaterialExpressionStaticSwitchParameter",
+        "Name": "MaterialExpressionStaticSwitchParameter_12",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionStaticSwitchParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "A": {
+            "Expression": null,
+            "OutputIndex": 1,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionMaterialFunctionCall_3"
+          },
+          "B": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionReroute_16"
+          },
+          "ParameterName": "OpenNewHeightBlend",
+          "ExpressionGUID": "E73CBF76-4AE45CE6-EC1207B2-A2204ABE",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 36,
+      "name": "MaterialExpressionStaticSwitchParameter_5",
+      "cls": -4,
+      "template": null,
+      "size": 317,
+      "offset": 20041,
+      "type": "CUE4Parse.UE4.Assets.Exports.UObject",
+      "source": {
+        "Type": "MaterialExpressionStaticSwitchParameter",
+        "Name": "MaterialExpressionStaticSwitchParameter_5",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionStaticSwitchParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "A": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 1,
+            "MaskR": 1,
+            "MaskG": 1,
+            "MaskB": 1,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionAtlasBatchNumericArgument_1"
+          },
+          "B": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 1,
+            "MaskR": 1,
+            "MaskG": 1,
+            "MaskB": 1,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionVectorParameter_1"
+          },
+          "ParameterName": "UseAtlas",
+          "ExpressionGUID": "7865A3A0-4A764042-33D06BB8-78B32F4D",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 37,
+      "name": "MaterialExpressionStaticSwitchParameter_6",
+      "cls": -4,
+      "template": null,
+      "size": 317,
+      "offset": 20358,
+      "type": "CUE4Parse.UE4.Assets.Exports.UObject",
+      "source": {
+        "Type": "MaterialExpressionStaticSwitchParameter",
+        "Name": "MaterialExpressionStaticSwitchParameter_6",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionStaticSwitchParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "A": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionMakeMaterialAttributes_13"
+          },
+          "B": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionMaterialFunctionCall_38"
+          },
+          "ParameterName": "Single Layers?",
+          "ExpressionGUID": "6A72A328-4ED1720A-5CFB5ABF-621C12CA",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 38,
+      "name": "MaterialExpressionStaticSwitchParameter_8",
+      "cls": -4,
+      "template": null,
+      "size": 317,
+      "offset": 20675,
+      "type": "CUE4Parse.UE4.Assets.Exports.UObject",
+      "source": {
+        "Type": "MaterialExpressionStaticSwitchParameter",
+        "Name": "MaterialExpressionStaticSwitchParameter_8",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionStaticSwitchParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "A": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionMaterialFunctionCall_15"
+          },
+          "B": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionStaticSwitchParameter_6"
+          },
+          "ParameterName": "Three Layers?",
+          "ExpressionGUID": "6AC072CD-40C5A1F5-0B9ECC9F-EF76DFDD",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 39,
+      "name": "MaterialExpressionTextureObjectParameter_3",
+      "cls": -5,
+      "template": null,
+      "size": 242,
+      "offset": 20992,
+      "type": "CUE4Parse.UE4.Assets.Exports.UObject",
+      "source": {
+        "Type": "MaterialExpressionTextureObjectParameter",
+        "Name": "MaterialExpressionTextureObjectParameter_3",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionTextureObjectParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "ParameterName": "01_R_Base",
+          "ExpressionGUID": "42A38FC3-4E709B52-C93046B3-8C1CB0E5",
+          "Group": "AssetDataLayer",
+          "Texture": {
+            "ObjectName": "Texture2D'T_Default_Gray_SRGB_SVT'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/Textures/SVT_Default/T_Default_Gray_SRGB_SVT.0"
+          },
+          "SamplerType": "SAMPLERTYPE_VirtualColor",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 40,
+      "name": "MaterialExpressionTextureObjectParameter_4",
+      "cls": -5,
+      "template": null,
+      "size": 242,
+      "offset": 21234,
+      "type": "CUE4Parse.UE4.Assets.Exports.UObject",
+      "source": {
+        "Type": "MaterialExpressionTextureObjectParameter",
+        "Name": "MaterialExpressionTextureObjectParameter_4",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionTextureObjectParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "ParameterName": "01_R_Normal",
+          "ExpressionGUID": "8F9D2EDC-45AA2ED8-16F5CEAD-2E13AA9E",
+          "Group": "AssetDataLayer",
+          "Texture": {
+            "ObjectName": "Texture2D'T_Default_StandardNormal_SVT'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/Textures/SVT_Default/T_Default_StandardNormal_SVT.0"
+          },
+          "SamplerType": "SAMPLERTYPE_VirtualNormal",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 41,
+      "name": "MaterialExpressionTextureObjectParameter_5",
+      "cls": -5,
+      "template": null,
+      "size": 242,
+      "offset": 21476,
+      "type": "CUE4Parse.UE4.Assets.Exports.UObject",
+      "source": {
+        "Type": "MaterialExpressionTextureObjectParameter",
+        "Name": "MaterialExpressionTextureObjectParameter_5",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionTextureObjectParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "ParameterName": "02_G_Base",
+          "ExpressionGUID": "45782BF8-4621EF27-9E16DBA5-D2BD2BE1",
+          "Group": "AssetDataLayer",
+          "Texture": {
+            "ObjectName": "Texture2D'T_Default_Gray_SRGB_SVT'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/Textures/SVT_Default/T_Default_Gray_SRGB_SVT.0"
+          },
+          "SamplerType": "SAMPLERTYPE_VirtualColor",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 42,
+      "name": "MaterialExpressionTextureObjectParameter_6",
+      "cls": -5,
+      "template": null,
+      "size": 242,
+      "offset": 21718,
+      "type": "CUE4Parse.UE4.Assets.Exports.UObject",
+      "source": {
+        "Type": "MaterialExpressionTextureObjectParameter",
+        "Name": "MaterialExpressionTextureObjectParameter_6",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionTextureObjectParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "ParameterName": "02_G_Normal",
+          "ExpressionGUID": "44A34886-46C70259-FDEC2195-DA5F0934",
+          "Group": "AssetDataLayer",
+          "Texture": {
+            "ObjectName": "Texture2D'T_Default_StandardNormal_SVT'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/Textures/SVT_Default/T_Default_StandardNormal_SVT.0"
+          },
+          "SamplerType": "SAMPLERTYPE_VirtualNormal",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 43,
+      "name": "MaterialExpressionTextureObjectParameter_7",
+      "cls": -5,
+      "template": null,
+      "size": 242,
+      "offset": 21960,
+      "type": "CUE4Parse.UE4.Assets.Exports.UObject",
+      "source": {
+        "Type": "MaterialExpressionTextureObjectParameter",
+        "Name": "MaterialExpressionTextureObjectParameter_7",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionTextureObjectParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "ParameterName": "01_R_MRA",
+          "ExpressionGUID": "8AFF7AF7-423FBF9B-9499D9BA-10B98E01",
+          "Group": "AssetDataLayer",
+          "Texture": {
+            "ObjectName": "Texture2D'T_Default_MRA_SVT'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/Textures/SVT_Default/T_Default_MRA_SVT.0"
+          },
+          "SamplerType": "SAMPLERTYPE_VirtualLinearColor",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 44,
+      "name": "MaterialExpressionTextureObjectParameter_8",
+      "cls": -5,
+      "template": null,
+      "size": 242,
+      "offset": 22202,
+      "type": "CUE4Parse.UE4.Assets.Exports.UObject",
+      "source": {
+        "Type": "MaterialExpressionTextureObjectParameter",
+        "Name": "MaterialExpressionTextureObjectParameter_8",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionTextureObjectParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "ParameterName": "02_G_MRA",
+          "ExpressionGUID": "43ACF6B5-499B787D-E9415AB9-96EE3F95",
+          "Group": "AssetDataLayer",
+          "Texture": {
+            "ObjectName": "Texture2D'T_Default_MRA_SVT'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/Textures/SVT_Default/T_Default_MRA_SVT.0"
+          },
+          "SamplerType": "SAMPLERTYPE_VirtualLinearColor",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 45,
+      "name": "MaterialExpressionTextureObjectParameter_9",
+      "cls": -5,
+      "template": null,
+      "size": 242,
+      "offset": 22444,
+      "type": "CUE4Parse.UE4.Assets.Exports.UObject",
+      "source": {
+        "Type": "MaterialExpressionTextureObjectParameter",
+        "Name": "MaterialExpressionTextureObjectParameter_9",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionTextureObjectParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "ParameterName": "03_B_MRA",
+          "ExpressionGUID": "8E85DE2D-4DE7BB32-BB986CA5-EB349B31",
+          "Group": "AssetDataLayer",
+          "Texture": {
+            "ObjectName": "Texture2D'T_Default_MRA_SVT'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/Textures/SVT_Default/T_Default_MRA_SVT.0"
+          },
+          "SamplerType": "SAMPLERTYPE_VirtualLinearColor",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 46,
+      "name": "MaterialExpressionTextureSample_3",
+      "cls": -6,
+      "template": null,
+      "size": 289,
+      "offset": 22686,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionTextureSample",
+      "source": {
+        "Type": "MaterialExpressionTextureSample",
+        "Name": "MaterialExpressionTextureSample_3",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionTextureSample'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "Coordinates": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionMultiply_0"
+          },
+          "TextureObject": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionTextureObjectParameter_3"
+          },
+          "SamplerSource": "SSM_Wrap_WorldGroupSettings",
+          "Texture": {
+            "ObjectName": "Texture2D'WeightMapPlaceholderTexture'",
+            "ObjectPath": "Engine/Content/EngineMaterials/WeightMapPlaceholderTexture.0"
+          },
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 47,
+      "name": "MaterialExpressionTextureSample_4",
+      "cls": -6,
+      "template": null,
+      "size": 330,
+      "offset": 22975,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionTextureSample",
+      "source": {
+        "Type": "MaterialExpressionTextureSample",
+        "Name": "MaterialExpressionTextureSample_4",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionTextureSample'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "Coordinates": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionMultiply_0"
+          },
+          "TextureObject": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionTextureObjectParameter_4"
+          },
+          "SamplerSource": "SSM_Wrap_WorldGroupSettings",
+          "Texture": {
+            "ObjectName": "Texture2D'WeightMapPlaceholderTexture'",
+            "ObjectPath": "Engine/Content/EngineMaterials/WeightMapPlaceholderTexture.0"
+          },
+          "SamplerType": "SAMPLERTYPE_LinearColor",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 48,
+      "name": "MaterialExpressionTextureSample_5",
+      "cls": -6,
+      "template": null,
+      "size": 289,
+      "offset": 23305,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionTextureSample",
+      "source": {
+        "Type": "MaterialExpressionTextureSample",
+        "Name": "MaterialExpressionTextureSample_5",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionTextureSample'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "Coordinates": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionMultiply_1"
+          },
+          "TextureObject": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionTextureObjectParameter_5"
+          },
+          "SamplerSource": "SSM_Wrap_WorldGroupSettings",
+          "Texture": {
+            "ObjectName": "Texture2D'WeightMapPlaceholderTexture'",
+            "ObjectPath": "Engine/Content/EngineMaterials/WeightMapPlaceholderTexture.0"
+          },
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 49,
+      "name": "MaterialExpressionTextureSample_6",
+      "cls": -6,
+      "template": null,
+      "size": 330,
+      "offset": 23594,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionTextureSample",
+      "source": {
+        "Type": "MaterialExpressionTextureSample",
+        "Name": "MaterialExpressionTextureSample_6",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionTextureSample'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "Coordinates": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionMultiply_1"
+          },
+          "TextureObject": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionTextureObjectParameter_6"
+          },
+          "SamplerSource": "SSM_Wrap_WorldGroupSettings",
+          "Texture": {
+            "ObjectName": "Texture2D'WeightMapPlaceholderTexture'",
+            "ObjectPath": "Engine/Content/EngineMaterials/WeightMapPlaceholderTexture.0"
+          },
+          "SamplerType": "SAMPLERTYPE_LinearColor",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 50,
+      "name": "MaterialExpressionTextureSample_7",
+      "cls": -6,
+      "template": null,
+      "size": 330,
+      "offset": 23924,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionTextureSample",
+      "source": {
+        "Type": "MaterialExpressionTextureSample",
+        "Name": "MaterialExpressionTextureSample_7",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionTextureSample'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "Coordinates": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionMultiply_0"
+          },
+          "TextureObject": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionTextureObjectParameter_7"
+          },
+          "SamplerSource": "SSM_Wrap_WorldGroupSettings",
+          "Texture": {
+            "ObjectName": "Texture2D'WeightMapPlaceholderTexture'",
+            "ObjectPath": "Engine/Content/EngineMaterials/WeightMapPlaceholderTexture.0"
+          },
+          "SamplerType": "SAMPLERTYPE_LinearColor",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 51,
+      "name": "MaterialExpressionTextureSample_8",
+      "cls": -6,
+      "template": null,
+      "size": 330,
+      "offset": 24254,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionTextureSample",
+      "source": {
+        "Type": "MaterialExpressionTextureSample",
+        "Name": "MaterialExpressionTextureSample_8",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionTextureSample'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "Coordinates": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionMultiply_1"
+          },
+          "TextureObject": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionTextureObjectParameter_8"
+          },
+          "SamplerSource": "SSM_Wrap_WorldGroupSettings",
+          "Texture": {
+            "ObjectName": "Texture2D'WeightMapPlaceholderTexture'",
+            "ObjectPath": "Engine/Content/EngineMaterials/WeightMapPlaceholderTexture.0"
+          },
+          "SamplerType": "SAMPLERTYPE_LinearColor",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 52,
+      "name": "MaterialExpressionTextureSample_9",
+      "cls": -6,
+      "template": null,
+      "size": 241,
+      "offset": 24584,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionTextureSample",
+      "source": {
+        "Type": "MaterialExpressionTextureSample",
+        "Name": "MaterialExpressionTextureSample_9",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionTextureSample'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "TextureObject": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionTextureObjectParameter_9"
+          },
+          "SamplerSource": "SSM_Wrap_WorldGroupSettings",
+          "Texture": {
+            "ObjectName": "Texture2D'WeightMapPlaceholderTexture'",
+            "ObjectPath": "Engine/Content/EngineMaterials/WeightMapPlaceholderTexture.0"
+          },
+          "SamplerType": "SAMPLERTYPE_LinearColor",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 53,
+      "name": "MaterialExpressionTextureSampleParameter2D_0",
+      "cls": -7,
+      "template": null,
+      "size": 339,
+      "offset": 24825,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionTextureSampleParameter2D",
+      "source": {
+        "Type": "MaterialExpressionTextureSampleParameter2D",
+        "Name": "MaterialExpressionTextureSampleParameter2D_0",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionTextureSampleParameter2D'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "ParameterName": "DetailNormal",
+          "ExpressionGUID": "BBEAFCD1-4F9665FA-2B98A889-9B02D894",
+          "Coordinates": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionMultiply_7"
+          },
+          "SamplerSource": "SSM_Wrap_WorldGroupSettings",
+          "Texture": {
+            "ObjectName": "Texture2D'T_Default_StandardNormal_SVT'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/Textures/SVT_Default/T_Default_StandardNormal_SVT.0"
+          },
+          "SamplerType": "SAMPLERTYPE_VirtualNormal",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 54,
+      "name": "MaterialExpressionTextureSampleParameter2D_1",
+      "cls": -7,
+      "template": null,
+      "size": 372,
+      "offset": 25164,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionTextureSampleParameter2D",
+      "source": {
+        "Type": "MaterialExpressionTextureSampleParameter2D",
+        "Name": "MaterialExpressionTextureSampleParameter2D_1",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionTextureSampleParameter2D'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "ParameterName": "03_B_Base",
+          "ExpressionGUID": "E5222A01-4F48D7FC-979FC1B7-FEC9F5BA",
+          "Group": "AssetDataLayer",
+          "Coordinates": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionMultiply_11"
+          },
+          "SamplerSource": "SSM_Wrap_WorldGroupSettings",
+          "Texture": {
+            "ObjectName": "Texture2D'T_Default_Gray_SRGB_SVT'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/Textures/SVT_Default/T_Default_Gray_SRGB_SVT.0"
+          },
+          "SamplerType": "SAMPLERTYPE_VirtualColor",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 55,
+      "name": "MaterialExpressionTextureSampleParameter2D_2",
+      "cls": -7,
+      "template": null,
+      "size": 372,
+      "offset": 25536,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionTextureSampleParameter2D",
+      "source": {
+        "Type": "MaterialExpressionTextureSampleParameter2D",
+        "Name": "MaterialExpressionTextureSampleParameter2D_2",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionTextureSampleParameter2D'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "ParameterName": "03_B_Normal",
+          "ExpressionGUID": "20E90A65-4B1CD69D-C2930A9F-FC523299",
+          "Group": "AssetDataLayer",
+          "Coordinates": {
+            "Expression": null,
+            "OutputIndex": 0,
+            "InputName": "None",
+            "Mask": 0,
+            "MaskR": 0,
+            "MaskG": 0,
+            "MaskB": 0,
+            "MaskA": 0,
+            "ExpressionName": "MaterialExpressionMultiply_11"
+          },
+          "SamplerSource": "SSM_Wrap_WorldGroupSettings",
+          "Texture": {
+            "ObjectName": "Texture2D'T_Default_StandardNormal_SVT'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/Textures/SVT_Default/T_Default_StandardNormal_SVT.0"
+          },
+          "SamplerType": "SAMPLERTYPE_VirtualNormal",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 56,
+      "name": "MaterialExpressionTextureSampleParameter2D_6",
+      "cls": -7,
+      "template": null,
+      "size": 283,
+      "offset": 25908,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionTextureSampleParameter2D",
+      "source": {
+        "Type": "MaterialExpressionTextureSampleParameter2D",
+        "Name": "MaterialExpressionTextureSampleParameter2D_6",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionTextureSampleParameter2D'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "ParameterName": "NormalMap",
+          "ExpressionGUID": "E69DA160-4D7B7416-00DAB896-5922017A",
+          "Group": "AssetDataLayer",
+          "SamplerSource": "SSM_Wrap_WorldGroupSettings",
+          "Texture": {
+            "ObjectName": "Texture2D'T_Default_StandardNormal_SVT'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/Textures/SVT_Default/T_Default_StandardNormal_SVT.0"
+          },
+          "SamplerType": "SAMPLERTYPE_VirtualNormal",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 57,
+      "name": "MaterialExpressionVectorParameter_0",
+      "cls": -8,
+      "template": null,
+      "size": 204,
+      "offset": 26191,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionVectorParameter",
+      "source": {
+        "Type": "MaterialExpressionVectorParameter",
+        "Name": "MaterialExpressionVectorParameter_0",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionVectorParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "DefaultValue": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "FFFFFF"
+          },
+          "ParameterName": "BaseColorScaler_01_R",
+          "ExpressionGUID": "47B29D6B-41C196EE-CD23A3AF-749E0D2A",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 58,
+      "name": "MaterialExpressionVectorParameter_1",
+      "cls": -8,
+      "template": null,
+      "size": 204,
+      "offset": 26395,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionVectorParameter",
+      "source": {
+        "Type": "MaterialExpressionVectorParameter",
+        "Name": "MaterialExpressionVectorParameter_1",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionVectorParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "DefaultValue": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "FFFFFF"
+          },
+          "ParameterName": "BaseColorScaler_02_G",
+          "ExpressionGUID": "0407B4D9-4091EEBF-3F305E95-E71E50FB",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 59,
+      "name": "MaterialExpressionVectorParameter_2",
+      "cls": -8,
+      "template": null,
+      "size": 204,
+      "offset": 26599,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionVectorParameter",
+      "source": {
+        "Type": "MaterialExpressionVectorParameter",
+        "Name": "MaterialExpressionVectorParameter_2",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionVectorParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "DefaultValue": {
+            "R": 0.930555,
+            "G": 0.930555,
+            "B": 0.930555,
+            "A": 0.0,
+            "Hex": "F8F8F8"
+          },
+          "ParameterName": "Layer01Tint",
+          "ExpressionGUID": "2BD35CAE-4AA99909-3319E8A5-C9063D04",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 60,
+      "name": "MaterialExpressionVectorParameter_3",
+      "cls": -8,
+      "template": null,
+      "size": 204,
+      "offset": 26803,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionVectorParameter",
+      "source": {
+        "Type": "MaterialExpressionVectorParameter",
+        "Name": "MaterialExpressionVectorParameter_3",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionVectorParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "DefaultValue": {
+            "R": 0.930555,
+            "G": 0.930555,
+            "B": 0.930555,
+            "A": 0.0,
+            "Hex": "F8F8F8"
+          },
+          "ParameterName": "Layer02Tint",
+          "ExpressionGUID": "6BB2D6BC-4C21F7DC-F7866995-6660C9DE",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 61,
+      "name": "MaterialExpressionVectorParameter_4",
+      "cls": -8,
+      "template": null,
+      "size": 204,
+      "offset": 27007,
+      "type": "CUE4Parse.UE4.Assets.Exports.Material.UMaterialExpressionVectorParameter",
+      "source": {
+        "Type": "MaterialExpressionVectorParameter",
+        "Name": "MaterialExpressionVectorParameter_4",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialExpressionVectorParameter'",
+        "Outer": {
+          "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+          "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+        },
+        "Properties": {
+          "DefaultValue": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "FFFFFF"
+          },
+          "ParameterName": "BaseColorScaler_03_B",
+          "ExpressionGUID": "B61173B4-4F05335A-2E49A184-B7BE5F16",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_TwoLayer_Props_MatBlend'",
+            "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62"
+          }
+        }
+      },
+      "probe": null
+    },
+    {
+      "index": 62,
+      "name": "MF_TwoLayer_Props_MatBlend",
+      "cls": -9,
+      "template": null,
+      "size": 679,
+      "offset": 27211,
+      "type": "RawProbe",
+      "source": {
+        "Type": "MaterialFunction",
+        "Name": "MF_TwoLayer_Props_MatBlend",
+        "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'MaterialFunction'",
+        "Package": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend",
+        "Properties": {
+          "Description": "Texture(3)-Sampler(3)",
+          "FunctionExpressions": [
+            null,
+            {
+              "ObjectName": "MaterialExpressionQualitySwitch'MF_TwoLayer_Props_MatBlend:MaterialExpressionQualitySwitch_3'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.15"
+            },
+            null,
+            null,
+            {
+              "ObjectName": "MaterialExpressionQualitySwitch'MF_TwoLayer_Props_MatBlend:MaterialExpressionQualitySwitch_0'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.13"
+            },
+            {
+              "ObjectName": "MaterialExpressionQualitySwitch'MF_TwoLayer_Props_MatBlend:MaterialExpressionQualitySwitch_1'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.14"
+            },
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            {
+              "ObjectName": "MaterialExpressionMaterialFunctionCall'MF_TwoLayer_Props_MatBlend:MaterialExpressionMaterialFunctionCall_38'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.9"
+            },
+            null,
+            null,
+            null,
+            null,
+            {
+              "ObjectName": "MaterialExpressionScalarParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionScalarParameter_4'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.27"
+            },
+            null,
+            null,
+            {
+              "ObjectName": "MaterialExpressionScalarParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionScalarParameter_9'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.31"
+            },
+            {
+              "ObjectName": "MaterialExpressionScalarParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionScalarParameter_11'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.19"
+            },
+            null,
+            null,
+            {
+              "ObjectName": "MaterialExpressionScalarParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionScalarParameter_13'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.21"
+            },
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            {
+              "ObjectName": "MaterialExpressionScalarParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionScalarParameter_2'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.24"
+            },
+            {
+              "ObjectName": "MaterialExpressionMaterialFunctionCall'MF_TwoLayer_Props_MatBlend:MaterialExpressionMaterialFunctionCall_2'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.6"
+            },
+            {
+              "ObjectName": "MaterialExpressionMaterialFunctionCall'MF_TwoLayer_Props_MatBlend:MaterialExpressionMaterialFunctionCall_4'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.10"
+            },
+            {
+              "ObjectName": "MaterialExpressionTextureObjectParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionTextureObjectParameter_3'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.39"
+            },
+            {
+              "ObjectName": "MaterialExpressionTextureSample'MF_TwoLayer_Props_MatBlend:MaterialExpressionTextureSample_3'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.46"
+            },
+            {
+              "ObjectName": "MaterialExpressionTextureObjectParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionTextureObjectParameter_4'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.40"
+            },
+            {
+              "ObjectName": "MaterialExpressionTextureSample'MF_TwoLayer_Props_MatBlend:MaterialExpressionTextureSample_4'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.47"
+            },
+            null,
+            {
+              "ObjectName": "MaterialExpressionVectorParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionVectorParameter_0'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.57"
+            },
+            {
+              "ObjectName": "MaterialExpressionStaticSwitchParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionStaticSwitchParameter_1'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.33"
+            },
+            null,
+            {
+              "ObjectName": "MaterialExpressionScalarParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionScalarParameter_3'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.26"
+            },
+            null,
+            {
+              "ObjectName": "MaterialExpressionTextureSample'MF_TwoLayer_Props_MatBlend:MaterialExpressionTextureSample_5'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.48"
+            },
+            {
+              "ObjectName": "MaterialExpressionTextureObjectParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionTextureObjectParameter_5'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.41"
+            },
+            {
+              "ObjectName": "MaterialExpressionTextureObjectParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionTextureObjectParameter_6'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.42"
+            },
+            {
+              "ObjectName": "MaterialExpressionTextureSample'MF_TwoLayer_Props_MatBlend:MaterialExpressionTextureSample_6'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.49"
+            },
+            {
+              "ObjectName": "MaterialExpressionMaterialFunctionCall'MF_TwoLayer_Props_MatBlend:MaterialExpressionMaterialFunctionCall_8'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.11"
+            },
+            {
+              "ObjectName": "MaterialExpressionMaterialFunctionCall'MF_TwoLayer_Props_MatBlend:MaterialExpressionMaterialFunctionCall_9'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.12"
+            },
+            null,
+            {
+              "ObjectName": "MaterialExpressionVectorParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionVectorParameter_1'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.58"
+            },
+            {
+              "ObjectName": "MaterialExpressionStaticSwitchParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionStaticSwitchParameter_5'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.36"
+            },
+            {
+              "ObjectName": "MaterialExpressionTextureSampleParameter2D'MF_TwoLayer_Props_MatBlend:MaterialExpressionTextureSampleParameter2D_6'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.56"
+            },
+            {
+              "ObjectName": "MaterialExpressionMaterialFunctionCall'MF_TwoLayer_Props_MatBlend:MaterialExpressionMaterialFunctionCall_11'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.2"
+            },
+            {
+              "ObjectName": "MaterialExpressionTextureSample'MF_TwoLayer_Props_MatBlend:MaterialExpressionTextureSample_7'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.50"
+            },
+            {
+              "ObjectName": "MaterialExpressionTextureObjectParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionTextureObjectParameter_7'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.43"
+            },
+            {
+              "ObjectName": "MaterialExpressionTextureSample'MF_TwoLayer_Props_MatBlend:MaterialExpressionTextureSample_8'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.51"
+            },
+            {
+              "ObjectName": "MaterialExpressionTextureObjectParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionTextureObjectParameter_8'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.44"
+            },
+            null,
+            null,
+            {
+              "ObjectName": "MaterialExpressionVectorParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionVectorParameter_2'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.59"
+            },
+            {
+              "ObjectName": "MaterialExpressionScalarParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionScalarParameter_6'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.29"
+            },
+            null,
+            null,
+            null,
+            {
+              "ObjectName": "MaterialExpressionVectorParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionVectorParameter_3'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.60"
+            },
+            null,
+            null,
+            null,
+            null,
+            null,
+            {
+              "ObjectName": "MaterialExpressionScalarParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionScalarParameter_8'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.30"
+            },
+            null,
+            {
+              "ObjectName": "MaterialExpressionScalarParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionScalarParameter_1'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.17"
+            },
+            null,
+            null,
+            {
+              "ObjectName": "MaterialExpressionScalarParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionScalarParameter_12'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.20"
+            },
+            null,
+            {
+              "ObjectName": "MaterialExpressionScalarParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionScalarParameter_14'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.22"
+            },
+            {
+              "ObjectName": "MaterialExpressionStaticSwitchParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionStaticSwitchParameter_6'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.37"
+            },
+            null,
+            null,
+            {
+              "ObjectName": "MaterialExpressionTextureSampleParameter2D'MF_TwoLayer_Props_MatBlend:MaterialExpressionTextureSampleParameter2D_1'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.54"
+            },
+            {
+              "ObjectName": "MaterialExpressionTextureSampleParameter2D'MF_TwoLayer_Props_MatBlend:MaterialExpressionTextureSampleParameter2D_2'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.55"
+            },
+            null,
+            {
+              "ObjectName": "MaterialExpressionScalarParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionScalarParameter_0'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.16"
+            },
+            null,
+            null,
+            {
+              "ObjectName": "MaterialExpressionVectorParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionVectorParameter_4'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.61"
+            },
+            null,
+            {
+              "ObjectName": "MaterialExpressionTextureObjectParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionTextureObjectParameter_9'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.45"
+            },
+            {
+              "ObjectName": "MaterialExpressionTextureSample'MF_TwoLayer_Props_MatBlend:MaterialExpressionTextureSample_9'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.52"
+            },
+            {
+              "ObjectName": "MaterialExpressionMaterialFunctionCall'MF_TwoLayer_Props_MatBlend:MaterialExpressionMaterialFunctionCall_15'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.4"
+            },
+            {
+              "ObjectName": "MaterialExpressionStaticSwitchParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionStaticSwitchParameter_8'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.38"
+            },
+            {
+              "ObjectName": "MaterialExpressionMaterialFunctionCall'MF_TwoLayer_Props_MatBlend:MaterialExpressionMaterialFunctionCall_19'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.5"
+            },
+            {
+              "ObjectName": "MaterialExpressionScalarParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionScalarParameter_19'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.23"
+            },
+            null,
+            null,
+            {
+              "ObjectName": "MaterialExpressionMaterialFunctionCall'MF_TwoLayer_Props_MatBlend:MaterialExpressionMaterialFunctionCall_20'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.7"
+            },
+            null,
+            null,
+            {
+              "ObjectName": "MaterialExpressionScalarParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionScalarParameter_5'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.28"
+            },
+            {
+              "ObjectName": "MaterialExpressionTextureSampleParameter2D'MF_TwoLayer_Props_MatBlend:MaterialExpressionTextureSampleParameter2D_0'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.53"
+            },
+            {
+              "ObjectName": "MaterialExpressionMaterialFunctionCall'MF_TwoLayer_Props_MatBlend:MaterialExpressionMaterialFunctionCall_13'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.3"
+            },
+            {
+              "ObjectName": "MaterialExpressionScalarParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionScalarParameter_10'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.18"
+            },
+            null,
+            {
+              "ObjectName": "MaterialExpressionMaterialFunctionCall'MF_TwoLayer_Props_MatBlend:MaterialExpressionMaterialFunctionCall_1'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.1"
+            },
+            {
+              "ObjectName": "MaterialExpressionMaterialFunctionCall'MF_TwoLayer_Props_MatBlend:MaterialExpressionMaterialFunctionCall_3'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.8"
+            },
+            null,
+            null,
+            {
+              "ObjectName": "MaterialExpressionStaticSwitchParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionStaticSwitchParameter_11'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.34"
+            },
+            null,
+            {
+              "ObjectName": "MaterialExpressionScalarParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionScalarParameter_20'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.25"
+            },
+            null,
+            {
+              "ObjectName": "MaterialExpressionStaticSwitchParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionStaticSwitchParameter_12'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.35"
+            },
+            {
+              "ObjectName": "MaterialExpressionMaterialFunctionCall'MF_TwoLayer_Props_MatBlend:MaterialExpressionMaterialFunctionCall_0'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.0"
+            },
+            null,
+            {
+              "ObjectName": "MaterialExpressionStaticSwitchParameter'MF_TwoLayer_Props_MatBlend:MaterialExpressionStaticSwitchParameter_0'",
+              "ObjectPath": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.32"
+            },
+            null
+          ],
+          "bExposeToLibrary": true,
+          "StateId": "EE3FC1EC-46371D0F-E0BCD5A2-813DFBA3"
+        }
+      },
+      "probe": {
+        "start": 13582,
+        "end": 14261,
+        "size": 679,
+        "consumed": 679,
+        "tail": 0,
+        "rawSHA256": "79B35128C06880019620760BDE072BB3170DEF010AB584AF372BAE85FF5AE3D7",
+        "tagNames": [
+          "Description",
+          "FunctionExpressions",
+          "bExposeToLibrary",
+          "StateId"
+        ],
+        "unversioned": false,
+        "rawHex": "310000000000000072000000000000001A000000000000000016000000546578747572652833292D53616D706C6572283329003C000000000000001800000000000000EC010000000000006500000000000000007A000000000000001000000000000000000000000E0000000F000000000000000000000000000000000000000000000000000000000000000A000000000000000000000000000000000000001C000000000000000000000020000000140000000000000000000000160000000000000000000000000000000000000000000000000000000000000019000000070000000B000000280000002F0000002900000030000000000000003A00000022000000000000001B00000000000000310000002A0000002B000000320000000C0000000D000000000000003B000000250000003900000003000000330000002C000000340000002D00000000000000000000003C0000001E0000000000000000000000000000003D00000000000000000000000000000000000000000000001F000000000000001200000000000000000000001500000000000000170000002600000000000000000000003700000038000000000000001100000000000000000000003E000000000000002E000000350000000500000027000000060000001800000000000000000000000800000000000000000000001D000000360000000400000013000000000000000200000009000000000000000000000023000000000000001A0000000000000024000000010000000000000021000000000000001E000000000000002000000000000000000000000000000001007100000000000000730000000000000010000000000000003E000000000000000000000000000000000000000000000000ECC13FEE0F1D3746A2D5BCE0A3FB3D81630000000000000000000000"
+      }
+    }
+  ],
+  "imports": [
+    {
+      "name": "MaterialExpressionMaterialFunctionCall",
+      "cls": "Class",
+      "outer": -37
+    },
+    {
+      "name": "MaterialExpressionQualitySwitch",
+      "cls": "Class",
+      "outer": -37
+    },
+    {
+      "name": "MaterialExpressionScalarParameter",
+      "cls": "Class",
+      "outer": -37
+    },
+    {
+      "name": "MaterialExpressionStaticSwitchParameter",
+      "cls": "Class",
+      "outer": -37
+    },
+    {
+      "name": "MaterialExpressionTextureObjectParameter",
+      "cls": "Class",
+      "outer": -37
+    },
+    {
+      "name": "MaterialExpressionTextureSample",
+      "cls": "Class",
+      "outer": -37
+    },
+    {
+      "name": "MaterialExpressionTextureSampleParameter2D",
+      "cls": "Class",
+      "outer": -37
+    },
+    {
+      "name": "MaterialExpressionVectorParameter",
+      "cls": "Class",
+      "outer": -37
+    },
+    {
+      "name": "MaterialFunction",
+      "cls": "Class",
+      "outer": -37
+    },
+    {
+      "name": "Default__MaterialExpressionMaterialFunctionCall",
+      "cls": "MaterialExpressionMaterialFunctionCall",
+      "outer": -37
+    },
+    {
+      "name": "Default__MaterialExpressionQualitySwitch",
+      "cls": "MaterialExpressionQualitySwitch",
+      "outer": -37
+    },
+    {
+      "name": "Default__MaterialExpressionScalarParameter",
+      "cls": "MaterialExpressionScalarParameter",
+      "outer": -37
+    },
+    {
+      "name": "Default__MaterialExpressionStaticSwitchParameter",
+      "cls": "MaterialExpressionStaticSwitchParameter",
+      "outer": -37
+    },
+    {
+      "name": "Default__MaterialExpressionTextureObjectParameter",
+      "cls": "MaterialExpressionTextureObjectParameter",
+      "outer": -37
+    },
+    {
+      "name": "Default__MaterialExpressionTextureSample",
+      "cls": "MaterialExpressionTextureSample",
+      "outer": -37
+    },
+    {
+      "name": "Default__MaterialExpressionTextureSampleParameter2D",
+      "cls": "MaterialExpressionTextureSampleParameter2D",
+      "outer": -37
+    },
+    {
+      "name": "Default__MaterialExpressionVectorParameter",
+      "cls": "MaterialExpressionVectorParameter",
+      "outer": -37
+    },
+    {
+      "name": "FlattenNormal",
+      "cls": "MaterialFunction",
+      "outer": -27
+    },
+    {
+      "name": "BlendAngleCorrectedNormals",
+      "cls": "MaterialFunction",
+      "outer": -28
+    },
+    {
+      "name": "BreakOutFloat3Components",
+      "cls": "MaterialFunction",
+      "outer": -29
+    },
+    {
+      "name": "BreakOutFloat4Components",
+      "cls": "MaterialFunction",
+      "outer": -30
+    },
+    {
+      "name": "MakeFloat3",
+      "cls": "MaterialFunction",
+      "outer": -31
+    },
+    {
+      "name": "MatLayerBlend_Standard",
+      "cls": "MaterialFunction",
+      "outer": -32
+    },
+    {
+      "name": "MF_NewHeightBlend",
+      "cls": "MaterialFunction",
+      "outer": -33
+    },
+    {
+      "name": "Default__MaterialFunction",
+      "cls": "MaterialFunction",
+      "outer": -37
+    },
+    {
+      "name": "/Engine/EngineMaterials/WeightMapPlaceholderTexture",
+      "cls": "Package",
+      "outer": 0
+    },
+    {
+      "name": "/Engine/Functions/Engine_MaterialFunctions01/Texturing/FlattenNormal",
+      "cls": "Package",
+      "outer": 0
+    },
+    {
+      "name": "/Engine/Functions/Engine_MaterialFunctions02/Utility/BlendAngleCorrectedNormals",
+      "cls": "Package",
+      "outer": 0
+    },
+    {
+      "name": "/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components",
+      "cls": "Package",
+      "outer": 0
+    },
+    {
+      "name": "/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat4Components",
+      "cls": "Package",
+      "outer": 0
+    },
+    {
+      "name": "/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3",
+      "cls": "Package",
+      "outer": 0
+    },
+    {
+      "name": "/Engine/Functions/MaterialLayerFunctions/MatLayerBlend_Standard",
+      "cls": "Package",
+      "outer": 0
+    },
+    {
+      "name": "/Game/MaterialLib/MaterialFunctions/MF_NewHeightBlend",
+      "cls": "Package",
+      "outer": 0
+    },
+    {
+      "name": "/Game/MaterialLib/Textures/SVT_Default/T_Default_Gray_SRGB_SVT",
+      "cls": "Package",
+      "outer": 0
+    },
+    {
+      "name": "/Game/MaterialLib/Textures/SVT_Default/T_Default_MRA_SVT",
+      "cls": "Package",
+      "outer": 0
+    },
+    {
+      "name": "/Game/MaterialLib/Textures/SVT_Default/T_Default_StandardNormal_SVT",
+      "cls": "Package",
+      "outer": 0
+    },
+    {
+      "name": "/Script/Engine",
+      "cls": "Package",
+      "outer": 0
+    },
+    {
+      "name": "WeightMapPlaceholderTexture",
+      "cls": "Texture2D",
+      "outer": -26
+    },
+    {
+      "name": "T_Default_Gray_SRGB_SVT",
+      "cls": "Texture2D",
+      "outer": -34
+    },
+    {
+      "name": "T_Default_MRA_SVT",
+      "cls": "Texture2D",
+      "outer": -35
+    },
+    {
+      "name": "T_Default_StandardNormal_SVT",
+      "cls": "Texture2D",
+      "outer": -36
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "m_3539602e57f0cfec",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Residential/Bedroom/SM_H_Residential_Bedroom_Cabinet_02.SM_H_Residential_Bedroom_Cabinet_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Residential\\Bedroom\\SM_H_Residential_Bedroom_Cabinet_02.glb",
+  "sourceSHA256": "AF11225ED785CA6FBE42C30166ACD1718016F9200B7821E1CBB61A62E48164F5",
+  "model": "models/df_v24/m_3539602e57f0cfec.vmdl",
+  "materials": {
+    "mat_3229a11472f345bc": "DeltaForce/Content/Environment/Props/HAAVK/Residential/Bedroom/00_Materials/HD/MI_H_Residential_Bedroom_Cabinet_02A_HD.MI_H_Residential_Bedroom_Cabinet_02A_HD",
+    "mat_01e13fe79c4c4062": "DeltaForce/Content/Environment/Props/HAAVK/Residential/Bedroom/00_Materials/HD/MI_H_Residential_Bedroom_Cabinet_02B_HD.MI_H_Residential_Bedroom_Cabinet_02B_HD",
+    "mat_0691fd8062e3ad59": "DeltaForce/Content/Environment/Props/HAAVK/Residential/Bedroom/00_Materials/HD/MI_H_Residential_Bedroom_Cabinet_01A_HD.MI_H_Residential_Bedroom_Cabinet_01A_HD"
+  },
+  "vertices": 990,
+  "polygons": 526,
+  "bounds": [
+    [
+      0.24624788761138916,
+      -2.197265530412551e-05,
+      -2.609252987895161e-05
+    ],
+    [
+      208.22140502929688,
+      26.69530487060547,
+      127.91352844238281
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "m_64ca828a86023063",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_Dock_06b_Stair.SM_H_Building_FutureTech_Dock_06b_Stair",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_Dock_06b_Stair.glb",
+  "sourceSHA256": "A1E18AEFD447A3CFDE975D60BF43DECC05DAF590F5B9F227C3DB9553847C3086",
+  "model": "models/df_v24/m_64ca828a86023063.vmdl",
+  "materials": {
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD",
+    "mat_cf4bffa2e71ba398": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Concrete_Base_02_HD.MI_GEN_Concrete_Base_02_HD",
+    "mat_45e2c73b465457a0": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Wooden_Plank_02_HD.MI_GEN_Wooden_Plank_02_HD",
+    "mat_2321ffa234259f93": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Checkred_04_HD.MI_GEN_Marble_Checkred_04_HD",
+    "mat_e38274f16e859b4b": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Checkred_01_HD.MI_GEN_Marble_Checkred_01_HD"
+  },
+  "vertices": 13376,
+  "polygons": 10000,
+  "bounds": [
+    [
+      -248.9276885986328,
+      -220.59671020507812,
+      -209.5327606201172
+    ],
+    [
+      25.9716796875,
+      7.262490272521973,
+      0.0
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

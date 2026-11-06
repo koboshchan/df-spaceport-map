@@ -1,0 +1,26 @@
+{
+  "id": "m_f2ba056d135f262e",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Government/Lighting/SM_H_Industrial_Lighting_Leuchtstabe_01.SM_H_Industrial_Lighting_Leuchtstabe_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Government\\Lighting\\SM_H_Industrial_Lighting_Leuchtstabe_01.glb",
+  "sourceSHA256": "80CF19E1F24466D5CA19CD740342EA105626D100D8DF6376B5131F3959E97E4A",
+  "model": "models/df_v24/m_f2ba056d135f262e.vmdl",
+  "materials": {
+    "mat_aa5cee9c0e767a11": "DeltaForce/Content/Environment/Props/HAAVK/Government/Lighting/00_Materials/HD/MI_H_Industrial_Lighting_Leuchtstabe_01_HD.MI_H_Industrial_Lighting_Leuchtstabe_01_HD"
+  },
+  "vertices": 621,
+  "polygons": 742,
+  "bounds": [
+    [
+      -0.6998790502548218,
+      -10.209846496582031,
+      0.08443980664014816
+    ],
+    [
+      0.6998790502548218,
+      10.234273910522461,
+      1.485373854637146
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

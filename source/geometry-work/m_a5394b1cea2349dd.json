@@ -1,0 +1,26 @@
+{
+  "id": "m_a5394b1cea2349dd",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Industrial/Container/SM_M_Industrial_Container_TrashBag_01.SM_M_Industrial_Container_TrashBag_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Industrial\\Container\\SM_M_Industrial_Container_TrashBag_01.glb",
+  "sourceSHA256": "8800BAE32113835768E2F1FBA68521B5F6182E12E167C37653EFA703B87BC9C3",
+  "model": "models/df_v24/m_a5394b1cea2349dd.vmdl",
+  "materials": {
+    "mat_fd2251792fa3ab43": "DeltaForce/Content/Environment/Props/Morocco/Industrial/Container/00_Materials/HD/MI_M_Industrial_Container_TrashBag_01_HD.MI_M_Industrial_Container_TrashBag_01_HD"
+  },
+  "vertices": 874,
+  "polygons": 1474,
+  "bounds": [
+    [
+      -16.93779754638672,
+      -12.597832679748535,
+      1.2040238767205714e-15
+    ],
+    [
+      16.359214782714844,
+      12.522957801818848,
+      29.83483123779297
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

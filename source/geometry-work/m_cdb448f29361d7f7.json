@@ -1,0 +1,27 @@
+{
+  "id": "m_cdb448f29361d7f7",
+  "objectPath": "DeltaForce/Content/PCG/SpaceCenter_Long3/Road/Meshes_HD/SpaceCenter_Long3_GenerateRoad_Asphalt_Mesh_x108_y79_17143_HD.SpaceCenter_Long3_GenerateRoad_Asphalt_Mesh_x108_y79_17143_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\PCG\\SpaceCenter_Long3\\Road\\Meshes_HD\\SpaceCenter_Long3_GenerateRoad_Asphalt_Mesh_x108_y79_17143_HD.glb",
+  "sourceSHA256": "0230BDEA91D5A2262BCBFC93AB228A35CE4DB689B45723B0789444B5E3194283",
+  "model": "models/df_v24/m_cdb448f29361d7f7.vmdl",
+  "materials": {
+    "mat_353c7720e840fd44": "DeltaForce/Content/Environment/Biome/Terrain_HD/Road_HD/00_Materials/MI_GEN_Decal_Roadline_Example_02_HD.MI_GEN_Decal_Roadline_Example_02_HD",
+    "mat_67e076a7b2683955": "DeltaForce/Content/Environment/Biome/Terrain_HD/Road_HD/00_Materials/MI_Terrain_Road_Desert_Asphalt_01_HD.MI_Terrain_Road_Desert_Asphalt_01_HD"
+  },
+  "vertices": 164,
+  "polygons": 128,
+  "bounds": [
+    [
+      -305.90997314453125,
+      -1152.0,
+      -13.307343482971191
+    ],
+    [
+      305.9324951171875,
+      1152.0,
+      13.307343482971191
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

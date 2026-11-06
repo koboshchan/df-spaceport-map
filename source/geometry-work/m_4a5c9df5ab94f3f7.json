@@ -1,0 +1,30 @@
+{
+  "id": "m_4a5c9df5ab94f3f7",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/SM_H_FutureTech_Furniture_AirConditioning_01.SM_H_FutureTech_Furniture_AirConditioning_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\SM_H_FutureTech_Furniture_AirConditioning_01.glb",
+  "sourceSHA256": "A23894D52342F3347FA964F784820A77D1816B8F7FC45C611857182C9A906048",
+  "model": "models/df_v24/m_4a5c9df5ab94f3f7.vmdl",
+  "materials": {
+    "mat_b7fb4f3833e2407c": "DeltaForce/Content/Environment/Decal/Connect/00_Materials/HD/MI_I_Connect_Decal_01A_HD.MI_I_Connect_Decal_01A_HD",
+    "mat_14d30f1a37481a43": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Furniture_AirConditioning_01A_HD.MI_H_FutureTech_Furniture_AirConditioning_01A_HD",
+    "mat_9a78186dbc6fec31": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Furniture_AirConditioning_01_HD.MI_H_FutureTech_Furniture_AirConditioning_01_HD",
+    "mat_6731dbce846dd384": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Furniture_AirConditioning_01B_HD.MI_H_FutureTech_Furniture_AirConditioning_01B_HD",
+    "mat_9cf0ee41d80ffb9d": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_02_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_02_Decal_HD"
+  },
+  "vertices": 2067,
+  "polygons": 1742,
+  "bounds": [
+    [
+      -35.603797912597656,
+      -59.74327850341797,
+      -2.7023052098229527e-05
+    ],
+    [
+      35.6037712097168,
+      58.758209228515625,
+      96.73101806640625
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

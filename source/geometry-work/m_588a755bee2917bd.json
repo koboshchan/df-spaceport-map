@@ -1,0 +1,26 @@
+{
+  "id": "m_588a755bee2917bd",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/SM_I_WalkwayShore_MetalRailing_256_01B.SM_I_WalkwayShore_MetalRailing_256_01B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\WalkwaySystem\\SM_I_WalkwayShore_MetalRailing_256_01B.glb",
+  "sourceSHA256": "692BC2C08824D93C055E3491D41E345F6345FC414753776FA10767A9048CE59F",
+  "model": "models/df_v24/m_588a755bee2917bd.vmdl",
+  "materials": {
+    "mat_6c3691b862998475": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwayShore_Terrace_256_01_HD.MI_I_WalkwayShore_Terrace_256_01_HD"
+  },
+  "vertices": 1169,
+  "polygons": 1152,
+  "bounds": [
+    [
+      -96.66781616210938,
+      -3.81996750831604,
+      -3.433227391269611e-07
+    ],
+    [
+      2.743802547454834,
+      3.826390266418457,
+      35.544219970703125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

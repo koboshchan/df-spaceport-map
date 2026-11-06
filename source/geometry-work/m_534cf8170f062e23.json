@@ -1,0 +1,28 @@
+{
+  "id": "m_534cf8170f062e23",
+  "objectPath": "DeltaForce/Content/Environment/Structures/Building/Generic/SM_Building_Generic_Pillar_256x1024_01.SM_Building_Generic_Pillar_256x1024_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\Building\\Generic\\SM_Building_Generic_Pillar_256x1024_01.glb",
+  "sourceSHA256": "2AAF8C6EE9213E9F43A8E612A801279583EE0023B99E1C6AF5FA224B44C5CDA1",
+  "model": "models/df_v24/m_534cf8170f062e23.vmdl",
+  "materials": {
+    "mat_dfe97caf780cb76b": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_HBlack_RoomPlatform_01_HD.MI_H_Building_FutureTech_HBlack_RoomPlatform_01_HD",
+    "mat_dcba3e748aca80e6": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Pattern_01D_TwoSided_HD.MI_GEN_Metal_Pattern_01D_TwoSided_HD",
+    "mat_9cb69f37ebca590f": "DeltaForce/Content/Environment/Structures/Building/Generic/00_Materials/HD/MI_Building_Generic_Pillar_256x1024_01_d_HD.MI_Building_Generic_Pillar_256x1024_01_d_HD"
+  },
+  "vertices": 11401,
+  "polygons": 9527,
+  "bounds": [
+    [
+      -458.0420227050781,
+      -252.419921875,
+      -1.1197925911049988e-15
+    ],
+    [
+      449.9227294921875,
+      258.5706787109375,
+      555.4634399414062
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

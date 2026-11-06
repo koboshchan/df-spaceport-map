@@ -1,0 +1,26 @@
+{
+  "id": "m_506042b3daf607fd",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/SM_I_RoadFacility_Ground_L_02f_Decal.SM_I_RoadFacility_Ground_L_02f_Decal",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter_Ma1\\SM_I_RoadFacility_Ground_L_02f_Decal.glb",
+  "sourceSHA256": "20BFA16F7ADB3F6F0FA7CE68D18BB40AD42B64A61140B8A62BCA69D1308A11C5",
+  "model": "models/df_v24/m_506042b3daf607fd.vmdl",
+  "materials": {
+    "mat_8f7e2c00c0770c58": "DeltaForce/Content/Environment/Structures/Morocco/Decal/00_Materials/MI_GEN_Moss_Water_01_HD.MI_GEN_Moss_Water_01_HD"
+  },
+  "vertices": 377,
+  "polygons": 211,
+  "bounds": [
+    [
+      -1852.49609375,
+      -8789.228515625,
+      -378.0642395019531
+    ],
+    [
+      1849.3466796875,
+      -5877.31494140625,
+      -30.091068267822266
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

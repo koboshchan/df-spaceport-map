@@ -1,0 +1,26 @@
+{
+  "id": "m_1aa5ab7e23d83435",
+  "objectPath": "DeltaForce/Content/GenDecalDir/Meshes/Untitled_2396/5ECBC5A040AFB4C10CC7D2A431BB651D.5ECBC5A040AFB4C10CC7D2A431BB651D",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\GenDecalDir\\Meshes\\Untitled_2396\\5ECBC5A040AFB4C10CC7D2A431BB651D.glb",
+  "sourceSHA256": "BFD44381F6AB831EAAA1FF80AC40FC3756F84FDF53B02771682B7EFA02C2D17C",
+  "model": "models/df_v24/m_1aa5ab7e23d83435.vmdl",
+  "materials": {
+    "mat_5729a3ac3ac6b177": "DeltaForce/Content/GenDecalDir/MaterialsHD/MI_I_RoadFacility_Ground_D_02A_HD_MI_GEN_Decal_AsphaltGround_01_4_HD.MI_I_RoadFacility_Ground_D_02A_HD_MI_GEN_Decal_AsphaltGround_01_4_HD"
+  },
+  "vertices": 4,
+  "polygons": 2,
+  "bounds": [
+    [
+      -6.063479900360107,
+      -2.0980799198150635,
+      -68.39964294433594
+    ],
+    [
+      -6.063479900360107,
+      2.09771990776062,
+      68.4000015258789
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "m_a6c8a031a77078a2",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_Dock_06a_Door_R.SM_H_Building_FutureTech_Dock_06a_Door_R",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_Dock_06a_Door_R.glb",
+  "sourceSHA256": "4CA0C3D35092BAE06DDED31E96348550EDF25E10599B3374762BAACC907BCD68",
+  "model": "models/df_v24/m_a6c8a031a77078a2.vmdl",
+  "materials": {
+    "mat_45e2c73b465457a0": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Wooden_Plank_02_HD.MI_GEN_Wooden_Plank_02_HD",
+    "mat_ccf7d54540b23a7e": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01B_HD.MI_GEN_Metal_Base_01B_HD",
+    "mat_d21c86929a2ae27d": "DeltaForce/Content/Environment/MatBlend/Wood/Iris/00_Materials/MI_M_Building_Industrial_TouristCenter_WoodWall06_HD.MI_M_Building_Industrial_TouristCenter_WoodWall06_HD"
+  },
+  "vertices": 3021,
+  "polygons": 2462,
+  "bounds": [
+    [
+      -0.2472430169582367,
+      -5.118795871734619,
+      -1.2620996054880988e-16
+    ],
+    [
+      57.50766372680664,
+      5.118795871734619,
+      132.53561401367188
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "m_87d9cc7b832dbe4c",
+  "objectPath": "DeltaForce/Content/Environment/Props/Commercial/Sanitary/SM_M_Commercial_Sanitary_HandDryer_01.SM_M_Commercial_Sanitary_HandDryer_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Commercial\\Sanitary\\SM_M_Commercial_Sanitary_HandDryer_01.glb",
+  "sourceSHA256": "A027B8CDD72EBFB3BFDBD2407741214C16476E38F46047575BC923A8B7E95068",
+  "model": "models/df_v24/m_87d9cc7b832dbe4c.vmdl",
+  "materials": {
+    "mat_a73cc25d792d1e23": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/00_Materials/HD/MI_H_Government_Office_CoffeeMachine_01C_HD.MI_H_Government_Office_CoffeeMachine_01C_HD",
+    "mat_7df24310446d9055": "DeltaForce/Content/Environment/Props/Commercial/00_Materials/HD/MI_M_Commercial_Sanitary_HandDryer_01_HD.MI_M_Commercial_Sanitary_HandDryer_01_HD"
+  },
+  "vertices": 531,
+  "polygons": 736,
+  "bounds": [
+    [
+      -5.604243278503418,
+      -8.888739585876465,
+      2.2600577722187154e-05
+    ],
+    [
+      5.604243278503418,
+      -2.0340969513199525e-06,
+      23.985729217529297
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "m_060431a7960eabd1",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/IceLand/SM_H_IceLand_Props_EquipmentBox_02.SM_H_IceLand_Props_EquipmentBox_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\IceLand\\SM_H_IceLand_Props_EquipmentBox_02.glb",
+  "sourceSHA256": "18F823FE3651F51FE9228D788B21DFF385E41E3D2B7F9E0C57257890823A2258",
+  "model": "models/df_v24/m_060431a7960eabd1.vmdl",
+  "materials": {
+    "mat_e4ba99183c2bf03d": "DeltaForce/Content/Environment/Props/HAAVK/IceLand/00_Materials/HD/MI_H_IceLand_Props_EquipmentBox_02B_HD.MI_H_IceLand_Props_EquipmentBox_02B_HD",
+    "mat_e6ed3c4fe28c8073": "DeltaForce/Content/Environment/Props/HAAVK/IceLand/00_Materials/HD/MI_H_IceLand_Props_EquipmentBox_02A_HD.MI_H_IceLand_Props_EquipmentBox_02A_HD",
+    "mat_744b31f772fb4fc6": "DeltaForce/Content/Environment/Props/HAAVK/IceLand/00_Materials/HD/MI_H_GEN_Props_Industrial_Container_01j_C_HD.MI_H_GEN_Props_Industrial_Container_01j_C_HD"
+  },
+  "vertices": 4558,
+  "polygons": 4425,
+  "bounds": [
+    [
+      -29.019386291503906,
+      -14.674566268920898,
+      0.2709837853908539
+    ],
+    [
+      29.02808380126953,
+      14.674566268920898,
+      13.844393730163574
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

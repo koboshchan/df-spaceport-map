@@ -1,0 +1,34 @@
+{
+  "id": "m_58ddc145b00d0f7c",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_Building_FutureTech_H_01/SM_H_Building_FutureTech_HOrange_01_InterWall_05.SM_H_Building_FutureTech_HOrange_01_InterWall_05",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_Building_FutureTech_H_01\\SM_H_Building_FutureTech_HOrange_01_InterWall_05.glb",
+  "sourceSHA256": "DB8587C860AA47DEB504330641386CA29E3EFE3543F9CAC8A0DA6C9982C8B8AF",
+  "model": "models/df_v24/m_58ddc145b00d0f7c.vmdl",
+  "materials": {
+    "mat_5220f0024f3a237d": "DeltaForce/Content/Environment/Structures/Morocco/Building/Cracked/00_Materials/HD/MI_H_IceLand_Building_Decal_01_HD.MI_H_IceLand_Building_Decal_01_HD",
+    "mat_d15cf9faec972d37": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_04_HD.MI_GEN_Metal_Painting_04_HD",
+    "mat_608703f0cb72d007": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_06_HD.MI_SpaceCenter_Trim_06_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_99eee4a7f0a695b2": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_09_HD.MI_GEN_Metal_Painting_09_HD",
+    "mat_d90eeabf4f6d9342": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_HOrange_01_InterWall_03_HD.MI_H_Building_FutureTech_HOrange_01_InterWall_03_HD",
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD",
+    "mat_20fabdfebe348075": "DeltaForce/Content/Environment/Structures/HAAVK/Pipeline/00_Materials/HD/MI_H_PipeLine_HD.MI_H_PipeLine_HD",
+    "mat_0ed5ec30a2e7dd0d": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Sign_01_HD.MI_GEN_Sign_01_HD"
+  },
+  "vertices": 40266,
+  "polygons": 34302,
+  "bounds": [
+    [
+      -2540.144287109375,
+      -1817.18505859375,
+      134.05929565429688
+    ],
+    [
+      -1742.1346435546875,
+      -959.1354370117188,
+      717.892578125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "m_f7ddc771be7497a4",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_Dormitory/SM_H_Building_FutureTech_Dormitory_01_Decal.SM_H_Building_FutureTech_Dormitory_01_Decal",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_Dormitory\\SM_H_Building_FutureTech_Dormitory_01_Decal.glb",
+  "sourceSHA256": "CE5D6820516562D5B8FACCFABB1440CE00206A2498E2AE1AE98F6AD37B106510",
+  "model": "models/df_v24/m_f7ddc771be7497a4.vmdl",
+  "materials": {
+    "mat_d925d27862cd468a": "DeltaForce/Content/Environment/Structures/Decal/00_Materials/HD/MI_GEN_Decal_ExterWall_07_HD.MI_GEN_Decal_ExterWall_07_HD"
+  },
+  "vertices": 4082,
+  "polygons": 3258,
+  "bounds": [
+    [
+      -515.56005859375,
+      -655.5763549804688,
+      -1.0388232469558716
+    ],
+    [
+      28.242107391357422,
+      4.773930072784424,
+      721.4962768554688
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

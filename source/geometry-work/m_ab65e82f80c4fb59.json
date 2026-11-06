@@ -1,0 +1,26 @@
+{
+  "id": "m_ab65e82f80c4fb59",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/SM_BS_FanPalm_250cm_HD.SM_BS_FanPalm_250cm_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Bush\\SM_BS_FanPalm_250cm_HD.glb",
+  "sourceSHA256": "BCAC329DAE53F332CD1A241CA62F8DD087284D448A0E476C621BC88ECF53C7BD",
+  "model": "models/df_v24/m_ab65e82f80c4fb59.vmdl",
+  "materials": {
+    "mat_ee161a0c5f2fccaf": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/00_Materials/MI_BS_FanPalm_250cm_Leaf_HD.MI_BS_FanPalm_250cm_Leaf_HD"
+  },
+  "vertices": 2052,
+  "polygons": 1964,
+  "bounds": [
+    [
+      -121.63341522216797,
+      -103.47289276123047,
+      -15.13958740234375
+    ],
+    [
+      111.38111877441406,
+      95.016845703125,
+      105.98353576660156
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

@@ -1,0 +1,36 @@
+{
+  "counts": {
+    "nameOnly_barrier": 155,
+    "nameOnly_volume": 121,
+    "nameOnly_fog": 124,
+    "provenDirectNoRenderSelectedRows": 356,
+    "nameOnly_event": 173,
+    "nameOnly_blocker": 995,
+    "nameOnly_occluder": 253,
+    "selectedRows": 55344,
+    "sourceJsonAbsent": 599,
+    "uniqueCandidateRows": 1941,
+    "uniqueNameOnlyRows": 1696,
+    "provenDirectNoRenderEmittedRows": 356,
+    "provenDirectNoRenderUniqueComponents": 356,
+    "provenDirectNoRenderCollisionEnabled": 123,
+    "sourceCollisionOnlyRows": 10
+  },
+  "proofFields": {
+    "bVisible": 356
+  },
+  "provenByNameCategory": {
+    "blocker": 0,
+    "occluder": 0,
+    "HLODproxy": 0,
+    "barrier": 0,
+    "nav": 0,
+    "volume": 121,
+    "fog": 121,
+    "event": 0,
+    "materialnone": 0
+  },
+  "limitations": "Direct serialized component proof only. Missing flags NOT proof of visibility. Actor/CDO/archetype inheritance unresolved. Names not cause. No H4 localization. Emitted predicted using generator and zero scale suppression; compiled per-entity crosscheck pending. Source scan uses serializedSource inventory, not all absent inventory files. 356 positive proofs individually source-reopened.",
+  "serializedInventoryCoverageRows": 54745,
+  "sourceFlagsUnknownRows": 599
+}

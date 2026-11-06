@@ -1,0 +1,26 @@
+{
+  "id": "m_1046540dcf7e7218",
+  "objectPath": "DeltaForce/Content/PCG/Water/Meshes_Simulation/SpaceCenter/SpaceCenter_WaterMesh_x5_y14.SpaceCenter_WaterMesh_x5_y14",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\PCG\\Water\\Meshes_Simulation\\SpaceCenter\\SpaceCenter_WaterMesh_x5_y14.glb",
+  "sourceSHA256": "E83FD9BEEA7D4C6F54AF97ECCB6C3A57A430041826B3904B87E172F4EF39426E",
+  "model": "models/df_v24/m_1046540dcf7e7218.vmdl",
+  "materials": {
+    "mat_e8cad610ac894c58": "DeltaForce/Content/MaterialLib/Materials_HD/Water/MaterialInstances/MI_WaterHD_SpaceCenter.MI_WaterHD_SpaceCenter"
+  },
+  "vertices": 149,
+  "polygons": 244,
+  "bounds": [
+    [
+      1944.0,
+      1584.0,
+      -1841.47314453125
+    ],
+    [
+      2304.0,
+      2304.0,
+      -1812.0762939453125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

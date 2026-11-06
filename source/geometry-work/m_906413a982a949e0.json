@@ -1,0 +1,26 @@
+{
+  "id": "m_906413a982a949e0",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_Dock_Rail_02.SM_H_Building_FutureTech_Dock_Rail_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_Dock_Rail_02.glb",
+  "sourceSHA256": "0FAC45CFDD36317454DBAD6A845C142720CC253EC486209E906DB0C03D8B5831",
+  "model": "models/df_v24/m_906413a982a949e0.vmdl",
+  "materials": {
+    "mat_a786112dc04d483d": "DeltaForce/Content/Environment/Structures/RestDoor/00_Materials/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD"
+  },
+  "vertices": 28782,
+  "polygons": 22485,
+  "bounds": [
+    [
+      1860.05908203125,
+      383.66241455078125,
+      177.36505126953125
+    ],
+    [
+      3137.345458984375,
+      1243.657958984375,
+      400.2464294433594
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

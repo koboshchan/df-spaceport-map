@@ -1,0 +1,26 @@
+{
+  "id": "m_018838083473a3cd",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Tools/SM_H_Industrial_Tools_OxygenContainer_01.SM_H_Industrial_Tools_OxygenContainer_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\Tools\\SM_H_Industrial_Tools_OxygenContainer_01.glb",
+  "sourceSHA256": "7DF8C5654D9433622708084F1637406BA62AF1267F787674BCC3A93C2BD47B49",
+  "model": "models/df_v24/m_018838083473a3cd.vmdl",
+  "materials": {
+    "mat_7630ea71f51a35ad": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Tools/00_Materials/HD/MI_H_Industrial_Tools_OxygenContainer_01_HD.MI_H_Industrial_Tools_OxygenContainer_01_HD"
+  },
+  "vertices": 2230,
+  "polygons": 2040,
+  "bounds": [
+    [
+      -34.175445556640625,
+      -36.016170501708984,
+      0.02552947960793972
+    ],
+    [
+      34.19576644897461,
+      36.01600646972656,
+      68.2411117553711
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

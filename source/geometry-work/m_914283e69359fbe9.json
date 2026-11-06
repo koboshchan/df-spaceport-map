@@ -1,0 +1,33 @@
+{
+  "id": "m_914283e69359fbe9",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_Dock_06a_InterWall_02.SM_H_Building_FutureTech_Dock_06a_InterWall_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_Dock_06a_InterWall_02.glb",
+  "sourceSHA256": "8314856DF5F0F0191E768AAA229369C50F356867BB5A9ECC056B0F478035A168",
+  "model": "models/df_v24/m_914283e69359fbe9.vmdl",
+  "materials": {
+    "mat_acfe0c8c271d1ddb": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_WatchTower_01_05_HD.MI_H_Building_FutureTech_WatchTower_01_05_HD",
+    "mat_0c3d4725e8f3b0b6": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Wooden_Plank_02C_HD.MI_GEN_Wooden_Plank_02C_HD",
+    "mat_61dec35a85fbcd34": "DeltaForce/Content/Environment/Props/HAAVK/Residential/Bedroom/00_Materials/HD/MI_H_Residential_Bedroom_Shelf_01C_HD.MI_H_Residential_Bedroom_Shelf_01C_HD",
+    "mat_9ae0cbbe320a2e30": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Checkred_02_HD.MI_GEN_Marble_Checkred_02_HD",
+    "mat_1a4deb0d157712e5": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Base_06_HD.MI_GEN_Marble_Base_06_HD",
+    "mat_79071d76426b9c38": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Fabric_Wall_01_HD.MI_GEN_Fabric_Wall_01_HD",
+    "mat_c6f758474e05beb4": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Base_01_HD.MI_GEN_Marble_Base_01_HD",
+    "mat_ee48c2314b87b2ef": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Checkred_05_HD.MI_GEN_Marble_Checkred_05_HD"
+  },
+  "vertices": 21416,
+  "polygons": 18444,
+  "bounds": [
+    [
+      1063.5123291015625,
+      1091.97314453125,
+      174.88592529296875
+    ],
+    [
+      2434.011474609375,
+      1625.019775390625,
+      343.86859130859375
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

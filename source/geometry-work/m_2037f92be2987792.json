@@ -1,0 +1,26 @@
+{
+  "id": "m_2037f92be2987792",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/Lighting/SM_H_FutureTech_Lighting_OverheadLight_01.SM_H_FutureTech_Lighting_OverheadLight_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\Lighting\\SM_H_FutureTech_Lighting_OverheadLight_01.glb",
+  "sourceSHA256": "0286721CBFAB04F9A64A3C0CA34E4F0EB06E41F698EAF6A26608256BFF2369C0",
+  "model": "models/df_v24/m_2037f92be2987792.vmdl",
+  "materials": {
+    "mat_bc72151c856f45bb": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Lighting_OverheadLight_01_HD.MI_H_FutureTech_Lighting_OverheadLight_01_HD"
+  },
+  "vertices": 193,
+  "polygons": 288,
+  "bounds": [
+    [
+      -3.1887123584747314,
+      -3.1887130737304688,
+      -0.42288511991500854
+    ],
+    [
+      3.188713312149048,
+      3.1887130737304688,
+      -0.0473184809088707
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,7 @@
+{
+    "State":  "Running",
+    "User":  "lucas",
+    "CurrentSID":  "S-1-5-21-976505961-97451297-793823165-1001",
+    "Execute":  "E:\\spaceport-kat-rebuild-20261105\\material-venv\\Scripts\\python.exe",
+    "Arguments":  "E:\\df-v24-build-20261106\\geometry-work\\resume_runner.py"
+}

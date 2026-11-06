@@ -1,0 +1,27 @@
+{
+  "id": "m_5afacad136f709c0",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/SM_H_FutureTech_Machinery_RFID_01_D.SM_H_FutureTech_Machinery_RFID_01_D",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\SM_H_FutureTech_Machinery_RFID_01_D.glb",
+  "sourceSHA256": "6E35DDDB17C1C52F3483D4C9CA3545415F46667886006FD8CD204B9B0A751438",
+  "model": "models/df_v24/m_5afacad136f709c0.vmdl",
+  "materials": {
+    "mat_a200f841213708dd": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Machinery_RFID_A_HD.MI_H_FutureTech_Machinery_RFID_A_HD",
+    "mat_edb34bd41fdf5287": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Machinery_RFID_B_HD.MI_H_FutureTech_Machinery_RFID_B_HD"
+  },
+  "vertices": 1738,
+  "polygons": 1688,
+  "bounds": [
+    [
+      -36.11731719970703,
+      -14.230670928955078,
+      -0.000517684209626168
+    ],
+    [
+      5.118727684020996,
+      14.605768203735352,
+      47.014747619628906
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

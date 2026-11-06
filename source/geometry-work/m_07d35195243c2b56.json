@@ -1,0 +1,29 @@
+{
+  "id": "m_07d35195243c2b56",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_Dormitory/SM_H_Building_FutureTech_Dormitory_02_InterWall_06.SM_H_Building_FutureTech_Dormitory_02_InterWall_06",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_Dormitory\\SM_H_Building_FutureTech_Dormitory_02_InterWall_06.glb",
+  "sourceSHA256": "172E27F4DD44A205AECE2921D0B7E6AF76AB7AC7E7256CFF3095B3DDDFB32FD9",
+  "model": "models/df_v24/m_07d35195243c2b56.vmdl",
+  "materials": {
+    "mat_cf4bffa2e71ba398": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Concrete_Base_02_HD.MI_GEN_Concrete_Base_02_HD",
+    "mat_79071d76426b9c38": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Fabric_Wall_01_HD.MI_GEN_Fabric_Wall_01_HD",
+    "mat_525cc160fbeab068": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_Wood_06_HD.MI_H_Building_FutureTech_Wood_06_HD",
+    "mat_c6f758474e05beb4": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Base_01_HD.MI_GEN_Marble_Base_01_HD"
+  },
+  "vertices": 885,
+  "polygons": 810,
+  "bounds": [
+    [
+      -505.83551025390625,
+      -572.687255859375,
+      149.7599639892578
+    ],
+    [
+      -194.05284118652344,
+      -8.639999389648438,
+      287.9989013671875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "m_5d1ce61978668286",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_Dock_07c.SM_H_Building_FutureTech_Dock_07c",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_Dock_07c.glb",
+  "sourceSHA256": "DCC98BFE52830A46F06F74AC55BEB71C20C12A7849210E24DB748997BCDC31F7",
+  "model": "models/df_v24/m_5d1ce61978668286.vmdl",
+  "materials": {
+    "mat_db5a774bcb34b73e": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Brakkesh/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_D_HD.MI_I_WalkwaySystem_MetalFloor_01_D_HD",
+    "mat_4e06b33bb10b28ef": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Brakkesh/00_Materials/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_acfe0c8c271d1ddb": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_WatchTower_01_05_HD.MI_H_Building_FutureTech_WatchTower_01_05_HD"
+  },
+  "vertices": 24174,
+  "polygons": 19826,
+  "bounds": [
+    [
+      -140.16378784179688,
+      -91.02452850341797,
+      4.076529026031494
+    ],
+    [
+      140.16384887695312,
+      197.1642608642578,
+      827.952392578125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

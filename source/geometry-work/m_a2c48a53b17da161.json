@@ -1,0 +1,26 @@
+{
+  "id": "m_a2c48a53b17da161",
+  "objectPath": "DeltaForce/Content/Models/Props/Event/Prop_Event_Soccer/Prop_Event_Soccer.Prop_Event_Soccer",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Props\\Event\\Prop_Event_Soccer\\Prop_Event_Soccer.glb",
+  "sourceSHA256": "8104734E8F1C973CC965D1F1B3A88181B1FB12255C8EBBE12EF0B7382BD10FEC",
+  "model": "models/df_v24/m_a2c48a53b17da161.vmdl",
+  "materials": {
+    "mat_6f814b8c2eeae415": "DeltaForce/Content/Models/Props/Event/Prop_Event_Soccer/Material/Prop_Event_Soccer.Prop_Event_Soccer"
+  },
+  "vertices": 2284,
+  "polygons": 2038,
+  "bounds": [
+    [
+      -50.393310546875,
+      -31.913387298583984,
+      -0.006624755449593067
+    ],
+    [
+      50.70103454589844,
+      29.608333587646484,
+      69.23515319824219
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

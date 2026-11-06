@@ -1,0 +1,29 @@
+{
+  "id": "m_d462b94f58f48f7d",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_HBlack_RoomPlatform_01B.SM_H_Building_FutureTech_HBlack_RoomPlatform_01B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_HBlack_RoomPlatform_01B.glb",
+  "sourceSHA256": "CF0E910088D6FA4A692A02B6A91648442E79988D39DBD609C21881D907964416",
+  "model": "models/df_v24/m_d462b94f58f48f7d.vmdl",
+  "materials": {
+    "mat_5df0351ee9cf078b": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_HBlack_RoomPlatform_02_HD.MI_H_Building_FutureTech_HBlack_RoomPlatform_02_HD",
+    "mat_655e0c3cd96dc4b0": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_HBlack_RoomPlatform_03_HD.MI_H_Building_FutureTech_HBlack_RoomPlatform_03_HD",
+    "mat_dfe97caf780cb76b": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_HBlack_RoomPlatform_01_HD.MI_H_Building_FutureTech_HBlack_RoomPlatform_01_HD",
+    "mat_33602b4bfdc71367": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_C_HD.MI_I_WalkwaySystem_MetalFloor_01_C_HD"
+  },
+  "vertices": 11676,
+  "polygons": 8940,
+  "bounds": [
+    [
+      -8.722167015075684,
+      -365.4337463378906,
+      -2.287544012069702
+    ],
+    [
+      368.6533508300781,
+      5.337917327880859,
+      59.14060974121094
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

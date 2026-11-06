@@ -1,0 +1,26 @@
+{
+  "id": "m_62cfccb4f8fde2e8",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/IceLand/SM_Industrial_Lighting_Chandelier_03.SM_Industrial_Lighting_Chandelier_03",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\IceLand\\SM_Industrial_Lighting_Chandelier_03.glb",
+  "sourceSHA256": "14283CE70BDA590A0368EC474AD3374B2611034D2A86BDEDC5C9A8FDDEB387B6",
+  "model": "models/df_v24/m_62cfccb4f8fde2e8.vmdl",
+  "materials": {
+    "mat_ac74e86dbed9d956": "DeltaForce/Content/Environment/Props/HAAVK/IceLand/Lighting/00_Materials/HD/MI_Industrial_Lighting_Chandelier_03a_HD.MI_Industrial_Lighting_Chandelier_03a_HD"
+  },
+  "vertices": 4248,
+  "polygons": 4088,
+  "bounds": [
+    [
+      -12.942981719970703,
+      -7.470083713531494,
+      -0.20884890854358673
+    ],
+    [
+      12.942981719970703,
+      14.0259428024292,
+      45.2369270324707
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "m_ce23177a30241e45",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_Dock_04a.SM_H_Building_FutureTech_Dock_04a",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_Dock_04a.glb",
+  "sourceSHA256": "6A7C174DB757F4C46C73CADF6B5EBD6557B71480B28C0149E6E5F119B814D363",
+  "model": "models/df_v24/m_ce23177a30241e45.vmdl",
+  "materials": {
+    "mat_6f92f129a7c9ea53": "DeltaForce/Content/Environment/Structures/HAAVK/Building/NavalBattle/00_Materials/HD/MI_H_NavalBattle_Layer_Ground_27d_HD.MI_H_NavalBattle_Layer_Ground_27d_HD",
+    "mat_33602b4bfdc71367": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_C_HD.MI_I_WalkwaySystem_MetalFloor_01_C_HD",
+    "mat_ee05397d2df7898c": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Rubber_Epoxy_01B_HD.MI_GEN_Rubber_Epoxy_01B_HD",
+    "mat_38b39ab9bd6e8fae": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_03_HD.MI_GEN_Metal_Painting_03_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_d783b614f1783cff": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_01_HD.MI_GEN_Metal_Painting_01_HD"
+  },
+  "vertices": 6169,
+  "polygons": 5184,
+  "bounds": [
+    [
+      -623.18408203125,
+      -472.4317932128906,
+      215.0386962890625
+    ],
+    [
+      907.4016723632812,
+      323.0032043457031,
+      646.848876953125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

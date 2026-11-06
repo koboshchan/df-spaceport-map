@@ -1,0 +1,70 @@
+{
+  "status": "BLOCKED_DF_SERIALIZATION_SCHEMA_UNAVAILABLE",
+  "boundedCheckComplete": true,
+  "noMoreNeighborhoodScanning": true,
+  "conclusion": "Neither exact resource has a validated frozen-image envelope from the recorded serializer chain. This does not prove the image is absent, non-frozen, or omits member metadata. Generic schema cannot establish DF object boundaries.",
+  "requiredExternalEvidence": [
+    "Exact DF serializer with version/format branches and native section-length handling",
+    "Or generated DF material uniform declaration plus independently validated texture binding metadata and actual MI permutation correspondence"
+  ],
+  "pilots": [
+    {
+      "root": "props-root",
+      "resourceIndex": 8,
+      "archiveIndex": 2160,
+      "nativeTailSHA256": "755af20fa8cdcbc8e22b5a402a354cd2ff501d6d2847a1ac6ea4d108b1a14239",
+      "outerResourceStart": 799767,
+      "outerResourceEnd": 891110,
+      "outerBoundsEvidence": "existing resource location directory and declared aggregate length",
+      "rawLocationFlags": [
+        3,
+        4,
+        0
+      ],
+      "DFFormatVersionSemantics": "UNAVAILABLE beyond corroborated SM5 platform identity",
+      "lengthDelimitedFrozenImageStart": null,
+      "lengthDelimitedFrozenImageSize": null,
+      "relocationTableBase": null,
+      "pointerTableBase": null,
+      "nameTableBase": null,
+      "typeTableBase": null,
+      "validatedTableCounts": null,
+      "validatedRootObjectOffset": null,
+      "proofNonFrozen": false,
+      "result": "ENVELOPE_NOT_ESTABLISHABLE_FROM_RECORDED_SERIALIZER_CHAIN"
+    },
+    {
+      "root": "light-root",
+      "resourceIndex": 2,
+      "archiveIndex": 13010,
+      "nativeTailSHA256": "1a1ac4fac9dbc282dbb01071ffe63e2e074cb52c4cf2badcf3d92f89c5154989",
+      "outerResourceStart": 197523,
+      "outerResourceEnd": 280726,
+      "outerBoundsEvidence": "existing resource location directory and declared aggregate length",
+      "rawLocationFlags": [
+        3,
+        1,
+        0
+      ],
+      "DFFormatVersionSemantics": "UNAVAILABLE beyond corroborated SM5 platform identity",
+      "lengthDelimitedFrozenImageStart": null,
+      "lengthDelimitedFrozenImageSize": null,
+      "relocationTableBase": null,
+      "pointerTableBase": null,
+      "nameTableBase": null,
+      "typeTableBase": null,
+      "validatedTableCounts": null,
+      "validatedRootObjectOffset": null,
+      "proofNonFrozen": false,
+      "result": "ENVELOPE_NOT_ESTABLISHABLE_FROM_RECORDED_SERIALIZER_CHAIN"
+    }
+  ],
+  "notProven": [
+    "3float4 stack runtime packing",
+    "Named VT to physical SRV mapping",
+    "FShader object boundaries",
+    "Uniform member offsets",
+    "Metadata omission",
+    "Actual MI to root static permutation"
+  ]
+}

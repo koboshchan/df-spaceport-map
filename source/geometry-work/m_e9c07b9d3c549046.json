@@ -1,0 +1,29 @@
+{
+  "id": "m_e9c07b9d3c549046",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_AgainstWar_01c_Decal.SM_H_Building_FutureTech_AgainstWar_01c_Decal",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_AgainstWar_01c_Decal.glb",
+  "sourceSHA256": "D6F3FDA539F170840B6B6E1A980644E2550FA8C2E4BB4FBF64F108144A9DD070",
+  "model": "models/df_v24/m_e9c07b9d3c549046.vmdl",
+  "materials": {
+    "mat_7f4bd919ba858598": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Tide/00_Materials/HD/MI_H_Building_Tide_Decal_32c_HD.MI_H_Building_Tide_Decal_32c_HD",
+    "mat_cc9ee146d6b8b8f9": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Tide/00_Materials/HD/MI_H_Building_Tide_Decal_08_HD.MI_H_Building_Tide_Decal_08_HD",
+    "mat_ebe2c68b91602cff": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Road_Decal_02_HD.MI_H_FutureTech_Road_Decal_02_HD",
+    "mat_bb7d85a733885bda": "DeltaForce/Content/Environment/Decal/Dirt/00_Materials/HD/MI_I_Dirt_Decal_13_HD.MI_I_Dirt_Decal_13_HD"
+  },
+  "vertices": 6792,
+  "polygons": 5673,
+  "bounds": [
+    [
+      -994.31494140625,
+      17.717519760131836,
+      -14.418346405029297
+    ],
+    [
+      -620.2091064453125,
+      236.2985076904297,
+      106.80480194091797
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

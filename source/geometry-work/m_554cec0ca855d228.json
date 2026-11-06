@@ -1,0 +1,30 @@
+{
+  "id": "m_554cec0ca855d228",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_FoldDoor_01A.SM_H_Building_FutureTech_FoldDoor_01A",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_FoldDoor_01A.glb",
+  "sourceSHA256": "BE8272622A710F1541CD8AB2549A41337FB445873588041C4840A872DBF86D71",
+  "model": "models/df_v24/m_554cec0ca855d228.vmdl",
+  "materials": {
+    "mat_00d9e9e72f5d9574": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Customiz_AssemblyAreaDoor_01_F_HD.MI_H_Customiz_AssemblyAreaDoor_01_F_HD",
+    "mat_0a6ddaa04345598d": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Customiz_AssemblyAreaDoor_01_F_Decal_HD.MI_H_Customiz_AssemblyAreaDoor_01_F_Decal_HD",
+    "mat_8b5d279a6d2e73a7": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_D_HD.MI_I_WalkwaySystem_MetalFloor_01_D_HD",
+    "mat_ce515409d0a82492": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD"
+  },
+  "vertices": 7976,
+  "polygons": 8000,
+  "bounds": [
+    [
+      -18.827545166015625,
+      -604.1392822265625,
+      -300.0248107910156
+    ],
+    [
+      46.214332580566406,
+      603.7452392578125,
+      0.00017578124243300408
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

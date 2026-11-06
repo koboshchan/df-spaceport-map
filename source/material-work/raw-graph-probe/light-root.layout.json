@@ -1,0 +1,78 @@
+{
+  "tailSHA256": "1a1ac4fac9dbc282dbb01071ffe63e2e074cb52c4cf2badcf3d92f89c5154989",
+  "resourceCountPrefix": 4,
+  "nameCount": 24,
+  "names": [
+    "FMaterialUniformExpressionVectorParameter",
+    "UVScale_Offset",
+    "FMaterialUniformExpressionAppendVector",
+    "FMaterialUniformExpressionComponentSwizzle",
+    "FMaterialUniformExpressionScalarParameter",
+    "DistanceFadeWidth",
+    "DistanceFadeMin",
+    "FMaterialUniformExpressionFoldedMath",
+    "EmissionMaskMax",
+    "EmissionMaskMin",
+    "EmissionColor-BaseColorEmissionWeight",
+    "FMaterialUniformExpressionConstant",
+    "GrazeDecayMin",
+    "GrazeDecayMax",
+    "EnableDecay",
+    "WetRainBase",
+    "WetPorosity",
+    "LowQualityMetallic",
+    "LowQualityRoughness",
+    "WetMaskStrength",
+    "FMaterialUniformExpressionTextureParameter",
+    "EMMap",
+    "BAMap",
+    "NRMMap"
+  ],
+  "locationCount": 4,
+  "resourceDataBase": 774,
+  "declaredResourceDataLength": 363974,
+  "locations": [
+    {
+      "offset": 0,
+      "threeVersionOrPlatformBytes": [
+        4,
+        1,
+        48
+      ],
+      "nativeTailStart": 774,
+      "nativeTailEnd": 98664
+    },
+    {
+      "offset": 97890,
+      "threeVersionOrPlatformBytes": [
+        4,
+        6,
+        48
+      ],
+      "nativeTailStart": 98664,
+      "nativeTailEnd": 197523
+    },
+    {
+      "offset": 196749,
+      "threeVersionOrPlatformBytes": [
+        3,
+        1,
+        0
+      ],
+      "nativeTailStart": 197523,
+      "nativeTailEnd": 280726
+    },
+    {
+      "offset": 279952,
+      "threeVersionOrPlatformBytes": [
+        3,
+        6,
+        0
+      ],
+      "nativeTailStart": 280726,
+      "nativeTailEnd": 364748
+    }
+  ],
+  "layoutGame": "GAME_DeltaForce UE4.27 baseline; trailing3 location bytes deliberately not semantically renamed",
+  "fullShaderMapDecode": false
+}

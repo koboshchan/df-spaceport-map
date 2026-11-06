@@ -1,0 +1,26 @@
+{
+  "id": "m_fbf1ae9a4de0fe42",
+  "objectPath": "DeltaForce/Content/Environment/Props/Government/Utility/SM_Government_Utility_FireBox_03.SM_Government_Utility_FireBox_03",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Government\\Utility\\SM_Government_Utility_FireBox_03.glb",
+  "sourceSHA256": "AB07CDC0C7E1F7BF85FA1A00C681985CC79FAB6BD8CC13633C2A70D6C4561350",
+  "model": "models/df_v24/m_fbf1ae9a4de0fe42.vmdl",
+  "materials": {
+    "mat_07a71cac7305ca36": "DeltaForce/Content/Environment/Props/Government/00_Materials/HD/MI_M_Government_Utility_FireBox_03_HD.MI_M_Government_Utility_FireBox_03_HD"
+  },
+  "vertices": 1194,
+  "polygons": 1286,
+  "bounds": [
+    [
+      -13.799185752868652,
+      -4.157351016998291,
+      0.0005232238909229636
+    ],
+    [
+      13.799181938171387,
+      4.091213226318359,
+      26.255374908447266
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

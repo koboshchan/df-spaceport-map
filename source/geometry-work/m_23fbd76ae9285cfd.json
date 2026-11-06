@@ -1,0 +1,31 @@
+{
+  "id": "m_23fbd76ae9285cfd",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_Dock_04f.SM_H_Building_FutureTech_Dock_04f",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_Dock_04f.glb",
+  "sourceSHA256": "1499D8C90AC3782563CC516701B44F5DC457AE62FFE873C1153B078BB2875A7B",
+  "model": "models/df_v24/m_23fbd76ae9285cfd.vmdl",
+  "materials": {
+    "mat_acfe0c8c271d1ddb": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_WatchTower_01_05_HD.MI_H_Building_FutureTech_WatchTower_01_05_HD",
+    "mat_3159e636a5f12bc6": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_TransferStation_ExterWall_01B_HD.MI_H_Building_FutureTech_TransferStation_ExterWall_01B_HD",
+    "mat_498a00951cbfa2d5": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_WatchTower_01_06_HD.MI_H_Building_FutureTech_WatchTower_01_06_HD",
+    "mat_38f3a85edb7e19ad": "DeltaForce/Content/Environment/Structures/HAAVK/Decal/WellLid/00_Materials/HD/MI_H_Decal_WellLid_01_HD.MI_H_Decal_WellLid_01_HD",
+    "mat_0b1c2f24543dece9": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Brakkesh/00_Materials/HD/MI_H_Brakkesh_BigDoor_02c_HD.MI_H_Brakkesh_BigDoor_02c_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD"
+  },
+  "vertices": 4336,
+  "polygons": 2864,
+  "bounds": [
+    [
+      -636.44970703125,
+      -457.66583251953125,
+      214.20477294921875
+    ],
+    [
+      911.0391235351562,
+      546.8908081054688,
+      642.9181518554688
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

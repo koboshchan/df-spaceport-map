@@ -1,0 +1,26 @@
+{
+  "id": "m_3fcc7f03dcddc780",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Pipeline/SM_H_PipeLine_Ring_03.SM_H_PipeLine_Ring_03",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Pipeline\\SM_H_PipeLine_Ring_03.glb",
+  "sourceSHA256": "514DD5FFC07C5F73801A98937C0D3F29C9B75AF191140DF6AA305B65AA95AF80",
+  "model": "models/df_v24/m_3fcc7f03dcddc780.vmdl",
+  "materials": {
+    "mat_bb564069c42eb753": "DeltaForce/Content/Environment/Structures/HAAVK/Pipeline/00_Materials/HD/MI_H_PipeLine_Ring_01_HD.MI_H_PipeLine_Ring_01_HD"
+  },
+  "vertices": 1848,
+  "polygons": 1868,
+  "bounds": [
+    [
+      -1.3732909565078444e-06,
+      -23.441099166870117,
+      -39.64103698730469
+    ],
+    [
+      20.802236557006836,
+      23.441116333007812,
+      7.2411627769470215
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

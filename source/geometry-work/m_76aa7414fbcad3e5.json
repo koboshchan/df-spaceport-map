@@ -1,0 +1,31 @@
+{
+  "id": "m_76aa7414fbcad3e5",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/SM_I_RoadFacility_Ground_T_01.SM_I_RoadFacility_Ground_T_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter\\SM_I_RoadFacility_Ground_T_01.glb",
+  "sourceSHA256": "31CEFC9A67B5636A709D433F7009F864AA17B8BF14CC95CC21D1A70FC888B9F0",
+  "model": "models/df_v24/m_76aa7414fbcad3e5.vmdl",
+  "materials": {
+    "mat_f97535ccc75f1663": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_H_06A_HD.MI_I_RoadFacility_Ground_H_06A_HD",
+    "mat_f5906dc206a794cd": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_T_01_02_HD.MI_I_RoadFacility_Ground_T_01_02_HD",
+    "mat_c3092c654d0412a7": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_H_05E_HD.MI_I_RoadFacility_Ground_H_05E_HD",
+    "mat_f50141530fa660de": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_T_01_01_HD.MI_I_RoadFacility_Ground_T_01_01_HD",
+    "mat_37447e9304cca7f7": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_A_01_01_HD.MI_I_RoadFacility_Ground_A_01_01_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD"
+  },
+  "vertices": 1546,
+  "polygons": 1510,
+  "bounds": [
+    [
+      2013.462646484375,
+      -1890.5018310546875,
+      -296.1898193359375
+    ],
+    [
+      3523.4326171875,
+      679.30712890625,
+      -278.4913635253906
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

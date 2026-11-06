@@ -1,0 +1,27 @@
+{
+  "id": "m_a7b6fa4daf346636",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Tree/SM_TR_DatePalm_19m_HD.SM_TR_DatePalm_19m_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Tree\\SM_TR_DatePalm_19m_HD.glb",
+  "sourceSHA256": "EA1E298471B5FB06EF344C89CEAE86113513948BDD8A9D812D886C2B5F04671D",
+  "model": "models/df_v24/m_a7b6fa4daf346636.vmdl",
+  "materials": {
+    "mat_591173a8f025df4a": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Tree/00_Materials/MI_TR_DatePalm_19m_Leaf_HD.MI_TR_DatePalm_19m_Leaf_HD",
+    "mat_9111f304ae899179": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Tree/00_Materials/MI_TR_DatePalm_19m_Trunk_01_HD.MI_TR_DatePalm_19m_Trunk_01_HD"
+  },
+  "vertices": 9790,
+  "polygons": 11532,
+  "bounds": [
+    [
+      -149.29074096679688,
+      -199.56320190429688,
+      -13.911023139953613
+    ],
+    [
+      149.71087646484375,
+      122.49470520019531,
+      685.7323608398438
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

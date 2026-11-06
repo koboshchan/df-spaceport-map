@@ -1,0 +1,27 @@
+{
+  "id": "m_35fb11f272cb1c0e",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/SM_H_FutureTech_Tools_MetalShelf_04.SM_H_FutureTech_Tools_MetalShelf_04",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\SM_H_FutureTech_Tools_MetalShelf_04.glb",
+  "sourceSHA256": "FE04E26E6A0DAA3D125A03440EB0E8CDAA5AD53C1156AEA98D66FA55689A607F",
+  "model": "models/df_v24/m_35fb11f272cb1c0e.vmdl",
+  "materials": {
+    "mat_34b90358255d34e0": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Tools_MetalShelf_02_B_HD.MI_H_FutureTech_Tools_MetalShelf_02_B_HD",
+    "mat_0fa6a5c0d5ac7338": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Transparent_07_A_HD.MI_H_FutureTech_Transparent_07_A_HD"
+  },
+  "vertices": 1800,
+  "polygons": 1664,
+  "bounds": [
+    [
+      -72.248046875,
+      -31.145828247070312,
+      -9.95635855360888e-06
+    ],
+    [
+      72.248046875,
+      31.145828247070312,
+      118.79994201660156
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

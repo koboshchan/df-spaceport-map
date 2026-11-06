@@ -1,0 +1,26 @@
+{
+  "id": "m_8e9be833691fc921",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Commercial/Resort/SM_M_Bulidng_Ironwirerailing_01.SM_M_Bulidng_Ironwirerailing_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Commercial\\Resort\\SM_M_Bulidng_Ironwirerailing_01.glb",
+  "sourceSHA256": "68E445B1D5D6D009B811CBA1D15A0E3490B5D1F88BB2A5BF2C69888A536FDF20",
+  "model": "models/df_v24/m_8e9be833691fc921.vmdl",
+  "materials": {
+    "mat_fb4c026336bd94eb": "DeltaForce/Content/Environment/Props/Morocco/Commercial/Resort/00_Materials/HD/MI_M_Bulidng_Ironwirerailing_HD.MI_M_Bulidng_Ironwirerailing_HD"
+  },
+  "vertices": 816,
+  "polygons": 1092,
+  "bounds": [
+    [
+      -3.077493906021118,
+      -4.438633918762207,
+      6.873433449072763e-05
+    ],
+    [
+      3.077493906021118,
+      4.4386444091796875,
+      28.800241470336914
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

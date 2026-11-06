@@ -1,0 +1,26 @@
+{
+  "id": "m_404dcc49197b8e01",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/SM_BS_YuccaMA1_1m_HD.SM_BS_YuccaMA1_1m_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Bush\\SM_BS_YuccaMA1_1m_HD.glb",
+  "sourceSHA256": "F50375DCF497DEBC0D025EE061786BDE473635E44688FBAE87B5EAE231513650",
+  "model": "models/df_v24/m_404dcc49197b8e01.vmdl",
+  "materials": {
+    "mat_d88a44e6057a1f7f": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/00_Materials/MI_BS_YuccaMA1_1m_Leaf_HD.MI_BS_YuccaMA1_1m_Leaf_HD"
+  },
+  "vertices": 1850,
+  "polygons": 1955,
+  "bounds": [
+    [
+      -46.19509506225586,
+      -31.92181968688965,
+      -2.0225980281829834
+    ],
+    [
+      16.765888214111328,
+      28.23832893371582,
+      57.653892517089844
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

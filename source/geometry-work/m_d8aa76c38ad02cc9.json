@@ -1,0 +1,31 @@
+{
+  "id": "m_d8aa76c38ad02cc9",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_Test_01_ExterWall_01_Decal.SM_H_Building_FutureTech_Test_01_ExterWall_01_Decal",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_Test_01_ExterWall_01_Decal.glb",
+  "sourceSHA256": "2EE4B396BD581747A9F17B547BE47B8827949A14BDBCB259FF37FA630EFD2A59",
+  "model": "models/df_v24/m_d8aa76c38ad02cc9.vmdl",
+  "materials": {
+    "mat_482069f5db613f8e": "DeltaForce/Content/Environment/Decal/Connect/00_Materials/MI_I_Connect_Decal_01_HD.MI_I_Connect_Decal_01_HD",
+    "mat_da8c4ccd423f7b47": "DeltaForce/Content/Environment/Decal/Traffic/00_Materials/MI_I_Traffic_Decal_03_HD.MI_I_Traffic_Decal_03_HD",
+    "mat_8e178b45e13d34f2": "DeltaForce/Content/Environment/Decal/WallDamaged/00_Materials/HD/MI_I_WallDamaged_Decal_03b_HD.MI_I_WallDamaged_Decal_03b_HD",
+    "mat_db14650e4bed6490": "DeltaForce/Content/Environment/Decal/Crack/00_Materials/MI_I_Crack_Decal_01_HD.MI_I_Crack_Decal_01_HD",
+    "mat_83b0464406b475c0": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_DecalAlpha_03a_HD.MI_H_Building_FutureTech_DecalAlpha_03a_HD",
+    "mat_0c598fa3c01b4fca": "DeltaForce/Content/Environment/Decal/WallDamaged/00_Materials/MI_I_WallDamaged_Decal_03_HD.MI_I_WallDamaged_Decal_03_HD"
+  },
+  "vertices": 3568,
+  "polygons": 3321,
+  "bounds": [
+    [
+      -400.8880310058594,
+      -1828.567138671875,
+      -0.016542818397283554
+    ],
+    [
+      1506.27734375,
+      1828.174560546875,
+      349.46820068359375
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

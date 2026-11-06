@@ -1,0 +1,28 @@
+{
+  "id": "m_9ba7a0f1a8fca97b",
+  "objectPath": "DeltaForce/Content/Maps/Iceland/Asset/Props/SM_IceLand_Props_IndustrialAntenna_02b.SM_IceLand_Props_IndustrialAntenna_02b",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Maps\\Iceland\\Asset\\Props\\SM_IceLand_Props_IndustrialAntenna_02b.glb",
+  "sourceSHA256": "E45884E7C78ECB76BD4BCCFB82315A3240686EDBC4CC7E53F9068F3C5E5FA953",
+  "model": "models/df_v24/m_9ba7a0f1a8fca97b.vmdl",
+  "materials": {
+    "mat_58a6ebb769363d14": "DeltaForce/Content/Maps/Iceland/Asset/Props/00_Materials/HD/MI_IceLand_Props_IndustrialSignal_01_HD.MI_IceLand_Props_IndustrialSignal_01_HD",
+    "mat_073507cc435415f3": "DeltaForce/Content/Maps/Iceland/Asset/Props/00_Materials/HD/MI_IceLand_Props_IndustrialSignal_Light_01_HD.MI_IceLand_Props_IndustrialSignal_Light_01_HD",
+    "mat_6d44775deaa17d5c": "DeltaForce/Content/Maps/Iceland/Asset/Props/00_Materials/HD/MI_H_IceLand_Props_IndustrialStreetLamp_02_HD.MI_H_IceLand_Props_IndustrialStreetLamp_02_HD"
+  },
+  "vertices": 675,
+  "polygons": 602,
+  "bounds": [
+    [
+      -2.9060006141662598,
+      -0.9200987815856934,
+      -3.4333316989432205e-07
+    ],
+    [
+      0.9231302738189697,
+      0.9236404895782471,
+      81.09996795654297
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

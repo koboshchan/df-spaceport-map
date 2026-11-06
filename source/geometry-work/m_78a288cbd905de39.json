@@ -1,0 +1,27 @@
+{
+  "id": "m_78a288cbd905de39",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/SM_H_Government_Office_Wardrobe_02.SM_H_Government_Office_Wardrobe_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Government\\Office\\SM_H_Government_Office_Wardrobe_02.glb",
+  "sourceSHA256": "861C4E04AAF27E5F1FB9DCB2D3007148189238AFD943F987152919CE8819ADFC",
+  "model": "models/df_v24/m_78a288cbd905de39.vmdl",
+  "materials": {
+    "mat_063c163664948462": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/00_Materials/HD/MI_H_Government_Office_Wardrobe_01_HD.MI_H_Government_Office_Wardrobe_01_HD",
+    "mat_4c639ddf627bb66a": "DeltaForce/Content/Maps/Iceland/Asset/Props/00_Materials/HD/MI_IceLand_Props_IndustrialRadar_02_HD.MI_Iceland_Props_IndustrialRadar_02_HD"
+  },
+  "vertices": 3299,
+  "polygons": 3109,
+  "bounds": [
+    [
+      0.0,
+      -11.385757446289062,
+      -1.0986327652062755e-05
+    ],
+    [
+      140.80726623535156,
+      -2.510547574274824e-06,
+      118.84700775146484
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

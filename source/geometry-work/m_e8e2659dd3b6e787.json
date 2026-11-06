@@ -1,0 +1,26 @@
+{
+  "id": "m_e8e2659dd3b6e787",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation/Tree/SM_TR_DatePalm_15m.SM_TR_DatePalm_15m",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation\\Tree\\SM_TR_DatePalm_15m.glb",
+  "sourceSHA256": "F2FA31D100F7F6979BD004307F4FA67D9DECB8DDD5FA0F5229ED88BA11240A88",
+  "model": "models/df_v24/m_e8e2659dd3b6e787.vmdl",
+  "materials": {
+    "mat_f504318a65816512": "DeltaForce/Content/Environment/Biome/Vegetation/Tree/00_Materials/MI_TR_DatePalm_19m.MI_TR_DatePalm_19m"
+  },
+  "vertices": 939,
+  "polygons": 1388,
+  "bounds": [
+    [
+      -78.73490905761719,
+      -107.0689926147461,
+      -7.8730244636535645
+    ],
+    [
+      132.06748962402344,
+      99.1037368774414,
+      565.8248291015625
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

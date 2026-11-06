@@ -1,0 +1,26 @@
+{
+  "id": "m_ea05cf3cfc64920c",
+  "objectPath": "DeltaForce/Content/Environment/Props/Religious/SM_Religious_candlestick_01.SM_Religious_candlestick_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Religious\\SM_Religious_candlestick_01.glb",
+  "sourceSHA256": "4513D37B20D117B273330088D46B81A0D93DA1B5272298F054B67458B62F5D14",
+  "model": "models/df_v24/m_ea05cf3cfc64920c.vmdl",
+  "materials": {
+    "mat_75cfbf9557d91194": "DeltaForce/Content/Environment/Props/Religious/00_Materials/HD/MI_Religious_candlestick_02_HD.MI_Religious_candlestick_02_HD"
+  },
+  "vertices": 1054,
+  "polygons": 1448,
+  "bounds": [
+    [
+      -6.108726501464844,
+      -6.105035781860352,
+      -0.0013540649088099599
+    ],
+    [
+      6.108726501464844,
+      6.110748291015625,
+      24.318620681762695
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "m_176c7d822809b184",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/IceLand/SM_H_GEN_Props_Industrial_ElectricBox_01a.SM_H_GEN_Props_Industrial_ElectricBox_01a",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\IceLand\\SM_H_GEN_Props_Industrial_ElectricBox_01a.glb",
+  "sourceSHA256": "6E238892D505532319C90CF917B377F20DF5336984A685A0BC2DFD6B72E93FE4",
+  "model": "models/df_v24/m_176c7d822809b184.vmdl",
+  "materials": {
+    "mat_f83c75d1595b9449": "DeltaForce/Content/Environment/Props/HAAVK/IceLand/00_Materials/HD/MI_H_GEN_Props_Industrial_ElectricBox_01a_HD.MI_H_GEN_Props_Industrial_ElectricBox_01a_HD"
+  },
+  "vertices": 80,
+  "polygons": 60,
+  "bounds": [
+    [
+      -13.99746322631836,
+      -8.600218772888184,
+      0.045219726860523224
+    ],
+    [
+      13.997309684753418,
+      8.20600414276123,
+      66.43940734863281
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

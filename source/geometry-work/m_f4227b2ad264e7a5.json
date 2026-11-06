@@ -1,0 +1,26 @@
+{
+  "id": "m_f4227b2ad264e7a5",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS_Ma1/SM_H_Industrial_ISS_Rocket_01A_Ruin_Decal.SM_H_Industrial_ISS_Rocket_01A_Ruin_Decal",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\ISS_Ma1\\SM_H_Industrial_ISS_Rocket_01A_Ruin_Decal.glb",
+  "sourceSHA256": "DAFBBF468A8C36D74DE43D768B7B5A92C83795375740373D3C2374C2F8F333D5",
+  "model": "models/df_v24/m_f4227b2ad264e7a5.vmdl",
+  "materials": {
+    "mat_2d434753e5781c3a": "DeltaForce/Content/Environment/Decal/Dirt/00_Materials/MI_I_Dirt_Decal_44_HD.MI_I_Dirt_Decal_44_HD"
+  },
+  "vertices": 36392,
+  "polygons": 36301,
+  "bounds": [
+    [
+      -71.57461547851562,
+      -88.8073501586914,
+      -123.36505126953125
+    ],
+    [
+      503.4328308105469,
+      92.87973022460938,
+      85.07951354980469
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

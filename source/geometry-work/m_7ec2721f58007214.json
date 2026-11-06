@@ -1,0 +1,34 @@
+{
+  "id": "m_7ec2721f58007214",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Fence/SM_H_Fence_Metal_1024x768_01C.SM_H_Fence_Metal_1024x768_01C",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Fence\\SM_H_Fence_Metal_1024x768_01C.glb",
+  "sourceSHA256": "203DED262DDB09519C2901E61C2FA41CEDD6F506CC22500C10487205915C7B85",
+  "model": "models/df_v24/m_7ec2721f58007214.vmdl",
+  "materials": {
+    "mat_c8fdc59a780b0491": "DeltaForce/Content/Environment/Structures/HAAVK/Fence/00_Materials/HD/MI_H_Fence_Metal_1024x768_01b_HD.MI_H_Fence_Metal_1024x768_01b_HD",
+    "mat_66e0a1d0d4f261af": "DeltaForce/Content/Environment/Structures/HAAVK/Fence/00_Materials/HD/MI_H_Fence_Metal_1024x768_01f_HD.MI_H_Fence_Metal_1024x768_01f_HD",
+    "mat_75201dcecf2b4501": "DeltaForce/Content/Environment/Structures/Morocco/Decal/00_Materials/HD/MI_GEN_Burnt_Wall_01_HD.MI_GEN_Burnt_Wall_01_HD",
+    "mat_12ca4bdb2b715c77": "DeltaForce/Content/Environment/Structures/HAAVK/Fence/00_Materials/HD/MI_H_Fence_Metal_1024x768_01e_HD.MI_H_Fence_Metal_1024x768_01e_HD",
+    "mat_39c582a912704536": "DeltaForce/Content/Environment/Structures/HAAVK/Fence/00_Materials/HD/MI_H_Fence_Metal_1024x768_01d_HD.MI_H_Fence_Metal_1024x768_01d_HD",
+    "mat_f4ccfe83b681a8bf": "DeltaForce/Content/Environment/Structures/HAAVK/Fence/00_Materials/HD/MI_H_Fence_Metal_1024x768_01C_Decal_HD.MI_H_Fence_Metal_1024x768_01C_Decal_HD",
+    "mat_65cb25faf5cbd434": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Industrial/00_Materials/HD/MI_H_Building_Industrial_Posun_02c_HD.MI_H_Building_Industrial_Posun_02c_HD",
+    "mat_ba296184c60d3451": "DeltaForce/Content/Environment/Props/Morocco/Industrial/Construction/00_Materials/HD/MI_M_Industrial_Construction_Pillars_01_HD.MI_M_Industrial_Construction_Pillars_01_HD",
+    "mat_b2cce2838c324de6": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Industrial/00_Materials/HD/MI_H_Building_Industrial_Posun_02_HD.MI_H_Building_Industrial_Posun_02_HD"
+  },
+  "vertices": 7960,
+  "polygons": 8452,
+  "bounds": [
+    [
+      -3.0381150245666504,
+      -53.49560546875,
+      -0.013990402221679688
+    ],
+    [
+      273.4496154785156,
+      1.6841583251953125,
+      375.47222900390625
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

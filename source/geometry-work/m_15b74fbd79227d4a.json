@@ -1,0 +1,29 @@
+{
+  "id": "m_15b74fbd79227d4a",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_Dormitory/SM_H_Building_FutureTech_Dormitory_02_ExterWall_01D.SM_H_Building_FutureTech_Dormitory_02_ExterWall_01D",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_Dormitory\\SM_H_Building_FutureTech_Dormitory_02_ExterWall_01D.glb",
+  "sourceSHA256": "10A93EC1D30A2D5AC7AEEE90A1AA8A57F6407FE4F4B0B086081C3DF6E0D9ED7C",
+  "model": "models/df_v24/m_15b74fbd79227d4a.vmdl",
+  "materials": {
+    "mat_15b879ac038504ed": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/Room/SpaceCenter/MI_Window_FakeInterior_01_HD.MI_Window_FakeInterior_01_HD",
+    "mat_d25a1aaf7ed05866": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/Room/SpaceCenter/MI_Window_FakeInterior_01_04_HD.MI_Window_FakeInterior_01_04_HD",
+    "mat_3568c3d4868e875d": "DeltaForce/Content/Environment/Structures/Window/00_Materials/HD/MI_Window_Glass_02_HD.MI_Window_Glass_02_HD",
+    "mat_9bbac425dc26ecfd": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/Glass/VariousGlass/ExampleMaterials/CustomGlass/MI_Glass_CustomDirtyA_HD.MI_Glass_CustomDirtyA_HD"
+  },
+  "vertices": 40,
+  "polygons": 22,
+  "bounds": [
+    [
+      -23.363731384277344,
+      -474.47998046875,
+      187.20004272460938
+    ],
+    [
+      -6.036220073699951,
+      -23.555587768554688,
+      391.8293151855469
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

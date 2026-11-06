@@ -1,0 +1,32 @@
+{
+  "id": "m_28041fd779ef3703",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_Bridge_01Q.SM_H_Building_FutureTech_Bridge_01Q",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_Bridge_01Q.glb",
+  "sourceSHA256": "9B89A2E96CB066D2FC209884DD27BD34B7CFBF197E31873F4249DA8E68E97D68",
+  "model": "models/df_v24/m_28041fd779ef3703.vmdl",
+  "materials": {
+    "mat_f5f6a4bc7cf71b80": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Concrete_Checkred_02_HD.MI_GEN_Concrete_Checkred_02_HD",
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD",
+    "mat_38b39ab9bd6e8fae": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_03_HD.MI_GEN_Metal_Painting_03_HD",
+    "mat_5366ad95f8f34007": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_Ground_20_HD.MI_H_Building_FutureTech_Ground_20_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_d15cf9faec972d37": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_04_HD.MI_GEN_Metal_Painting_04_HD",
+    "mat_d4a5b374225565be": "DeltaForce/Content/Environment/Structures/Building/storage/00_Materials/HD/MI_Building_Storage_Concrete_02_HD.MI_Building_Storage_Concrete_02_HD"
+  },
+  "vertices": 27382,
+  "polygons": 18246,
+  "bounds": [
+    [
+      -1100.3270263671875,
+      -237.9781036376953,
+      -8.219487190246582
+    ],
+    [
+      1099.7830810546875,
+      98.08839416503906,
+      338.8071594238281
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

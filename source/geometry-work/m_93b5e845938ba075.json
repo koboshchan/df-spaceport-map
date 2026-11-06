@@ -1,0 +1,30 @@
+{
+  "id": "m_93b5e845938ba075",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/SM_I_RoadFacility_Ground_T_07_InterWall_05a.SM_I_RoadFacility_Ground_T_07_InterWall_05a",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter_Ma1\\SM_I_RoadFacility_Ground_T_07_InterWall_05a.glb",
+  "sourceSHA256": "2A0413837118E084114B2C23B2B089037A561711AF991411B6A8848EE4A336C2",
+  "model": "models/df_v24/m_93b5e845938ba075.vmdl",
+  "materials": {
+    "mat_9257e7010dd18b27": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Concrete_Checkred_05_HD.MI_GEN_Concrete_Checkred_05_HD",
+    "mat_71de2cc8194918d0": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_T_01_04_HD.MI_I_RoadFacility_Ground_T_01_04_HD",
+    "mat_8b5d279a6d2e73a7": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_D_HD.MI_I_WalkwaySystem_MetalFloor_01_D_HD",
+    "mat_1d00e30d44b7a72b": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Continuous_Metal_04_A_HD.MI_H_FutureTech_Continuous_Metal_04_A_HD",
+    "mat_9757c5bed0f87f57": "DeltaForce/Content/Environment/Props/HAAVK/IceLand/00_Materials/HD/MI_H_IceLand_Props_IndustrialPlateMetals_01a_HD.MI_H_IceLand_Props_IndustrialPlateMetals_01a_HD"
+  },
+  "vertices": 8743,
+  "polygons": 7062,
+  "bounds": [
+    [
+      -1853.6572265625,
+      603.2981567382812,
+      -285.175537109375
+    ],
+    [
+      -43.412078857421875,
+      1343.962890625,
+      98.89134979248047
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

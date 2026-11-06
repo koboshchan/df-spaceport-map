@@ -1,0 +1,26 @@
+{
+  "id": "m_2d1b1282db1cece7",
+  "objectPath": "DeltaForce/Content/Effects/Common/Mesh/Plane/SM_Quad_1m.SM_Quad_1m",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Effects\\Common\\Mesh\\Plane\\SM_Quad_1m.glb",
+  "sourceSHA256": "1F28D26D6AA2688B80BAAD5CDCEA35EEA495961B7082818D3BA7554E61488413",
+  "model": "models/df_v24/m_2d1b1282db1cece7.vmdl",
+  "materials": {
+    "mat_87fa7d325eb743c4": "Engine/Content/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+  },
+  "vertices": 4,
+  "polygons": 2,
+  "bounds": [
+    [
+      -18.0,
+      -18.0,
+      -1.102182034977753e-15
+    ],
+    [
+      18.0,
+      18.0,
+      1.102182034977753e-15
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

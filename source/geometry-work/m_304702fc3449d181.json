@@ -1,0 +1,30 @@
+{
+  "id": "m_304702fc3449d181",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/SM_I_RoadFacility_Ground_H_18A.SM_I_RoadFacility_Ground_H_18A",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter_Ma1\\SM_I_RoadFacility_Ground_H_18A.glb",
+  "sourceSHA256": "95D3CB85C24F4BB18F8E70A831C25515E5C5209094F042A85762692323A2BFD2",
+  "model": "models/df_v24/m_304702fc3449d181.vmdl",
+  "materials": {
+    "mat_46e162a33f17fe6d": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_I_RoadFacility_Ground_H_18_01A_HD.MI_I_RoadFacility_Ground_H_18_01A_HD",
+    "mat_f97535ccc75f1663": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_H_06A_HD.MI_I_RoadFacility_Ground_H_06A_HD",
+    "mat_38f3a85edb7e19ad": "DeltaForce/Content/Environment/Structures/HAAVK/Decal/WellLid/00_Materials/HD/MI_H_Decal_WellLid_01_HD.MI_H_Decal_WellLid_01_HD",
+    "mat_71ee86456aff471e": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_H_01A_HD.MI_I_RoadFacility_Ground_H_01A_HD",
+    "mat_3ffdc0fb9acd1562": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_H_05A_HD.MI_I_RoadFacility_Ground_H_05A_HD"
+  },
+  "vertices": 3340,
+  "polygons": 1971,
+  "bounds": [
+    [
+      -6121.2578125,
+      -6206.53759765625,
+      -20.5986328125
+    ],
+    [
+      -3294.00244140625,
+      -2921.64453125,
+      1.4258605241775513
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "m_95e1b2ff289e5dc6",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/SM_H_Building_FutureTech_HStairs_01D.SM_H_Building_FutureTech_HStairs_01D",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter\\SM_H_Building_FutureTech_HStairs_01D.glb",
+  "sourceSHA256": "1BB3C2B0B8B0ED76A19BE9581CC72635DC03B519C9A2C15738EC4B707D2F9245",
+  "model": "models/df_v24/m_95e1b2ff289e5dc6.vmdl",
+  "materials": {
+    "mat_937b69427b2b9492": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/00_Materials/HD/MI_H_Industrial_Mechanical_SteelShelf_01B_HD.MI_H_Industrial_Mechanical_SteelShelf_01B_HD",
+    "mat_ba296184c60d3451": "DeltaForce/Content/Environment/Props/Morocco/Industrial/Construction/00_Materials/HD/MI_M_Industrial_Construction_Pillars_01_HD.MI_M_Industrial_Construction_Pillars_01_HD"
+  },
+  "vertices": 4499,
+  "polygons": 3928,
+  "bounds": [
+    [
+      -3430.9619140625,
+      -2709.424072265625,
+      93.76949310302734
+    ],
+    [
+      -3314.199951171875,
+      187.80368041992188,
+      537.3651123046875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

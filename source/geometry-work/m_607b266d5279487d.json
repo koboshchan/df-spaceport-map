@@ -1,0 +1,26 @@
+{
+  "id": "m_607b266d5279487d",
+  "objectPath": "DeltaForce/Content/Effects/Common/Mesh/Object/SM_Object_GroundDust.SM_Object_GroundDust",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Effects\\Common\\Mesh\\Object\\SM_Object_GroundDust.glb",
+  "sourceSHA256": "19C2BC340D7141AB05071F9C74A4F3642F9BCC589C331DEADC75349C8F368ECB",
+  "model": "models/df_v24/m_607b266d5279487d.vmdl",
+  "materials": {
+    "mat_87fa7d325eb743c4": "Engine/Content/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+  },
+  "vertices": 242,
+  "polygons": 400,
+  "bounds": [
+    [
+      -218.50082397460938,
+      0.04160522297024727,
+      -108.39900207519531
+    ],
+    [
+      182.82733154296875,
+      192.47633361816406,
+      108.39907836914062
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

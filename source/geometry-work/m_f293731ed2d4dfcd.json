@@ -1,0 +1,27 @@
+{
+  "id": "m_f293731ed2d4dfcd",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Government/Office/SM_M_Government_Office_Cable_01a.SM_M_Government_Office_Cable_01a",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Government\\Office\\SM_M_Government_Office_Cable_01a.glb",
+  "sourceSHA256": "A69FBABE53E3E9B1B90FBDE29DB36CF77B0187FA3F9E18C4A0E58F599EF3EE9D",
+  "model": "models/df_v24/m_f293731ed2d4dfcd.vmdl",
+  "materials": {
+    "mat_ecd42e3086e45a26": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Continuous_Rubber_01_HD.MI_H_FutureTech_Continuous_Rubber_01_HD",
+    "mat_1d00e30d44b7a72b": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Continuous_Metal_04_A_HD.MI_H_FutureTech_Continuous_Metal_04_A_HD"
+  },
+  "vertices": 2478,
+  "polygons": 1988,
+  "bounds": [
+    [
+      -0.16129198670387268,
+      -0.08889415860176086,
+      -0.4377722144126892
+    ],
+    [
+      11.248153686523438,
+      4.994279861450195,
+      35.999996185302734
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

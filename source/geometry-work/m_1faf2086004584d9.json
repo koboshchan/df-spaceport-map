@@ -1,0 +1,28 @@
+{
+  "id": "m_1faf2086004584d9",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/HD_Only/Government/SM_H_Government_Hospital_InfusionBottle_02.SM_H_Government_Hospital_InfusionBottle_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\HD_Only\\Government\\SM_H_Government_Hospital_InfusionBottle_02.glb",
+  "sourceSHA256": "6D9589E0F91F4040865EE37714DBF68B7959332A96B037D669971C3349E00483",
+  "model": "models/df_v24/m_1faf2086004584d9.vmdl",
+  "materials": {
+    "mat_4a222a83756cc7bf": "DeltaForce/Content/Environment/Props/HAAVK/HD_Only/Government/00_Materials/HD/MI_H_Government_Hospital_InfusionBottle_02_HD.MI_H_Government_Hospital_InfusionBottle_02_HD",
+    "mat_4ecc19dbfaeed065": "DeltaForce/Content/Environment/Props/HAAVK/HD_Only/Government/00_Materials/HD/MI_H_Government_Hospital_InfusionBottle_01_HD.MI_H_Government_Hospital_InfusionBottle_01_HD",
+    "mat_a3918763e3ee1229": "DeltaForce/Content/Environment/Props/HAAVK/HD_Only/Government/00_Materials/HD/MI_H_Government_Hospital_InfusionBottle_03_HD.MI_H_Government_Hospital_InfusionBottle_03_HD"
+  },
+  "vertices": 1238,
+  "polygons": 1676,
+  "bounds": [
+    [
+      -2.133209228515625,
+      -2.2156524658203125,
+      -8.739225387573242
+    ],
+    [
+      2.1717569828033447,
+      1.9739686250686646,
+      0.0685071349143982
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

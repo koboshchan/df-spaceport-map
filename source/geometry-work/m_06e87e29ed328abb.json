@@ -1,0 +1,26 @@
+{
+  "id": "m_06e87e29ed328abb",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Commercial/Branding/SM_M_Branding_OilPainting_04A.SM_M_Branding_OilPainting_04A",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Commercial\\Branding\\SM_M_Branding_OilPainting_04A.glb",
+  "sourceSHA256": "40A6CED337A6E3C7B7870759E5B610A1CD1DB4AF83DC4CD1F714EFB61FC4B219",
+  "model": "models/df_v24/m_06e87e29ed328abb.vmdl",
+  "materials": {
+    "mat_172fd13cd420590a": "DeltaForce/Content/Environment/Props/Morocco/Commercial/00_Materials/HD/MI_M_Branding_OilPainting_01A_HD.MI_M_Branding_OilPainting_01A_HD"
+  },
+  "vertices": 436,
+  "polygons": 396,
+  "bounds": [
+    [
+      6.317138468148187e-05,
+      -1.4452098608016968,
+      -6.400721594701858e-17
+    ],
+    [
+      55.0854377746582,
+      3.5190582821087446e-06,
+      33.59288787841797
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

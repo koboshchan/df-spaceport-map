@@ -1,0 +1,28 @@
+{
+  "id": "m_e62230f8a5eb3136",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_AgainstWar_01c.SM_H_Building_FutureTech_AgainstWar_01c",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_AgainstWar_01c.glb",
+  "sourceSHA256": "1728C919D565438347FA2DCF60F22FCD527107EA3717E4456F27E6C7CB4ABB04",
+  "model": "models/df_v24/m_e62230f8a5eb3136.vmdl",
+  "materials": {
+    "mat_801936e282a6fbf6": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_L_07B_HD.MI_I_RoadFacility_Ground_L_07B_HD",
+    "mat_b420b016f5ed409e": "DeltaForce/Content/Environment/MatBlend/Concrete/Iris/00_Materials/HD/MI_M_Building_Concrete_Damaged_01c_HD.MI_M_Building_Concrete_Damaged_01c_HD",
+    "mat_ba296184c60d3451": "DeltaForce/Content/Environment/Props/Morocco/Industrial/Construction/00_Materials/HD/MI_M_Industrial_Construction_Pillars_01_HD.MI_M_Industrial_Construction_Pillars_01_HD"
+  },
+  "vertices": 20236,
+  "polygons": 17053,
+  "bounds": [
+    [
+      -994.6961669921875,
+      17.787832260131836,
+      -14.41846752166748
+    ],
+    [
+      -608.328369140625,
+      244.1441650390625,
+      218.63021850585938
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

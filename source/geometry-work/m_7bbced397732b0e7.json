@@ -1,0 +1,31 @@
+{
+  "id": "m_7bbced397732b0e7",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_ProductionArea_01/SM_H_Building_FutureTech_AssemblyArea_InterWall_02.SM_H_Building_FutureTech_AssemblyArea_InterWall_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_ProductionArea_01\\SM_H_Building_FutureTech_AssemblyArea_InterWall_02.glb",
+  "sourceSHA256": "6D4F70709D0C825806FBA5A0012B4D75C81A3D4751D522A53E0F1EFBF9ED8604",
+  "model": "models/df_v24/m_7bbced397732b0e7.vmdl",
+  "materials": {
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_d783b614f1783cff": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_01_HD.MI_GEN_Metal_Painting_01_HD",
+    "mat_d15cf9faec972d37": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_04_HD.MI_GEN_Metal_Painting_04_HD",
+    "mat_cf4bffa2e71ba398": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Concrete_Base_02_HD.MI_GEN_Concrete_Base_02_HD",
+    "mat_7db844d316ae8cff": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AssemblyArea_InterWall_01_HD.MI_H_Building_FutureTech_AssemblyArea_InterWall_01_HD",
+    "mat_03b27ff9fc3e0370": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01F_HD.MI_I_WalkwaySystem_MetalFloor_01F_HD"
+  },
+  "vertices": 464,
+  "polygons": 378,
+  "bounds": [
+    [
+      -1924.53369140625,
+      333.3614501953125,
+      5.757491111755371
+    ],
+    [
+      -1001.4918212890625,
+      1550.4234619140625,
+      287.2897644042969
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

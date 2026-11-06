@@ -1,0 +1,50 @@
+{
+  "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors_HD/InterActor/InterActor_x26_y16_1_HD.InterActor_x26_y16_1_HD:PersistentLevel.BP_LightTrigger2_4.SM_H_FutureTech_Lighting_DecorativeLamp_02_C1",
+  "instanceIndex": null,
+  "meshObjectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/Lighting/SM_H_FutureTech_Lighting_DecorativeLamp_02_C.SM_H_FutureTech_Lighting_DecorativeLamp_02_C",
+  "model": "models/df_v24/a_c049327cc64a9d06.vmdl",
+  "id": "a_c049327cc64a9d06",
+  "positionCS2": [
+    -2280.9608817397093,
+    -11409.695527986012,
+    -79.41957580799863
+  ],
+  "origin": [
+    -2280.9608817397093,
+    -11409.695527986012,
+    -79.41957580799863
+  ],
+  "angles": [
+    0,
+    0,
+    0
+  ],
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "bakedCS2LocalTransform": true,
+  "collisionEnabled": true,
+  "linearDeterminant": 3.5199997425079346,
+  "windingReversed": false,
+  "maxLinearCheckError": 1.9073486328125e-06,
+  "bakeReason": "source shear needs exact baked model 0.11020973671605198",
+  "localLinearMatrix": [
+    [
+      1.1358412504196167,
+      0.200277179479599,
+      0.6700940132141113
+    ],
+    [
+      1.0913541316986084,
+      0.19243890047073364,
+      -0.743398129940033
+    ],
+    [
+      -0.3820270299911499,
+      2.166576862335205,
+      9.226590918842703e-06
+    ]
+  ]
+}

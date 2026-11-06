@@ -1,0 +1,50 @@
+{
+  "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube97.StaticMeshComponent0",
+  "instanceIndex": null,
+  "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+  "model": "models/df_v24/a_ad148c1228ff4ea3.vmdl",
+  "id": "a_ad148c1228ff4ea3",
+  "positionCS2": [
+    -8947.350022873434,
+    4672.517396267969,
+    275.5118115558007
+  ],
+  "origin": [
+    -8947.350022873434,
+    4672.517396267969,
+    275.5118115558007
+  ],
+  "angles": [
+    0,
+    0,
+    0
+  ],
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "bakedCS2LocalTransform": true,
+  "collisionEnabled": true,
+  "linearDeterminant": 0.4250360429286957,
+  "windingReversed": false,
+  "maxLinearCheckError": 3.814697265625e-06,
+  "bakeReason": "source shear needs exact baked model 0.8747482811334103",
+  "localLinearMatrix": [
+    [
+      -7.0613104981021024e-06,
+      0.03101859986782074,
+      1.9487608671188354
+    ],
+    [
+      -12.779038429260254,
+      2.836805208517035e-07,
+      1.7822387235355563e-05
+    ],
+    [
+      2.2838554319901375e-17,
+      -0.00038832577411085367,
+      1.047876238822937
+    ]
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "m_5f100ecab3c4f8ef",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Decoration/SM_DECOR_Juniper_Needles_01_HD.SM_DECOR_Juniper_Needles_01_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Decoration\\SM_DECOR_Juniper_Needles_01_HD.glb",
+  "sourceSHA256": "ECE5D87A302A9C0430F567C231D51C5649753091FD79BCD21B721DA469459C4F",
+  "model": "models/df_v24/m_5f100ecab3c4f8ef.vmdl",
+  "materials": {
+    "mat_c2af33e177498470": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Decoration/00_Materials/MI_DECOR_Juniper_Needles_01_Leaf_HD.MI_DECOR_Juniper_Needles_01_Leaf_HD"
+  },
+  "vertices": 1360,
+  "polygons": 1452,
+  "bounds": [
+    [
+      -59.24601745605469,
+      -69.42041015625,
+      0.13015684485435486
+    ],
+    [
+      59.24601745605469,
+      70.53266143798828,
+      17.76064682006836
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

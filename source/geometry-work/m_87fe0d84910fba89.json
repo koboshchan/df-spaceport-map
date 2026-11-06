@@ -1,0 +1,26 @@
+{
+  "id": "m_87fe0d84910fba89",
+  "objectPath": "DeltaForce/Content/MaterialLib/Materials/Scene/Sky/Map/SM_skymesh.SM_skymesh",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\MaterialLib\\Materials\\Scene\\Sky\\Map\\SM_skymesh.glb",
+  "sourceSHA256": "C1A8FC34AB1F013D542DFE96FC606F6AA247D1C5CACEB4EEA178A3E60FFF8EF8",
+  "model": "models/df_v24/m_87fe0d84910fba89.vmdl",
+  "materials": {
+    "mat_87fa7d325eb743c4": "Engine/Content/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+  },
+  "vertices": 2145,
+  "polygons": 4032,
+  "bounds": [
+    [
+      -25.95590591430664,
+      -25.95590591430664,
+      -0.7384357452392578
+    ],
+    [
+      25.955909729003906,
+      25.955888748168945,
+      27.398128509521484
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "m_d479f3040068f6da",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/SM_H_FutureTech_Commercial_Resort_FlowerBed_10.SM_H_FutureTech_Commercial_Resort_FlowerBed_10",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\SM_H_FutureTech_Commercial_Resort_FlowerBed_10.glb",
+  "sourceSHA256": "795ED703E041E7504B0E0DE9FEE059546AD2F6B6967820EB8858CFCB21343DDE",
+  "model": "models/df_v24/m_d479f3040068f6da.vmdl",
+  "materials": {
+    "mat_e7062a2d8edc5ee1": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Furniture_Flowerpot_01B_HD.MI_H_FutureTech_Furniture_Flowerpot_01B_HD",
+    "mat_a67b28d28e36cf00": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/00_Materials/HD/MI_H_Government_Office_CoffeeMachine_01A_HD.MI_H_Government_Office_CoffeeMachine_01A_HD",
+    "mat_618233413d41ab99": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Commercial_Resort_FlowerBed_10_HD.MI_H_FutureTech_Commercial_Resort_FlowerBed_10_HD"
+  },
+  "vertices": 2045,
+  "polygons": 2524,
+  "bounds": [
+    [
+      -17.100000381469727,
+      -17.10000228881836,
+      -0.006350741256028414
+    ],
+    [
+      17.100006103515625,
+      17.10000228881836,
+      36.502349853515625
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

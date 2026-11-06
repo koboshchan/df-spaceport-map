@@ -1,0 +1,26 @@
+{
+  "id": "m_2f33b0f48619d7d9",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Tools/SM_H_Industrial_Tools_Cloth_02B.SM_H_Industrial_Tools_Cloth_02B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\Tools\\SM_H_Industrial_Tools_Cloth_02B.glb",
+  "sourceSHA256": "CB3EDBF30B8CA77D5344247CB93232890226971F6504FAA4BEEC3106C03A06E8",
+  "model": "models/df_v24/m_2f33b0f48619d7d9.vmdl",
+  "materials": {
+    "mat_fdfc8bcaf710111b": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Tools/00_Materials/HD/MI_H_Industrial_Tools_Cloth_02_HD.MI_H_Industrial_Tools_Cloth_02_HD"
+  },
+  "vertices": 1835,
+  "polygons": 2432,
+  "bounds": [
+    [
+      -7.960679531097412,
+      -9.219905853271484,
+      -38.18498992919922
+    ],
+    [
+      5.465851783752441,
+      1.0557174391578883e-05,
+      4.510906219482422
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

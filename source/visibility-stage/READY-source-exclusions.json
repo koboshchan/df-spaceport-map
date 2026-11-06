@@ -1,0 +1,48 @@
+{
+  "status": "READY_SOURCE_EXCLUSIONS",
+  "baseSHA256": "b0034f6f263cbe03c49915266d0148668427b0ffdf317eb025ef43a5622e317b",
+  "baseRenderPhysics": 354,
+  "baseRenderOnlyPreservePhysics": 2,
+  "additionalEmergency": [
+    {
+      "rowIndex": 36171,
+      "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/Spacecenter_EmergencyBorderWall.Spacecenter_EmergencyBorderWall:PersistentLevel.Collision874.StaticMeshComponent0",
+      "renderExclude": true,
+      "collisionExclude": true
+    },
+    {
+      "rowIndex": 36232,
+      "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/Spacecenter_EmergencyBorderWall.Spacecenter_EmergencyBorderWall:PersistentLevel.Collision950.StaticMeshComponent0",
+      "renderExclude": true,
+      "collisionExclude": true
+    },
+    {
+      "rowIndex": 38576,
+      "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/Spacecenter_EmergencyBorderWall_1.Spacecenter_EmergencyBorderWall_1:PersistentLevel.Collision1306.StaticMeshComponent0",
+      "renderExclude": true,
+      "collisionExclude": true
+    },
+    {
+      "rowIndex": 43681,
+      "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/Spacecenter_EmergencyBorderWall_10.Spacecenter_EmergencyBorderWall_10:PersistentLevel.Collision1530.StaticMeshComponent0",
+      "renderExclude": true,
+      "collisionExclude": true
+    }
+  ],
+  "unionCount": 360,
+  "preserve": [
+    "legitimate floor hit40",
+    "500 static door masks",
+    "221 container attachments",
+    "536 ladder OBBs",
+    "two water mesh physics",
+    "all non-target instances"
+  ],
+  "unconfirmedHiddenRow": 24326,
+  "centralGates": [
+    "compiled exact-instance render and physics absence at eight hits",
+    "independent clips/BP volumes scan",
+    "targeted player hull clearance",
+    "compile only no install"
+  ]
+}

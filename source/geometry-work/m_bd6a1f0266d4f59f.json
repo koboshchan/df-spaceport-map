@@ -1,0 +1,33 @@
+{
+  "id": "m_bd6a1f0266d4f59f",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_Test_01_ExterWall_01.SM_H_Building_FutureTech_Test_01_ExterWall_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_Test_01_ExterWall_01.glb",
+  "sourceSHA256": "8CAB8A991B723860229FAA830E2DB142262A9ABAD3F85A7CA7B1C13DAF5CF421",
+  "model": "models/df_v24/m_bd6a1f0266d4f59f.vmdl",
+  "materials": {
+    "mat_38f3a85edb7e19ad": "DeltaForce/Content/Environment/Structures/HAAVK/Decal/WellLid/00_Materials/HD/MI_H_Decal_WellLid_01_HD.MI_H_Decal_WellLid_01_HD",
+    "mat_6b2db71bd8acced4": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_L_10_02_HD.MI_I_RoadFacility_Ground_L_10_02_HD",
+    "mat_8f8ebe617eeaf222": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_Test/00_Materials/HD/MI_Building_FutureTech_Test_01_HTest_01_ExterWall_01_02_HD.MI_Building_FutureTech_Test_01_HTest_01_ExterWall_01_02_HD",
+    "mat_da8c4ccd423f7b47": "DeltaForce/Content/Environment/Decal/Traffic/00_Materials/MI_I_Traffic_Decal_03_HD.MI_I_Traffic_Decal_03_HD",
+    "mat_6e26a5c3ca2759cf": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_Test/00_Materials/HD/MI_Building_FutureTech_Test_01_HTest_01_ExterWall_01_01_HD.MI_Building_FutureTech_Test_01_HTest_01_ExterWall_01_01_HD",
+    "mat_8b5d279a6d2e73a7": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_D_HD.MI_I_WalkwaySystem_MetalFloor_01_D_HD",
+    "mat_20f6975d983bce3b": "DeltaForce/Content/Maps/Iceland/Asset/Structures/00_Materials/HD/MI_H_IceLand_Building_Decal_01_HD.MI_H_IceLand_Building_Decal_01_HD",
+    "mat_33602b4bfdc71367": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_C_HD.MI_I_WalkwaySystem_MetalFloor_01_C_HD"
+  },
+  "vertices": 22024,
+  "polygons": 13740,
+  "bounds": [
+    [
+      -551.2392578125,
+      -2175.24853515625,
+      -36.00105667114258
+    ],
+    [
+      1779.72900390625,
+      2174.361083984375,
+      408.603515625
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

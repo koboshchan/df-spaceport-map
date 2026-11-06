@@ -1,0 +1,28 @@
+{
+  "id": "m_5412f1f51c7c279d",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_ProductionArea_01/SM_H_Building_FutureTech_AssemblyArea_InterWall_01G.SM_H_Building_FutureTech_AssemblyArea_InterWall_01G",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_ProductionArea_01\\SM_H_Building_FutureTech_AssemblyArea_InterWall_01G.glb",
+  "sourceSHA256": "7BE8B71FBA2EAC1E895EEFBCC448D6A17F1E916CD54F0EAD78EFE05F689EC862",
+  "model": "models/df_v24/m_5412f1f51c7c279d.vmdl",
+  "materials": {
+    "mat_5c93c24fe8668312": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_DecalAlpha_01_HD.MI_H_Building_FutureTech_DecalAlpha_01_HD",
+    "mat_ebe2c68b91602cff": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Road_Decal_02_HD.MI_H_FutureTech_Road_Decal_02_HD",
+    "mat_ec48b6d165b27696": "DeltaForce/Content/Environment/Decal/Other/00_Materials/HD/MI_I_Other_Decal_14_HD.MI_I_Other_Decal_14_HD"
+  },
+  "vertices": 7385,
+  "polygons": 3877,
+  "bounds": [
+    [
+      -2092.367431640625,
+      13.895196914672852,
+      4.605376243591309
+    ],
+    [
+      -6.81315279006958,
+      2195.4619140625,
+      545.5673828125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "m_a7d055f49cc6427d",
+  "objectPath": "DeltaForce/Content/Models/Props/Collect/props_collect_TreasureArena_1165/props_collect_TreasureArena_1165_UI0.props_collect_TreasureArena_1165_UI0",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Props\\Collect\\props_collect_TreasureArena_1165\\props_collect_TreasureArena_1165_UI0.glb",
+  "sourceSHA256": "2C2B5054632EAE2833BE09B9D0C9DB2C0467917F244643F12EC5ACE799F70F4F",
+  "model": "models/df_v24/m_a7d055f49cc6427d.vmdl",
+  "materials": {
+    "mat_ef7722729ae58f11": "DeltaForce/Content/Models/Props/Collect/props_collect_TreasureArena_1165/Materials/props_collect_TreasureArena_1165.props_collect_TreasureArena_1165"
+  },
+  "vertices": 6969,
+  "polygons": 6333,
+  "bounds": [
+    [
+      -1.5407040119171143,
+      -0.9216305017471313,
+      -0.18869733810424805
+    ],
+    [
+      1.5407068729400635,
+      1.7782790660858154,
+      7.317245960235596
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

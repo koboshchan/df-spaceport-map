@@ -1,0 +1,29 @@
+{
+  "id": "m_67a09c67cad8d9b4",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Container/SM_H_Industrial_Container_PackingBox_01B.SM_H_Industrial_Container_PackingBox_01B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\Container\\SM_H_Industrial_Container_PackingBox_01B.glb",
+  "sourceSHA256": "5EB24D086BAAD98EDD3C868904142A04AFD9701FF17A943E6A2D10918B77974B",
+  "model": "models/df_v24/m_67a09c67cad8d9b4.vmdl",
+  "materials": {
+    "mat_ce515409d0a82492": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD",
+    "mat_4a53ea5565e62a7d": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Container/00_Materials/HD/MI_H_Industrial_Container_PackingBox_02_HD.MI_H_Industrial_Container_PackingBox_02_HD",
+    "mat_57d5201bdbe160c0": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Container/00_Materials/HD/MI_H_Industrial_Container_PackingBox_01_HD.MI_H_Industrial_Container_PackingBox_01_HD",
+    "mat_2906e09b3a527625": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Container/00_Materials/HD/MI_H_Industrial_Container_PackingBox_03_HD.MI_H_Industrial_Container_PackingBox_03_HD"
+  },
+  "vertices": 3125,
+  "polygons": 2654,
+  "bounds": [
+    [
+      -18.148523330688477,
+      -25.34111785888672,
+      -0.2685566544532776
+    ],
+    [
+      18.237258911132812,
+      25.336801528930664,
+      32.49797058105469
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

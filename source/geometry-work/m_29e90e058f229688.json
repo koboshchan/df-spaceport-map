@@ -1,0 +1,26 @@
+{
+  "id": "m_29e90e058f229688",
+  "objectPath": "DeltaForce/Content/Environment/Gameplay/Feature/SM_Feature_ClayFigurine_01.SM_Feature_ClayFigurine_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Gameplay\\Feature\\SM_Feature_ClayFigurine_01.glb",
+  "sourceSHA256": "2FA0F79A6D3B0B1E5780B461B9AC3845B4E6E68ADB61E3388262BD569E9289AD",
+  "model": "models/df_v24/m_29e90e058f229688.vmdl",
+  "materials": {
+    "mat_72dc621f788dbd1e": "DeltaForce/Content/Environment/Gameplay/Feature/00_Materials/HD/MI_Feature_ClayFigurine_01_HD.MI_Feature_ClayFigurine_01_HD"
+  },
+  "vertices": 7668,
+  "polygons": 9962,
+  "bounds": [
+    [
+      -2.186431646347046,
+      -2.071305274963379,
+      -3.206812948519655e-07
+    ],
+    [
+      2.179025173187256,
+      1.9855148792266846,
+      7.358600616455078
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

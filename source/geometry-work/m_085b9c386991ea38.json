@@ -1,0 +1,28 @@
+{
+  "id": "m_085b9c386991ea38",
+  "objectPath": "DeltaForce/Content/Environment/Props/Industrial/Mechanical/SM_Industrial_Mechanical_LiquidTank_01b.SM_Industrial_Mechanical_LiquidTank_01b",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Industrial\\Mechanical\\SM_Industrial_Mechanical_LiquidTank_01b.glb",
+  "sourceSHA256": "E15D0C4AAFF69DFB764FAECE663580B280FB840EEA1142E3315C8DBADF6D6452",
+  "model": "models/df_v24/m_085b9c386991ea38.vmdl",
+  "materials": {
+    "mat_4c1961a7d8902b62": "DeltaForce/Content/Environment/Props/Industrial/Mechanical/00_Materials/HD/MI_Industrial_Mechanical_LiquidTank_03_HD.MI_Industrial_Mechanical_LiquidTank_03_HD",
+    "mat_3ade1afab263452e": "DeltaForce/Content/Environment/Props/Industrial/Mechanical/00_Materials/HD/MI_Industrial_Mechanical_LiquidTank_01_HD.MI_Industrial_Mechanical_LiquidTank_01_HD",
+    "mat_200f60e2c4ca6914": "DeltaForce/Content/Environment/Props/Industrial/Mechanical/00_Materials/HD/MI_Industrial_Mechanical_LiquidTank_02_HD.MI_Industrial_Mechanical_LiquidTank_02_HD"
+  },
+  "vertices": 21396,
+  "polygons": 20240,
+  "bounds": [
+    [
+      -33.77845764160156,
+      -137.6779327392578,
+      -8.430342741169022e-15
+    ],
+    [
+      266.3599548339844,
+      89.55079650878906,
+      458.86114501953125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

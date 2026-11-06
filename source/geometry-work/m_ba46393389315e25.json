@@ -1,0 +1,26 @@
+{
+  "id": "m_ba46393389315e25",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_BigDoor_04_Decal.SM_H_Building_FutureTech_BigDoor_04_Decal",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_BigDoor_04_Decal.glb",
+  "sourceSHA256": "3CEC5DE797F13105292455176D3F70418E08CBC6AC0E3C311EA970EE03F81053",
+  "model": "models/df_v24/m_ba46393389315e25.vmdl",
+  "materials": {
+    "mat_d925d27862cd468a": "DeltaForce/Content/Environment/Structures/Decal/00_Materials/HD/MI_GEN_Decal_ExterWall_07_HD.MI_GEN_Decal_ExterWall_07_HD"
+  },
+  "vertices": 492,
+  "polygons": 396,
+  "bounds": [
+    [
+      -445.3259582519531,
+      -268.3951110839844,
+      52.62696075439453
+    ],
+    [
+      391.5703430175781,
+      303.1855163574219,
+      469.13494873046875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

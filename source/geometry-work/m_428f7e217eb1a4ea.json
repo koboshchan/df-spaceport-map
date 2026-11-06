@@ -1,0 +1,35 @@
+{
+  "id": "m_428f7e217eb1a4ea",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/SM_I_RoadFacility_Ground_C_01.SM_I_RoadFacility_Ground_C_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter\\SM_I_RoadFacility_Ground_C_01.glb",
+  "sourceSHA256": "9043ADDE777B1FA6E90EB24227180094381A8A0BF6BB9EE90B5EA9ED9ED8E4AA",
+  "model": "models/df_v24/m_428f7e217eb1a4ea.vmdl",
+  "materials": {
+    "mat_9ae0cbbe320a2e30": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Checkred_02_HD.MI_GEN_Marble_Checkred_02_HD",
+    "mat_bb5bfe6928d8fbb5": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_C_01c_HD.MI_I_RoadFacility_Ground_C_01c_HD",
+    "mat_38f3a85edb7e19ad": "DeltaForce/Content/Environment/Structures/HAAVK/Decal/WellLid/00_Materials/HD/MI_H_Decal_WellLid_01_HD.MI_H_Decal_WellLid_01_HD",
+    "mat_4e705c737a79a291": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_C_01a_HD.MI_I_RoadFacility_Ground_C_01a_HD",
+    "mat_389db5688a50652e": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_GEN_Grass_Base_01_HD.MI_GEN_Grass_Base_01_HD",
+    "mat_618dce10771d7cb5": "DeltaForce/Content/Environment/Decal/Connect/00_Materials/HD/MI_I_Connect_Decal_04_HD.MI_I_Connect_Decal_04_HD",
+    "mat_9c6f0b6a4badca25": "DeltaForce/Content/Environment/Decal/WallDamaged/00_Materials/HD/MI_I_WallDamaged_Decal_03a_HD.MI_I_WallDamaged_Decal_03a_HD",
+    "mat_5c93c24fe8668312": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_DecalAlpha_01_HD.MI_H_Building_FutureTech_DecalAlpha_01_HD",
+    "mat_4d8eb5ea4f8a100b": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_C_01b_HD.MI_I_RoadFacility_Ground_C_01b_HD",
+    "mat_56b97478a6c441b5": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_I_RoadFacility_Ground_C_09a_HD.MI_I_RoadFacility_Ground_C_09a_HD"
+  },
+  "vertices": 3345,
+  "polygons": 2070,
+  "bounds": [
+    [
+      7125.90673828125,
+      179.51739501953125,
+      -114.86236572265625
+    ],
+    [
+      9058.3759765625,
+      1950.23046875,
+      -92.86845397949219
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

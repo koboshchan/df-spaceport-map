@@ -1,0 +1,30 @@
+{
+  "id": "m_cc43b27c7cd75412",
+  "objectPath": "DeltaForce/Content/Models/Vehicles/Blackhawk1993_AI/Appearance_Base/Blackhawk1993_Body_AI_3P.Blackhawk1993_Body_AI_3P",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Vehicles\\Blackhawk1993_AI\\Appearance_Base\\Blackhawk1993_Body_AI_3P.glb",
+  "sourceSHA256": "F454F0176E167D2CBD92E467A57ECC975767F032E5E9B0DC744FD7836B5D30D7",
+  "model": "models/df_v24/m_cc43b27c7cd75412.vmdl",
+  "materials": {
+    "mat_10024dc97e779e8f": "DeltaForce/Content/Models/Vehicles/Blackhawk1993_AI/Appearance_Base/Materials/carrier_propeller_MH60L_1993_blue_door.carrier_propeller_MH60L_1993_blue_door",
+    "mat_05f50ec52cbb1632": "DeltaForce/Content/Models/Vehicles/Blackhawk1993/Appearance_Base/Materials/carrier_propeller_MH60L_1993_inside01.carrier_propeller_MH60L_1993_inside01",
+    "mat_d9970cc5a45095a6": "DeltaForce/Content/Models/Vehicles/Blackhawk1993/Appearance_Base/Materials/carrier_propeller_MH60L_1993_inside02.carrier_propeller_MH60L_1993_inside02",
+    "mat_60d4c4e8324a106e": "DeltaForce/Content/Models/Vehicles/Blackhawk1993_AI/Appearance_Base/Materials/carrier_propeller_MH60L_1993_blue_body.carrier_propeller_MH60L_1993_blue_body",
+    "mat_005cbba6ab64bc8e": "DeltaForce/Content/Models/Vehicles/Blackhawk1993/Appearance_Base/Materials/carrier_propeller_MH60L_1993_glass.carrier_propeller_MH60L_1993_glass"
+  },
+  "vertices": 40401,
+  "polygons": 38020,
+  "bounds": [
+    [
+      -369.74835205078125,
+      -104.37289428710938,
+      7.117897033691406
+    ],
+    [
+      301.7252197265625,
+      104.3314208984375,
+      159.0619354248047
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "m_be3c24e4b0b5fc5b",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/SM_H_Government_Office_Desk_01.SM_H_Government_Office_Desk_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Government\\Office\\SM_H_Government_Office_Desk_01.glb",
+  "sourceSHA256": "766D0F2F2FA295578AF6502179DCBCD06E89414B229F6254F16B55FA0491EA2D",
+  "model": "models/df_v24/m_be3c24e4b0b5fc5b.vmdl",
+  "materials": {
+    "mat_8044cad901355e74": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/00_Materials/HD/MI_H_Government_Office_Desk_01A_HD.MI_H_Government_Office_Desk_01A_HD",
+    "mat_4ede65815fab1cfd": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/00_Materials/HD/MI_H_Government_Office_Desk_01C_HD.MI_H_Government_Office_Desk_01C_HD",
+    "mat_e51fbaf2f2b8526d": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/00_Materials/HD/MI_H_Government_Office_Desk_01B_HD.MI_H_Government_Office_Desk_01B_HD",
+    "mat_94bde8e827fb6fea": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/00_Materials/HD/MI_H_Government_Office_Desk_01D_HD.MI_H_Government_Office_Desk_01D_HD",
+    "mat_4c639ddf627bb66a": "DeltaForce/Content/Maps/Iceland/Asset/Props/00_Materials/HD/MI_IceLand_Props_IndustrialRadar_02_HD.MI_Iceland_Props_IndustrialRadar_02_HD"
+  },
+  "vertices": 1650,
+  "polygons": 1264,
+  "bounds": [
+    [
+      -82.52812194824219,
+      -24.053707122802734,
+      -0.1458105444908142
+    ],
+    [
+      82.52811431884766,
+      24.053712844848633,
+      33.15989303588867
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

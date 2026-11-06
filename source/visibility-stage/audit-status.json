@@ -1,0 +1,7 @@
+{
+  "status": "positive-proof-closure-ready",
+  "manifest": "exclusion-manifest.json",
+  "summary": "summary.json",
+  "doors": "door-closure.json",
+  "remaining": "Inheritance, loot bake, H4 localized mapping NOT completed"
+}

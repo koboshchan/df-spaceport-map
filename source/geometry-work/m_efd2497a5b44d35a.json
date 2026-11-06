@@ -1,0 +1,26 @@
+{
+  "id": "m_efd2497a5b44d35a",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Door/Small/SM_H_Small_Door_15_Frame.SM_H_Small_Door_15_Frame",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Door\\Small\\SM_H_Small_Door_15_Frame.glb",
+  "sourceSHA256": "CD0824E4E74860D1EDE69E098CBAE21AF480AA925A6D77F12135FD26B599DB00",
+  "model": "models/df_v24/m_efd2497a5b44d35a.vmdl",
+  "materials": {
+    "mat_6f2fa0932f42f59c": "DeltaForce/Content/Environment/Structures/HAAVK/Door/Small/00_Materials/HD/MI_H_Small_Door_15_HD.MI_H_Small_Door_15_HD"
+  },
+  "vertices": 522,
+  "polygons": 580,
+  "bounds": [
+    [
+      -4.889105184702203e-06,
+      -0.719928503036499,
+      -3.1469081562818246e-08
+    ],
+    [
+      57.599998474121094,
+      12.240071296691895,
+      92.15999603271484
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

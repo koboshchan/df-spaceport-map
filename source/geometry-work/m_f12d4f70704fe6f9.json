@@ -1,0 +1,26 @@
+{
+  "id": "m_f12d4f70704fe6f9",
+  "objectPath": "DeltaForce/Content/Effects_HD/Destructible_HD/Destructible_Mesh_HD/SM_H_Props_NavalBattle_LiquidTank_01_debris/SM_H_Props_NavalBattle_LiquidTank_01_debris_03.SM_H_Props_NavalBattle_LiquidTank_01_debris_03",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Effects_HD\\Destructible_HD\\Destructible_Mesh_HD\\SM_H_Props_NavalBattle_LiquidTank_01_debris\\SM_H_Props_NavalBattle_LiquidTank_01_debris_03.glb",
+  "sourceSHA256": "6059D2114AF3E79C42D1F4D689E87ACA25F97A740B6902049971DAD28791794E",
+  "model": "models/df_v24/m_f12d4f70704fe6f9.vmdl",
+  "materials": {
+    "mat_97db25f4f9a78d96": "DeltaForce/Content/Effects_HD/Destructible_HD/Destructible_Mesh_HD/SM_H_Props_NavalBattle_LiquidTank_01_debris/MI_H_Props_NavalBattle_LiquidTank_01_debris_01_HD.MI_H_Props_NavalBattle_LiquidTank_01_debris_01_HD"
+  },
+  "vertices": 248,
+  "polygons": 228,
+  "bounds": [
+    [
+      -51.85480880737305,
+      -4.610390663146973,
+      -0.0924060046672821
+    ],
+    [
+      61.752952575683594,
+      5.786816120147705,
+      36.472320556640625
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

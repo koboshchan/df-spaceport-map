@@ -1,0 +1,27 @@
+{
+  "id": "m_f27ebb351a7f5feb",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/SM_I_RoadFacility_Ground_L_08.SM_I_RoadFacility_Ground_L_08",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter\\SM_I_RoadFacility_Ground_L_08.glb",
+  "sourceSHA256": "80B7500591E85E013E1925648C12F705109EABC7067E2292C0BC13AE5C76ED5C",
+  "model": "models/df_v24/m_f27ebb351a7f5feb.vmdl",
+  "materials": {
+    "mat_8b5d279a6d2e73a7": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_D_HD.MI_I_WalkwaySystem_MetalFloor_01_D_HD",
+    "mat_ce59d163831ce26e": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_L_10_03_HD.MI_I_RoadFacility_Ground_L_10_03_HD"
+  },
+  "vertices": 39472,
+  "polygons": 32638,
+  "bounds": [
+    [
+      -393.06866455078125,
+      -577.148193359375,
+      -93.95578002929688
+    ],
+    [
+      1054.8035888671875,
+      894.1888427734375,
+      84.15000915527344
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

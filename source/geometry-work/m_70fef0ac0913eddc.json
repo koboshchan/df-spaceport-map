@@ -1,0 +1,27 @@
+{
+  "id": "m_70fef0ac0913eddc",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/SM_H_FutureTech_Vehicle_GroundVehicle_01.SM_H_FutureTech_Vehicle_GroundVehicle_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\SM_H_FutureTech_Vehicle_GroundVehicle_01.glb",
+  "sourceSHA256": "38CFCE15451E41225575EAA75B624D242E60C89E9711814A8B5C4836456B7EC2",
+  "model": "models/df_v24/m_70fef0ac0913eddc.vmdl",
+  "materials": {
+    "mat_3c18cd2211383241": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Vehicle_GroundVehicle_01_HD.MI_H_FutureTech_Vehicle_GroundVehicle_01_HD",
+    "mat_cf1a7fb8c94bdd95": "DeltaForce/Content/Environment/Props/Branding/00_Materials/HD/MI_Branding_Sticker_Number_02G_HD.MI_Branding_Sticker_Number_02G_HD"
+  },
+  "vertices": 9996,
+  "polygons": 10060,
+  "bounds": [
+    [
+      -33.83396530151367,
+      -10.940696716308594,
+      0.6398561000823975
+    ],
+    [
+      33.85648727416992,
+      61.06316375732422,
+      38.053627014160156
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

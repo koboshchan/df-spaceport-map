@@ -1,0 +1,29 @@
+{
+  "id": "m_ca2d67ac564e72a4",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_AgainstWar_01a_Damaged_03_Decal.SM_H_Building_FutureTech_AgainstWar_01a_Damaged_03_Decal",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_AgainstWar_01a_Damaged_03_Decal.glb",
+  "sourceSHA256": "51DCC40AD44DBB87DEF62FDFF6A435730E7431DAE1AF6AC63F0D10CAE759EC3B",
+  "model": "models/df_v24/m_ca2d67ac564e72a4.vmdl",
+  "materials": {
+    "mat_cc9ee146d6b8b8f9": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Tide/00_Materials/HD/MI_H_Building_Tide_Decal_08_HD.MI_H_Building_Tide_Decal_08_HD",
+    "mat_7f4bd919ba858598": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Tide/00_Materials/HD/MI_H_Building_Tide_Decal_32c_HD.MI_H_Building_Tide_Decal_32c_HD",
+    "mat_350dc55f2fcea027": "DeltaForce/Content/Environment/Decal/Dirt/00_Materials/MI_I_Dirt_Decal_13_HD.MI_I_Dirt_Decal_13_HD",
+    "mat_d3a5eb33b161ae8b": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Tide/00_Materials/HD/MI_H_Building_Tide_Accumulation_Decal_10_HD.MI_H_Building_Tide_Accumulation_Decal_10_HD"
+  },
+  "vertices": 3109,
+  "polygons": 3465,
+  "bounds": [
+    [
+      1074.2679443359375,
+      -92.6850357055664,
+      -121.51502990722656
+    ],
+    [
+      1145.4022216796875,
+      58.69709396362305,
+      -93.95893859863281
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

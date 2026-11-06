@@ -1,0 +1,37 @@
+{
+  "id": "m_5eaacbaac05bc8ec",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_Dormitory/SM_H_Building_FutureTech_DormitoryPassage_01.SM_H_Building_FutureTech_DormitoryPassage_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_Dormitory\\SM_H_Building_FutureTech_DormitoryPassage_01.glb",
+  "sourceSHA256": "0A2F3C1E5113483D1D1FD2DB0247B4FD9EDB981116C18670C0EC61177666D885",
+  "model": "models/df_v24/m_5eaacbaac05bc8ec.vmdl",
+  "materials": {
+    "mat_38b39ab9bd6e8fae": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_03_HD.MI_GEN_Metal_Painting_03_HD",
+    "mat_45e2c73b465457a0": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Wooden_Plank_02_HD.MI_GEN_Wooden_Plank_02_HD",
+    "mat_97b2a0b8acad9ddd": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_Dormitory_03_ExterWall_01B_HD.MI_H_Building_FutureTech_Dormitory_03_ExterWall_01B_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_482069f5db613f8e": "DeltaForce/Content/Environment/Decal/Connect/00_Materials/MI_I_Connect_Decal_01_HD.MI_I_Connect_Decal_01_HD",
+    "mat_e6242931b1fcdb7c": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_Dormitory_03_ExterWall_01A_HD.MI_H_Building_FutureTech_Dormitory_03_ExterWall_01A_HD",
+    "mat_45301b416bf6c4c2": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_Dormitory_03_ExterWall_01C_HD.MI_H_Building_FutureTech_Dormitory_03_ExterWall_01C_HD",
+    "mat_97b75a15ec2f9b04": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_I_RoadFacility_Ground_D_06A_HD.MI_I_RoadFacility_Ground_D_06A_HD",
+    "mat_7f2b3d3cb6b0f1bb": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_I_RoadFacility_Ground_D_06C_HD.MI_I_RoadFacility_Ground_D_06C_HD",
+    "mat_077abca1673e9bae": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_I_RoadFacility_Ground_D_06B_HD.MI_I_RoadFacility_Ground_D_06B_HD",
+    "mat_bf7bef68acdf4a31": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_I_RoadFacility_Ground_D_06E_HD.MI_I_RoadFacility_Ground_D_06E_HD",
+    "mat_f47ac22043562039": "DeltaForce/Content/Environment/Decal/Abrasion/00_Materials/HD/MI_I_Abrasion_Decal_01_HD.MI_I_Abrasion_Decal_01_HD"
+  },
+  "vertices": 20123,
+  "polygons": 17847,
+  "bounds": [
+    [
+      680.531005859375,
+      828.5513916015625,
+      -81.36000061035156
+    ],
+    [
+      1467.013916015625,
+      2400.868408203125,
+      390.5998840332031
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

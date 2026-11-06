@@ -1,0 +1,26 @@
+{
+  "id": "m_5e42bc120188ea26",
+  "objectPath": "DeltaForce/Content/Models/Vehicles/RCV_AI/Appearance_Base/RCV_Wheels_AI_3P.RCV_Wheels_AI_3P",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Vehicles\\RCV_AI\\Appearance_Base\\RCV_Wheels_AI_3P.glb",
+  "sourceSHA256": "8094F0597E687CC5B93E3DC8D9100BF7896E08E828FD7607D4451A41DE262C0A",
+  "model": "models/df_v24/m_5e42bc120188ea26.vmdl",
+  "materials": {
+    "mat_a432d4773367dd2a": "DeltaForce/Content/Models/Vehicles/RCV_AI/Appearance_Base/Materials/M_HS_BOSS03_RCV_Wheels.M_HS_BOSS03_RCV_Wheels"
+  },
+  "vertices": 484,
+  "polygons": 478,
+  "bounds": [
+    [
+      -4.225979804992676,
+      -10.916142463684082,
+      -10.864748001098633
+    ],
+    [
+      4.310531139373779,
+      10.866448402404785,
+      10.917839050292969
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

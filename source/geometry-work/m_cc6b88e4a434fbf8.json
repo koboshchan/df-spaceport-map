@@ -1,0 +1,26 @@
+{
+  "id": "m_cc6b88e4a434fbf8",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/SM_H_FutureTech_Furniture_Chair_06.SM_H_FutureTech_Furniture_Chair_06",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\SM_H_FutureTech_Furniture_Chair_06.glb",
+  "sourceSHA256": "B47178C11B36218B94DF9D3891EAC33C2EBA0705D8DF240CDFCA902C61A8F751",
+  "model": "models/df_v24/m_cc6b88e4a434fbf8.vmdl",
+  "materials": {
+    "mat_2e66a533896b2483": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Furniture_Chair_06_HD.MI_H_FutureTech_Furniture_Chair_06_HD"
+  },
+  "vertices": 902,
+  "polygons": 1290,
+  "bounds": [
+    [
+      -12.76003646850586,
+      -9.769475936889648,
+      -1.3732909565078444e-06
+    ],
+    [
+      12.790241241455078,
+      15.053762435913086,
+      42.93906784057617
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

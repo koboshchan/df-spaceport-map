@@ -1,0 +1,27 @@
+{
+  "id": "m_a861a68d7b82f4f6",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_Dormitory/SM_H_Building_FutureTech_Dormitory_02_Ornament_02.SM_H_Building_FutureTech_Dormitory_02_Ornament_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_Dormitory\\SM_H_Building_FutureTech_Dormitory_02_Ornament_02.glb",
+  "sourceSHA256": "5A548CCDD9EF2AF37B6E1F9EA68C93CEA77AD3AAE9DE660726E82D57E94209B5",
+  "model": "models/df_v24/m_a861a68d7b82f4f6.vmdl",
+  "materials": {
+    "mat_45e2c73b465457a0": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Wooden_Plank_02_HD.MI_GEN_Wooden_Plank_02_HD",
+    "mat_57c102789a468b7d": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_07B_HD.MI_GEN_Metal_Painting_07B_HD"
+  },
+  "vertices": 2904,
+  "polygons": 2208,
+  "bounds": [
+    [
+      -175.89404296875,
+      -91.79815673828125,
+      -0.030454101040959358
+    ],
+    [
+      175.89300537109375,
+      88.57977294921875,
+      58.995567321777344
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

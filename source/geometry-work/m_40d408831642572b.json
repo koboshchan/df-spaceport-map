@@ -1,0 +1,28 @@
+{
+  "id": "m_40d408831642572b",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_Building_FutureTech_H_01/SM_H_Building_FutureTech_HLight_01_ExterWall_05.SM_H_Building_FutureTech_HLight_01_ExterWall_05",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_Building_FutureTech_H_01\\SM_H_Building_FutureTech_HLight_01_ExterWall_05.glb",
+  "sourceSHA256": "766361B1B16C39CB124A1C2783D78D413323B1B91FF6D62E374FE091158C6925",
+  "model": "models/df_v24/m_40d408831642572b.vmdl",
+  "materials": {
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD",
+    "mat_95ddda55345ba7e6": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Concrete_Rough_01_HD.MI_GEN_Concrete_Rough_01_HD",
+    "mat_7623adcf83331053": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_RoomGlass_05_HD.MI_RoomGlass_05_HD"
+  },
+  "vertices": 1234,
+  "polygons": 618,
+  "bounds": [
+    [
+      -234.00009155273438,
+      -432.0,
+      -2.645236968649902e-14
+    ],
+    [
+      234.00009155273438,
+      432.0,
+      211.55799865722656
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

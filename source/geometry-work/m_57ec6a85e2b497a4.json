@@ -1,0 +1,26 @@
+{
+  "id": "m_57ec6a85e2b497a4",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_Dock_06g_Lights.SM_H_Building_FutureTech_Dock_06g_Lights",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_Dock_06g_Lights.glb",
+  "sourceSHA256": "AD0BA615FC023D89E82A90AB7F024895513B6C4D0A03556D9505E3E7B5F90DDB",
+  "model": "models/df_v24/m_57ec6a85e2b497a4.vmdl",
+  "materials": {
+    "mat_fe74078c4a249847": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Lighting_01_HD.MI_GEN_Lighting_01_HD"
+  },
+  "vertices": 134,
+  "polygons": 140,
+  "bounds": [
+    [
+      -188.18402099609375,
+      -18.688446044921875,
+      0.2089819312095642
+    ],
+    [
+      58.05210876464844,
+      259.682861328125,
+      142.1192626953125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

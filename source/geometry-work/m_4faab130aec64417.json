@@ -1,0 +1,29 @@
+{
+  "id": "m_4faab130aec64417",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_HLight_01_ExterWall_Damage_01E.SM_H_Building_FutureTech_HLight_01_ExterWall_Damage_01E",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_HLight_01_ExterWall_Damage_01E.glb",
+  "sourceSHA256": "E13B99A46025C5FFF8D79A51C61815DD35948B864449398F30751C20808DE8B6",
+  "model": "models/df_v24/m_4faab130aec64417.vmdl",
+  "materials": {
+    "mat_3aabce168df92de0": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_HLight_01_ExterWall_Damage_01_01E_HD.MI_H_Building_FutureTech_HLight_01_ExterWall_Damage_01_01E_HD",
+    "mat_676db18bed7bb435": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/00_Materials/HD/MI_H_Building_FutureTech_HLight_01_ExterWall_Damage_01B_01E_HD.MI_H_Building_FutureTech_HLight_01_ExterWall_Damage_01B_01E_HD",
+    "mat_f1e89b1a00450d5a": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/00_Materials/HD/MI_H_Building_FutureTech_HLight_01_ExterWall_Damage_01B_01D_HD.MI_H_Building_FutureTech_HLight_01_ExterWall_Damage_01B_01D_HD",
+    "mat_dfdbbe225c19a84d": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_HLight_01_ExterWall_Damage_01B_01B_HD.MI_H_Building_FutureTech_HLight_01_ExterWall_Damage_01B_01B_HD"
+  },
+  "vertices": 22795,
+  "polygons": 22574,
+  "bounds": [
+    [
+      -237.80435180664062,
+      -407.5207214355469,
+      -6.269704818725586
+    ],
+    [
+      437.2202453613281,
+      341.43072509765625,
+      81.47099304199219
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

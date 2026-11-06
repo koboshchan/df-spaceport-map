@@ -1,0 +1,26 @@
+{
+  "id": "m_d3c19ca01be12674",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/Lounge/SM_H_FutureTech_Resort_IronDisc_01.SM_H_FutureTech_Resort_IronDisc_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\Lounge\\SM_H_FutureTech_Resort_IronDisc_01.glb",
+  "sourceSHA256": "58E230DEB672218F9949B08D5C58DE55FD3EECCE783B4747C428502C4FA2E94B",
+  "model": "models/df_v24/m_d3c19ca01be12674.vmdl",
+  "materials": {
+    "mat_0269b65cae36d2b0": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Resort_IronDisc_01_HD.MI_H_FutureTech_Resort_IronDisc_01_HD"
+  },
+  "vertices": 320,
+  "polygons": 572,
+  "bounds": [
+    [
+      -21.040142059326172,
+      -13.172359466552734,
+      -0.00538570387288928
+    ],
+    [
+      21.040142059326172,
+      13.172359466552734,
+      1.3759042024612427
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

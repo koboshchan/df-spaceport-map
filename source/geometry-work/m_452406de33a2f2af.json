@@ -1,0 +1,27 @@
+{
+  "id": "m_452406de33a2f2af",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_AssemblyArea_ExterWall_01D.SM_H_Building_FutureTech_AssemblyArea_ExterWall_01D",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_AssemblyArea_ExterWall_01D.glb",
+  "sourceSHA256": "2DEED4BD32539722255E5FA0707852E2296371E6E33B2CCC3D4EE18219BE036B",
+  "model": "models/df_v24/m_452406de33a2f2af.vmdl",
+  "materials": {
+    "mat_6bf4c2e4c01a5c38": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AssemblyArea_ExterWall_01_HD.MI_H_Building_FutureTech_AssemblyArea_ExterWall_01_HD",
+    "mat_38f3a85edb7e19ad": "DeltaForce/Content/Environment/Structures/HAAVK/Decal/WellLid/00_Materials/HD/MI_H_Decal_WellLid_01_HD.MI_H_Decal_WellLid_01_HD"
+  },
+  "vertices": 21409,
+  "polygons": 14070,
+  "bounds": [
+    [
+      -2172.412353515625,
+      -55.7945442199707,
+      -36.00014114379883
+    ],
+    [
+      35.921138763427734,
+      2239.9072265625,
+      1191.4407958984375
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

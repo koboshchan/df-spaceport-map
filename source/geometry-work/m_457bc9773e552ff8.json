@@ -1,0 +1,27 @@
+{
+  "id": "m_457bc9773e552ff8",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Government/Office/SM_M_Government_Office_Chair_03.SM_M_Government_Office_Chair_03",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Government\\Office\\SM_M_Government_Office_Chair_03.glb",
+  "sourceSHA256": "C4EB7B9D74287E2AB14331E16B52D759FEBBFE447F2149327AC1D6036C0A9DF4",
+  "model": "models/df_v24/m_457bc9773e552ff8.vmdl",
+  "materials": {
+    "mat_8044cad901355e74": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/00_Materials/HD/MI_H_Government_Office_Desk_01A_HD.MI_H_Government_Office_Desk_01A_HD",
+    "mat_4cb3debeb753f035": "DeltaForce/Content/Environment/Props/Morocco/Government/Office/00_Materials/HD/MI_M_Government_Office_BoothSofa_01_HD.MI_M_Government_Office_BoothSofa_01_HD"
+  },
+  "vertices": 3056,
+  "polygons": 3972,
+  "bounds": [
+    [
+      -34.56681823730469,
+      -11.899517059326172,
+      6.866454782539222e-07
+    ],
+    [
+      34.408607482910156,
+      11.793868064880371,
+      17.455059051513672
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "m_f2f0078427fcea75",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Tree/SM_TR_DatePalm_Stump_6m_HD.SM_TR_DatePalm_Stump_6m_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Tree\\SM_TR_DatePalm_Stump_6m_HD.glb",
+  "sourceSHA256": "69F91F2C51E45D1DE1844393A1E1FF47C66D8881D772FE4301C318205C383B3B",
+  "model": "models/df_v24/m_f2f0078427fcea75.vmdl",
+  "materials": {
+    "mat_ad151c83db91c2d6": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Tree/00_Materials/MI_TR_DatePalm_Stump_6m_Trunk_01_HD.MI_TR_DatePalm_Stump_6m_Trunk_01_HD"
+  },
+  "vertices": 2000,
+  "polygons": 2483,
+  "bounds": [
+    [
+      -11.500194549560547,
+      -11.275086402893066,
+      -20.425186157226562
+    ],
+    [
+      11.507543563842773,
+      11.813149452209473,
+      231.67022705078125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

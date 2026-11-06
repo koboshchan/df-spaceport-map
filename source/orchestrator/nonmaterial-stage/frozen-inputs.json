@@ -1,0 +1,97 @@
+[
+  {
+    "path": "E:\\df-v25-build-20261106\\sky-stage\\manifest.json",
+    "bytes": 568,
+    "sha256": "ad3883f8460f0d36f38fc5a6bc803b380fa1f9c6d317bea978da00b1c6eddb50"
+  },
+  {
+    "path": "E:\\df-v25-build-20261106\\sky-stage\\parent-sky-template.vmap",
+    "bytes": 16460,
+    "sha256": "115d81b8b6f505f7321a2a665d922b2e5c61242ec770e725730c86d556b01188"
+  },
+  {
+    "path": "E:\\df-v25-build-20261106\\sky-stage\\parent-sky.patch",
+    "bytes": 1351,
+    "sha256": "b932d9c11a182f14153dc85f7f3f68f228011594449fb2618fc12eb9e10fe069"
+  },
+  {
+    "path": "E:\\df-v25-build-20261106\\sky-stage\\REPORT.txt",
+    "bytes": 3299,
+    "sha256": "b180469cefb86e2875ee5739d797ef1001021b851a76e7cc8c991cacc35a1330"
+  },
+  {
+    "path": "E:\\df-v25-build-20261106\\sky-stage\\sky-closure.json",
+    "bytes": 600,
+    "sha256": "c61f62c456d766069e9a7b65d77132d233fcca9b15f1903cf3891fdb12bc30db"
+  },
+  {
+    "path": "E:\\df-v25-build-20261106\\sky-stage\\sky_de_nuke.vmat_c",
+    "bytes": 2204,
+    "sha256": "c750c75c2e3b49f6c73826e08555a91a337f272cdd05e0090526eef9d54edfdc"
+  },
+  {
+    "path": "E:\\df-v25-build-20261106\\sky-stage\\sky_de_nuke_exr_f04e84b2.vtex_c",
+    "bytes": 384301,
+    "sha256": "29af86e9fb76ac325233ddea3312835f2b24bd82eef802715dd14bc63de1b03c"
+  },
+  {
+    "path": "E:\\df-v25-build-20261106\\ladder-stage\\full-v25-handoff\\CENTRAL-HANDOFF.json",
+    "bytes": 3661,
+    "sha256": "c084d4513303264112bb5448741f50f06800984f0ed1c083b92006ba93e2c7e4"
+  },
+  {
+    "path": "E:\\df-v25-build-20261106\\ladder-stage\\full-v25-handoff\\df_v25_native_ladders_all10.vmap",
+    "bytes": 128055,
+    "sha256": "74de3435ec8f01628ac6c986602159eb1313aa55f3ba97899b60b8ce21e220d7"
+  },
+  {
+    "path": "E:\\df-v25-build-20261106\\ladder-stage\\full-v25-handoff\\native-ladder-geometry-proposal.json",
+    "bytes": 41681,
+    "sha256": "43e9fdc19076be0da1d4575a749fad05add144ccc4bbb044ef54969f924803fd"
+  },
+  {
+    "path": "E:\\df-v25-build-20261106\\ladder-stage\\full-v25-handoff\\pilot-input-manifest.json",
+    "bytes": 977,
+    "sha256": "78fa857c2653c9d86044cc9c75027a410cbbb3711c7ad2effa8b85aec17fe4e4"
+  },
+  {
+    "path": "E:\\df-v25-build-20261106\\ladder-stage\\full-v25-handoff\\stage-all10-native.py",
+    "bytes": 5599,
+    "sha256": "6dabb38bf5b6b212c7bb595fc53a46889c58a95502a7ba411edeede522549ab4"
+  },
+  {
+    "path": "E:\\df-v25-build-20261106\\ladder-stage\\world-collision-candidate\\candidate-FROZEN.json",
+    "bytes": 1038,
+    "sha256": "7557f73430427d82f437b69a1e7805ec5ea148308810723ad4fe15c578a5050a"
+  },
+  {
+    "path": "E:\\df-v25-build-20261106\\ladder-stage\\world-collision-candidate\\candidate-manifest.json",
+    "bytes": 812,
+    "sha256": "cfcb124b1d9dd8a1ba2c3b32a6ca090d4111708b7763b8c0ec7dc02c2e9b2e58"
+  },
+  {
+    "path": "E:\\df-v25-build-20261106\\ladder-stage\\world-collision-candidate\\compiled-acceptance-requirements.json",
+    "bytes": 564,
+    "sha256": "eadc2b50f45bef4e2a46273e8cad03a08e7d15d16a785a3876b9ef0eafd2303e"
+  },
+  {
+    "path": "E:\\df-v25-build-20261106\\ladder-stage\\world-collision-candidate\\dependency-closure.json",
+    "bytes": 1622,
+    "sha256": "5e1fe5aec9e0ad68a0ff72f88bbea1baf850eb6dc56862adcf17c4603e57e2de"
+  },
+  {
+    "path": "E:\\df-v25-build-20261106\\ladder-stage\\world-collision-candidate\\df_v25_ladder_solids_candidate.vmap",
+    "bytes": 6550396,
+    "sha256": "00bd0a01d29f724e1627df1825ba84dc6326d2c6c47619bfb2cb48e6f5c3b99b"
+  },
+  {
+    "path": "E:\\df-v25-build-20261106\\ladder-stage\\world-collision-candidate\\solid-world-boxes-proposal.json",
+    "bytes": 963628,
+    "sha256": "fb1b2ef2ccc7a706423a2b169aa71222db4164dc1759a76193995f2e1f18d15e"
+  },
+  {
+    "path": "E:\\df-v25-build-20261106\\ladder-stage\\world-collision-candidate\\stage-world-solids-candidate.py",
+    "bytes": 4975,
+    "sha256": "fea6563d7c2a0d02b9b035c2ec5d79c440e5f9e76598ab24359827f0c3137ad8"
+  }
+]

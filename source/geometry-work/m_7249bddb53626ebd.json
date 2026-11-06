@@ -1,0 +1,26 @@
+{
+  "id": "m_7249bddb53626ebd",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/SM_H_FutureTech_Electronics_SmokeAlarms_02.SM_H_FutureTech_Electronics_SmokeAlarms_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\SM_H_FutureTech_Electronics_SmokeAlarms_02.glb",
+  "sourceSHA256": "BFAB44244657FB7AD541527E02AF07FF6B0AD2CA9BAA4C3D824DDC06F04C0E6B",
+  "model": "models/df_v24/m_7249bddb53626ebd.vmdl",
+  "materials": {
+    "mat_eb2220cb7b383c89": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Electronics_SmokeAlarms_02_HD.MI_H_FutureTech_Electronics_SmokeAlarms_02_HD"
+  },
+  "vertices": 544,
+  "polygons": 366,
+  "bounds": [
+    [
+      -0.41635388135910034,
+      -0.37397459149360657,
+      -3.3527611242867295e-10
+    ],
+    [
+      0.4163531959056854,
+      0.37331199645996094,
+      1.5361248254776
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "m_8d5146c5452c0268",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/SM_H_Industrial_ISS_Rocket_01_02.SM_H_Industrial_ISS_Rocket_01_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\ISS\\SM_H_Industrial_ISS_Rocket_01_02.glb",
+  "sourceSHA256": "E3F9CAA94CD209B9D36C7229A0D9439E1585950656707E8533EBD8ADFBCA3E4A",
+  "model": "models/df_v24/m_8d5146c5452c0268.vmdl",
+  "materials": {
+    "mat_e1feed4d13307fe3": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Rocket_01_08_HD.MI_H_Industrial_ISS_Rocket_01_08_HD",
+    "mat_b9ad086fd5e2b862": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Rocket_01_07_HD.MI_H_Industrial_ISS_Rocket_01_07_HD",
+    "mat_ce7fe328926ebd36": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Rocket_01_04_HD.MI_H_Industrial_ISS_Rocket_01_04_HD",
+    "mat_6335089357e18e1c": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Rocket_01_02_HD.MI_H_Industrial_ISS_Rocket_01_02_HD",
+    "mat_ebe2c68b91602cff": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Road_Decal_02_HD.MI_H_FutureTech_Road_Decal_02_HD",
+    "mat_ce515409d0a82492": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD"
+  },
+  "vertices": 25266,
+  "polygons": 24756,
+  "bounds": [
+    [
+      -92.13389587402344,
+      -104.30451965332031,
+      0.051422737538814545
+    ],
+    [
+      92.12728881835938,
+      104.65557861328125,
+      375.15673828125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

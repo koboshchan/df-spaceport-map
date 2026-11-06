@@ -1,0 +1,27 @@
+{
+  "id": "m_b502c005a31d1a48",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_Aerospace_02B_Decal.SM_H_Building_FutureTech_Aerospace_02B_Decal",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_Aerospace_02B_Decal.glb",
+  "sourceSHA256": "F61B554DD09BDBDFA71B86FB8F42CDBC96EAA288B73EAA8453F7D31CC47E3065",
+  "model": "models/df_v24/m_b502c005a31d1a48.vmdl",
+  "materials": {
+    "mat_ebe2c68b91602cff": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Road_Decal_02_HD.MI_H_FutureTech_Road_Decal_02_HD",
+    "mat_482069f5db613f8e": "DeltaForce/Content/Environment/Decal/Connect/00_Materials/MI_I_Connect_Decal_01_HD.MI_I_Connect_Decal_01_HD"
+  },
+  "vertices": 1374,
+  "polygons": 1736,
+  "bounds": [
+    [
+      -44.79054641723633,
+      -34.11402130126953,
+      -2.9245522022247314
+    ],
+    [
+      43.26274490356445,
+      33.149559020996094,
+      41.64341354370117
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

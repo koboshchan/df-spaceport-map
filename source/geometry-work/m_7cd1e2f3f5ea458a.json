@@ -1,0 +1,27 @@
+{
+  "id": "m_7cd1e2f3f5ea458a",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_ProductionArea_01/SM_H_Building_FutureTech_TransferStation_ExterWall_01B.SM_H_Building_FutureTech_TransferStation_ExterWall_01B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_ProductionArea_01\\SM_H_Building_FutureTech_TransferStation_ExterWall_01B.glb",
+  "sourceSHA256": "657E448531089411F14F0010B82B173C312871F375D63FA49C7C2A4C42590A22",
+  "model": "models/df_v24/m_7cd1e2f3f5ea458a.vmdl",
+  "materials": {
+    "mat_59ce8b2afbc25f1d": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Industrial/00_Materials/HD/MI_H_Building_Industrial_Posun_02d_HD.MI_H_Building_Industrial_Posun_02d_HD",
+    "mat_d4c455e7f7f02e60": "DeltaForce/Content/Environment/Structures/Morocco/Building/Cracked/00_Materials/HD/MI_Building_Residential_Decal_04_HD.MI_Building_Residential_Decal_04_HD"
+  },
+  "vertices": 1033,
+  "polygons": 1076,
+  "bounds": [
+    [
+      -2046.782958984375,
+      -2031.3533935546875,
+      -0.10855865478515625
+    ],
+    [
+      0.1575099527835846,
+      -3.638046979904175,
+      1065.001953125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

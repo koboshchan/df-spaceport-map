@@ -1,0 +1,30 @@
+{
+  "id": "m_6d678b2a5ea0ee94",
+  "objectPath": "DeltaForce/Content/Environment/Props/Industrial/Mechanical/SM_Industrial_Electrical_Lift_01.SM_Industrial_Electrical_Lift_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Industrial\\Mechanical\\SM_Industrial_Electrical_Lift_01.glb",
+  "sourceSHA256": "1B73F01FDD0622C8F18AB71BA513583211A7E4187ACA06E768A05513DC743F0D",
+  "model": "models/df_v24/m_6d678b2a5ea0ee94.vmdl",
+  "materials": {
+    "mat_a73cc25d792d1e23": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/00_Materials/HD/MI_H_Government_Office_CoffeeMachine_01C_HD.MI_H_Government_Office_CoffeeMachine_01C_HD",
+    "mat_7dc8eddc7b93c7a8": "DeltaForce/Content/Environment/Props/Industrial/00_Materials/HD/MI_Industrial_Electrical_Lift_01C_HD.MI_Industrial_Electrical_Lift_01C_HD",
+    "mat_4280d6cd2627f514": "DeltaForce/Content/Environment/Props/Industrial/00_Materials/HD/MI_Industrial_Electrical_Lift_01_HD.MI_Industrial_Electrical_Lift_01_HD",
+    "mat_1980827d83d9c91a": "DeltaForce/Content/Environment/Props/Industrial/00_Materials/HD/MI_Industrial_Electrical_Lift_01B_HD.MI_Industrial_Electrical_Lift_01B_HD",
+    "mat_9cf0ee41d80ffb9d": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_02_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_02_Decal_HD"
+  },
+  "vertices": 10978,
+  "polygons": 9462,
+  "bounds": [
+    [
+      -66.85081481933594,
+      -27.30290985107422,
+      -0.06490516662597656
+    ],
+    [
+      65.19979095458984,
+      27.146244049072266,
+      103.74247741699219
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

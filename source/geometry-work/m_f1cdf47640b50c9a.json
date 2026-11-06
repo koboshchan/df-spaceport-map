@@ -1,0 +1,27 @@
+{
+  "id": "m_f1cdf47640b50c9a",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Government/Office/SM_M_Government_Office_Blinds_03.SM_M_Government_Office_Blinds_03",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Government\\Office\\SM_M_Government_Office_Blinds_03.glb",
+  "sourceSHA256": "1E998F7CF7F8C55ED38CE3CCC04708244A572913D6BEA8974532523A908B8BC1",
+  "model": "models/df_v24/m_f1cdf47640b50c9a.vmdl",
+  "materials": {
+    "mat_edd69ac5ad3fb377": "DeltaForce/Content/Environment/Props/Morocco/Government/Office/00_Materials/HD/MI_M_Government_Office_Blinds_05_HD.MI_M_Government_Office_Blinds_05_HD",
+    "mat_4c639ddf627bb66a": "DeltaForce/Content/Maps/Iceland/Asset/Props/00_Materials/HD/MI_IceLand_Props_IndustrialRadar_02_HD.MI_Iceland_Props_IndustrialRadar_02_HD"
+  },
+  "vertices": 2044,
+  "polygons": 1650,
+  "bounds": [
+    [
+      1.0986327652062755e-05,
+      -2.2477080821990967,
+      -0.18304665386676788
+    ],
+    [
+      64.3124771118164,
+      0.11227915436029434,
+      70.74697875976562
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

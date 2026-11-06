@@ -1,0 +1,26 @@
+{
+  "id": "m_be3299da1607a6b5",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Military/Lighting/SM_M_Military_Lighting_FloodlightTower_02B.SM_M_Military_Lighting_FloodlightTower_02B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Military\\Lighting\\SM_M_Military_Lighting_FloodlightTower_02B.glb",
+  "sourceSHA256": "D9FC6FA955C495571F52F5C28BBD8839C6CEFD9CDA292731C27EFD4E07605A59",
+  "model": "models/df_v24/m_be3299da1607a6b5.vmdl",
+  "materials": {
+    "mat_a0d1b54254423d15": "DeltaForce/Content/Environment/Props/Morocco/Military/Lighting/00_Materials/HD/MI_M_Military_Lighting_FloodlightTower_01_HD.MI_M_Military_Lighting_FloodlightTower_01_HD"
+  },
+  "vertices": 2236,
+  "polygons": 1782,
+  "bounds": [
+    [
+      -33.58150100708008,
+      -8.944098472595215,
+      -1.197414743330942e-16
+    ],
+    [
+      33.39091491699219,
+      11.638864517211914,
+      84.70234680175781
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

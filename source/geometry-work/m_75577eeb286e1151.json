@@ -1,0 +1,27 @@
+{
+  "id": "m_75577eeb286e1151",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Branding/Poster/SM_H_Branding_Poster_Screen_02.SM_H_Branding_Poster_Screen_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Branding\\Poster\\SM_H_Branding_Poster_Screen_02.glb",
+  "sourceSHA256": "3C17AD594C95AF03038E539BE266400F6228553EE56CD99AB7EC39F53A992EE1",
+  "model": "models/df_v24/m_75577eeb286e1151.vmdl",
+  "materials": {
+    "mat_766dcd9eb34b5851": "DeltaForce/Content/Environment/Props/HAAVK/Transport/Utility/00_Materials/HD/MI_H_Transport_Utility_Trademark_02_HD.MI_H_Transport_Utility_Trademark_02_HD",
+    "mat_8647c91756c37600": "DeltaForce/Content/Environment/Props/FutureTech/00_Materials/HD/MI_FutureTech_Lighting_BillBoard_06A_HD.MI_FutureTech_Lighting_BillBoard_06A_HD"
+  },
+  "vertices": 360,
+  "polygons": 396,
+  "bounds": [
+    [
+      -2.169029951095581,
+      -3.158595085144043,
+      -357.432373046875
+    ],
+    [
+      1288.071044921875,
+      -0.01779012568295002,
+      0.04763808846473694
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

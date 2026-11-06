@@ -1,0 +1,27 @@
+{
+  "id": "m_9ee4e5d1efa9c623",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_WatchTower_01j.SM_H_Building_FutureTech_WatchTower_01j",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_WatchTower_01j.glb",
+  "sourceSHA256": "65358A419C5353BA4D366AE885E2D6798FA977522602B2EF17C131B1CC2732A5",
+  "model": "models/df_v24/m_9ee4e5d1efa9c623.vmdl",
+  "materials": {
+    "mat_f6dc2771eb1ba9ac": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_B_HD.MI_I_WalkwaySystem_MetalFloor_01_B_HD",
+    "mat_20fabdfebe348075": "DeltaForce/Content/Environment/Structures/HAAVK/Pipeline/00_Materials/HD/MI_H_PipeLine_HD.MI_H_PipeLine_HD"
+  },
+  "vertices": 3505,
+  "polygons": 2172,
+  "bounds": [
+    [
+      215.1080780029297,
+      -87.71183013916016,
+      190.73672485351562
+    ],
+    [
+      295.0455322265625,
+      104.66146850585938,
+      410.3663330078125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

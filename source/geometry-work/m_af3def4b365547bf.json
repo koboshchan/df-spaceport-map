@@ -1,0 +1,31 @@
+{
+  "id": "m_af3def4b365547bf",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/SM_I_RoadFacility_Ground_FutureTech_H_01.SM_I_RoadFacility_Ground_FutureTech_H_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter\\SM_I_RoadFacility_Ground_FutureTech_H_01.glb",
+  "sourceSHA256": "E3BCCCDCF5848502164EDCC7DA4159FFC3903E35B1DBCDA062AD70B5263719EE",
+  "model": "models/df_v24/m_af3def4b365547bf.vmdl",
+  "materials": {
+    "mat_33374bb51d98c8d3": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_I_RoadFacility_Ground_FutureTech_H_01_01A_HD.MI_I_RoadFacility_Ground_FutureTech_H_01_01A_HD",
+    "mat_c781b8db3d3161e4": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_I_RoadFacility_Ground_FutureTech_H_01_01B_HD.MI_I_RoadFacility_Ground_FutureTech_H_01_01B_HD",
+    "mat_2bd485bbc4607d81": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_H_02K_HD.MI_I_RoadFacility_Ground_H_02K_HD",
+    "mat_ccf7d54540b23a7e": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01B_HD.MI_GEN_Metal_Base_01B_HD",
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD",
+    "mat_030f6553cc805922": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Stones_Base_01_HD.MI_GEN_Stones_Base_01_HD"
+  },
+  "vertices": 376,
+  "polygons": 280,
+  "bounds": [
+    [
+      -0.00020657791174016893,
+      -35.12506866455078,
+      -11.519999504089355
+    ],
+    [
+      1462.843505859375,
+      1243.65283203125,
+      5.080902099609375
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

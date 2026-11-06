@@ -1,0 +1,31 @@
+{
+  "id": "m_c040d55c643b7a11",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/SM_H_Industrial_Mechanical_MetalSilo_03d.SM_H_Industrial_Mechanical_MetalSilo_03d",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\Mechanical\\SM_H_Industrial_Mechanical_MetalSilo_03d.glb",
+  "sourceSHA256": "FB66E2D54E4081B8F61A82C7EC931B34CEE784744CAE589AA78AE61397635B67",
+  "model": "models/df_v24/m_c040d55c643b7a11.vmdl",
+  "materials": {
+    "mat_f59c9f7ddc3cd309": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/00_Materials/HD/MI_H_Industrial_Mechanical_MetalSilo_03c_HD.MI_H_Industrial_Mechanical_MetalSilo_03c_HD",
+    "mat_de2386efa69d0b95": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/00_Materials/HD/MI_H_Industrial_Mechanical_MetalSilo_03b_HD.MI_H_Industrial_Mechanical_MetalSilo_03b_HD",
+    "mat_1eeed8a7602c9c88": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/00_Materials/HD/MI_H_Industrial_Mechanical_MetalSilo_03f_HD.MI_H_Industrial_Mechanical_MetalSilo_03f_HD",
+    "mat_a3eefd40ac9b1331": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/00_Materials/HD/MI_H_Industrial_Mechanical_MetalSilo_03h_HD.MI_H_Industrial_Mechanical_MetalSilo_03h_HD",
+    "mat_33602b4bfdc71367": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_C_HD.MI_I_WalkwaySystem_MetalFloor_01_C_HD",
+    "mat_9e12426c77b2fbfb": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/00_Materials/HD/MI_H_Industrial_Mechanical_MetalSilo_03a_HD.MI_H_Industrial_Mechanical_MetalSilo_03a_HD"
+  },
+  "vertices": 19797,
+  "polygons": 16437,
+  "bounds": [
+    [
+      -127.85501861572266,
+      -142.35508728027344,
+      -4.9438473070040345e-05
+    ],
+    [
+      145.05458068847656,
+      127.05863952636719,
+      643.3023681640625
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

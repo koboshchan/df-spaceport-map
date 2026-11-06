@@ -1,0 +1,26 @@
+{
+  "id": "m_a7e653a98c549ed5",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Government/Tide/SM_H_Government_Tide_Brick_02.SM_H_Government_Tide_Brick_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Government\\Tide\\SM_H_Government_Tide_Brick_02.glb",
+  "sourceSHA256": "25681520E526D5FDD4E47CF8D46939479EAED9A75CEC7083A006E54C45595088",
+  "model": "models/df_v24/m_a7e653a98c549ed5.vmdl",
+  "materials": {
+    "mat_27d83f1b28aedb60": "DeltaForce/Content/Environment/Props/HAAVK/Government/Tide/00_Materials/HD/MI_H_Building_Tide_Brick_03_HD.MI_H_Building_Tide_Brick_03_HD"
+  },
+  "vertices": 130,
+  "polygons": 130,
+  "bounds": [
+    [
+      -9.291681289672852,
+      -4.839882850646973,
+      -2.9635737295627244e-16
+    ],
+    [
+      -2.559490203857422,
+      4.841699123382568,
+      7.09298038482666
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "m_2e61cbc59d355579",
+  "objectPath": "DeltaForce/Content/Models/Props/container/props_Container_Flaregun_1194/props_Container_Flaregun_1194_1P.props_Container_Flaregun_1194_1P",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Props\\container\\props_Container_Flaregun_1194\\props_Container_Flaregun_1194_1P.glb",
+  "sourceSHA256": "007CE11ECDA55BD0A831F0D685C4D3744EED3082F9183B2F9CFB32DB98DC7ED4",
+  "model": "models/df_v24/m_2e61cbc59d355579.vmdl",
+  "materials": {
+    "mat_4202c720326b61c2": "DeltaForce/Content/Models/Props/container/props_Container_Flaregun_1194/Materials/props_Container_Flaregun_1194.props_Container_Flaregun_1194"
+  },
+  "vertices": 5859,
+  "polygons": 4926,
+  "bounds": [
+    [
+      -9.103848457336426,
+      -6.124176025390625,
+      -3.433227391269611e-07
+    ],
+    [
+      9.103849411010742,
+      12.097648620605469,
+      14.930411338806152
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

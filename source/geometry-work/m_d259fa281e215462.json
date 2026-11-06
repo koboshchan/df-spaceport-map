@@ -1,0 +1,30 @@
+{
+  "id": "m_d259fa281e215462",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/SM_I_RoadFacility_Ground_L_06A.SM_I_RoadFacility_Ground_L_06A",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter_Ma1\\SM_I_RoadFacility_Ground_L_06A.glb",
+  "sourceSHA256": "E6204FB0DD9D7FD22E9F543F74DA0076C4CAADEADAF9CCC9268E25A5D0E335AC",
+  "model": "models/df_v24/m_d259fa281e215462.vmdl",
+  "materials": {
+    "mat_d783b614f1783cff": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_01_HD.MI_GEN_Metal_Painting_01_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_5b8b615345e998ec": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_L_03_HD.MI_I_RoadFacility_Ground_L_03_HD",
+    "mat_4a25bc28a50edc9e": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/00_Materials/HD/MI_I_RoadFacility_Ground_L_10_Ruin_09_HD.MI_I_RoadFacility_Ground_L_10_Ruin_09_HD",
+    "mat_81141676929f02f1": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Tide/00_Materials/HD/MI_H_Building_Tide_PrisonMain_14_Layer_01c_HD.MI_H_Building_Tide_PrisonMain_14_Layer_01c_HD"
+  },
+  "vertices": 15788,
+  "polygons": 17914,
+  "bounds": [
+    [
+      -556.2427978515625,
+      -2709.724365234375,
+      -1206.671630859375
+    ],
+    [
+      569.0816650390625,
+      272.9613342285156,
+      27.37590789794922
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

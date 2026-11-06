@@ -1,0 +1,55 @@
+{
+  "supersedes": [
+    "extra5float4-header hypothesis",
+    "light13041 threephysicalsamples-versus-twonamedVT claim"
+  ],
+  "status": "WITHDRAWN wrong vector-expression index and cross-permutation comparison",
+  "props": [
+    {
+      "archiveIndex": 2160,
+      "resourceIndices": [
+        8,
+        9
+      ],
+      "stacks": 4,
+      "namedVT": 9,
+      "observedVectorBase": 21,
+      "scalerSwizzleExpressionIndex": 3,
+      "scalerCB": 24
+    },
+    {
+      "archiveIndex": 2146,
+      "resourceIndices": [
+        5,
+        6,
+        7
+      ],
+      "stacks": 3,
+      "namedVT": 8,
+      "observedVectorBase": 17,
+      "scalerSwizzleExpressionIndex": 3,
+      "scalerCB": 20
+    }
+  ],
+  "light": [
+    {
+      "archiveIndex": 13010,
+      "resourceIndex": 2,
+      "namedVT": [
+        "EMMap",
+        "BAMap"
+      ]
+    },
+    {
+      "archiveIndex": 13041,
+      "resourceIndex": 3,
+      "namedVT": [
+        "NRMMap",
+        "EMMap",
+        "BAMap"
+      ]
+    }
+  ],
+  "consistentCandidate": "float4 vector base =3*VTstackCount+namedVTCount",
+  "gate": "Exact DF runtime native packing and parameter/resource index mapping must still be corroborated. No arbitrary ordinal mappings or asset promotion."
+}

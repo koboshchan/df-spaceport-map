@@ -1,0 +1,34 @@
+{
+  "id": "m_f47149a66a35b708",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/SM_I_RoadFacility_Ground_D_10.SM_I_RoadFacility_Ground_D_10",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter\\SM_I_RoadFacility_Ground_D_10.glb",
+  "sourceSHA256": "C727934FD58A7A20604C29F6A6F4E07488171108B82B22001D1F0C0E44F49C6D",
+  "model": "models/df_v24/m_f47149a66a35b708.vmdl",
+  "materials": {
+    "mat_126f8966943cad7e": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_I_RoadFacility_Ground_D_10A_HD.MI_I_RoadFacility_Ground_D_10A_HD",
+    "mat_030f6553cc805922": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Stones_Base_01_HD.MI_GEN_Stones_Base_01_HD",
+    "mat_be45001b78bc710c": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_I_RoadFacility_Ground_D_10C_HD.MI_I_RoadFacility_Ground_D_10C_HD",
+    "mat_f5f6a4bc7cf71b80": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Concrete_Checkred_02_HD.MI_GEN_Concrete_Checkred_02_HD",
+    "mat_992d1184cea8d8e1": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_I_RoadFacility_Ground_D_10D_HD.MI_I_RoadFacility_Ground_D_10D_HD",
+    "mat_8cb86004afcc2e76": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_I_RoadFacility_Ground_D_10B_HD.MI_I_RoadFacility_Ground_D_10B_HD",
+    "mat_389db5688a50652e": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_GEN_Grass_Base_01_HD.MI_GEN_Grass_Base_01_HD",
+    "mat_38f3a85edb7e19ad": "DeltaForce/Content/Environment/Structures/HAAVK/Decal/WellLid/00_Materials/HD/MI_H_Decal_WellLid_01_HD.MI_H_Decal_WellLid_01_HD",
+    "mat_0f1517f3ed175b67": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_RoadCurb_01_A_HD.MI_RoadCurb_01_A_HD"
+  },
+  "vertices": 3489,
+  "polygons": 3434,
+  "bounds": [
+    [
+      -1665.9765625,
+      -2259.526123046875,
+      -0.004103393293917179
+    ],
+    [
+      16.188749313354492,
+      -0.00017578124243300408,
+      187.45770263671875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

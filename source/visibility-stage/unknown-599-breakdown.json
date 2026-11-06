@@ -1,0 +1,6 @@
+{
+  "total": 599,
+  "doorRetainStructureAppend": 283,
+  "noSelectionReasonRows": 316,
+  "note": "316 are mostly Gameplay_x*/Loot_x* roots with no sourceJson in row; class missing; flags unknown, not proof visible or hidden; 283 door-append rows have collapsed zero-scale matrix, no source flags; owner/CDO inheritance NOT resolved; loot attachment vs baked geometry NOT audited"
+}

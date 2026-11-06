@@ -1,0 +1,27 @@
+{
+  "id": "m_6ea174a76791a80e",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Derail/Industrial/SM_M_Props_Industrial_Debris_03.SM_M_Props_Industrial_Debris_03",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Derail\\Industrial\\SM_M_Props_Industrial_Debris_03.glb",
+  "sourceSHA256": "8E200A665E71A3377A0667B664715716AC377F368E7EB0BDCD2C8F35D8034182",
+  "model": "models/df_v24/m_6ea174a76791a80e.vmdl",
+  "materials": {
+    "mat_77d98be982459286": "DeltaForce/Content/Environment/Props/Morocco/Derail/Industrial/00_Materials/HD/MI_M_Props_Industrial_Debris_03a_HD.MI_M_Props_Industrial_Debris_03a_HD",
+    "mat_3a48daf13b31607e": "DeltaForce/Content/Environment/Props/Morocco/Derail/Industrial/00_Materials/HD/MI_M_Props_Industrial_Debris_03b_HD.MI_M_Props_Industrial_Debris_03b_HD"
+  },
+  "vertices": 4364,
+  "polygons": 5401,
+  "bounds": [
+    [
+      -195.0352783203125,
+      -199.04306030273438,
+      -19.721345901489258
+    ],
+    [
+      164.8318328857422,
+      201.47592163085938,
+      51.533966064453125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

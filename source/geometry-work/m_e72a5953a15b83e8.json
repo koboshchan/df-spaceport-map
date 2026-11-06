@@ -1,0 +1,26 @@
+{
+  "id": "m_e72a5953a15b83e8",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/IceLand/SM_H_IceLand_Props_Macadam_01f.SM_H_IceLand_Props_Macadam_01f",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\IceLand\\SM_H_IceLand_Props_Macadam_01f.glb",
+  "sourceSHA256": "2CBBDBDB1EF00B7DB28C3ADACDF93CF9E6CDD26926561E4C01415075C1C7F79C",
+  "model": "models/df_v24/m_e72a5953a15b83e8.vmdl",
+  "materials": {
+    "mat_684d6d9cebb31065": "DeltaForce/Content/Environment/Props/HAAVK/IceLand/00_Materials/HD/MI_H_IceLand_Props_Macadam_01a_HD.MI_H_IceLand_Props_Macadam_01a_HD"
+  },
+  "vertices": 1208,
+  "polygons": 1110,
+  "bounds": [
+    [
+      -59.316688537597656,
+      -49.001197814941406,
+      -0.025562696158885956
+    ],
+    [
+      59.316688537597656,
+      49.001197814941406,
+      3.106861114501953
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

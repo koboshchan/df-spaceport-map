@@ -1,0 +1,26 @@
+{
+  "id": "m_aa2ec287bea7eaf2",
+  "objectPath": "DeltaForce/Content/Models/Vehicles/AgainstBoat/Appearance_Base/Turret02_3P.Turret02_3P",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Vehicles\\AgainstBoat\\Appearance_Base\\Turret02_3P.glb",
+  "sourceSHA256": "904ADDF71E463A82122A9D1DC11A69AB4F7AD64955728F938E55850E9B040E9C",
+  "model": "models/df_v24/m_aa2ec287bea7eaf2.vmdl",
+  "materials": {
+    "mat_d7b51eaff1b606c1": "DeltaForce/Content/Models/Vehicles/AgainstBoat/Appearance_Base/Materials/carrier_boat_RCB90_001.carrier_boat_RCB90_001"
+  },
+  "vertices": 148,
+  "polygons": 138,
+  "bounds": [
+    [
+      -3.1568994522094727,
+      -14.471888542175293,
+      -2.197265530412551e-05
+    ],
+    [
+      3.1566576957702637,
+      14.471923828125,
+      4.989880084991455
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

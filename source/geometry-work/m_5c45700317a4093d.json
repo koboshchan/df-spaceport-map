@@ -1,0 +1,28 @@
+{
+  "id": "m_5c45700317a4093d",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Tools/SM_H_Industrial_Tools_Oxygenbottle_01.SM_H_Industrial_Tools_Oxygenbottle_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\Tools\\SM_H_Industrial_Tools_Oxygenbottle_01.glb",
+  "sourceSHA256": "687F1EA1B8A95A626BCD024684371B7C923D75210DD4CBC2A89304295EC4732A",
+  "model": "models/df_v24/m_5c45700317a4093d.vmdl",
+  "materials": {
+    "mat_a094c5863e468853": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Tools/00_Materials/HD/MI_H_Industrial_Tools_Oxygenbottle_01_HD.MI_H_Industrial_Tools_Oxygenbottle_01_HD",
+    "mat_ce515409d0a82492": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD",
+    "mat_a73cc25d792d1e23": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/00_Materials/HD/MI_H_Government_Office_CoffeeMachine_01C_HD.MI_H_Government_Office_CoffeeMachine_01C_HD"
+  },
+  "vertices": 1400,
+  "polygons": 1584,
+  "bounds": [
+    [
+      -6.286583423614502,
+      -3.982243537902832,
+      5.1496570563358546e-08
+    ],
+    [
+      5.340937614440918,
+      3.945986270904541,
+      55.31850051879883
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

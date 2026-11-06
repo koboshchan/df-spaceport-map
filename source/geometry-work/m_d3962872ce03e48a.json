@@ -1,0 +1,26 @@
+{
+  "id": "m_d3962872ce03e48a",
+  "objectPath": "DeltaForce/Content/Effects/Common/Mesh/Rock/SM_EFX_BoomStone_01.SM_EFX_BoomStone_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Effects\\Common\\Mesh\\Rock\\SM_EFX_BoomStone_01.glb",
+  "sourceSHA256": "529220F55F4B19EE92F8D953E5853E15D0A847B8D355A8B216243FEC643F67A3",
+  "model": "models/df_v24/m_d3962872ce03e48a.vmdl",
+  "materials": {
+    "mat_87fa7d325eb743c4": "Engine/Content/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+  },
+  "vertices": 82,
+  "polygons": 52,
+  "bounds": [
+    [
+      -5.060929298400879,
+      -4.047208786010742,
+      -4.01964807510376
+    ],
+    [
+      5.060928821563721,
+      4.0472092628479,
+      4.019649028778076
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

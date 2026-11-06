@@ -1,0 +1,26 @@
+{
+  "id": "m_57da8ad71e02a21b",
+  "objectPath": "DeltaForce/Content/Environment/Structures/Building/Transport/SM_Building_Transport_Airplane_01/SM_Transport_Airplane_Lighting_04.SM_Transport_Airplane_Lighting_04",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\Building\\Transport\\SM_Building_Transport_Airplane_01\\SM_Transport_Airplane_Lighting_04.glb",
+  "sourceSHA256": "89BE72F444EAF9063703BF074F9311D9B7E2652DC22ADDA4FE03278E3A12768F",
+  "model": "models/df_v24/m_57da8ad71e02a21b.vmdl",
+  "materials": {
+    "mat_803f4a70c54826c0": "DeltaForce/Content/Environment/Structures/Building/Transport/00_Materials/HD/MI_Transport_Airplane_Lighting_04_HD.MI_Transport_Airplane_Lighting_04_HD"
+  },
+  "vertices": 80,
+  "polygons": 44,
+  "bounds": [
+    [
+      -15.21002197265625,
+      -12.438349723815918,
+      -0.009302882477641106
+    ],
+    [
+      15.2100191116333,
+      12.022149085998535,
+      2.7781805992126465
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

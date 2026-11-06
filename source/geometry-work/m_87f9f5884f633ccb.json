@@ -1,0 +1,26 @@
+{
+  "id": "m_87f9f5884f633ccb",
+  "objectPath": "DeltaForce/Content/Effects_HD/Common_HD/Mesh_HD/Plane_HD/SM_EFX_Plane_FireWork_07_HD.SM_EFX_Plane_FireWork_07_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Effects_HD\\Common_HD\\Mesh_HD\\Plane_HD\\SM_EFX_Plane_FireWork_07_HD.glb",
+  "sourceSHA256": "7F02D8F0F72C4C05F323017761BBF2E3D092C25BB445A98CC48BCBE6573B9EED",
+  "model": "models/df_v24/m_87f9f5884f633ccb.vmdl",
+  "materials": {
+    "mat_87fa7d325eb743c4": "Engine/Content/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+  },
+  "vertices": 1645,
+  "polygons": 737,
+  "bounds": [
+    [
+      -385.1961669921875,
+      -230.44900512695312,
+      -397.40509033203125
+    ],
+    [
+      381.3749084472656,
+      233.63421630859375,
+      397.40509033203125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

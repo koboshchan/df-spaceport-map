@@ -1,0 +1,33 @@
+{
+  "id": "m_c6c6638d71b66080",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_Building_FutureTech_H_01/SM_H_Building_FutureTech_HLight_01_ExterWall_Damage_02.SM_H_Building_FutureTech_HLight_01_ExterWall_Damage_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_Building_FutureTech_H_01\\SM_H_Building_FutureTech_HLight_01_ExterWall_Damage_02.glb",
+  "sourceSHA256": "ECA2B56B6CF5E37482317D08E6A824AFE8F1A9863F986682062E0294CE9619B5",
+  "model": "models/df_v24/m_c6c6638d71b66080.vmdl",
+  "materials": {
+    "mat_88491490fc90ff70": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_HLight_01_ExterWall_Damage_02_01_HD.MI_H_Building_FutureTech_HLight_01_ExterWall_Damage_02_01_HD",
+    "mat_51937b543aab2bbe": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Transport/00_Materials/HD/MI_H_Building_Transport_Ext_Decal_21_HD.MI_H_Building_Transport_Ext_Decal_21_HD",
+    "mat_e36be9f7ee254d65": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_HLight_01_ExterWall_Damage_02_01B_HD.MI_H_Building_FutureTech_HLight_01_ExterWall_Damage_02_01B_HD",
+    "mat_25b241559015761b": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_03B_HD.MI_GEN_Metal_Painting_03B_HD",
+    "mat_8399b9ea1c5820e9": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_HLight_01_ExterWall_01_01B_HD.MI_H_Building_FutureTech_HLight_01_ExterWall_01_01B_HD",
+    "mat_2e84b2e755234ebc": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05d_HD.MI_SpaceCenter_Trim_05d_HD",
+    "mat_31c3b94e803e1374": "DeltaForce/Content/Environment/Structures/Window/00_Materials/HD/MI_Window_Glass_01_HD.MI_Window_Glass_01_HD",
+    "mat_2d60c1860f1759e0": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_HLight_01_ExterWall_Damage_02_01C_HD.MI_H_Building_FutureTech_HLight_01_ExterWall_Damage_02_01C_HD"
+  },
+  "vertices": 40903,
+  "polygons": 32174,
+  "bounds": [
+    [
+      -3159.491455078125,
+      -235.43577575683594,
+      -23.1475772857666
+    ],
+    [
+      -858.7489013671875,
+      2357.8505859375,
+      1692.744873046875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

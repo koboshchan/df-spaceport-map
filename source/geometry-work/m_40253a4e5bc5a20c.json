@@ -1,0 +1,28 @@
+{
+  "id": "m_40253a4e5bc5a20c",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/SM_H_Government_Office_ServerComponents_04.SM_H_Government_Office_ServerComponents_04",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Government\\Office\\SM_H_Government_Office_ServerComponents_04.glb",
+  "sourceSHA256": "69744B06F093CA89BC54391362BEE1C305DDC79C57F6B12ED04C6DBEB845E20D",
+  "model": "models/df_v24/m_40253a4e5bc5a20c.vmdl",
+  "materials": {
+    "mat_3dc53d4beb7ad32a": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Machinery_Cabinet_02_HD.MI_H_FutureTech_Machinery_Cabinet_02_HD",
+    "mat_2b097a3aa210d8c8": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Machinery_Cabinet_03_HD.MI_H_FutureTech_Machinery_Cabinet_03_HD",
+    "mat_8240038b4bf7827e": "DeltaForce/Content/Environment/Structures/Window/00_Materials/MI_Window_Glass_00_NoIBL.MI_Window_Glass_00_NoIBL"
+  },
+  "vertices": 7484,
+  "polygons": 6213,
+  "bounds": [
+    [
+      -6.866454782539222e-07,
+      -61.58295440673828,
+      -0.04179079085588455
+    ],
+    [
+      73.89997100830078,
+      0.00010232860950054601,
+      104.5962905883789
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

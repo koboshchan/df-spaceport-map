@@ -1,0 +1,92 @@
+[
+  {
+    "source": "E:\\df-v24-build-20261106\\content\\kat\\models\\df_v24\\lc_0939d3e4a73b2d0c.vmdl",
+    "staged": "E:\\df-v24-build-20261106\\loot-ladder-work\\ladder-material-binding-fix\\lc_0939d3e4a73b2d0c.vmdl",
+    "derivedFBX": "E:\\df-v24-build-20261106\\content\\kat\\models\\df_v24\\lc_0939d3e4a73b2d0c.fbx",
+    "exactAdditionalRemaps": {
+      "ladder_source_obb.001": "materials/tools/toolsnodraw.vmat"
+    },
+    "oldSHA256": "d214ba3d1530a015fe30b431731f973beee9b389276f66708cb507ddfe6e76d7",
+    "newSHA256": "853464c843db316566a326fa740ed652b4427c29abd6e3d003b6627bc2cba655"
+  },
+  {
+    "source": "E:\\df-v24-build-20261106\\content\\kat\\models\\df_v24\\lc_3dbba55e526f4962.vmdl",
+    "staged": "E:\\df-v24-build-20261106\\loot-ladder-work\\ladder-material-binding-fix\\lc_3dbba55e526f4962.vmdl",
+    "derivedFBX": "E:\\df-v24-build-20261106\\content\\kat\\models\\df_v24\\lc_3dbba55e526f4962.fbx",
+    "exactAdditionalRemaps": {
+      "ladder_source_obb.002": "materials/tools/toolsnodraw.vmat"
+    },
+    "oldSHA256": "266fd38522416d29d5738aba3ab5a17d7b331217d9c0eeaa2b476a3c873147ef",
+    "newSHA256": "953257dd9ca7d234c3f03befaaac8bc49a9c4f1da99a7a0c50f5d149597f074a"
+  },
+  {
+    "source": "E:\\df-v24-build-20261106\\content\\kat\\models\\df_v24\\lc_56e4a5baf2452fd7.vmdl",
+    "staged": "E:\\df-v24-build-20261106\\loot-ladder-work\\ladder-material-binding-fix\\lc_56e4a5baf2452fd7.vmdl",
+    "derivedFBX": "E:\\df-v24-build-20261106\\content\\kat\\models\\df_v24\\lc_56e4a5baf2452fd7.fbx",
+    "exactAdditionalRemaps": {
+      "ladder_source_obb.007": "materials/tools/toolsnodraw.vmat"
+    },
+    "oldSHA256": "68a05ddd1a2b83646a5a47a2445db242844e1bd3c61b502bdd5c1146d156ad13",
+    "newSHA256": "8a2195a6396c5afd5bb3f1ffe81dfcce502ee4fe71ac588fe254e142d53ca668"
+  },
+  {
+    "source": "E:\\df-v24-build-20261106\\content\\kat\\models\\df_v24\\lc_7d60c657fee5b0a2.vmdl",
+    "staged": "E:\\df-v24-build-20261106\\loot-ladder-work\\ladder-material-binding-fix\\lc_7d60c657fee5b0a2.vmdl",
+    "derivedFBX": "E:\\df-v24-build-20261106\\content\\kat\\models\\df_v24\\lc_7d60c657fee5b0a2.fbx",
+    "exactAdditionalRemaps": {
+      "ladder_source_obb.009": "materials/tools/toolsnodraw.vmat"
+    },
+    "oldSHA256": "333e0378934f880ad57a460858d3c96741e122a1a5bc8c375837877274c71eac",
+    "newSHA256": "972001e5dd78e405bd9c3ff979074a69ad2e505a39511b0a2e77b1223e32e2f4"
+  },
+  {
+    "source": "E:\\df-v24-build-20261106\\content\\kat\\models\\df_v24\\lc_7dc4c9abfc68286a.vmdl",
+    "staged": "E:\\df-v24-build-20261106\\loot-ladder-work\\ladder-material-binding-fix\\lc_7dc4c9abfc68286a.vmdl",
+    "derivedFBX": "E:\\df-v24-build-20261106\\content\\kat\\models\\df_v24\\lc_7dc4c9abfc68286a.fbx",
+    "exactAdditionalRemaps": {
+      "ladder_source_obb.003": "materials/tools/toolsnodraw.vmat"
+    },
+    "oldSHA256": "d31a3ffcf6ed7ef98e439e3b11322f632620b20771b7a3386c46df061aab086a",
+    "newSHA256": "9f7b59f1b32ee031c23021bbeb4c2993768dde94989f43d4c9598a184819fa07"
+  },
+  {
+    "source": "E:\\df-v24-build-20261106\\content\\kat\\models\\df_v24\\lc_b080dc247d75beb9.vmdl",
+    "staged": "E:\\df-v24-build-20261106\\loot-ladder-work\\ladder-material-binding-fix\\lc_b080dc247d75beb9.vmdl",
+    "derivedFBX": "E:\\df-v24-build-20261106\\content\\kat\\models\\df_v24\\lc_b080dc247d75beb9.fbx",
+    "exactAdditionalRemaps": {
+      "ladder_source_obb.004": "materials/tools/toolsnodraw.vmat"
+    },
+    "oldSHA256": "a0b2dfc7b4d803f8444df43dffb3467d8beec467ec2945b86ee29fa54e696faa",
+    "newSHA256": "7d60095fc204c1f9786b3f0ff7274c453a0eb7003cb9486a5e62782abf0fbfb6"
+  },
+  {
+    "source": "E:\\df-v24-build-20261106\\content\\kat\\models\\df_v24\\lc_be64a043b5993e4f.vmdl",
+    "staged": "E:\\df-v24-build-20261106\\loot-ladder-work\\ladder-material-binding-fix\\lc_be64a043b5993e4f.vmdl",
+    "derivedFBX": "E:\\df-v24-build-20261106\\content\\kat\\models\\df_v24\\lc_be64a043b5993e4f.fbx",
+    "exactAdditionalRemaps": {
+      "ladder_source_obb.005": "materials/tools/toolsnodraw.vmat"
+    },
+    "oldSHA256": "251c146381257c08af5fb49fddf29ca0aebb6772e1e91a3589b31600e256ef51",
+    "newSHA256": "ede1af35ae98d15d660a6efb40994d9f8220bf2255753f4ed155d61a1858da96"
+  },
+  {
+    "source": "E:\\df-v24-build-20261106\\content\\kat\\models\\df_v24\\lc_d3d7a203640f8a4e.vmdl",
+    "staged": "E:\\df-v24-build-20261106\\loot-ladder-work\\ladder-material-binding-fix\\lc_d3d7a203640f8a4e.vmdl",
+    "derivedFBX": "E:\\df-v24-build-20261106\\content\\kat\\models\\df_v24\\lc_d3d7a203640f8a4e.fbx",
+    "exactAdditionalRemaps": {
+      "ladder_source_obb.006": "materials/tools/toolsnodraw.vmat"
+    },
+    "oldSHA256": "b2f7f8476a232b9df1c42d0114ebba52eec7752084bfd65e8b34608ce4560212",
+    "newSHA256": "5c7549755bee36b02e7fce0a1863400cadecb5afa18453aa3f53a7f071157c1a"
+  },
+  {
+    "source": "E:\\df-v24-build-20261106\\content\\kat\\models\\df_v24\\lc_d550115ac2bf8c88.vmdl",
+    "staged": "E:\\df-v24-build-20261106\\loot-ladder-work\\ladder-material-binding-fix\\lc_d550115ac2bf8c88.vmdl",
+    "derivedFBX": "E:\\df-v24-build-20261106\\content\\kat\\models\\df_v24\\lc_d550115ac2bf8c88.fbx",
+    "exactAdditionalRemaps": {
+      "ladder_source_obb.008": "materials/tools/toolsnodraw.vmat"
+    },
+    "oldSHA256": "4bd72f47b10424e435e63a8c7960cc53764b9f4e6a1b169deaed33ea9bbf9bc7",
+    "newSHA256": "e0069417c5af15d038770ab931e255ec2730543ed1d3189659bdf0c97172e44e"
+  }
+]

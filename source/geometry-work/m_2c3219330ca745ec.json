@@ -1,0 +1,26 @@
+{
+  "id": "m_2c3219330ca745ec",
+  "objectPath": "DeltaForce/Content/Environment/Props/FutureTech/Lighting/SM_Emissive_Cylinder_01.SM_Emissive_Cylinder_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\FutureTech\\Lighting\\SM_Emissive_Cylinder_01.glb",
+  "sourceSHA256": "A5B9798BDFD02851232490C53F7ED5E538BBD7026557D7B81DC005F6CF10F5F3",
+  "model": "models/df_v24/m_2c3219330ca745ec.vmdl",
+  "materials": {
+    "mat_b0716bdc19e9c869": "DeltaForce/Content/Environment/Props/FutureTech/00_Materials/MI_FutureTech_Lighting_Emmsive_01.MI_FutureTech_Lighting_Emmsive_01"
+  },
+  "vertices": 34,
+  "polygons": 28,
+  "bounds": [
+    [
+      -90.0,
+      -1.8324744701385498,
+      -1.799999713897705
+    ],
+    [
+      90.0,
+      1.76752507686615,
+      1.799999713897705
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

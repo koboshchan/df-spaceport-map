@@ -1,0 +1,26 @@
+{
+  "id": "m_b55859696b8c8f3e",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/SM_H_Industrial_Mechanical_MetalSilo_02_Ruin_b_Decal.SM_H_Industrial_Mechanical_MetalSilo_02_Ruin_b_Decal",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\Mechanical\\SM_H_Industrial_Mechanical_MetalSilo_02_Ruin_b_Decal.glb",
+  "sourceSHA256": "46C54CEAA3404E4C70EE3E2EE15622495BBD8FB9C2D6F3C0494F6EA2E544CD5C",
+  "model": "models/df_v24/m_b55859696b8c8f3e.vmdl",
+  "materials": {
+    "mat_ca1bbbe2593d44b8": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/00_Materials/HD/MI_H_Industrial_Mechanical_MetalSilo_02c_HD.MI_H_Industrial_Mechanical_MetalSilo_02c_HD"
+  },
+  "vertices": 3890,
+  "polygons": 3603,
+  "bounds": [
+    [
+      -388.7396240234375,
+      -98.55513763427734,
+      -7.727612495422363
+    ],
+    [
+      365.7012939453125,
+      94.91231536865234,
+      208.23553466796875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

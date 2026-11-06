@@ -1,0 +1,26 @@
+{
+  "id": "m_8b4d893deab46bda",
+  "objectPath": "DeltaForce/Content/MaterialLib/Materials_HD/Water/FluxCoastline/Mesh/SM_WaterPlan_50cm.SM_WaterPlan_50cm",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\MaterialLib\\Materials_HD\\Water\\FluxCoastline\\Mesh\\SM_WaterPlan_50cm.glb",
+  "sourceSHA256": "EBE80E9D9AFD092FA60EF24796101F21181BFAFFDDF07FDF747A1B78806FA2D2",
+  "model": "models/df_v24/m_8b4d893deab46bda.vmdl",
+  "materials": {
+    "mat_0a165dc0ddae1ebe": "DeltaForce/Content/MaterialLib/Materials_HD/Water/FluxCoastline/FinalMaterial/Mi_WaterHD_IceLand_Coastline.Mi_WaterHD_IceLand_Coastline"
+  },
+  "vertices": 441,
+  "polygons": 800,
+  "bounds": [
+    [
+      0.0,
+      -360.0,
+      -5.0783393817255273e-05
+    ],
+    [
+      360.0,
+      -7.16227077646181e-12,
+      5.0783393817255273e-05
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

@@ -1,0 +1,85 @@
+	Resource Type: WorldNode [Version 1] [Header Version: 12]
+	File Size: 1323 bytes
+
+
+--- (No External Resource References Found)
+
+
+--- Resource Blocks: Count 2 ---
+	-- Block: RED2  Size: 564    bytes [Offset:     48]
+	-- Block: DATA  Size: 699    bytes [Offset:    624]
+
+
+--- Data for block "RED2" ---
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	m_InputDependencies = [  ]
+	m_AdditionalInputDependencies = [  ]
+	m_ArgumentDependencies = 
+	[
+		{
+			m_ParameterName = "___OverrideInputData___"
+			m_ParameterType = "BinaryBlobArg"
+			m_nFingerprint = 0
+			m_nFingerprintDefault = 0
+		},
+	]
+	m_SpecialDependencies = 
+	[
+		{
+			m_String = "World Node Compiler Version"
+			m_CompilerIdentifier = "CompileWorldNode"
+			m_nFingerprint = 1
+			m_nUserData = 0
+		},
+	]
+	m_SpecialInputDependencies = [  ]
+	m_AdditionalRelatedFiles = [  ]
+	m_ChildResourceList = [  ]
+	m_WeakReferenceList = [  ]
+	m_SearchableUserData = 
+	{
+		IsChildResource = 1
+	}
+	m_SubassetReferences = null
+	m_SubassetDefinitions = null
+}
+
+--- Data for block "DATA" ---
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	m_sceneObjects = [  ]
+	m_visClusterMembership = [  ]
+	m_aggregateSceneObjects = [  ]
+	m_clutterSceneObjects = [  ]
+	m_rtProxies = [  ]
+	m_extraVertexStreamOverrides = [  ]
+	m_materialOverrides = [  ]
+	m_extraVertexStreams = [  ]
+	m_aggregateInstanceStreams = [  ]
+	m_vertexAlbedoStreams = [  ]
+	m_vertexEmissiveStreams = [  ]
+	m_layerNames = 
+	[
+		"world_layer_base",
+	]
+	m_sceneObjectLayerIndices = [  ]
+	m_grassFileName = ""
+	m_nodeLightingInfo = 
+	{
+		m_nLightmapVersionNumber = 0
+		m_nLightmapGameVersionNumber = 0
+		m_vLightmapUvScale = [ 1.0, 1.0 ]
+		m_bHasLightmaps = false
+		m_bBakedShadowsGamma20 = false
+		m_bCompressionEnabled = false
+		m_nLPVEncoding = -1
+		m_nLightmapEncoding = -1
+		m_nChartPackIterations = 0
+		m_nVradQuality = 0
+		m_lightMaps = [  ]
+		m_bakedShadows = [  ]
+	}
+	m_bHasBakedGeometryFlag = true
+}
+

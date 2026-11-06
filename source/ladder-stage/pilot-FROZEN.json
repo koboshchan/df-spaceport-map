@@ -1,0 +1,39 @@
+{
+  "frozenUTC": "2026-11-06T15:58:02.375528+00:00",
+  "frozen": true,
+  "files": {
+    "df_v25_native_ladder_pilot.vmap": {
+      "sha256": "92cc1c5465726a0a4480825500ae787b49a32c4cd6fc66206778fc7e916804be",
+      "bytes": 17658
+    },
+    "pilot-input-manifest.json": {
+      "sha256": "475ee66fd09ec6b60265b698368c05fd08566225aabeb947194eeaf815b14c6a",
+      "bytes": 1019
+    },
+    "pilot-dependency-closure.json": {
+      "sha256": "ee1b9a121102fd853a279e732b7c71405d957e9191cc69310c53125be32d4c1d",
+      "bytes": 2521
+    },
+    "pilot-orientation-entry-topout.json": {
+      "sha256": "6efc493f4e3750dcd23d66bb2f5a44135b5b226c43658853abb304dd7778a553",
+      "bytes": 4353
+    },
+    "native-ladder-geometry-proposal.json": {
+      "sha256": "43e9fdc19076be0da1d4575a749fad05add144ccc4bbb044ef54969f924803fd",
+      "bytes": 41681
+    },
+    "stage-native-pilot.py": {
+      "sha256": "ac65fe6953ce1484617c8167dd83c676ad799964a035796b185ee0c3bcc4d422",
+      "bytes": 5584
+    },
+    "pilot-closure.py": {
+      "sha256": "60ba16eeec8eb62f6a868f6d947794af4c3b9b4e6495218c938f2672e165f2f7",
+      "bytes": 1962
+    }
+  },
+  "inputManifestConsistent": true,
+  "actualWindingAllSixFacesOutwardAsserted": true,
+  "stockDependencyClosureSuccess": true,
+  "resourceCount": 6,
+  "policy": "DO NOT mutate frozen inputs or generators without notifying parent/central. No RC by ladder owner."
+}

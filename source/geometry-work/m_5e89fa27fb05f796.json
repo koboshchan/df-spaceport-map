@@ -1,0 +1,31 @@
+{
+  "id": "m_5e89fa27fb05f796",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/SM_I_RoadFacility_Ground_L_04H.SM_I_RoadFacility_Ground_L_04H",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter_Ma1\\SM_I_RoadFacility_Ground_L_04H.glb",
+  "sourceSHA256": "AE073FB5F64D3170A1DBF857E6CBFFA2D906FBB992779B8F1D91DF6EDC9F7C8A",
+  "model": "models/df_v24/m_5e89fa27fb05f796.vmdl",
+  "materials": {
+    "mat_9ceefb8f9b4c6bd5": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_L_08_HD.MI_I_RoadFacility_Ground_L_08_HD",
+    "mat_1d90a41c5e8fd1f3": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_L_05_HD.MI_I_RoadFacility_Ground_L_05_HD",
+    "mat_467b07782843ffc1": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Transparent_07_HD.MI_H_FutureTech_Transparent_07_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_8b5d279a6d2e73a7": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_D_HD.MI_I_WalkwaySystem_MetalFloor_01_D_HD",
+    "mat_9257e7010dd18b27": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Concrete_Checkred_05_HD.MI_GEN_Concrete_Checkred_05_HD"
+  },
+  "vertices": 13800,
+  "polygons": 11580,
+  "bounds": [
+    [
+      -201.75393676757812,
+      -4439.37841796875,
+      158.46026611328125
+    ],
+    [
+      1402.31591796875,
+      -1672.6246337890625,
+      382.49371337890625
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

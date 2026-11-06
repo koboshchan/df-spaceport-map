@@ -1,0 +1,26 @@
+{
+  "id": "m_74a0c02830eb57d4",
+  "objectPath": "DeltaForce/Content/Models/Vehicles/F35/Appearance_Base/F35_HatchCover_Back02.F35_HatchCover_Back02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Vehicles\\F35\\Appearance_Base\\F35_HatchCover_Back02.glb",
+  "sourceSHA256": "A4003A069EEA87F77820FCAD0CEF61CE0BA7F583879D43C40E9B6A184226358A",
+  "model": "models/df_v24/m_74a0c02830eb57d4.vmdl",
+  "materials": {
+    "mat_738e91d78a0c2bd6": "DeltaForce/Content/Models/Vehicles/F35/Appearance_Base/Materials/carrier_wing_F35_drivable_body_02.carrier_wing_F35_drivable_body_02"
+  },
+  "vertices": 308,
+  "polygons": 312,
+  "bounds": [
+    [
+      -31.296478271484375,
+      -5.195653915405273,
+      -29.576168060302734
+    ],
+    [
+      25.677997589111328,
+      9.144579887390137,
+      3.4585564136505127
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

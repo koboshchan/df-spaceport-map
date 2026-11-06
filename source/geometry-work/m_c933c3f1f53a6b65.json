@@ -1,0 +1,35 @@
+{
+  "id": "m_c933c3f1f53a6b65",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_Dormitory/SM_H_Building_FutureTech_Dormitory_02_InterWall_05.SM_H_Building_FutureTech_Dormitory_02_InterWall_05",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_Dormitory\\SM_H_Building_FutureTech_Dormitory_02_InterWall_05.glb",
+  "sourceSHA256": "04DA84A00C9C1A10A48371744ED6AAD7F42A554258E0D05A3F41C57928D47D10",
+  "model": "models/df_v24/m_c933c3f1f53a6b65.vmdl",
+  "materials": {
+    "mat_79071d76426b9c38": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Fabric_Wall_01_HD.MI_GEN_Fabric_Wall_01_HD",
+    "mat_ae862582cab4625c": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_05_HD.MI_GEN_Metal_Painting_05_HD",
+    "mat_c6f758474e05beb4": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Base_01_HD.MI_GEN_Marble_Base_01_HD",
+    "mat_030f6553cc805922": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Stones_Base_01_HD.MI_GEN_Stones_Base_01_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_d64730e4b60d7dc6": "DeltaForce/Content/Environment/MatBlend/Plaster/Iris/00_Materials/MI_M_Building_Industrial_PlasterWall_01_HD.MI_M_Building_Industrial_PlasterWall_01_HD",
+    "mat_525cc160fbeab068": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_Wood_06_HD.MI_H_Building_FutureTech_Wood_06_HD",
+    "mat_2321ffa234259f93": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Checkred_04_HD.MI_GEN_Marble_Checkred_04_HD",
+    "mat_381323acfdf46e9e": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Wooden_Base_01_HD.MI_GEN_Wooden_Base_01_HD",
+    "mat_1db52c73b5e14b5a": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Checkred_01a_HD.MI_GEN_Marble_Checkred_01a_HD"
+  },
+  "vertices": 1956,
+  "polygons": 2176,
+  "bounds": [
+    [
+      -545.7391967773438,
+      -728.4406127929688,
+      -0.030218753963708878
+    ],
+    [
+      -11.138114929199219,
+      -192.95997619628906,
+      149.913818359375
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

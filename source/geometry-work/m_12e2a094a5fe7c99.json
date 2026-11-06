@@ -1,0 +1,34 @@
+{
+  "id": "m_12e2a094a5fe7c99",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/SM_H_Industrial_ISS_Rocket_01_01.SM_H_Industrial_ISS_Rocket_01_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\ISS\\SM_H_Industrial_ISS_Rocket_01_01.glb",
+  "sourceSHA256": "C840BDFF46ABF6CA594609965BB53E57F60CE4AEA86FAAC28D28253893539034",
+  "model": "models/df_v24/m_12e2a094a5fe7c99.vmdl",
+  "materials": {
+    "mat_6335089357e18e1c": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Rocket_01_02_HD.MI_H_Industrial_ISS_Rocket_01_02_HD",
+    "mat_06b9972dbfe4848c": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Rocket_01_HD.MI_H_Industrial_ISS_Rocket_01_HD",
+    "mat_b9ad086fd5e2b862": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Rocket_01_07_HD.MI_H_Industrial_ISS_Rocket_01_07_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_2bea667a7b4421a8": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Rocket_01_03_HD.MI_H_Industrial_ISS_Rocket_01_03_HD",
+    "mat_cf1a7fb8c94bdd95": "DeltaForce/Content/Environment/Props/Branding/00_Materials/HD/MI_Branding_Sticker_Number_02G_HD.MI_Branding_Sticker_Number_02G_HD",
+    "mat_ce515409d0a82492": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD",
+    "mat_652a606455361a38": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_DecalAlpha_04_HD.MI_H_Building_FutureTech_DecalAlpha_04_HD",
+    "mat_78bb127aab903c50": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Rocket_01_01_HD.MI_H_Industrial_ISS_Rocket_01_01_HD"
+  },
+  "vertices": 43296,
+  "polygons": 45085,
+  "bounds": [
+    [
+      -82.16666412353516,
+      -100.69425964355469,
+      -6.28050422668457
+    ],
+    [
+      82.16666412353516,
+      100.69425964355469,
+      1124.878662109375
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

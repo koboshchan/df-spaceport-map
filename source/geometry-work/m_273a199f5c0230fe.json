@@ -1,0 +1,27 @@
+{
+  "id": "m_273a199f5c0230fe",
+  "objectPath": "DeltaForce/Content/Models/Vehicles/F35/Appearance_Base/F35_PlaneGate.F35_PlaneGate",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Vehicles\\F35\\Appearance_Base\\F35_PlaneGate.glb",
+  "sourceSHA256": "6CC09AE8964BACA96B1FA50498FBB7682EB8450D8BE6E6BCA5DA0A4EDEEC3BF8",
+  "model": "models/df_v24/m_273a199f5c0230fe.vmdl",
+  "materials": {
+    "mat_41bfee5b7c2efb9c": "DeltaForce/Content/Models/Vehicles/F35/Appearance_Base/Materials/carrier_wing_F35_drivable_body_01.carrier_wing_F35_drivable_body_01",
+    "mat_44f0103a9d07cd52": "DeltaForce/Content/Models/Vehicles/F35/Appearance_Base/Materials/carrier_wing_F35_drivable_glass.carrier_wing_F35_drivable_glass"
+  },
+  "vertices": 2421,
+  "polygons": 2780,
+  "bounds": [
+    [
+      -115.32306671142578,
+      -22.279701232910156,
+      -5.142612457275391
+    ],
+    [
+      7.273695945739746,
+      22.279722213745117,
+      30.940662384033203
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

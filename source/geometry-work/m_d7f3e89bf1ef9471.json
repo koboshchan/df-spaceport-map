@@ -1,0 +1,26 @@
+{
+  "id": "m_d7f3e89bf1ef9471",
+  "objectPath": "DeltaForce/Content/Environment/Props/Commercial/Resort/SM_M_Commercial_Resort_Bed_03_02.SM_M_Commercial_Resort_Bed_03_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Commercial\\Resort\\SM_M_Commercial_Resort_Bed_03_02.glb",
+  "sourceSHA256": "B1C74226481F9E7B992BB842D5DA0FAC310F68375BC9668CBB7FFF5A23C3E838",
+  "model": "models/df_v24/m_d7f3e89bf1ef9471.vmdl",
+  "materials": {
+    "mat_f1e397e06954290a": "DeltaForce/Content/Environment/Props/Commercial/00_Materials/HD/MI_M_Commercial_Resort_Bed_03_HD.MI_M_Commercial_Resort_Bed_03_HD"
+  },
+  "vertices": 932,
+  "polygons": 1634,
+  "bounds": [
+    [
+      -60.430789947509766,
+      -60.48279571533203,
+      0.3549668788909912
+    ],
+    [
+      60.14126205444336,
+      53.17639923095703,
+      32.86271667480469
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

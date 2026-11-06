@@ -1,0 +1,75 @@
+====0====
+compile_source_id              0
+steamaudio_customdata_occlusion_reflection_bounces 8
+steamaudio_customdata_occlusion_reflection_rays 8192
+steamaudio_customdata_occlusion_reflection false
+steamaudio_customdata_bake_materials false
+steamaudio_customdata_bake_dimensions false
+steamaudio_customdata_bake_occlusion false
+steamaudio_customdata_height_above_floor 1.5
+steamaudio_customdata_grid_spacing 6.0
+steamaudio_customdata_filter_navmesh false
+steamaudio_customdata_filter_volumes true
+steamaudio_customdata_generation_type "0"
+steamaudio_customdata_rebake_option "0"
+steamaudio_pathing_filter_navmesh false
+steamaudio_pathing_filter_volumes true
+steamaudio_pathing_generation_type "0"
+steamaudio_reverb_clustering_depth_threshold 10.0
+steamaudio_reverb_clustering_cubemap_resolution 16
+steamaudio_reverb_clustering_enable false
+steamaudio_reverb_filter_navmesh false
+steamaudio_reverb_filter_volumes true
+steamaudio_reverb_generation_type "0"
+novis_max_triangles_per_cluster 0
+novis_min_draw_volume_size     0.0
+prefab_has_runtime_entity_by_default "0"
+steamaudio_pathing_visibility_pathrange 100.0
+steamaudio_pathing_visibility_threshold 0.1
+steamaudio_pathing_visibility_radius 0.0
+steamaudio_pathing_visibility_samples 1
+steamaudio_pathing_height_above_floor 1.5
+steamaudio_pathing_grid_spacing 6.0
+steamaudio_pathing_grid_type   "0"
+steamaudio_pathing_rebake_option "1"
+steamaudio_reverb_ambisonic_order 1
+steamaudio_reverb_ir_duration  1.0
+steamaudio_reverb_bounces      32
+steamaudio_reverb_rays         32768
+steamaudio_reverb_height_above_floor 1.5
+steamaudio_reverb_grid_spacing 6.0
+steamaudio_reverb_grid_type    "0"
+steamaudio_reverb_rebake_option "1"
+lightmap_queries               true
+max_lightmap_resolution        "0"
+baked_light_index_max          "256"
+baked_light_index_min          "0"
+vrmovement                     "0"
+vrchaperone                    "0"
+minpropscreenwidth             0.0
+maxpropscreenwidth             -1.0
+newunit                        0
+pvstype                        0
+startcolor                     [ 0, 0, 0 ]
+startdark                      false
+skyname                        "sky_day01_01"
+targetname                     ""
+classname                      "worldspawn"
+origin                         [ 0.0, 0.0, 0.0 ]
+angles                         [ 0.0, 0.0, 0.0 ]
+scales                         [ 1.0, 1.0, 1.0 ]
+hammeruniqueid                 "1"
+worldname                      "df_spaceport_v24_part1"
+mapusagetype                   "standard"
+
+====1====
+vscripts                       ""
+targetname                     "[PR#]df_v24_origin"
+classname                      "info_spawngroup_landmark"
+compile_source_id              9041
+origin                         [ 0.0, 0.0, 0.0 ]
+angles                         [ 0.0, 0.0, 0.0 ]
+scales                         [ 1.0, 1.0, 1.0 ]
+hammeruniqueid                 "4009053"
+
+

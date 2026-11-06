@@ -1,0 +1,26 @@
+{
+  "id": "m_dc655621f0662aed",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Fence_SoundproofWall_03d_Glass.SM_H_Fence_SoundproofWall_03d_Glass",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Fence_SoundproofWall_03d_Glass.glb",
+  "sourceSHA256": "ECDD10C11B6B74A4F164DA7DD9FF3A8B851A08AEF59A70E3CEF2A6B4B2401A21",
+  "model": "models/df_v24/m_dc655621f0662aed.vmdl",
+  "materials": {
+    "mat_d6de8550c60fe949": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/00_Materials/HD/MI_Window_Glass_02A_HD.MI_Window_Glass_02A_HD"
+  },
+  "vertices": 30,
+  "polygons": 32,
+  "bounds": [
+    [
+      -129.6028594970703,
+      -1.233066201210022,
+      31.730247497558594
+    ],
+    [
+      0.0035364720970392227,
+      1.2366474866867065,
+      145.3304443359375
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

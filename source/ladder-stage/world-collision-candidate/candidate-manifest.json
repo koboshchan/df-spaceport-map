@@ -1,0 +1,32 @@
+{
+  "files": {
+    "df_v25_ladder_solids_candidate.vmap": {
+      "sha256": "00bd0a01d29f724e1627df1825ba84dc6326d2c6c47619bfb2cb48e6f5c3b99b",
+      "bytes": 6550396
+    },
+    "solid-world-boxes-proposal.json": {
+      "sha256": "fb1b2ef2ccc7a706423a2b169aa71222db4164dc1759a76193995f2e1f18d15e",
+      "bytes": 963628
+    }
+  },
+  "sourceActors": 10,
+  "boxes": 536,
+  "bounds": {
+    "min": [
+      -6187.7733442136905,
+      -9973.556509567094,
+      -298.9587582952411
+    ],
+    "max": [
+      907.9524561180253,
+      119.41985507426647,
+      1088.750518200001
+    ]
+  },
+  "sourceCornerErrorMax": 1.8198773652309366e-12,
+  "allFacesOutward": true,
+  "compiledAccepted": false,
+  "runtimeAccepted": false,
+  "proxiesUnchanged": true,
+  "frozenNativePilotUnchanged": true
+}

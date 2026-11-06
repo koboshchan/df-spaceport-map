@@ -1,0 +1,28 @@
+{
+  "id": "m_570b8382a175556e",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/SM_H_Government_Office_Cabinet_07.SM_H_Government_Office_Cabinet_07",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Government\\Office\\SM_H_Government_Office_Cabinet_07.glb",
+  "sourceSHA256": "2099AC71088C0D0EEF9D111DB1E97082A7D2D470BC6E76B9202F9F97AE474CFC",
+  "model": "models/df_v24/m_570b8382a175556e.vmdl",
+  "materials": {
+    "mat_d79da62dfbb1d73a": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/00_Materials/HD/MI_H_Government_Office_Cabinet_06_HD.MI_H_Government_Office_Cabinet_06_HD",
+    "mat_20c902f67473b67f": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/00_Materials/HD/MI_H_Government_Office_Cabinet_07_HD.MI_H_Government_Office_Cabinet_07_HD",
+    "mat_4c639ddf627bb66a": "DeltaForce/Content/Maps/Iceland/Asset/Props/00_Materials/HD/MI_IceLand_Props_IndustrialRadar_02_HD.MI_Iceland_Props_IndustrialRadar_02_HD"
+  },
+  "vertices": 4462,
+  "polygons": 3470,
+  "bounds": [
+    [
+      -0.24760985374450684,
+      -34.33252716064453,
+      -1.700377031119474e-15
+    ],
+    [
+      79.44769287109375,
+      -1.7852782548288815e-05,
+      129.59999084472656
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

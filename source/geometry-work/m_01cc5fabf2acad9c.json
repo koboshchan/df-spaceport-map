@@ -1,0 +1,26 @@
+{
+  "id": "m_01cc5fabf2acad9c",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Government/Office/SM_M_Government_Office_Airconditioner_02.SM_M_Government_Office_Airconditioner_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Government\\Office\\SM_M_Government_Office_Airconditioner_02.glb",
+  "sourceSHA256": "BF7D7EAABDF671A93385E53A7C9B4CDAA1BC305F0B00FD2157B386426FE2AD89",
+  "model": "models/df_v24/m_01cc5fabf2acad9c.vmdl",
+  "materials": {
+    "mat_3d92fc705dcb0d38": "DeltaForce/Content/Environment/Props/Morocco/Government/Office/00_Materials/HD/MI_M_Government_Office_Airconditioner_02_HD.MI_M_Government_Office_Airconditioner_02_HD"
+  },
+  "vertices": 368,
+  "polygons": 196,
+  "bounds": [
+    [
+      -12.294407844543457,
+      -12.395492553710938,
+      -3.1508238315582275
+    ],
+    [
+      12.294416427612305,
+      12.395492553710938,
+      -0.005754947662353516
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

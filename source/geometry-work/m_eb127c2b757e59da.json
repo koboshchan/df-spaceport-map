@@ -1,0 +1,29 @@
+{
+  "id": "m_eb127c2b757e59da",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/SM_H_FutureTech_Furniture_Radar_01.SM_H_FutureTech_Furniture_Radar_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\SM_H_FutureTech_Furniture_Radar_01.glb",
+  "sourceSHA256": "D6707410C9018AA370E2CE66F54323CBC0C83B30068F93D3DA9DAE44622D5C45",
+  "model": "models/df_v24/m_eb127c2b757e59da.vmdl",
+  "materials": {
+    "mat_6cdbd02699e37edb": "DeltaForce/Content/Environment/Decal/Dirt/00_Materials/HD/MI_I_Dirt_Decal_03c_HD.MI_I_Dirt_Decal_03c_HD",
+    "mat_1b8307d2d09526be": "DeltaForce/Content/Environment/Props/HAAVK/Gibraltar/Industrial/00_Materials/HD/MI_H_Gibraltar_Props_Industrial_ElectricBox_01i_HD.MI_H_Gibraltar_Props_Industrial_ElectricBox_01i_HD",
+    "mat_3f90e5b18bb4d62d": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Furniture_Radar_01a_HD.MI_H_FutureTech_Furniture_Radar_01a_HD",
+    "mat_a2991d8995171ae2": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Furniture_Radar_01b_HD.MI_H_FutureTech_Furniture_Radar_01b_HD"
+  },
+  "vertices": 3238,
+  "polygons": 2957,
+  "bounds": [
+    [
+      -56.45817947387695,
+      -100.89773559570312,
+      -0.00014389309217222035
+    ],
+    [
+      56.6229133605957,
+      37.72636032104492,
+      148.8040771484375
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

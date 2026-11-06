@@ -1,0 +1,29 @@
+{
+  "id": "m_c2609650fce6cafe",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_Building_FutureTech_H_01/SM_H_Building_FutureTech_HLight_01_ExterWall_06.SM_H_Building_FutureTech_HLight_01_ExterWall_06",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_Building_FutureTech_H_01\\SM_H_Building_FutureTech_HLight_01_ExterWall_06.glb",
+  "sourceSHA256": "D599BBB8C38673052485F7E105583B28E8BBA041F3BF92813C7E97B116C18BD2",
+  "model": "models/df_v24/m_c2609650fce6cafe.vmdl",
+  "materials": {
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_d978fbd2b74eac82": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Rubber_Painting_04_HD.MI_GEN_Rubber_Painting_04_HD",
+    "mat_33602b4bfdc71367": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_C_HD.MI_I_WalkwaySystem_MetalFloor_01_C_HD",
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD"
+  },
+  "vertices": 5229,
+  "polygons": 3741,
+  "bounds": [
+    [
+      -510.75799560546875,
+      -484.42919921875,
+      -1.798691065340273e-14
+    ],
+    [
+      492.6259765625,
+      517.9363403320312,
+      608.174072265625
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

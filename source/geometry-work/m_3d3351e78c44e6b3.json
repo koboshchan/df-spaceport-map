@@ -1,0 +1,26 @@
+{
+  "id": "m_3d3351e78c44e6b3",
+  "objectPath": "DeltaForce/Content/Models/Vehicles/TankM1/Appearance_Base/Tank_M1_Bar_Gun_01.Tank_M1_Bar_Gun_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Vehicles\\TankM1\\Appearance_Base\\Tank_M1_Bar_Gun_01.glb",
+  "sourceSHA256": "EBC5F78D91336E88AE28A3A2E7CF496B922F84E81E321C4E9D701F74CB3ACF73",
+  "model": "models/df_v24/m_3d3351e78c44e6b3.vmdl",
+  "materials": {
+    "mat_87fa7d325eb743c4": "Engine/Content/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+  },
+  "vertices": 4,
+  "polygons": 2,
+  "bounds": [
+    [
+      -0.4857866168022156,
+      -0.5618767738342285,
+      -3.440503240575894e-17
+    ],
+    [
+      0.4857866168022156,
+      0.5618767738342285,
+      3.440503240575894e-17
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

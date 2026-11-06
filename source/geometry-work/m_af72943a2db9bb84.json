@@ -1,0 +1,33 @@
+{
+  "id": "m_af72943a2db9bb84",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_Dock_06a_InterWall_03.SM_H_Building_FutureTech_Dock_06a_InterWall_03",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_Dock_06a_InterWall_03.glb",
+  "sourceSHA256": "DCE6841C7B4D9B16C4F9F150EE7B2CD200D6A7CE09B97CB8B9C64E65C830695A",
+  "model": "models/df_v24/m_af72943a2db9bb84.vmdl",
+  "materials": {
+    "mat_79071d76426b9c38": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Fabric_Wall_01_HD.MI_GEN_Fabric_Wall_01_HD",
+    "mat_7c9fd56c8f9b482a": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Concrete_Smooth_01_HD.MI_GEN_Concrete_Smooth_01_HD",
+    "mat_14707910a004505e": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_Roof_06_HD.MI_H_Building_FutureTech_Roof_06_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_de3029fbed7cc67f": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Layer_01_HD.MI_GEN_Marble_Layer_01_HD",
+    "mat_40b9dd6e452c79fe": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_C_Building_WallInside_01_HD.MI_C_Building_WallInside_01_HD",
+    "mat_b420b016f5ed409e": "DeltaForce/Content/Environment/MatBlend/Concrete/Iris/00_Materials/HD/MI_M_Building_Concrete_Damaged_01c_HD.MI_M_Building_Concrete_Damaged_01c_HD",
+    "mat_ba296184c60d3451": "DeltaForce/Content/Environment/Props/Morocco/Industrial/Construction/00_Materials/HD/MI_M_Industrial_Construction_Pillars_01_HD.MI_M_Industrial_Construction_Pillars_01_HD"
+  },
+  "vertices": 12895,
+  "polygons": 8295,
+  "bounds": [
+    [
+      646.6985473632812,
+      1050.548583984375,
+      149.2942657470703
+    ],
+    [
+      1141.2171630859375,
+      1545.436767578125,
+      346.5372619628906
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

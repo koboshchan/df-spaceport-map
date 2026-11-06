@@ -1,0 +1,29 @@
+{
+  "id": "m_8123fc178ce8ae51",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Fence/SM_H_Fence_Metal_1024x768_01.SM_H_Fence_Metal_1024x768_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Fence\\SM_H_Fence_Metal_1024x768_01.glb",
+  "sourceSHA256": "9C31AE5CD5EF6E4322FAB7371DF845B825CBEA5037E706D1ADC6032F5180F913",
+  "model": "models/df_v24/m_8123fc178ce8ae51.vmdl",
+  "materials": {
+    "mat_1a3547768029a054": "DeltaForce/Content/Environment/Structures/HAAVK/Fence/00_Materials/HD/MI_H_Fence_Metal_1024x768_01a_HD.MI_H_Fence_Metal_1024x768_01a_HD",
+    "mat_c8fdc59a780b0491": "DeltaForce/Content/Environment/Structures/HAAVK/Fence/00_Materials/HD/MI_H_Fence_Metal_1024x768_01b_HD.MI_H_Fence_Metal_1024x768_01b_HD",
+    "mat_65cb25faf5cbd434": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Industrial/00_Materials/HD/MI_H_Building_Industrial_Posun_02c_HD.MI_H_Building_Industrial_Posun_02c_HD",
+    "mat_66e0a1d0d4f261af": "DeltaForce/Content/Environment/Structures/HAAVK/Fence/00_Materials/HD/MI_H_Fence_Metal_1024x768_01f_HD.MI_H_Fence_Metal_1024x768_01f_HD"
+  },
+  "vertices": 5213,
+  "polygons": 5395,
+  "bounds": [
+    [
+      -2.958542823791504,
+      -47.337181091308594,
+      -0.013990402221679688
+    ],
+    [
+      273.5291748046875,
+      1.113479733467102,
+      375.47222900390625
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

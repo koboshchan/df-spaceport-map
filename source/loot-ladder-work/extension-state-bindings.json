@@ -1,0 +1,130 @@
+[
+  {
+    "sourceMesh": "DeltaForce/Content/Models/SceneObjects/props_container_Locker_797/props_container_Locker_797_3P.uasset",
+    "state": "closed",
+    "staticGLB": "E:\\df-v24-build-20261106\\loot-ladder-work\\extension-static\\props_container_Locker_797_3P-fea8d04c.glb",
+    "sha256": "11abee260531bda9b3d9f9fc9351819e4f1f2221ea5d815236031126006b0044",
+    "animation": "DeltaForce/Content/Models/SceneObjects/props_container_Locker_797/Anim/props_container_Locker_797_Closeidle.uasset",
+    "sampleFrame": 0,
+    "sourceMapping": "exact blueprint component idle animation inheritance",
+    "missingBones": 0,
+    "slots": [
+      {
+        "index": 0,
+        "slot": "props_container_Locker_797_01",
+        "material": "DeltaForce/Content/Models/Props/Collect/props_container_Locker_797/Materials/props_container_Locker_797.props_container_Locker_797",
+        "resolved": true,
+        "vmat": "materials/df_v24/mat_4381b6b45fd726cc.vmat"
+      },
+      {
+        "index": 1,
+        "slot": "props_container_Locker_797_02",
+        "material": "DeltaForce/Content/Models/Props/Collect/props_container_Locker_797/Materials/props_container_Locker_797_02.props_container_Locker_797_02",
+        "resolved": true,
+        "vmat": "materials/df_v24/mat_cc0fd5c1d90cb274.vmat"
+      }
+    ]
+  },
+  {
+    "sourceMesh": "DeltaForce/Content/Models/SceneObjects/props_container_Locker_797/props_container_Locker_797_3P.uasset",
+    "state": "opened",
+    "staticGLB": "E:\\df-v24-build-20261106\\loot-ladder-work\\extension-static\\props_container_Locker_797_3P-58c7d9ac.glb",
+    "sha256": "1ac89b1affe955109f5d6e236ff55a1e8b499e14aab2e5066d050c0413cb225c",
+    "animation": "DeltaForce/Content/Models/SceneObjects/props_container_Locker_797/Anim/props_container_Locker_797_Openidle.uasset",
+    "sampleFrame": 0,
+    "sourceMapping": "exact blueprint component idle animation inheritance",
+    "missingBones": 0,
+    "slots": [
+      {
+        "index": 0,
+        "slot": "props_container_Locker_797_01",
+        "material": "DeltaForce/Content/Models/Props/Collect/props_container_Locker_797/Materials/props_container_Locker_797.props_container_Locker_797",
+        "resolved": true,
+        "vmat": "materials/df_v24/mat_4381b6b45fd726cc.vmat"
+      },
+      {
+        "index": 1,
+        "slot": "props_container_Locker_797_02",
+        "material": "DeltaForce/Content/Models/Props/Collect/props_container_Locker_797/Materials/props_container_Locker_797_02.props_container_Locker_797_02",
+        "resolved": true,
+        "vmat": "materials/df_v24/mat_cc0fd5c1d90cb274.vmat"
+      }
+    ]
+  },
+  {
+    "sourceMesh": "DeltaForce/Content/Models/Props/Collect/props_collect_box_589/props_collect_box_589_3P.uasset",
+    "state": "closed",
+    "staticGLB": "E:\\df-v24-build-20261106\\loot-ladder-work\\extension-static\\props_collect_box_589_3P-a9ba5d95.glb",
+    "sha256": "fcb5f80b5e29327d3ccf37b3c1febf328b42f5cddf6061029f23ba3100d63311",
+    "animation": "DeltaForce/Content/Models/Props/Collect/props_collect_box_589/Anims/props_collect_box_589_UES.uasset",
+    "sampleFrame": 0,
+    "sourceMapping": "exact blueprint component idle animation inheritance",
+    "missingBones": 0,
+    "slots": [
+      {
+        "index": 0,
+        "slot": "props_collect_box_589",
+        "material": "DeltaForce/Content/Models/Props/Collect/props_collect_box_589/Materials/props_collect_box_589.props_collect_box_589",
+        "resolved": true,
+        "vmat": "materials/df_v24/mat_b0378b904a2aa4b6.vmat"
+      }
+    ]
+  },
+  {
+    "sourceMesh": "DeltaForce/Content/Models/Props/Collect/props_collect_box_589/props_collect_box_589_3P.uasset",
+    "state": "opened",
+    "staticGLB": "E:\\df-v24-build-20261106\\loot-ladder-work\\extension-static\\props_collect_box_589_3P-a9ba5d95.glb",
+    "sha256": "fcb5f80b5e29327d3ccf37b3c1febf328b42f5cddf6061029f23ba3100d63311",
+    "animation": "DeltaForce/Content/Models/Props/Collect/props_collect_box_589/Anims/props_collect_box_589_UES.uasset",
+    "sampleFrame": 0,
+    "sourceMapping": "exact blueprint component idle animation inheritance",
+    "missingBones": 0,
+    "slots": [
+      {
+        "index": 0,
+        "slot": "props_collect_box_589",
+        "material": "DeltaForce/Content/Models/Props/Collect/props_collect_box_589/Materials/props_collect_box_589.props_collect_box_589",
+        "resolved": true,
+        "vmat": "materials/df_v24/mat_b0378b904a2aa4b6.vmat"
+      }
+    ]
+  },
+  {
+    "sourceMesh": "DeltaForce/Content/Models/Props/Collect/props_collect_box_1092/props_collect_box_1092_3P.uasset",
+    "state": "closed",
+    "staticGLB": "E:\\df-v24-build-20261106\\loot-ladder-work\\extension-static\\props_collect_box_1092_3P-4144470f.glb",
+    "sha256": "34da15d3eff658f6db45d40ef71470d6b5931c03eafd2d4ba819c8f21c1babbc",
+    "animation": "DeltaForce/Content/Models/Props/Collect/props_collect_box_555/Anims/props_collect_box_555_Close_Idle.uasset",
+    "sampleFrame": 0,
+    "sourceMapping": "exact blueprint component idle animation inheritance",
+    "missingBones": 0,
+    "slots": [
+      {
+        "index": 0,
+        "slot": "props_collect_box_555",
+        "material": "DeltaForce/Content/Models/Props/Collect/props_collect_box_1092/Materials/props_collect_box_1092.props_collect_box_1092",
+        "resolved": true,
+        "vmat": "materials/df_v24/mat_0f212212ed0421d5.vmat"
+      }
+    ]
+  },
+  {
+    "sourceMesh": "DeltaForce/Content/Models/Props/Collect/props_collect_box_1092/props_collect_box_1092_3P.uasset",
+    "state": "opened",
+    "staticGLB": "E:\\df-v24-build-20261106\\loot-ladder-work\\extension-static\\props_collect_box_1092_3P-2366c698.glb",
+    "sha256": "0054cac016d3831a413f44592747d0def7a5edda44a02a9f630bfc3f2cc1549d",
+    "animation": "DeltaForce/Content/Models/Props/Collect/props_collect_box_555/Anims/props_collect_box_555_Open_Idle.uasset",
+    "sampleFrame": 0,
+    "sourceMapping": "exact blueprint component idle animation inheritance",
+    "missingBones": 0,
+    "slots": [
+      {
+        "index": 0,
+        "slot": "props_collect_box_555",
+        "material": "DeltaForce/Content/Models/Props/Collect/props_collect_box_1092/Materials/props_collect_box_1092.props_collect_box_1092",
+        "resolved": true,
+        "vmat": "materials/df_v24/mat_0f212212ed0421d5.vmat"
+      }
+    ]
+  }
+]

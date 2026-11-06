@@ -1,0 +1,30 @@
+{
+  "id": "m_96eaf4c30e21912e",
+  "objectPath": "DeltaForce/Content/Environment/Vehicle/00_Mesh/SM_H_FutureTech_Vehicle_DriverlessVans_01/SM_H_FutureTech_Vehicle_DriverlessVans_02.SM_H_FutureTech_Vehicle_DriverlessVans_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Vehicle\\00_Mesh\\SM_H_FutureTech_Vehicle_DriverlessVans_01\\SM_H_FutureTech_Vehicle_DriverlessVans_02.glb",
+  "sourceSHA256": "FED514988841D06C0A6BE1C6F7550ECAD1BE16611F7C7F99B3B787968457E734",
+  "model": "models/df_v24/m_96eaf4c30e21912e.vmdl",
+  "materials": {
+    "mat_d88f153a88e55c08": "DeltaForce/Content/Environment/Vehicle/00_Materials/HD/MI_H_FutureTech_Vehicle_DriverlessVans_01e_HD.MI_H_FutureTech_Vehicle_DriverlessVans_01e_HD",
+    "mat_5c470c49c1b338b0": "DeltaForce/Content/Environment/Vehicle/00_Materials/HD/MI_H_FutureTech_Vehicle_DriverlessVans_01i_HD.MI_H_FutureTech_Vehicle_DriverlessVans_01i_HD",
+    "mat_d4f31c7abc5b6903": "DeltaForce/Content/Environment/Vehicle/00_Materials/HD/MI_H_FutureTech_Vehicle_DriverlessVans_01d_HD.MI_H_FutureTech_Vehicle_DriverlessVans_01d_HD",
+    "mat_d72ff61a5ed0ba2f": "DeltaForce/Content/Environment/Vehicle/00_Materials/HD/MI_H_FutureTech_Vehicle_DriverlessVans_01f_HD.MI_H_FutureTech_Vehicle_DriverlessVans_01f_HD",
+    "mat_c02290faca8c0b69": "DeltaForce/Content/Environment/Vehicle/00_Materials/HD/MI_H_FutureTech_Vehicle_DriverlessVans_01a_HD.MI_H_FutureTech_Vehicle_DriverlessVans_01a_HD"
+  },
+  "vertices": 13657,
+  "polygons": 14768,
+  "bounds": [
+    [
+      97.27080535888672,
+      -70.20254516601562,
+      0.5986202955245972
+    ],
+    [
+      324.5685119628906,
+      70.20254516601562,
+      62.590126037597656
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

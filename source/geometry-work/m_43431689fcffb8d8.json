@@ -1,0 +1,26 @@
+{
+  "id": "m_43431689fcffb8d8",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/RoadFacility/SM_M_Fence_ConcreteWall_Broken_15.SM_M_Fence_ConcreteWall_Broken_15",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\RoadFacility\\SM_M_Fence_ConcreteWall_Broken_15.glb",
+  "sourceSHA256": "B8CF2E964545D1B828E5D1181FF749D56776C3DAA501222418AF80CAFD75CE54",
+  "model": "models/df_v24/m_43431689fcffb8d8.vmdl",
+  "materials": {
+    "mat_53b14e47a347de09": "DeltaForce/Content/Environment/Props/Morocco/00_Materials/HD/MI_M_Fence_ConcreteWall_Broken_14_HD.MI_M_Fence_ConcreteWall_Broken_14_HD"
+  },
+  "vertices": 2295,
+  "polygons": 3000,
+  "bounds": [
+    [
+      -44.18914031982422,
+      -36.1132698059082,
+      -0.6292548775672913
+    ],
+    [
+      36.723548889160156,
+      30.643835067749023,
+      5.57406759262085
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "m_cb4850e88c4d7ad3",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/SM_I_RoadFacility_Ground_L_13.SM_I_RoadFacility_Ground_L_13",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter\\SM_I_RoadFacility_Ground_L_13.glb",
+  "sourceSHA256": "2D6A3E1BB1FD01F298770E8DD5876E717C40F7F081E8BCB084CA0153A98EF767",
+  "model": "models/df_v24/m_cb4850e88c4d7ad3.vmdl",
+  "materials": {
+    "mat_0ab55198e48f0c35": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_L_13_03_HD.MI_I_RoadFacility_Ground_L_13_03_HD",
+    "mat_5bd1a848aced84aa": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_L_13_02_HD.MI_I_RoadFacility_Ground_L_13_02_HD",
+    "mat_5220f0024f3a237d": "DeltaForce/Content/Environment/Structures/Morocco/Building/Cracked/00_Materials/HD/MI_H_IceLand_Building_Decal_01_HD.MI_H_IceLand_Building_Decal_01_HD",
+    "mat_867f57a43ccd60fc": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_L_13_01_HD.MI_I_RoadFacility_Ground_L_13_01_HD",
+    "mat_8b5d279a6d2e73a7": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_D_HD.MI_I_WalkwaySystem_MetalFloor_01_D_HD",
+    "mat_da8c4ccd423f7b47": "DeltaForce/Content/Environment/Decal/Traffic/00_Materials/MI_I_Traffic_Decal_03_HD.MI_I_Traffic_Decal_03_HD",
+    "mat_d126adf14b0099e9": "DeltaForce/Content/Environment/Structures/HAAVK/Pipeline/00_Materials/HD/MI_H_PipeLine_01_HD.MI_H_PipeLine_01_HD",
+    "mat_505680223fda5eb2": "DeltaForce/Content/Environment/Decal/Dirt/00_Materials/HD/MI_I_Dirt_Decal_05a_HD.MI_I_Dirt_Decal_05a_HD",
+    "mat_618dce10771d7cb5": "DeltaForce/Content/Environment/Decal/Connect/00_Materials/HD/MI_I_Connect_Decal_04_HD.MI_I_Connect_Decal_04_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_c5d92f8dd09e35ff": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_LaunchLauncher_01_03_HD.MI_H_Industrial_ISS_LaunchLauncher_01_03_HD",
+    "mat_81a4c48bff8ca16f": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_GEN_Metal_PaintingFloor_04_HD.MI_GEN_Metal_PaintingFloor_04_HD"
+  },
+  "vertices": 20928,
+  "polygons": 16251,
+  "bounds": [
+    [
+      -934.207275390625,
+      -239.0389862060547,
+      -689.49609375
+    ],
+    [
+      934.2070922851562,
+      1847.8046875,
+      288.072509765625
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

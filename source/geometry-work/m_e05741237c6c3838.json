@@ -1,0 +1,29 @@
+{
+  "id": "m_e05741237c6c3838",
+  "objectPath": "DeltaForce/Content/BluePrints/Interact/Door/SpecialDoor/BP_Interactor_BridgeDoor_Batch/SM_BatchH0_9ED83AF4A77F6F0748280208F6CADF5F.SM_BatchH0_9ED83AF4A77F6F0748280208F6CADF5F",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\BluePrints\\Interact\\Door\\SpecialDoor\\BP_Interactor_BridgeDoor_Batch\\SM_BatchH0_9ED83AF4A77F6F0748280208F6CADF5F.glb",
+  "sourceSHA256": "D7D3B01247D936895184C7D6660C41909EC21B2F63B3BB97B093ECC39700CC73",
+  "model": "models/df_v24/m_e05741237c6c3838.vmdl",
+  "materials": {
+    "mat_36fca93f27645427": "DeltaForce/Content/GenDecalDir/MaterialsHD/M_DeferredMeshDecal_PBR_Inst_MI_Branding_Sticker_Number_09_HD.M_DeferredMeshDecal_PBR_Inst_MI_Branding_Sticker_Number_09_HD",
+    "mat_ebe2c68b91602cff": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Road_Decal_02_HD.MI_H_FutureTech_Road_Decal_02_HD",
+    "mat_9c21124648c687a7": "DeltaForce/Content/Environment/Decal/Connect/00_Materials/HD/MI_I_Connect_Decal_07_HD.MI_I_Connect_Decal_07_HD",
+    "mat_3cc637236057ece1": "DeltaForce/Content/Environment/Decal/Abrasion/00_Materials/HD/MI_I_Abrasion_Decal_01a_HD.MI_I_Abrasion_Decal_01a_HD"
+  },
+  "vertices": 4199,
+  "polygons": 2296,
+  "bounds": [
+    [
+      -654.75,
+      -734.8162231445312,
+      -195.78375244140625
+    ],
+    [
+      316.125,
+      279.6300048828125,
+      0.3037499785423279
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "m_8190943f4daab5a8",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Transport/Utility/SM_H_Transport_Utility_FlowerBed_03C.SM_H_Transport_Utility_FlowerBed_03C",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Transport\\Utility\\SM_H_Transport_Utility_FlowerBed_03C.glb",
+  "sourceSHA256": "E787995935BE3FFB6BE7AB881435943649E024E5164F47D7FC2C7BECB89394B8",
+  "model": "models/df_v24/m_8190943f4daab5a8.vmdl",
+  "materials": {
+    "mat_482740473c9f779a": "DeltaForce/Content/Environment/Props/HAAVK/Transport/Utility/00_Materials/HD/MI_H_Transport_Utility_FlowerBed_03C_HD.MI_H_Transport_Utility_FlowerBed_03C_HD",
+    "mat_df052511d23709a4": "DeltaForce/Content/Environment/MatBlend/Grass/Ahsarahn/00_Materials/MI_M_GEN_Residential_Grass_01_HD.MI_M_GEN_Residential_Grass_01_HD"
+  },
+  "vertices": 434,
+  "polygons": 520,
+  "bounds": [
+    [
+      -33.08831024169922,
+      -33.068050384521484,
+      1.0728833821360695e-08
+    ],
+    [
+      33.03067398071289,
+      33.1641845703125,
+      8.81612777709961
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

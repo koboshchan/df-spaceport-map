@@ -1,0 +1,30 @@
+{
+  "id": "m_ecd9f7295a6f8d53",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Fence/SM_H_Fence_Metal_1024x768_01E.SM_H_Fence_Metal_1024x768_01E",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Fence\\SM_H_Fence_Metal_1024x768_01E.glb",
+  "sourceSHA256": "4F068338955A6FCD5AFBF2FEEE24BC94CB90164E1B57ED79E61A88185F0DEADD",
+  "model": "models/df_v24/m_ecd9f7295a6f8d53.vmdl",
+  "materials": {
+    "mat_b2cce2838c324de6": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Industrial/00_Materials/HD/MI_H_Building_Industrial_Posun_02_HD.MI_H_Building_Industrial_Posun_02_HD",
+    "mat_65cb25faf5cbd434": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Industrial/00_Materials/HD/MI_H_Building_Industrial_Posun_02c_HD.MI_H_Building_Industrial_Posun_02c_HD",
+    "mat_6441e432f8dab7b9": "DeltaForce/Content/Environment/MatBlend/Concrete/Iris/00_Materials/HD/MI_M_Building_Concrete_Damaged_01_HD.MI_M_Building_Concrete_Damaged_01_HD",
+    "mat_39c582a912704536": "DeltaForce/Content/Environment/Structures/HAAVK/Fence/00_Materials/HD/MI_H_Fence_Metal_1024x768_01d_HD.MI_H_Fence_Metal_1024x768_01d_HD",
+    "mat_ba296184c60d3451": "DeltaForce/Content/Environment/Props/Morocco/Industrial/Construction/00_Materials/HD/MI_M_Industrial_Construction_Pillars_01_HD.MI_M_Industrial_Construction_Pillars_01_HD"
+  },
+  "vertices": 6790,
+  "polygons": 10678,
+  "bounds": [
+    [
+      -54.20167922973633,
+      -67.59078216552734,
+      -2.5906012058258057
+    ],
+    [
+      137.55059814453125,
+      71.31436920166016,
+      4.569119453430176
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

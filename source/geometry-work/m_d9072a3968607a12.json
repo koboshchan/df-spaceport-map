@@ -1,0 +1,33 @@
+{
+  "id": "m_d9072a3968607a12",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_AutomaticWorkshop_01.SM_H_Building_FutureTech_AutomaticWorkshop_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_AutomaticWorkshop_01.glb",
+  "sourceSHA256": "BD07D63AF1DEC49C1116360067576504C99E1DB40CB5B1CABAA8A64826420039",
+  "model": "models/df_v24/m_d9072a3968607a12.vmdl",
+  "materials": {
+    "mat_9e381cb715633c7d": "DeltaForce/Content/Environment/MatBlend/Metal/Iris/00_Materials/MI_Building_Storage_Metal_05_HD.MI_Building_Storage_Metal_05_HD",
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD",
+    "mat_aece11ccbb1a9e1b": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01C_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01C_HD",
+    "mat_614bf2b314f717d5": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01B_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01B_HD",
+    "mat_ce515409d0a82492": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD",
+    "mat_c61b8c220610ac39": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01E_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01E_HD",
+    "mat_fb4c9e9dd0306489": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01F_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01F_HD",
+    "mat_20a12c0ac2702d06": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01B_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01B_Decal_HD"
+  },
+  "vertices": 26249,
+  "polygons": 19997,
+  "bounds": [
+    [
+      -3.5552196502685547,
+      -17.517107009887695,
+      -2.5749204723979346e-07
+    ],
+    [
+      531.6286010742188,
+      236.89447021484375,
+      236.70335388183594
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

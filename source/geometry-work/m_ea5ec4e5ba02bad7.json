@@ -1,0 +1,27 @@
+{
+  "id": "m_ea5ec4e5ba02bad7",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/SM_I_RoadFacility_Ground_BFlowerBed_01.SM_I_RoadFacility_Ground_BFlowerBed_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter\\SM_I_RoadFacility_Ground_BFlowerBed_01.glb",
+  "sourceSHA256": "73DFEC618AF69B92080C4E4E4E08E982EC9D3BAAE3EC645451A7EEBED864DCEE",
+  "model": "models/df_v24/m_ea5ec4e5ba02bad7.vmdl",
+  "materials": {
+    "mat_067127dbc89b44d4": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_BFlowerBed_01_HD.MI_I_RoadFacility_Ground_BFlowerBed_01_HD",
+    "mat_9ae0cbbe320a2e30": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Checkred_02_HD.MI_GEN_Marble_Checkred_02_HD"
+  },
+  "vertices": 680,
+  "polygons": 590,
+  "bounds": [
+    [
+      -264.0447082519531,
+      -2901.56494140625,
+      8.239745511673391e-06
+    ],
+    [
+      372.51580810546875,
+      525.4818725585938,
+      43.548221588134766
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

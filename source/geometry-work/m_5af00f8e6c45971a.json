@@ -1,0 +1,31 @@
+{
+  "id": "m_5af00f8e6c45971a",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/RocketTransporter_Ma1/SM_H_Industrial_ISS_RocketTransporter_02.SM_H_Industrial_ISS_RocketTransporter_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\ISS\\RocketTransporter_Ma1\\SM_H_Industrial_ISS_RocketTransporter_02.glb",
+  "sourceSHA256": "AE7E61C64B61B77E4BC59F3F5CEE680F5FE008CEBBB4E4BA74009E4DAE6CBB1A",
+  "model": "models/df_v24/m_5af00f8e6c45971a.vmdl",
+  "materials": {
+    "mat_2f042d2e4a2773b9": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_RocketTransporter_01_01_HD.MI_H_Industrial_ISS_RocketTransporter_01_01_HD",
+    "mat_ce402d1b85161603": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_RocketTransporter_01B_HD.MI_H_Industrial_ISS_RocketTransporter_01B_HD",
+    "mat_258f890cf5a3c450": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_RocketTransporter_01_03_HD.MI_H_Industrial_ISS_RocketTransporter_01_03_HD",
+    "mat_29b39f0b65dccea5": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_RocketTransporter_01_02_HD.MI_H_Industrial_ISS_RocketTransporter_01_02_HD",
+    "mat_33602b4bfdc71367": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_C_HD.MI_I_WalkwaySystem_MetalFloor_01_C_HD",
+    "mat_d14b216506d0fd93": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_RocketTransporter_01E_HD.MI_H_Industrial_ISS_RocketTransporter_01E_HD"
+  },
+  "vertices": 40243,
+  "polygons": 32696,
+  "bounds": [
+    [
+      -167.96499633789062,
+      -644.3701782226562,
+      13.557500839233398
+    ],
+    [
+      167.96499633789062,
+      567.5859375,
+      161.60862731933594
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

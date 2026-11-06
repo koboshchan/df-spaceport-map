@@ -1,0 +1,31 @@
+{
+  "id": "m_975daf4a5b9819c7",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_Dock_07.SM_H_Building_FutureTech_Dock_07",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_Dock_07.glb",
+  "sourceSHA256": "684F94C273B83FCC3C9C7016C83D5AB6B4DAFB35AD21806BA477597D2742E3D1",
+  "model": "models/df_v24/m_975daf4a5b9819c7.vmdl",
+  "materials": {
+    "mat_acfe0c8c271d1ddb": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_WatchTower_01_05_HD.MI_H_Building_FutureTech_WatchTower_01_05_HD",
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD",
+    "mat_45c818e9c23d8949": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_HOrange_01_ExterWall_01_01A_HD.MI_H_Building_FutureTech_HOrange_01_ExterWall_01_01A_HD",
+    "mat_4e06b33bb10b28ef": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Brakkesh/00_Materials/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_8b5d279a6d2e73a7": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_D_HD.MI_I_WalkwaySystem_MetalFloor_01_D_HD",
+    "mat_9abb213c5f93b0f7": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Wooden_Plank_01_HD.MI_GEN_Wooden_Plank_01_HD"
+  },
+  "vertices": 25730,
+  "polygons": 18662,
+  "bounds": [
+    [
+      -155.59140014648438,
+      -190.5286865234375,
+      -3.2958982046693563e-05
+    ],
+    [
+      155.5913543701172,
+      212.7000732421875,
+      855.39306640625
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

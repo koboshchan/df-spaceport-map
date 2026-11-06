@@ -1,0 +1,294 @@
+[
+  {
+    "package": "DeltaForce/Content/BluePrints/Interact/BP_InteractorContainer_ToolCabinetLarge_2.uasset",
+    "name": "Default__BP_InteractorContainer_ToolCabinetLarge_2_C",
+    "properties": {
+      "Loot容器分类": "EnumLootBoxType::NewEnumerator33",
+      "掉落等级": "EnumLootLevel::NewEnumerator2",
+      "唯一性": "工具柜1",
+      "BoxID": 936,
+      "BoxLevel": 1,
+      "CapacityWidth": 6,
+      "OpeningAudioEvent": {
+        "ObjectName": "GPAudioEventAsset'Container_Drawer_Open'",
+        "ObjectPath": "DeltaForce/Content/WwiseAudio/GPEvents/Objects/Interactive_Objects/Container_Basic/Container_Drawer_Open.0"
+      },
+      "RepItemArray": {
+        "DeltaFlags": "EFastArraySerializerDeltaFlags::HasBeenSerialized"
+      },
+      "BaseItemSearchTime": 0.75,
+      "LootAudioType": "EPickupContainerLootAudioType::Metal",
+      "InventoryIdName": "99010000039",
+      "InteractorName": {
+        "TableId": "/Game/StringTables/STForMaps/Common/Base/LOC_MAPS_OtherBP.LOC_MAPS_OtherBP",
+        "Key": "BP_InteractorContainer_ToolCabinetLarge_Default_InteractorName",
+        "SourceString": "工具柜",
+        "LocalizedString": "工具柜"
+      },
+      "GlowParameters": {
+        "HlightLightSpace": 28.0,
+        "Speed": 0.85
+      },
+      "SecondTypeName": "工具柜",
+      "PrimaryActorTick": {
+        "TickInterval": 0.1
+      }
+    }
+  },
+  {
+    "package": "DeltaForce/Content/BluePrints/Interact/BP_InteractorContainer_CabinetDrawer.uasset",
+    "name": "Default__BP_InteractorContainer_CabinetDrawer_C",
+    "properties": {
+      "Loot容器分类": "EnumLootBoxType::NewEnumerator15",
+      "掉落等级": "EnumLootLevel::NewEnumerator2",
+      "唯一性": "抽屉柜1",
+      "BoxID": 914,
+      "BoxLevel": 1,
+      "CapacityLength": 4,
+      "CapacityWidth": 4,
+      "OpeningAudioEvent": {
+        "ObjectName": "GPAudioEventAsset'Container_Drawer_Open'",
+        "ObjectPath": "DeltaForce/Content/WwiseAudio/GPEvents/Objects/Interactive_Objects/Container_Basic/Container_Drawer_Open.0"
+      },
+      "RepItemArray": {
+        "DeltaFlags": "EFastArraySerializerDeltaFlags::HasBeenSerialized"
+      },
+      "BaseItemSearchTime": 0.75,
+      "LootAudioType": "EPickupContainerLootAudioType::Metal",
+      "InventoryIdName": "99010000013",
+      "InteractorName": {
+        "TableId": "/Game/StringTables/STForMaps/Common/Base/LOC_MAPS_OtherBP.LOC_MAPS_OtherBP",
+        "Key": "BP_InteractorContainer_CabinetDrawer_Default_InteractorName",
+        "SourceString": "抽屉柜",
+        "LocalizedString": "抽屉柜"
+      },
+      "GlowParameters": {
+        "HlightLightSpace": 28.0,
+        "Speed": 0.85
+      },
+      "CustomDetectShowWhiteDotHorizontalAngle_HD": 0.0,
+      "CustomDetectShowWhiteDotVerticalAngle_HD": 0.0,
+      "CustomDetectShowWhiteDotMaxRadius_HD": 0.0,
+      "CustomInteractPointCompName": "Scene",
+      "SecondTypeName": "抽屉柜",
+      "PrimaryActorTick": {
+        "TickInterval": 0.1
+      }
+    }
+  },
+  {
+    "package": "DeltaForce/Content/BluePrints/Interact/SingleItemContainer/BP_Interactor_SingleItemContainer_Cabinet.uasset",
+    "name": "Default__BP_Interactor_SingleItemContainer_Cabinet_C",
+    "properties": {
+      "Loot容器分类": "EnumLootBoxType::NewEnumerator48",
+      "掉落等级": "EnumLootLevel::NewEnumerator2",
+      "BoxID": 949,
+      "CachedSpotNames": [
+        "Scene",
+        "Scene1"
+      ],
+      "SIContainerType": "ESingleItemContainerType::SIContainer_Cabinet",
+      "AimBoxesArray": [
+        {
+          "AimBoxes": [
+            {
+              "AimBoxName": "AimBox",
+              "CachedAimBox": null,
+              "OpenLoc": {
+                "X": -35.0,
+                "Y": 82.0,
+                "Z": 110.0
+              },
+              "OpenRot": {
+                "Pitch": 0.0,
+                "Yaw": 90.0,
+                "Roll": 0.0
+              },
+              "ClosedLoc": {
+                "X": 0.0,
+                "Y": 45.0,
+                "Z": 111.0
+              },
+              "ClosedRot": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            }
+          ],
+          "OpenedInteractPointName": "OpenedInteractPoint",
+          "CachedOpenedInteractPoint": null,
+          "ClosedInteractPointName": "ClosedInteractPoint",
+          "CachedClosedInteractPoint": null
+        }
+      ],
+      "OpenAudioEvent": {
+        "ObjectName": "GPAudioEventAsset'Container_Door_Cabinet_Open'",
+        "ObjectPath": "DeltaForce/Content/WwiseAudio/GPEvents/Objects/Interactive_Objects/Container_Basic/Container_Door_Cabinet_Open.0"
+      },
+      "CloseAudioEvent": {
+        "ObjectName": "GPAudioEventAsset'Container_Door_Cabinet_Close'",
+        "ObjectPath": "DeltaForce/Content/WwiseAudio/GPEvents/Objects/Interactive_Objects/Container_Basic/Container_Door_Cabinet_Close.0"
+      },
+      "bUseAimBoxInitSetPhysics": true,
+      "InteractorName": {
+        "TableId": "/Game/StringTables/STForMaps/Common/Base/LOC_MAPS_OtherBP.LOC_MAPS_OtherBP",
+        "Key": "BP_Interactor_SingleItemContainer_Cabinet_Default_InteractorName",
+        "SourceString": "储物柜",
+        "LocalizedString": "储物柜"
+      },
+      "CustomDetectShowHUDHorizontalAngle_HD": 60.0,
+      "CustomDetectShowHUDVerticalAngle_HD": 60.0,
+      "CustomDetectShowHUDHorizontalAngle_Mobile": 60.0,
+      "CustomDetectShowHUDVerticalAngle_Mobile": 60.0,
+      "CustombIsNeedInteractPointForward_Mobile": false,
+      "SecondTypeName": "储物柜"
+    }
+  },
+  {
+    "package": "DeltaForce/Content/BluePrints/Interact/SingleItemContainer/BP_Interactor_SingleItemContainer_Cabinet_1.uasset",
+    "name": "Default__BP_Interactor_SingleItemContainer_Cabinet_1_C",
+    "properties": {
+      "掉落等级": "EnumLootLevel::NewEnumerator20",
+      "唯一性": "储物柜1"
+    }
+  },
+  {
+    "package": "DeltaForce/Content/BluePrints/Interact/BP_InteractorContainer_Cloth_Grab.uasset",
+    "name": "Default__BP_InteractorContainer_Cloth_Grab_C",
+    "properties": {
+      "Loot容器分类": "EnumLootBoxType::NewEnumerator17",
+      "掉落等级": "EnumLootLevel::NewEnumerator19",
+      "BoxID": 916,
+      "BoxLevel": 1,
+      "CapacityLength": 4,
+      "CapacityWidth": 4,
+      "OpeningAudioEvent": {
+        "ObjectName": "GPAudioEventAsset'Container_Cloth_Jacket_Open'",
+        "ObjectPath": "DeltaForce/Content/WwiseAudio/GPEvents/Objects/Interactive_Objects/Container_Basic/Container_Cloth_Jacket_Open.0"
+      },
+      "bUsePlayOpeningAudioByNetMulti": true,
+      "BaseItemSearchTime": 0.75,
+      "InventoryIdName": "99010000014",
+      "InteractorName": {
+        "TableId": "/Game/StringTables/STForMaps/Common/Base/LOC_MAPS_OtherBP.LOC_MAPS_OtherBP",
+        "Key": "BP_InteractorContainer_Cloth_Grab_Default_InteractorName",
+        "SourceString": "衣服",
+        "LocalizedString": "衣服"
+      },
+      "CustombCalcLocByInteractPoint": true,
+      "CustomInteractPointCompName": "InteractorPoint",
+      "SecondTypeName": "衣服",
+      "bSetMobilityOnFirstRendered": true,
+      "PrimaryActorTick": {
+        "TickInterval": 0.1
+      }
+    }
+  },
+  {
+    "package": "DeltaForce/Content/BluePrints/Interact/BP_InteractorContainer_ToolCabinetLarge.uasset",
+    "name": "Default__BP_InteractorContainer_ToolCabinetLarge_C",
+    "properties": {
+      "Loot容器分类": "EnumLootBoxType::NewEnumerator33",
+      "掉落等级": "EnumLootLevel::NewEnumerator2",
+      "唯一性": "工具柜1",
+      "BoxID": 936,
+      "BoxLevel": 1,
+      "CapacityWidth": 6,
+      "OpeningAudioEvent": {
+        "ObjectName": "GPAudioEventAsset'Container_Drawer_Open'",
+        "ObjectPath": "DeltaForce/Content/WwiseAudio/GPEvents/Objects/Interactive_Objects/Container_Basic/Container_Drawer_Open.0"
+      },
+      "HolidayEventIDArray": [
+        11410020,
+        11410027,
+        11410030
+      ],
+      "InterlayerOpenBoxClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_InteractorContainer_ToolCabinetLarge_Interlayer_C'",
+        "ObjectPath": "DeltaForce/Content/BluePrints/Interact/BP_InteractorContainer_ToolCabinetLarge_Interlayer.0"
+      },
+      "bScanableInNatural": true,
+      "RepItemArray": {
+        "DeltaFlags": "EFastArraySerializerDeltaFlags::HasBeenSerialized"
+      },
+      "BaseItemSearchTime": 0.75,
+      "LootAudioType": "EPickupContainerLootAudioType::Metal",
+      "InventoryIdName": "99010000039",
+      "InteractorName": {
+        "TableId": "/Game/StringTables/STForMaps/Common/Base/LOC_MAPS_OtherBP.LOC_MAPS_OtherBP",
+        "Key": "BP_InteractorContainer_ToolCabinetLarge_Default_InteractorName",
+        "SourceString": "工具柜",
+        "LocalizedString": "工具柜"
+      },
+      "GlowParameters": {
+        "HlightLightSpace": 28.0,
+        "Speed": 0.85
+      },
+      "SecondTypeName": "工具柜",
+      "PrimaryActorTick": {
+        "TickInterval": 0.1
+      }
+    }
+  },
+  {
+    "package": "DeltaForce/Content/BluePrints/Interact/SingleItemContainer/BP_Interactor_SingleItemContainer_WeaponBox.uasset",
+    "name": "Default__BP_Interactor_SingleItemContainer_WeaponBox_C",
+    "properties": {
+      "Loot容器分类": "EnumLootBoxType::NewEnumerator5",
+      "掉落等级": "EnumLootLevel::NewEnumerator1",
+      "BoxID": 908,
+      "CachedSpotNames": [
+        "Scene"
+      ],
+      "SIContainerType": "ESingleItemContainerType::SIContainer_WeaponBox",
+      "AimBoxesArray": [
+        {
+          "AimBoxes": [
+            {
+              "AimBoxName": "AimBox",
+              "CachedAimBox": null,
+              "OpenLoc": {
+                "X": 0.0,
+                "Y": -17.0,
+                "Z": 59.0
+              },
+              "OpenRot": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": -60.0
+              },
+              "ClosedLoc": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 35.0
+              },
+              "ClosedRot": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            }
+          ],
+          "OpenedInteractPointName": "OpenedInteracctPoint",
+          "CachedOpenedInteractPoint": null,
+          "ClosedInteractPointName": "ClosedInteracctPoint",
+          "CachedClosedInteractPoint": null
+        }
+      ],
+      "bUseAimBoxInitSetPhysics": true,
+      "InteractorName": {
+        "TableId": "/Game/StringTables/STForMaps/Common/Base/LOC_MAPS_OtherBP.LOC_MAPS_OtherBP",
+        "Key": "BP_Interactor_SingleItemContainer_WeaponBox_Default_InteractorName",
+        "SourceString": "武器箱",
+        "LocalizedString": "武器箱"
+      },
+      "CustombIsNeedInteractPointForward_Mobile": false,
+      "CustomButtonSoftIcon_Mobile": {
+        "AssetPathName": "/Game/UI/UIAtlas/Common/BakedSprite/Common_De_Unkown.Common_De_Unkown",
+        "SubPathString": ""
+      },
+      "SecondTypeName": "武器箱"
+    }
+  }
+]

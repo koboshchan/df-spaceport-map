@@ -1,0 +1,27 @@
+{
+  "id": "m_7be7c5a0eb9b5a00",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Commercial/Resort/SM_M_Commercial_Resort_Curtain_09b.SM_M_Commercial_Resort_Curtain_09b",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Commercial\\Resort\\SM_M_Commercial_Resort_Curtain_09b.glb",
+  "sourceSHA256": "07397A869F5F00A0ED7456CEA27B8FD3E70B9BF5CFDEE6DAA2329BC78329E4EF",
+  "model": "models/df_v24/m_7be7c5a0eb9b5a00.vmdl",
+  "materials": {
+    "mat_2b351aec56aeadf3": "DeltaForce/Content/Environment/Props/Morocco/Commercial/00_Materials/HD/MI_M_Commercial_Resort_Curtain_09b_HD.MI_M_Commercial_Resort_Curtain_09b_HD",
+    "mat_8092edd03d664354": "DeltaForce/Content/Environment/Props/Morocco/Commercial/00_Materials/HD/MI_M_Commercial_Resort_Curtain_09a_HD.MI_M_Commercial_Resort_Curtain_09a_HD"
+  },
+  "vertices": 8925,
+  "polygons": 15000,
+  "bounds": [
+    [
+      -2.1897554688621312e-05,
+      -6.098939895629883,
+      1.4369051456451416
+    ],
+    [
+      83.04490661621094,
+      5.795065402984619,
+      161.47357177734375
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

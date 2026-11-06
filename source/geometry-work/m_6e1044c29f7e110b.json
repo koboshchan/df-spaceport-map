@@ -1,0 +1,26 @@
+{
+  "id": "m_6e1044c29f7e110b",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Commercial/Resort/SM_H_Commercial_Resort_Umbrella_01.SM_H_Commercial_Resort_Umbrella_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Commercial\\Resort\\SM_H_Commercial_Resort_Umbrella_01.glb",
+  "sourceSHA256": "E2111791BDB33640A194609D217A674A0AEAD94979E3BA24095D1C7C17FF2490",
+  "model": "models/df_v24/m_6e1044c29f7e110b.vmdl",
+  "materials": {
+    "mat_afd80b3140834513": "DeltaForce/Content/Environment/Props/HAAVK/Commercial/Resort/00_Materials/HD/MI_H_Commercial_Resort_Umbrella_01_HD.MI_H_Commercial_Resort_Umbrella_01_HD"
+  },
+  "vertices": 5052,
+  "polygons": 6235,
+  "bounds": [
+    [
+      -21.448246002197266,
+      -21.90119171142578,
+      -3.433227391269611e-07
+    ],
+    [
+      19.175575256347656,
+      18.920658111572266,
+      131.11944580078125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "m_f149e28d4f0b3b25",
+  "objectPath": "DeltaForce/Content/Effects/Common/Mesh/Other/Outers_1u_Mesh/SM_EFX_WeiLong_Jin_Debri_01.SM_EFX_WeiLong_Jin_Debri_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Effects\\Common\\Mesh\\Other\\Outers_1u_Mesh\\SM_EFX_WeiLong_Jin_Debri_01.glb",
+  "sourceSHA256": "8392E9B0EECACC47048557D743FEE5AB2950AA57E6D9E6AED2493C613BC264DC",
+  "model": "models/df_v24/m_f149e28d4f0b3b25.vmdl",
+  "materials": {
+    "mat_87fa7d325eb743c4": "Engine/Content/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+  },
+  "vertices": 57,
+  "polygons": 40,
+  "bounds": [
+    [
+      -0.9359776973724365,
+      -0.020632905885577202,
+      -1.602457046508789
+    ],
+    [
+      0.9359778165817261,
+      0.020632904022932053,
+      1.6024571657180786
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

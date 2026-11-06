@@ -1,0 +1,26 @@
+{
+  "id": "m_47f1dbd90776f993",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Commercial/Kitchen/SM_M_Residential_Kitchen_CuttingBoard_01.SM_M_Residential_Kitchen_CuttingBoard_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Commercial\\Kitchen\\SM_M_Residential_Kitchen_CuttingBoard_01.glb",
+  "sourceSHA256": "B762FD3637DD7505C65159C19F1D5D1E1D78200733235B15B04C5EC33AD0D786",
+  "model": "models/df_v24/m_47f1dbd90776f993.vmdl",
+  "materials": {
+    "mat_930451001b14bc38": "DeltaForce/Content/Environment/Props/Morocco/Commercial/00_Materials/HD/MI_M_Residential_Kitchen_CuttingBoard_01_HD.MI_M_Residential_Kitchen_CuttingBoard_01_HD"
+  },
+  "vertices": 964,
+  "polygons": 1244,
+  "bounds": [
+    [
+      -10.796778678894043,
+      -6.877219200134277,
+      -0.00010778188880067319
+    ],
+    [
+      10.796777725219727,
+      6.877220153808594,
+      1.6863820552825928
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

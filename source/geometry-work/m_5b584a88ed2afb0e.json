@@ -1,0 +1,26 @@
+{
+  "id": "m_5b584a88ed2afb0e",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Government/Utility/SM_M_Government_Utility_FireAlarm_01.SM_M_Government_Utility_FireAlarm_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Government\\Utility\\SM_M_Government_Utility_FireAlarm_01.glb",
+  "sourceSHA256": "CEBCB820592EFA05D94BCC02D9794078EDCFCB3BDBC949EA0D407DB1FA1C8003",
+  "model": "models/df_v24/m_5b584a88ed2afb0e.vmdl",
+  "materials": {
+    "mat_2a3420f96be3d8e2": "DeltaForce/Content/Environment/Props/Morocco/Government/Utility/00_Materials/HD/MI_M_Government_Utility_FireAlarm_01_HD.MI_M_Government_Utility_FireAlarm_01_HD"
+  },
+  "vertices": 212,
+  "polygons": 238,
+  "bounds": [
+    [
+      -2.57464599609375,
+      -3.2904226779937744,
+      -2.5746376514434814
+    ],
+    [
+      2.57464599609375,
+      1.0398225429586054e-16,
+      2.574620246887207
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

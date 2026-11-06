@@ -1,0 +1,26 @@
+{
+  "id": "m_c009b405e45240b5",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Nature_HD/MiddleStone_HD/SM_Nature_Rock_Medium_Rock_20_HD.SM_Nature_Rock_Medium_Rock_20_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Nature_HD\\MiddleStone_HD\\SM_Nature_Rock_Medium_Rock_20_HD.glb",
+  "sourceSHA256": "BC782F6D82C1EE7AC041783F261FC6FDB957BC8301DA7357071908205088846D",
+  "model": "models/df_v24/m_c009b405e45240b5.vmdl",
+  "materials": {
+    "mat_07c521b0d76d6ba1": "DeltaForce/Content/Environment/Biome/Nature_HD/Rocks_HD/00_Materials/MI_Nature_Rock_Medium_Rock_20_HD.MI_Nature_Rock_Medium_Rock_20_HD"
+  },
+  "vertices": 1587,
+  "polygons": 2704,
+  "bounds": [
+    [
+      -53.821495056152344,
+      -55.91975021362305,
+      -32.06877136230469
+    ],
+    [
+      53.82146453857422,
+      55.91973876953125,
+      32.06875991821289
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

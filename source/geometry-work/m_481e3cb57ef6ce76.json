@@ -1,0 +1,30 @@
+{
+  "id": "m_481e3cb57ef6ce76",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech_Ma1/SM_H_Props_FutureTech_Helicopter_01.SM_H_Props_FutureTech_Helicopter_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech_Ma1\\SM_H_Props_FutureTech_Helicopter_01.glb",
+  "sourceSHA256": "84F7815DFC0786201184FE6ABCA2ADD6D7D2F55FE16DC129E42B30EBCA41F69A",
+  "model": "models/df_v24/m_481e3cb57ef6ce76.vmdl",
+  "materials": {
+    "mat_7e1da9bfb5e484f8": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech_Ma1/00_Materials/HD/MI_H_Building_FutureTech_Helicopter_01_HD.MI_H_Building_FutureTech_Helicopter_01_HD",
+    "mat_b71621a021f67145": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech_Ma1/00_Materials/HD/MI_H_Building_FutureTech_Helicopter_01_Inside_HD.MI_H_Building_FutureTech_Helicopter_01_Inside_HD",
+    "mat_aa1f347a2226362e": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech_Ma1/00_Materials/HD/MI_H_Building_FutureTech_Helicopter_01_Missile_HD.MI_H_Building_FutureTech_Helicopter_01_Missile_HD",
+    "mat_5f207d12f11ec59f": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech_Ma1/00_Materials/HD/MI_H_Building_FutureTech_Helicopter_01_Weapon_a_HD.MI_H_Building_FutureTech_Helicopter_01_Weapon_a_HD",
+    "mat_192be134928f1897": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech_Ma1/00_Materials/HD/MI_H_Building_FutureTech_Helicopter_01_Weapon_b_HD.MI_H_Building_FutureTech_Helicopter_01_Weapon_b_HD"
+  },
+  "vertices": 23710,
+  "polygons": 20254,
+  "bounds": [
+    [
+      -299.80865478515625,
+      -206.0882568359375,
+      0.6063381433486938
+    ],
+    [
+      291.0849609375,
+      204.94100952148438,
+      216.41635131835938
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

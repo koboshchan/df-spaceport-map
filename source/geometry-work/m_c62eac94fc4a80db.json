@@ -1,0 +1,30 @@
+{
+  "id": "m_c62eac94fc4a80db",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_ToolHouse_01_InterWall_01.SM_H_Building_FutureTech_ToolHouse_01_InterWall_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_ToolHouse_01_InterWall_01.glb",
+  "sourceSHA256": "5C8BDEDF9B0343E2406BEE5F3D8087D07B36DC803482AFA4BE95D3076984A5FC",
+  "model": "models/df_v24/m_c62eac94fc4a80db.vmdl",
+  "materials": {
+    "mat_38b39ab9bd6e8fae": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_03_HD.MI_GEN_Metal_Painting_03_HD",
+    "mat_d783b614f1783cff": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_01_HD.MI_GEN_Metal_Painting_01_HD",
+    "mat_95ddda55345ba7e6": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Concrete_Rough_01_HD.MI_GEN_Concrete_Rough_01_HD",
+    "mat_f5f6a4bc7cf71b80": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Concrete_Checkred_02_HD.MI_GEN_Concrete_Checkred_02_HD",
+    "mat_da8c4ccd423f7b47": "DeltaForce/Content/Environment/Decal/Traffic/00_Materials/MI_I_Traffic_Decal_03_HD.MI_I_Traffic_Decal_03_HD"
+  },
+  "vertices": 4425,
+  "polygons": 3672,
+  "bounds": [
+    [
+      3.7584447860717773,
+      -598.4498901367188,
+      -6.341232776641846
+    ],
+    [
+      643.5908203125,
+      -21.75445556640625,
+      181.85934448242188
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

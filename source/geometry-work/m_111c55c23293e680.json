@@ -1,0 +1,31 @@
+{
+  "id": "m_111c55c23293e680",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_WatchTower_01c.SM_H_Building_FutureTech_WatchTower_01c",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_WatchTower_01c.glb",
+  "sourceSHA256": "E0009EB8B45BEBA3F752387AB119EE4D3C9D1BB1E764100EEEA99EAD383A8825",
+  "model": "models/df_v24/m_111c55c23293e680.vmdl",
+  "materials": {
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_e64c75564598dea4": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_WatchTower_01_01_HD.MI_H_Building_FutureTech_WatchTower_01_01_HD",
+    "mat_8b5d279a6d2e73a7": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_D_HD.MI_I_WalkwaySystem_MetalFloor_01_D_HD",
+    "mat_7c9fd56c8f9b482a": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Concrete_Smooth_01_HD.MI_GEN_Concrete_Smooth_01_HD",
+    "mat_0a6904cc74e0ac7d": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_HBoss_01_InterWall_01_HD.MI_H_Building_FutureTech_HBoss_01_InterWall_01_HD",
+    "mat_3f2ed2c36d985dc9": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_01B_HD.MI_GEN_Metal_Painting_01B_HD"
+  },
+  "vertices": 13826,
+  "polygons": 8519,
+  "bounds": [
+    [
+      233.2118377685547,
+      -475.07110595703125,
+      -60.059349060058594
+    ],
+    [
+      478.8324279785156,
+      191.70895385742188,
+      1246.5321044921875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

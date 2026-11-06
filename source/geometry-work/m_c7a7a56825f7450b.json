@@ -1,0 +1,27 @@
+{
+  "id": "m_c7a7a56825f7450b",
+  "objectPath": "DeltaForce/Content/Models/Props/Collect/Prop_Collect_RedMandel_1475/Prop_Collect_RedMandel_1475_UI.Prop_Collect_RedMandel_1475_UI",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Props\\Collect\\Prop_Collect_RedMandel_1475\\Prop_Collect_RedMandel_1475_UI.glb",
+  "sourceSHA256": "641C5FF7D9B6EB8D4C29951CA496BA72A225680E4C020793FCA357E3EB85F36C",
+  "model": "models/df_v24/m_c7a7a56825f7450b.vmdl",
+  "materials": {
+    "mat_b9b674e40be13010": "DeltaForce/Content/Models/Props/Collect/Prop_Collect_RedMandel_1475/Material/Prop_Collect_RedMandel_1475_01.Prop_Collect_RedMandel_1475_01",
+    "mat_917202fa2a809f7f": "DeltaForce/Content/Models/Props/Collect/Prop_Collect_RedMandel_1475/Material/Prop_Collect_RedMandel_1475_02.Prop_Collect_RedMandel_1475_02"
+  },
+  "vertices": 7232,
+  "polygons": 6517,
+  "bounds": [
+    [
+      -1.540704607963562,
+      -0.9216302633285522,
+      -0.18869733810424805
+    ],
+    [
+      1.540705680847168,
+      1.7782785892486572,
+      7.3172454833984375
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

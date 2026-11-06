@@ -1,0 +1,27 @@
+{
+  "id": "m_4f45e7a82378f104",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Transport/Utility/SM_H_Transport_Utility_Barriers_01_D.SM_H_Transport_Utility_Barriers_01_D",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Transport\\Utility\\SM_H_Transport_Utility_Barriers_01_D.glb",
+  "sourceSHA256": "56B82E3E2073DC14E7874A12952A3208031F4E12544E3B1708B1FF6F1839F028",
+  "model": "models/df_v24/m_4f45e7a82378f104.vmdl",
+  "materials": {
+    "mat_075c790042473d49": "DeltaForce/Content/Environment/Props/HAAVK/Transport/Utility/00_Materials/HD/MI_H_Transport_Utility_Barriers_01_HD.MI_H_Transport_Utility_Barriers_01_HD",
+    "mat_a67b28d28e36cf00": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/00_Materials/HD/MI_H_Government_Office_CoffeeMachine_01A_HD.MI_H_Government_Office_CoffeeMachine_01A_HD"
+  },
+  "vertices": 3034,
+  "polygons": 2810,
+  "bounds": [
+    [
+      -1.6479491023346782e-05,
+      -68.55996704101562,
+      -5.149840944795869e-07
+    ],
+    [
+      160.7307891845703,
+      0.009341125376522541,
+      5.043820381164551
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

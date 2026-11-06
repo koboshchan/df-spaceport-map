@@ -1,0 +1,26 @@
+{
+  "id": "m_c87dd26e2604d2d4",
+  "objectPath": "DeltaForce/Content/Models/Equipments_HD/Heads_HD/M_Head_Head_Helmet_HAAVK_106_HD/M_Head_Head_Helmet_HAAVK_106_LAY_HD.M_Head_Head_Helmet_HAAVK_106_LAY_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Equipments_HD\\Heads_HD\\M_Head_Head_Helmet_HAAVK_106_HD\\M_Head_Head_Helmet_HAAVK_106_LAY_HD.glb",
+  "sourceSHA256": "21BE58775B51BE52975842D22EBE950CCD7F021F1490A98E082573294C1E8B23",
+  "model": "models/df_v24/m_c87dd26e2604d2d4.vmdl",
+  "materials": {
+    "mat_ba441de92308ff88": "DeltaForce/Content/Models/Equipments_HD/Heads_HD/M_Head_Head_Helmet_HAAVK_106_HD/Materials/M_Head_Head_Helmet_HAAVK_093_b_HD.M_Head_Head_Helmet_HAAVK_093_b_HD"
+  },
+  "vertices": 4219,
+  "polygons": 4992,
+  "bounds": [
+    [
+      -4.697530269622803,
+      -5.396049499511719,
+      -0.018221668899059296
+    ],
+    [
+      4.856166839599609,
+      5.956853866577148,
+      8.86463451385498
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

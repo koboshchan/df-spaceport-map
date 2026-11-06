@@ -1,0 +1,26 @@
+{
+  "id": "m_cd9a25edeaf365ad",
+  "objectPath": "DeltaForce/Content/Models/Vehicles/Heli_Blackhawk2035/Appearance_Base/Damaged/carrier_heli_Blackhawk_damaged_3P.carrier_heli_Blackhawk_damaged_3P",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Vehicles\\Heli_Blackhawk2035\\Appearance_Base\\Damaged\\carrier_heli_Blackhawk_damaged_3P.glb",
+  "sourceSHA256": "6F07731E2F4160A075510ADE72109BC14D5E1A1B0CEA7F30AE5428A47A3279C0",
+  "model": "models/df_v24/m_cd9a25edeaf365ad.vmdl",
+  "materials": {
+    "mat_fc17e8944066e76d": "DeltaForce/Content/Models/Vehicles/Heli_Blackhawk2035/Appearance_Base/Damaged/Materials/carrier_heli_Blackhawk_damaged_01.carrier_heli_Blackhawk_damaged_01"
+  },
+  "vertices": 31598,
+  "polygons": 28105,
+  "bounds": [
+    [
+      -252.74301147460938,
+      -176.72412109375,
+      0.9176989793777466
+    ],
+    [
+      172.82623291015625,
+      160.86505126953125,
+      143.72471618652344
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

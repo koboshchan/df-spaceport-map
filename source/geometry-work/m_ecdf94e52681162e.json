@@ -1,0 +1,27 @@
+{
+  "id": "m_ecdf94e52681162e",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Transport_Utility_ParkingShed_02.SM_H_Transport_Utility_ParkingShed_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Transport_Utility_ParkingShed_02.glb",
+  "sourceSHA256": "3B834CA1A4172220E69224CD43E504B11DC245FD5C1B1545D1F718A664A862FC",
+  "model": "models/df_v24/m_ecdf94e52681162e.vmdl",
+  "materials": {
+    "mat_0798211792b1fd90": "DeltaForce/Content/Environment/Props/HAAVK/Transport/Utility/00_Materials/HD/MI_H_Transport_Utility_ParkingShed_01C_HD.MI_H_Transport_Utility_ParkingShed_01C_HD",
+    "mat_6feeb38497aa84ed": "DeltaForce/Content/Environment/Props/HAAVK/Transport/Utility/00_Materials/HD/MI_H_Transport_Utility_ParkingShed_01B_HD.MI_H_Transport_Utility_ParkingShed_01B_HD"
+  },
+  "vertices": 23831,
+  "polygons": 29646,
+  "bounds": [
+    [
+      -24.119142532348633,
+      -632.8724365234375,
+      0.01779785007238388
+    ],
+    [
+      300.66571044921875,
+      93.88499450683594,
+      127.87446594238281
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

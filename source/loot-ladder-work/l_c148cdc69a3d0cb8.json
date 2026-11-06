@@ -1,0 +1,28 @@
+{
+  "canonical": "props_Container_ArknightsSupplies_1246_3P",
+  "state": "closed",
+  "id": "l_c148cdc69a3d0cb8",
+  "objectPath": "DeltaForce/Content/Models/Props/container/props_Container_ArknightsSupplies_1246/props_Container_ArknightsSupplies_1246_3P.uasset|closed",
+  "source": "E:\\df-extract-20261105\\loot-skeletal\\static-paired-v3\\props_Container_ArknightsSupplies_1246_3P\\closed.glb",
+  "sourceSHA256": "50e4dc0de5d9a075b9a1fe89d808b61dc12ffe2e4ab4400350a06b97315c7492",
+  "model": "models/df_v24/l_c148cdc69a3d0cb8.vmdl",
+  "materials": {
+    "mat_2173d0c8b45fc13d": "DeltaForce/Content/Models/Props/container/props_Container_ArknightsSupplies_1246/Materials/props_Container_ArknightsSupplies_1246.props_Container_ArknightsSupplies_1246"
+  },
+  "vertices": 1734,
+  "polygons": 1206,
+  "bounds": [
+    [
+      -10.86275863647461,
+      -11.656143188476562,
+      0.1215587928891182
+    ],
+    [
+      10.86275863647461,
+      3.7656490802764893,
+      3.7940449714660645
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

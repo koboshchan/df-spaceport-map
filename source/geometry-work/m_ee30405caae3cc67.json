@@ -1,0 +1,26 @@
+{
+  "id": "m_ee30405caae3cc67",
+  "objectPath": "DeltaForce/Content/Environment/Structures/Morocco/Decal/Generic/SM_Decal_Generic_07.SM_Decal_Generic_07",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\Morocco\\Decal\\Generic\\SM_Decal_Generic_07.glb",
+  "sourceSHA256": "DD64CA6E8B93566B9BBECAFCACA3E1E006A4924BDA16BE069BE4E500F3BEA15D",
+  "model": "models/df_v24/m_ee30405caae3cc67.vmdl",
+  "materials": {
+    "mat_a4e8eeb481975b22": "DeltaForce/Content/Environment/Structures/Morocco/Decal/Generic/00_Materials/HD/MI_Decal_Generic_07_HD.MI_Decal_Generic_07_HD"
+  },
+  "vertices": 6,
+  "polygons": 4,
+  "bounds": [
+    [
+      -16.248924255371094,
+      -1.9412256733630784e-05,
+      -7.298335612616209e-22
+    ],
+    [
+      16.24892234802246,
+      -1.1919086318812333e-05,
+      64.61746978759766
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

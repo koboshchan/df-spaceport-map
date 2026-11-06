@@ -1,0 +1,28 @@
+{
+  "id": "m_f2ef0cae242557fc",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/SM_H_FutureTech_ISS_Engine_01.SM_H_FutureTech_ISS_Engine_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\SM_H_FutureTech_ISS_Engine_01.glb",
+  "sourceSHA256": "8FD829317E159493CAF5A0EE5FEC3F01DA166862803092681F36EF1734F58231",
+  "model": "models/df_v24/m_f2ef0cae242557fc.vmdl",
+  "materials": {
+    "mat_65a654b71a70bdc6": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_ISS_Engine_01_02_HD.MI_H_FutureTech_ISS_Engine_01_02_HD",
+    "mat_13294f3bb3aaeb3c": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_ISS_Engine_01_03_HD.MI_H_FutureTech_ISS_Engine_01_03_HD",
+    "mat_f43d27a15dbc682d": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_ISS_Engine_01_01_HD.MI_H_FutureTech_ISS_Engine_01_01_HD"
+  },
+  "vertices": 35480,
+  "polygons": 43868,
+  "bounds": [
+    [
+      -52.30772018432617,
+      -60.63523864746094,
+      2.9150047339498997e-05
+    ],
+    [
+      52.307708740234375,
+      51.73411178588867,
+      166.1876220703125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

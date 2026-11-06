@@ -1,0 +1,29 @@
+{
+  "canonical": "extension_props_container_Locker_797_3P",
+  "state": "opened",
+  "id": "l_2c2de677ccf68a65",
+  "objectPath": "DeltaForce/Content/Models/SceneObjects/props_container_Locker_797/props_container_Locker_797_3P.uasset|opened",
+  "source": "E:\\df-v24-build-20261106\\loot-ladder-work\\extension-static\\props_container_Locker_797_3P-58c7d9ac.glb",
+  "sourceSHA256": "1ac89b1affe955109f5d6e236ff55a1e8b499e14aab2e5066d050c0413cb225c",
+  "model": "models/df_v24/l_2c2de677ccf68a65.vmdl",
+  "materials": {
+    "mat_4381b6b45fd726cc": "DeltaForce/Content/Models/Props/Collect/props_container_Locker_797/Materials/props_container_Locker_797.props_container_Locker_797",
+    "mat_cc0fd5c1d90cb274": "DeltaForce/Content/Models/Props/Collect/props_container_Locker_797/Materials/props_container_Locker_797_02.props_container_Locker_797_02"
+  },
+  "vertices": 2218,
+  "polygons": 1560,
+  "bounds": [
+    [
+      -15.71815013885498,
+      -44.85875701904297,
+      -0.8507813215255737
+    ],
+    [
+      15.722515106201172,
+      16.82745361328125,
+      89.8670425415039
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

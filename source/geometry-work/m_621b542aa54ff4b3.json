@@ -1,0 +1,28 @@
+{
+  "id": "m_621b542aa54ff4b3",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/SM_I_RoadFacility_Ground_L_10_RuinE_02.SM_I_RoadFacility_Ground_L_10_RuinE_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter_Ma1\\SM_I_RoadFacility_Ground_L_10_RuinE_02.glb",
+  "sourceSHA256": "3FBFE25580E016135DC3092123E60548034E5E328E014F8D5A8F1E8FD1851ED1",
+  "model": "models/df_v24/m_621b542aa54ff4b3.vmdl",
+  "materials": {
+    "mat_15be363cd864f489": "DeltaForce/Content/Environment/Structures/HAAVK/Pipeline/00_Materials/HD/MI_H_PipeLine_02_HD.MI_H_PipeLine_02_HD",
+    "mat_310b7b8db77e63b8": "DeltaForce/Content/Environment/Structures/City/RoadFacility/Collapse/Bridge/00_Materials/HD/MI_C_RoadFacility_Collapse_Bridge_Pipeline_01B_HD.MI_C_RoadFacility_Collapse_Bridge_Pipeline_01B_HD",
+    "mat_1824b171397cbc6d": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Continuous_Rubber_01a_HD.MI_H_FutureTech_Continuous_Rubber_01a_HD"
+  },
+  "vertices": 12867,
+  "polygons": 11467,
+  "bounds": [
+    [
+      -245.17172241210938,
+      1256.25244140625,
+      -435.07012939453125
+    ],
+    [
+      282.4279479980469,
+      1709.5166015625,
+      -88.60871124267578
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

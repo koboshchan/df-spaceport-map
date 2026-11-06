@@ -1,0 +1,27 @@
+{
+  "id": "m_9506371402ef669c",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/SM_H_FutureTech_Fencing_01_05.SM_H_FutureTech_Fencing_01_05",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\SM_H_FutureTech_Fencing_01_05.glb",
+  "sourceSHA256": "4987AB6BAC842439CCFE7359E72FDB6347636776748DD1584E59DD84EE0B362D",
+  "model": "models/df_v24/m_9506371402ef669c.vmdl",
+  "materials": {
+    "mat_bdad21a2b864908d": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Fencing_01_A_HD.MI_H_FutureTech_Fencing_01_A_HD",
+    "mat_70d89f09d13b2ebc": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Fencing_01_C_HD.MI_H_FutureTech_Fencing_01_C_HD"
+  },
+  "vertices": 4991,
+  "polygons": 5348,
+  "bounds": [
+    [
+      -4.582536220550537,
+      -67.57859802246094,
+      6.048911473044427e-06
+    ],
+    [
+      2.9945900440216064,
+      59.67565155029297,
+      189.01210021972656
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

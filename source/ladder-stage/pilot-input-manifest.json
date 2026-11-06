@@ -1,0 +1,19 @@
+{
+  "input": "E:\\df-v25-build-20261106\\ladder-stage\\df_v25_native_ladder_pilot.vmap",
+  "sha256": "92cc1c5465726a0a4480825500ae787b49a32c4cd6fc66206778fc7e916804be",
+  "sourceLadder": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Gameplay/Gameplay_x26_y18_0.Gameplay_x26_y18_0:PersistentLevel.BP_Interactor_ClimbLadder_TemplateNew2_2",
+  "nativeFrontOnlyFace": true,
+  "wholeMapPromotionApproved": false,
+  "runtimeVerified": false,
+  "dependencies": [
+    "materials/tools/toolsinvisibleladder.vmat",
+    "materials/tools/toolsnodraw.vmat"
+  ],
+  "proposal": "central copies VMAP to isolated content/kat/maps; RC -i INPUT -game ISOLATED_GAME -nop4 -fshallow -world -entities -phys -nobakedlighting; central sole RC owner",
+  "acceptance": [
+    "compiled world physics has ladder front surface only",
+    "side/back/top/bottom no ladder flag",
+    "player hull bottom approach/topout and rear rejection runtime later",
+    "preserve all 536 solid boxes separately; no broad rear clip"
+  ]
+}

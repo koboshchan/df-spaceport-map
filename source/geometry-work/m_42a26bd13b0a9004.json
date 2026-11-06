@@ -1,0 +1,32 @@
+{
+  "id": "m_42a26bd13b0a9004",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Branding/Screen/SM_H_Branding_Screen_Monitor_01D.SM_H_Branding_Screen_Monitor_01D",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Branding\\Screen\\SM_H_Branding_Screen_Monitor_01D.glb",
+  "sourceSHA256": "6981C513ACAF24F747A5148C9A3ECA5D8C9B49CC309915811CD6A3D45070CC65",
+  "model": "models/df_v24/m_42a26bd13b0a9004.vmdl",
+  "materials": {
+    "mat_c35f2bdd1bdff6fe": "DeltaForce/Content/Environment/Props/HAAVK/Branding/00_Materials/HD/MI_H_Branding_Screen_Monitor_01D_HD.MI_H_Branding_Screen_Monitor_01D_HD",
+    "mat_2e86a821bf36110d": "DeltaForce/Content/Effects_HD/Common_HD/MaterialInstance_HD/Brand_HD/MI_EFX_Brand_Line001.MI_EFX_Brand_Line001",
+    "mat_bf5b84a485251134": "DeltaForce/Content/Effects_HD/Common_HD/MaterialInstance_HD/Brand_HD/MI_EFX_Brand_Text_002.MI_EFX_Brand_Text_002",
+    "mat_18be6e3262081d1c": "DeltaForce/Content/Effects_HD/Common_HD/MaterialInstance_HD/Brand_HD/M_EFX_RandomQuad_004.M_EFX_RandomQuad_004",
+    "mat_597da69d024f8a7d": "DeltaForce/Content/Effects_HD/Common_HD/MaterialInstance_HD/Brand_HD/M_EFX_Spectrum_003.M_EFX_Spectrum_003",
+    "mat_f79af897d3de81ae": "DeltaForce/Content/Effects_HD/Common_HD/MaterialInstance_HD/Brand_HD/M_EFX_Spectrum_002.M_EFX_Spectrum_002",
+    "mat_bee61e343f28d8a9": "DeltaForce/Content/Effects_HD/Common_HD/MaterialInstance_HD/Brand_HD/M_EFX_Spectrum_001.M_EFX_Spectrum_001"
+  },
+  "vertices": 56,
+  "polygons": 28,
+  "bounds": [
+    [
+      -115.81158447265625,
+      -1.3537641763687134,
+      3.374082565307617
+    ],
+    [
+      115.81153869628906,
+      -0.9577372074127197,
+      102.36463928222656
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "m_b44ef135309c1c95",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/WalkwaySystem/SM_H_WalkwaySystem_MetalSupport_18.SM_H_WalkwaySystem_MetalSupport_18",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\WalkwaySystem\\SM_H_WalkwaySystem_MetalSupport_18.glb",
+  "sourceSHA256": "306712C254E9944B27F9A9D94C0C6B0D26DCADC05330EB63854FE8C544226F6E",
+  "model": "models/df_v24/m_b44ef135309c1c95.vmdl",
+  "materials": {
+    "mat_8b5d279a6d2e73a7": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_D_HD.MI_I_WalkwaySystem_MetalFloor_01_D_HD",
+    "mat_33602b4bfdc71367": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_C_HD.MI_I_WalkwaySystem_MetalFloor_01_C_HD"
+  },
+  "vertices": 30543,
+  "polygons": 20042,
+  "bounds": [
+    [
+      -602.0780029296875,
+      -404.1580810546875,
+      12.435842514038086
+    ],
+    [
+      603.2943115234375,
+      386.7236328125,
+      306.7571716308594
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

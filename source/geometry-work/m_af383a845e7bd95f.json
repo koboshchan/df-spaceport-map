@@ -1,0 +1,26 @@
+{
+  "id": "m_af383a845e7bd95f",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Door/Customiz/SM_H_Customiz_ExperimentalDoor_01_1024_Frame.SM_H_Customiz_ExperimentalDoor_01_1024_Frame",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Door\\Customiz\\SM_H_Customiz_ExperimentalDoor_01_1024_Frame.glb",
+  "sourceSHA256": "891BCC30B2554B0804BA3D9753E835DBC60BB136893DCC4794AEC21003072EA5",
+  "model": "models/df_v24/m_af383a845e7bd95f.vmdl",
+  "materials": {
+    "mat_0737726ba9c9d2ff": "DeltaForce/Content/Environment/Structures/HAAVK/Door/00_Materials/HD/MI_H_Customiz_ExperimentalDoor_01B_HD.MI_H_Customiz_ExperimentalDoor_01B_HD"
+  },
+  "vertices": 567,
+  "polygons": 518,
+  "bounds": [
+    [
+      -2.6955292224884033,
+      -7.42958927154541,
+      -2.3980574042070657e-06
+    ],
+    [
+      365.9444274902344,
+      17.0504093170166,
+      184.3199920654297
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

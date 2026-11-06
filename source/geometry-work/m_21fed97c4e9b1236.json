@@ -1,0 +1,26 @@
+{
+  "id": "m_21fed97c4e9b1236",
+  "objectPath": "DeltaForce/Content/BluePrints/Quests/Shape_Cylinder_ForCollision.Shape_Cylinder_ForCollision",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\BluePrints\\Quests\\Shape_Cylinder_ForCollision.glb",
+  "sourceSHA256": "2DCD982DC453AC2840920F721C8E9B7BD4A08F504777776B6041ED7349252F84",
+  "model": "models/df_v24/m_21fed97c4e9b1236.vmdl",
+  "materials": {
+    "mat_4a03f895908e3309": "DeltaForce/Content/Maps/TestMap/Level_Prototype/BSP_Resorce/LDMaterial/Base_LD_TriggerVolume.Base_LD_TriggerVolume"
+  },
+  "vertices": 100,
+  "polygons": 92,
+  "bounds": [
+    [
+      -18.017086029052734,
+      -17.998563766479492,
+      -18.002574920654297
+    ],
+    [
+      17.998781204223633,
+      17.99913787841797,
+      18.002294540405273
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

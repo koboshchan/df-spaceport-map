@@ -1,0 +1,26 @@
+{
+  "id": "m_4e473d92bf243a82",
+  "objectPath": "DeltaForce/Content/Environment/Props/Lighting/SM_Generic_Lighting_TableLamp_04.SM_Generic_Lighting_TableLamp_04",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Lighting\\SM_Generic_Lighting_TableLamp_04.glb",
+  "sourceSHA256": "5E54F4EDD7AE6D049A88FD4F5DEB6B9014FB99AC9F926C9AF1B723C12F3EC4A4",
+  "model": "models/df_v24/m_4e473d92bf243a82.vmdl",
+  "materials": {
+    "mat_cc64c797e359044d": "DeltaForce/Content/Environment/Props/Lighting/00_Materials/HD/MI_Generic_Lighting_TableLamp_04_HD.MI_Generic_Lighting_TableLamp_04_HD"
+  },
+  "vertices": 604,
+  "polygons": 764,
+  "bounds": [
+    [
+      -4.3437910079956055,
+      -4.3437910079956055,
+      -6.866454782539222e-07
+    ],
+    [
+      4.3437910079956055,
+      4.343791484832764,
+      17.95400047302246
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

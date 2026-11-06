@@ -1,0 +1,26 @@
+{
+  "id": "m_bdd54104cb5d2282",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/Robotic/SM_H_FutureTech_Robotic_Arm_03B.SM_H_FutureTech_Robotic_Arm_03B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\Robotic\\SM_H_FutureTech_Robotic_Arm_03B.glb",
+  "sourceSHA256": "12975C4689D95E600D0EB2FB97BBC90FFCEDB3FA6C0D62CADDAED896789EA7EE",
+  "model": "models/df_v24/m_bdd54104cb5d2282.vmdl",
+  "materials": {
+    "mat_3b2f7f796dcca531": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/Robotic/00_Materials/HD/MI_H_FutureTech_Robotic_Arm_03_HD.MI_H_FutureTech_Robotic_Arm_03_HD"
+  },
+  "vertices": 1506,
+  "polygons": 2445,
+  "bounds": [
+    [
+      -6.158544063568115,
+      -1.172960877418518,
+      -6.15533447265625
+    ],
+    [
+      42.43846893310547,
+      14.010811805725098,
+      47.62366485595703
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "m_67b3b496d705e206",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/SM_H_Industrial_Mechanical_MinorCrane_512_01.SM_H_Industrial_Mechanical_MinorCrane_512_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\Mechanical\\SM_H_Industrial_Mechanical_MinorCrane_512_01.glb",
+  "sourceSHA256": "E00EBC330593D122123C61EBAFAF3F0B935864E07535EC9713EBE6AF0B449A22",
+  "model": "models/df_v24/m_67b3b496d705e206.vmdl",
+  "materials": {
+    "mat_9e34fbf9a464e538": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/00_Materials/HD/MI_H_Industrial_Mechanical_MinorCrane_02_HD.MI_H_Industrial_Mechanical_MinorCrane_02_HD",
+    "mat_9cf0ee41d80ffb9d": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_02_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_02_Decal_HD"
+  },
+  "vertices": 988,
+  "polygons": 1156,
+  "bounds": [
+    [
+      2.214110645581968e-05,
+      -0.06416015326976776,
+      -2.197265530412551e-05
+    ],
+    [
+      184.32000732421875,
+      46.1441650390625,
+      46.080020904541016
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

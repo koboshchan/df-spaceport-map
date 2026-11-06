@@ -1,0 +1,28 @@
+{
+  "id": "m_84a2f0b40b068086",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/SM_I_RoadFacility_Ground_H_07B.SM_I_RoadFacility_Ground_H_07B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter\\SM_I_RoadFacility_Ground_H_07B.glb",
+  "sourceSHA256": "7A8538C0C27FC4C2D907203903959A36057160AAFF5122451DDCF0CA099AD0C5",
+  "model": "models/df_v24/m_84a2f0b40b068086.vmdl",
+  "materials": {
+    "mat_ebe2c68b91602cff": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Road_Decal_02_HD.MI_H_FutureTech_Road_Decal_02_HD",
+    "mat_b2cce2838c324de6": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Industrial/00_Materials/HD/MI_H_Building_Industrial_Posun_02_HD.MI_H_Building_Industrial_Posun_02_HD",
+    "mat_5c93c24fe8668312": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_DecalAlpha_01_HD.MI_H_Building_FutureTech_DecalAlpha_01_HD"
+  },
+  "vertices": 1424,
+  "polygons": 1660,
+  "bounds": [
+    [
+      -327.4273986816406,
+      -211.22181701660156,
+      -106.21417236328125
+    ],
+    [
+      327.3610534667969,
+      214.4373779296875,
+      94.409912109375
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

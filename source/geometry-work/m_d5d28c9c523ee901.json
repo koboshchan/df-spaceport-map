@@ -1,0 +1,28 @@
+{
+  "id": "m_d5d28c9c523ee901",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Road/SM_I_RoadFacility_Road_FlowerBed_01.SM_I_RoadFacility_Road_FlowerBed_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Road\\SM_I_RoadFacility_Road_FlowerBed_01.glb",
+  "sourceSHA256": "1A4025C16D8E162B99C233A28AA7924DC094C62958BE68F9301CD56A19480408",
+  "model": "models/df_v24/m_d5d28c9c523ee901.vmdl",
+  "materials": {
+    "mat_f746313e04e61e52": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/00_Materials/HD/MI_I_RoadFacility_Road_FlowerBed_01b_HD.MI_I_RoadFacility_Road_FlowerBed_01B_HD",
+    "mat_7438f8788f281326": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/00_Materials/HD/MI_I_RoadFacility_Road_FlowerBed_01_HD.MI_I_RoadFacility_Road_FlowerBed_01_HD",
+    "mat_389db5688a50652e": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_GEN_Grass_Base_01_HD.MI_GEN_Grass_Base_01_HD"
+  },
+  "vertices": 630,
+  "polygons": 532,
+  "bounds": [
+    [
+      -46.68142318725586,
+      -46.68142318725586,
+      -5.8357744216918945
+    ],
+    [
+      46.68142318725586,
+      46.68142318725586,
+      45.883766174316406
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

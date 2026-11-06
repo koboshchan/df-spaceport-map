@@ -1,0 +1,30 @@
+{
+  "frozen": true,
+  "files": {
+    "candidate-manifest.json": {
+      "sha256": "cfcb124b1d9dd8a1ba2c3b32a6ca090d4111708b7763b8c0ec7dc02c2e9b2e58",
+      "bytes": 812
+    },
+    "compiled-acceptance-requirements.json": {
+      "sha256": "eadc2b50f45bef4e2a46273e8cad03a08e7d15d16a785a3876b9ef0eafd2303e",
+      "bytes": 564
+    },
+    "dependency-closure.json": {
+      "sha256": "5e1fe5aec9e0ad68a0ff72f88bbea1baf850eb6dc56862adcf17c4603e57e2de",
+      "bytes": 1622
+    },
+    "df_v25_ladder_solids_candidate.vmap": {
+      "sha256": "00bd0a01d29f724e1627df1825ba84dc6326d2c6c47619bfb2cb48e6f5c3b99b",
+      "bytes": 6550396
+    },
+    "solid-world-boxes-proposal.json": {
+      "sha256": "fb1b2ef2ccc7a706423a2b169aa71222db4164dc1759a76193995f2e1f18d15e",
+      "bytes": 963628
+    },
+    "stage-world-solids-candidate.py": {
+      "sha256": "fea6563d7c2a0d02b9b035c2ec5d79c440e5f9e76598ab24359827f0c3137ad8",
+      "bytes": 4975
+    }
+  },
+  "policy": "no mutation without parent/central notification"
+}

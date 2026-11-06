@@ -1,0 +1,26 @@
+{
+  "id": "m_2175f9975dbe3b4e",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Terrain/Landmark/SM_Terrain_DesertFarValley_01.SM_Terrain_DesertFarValley_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Terrain\\Landmark\\SM_Terrain_DesertFarValley_01.glb",
+  "sourceSHA256": "BFEC7DA7E75668876A65AEECEE01304693EAD078532281E9CE0CDA7E12512FDE",
+  "model": "models/df_v24/m_2175f9975dbe3b4e.vmdl",
+  "materials": {
+    "mat_47b98a87e6ad1523": "DeltaForce/Content/Environment/Biome/Terrain_HD/Landmark_HD/00_Materials/MI_Terrain_DesertFarValley_01_HD.MI_Terrain_DesertFarValley_01_HD"
+  },
+  "vertices": 5020,
+  "polygons": 9952,
+  "bounds": [
+    [
+      -13913.1953125,
+      -13126.2607421875,
+      -94.94544982910156
+    ],
+    [
+      14012.80078125,
+      10598.7978515625,
+      6904.04736328125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

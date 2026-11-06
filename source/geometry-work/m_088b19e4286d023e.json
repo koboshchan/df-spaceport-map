@@ -1,0 +1,27 @@
+{
+  "id": "m_088b19e4286d023e",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/Lounge/SM_H_FutureTech_Furniture_FoodCans_01_B.SM_H_FutureTech_Furniture_FoodCans_01_B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\Lounge\\SM_H_FutureTech_Furniture_FoodCans_01_B.glb",
+  "sourceSHA256": "3BF7AFAAAF5FF33572846E94803EA6430FF7134222D2255C1F2DE109D688AA00",
+  "model": "models/df_v24/m_088b19e4286d023e.vmdl",
+  "materials": {
+    "mat_18e3d665c546ed47": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/Lounge/00_Materials/HD/MI_H_FutureTech_Furniture_FoodCans_02_HD.MI_H_FutureTech_Furniture_FoodCans_02_HD",
+    "mat_b9b3361011b76205": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/Lounge/00_Materials/HD/MI_H_FutureTech_Furniture_FoodCans_01_HD.MI_H_FutureTech_Furniture_FoodCans_01_HD"
+  },
+  "vertices": 798,
+  "polygons": 1012,
+  "bounds": [
+    [
+      -2.6827704906463623,
+      -2.6976795196533203,
+      9.613037036615424e-06
+    ],
+    [
+      2.681792736053467,
+      2.664588451385498,
+      8.0720853805542
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

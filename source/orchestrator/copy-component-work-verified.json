@@ -1,0 +1,231 @@
+{
+  "files": [
+    {
+      "path": "component-work\\__pycache__\\generate_vmap.cpython-312.pyc",
+      "bytes": 14439,
+      "sha256": "f83ce547cd52b0cb1d71ac8595512a1915a6ba1b359b7ee482dc76c1cd93c366"
+    },
+    {
+      "path": "component-work\\actor-component-append-receipt.json",
+      "bytes": 51051,
+      "sha256": "57abd58e6827ea55e9e08c22063d0b9e3b38117a24e7cc3b81ba56f06e6287a0"
+    },
+    {
+      "path": "component-work\\boss-collision569-source-row.json",
+      "bytes": 5169,
+      "sha256": "0098ab705b7f3a5f1bb022994b1864733a866b888f7d227fd02c13964bb513b4"
+    },
+    {
+      "path": "component-work\\boss-once-policy.json",
+      "bytes": 1517,
+      "sha256": "1e1a5e86bdde0e0a41905233f17582e17f645e93d04744e0ebdad2d0d88323ab"
+    },
+    {
+      "path": "component-work\\build-component-contract.py",
+      "bytes": 11,
+      "sha256": "4097889236a2af26c293033feb964c4cf118c0224e0d063fec0a89e9d0569ef2"
+    },
+    {
+      "path": "component-work\\component-manifest.json",
+      "bytes": 8828,
+      "sha256": "eb08c1df3be473af212db4fe3c36ae7da5f47db11104c28dc257e914b5b6b7b6"
+    },
+    {
+      "path": "component-work\\decomposition-receipt.json",
+      "bytes": 106883,
+      "sha256": "d64afd465d1c37d95bb6a21404e3a84a1af28306c1e6eb9f75f623c11c5684be"
+    },
+    {
+      "path": "component-work\\decomposition-worst-row-and-loot-zero.json",
+      "bytes": 4167,
+      "sha256": "4d6d553855fa42c7ea298ed473f9c60a09a5f69e7c7ba56f7f71bed0b532f00f"
+    },
+    {
+      "path": "component-work\\df-spawn-broad-index-candidates.json",
+      "bytes": 142,
+      "sha256": "0522d0476e9dd86616c2e59c1526d7c9da5d58b471e27c62f57d94036ff5967a"
+    },
+    {
+      "path": "component-work\\df-spawn-source-candidates.json",
+      "bytes": 134,
+      "sha256": "caa659a5361f8cdc3e2784d54d0d16a4f3a87e3854d80265172e3ca98518fd09"
+    },
+    {
+      "path": "component-work\\DFv24_ComponentPrepare.log",
+      "bytes": 41,
+      "sha256": "dfa447a033f2b541f8b200bb2e79447137368a10e28bc3b59c982e58d1070eed"
+    },
+    {
+      "path": "component-work\\DFv24_ComponentSmoke.log",
+      "bytes": 379,
+      "sha256": "38f98944f871ebf9a452e5404b17846b8ed3fffe417dd318d8b8fed58f8d7c52"
+    },
+    {
+      "path": "component-work\\door-exact-component-actions.json",
+      "bytes": 1816854,
+      "sha256": "515cb00d0aed83c41d7f67ed68bcaeb94c877548a8e36882f7211737f15399ac"
+    },
+    {
+      "path": "component-work\\exact-affine-bake-requests.json",
+      "bytes": 301645,
+      "sha256": "6dcfa5a12f18a80759d103234b8cf64beb7963ffb4803410b68615511bb58b41"
+    },
+    {
+      "path": "component-work\\final-combined-decomposed.jsonl",
+      "bytes": 162134264,
+      "sha256": "e664aec58e48c0dfa3d8d05e96815499774fef5842a5f0d5544e01fcd2ddfc95"
+    },
+    {
+      "path": "component-work\\final-combined-placement-receipt.json",
+      "bytes": 882,
+      "sha256": "00f369cf07a81edc93c4c57983492eb045db730329527bf2a0c173b1e772b8d0"
+    },
+    {
+      "path": "component-work\\final-combined-placements.jsonl",
+      "bytes": 146070445,
+      "sha256": "5663a9e3970228db68ee02fd5c43493fa8512083d64cee22322cc79d0c3c40fd"
+    },
+    {
+      "path": "component-work\\final-decomposition-receipt.json",
+      "bytes": 357,
+      "sha256": "ab0655ef358334375c5cd45ff08ba001b0a1b6b0b4a6a567ebd9d10cd1939f6a"
+    },
+    {
+      "path": "component-work\\final-decomposition.cmd",
+      "bytes": 221,
+      "sha256": "3e461175c2ec9a76112dda9a122a345f1ea0138a1e2e7c45bf0fd73cd4d7b810"
+    },
+    {
+      "path": "component-work\\final-decomposition.log",
+      "bytes": 25,
+      "sha256": "7996254fa466558e890a7be4643c54be171d39378227113370110268919e1ad7"
+    },
+    {
+      "path": "component-work\\final-vertex-precision-receipt.json",
+      "bytes": 274,
+      "sha256": "211be8e73cf419ba35ce98dea6665a5b47ad098e915ef8684f154c5942215fa3"
+    },
+    {
+      "path": "component-work\\final_decomposition.py",
+      "bytes": 1588,
+      "sha256": "521cf7d7195eebc118e76378dd153808023dad4f7848038ffed7b3aad3f5099c"
+    },
+    {
+      "path": "component-work\\full-generator.cmd",
+      "bytes": 371,
+      "sha256": "fb4e906c12299d2cd8f3ca513268e0a586b1581852bf034a7b472b8a957fff2b"
+    },
+    {
+      "path": "component-work\\full-generator.log",
+      "bytes": 35513,
+      "sha256": "fa75a33330158db7b9a7e7adbff1dc8a28da538d1740aee9445058d9ba03f154"
+    },
+    {
+      "path": "component-work\\full-uncompiled-basis-pending.report.json",
+      "bytes": 59687,
+      "sha256": "b5292ec19f0691182f98f7b057774e8a7dff2305bf8da3645745815f85718473"
+    },
+    {
+      "path": "component-work\\full-uncompiled-basis-pending.vmap",
+      "bytes": 51777609,
+      "sha256": "17bcb3e2dfe0730a6885ab1dd22c22cc206f47faa30c928b2eab33853e69942e"
+    },
+    {
+      "path": "component-work\\generate_vmap.py",
+      "bytes": 6979,
+      "sha256": "97dbabe453846fb990ddc403bd70f13cd05ccfa82368dd728c177c716ccb2fd8"
+    },
+    {
+      "path": "component-work\\generator-smoke-rows.json",
+      "bytes": 3522,
+      "sha256": "cd61e89e6f8661757349c6cbe0f890d4081f02cd8c37aa5e33141e85542b8b0f"
+    },
+    {
+      "path": "component-work\\generator-smoke.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "component-work\\generator-smoke.report.json",
+      "bytes": 410,
+      "sha256": "ec15b609705f19c581960ad64dbd3c5692802c7bfd0a536d6c9b0da6b94700df"
+    },
+    {
+      "path": "component-work\\generator-smoke.vmap",
+      "bytes": 4644,
+      "sha256": "22850f44b06a54c787ec26152e5608e869c25a4e07af4e4b7b49fd112de568b9"
+    },
+    {
+      "path": "component-work\\ladder-exact-collision-replacement-receipt.json",
+      "bytes": 5968,
+      "sha256": "6dae6af3f1f6c4176414f6106b057368892c92c15832290971b631650c25d00f"
+    },
+    {
+      "path": "component-work\\ladders-preserve.json",
+      "bytes": 4094609,
+      "sha256": "eb38c662c32ceb8410cdaa21354812e4822d27a36cfd1f4c500529878b7a3bc0"
+    },
+    {
+      "path": "component-work\\placement-rejections.json",
+      "bytes": 309,
+      "sha256": "ce033784b61362046aad669a5974d517e3225e8a3f0e8a7264073b867312279d"
+    },
+    {
+      "path": "component-work\\precision-affine-bake-requests.json",
+      "bytes": 5522,
+      "sha256": "60aa3fd95b3e8d494636021a700f407bdd2552f4ed1edcff0e593b2e7447c0bb"
+    },
+    {
+      "path": "component-work\\precision-merge-receipt.json",
+      "bytes": 892,
+      "sha256": "a4ec48793a770bb742c21cb4cc8eb0daea0d110022489dceebe620fca79e3323"
+    },
+    {
+      "path": "component-work\\prepare-placements.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "component-work\\prepare_placements.py",
+      "bytes": 1955,
+      "sha256": "b32573e23f3ca1dcfdc759fe5f29535f50d9f5810606398da01fa549da59d61c"
+    },
+    {
+      "path": "component-work\\selected-placements-decomposed.jsonl",
+      "bytes": 159346493,
+      "sha256": "04505be72b6ee6689285444fbcc98737ad2578078e0781caec970d16a3a299d4"
+    },
+    {
+      "path": "component-work\\selected-placements.jsonl",
+      "bytes": 145611332,
+      "sha256": "3b2bf70ee73d4ad27b8eddf343820ee64685b160dd483dc85896ec11a0bb96ae"
+    },
+    {
+      "path": "component-work\\smoke.cmd",
+      "bytes": 363,
+      "sha256": "18732007cbedd069bbfa5b4576f9181272c205a84317345eaf5f8274cb849edb"
+    },
+    {
+      "path": "component-work\\spawn-source-scan.log",
+      "bytes": 21,
+      "sha256": "789392d64a52e5ec151f722179bc7c7566e163ad546491df50e0966e7bb0c33f"
+    },
+    {
+      "path": "component-work\\spawn.cmd",
+      "bytes": 148,
+      "sha256": "297fe783c4ef262a5c15f04df412c05ee286b32922eb4902d477f71175b69cc1"
+    },
+    {
+      "path": "component-work\\spawn_scan.py",
+      "bytes": 703,
+      "sha256": "a2a046eb9bb42fb8c74bee572d4c056537a6fe3574a24a9b9cc7177af0dc8190"
+    },
+    {
+      "path": "component-work\\spline-remediation.json",
+      "bytes": 31701,
+      "sha256": "ea68c742c99c6c4c835fbd5b2f4f5e66956dad1d49ca5cc5330fa26c3af09cc0"
+    }
+  ],
+  "mismatches": [],
+  "success": true
+}

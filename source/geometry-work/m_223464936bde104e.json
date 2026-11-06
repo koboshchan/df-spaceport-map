@@ -1,0 +1,26 @@
+{
+  "id": "m_223464936bde104e",
+  "objectPath": "DeltaForce/Content/Effects/Common/Mesh/Rock/SM_EFX_Rock_02.SM_EFX_Rock_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Effects\\Common\\Mesh\\Rock\\SM_EFX_Rock_02.glb",
+  "sourceSHA256": "725F16D46DA60EAA5557A76392EBED61351FD5D5851D6E076CF020B73A0694A8",
+  "model": "models/df_v24/m_223464936bde104e.vmdl",
+  "materials": {
+    "mat_87fa7d325eb743c4": "Engine/Content/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+  },
+  "vertices": 100,
+  "polygons": 48,
+  "bounds": [
+    [
+      -3.516953468322754,
+      -4.164109230041504,
+      -3.5435218811035156
+    ],
+    [
+      3.516953468322754,
+      4.164109230041504,
+      3.5435218811035156
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

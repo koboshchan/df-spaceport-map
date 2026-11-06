@@ -1,0 +1,26 @@
+{
+  "id": "m_bad93a835ca2c1e6",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/SM_H_FutureTech_Telephone_01.SM_H_FutureTech_Telephone_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\SM_H_FutureTech_Telephone_01.glb",
+  "sourceSHA256": "B41110C2DEBAC38CBD60D13BE1F01EA3393DE22088273C9435DDE3161A31DEDD",
+  "model": "models/df_v24/m_bad93a835ca2c1e6.vmdl",
+  "materials": {
+    "mat_9d3775614688ef3f": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Telephone_01_HD.MI_H_FutureTech_Telephone_01_HD"
+  },
+  "vertices": 2719,
+  "polygons": 3308,
+  "bounds": [
+    [
+      -6.060454368591309,
+      -5.79323673248291,
+      -0.0237603597342968
+    ],
+    [
+      6.057190418243408,
+      4.180733680725098,
+      6.366552829742432
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

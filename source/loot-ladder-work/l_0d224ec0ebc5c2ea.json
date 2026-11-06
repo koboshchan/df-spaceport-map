@@ -1,0 +1,28 @@
+{
+  "canonical": "props_collect_box_546_3P",
+  "state": "opened",
+  "id": "l_0d224ec0ebc5c2ea",
+  "objectPath": "DeltaForce/Content/Models/Props/Collect/props_collect_box_546/props_collect_box_546_3P.uasset|opened",
+  "source": "E:\\df-extract-20261105\\loot-skeletal\\static-paired-v3\\props_collect_box_546_3P\\opened.glb",
+  "sourceSHA256": "4360c72e34f7fd9cbc133569382b24fd85f2449ff497bbdad9831635d352c970",
+  "model": "models/df_v24/l_0d224ec0ebc5c2ea.vmdl",
+  "materials": {
+    "mat_234ecf7aa5c91ba7": "DeltaForce/Content/Models/Props/Collect/props_collect_box_546/Materials/props_collect_box_546.props_collect_box_546"
+  },
+  "vertices": 1804,
+  "polygons": 1540,
+  "bounds": [
+    [
+      -15.237229347229004,
+      -34.234649658203125,
+      -1.0832971177813632e-15
+    ],
+    [
+      15.237229347229004,
+      19.702192306518555,
+      42.702274322509766
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "m_6622d4e6285b9698",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/SM_I_RoadFacility_Ground_C_02J.SM_I_RoadFacility_Ground_C_02J",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter_Ma1\\SM_I_RoadFacility_Ground_C_02J.glb",
+  "sourceSHA256": "F56C94E18ECB705EEB8E58F282F11794F210AEF15D8CF3201EBC888E0400A703",
+  "model": "models/df_v24/m_6622d4e6285b9698.vmdl",
+  "materials": {
+    "mat_4bc3c6fb7899a060": "DeltaForce/Content/Environment/Vehicle/00_Materials/HD/MI_FutureTech_Vehicle_ConceptCar_01_Damage_01_HD.MI_FutureTech_Vehicle_ConceptCar_01_Damage_01_HD",
+    "mat_a4496023a2fec875": "DeltaForce/Content/Environment/Vehicle/00_Materials/HD/MI_FutureTech_Vehicle_ConceptCar_01_Damage_03_HD.MI_FutureTech_Vehicle_ConceptCar_01_Damage_03_HD",
+    "mat_9e4940f2bcd90090": "DeltaForce/Content/Environment/Vehicle/00_Materials/HD/MI_FutureTech_Vehicle_ConceptCar_01_Damage_02_HD.MI_FutureTech_Vehicle_ConceptCar_01_Damage_02_HD",
+    "mat_f8b7edc1988c9b81": "DeltaForce/Content/Environment/Vehicle/00_Materials/HD/MI_FutureTech_Vehicle_ConceptCar_01_Damage_04_HD.MI_FutureTech_Vehicle_ConceptCar_01_Damage_04_HD",
+    "mat_dc4d8d8e4087ced6": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_C_02a_HD.MI_I_RoadFacility_Ground_C_02a_HD",
+    "mat_b9a3178f22eca785": "DeltaForce/Content/Environment/Props/HAAVK/Transport/Utility/00_Materials/HD/MI_H_Transport_Utility_Guardrail_02a_HD.MI_H_Transport_Utility_Guardrail_02A_HD",
+    "mat_aa3c9ed769cbd51f": "DeltaForce/Content/Environment/Props/HAAVK/Transport/Utility/00_Materials/HD/MI_H_Transport_Utility_Guardrail_02B_HD.MI_H_Transport_Utility_Guardrail_02B_HD"
+  },
+  "vertices": 20116,
+  "polygons": 19511,
+  "bounds": [
+    [
+      -1269.128662109375,
+      530.1915893554688,
+      117.37358093261719
+    ],
+    [
+      -843.9989013671875,
+      994.592529296875,
+      227.1463623046875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

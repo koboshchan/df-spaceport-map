@@ -1,0 +1,32 @@
+{
+  "id": "m_c36e23b428ba08c9",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/SM_I_RoadFacility_Ground_A_07.SM_I_RoadFacility_Ground_A_07",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter\\SM_I_RoadFacility_Ground_A_07.glb",
+  "sourceSHA256": "001F230E6AF86E2AEE9BD8E4B46D77E20F8403C5DA088CCA94521B89574489DA",
+  "model": "models/df_v24/m_c36e23b428ba08c9.vmdl",
+  "materials": {
+    "mat_00f302f124792cff": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_L_01_09_HD.MI_I_RoadFacility_Ground_L_01_09_HD",
+    "mat_37447e9304cca7f7": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_A_01_01_HD.MI_I_RoadFacility_Ground_A_01_01_HD",
+    "mat_a6b896b169a22d91": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_A_01_05_HD.MI_I_RoadFacility_Ground_A_01_05_HD",
+    "mat_9e0c99cfd61d40fe": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_A_01_02_HD.MI_I_RoadFacility_Ground_A_01_02_HD",
+    "mat_0f1517f3ed175b67": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_RoadCurb_01_A_HD.MI_RoadCurb_01_A_HD",
+    "mat_ebe2c68b91602cff": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Road_Decal_02_HD.MI_H_FutureTech_Road_Decal_02_HD",
+    "mat_482069f5db613f8e": "DeltaForce/Content/Environment/Decal/Connect/00_Materials/MI_I_Connect_Decal_01_HD.MI_I_Connect_Decal_01_HD"
+  },
+  "vertices": 7759,
+  "polygons": 7834,
+  "bounds": [
+    [
+      -3419.2099609375,
+      1066.860107421875,
+      -11.002046585083008
+    ],
+    [
+      -1330.85302734375,
+      5616.60986328125,
+      2.406459093093872
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

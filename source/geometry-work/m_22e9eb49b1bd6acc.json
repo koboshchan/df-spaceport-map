@@ -1,0 +1,26 @@
+{
+  "id": "m_22e9eb49b1bd6acc",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Decoration/SM_DECOR_BranchWithed_01_HD.SM_DECOR_BranchWithed_01_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Decoration\\SM_DECOR_BranchWithed_01_HD.glb",
+  "sourceSHA256": "F7EFD892DF2E75CAE0A4F2E1EDA1AC5CABA20B3788605ADBB1B0758A1E5C4885",
+  "model": "models/df_v24/m_22e9eb49b1bd6acc.vmdl",
+  "materials": {
+    "mat_c64280face9ee26e": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Decoration/00_Materials/MI_DECOR_BranchWithed_01_Leaf_HD.MI_DECOR_BranchWithed_01_Leaf_HD"
+  },
+  "vertices": 144,
+  "polygons": 110,
+  "bounds": [
+    [
+      -43.61077880859375,
+      -42.987335205078125,
+      0.05356607213616371
+    ],
+    [
+      42.9647216796875,
+      40.73286819458008,
+      4.465534210205078
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

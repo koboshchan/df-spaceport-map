@@ -1,0 +1,26 @@
+{
+  "id": "m_efca1d54022e3200",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_Dormitory/SM_H_Building_FutureTech_Dormitory_03_ExterWall_01B_Decal.SM_H_Building_FutureTech_Dormitory_03_ExterWall_01B_Decal",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_Dormitory\\SM_H_Building_FutureTech_Dormitory_03_ExterWall_01B_Decal.glb",
+  "sourceSHA256": "1DFBC15B7751F32457FBA0683E9F7B21AD29E099766C806E200262DFE5525F08",
+  "model": "models/df_v24/m_efca1d54022e3200.vmdl",
+  "materials": {
+    "mat_ebe2c68b91602cff": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Road_Decal_02_HD.MI_H_FutureTech_Road_Decal_02_HD"
+  },
+  "vertices": 154,
+  "polygons": 110,
+  "bounds": [
+    [
+      -1226.7431640625,
+      11.232026100158691,
+      0.019852295517921448
+    ],
+    [
+      4.394531060825102e-05,
+      499.0418701171875,
+      0.520493745803833
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,1552 @@
+[
+  {
+    "sourceID": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Gameplay/Gameplay_x26_y18_0.Gameplay_x26_y18_0:PersistentLevel.BP_Interactor_ClimbLadder_TemplateNew2_2",
+    "webID": "Ladder1",
+    "frontFace": 4,
+    "frontNormal": [
+      0.9999999999994517,
+      1.0471975523766257e-06,
+      0.0
+    ],
+    "vertices": [
+      [
+        -1313.5320150796201,
+        -298.821613732921,
+        843.2531999999997
+      ],
+      [
+        -1313.5319849203306,
+        -327.6216137329052,
+        843.2531999999997
+      ],
+      [
+        -1312.5320150796206,
+        -298.8216126857234,
+        843.2531999999997
+      ],
+      [
+        -1312.531984920331,
+        -327.6216126857076,
+        360.1331999999997
+      ],
+      [
+        -1312.5320150796206,
+        -298.8216126857234,
+        360.1331999999997
+      ],
+      [
+        -1312.531984920331,
+        -327.6216126857076,
+        843.2531999999997
+      ],
+      [
+        -1313.5319849203306,
+        -327.6216137329052,
+        360.1331999999997
+      ],
+      [
+        -1313.5320150796201,
+        -298.821613732921,
+        360.1331999999997
+      ]
+    ],
+    "thicknessCS2": 1,
+    "sourceClimbVolume": {
+      "matrixCS2": [
+        [
+          -3.769911184026142e-07,
+          0.3599999999998026,
+          0.0,
+          -1299.1319999999832
+        ],
+        [
+          0.3599999999998026,
+          3.769911184026142e-07,
+          0.0,
+          -313.2215986532683
+        ],
+        [
+          0.0,
+          0.0,
+          0.36,
+          601.6931999999997
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "halfExtentsLocalUEcm": {
+        "X": 40.0,
+        "Y": 40.0,
+        "Z": 671.0
+      },
+      "frontNormalCS2": [
+        0.9999999999994518,
+        1.047197551118373e-06,
+        0.0
+      ],
+      "source": "LadderBox source extents and full socket-composed transform",
+      "backPlaneSignedDistanceCS2": 1.680255934388697e-11,
+      "mustStayFrontOfRungPlane": true,
+      "faces": {
+        "front": "ONLY_CLIMBABLE_FACE aligned intendedFrontNormalCS2",
+        "back": "NONCLIMBABLE",
+        "sides": "NONCLIMBABLE",
+        "top": "NONCLIMBABLE",
+        "bottom": "NONCLIMBABLE",
+        "source2FaceEntitySemanticsVerification": "PENDING_IMPLEMENTATION_QA"
+      },
+      "material": "materials/tools/toolsinvisibleladder.vmat",
+      "materialEvidence": "E:\\df-extract-20261105\\placements\\validation\\door-ladder-audit\\source2-ladder-material-proof.json"
+    },
+    "endpoints": {
+      "LadderBottomEndTransform": [
+        -1295.290800000017,
+        -313.22158089786535,
+        373.5756000000001
+      ],
+      "LadderBottomStartTransform": [
+        -1289.411999999982,
+        -313.2215747415903,
+        360.1332000000002
+      ],
+      "LadderTopEndTransform": [
+        -1294.8393599999836,
+        -313.22158042513183,
+        784.075319999999
+      ],
+      "LadderTopStartTransform": [
+        -1326.5125199999893,
+        -313.2216135931667,
+        869.6426569200003
+      ]
+    },
+    "clearanceEvidence": {
+      "sourceBottomBoxZRange": [
+        360.49320000000006,
+        382.0932000000001
+      ],
+      "sourceTopBoxZRange": [
+        835.9754399999998,
+        900.7754399999998
+      ],
+      "contingencyClipZRange": [
+        384.0932000000001,
+        833.9754399999998
+      ],
+      "sourceBottomArrowCrossesRungPlane": null,
+      "sourceTopArrowCrossesRungPlane": {
+        "t": 0.4098271217643089,
+        "positionCS2": [
+          -1313.5320000000065,
+          -313.22160000000645,
+          834.5748415130392
+        ]
+      },
+      "frontApproachRayMinDistanceCS2": 76.97345439943058,
+      "frontApproachRaysNotPlayerHull": true,
+      "topoutWarning": "Top transition crosses the ladder plane. Do not extend a backing clip through the source TopBox/top-out corridor.",
+      "liveClimbabilityVerified": false
+    },
+    "runtimeVerified": false,
+    "sideBackTopBottomMaterial": "materials/tools/toolsnodraw.vmat"
+  },
+  {
+    "sourceID": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Gameplay/Gameplay_x26_y18_0.Gameplay_x26_y18_0:PersistentLevel.BP_Interactor_ClimbLadder_TemplateNew7",
+    "webID": "Ladder3",
+    "frontFace": 4,
+    "frontNormal": [
+      -0.6946582700202054,
+      -0.7193398973312514,
+      0.0
+    ],
+    "vertices": [
+      [
+        -1924.5609249537345,
+        98.57736632575445,
+        158.825520000001
+      ],
+      [
+        -1945.2779139968745,
+        118.5835245023364,
+        158.825520000001
+      ],
+      [
+        -1925.2555832237547,
+        97.8580264284232,
+        158.825520000001
+      ],
+      [
+        -1945.9725722668948,
+        117.86418460500515,
+        -50.694479999998975
+      ],
+      [
+        -1925.2555832237547,
+        97.8580264284232,
+        -50.694479999998975
+      ],
+      [
+        -1945.9725722668948,
+        117.86418460500515,
+        158.825520000001
+      ],
+      [
+        -1945.2779139968745,
+        118.5835245023364,
+        -50.694479999998975
+      ],
+      [
+        -1924.5609249537345,
+        98.57736632575445,
+        -50.694479999998975
+      ]
+    ],
+    "thicknessCS2": 1,
+    "sourceClimbVolume": {
+      "matrixCS2": [
+        [
+          0.25896236303925,
+          -0.25007697720727445,
+          0.0,
+          -1944.9224985635956
+        ],
+        [
+          -0.25007697720727445,
+          -0.25896236303925,
+          0.0,
+          98.22195089247543
+        ],
+        [
+          0.0,
+          0.0,
+          0.36,
+          54.065520000001015
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "halfExtentsLocalUEcm": {
+        "X": 40.0,
+        "Y": 40.0,
+        "Z": 291.0
+      },
+      "frontNormalCS2": [
+        -0.6946582700202069,
+        -0.71933989733125,
+        0.0
+      ],
+      "source": "LadderBox source extents and full socket-composed transform",
+      "backPlaneSignedDistanceCS2": 0.008524799990361487,
+      "mustStayFrontOfRungPlane": true,
+      "faces": {
+        "front": "ONLY_CLIMBABLE_FACE aligned intendedFrontNormalCS2",
+        "back": "NONCLIMBABLE",
+        "sides": "NONCLIMBABLE",
+        "top": "NONCLIMBABLE",
+        "bottom": "NONCLIMBABLE",
+        "source2FaceEntitySemanticsVerification": "PENDING_IMPLEMENTATION_QA"
+      },
+      "material": "materials/tools/toolsinvisibleladder.vmat",
+      "materialEvidence": "E:\\df-extract-20261105\\placements\\validation\\door-ladder-audit\\source2-ladder-material-proof.json"
+    },
+    "endpoints": {
+      "LadderBottomEndTransform": [
+        -1947.5814004350686,
+        95.46157706479426,
+        -37.252079999999296
+      ],
+      "LadderBottomStartTransform": [
+        -1951.6651574729185,
+        91.2327216763515,
+        -50.6944799999992
+      ],
+      "LadderTopEndTransform": [
+        -1947.8949969645182,
+        95.13683826153283,
+        99.64764000000014
+      ],
+      "LadderTopStartTransform": [
+        -1925.892974432878,
+        117.92060592409689,
+        173.69568000000072
+      ]
+    },
+    "clearanceEvidence": {
+      "sourceBottomBoxZRange": [
+        -50.334479999999346,
+        -28.73447999999935
+      ],
+      "sourceTopBoxZRange": [
+        151.54776000000092,
+        216.34776000000093
+      ],
+      "contingencyClipZRange": [
+        -26.73447999999935,
+        149.54776000000092
+      ],
+      "sourceBottomArrowCrossesRungPlane": null,
+      "sourceTopArrowCrossesRungPlane": {
+        "t": 0.4098271217642665,
+        "positionCS2": [
+          -1934.9100000000126,
+          108.58320000000249,
+          143.3487848945152
+        ]
+      },
+      "frontApproachRayMinDistanceCS2": null,
+      "frontApproachRaysNotPlayerHull": true,
+      "topoutWarning": "Top transition crosses the ladder plane. Do not extend a backing clip through the source TopBox/top-out corridor.",
+      "liveClimbabilityVerified": false
+    },
+    "runtimeVerified": false,
+    "sideBackTopBottomMaterial": "materials/tools/toolsnodraw.vmat"
+  },
+  {
+    "sourceID": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Gameplay/Gameplay_x26_y18_0.Gameplay_x26_y18_0:PersistentLevel.BP_Interactor_ClimbLadder_TemplateNew8",
+    "webID": "Ladder4",
+    "frontFace": 4,
+    "frontNormal": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "vertices": [
+      [
+        -1908.1583999999798,
+        -216.94320000000297,
+        -56.69495999999913
+      ],
+      [
+        -1936.95839999998,
+        -216.94320000000297,
+        -56.69495999999913
+      ],
+      [
+        -1908.1583999999798,
+        -217.94320000000297,
+        -56.69495999999913
+      ],
+      [
+        -1936.95839999998,
+        -217.94320000000297,
+        -266.2149599999991
+      ],
+      [
+        -1908.1583999999798,
+        -217.94320000000297,
+        -266.2149599999991
+      ],
+      [
+        -1936.95839999998,
+        -217.94320000000297,
+        -56.69495999999913
+      ],
+      [
+        -1936.95839999998,
+        -216.94320000000297,
+        -266.2149599999991
+      ],
+      [
+        -1908.1583999999798,
+        -216.94320000000297,
+        -266.2149599999991
+      ]
+    ],
+    "thicknessCS2": 1,
+    "sourceClimbVolume": {
+      "matrixCS2": [
+        [
+          0.36,
+          0.0,
+          0.0,
+          -1922.5583999999799
+        ],
+        [
+          0.0,
+          -0.36,
+          0.0,
+          -231.34320000000298
+        ],
+        [
+          0.0,
+          0.0,
+          0.36,
+          -161.45495999999912
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "halfExtentsLocalUEcm": {
+        "X": 40.0,
+        "Y": 40.0,
+        "Z": 291.0
+      },
+      "frontNormalCS2": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "source": "LadderBox source extents and full socket-composed transform",
+      "backPlaneSignedDistanceCS2": -5.8193450058752205e-12,
+      "mustStayFrontOfRungPlane": true,
+      "faces": {
+        "front": "ONLY_CLIMBABLE_FACE aligned intendedFrontNormalCS2",
+        "back": "NONCLIMBABLE",
+        "sides": "NONCLIMBABLE",
+        "top": "NONCLIMBABLE",
+        "bottom": "NONCLIMBABLE",
+        "source2FaceEntitySemanticsVerification": "PENDING_IMPLEMENTATION_QA"
+      },
+      "material": "materials/tools/toolsinvisibleladder.vmat",
+      "materialEvidence": "E:\\df-extract-20261105\\placements\\validation\\door-ladder-audit\\source2-ladder-material-proof.json"
+    },
+    "endpoints": {
+      "LadderBottomEndTransform": [
+        -1922.5583999999799,
+        -235.18439999999828,
+        -252.77255999999943
+      ],
+      "LadderBottomStartTransform": [
+        -1922.5583999999799,
+        -241.06320000000414,
+        -266.21495999999934
+      ],
+      "LadderTopEndTransform": [
+        -1922.5583999999799,
+        -235.63584000000264,
+        -115.87284
+      ],
+      "LadderTopStartTransform": [
+        -1922.5583999999799,
+        -203.962680000026,
+        -41.824799999999414
+      ]
+    },
+    "clearanceEvidence": {
+      "sourceBottomBoxZRange": [
+        -265.8549599999995,
+        -244.25495999999947
+      ],
+      "sourceTopBoxZRange": [
+        -63.972720000000116,
+        0.827279999999881
+      ],
+      "contingencyClipZRange": [
+        -242.25495999999947,
+        -65.97272000000012
+      ],
+      "sourceBottomArrowCrossesRungPlane": null,
+      "sourceTopArrowCrossesRungPlane": {
+        "t": 0.4098271217646855,
+        "positionCS2": [
+          -1922.5583999999799,
+          -216.9432000000088,
+          -72.17169510551595
+        ]
+      },
+      "frontApproachRayMinDistanceCS2": null,
+      "frontApproachRaysNotPlayerHull": true,
+      "topoutWarning": "Top transition crosses the ladder plane. Do not extend a backing clip through the source TopBox/top-out corridor.",
+      "liveClimbabilityVerified": false
+    },
+    "runtimeVerified": false,
+    "sideBackTopBottomMaterial": "materials/tools/toolsnodraw.vmat"
+  },
+  {
+    "sourceID": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Gameplay/Gameplay_x26_y17_0.Gameplay_x26_y17_0:PersistentLevel.BP_Interactor_ClimbLadder_TemplateNew10",
+    "webID": "Ladder6",
+    "frontFace": 4,
+    "frontNormal": [
+      -0.707102399996751,
+      -0.7071111623491986,
+      0.0
+    ],
+    "vertices": [
+      [
+        -2089.5494237710063,
+        -7231.3995236026885,
+        207.67355999999995
+      ],
+      [
+        -2109.9142252466636,
+        -7211.034974482782,
+        207.67355999999995
+      ],
+      [
+        -2090.2565261710033,
+        -7232.106634765038,
+        207.67355999999995
+      ],
+      [
+        -2110.6213276466606,
+        -7211.742085645131,
+        -1.8464400000000296
+      ],
+      [
+        -2090.2565261710033,
+        -7232.106634765038,
+        -1.8464400000000296
+      ],
+      [
+        -2110.6213276466606,
+        -7211.742085645131,
+        207.67355999999995
+      ],
+      [
+        -2109.9142252466636,
+        -7211.034974482782,
+        -1.8464400000000296
+      ],
+      [
+        -2089.5494237710063,
+        -7231.3995236026885,
+        -1.8464400000000296
+      ]
+    ],
+    "thicknessCS2": 1,
+    "sourceClimbVolume": {
+      "matrixCS2": [
+        [
+          0.25456001844571396,
+          -0.2545568639988279,
+          0.0,
+          -2109.9140990687883
+        ],
+        [
+          -0.2545568639988279,
+          -0.25456001844571396,
+          0.0,
+          -7231.399649780564
+        ],
+        [
+          0.0,
+          0.0,
+          0.36,
+          102.91355999999996
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "halfExtentsLocalUEcm": {
+        "X": 40.0,
+        "Y": 40.0,
+        "Z": 291.0
+      },
+      "frontNormalCS2": [
+        -0.7071023999967442,
+        -0.7071111623492055,
+        0.0
+      ],
+      "source": "LadderBox source extents and full socket-composed transform",
+      "backPlaneSignedDistanceCS2": 0.006415919984640084,
+      "mustStayFrontOfRungPlane": true,
+      "faces": {
+        "front": "ONLY_CLIMBABLE_FACE aligned intendedFrontNormalCS2",
+        "back": "NONCLIMBABLE",
+        "sides": "NONCLIMBABLE",
+        "top": "NONCLIMBABLE",
+        "bottom": "NONCLIMBABLE",
+        "source2FaceEntitySemanticsVerification": "PENDING_IMPLEMENTATION_QA"
+      },
+      "material": "materials/tools/toolsinvisibleladder.vmat",
+      "materialEvidence": "E:\\df-extract-20261105\\placements\\validation\\door-ladder-audit\\source2-ladder-material-proof.json"
+    },
+    "endpoints": {
+      "LadderBottomEndTransform": [
+        -2112.619996298861,
+        -7234.116956134647,
+        11.59596000000056
+      ],
+      "LadderBottomStartTransform": [
+        -2116.7769098879653,
+        -7238.273921235872,
+        -1.846440000000257
+      ],
+      "LadderTopEndTransform": [
+        -2112.9392106063024,
+        -7234.436174397764,
+        148.49568
+      ],
+      "LadderTopStartTransform": [
+        -2090.543043154845,
+        -7212.039729414915,
+        222.54372000000058
+      ]
+    },
+    "clearanceEvidence": {
+      "sourceBottomBoxZRange": [
+        -1.486439999999492,
+        20.113560000000504
+      ],
+      "sourceTopBoxZRange": [
+        200.39579999999987,
+        265.19579999999985
+      ],
+      "contingencyClipZRange": [
+        22.113560000000504,
+        198.39579999999987
+      ],
+      "sourceBottomArrowCrossesRungPlane": null,
+      "sourceTopArrowCrossesRungPlane": {
+        "t": 0.40982712176465186,
+        "positionCS2": [
+          -2099.721600000035,
+          -7221.218399999997,
+          192.19682489448653
+        ]
+      },
+      "frontApproachRayMinDistanceCS2": null,
+      "frontApproachRaysNotPlayerHull": true,
+      "topoutWarning": "Top transition crosses the ladder plane. Do not extend a backing clip through the source TopBox/top-out corridor.",
+      "liveClimbabilityVerified": false
+    },
+    "runtimeVerified": false,
+    "sideBackTopBottomMaterial": "materials/tools/toolsnodraw.vmat"
+  },
+  {
+    "sourceID": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Gameplay/Gameplay_x26_y17_1.Gameplay_x26_y17_1:PersistentLevel.BP_Interactor_ClimbLadder_TemplateNew11",
+    "webID": "Ladder5",
+    "frontFace": 4,
+    "frontNormal": [
+      -2.7047725205243775e-06,
+      -0.9999999999963423,
+      0.0
+    ],
+    "vertices": [
+      [
+        -682.0919610513267,
+        -1531.2024389488677,
+        1062.1882800000008
+      ],
+      [
+        -710.8919610512214,
+        -1531.202361051419,
+        1062.1882800000008
+      ],
+      [
+        -682.0919637560992,
+        -1532.202438948864,
+        1062.1882800000008
+      ],
+      [
+        -710.8919637559939,
+        -1532.2023610514154,
+        907.3882800000007
+      ],
+      [
+        -682.0919637560992,
+        -1532.202438948864,
+        907.3882800000007
+      ],
+      [
+        -710.8919637559939,
+        -1532.2023610514154,
+        1062.1882800000008
+      ],
+      [
+        -710.8919610512214,
+        -1531.202361051419,
+        907.3882800000007
+      ],
+      [
+        -682.0919610513267,
+        -1531.2024389488677,
+        907.3882800000007
+      ]
+    ],
+    "thicknessCS2": 1,
+    "sourceClimbVolume": {
+      "matrixCS2": [
+        [
+          0.35999999999868315,
+          -9.73718107582313e-07,
+          0.0,
+          -696.4919999999984
+        ],
+        [
+          -9.73718107582313e-07,
+          -0.35999999999868315,
+          0.0,
+          -1545.6024000000907
+        ],
+        [
+          0.0,
+          0.0,
+          0.36,
+          984.7882800000007
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "halfExtentsLocalUEcm": {
+        "X": 40.0,
+        "Y": 40.0,
+        "Z": 215.0
+      },
+      "frontNormalCS2": [
+        -2.7047725210619805e-06,
+        -0.9999999999963421,
+        0.0
+      ],
+      "source": "LadderBox source extents and full socket-composed transform",
+      "backPlaneSignedDistanceCS2": 2.8819613362429664e-11,
+      "mustStayFrontOfRungPlane": true,
+      "faces": {
+        "front": "ONLY_CLIMBABLE_FACE aligned intendedFrontNormalCS2",
+        "back": "NONCLIMBABLE",
+        "sides": "NONCLIMBABLE",
+        "top": "NONCLIMBABLE",
+        "bottom": "NONCLIMBABLE",
+        "source2FaceEntitySemanticsVerification": "PENDING_IMPLEMENTATION_QA"
+      },
+      "material": "materials/tools/toolsinvisibleladder.vmat",
+      "materialEvidence": "E:\\df-extract-20261105\\placements\\validation\\door-ladder-audit\\source2-ladder-material-proof.json"
+    },
+    "endpoints": {
+      "LadderBottomEndTransform": [
+        -696.492049338296,
+        -1549.4435999999405,
+        920.8306800000009
+      ],
+      "LadderBottomStartTransform": [
+        -696.4920652391156,
+        -1555.3223999999173,
+        907.388280000001
+      ],
+      "LadderTopEndTransform": [
+        -696.4920505593473,
+        -1549.8950399999449,
+        1003.0104000000001
+      ],
+      "LadderTopStartTransform": [
+        -696.4919648906216,
+        -1518.2218800000555,
+        1077.0584400000007
+      ]
+    },
+    "clearanceEvidence": {
+      "sourceBottomBoxZRange": [
+        907.7482800000009,
+        929.3482800000008
+      ],
+      "sourceTopBoxZRange": [
+        1054.9105200000008,
+        1119.710520000001
+      ],
+      "contingencyClipZRange": [
+        931.3482800000008,
+        1052.9105200000008
+      ],
+      "sourceBottomArrowCrossesRungPlane": null,
+      "sourceTopArrowCrossesRungPlane": {
+        "t": 0.4098271217648964,
+        "positionCS2": [
+          -696.4919999999888,
+          -1531.2024000000092,
+          1046.7115448944685
+        ]
+      },
+      "frontApproachRayMinDistanceCS2": 45.827191399688694,
+      "frontApproachRaysNotPlayerHull": true,
+      "topoutWarning": "Top transition crosses the ladder plane. Do not extend a backing clip through the source TopBox/top-out corridor.",
+      "liveClimbabilityVerified": false
+    },
+    "runtimeVerified": false,
+    "sideBackTopBottomMaterial": "materials/tools/toolsnodraw.vmat"
+  },
+  {
+    "sourceID": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Gameplay/Gameplay_x26_y17_1.Gameplay_x26_y17_1:PersistentLevel.BP_Interactor_ClimbLadder_TemplateNew9",
+    "webID": "Ladder7",
+    "frontFace": 4,
+    "frontNormal": [
+      -0.7071093728635078,
+      0.7071041895000882,
+      0.0
+    ],
+    "vertices": [
+      [
+        -3595.5404226222377,
+        -5987.141023822501,
+        387.71172
+      ],
+      [
+        -3575.1758219646354,
+        -5966.776273884032,
+        387.71172
+      ],
+      [
+        -3596.247531995101,
+        -5986.433919633,
+        387.71172
+      ],
+      [
+        -3575.8829313374986,
+        -5966.069169694531,
+        178.19172000000003
+      ],
+      [
+        -3596.247531995101,
+        -5986.433919633,
+        178.19172000000003
+      ],
+      [
+        -3575.8829313374986,
+        -5966.069169694531,
+        387.71172
+      ],
+      [
+        -3575.1758219646354,
+        -5966.776273884032,
+        178.19172000000003
+      ],
+      [
+        -3595.5404226222377,
+        -5987.141023822501,
+        178.19172000000003
+      ]
+    ],
+    "thicknessCS2": 1,
+    "sourceClimbVolume": {
+      "matrixCS2": [
+        [
+          -0.25455750822003015,
+          -0.2545593742308644,
+          0.0,
+          -3595.540497262671
+        ],
+        [
+          -0.2545593742308644,
+          0.25455750822003015,
+          0.0,
+          -5966.776348524465
+        ],
+        [
+          0.0,
+          0.0,
+          0.36,
+          282.95172
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "halfExtentsLocalUEcm": {
+        "X": 40.0,
+        "Y": 40.0,
+        "Z": 291.0
+      },
+      "frontNormalCS2": [
+        -0.7071093728635122,
+        0.7071041895000838,
+        0.0
+      ],
+      "source": "LadderBox source extents and full socket-composed transform",
+      "backPlaneSignedDistanceCS2": 0.006415920001845876,
+      "mustStayFrontOfRungPlane": true,
+      "faces": {
+        "front": "ONLY_CLIMBABLE_FACE aligned intendedFrontNormalCS2",
+        "back": "NONCLIMBABLE",
+        "sides": "NONCLIMBABLE",
+        "top": "NONCLIMBABLE",
+        "bottom": "NONCLIMBABLE",
+        "source2FaceEntitySemanticsVerification": "PENDING_IMPLEMENTATION_QA"
+      },
+      "material": "materials/tools/toolsinvisibleladder.vmat",
+      "materialEvidence": "E:\\df-extract-20261105\\placements\\validation\\door-ladder-audit\\source2-ladder-material-proof.json"
+    },
+    "endpoints": {
+      "LadderBottomEndTransform": [
+        -3598.2465234923,
+        -5964.05917105847,
+        191.6341199999997
+      ],
+      "LadderBottomStartTransform": [
+        -3602.40347807348,
+        -5959.902246949234,
+        178.1917199999998
+      ],
+      "LadderTopEndTransform": [
+        -3598.5657409475825,
+        -5963.739955943165,
+        328.53383999999915
+      ],
+      "LadderTopStartTransform": [
+        -3576.1693526433955,
+        -5986.136180073896,
+        402.58188000000064
+      ]
+    },
+    "clearanceEvidence": {
+      "sourceBottomBoxZRange": [
+        178.55171999999965,
+        200.15171999999967
+      ],
+      "sourceTopBoxZRange": [
+        380.43395999999996,
+        445.2339599999999
+      ],
+      "contingencyClipZRange": [
+        202.15171999999967,
+        378.43395999999996
+      ],
+      "sourceBottomArrowCrossesRungPlane": null,
+      "sourceTopArrowCrossesRungPlane": {
+        "t": 0.4098271217649076,
+        "positionCS2": [
+          -3585.3480000000295,
+          -5976.957599999997,
+          372.2349848944673
+        ]
+      },
+      "frontApproachRayMinDistanceCS2": 77.60155409715362,
+      "frontApproachRaysNotPlayerHull": true,
+      "topoutWarning": "Top transition crosses the ladder plane. Do not extend a backing clip through the source TopBox/top-out corridor.",
+      "liveClimbabilityVerified": false
+    },
+    "runtimeVerified": false,
+    "sideBackTopBottomMaterial": "materials/tools/toolsnodraw.vmat"
+  },
+  {
+    "sourceID": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Gameplay/Gameplay_x25_y17_2.Gameplay_x25_y17_2:PersistentLevel.BP_Interactor_ClimbLadder_TemplateNew4",
+    "webID": "Ladder11",
+    "frontFace": 4,
+    "frontNormal": [
+      -0.9848083894594111,
+      0.17364456815679793,
+      0.0
+    ],
+    "vertices": [
+      [
+        -6186.790240037312,
+        -6451.355022519761,
+        -152.34985468506164
+      ],
+      [
+        -6181.7892764743965,
+        -6422.99254090333,
+        -152.34985468506164
+      ],
+      [
+        -6187.775048426772,
+        -6451.181377951604,
+        -152.34985468506164
+      ],
+      [
+        -6182.774084863856,
+        -6422.818896335173,
+        -298.95907708506167
+      ],
+      [
+        -6187.775048426772,
+        -6451.181377951604,
+        -298.95907708506167
+      ],
+      [
+        -6182.774084863856,
+        -6422.818896335173,
+        -152.34985468506164
+      ],
+      [
+        -6181.7892764743965,
+        -6422.99254090333,
+        -298.95907708506167
+      ],
+      [
+        -6186.790240037312,
+        -6451.355022519761,
+        -298.95907708506167
+      ]
+    ],
+    "thicknessCS2": 1,
+    "sourceClimbVolume": {
+      "matrixCS2": [
+        [
+          -0.06251204453645821,
+          -0.35453102020538607,
+          0.0,
+          -6198.4709990640695
+        ],
+        [
+          -0.35453102020538607,
+          0.06251204453645821,
+          0.0,
+          -6434.6732999300875
+        ],
+        [
+          0.0,
+          0.0,
+          0.34095168,
+          -225.65446588506165
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "halfExtentsLocalUEcm": {
+        "X": 40.0,
+        "Y": 40.0,
+        "Z": 215.0
+      },
+      "frontNormalCS2": [
+        -0.9848083894594056,
+        0.17364456815682835,
+        0.0
+      ],
+      "source": "LadderBox source extents and full socket-composed transform",
+      "backPlaneSignedDistanceCS2": -0.006664680011857271,
+      "mustStayFrontOfRungPlane": true,
+      "faces": {
+        "front": "ONLY_CLIMBABLE_FACE aligned intendedFrontNormalCS2",
+        "back": "NONCLIMBABLE",
+        "sides": "NONCLIMBABLE",
+        "top": "NONCLIMBABLE",
+        "bottom": "NONCLIMBABLE",
+        "source2FaceEntitySemanticsVerification": "PENDING_IMPLEMENTATION_QA"
+      },
+      "material": "materials/tools/toolsinvisibleladder.vmat",
+      "materialEvidence": "E:\\df-extract-20261105\\placements\\validation\\door-ladder-audit\\source2-ladder-material-proof.json"
+    },
+    "endpoints": {
+      "LadderBottomEndTransform": [
+        -6202.260086793831,
+        -6434.003314703354,
+        -286.22762426879854
+      ],
+      "LadderBottomStartTransform": [
+        -6208.0495783537335,
+        -6432.982493016083,
+        -298.95875999999953
+      ],
+      "LadderTopEndTransform": [
+        -6202.704668693128,
+        -6433.9249245995015,
+        -208.39600668049934
+      ],
+      "LadderTopStartTransform": [
+        -6171.512675004458,
+        -6439.4247967898555,
+        -138.2659965729781
+      ]
+    },
+    "clearanceEvidence": {
+      "sourceBottomBoxZRange": [
+        -298.6178083200001,
+        -278.1607075200001
+      ],
+      "sourceTopBoxZRange": [
+        -159.24202582993763,
+        -97.87072342993764
+      ],
+      "contingencyClipZRange": [
+        -276.1607075200001,
+        -161.24202582993763
+      ],
+      "sourceBottomArrowCrossesRungPlane": null,
+      "sourceTopArrowCrossesRungPlane": {
+        "t": 0.409827121765053,
+        "positionCS2": [
+          -6184.295999999999,
+          -6437.170800000007,
+          -167.00717676469762
+        ]
+      },
+      "frontApproachRayMinDistanceCS2": null,
+      "frontApproachRaysNotPlayerHull": true,
+      "topoutWarning": "Top transition crosses the ladder plane. Do not extend a backing clip through the source TopBox/top-out corridor.",
+      "liveClimbabilityVerified": false
+    },
+    "runtimeVerified": false,
+    "sideBackTopBottomMaterial": "materials/tools/toolsnodraw.vmat"
+  },
+  {
+    "sourceID": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Gameplay/Gameplay_x26_y17_2.Gameplay_x26_y17_2:PersistentLevel.BP_Interactor_ClimbLadder_TemplateNew_2",
+    "webID": "Ladder9",
+    "frontFace": 4,
+    "frontNormal": [
+      0.026474249337411514,
+      0.999649495634355,
+      0.0
+    ],
+    "vertices": [
+      [
+        -528.8552826303662,
+        -9971.829724145799,
+        283.1281200000008
+      ],
+      [
+        -500.0653771560968,
+        -9972.592182526716,
+        283.1281200000008
+      ],
+      [
+        -528.8288083810288,
+        -9970.830074650165,
+        283.1281200000008
+      ],
+      [
+        -500.0389029067594,
+        -9971.592533031082,
+        -282.0718799999991
+      ],
+      [
+        -528.8288083810288,
+        -9970.830074650165,
+        -282.0718799999991
+      ],
+      [
+        -500.0389029067594,
+        -9971.592533031082,
+        283.1281200000008
+      ],
+      [
+        -500.0653771560968,
+        -9972.592182526716,
+        -282.0718799999991
+      ],
+      [
+        -528.8552826303662,
+        -9971.829724145799,
+        -282.0718799999991
+      ]
+    ],
+    "thicknessCS2": 1,
+    "sourceClimbVolume": {
+      "matrixCS2": [
+        [
+          -0.35987381842836785,
+          0.009530729761466405,
+          0.0,
+          -514.0791007027728
+        ],
+        [
+          0.009530729761466405,
+          0.35987381842836785,
+          0.0,
+          -9957.816000599123
+        ],
+        [
+          0.0,
+          0.0,
+          0.36,
+          0.5281200000008539
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "halfExtentsLocalUEcm": {
+        "X": 40.0,
+        "Y": 40.0,
+        "Z": 785.0
+      },
+      "frontNormalCS2": [
+        0.026474249337406688,
+        0.9996494956343553,
+        0.0
+      ],
+      "source": "LadderBox source extents and full socket-composed transform",
+      "backPlaneSignedDistanceCS2": 0.005078519974645701,
+      "mustStayFrontOfRungPlane": true,
+      "faces": {
+        "front": "ONLY_CLIMBABLE_FACE aligned intendedFrontNormalCS2",
+        "back": "NONCLIMBABLE",
+        "sides": "NONCLIMBABLE",
+        "top": "NONCLIMBABLE",
+        "bottom": "NONCLIMBABLE",
+        "source2FaceEntitySemanticsVerification": "PENDING_IMPLEMENTATION_QA"
+      },
+      "material": "materials/tools/toolsinvisibleladder.vmat",
+      "materialEvidence": "E:\\df-extract-20261105\\placements\\validation\\door-ladder-audit\\source2-ladder-material-proof.json"
+    },
+    "endpoints": {
+      "LadderBottomEndTransform": [
+        -513.9786779230053,
+        -9953.981193620217,
+        -268.6294799999996
+      ],
+      "LadderBottomStartTransform": [
+        -513.8230411060213,
+        -9948.104454165295,
+        -282.0718799999995
+      ],
+      "LadderTopEndTransform": [
+        -513.9667263879091,
+        -9953.529911851918,
+        223.95024000000103
+      ],
+      "LadderTopStartTransform": [
+        -514.8052495230513,
+        -9985.191970271087,
+        297.9982800000007
+      ]
+    },
+    "clearanceEvidence": {
+      "sourceBottomBoxZRange": [
+        -281.71187999999967,
+        -260.11187999999964
+      ],
+      "sourceTopBoxZRange": [
+        275.85036000000093,
+        340.6503600000009
+      ],
+      "contingencyClipZRange": [
+        -258.11187999999964,
+        273.85036000000093
+      ],
+      "sourceBottomArrowCrossesRungPlane": null,
+      "sourceTopArrowCrossesRungPlane": {
+        "t": 0.409827121765575,
+        "positionCS2": [
+          -514.4616000000422,
+          -9972.215999999986,
+          267.6513848944187
+        ]
+      },
+      "frontApproachRayMinDistanceCS2": 38.14614473412644,
+      "frontApproachRaysNotPlayerHull": true,
+      "topoutWarning": "Top transition crosses the ladder plane. Do not extend a backing clip through the source TopBox/top-out corridor.",
+      "liveClimbabilityVerified": false
+    },
+    "runtimeVerified": false,
+    "sideBackTopBottomMaterial": "materials/tools/toolsnodraw.vmat"
+  },
+  {
+    "sourceID": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Gameplay/Gameplay_x25_y17_3.Gameplay_x25_y17_3:PersistentLevel.BP_Interactor_ClimbLadder_TemplateNew6",
+    "webID": "Ladder8",
+    "frontFace": 4,
+    "frontNormal": [
+      -0.7071037698928055,
+      -0.7071097924674657,
+      0.0
+    ],
+    "vertices": [
+      [
+        -5585.0918243163,
+        -5919.581162488004,
+        15.585480000001297
+      ],
+      [
+        -5605.456586339363,
+        -5899.216573915091,
+        15.585480000001297
+      ],
+      [
+        -5585.798928086192,
+        -5920.288272280472,
+        15.585480000001297
+      ],
+      [
+        -5606.163690109255,
+        -5899.923683707559,
+        -111.8545199999987
+      ],
+      [
+        -5585.798928086192,
+        -5920.288272280472,
+        -111.8545199999987
+      ],
+      [
+        -5606.163690109255,
+        -5899.923683707559,
+        15.585480000001297
+      ],
+      [
+        -5605.456586339363,
+        -5899.216573915091,
+        -111.8545199999987
+      ],
+      [
+        -5585.0918243163,
+        -5919.581162488004,
+        -111.8545199999987
+      ]
+    ],
+    "thicknessCS2": 1,
+    "sourceClimbVolume": {
+      "matrixCS2": [
+        [
+          0.25455952528828574,
+          -0.25455735716141187,
+          0.0,
+          -5605.456499614287
+        ],
+        [
+          -0.25455735716141187,
+          -0.25455952528828574,
+          0.0,
+          -5919.581249213079
+        ],
+        [
+          0.0,
+          0.0,
+          0.36,
+          -48.1345199999987
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "halfExtentsLocalUEcm": {
+        "X": 40.0,
+        "Y": 40.0,
+        "Z": 177.0
+      },
+      "frontNormalCS2": [
+        -0.7071037698928108,
+        -0.7071097924674604,
+        0.0
+      ],
+      "source": "LadderBox source extents and full socket-composed transform",
+      "backPlaneSignedDistanceCS2": 0.006415919999922082,
+      "mustStayFrontOfRungPlane": true,
+      "faces": {
+        "front": "ONLY_CLIMBABLE_FACE aligned intendedFrontNormalCS2",
+        "back": "NONCLIMBABLE",
+        "sides": "NONCLIMBABLE",
+        "top": "NONCLIMBABLE",
+        "bottom": "NONCLIMBABLE",
+        "source2FaceEntitySemanticsVerification": "PENDING_IMPLEMENTATION_QA"
+      },
+      "material": "materials/tools/toolsinvisibleladder.vmat",
+      "materialEvidence": "E:\\df-extract-20261105\\placements\\validation\\door-ladder-audit\\source2-ladder-material-proof.json"
+    },
+    "endpoints": {
+      "LadderBottomEndTransform": [
+        -5608.162421287387,
+        -5922.298531146371,
+        -98.41211999999905
+      ],
+      "LadderBottomStartTransform": [
+        -5612.319342929841,
+        -5926.455488194304,
+        -111.85451999999896
+      ],
+      "LadderTopEndTransform": [
+        -5608.481636213255,
+        -5922.61774879109,
+        -43.59239999999954
+      ],
+      "LadderTopStartTransform": [
+        -5586.085425372876,
+        -5900.221347196697,
+        30.45564000000104
+      ]
+    },
+    "clearanceEvidence": {
+      "sourceBottomBoxZRange": [
+        -111.4945199999991,
+        -89.8945199999991
+      ],
+      "sourceTopBoxZRange": [
+        8.307720000001247,
+        73.10772000000125
+      ],
+      "contingencyClipZRange": [
+        -87.8945199999991,
+        6.307720000001247
+      ],
+      "sourceBottomArrowCrossesRungPlane": null,
+      "sourceTopArrowCrossesRungPlane": {
+        "t": 0.4098271217642898,
+        "positionCS2": [
+          -5595.264000000015,
+          -5909.400000000004,
+          0.10874489451379787
+        ]
+      },
+      "frontApproachRayMinDistanceCS2": null,
+      "frontApproachRaysNotPlayerHull": true,
+      "topoutWarning": "Top transition crosses the ladder plane. Do not extend a backing clip through the source TopBox/top-out corridor.",
+      "liveClimbabilityVerified": false
+    },
+    "runtimeVerified": false,
+    "sideBackTopBottomMaterial": "materials/tools/toolsnodraw.vmat"
+  },
+  {
+    "sourceID": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Gameplay/Gameplay_x26_y17_3.Gameplay_x26_y17_3:PersistentLevel.BP_Interactor_ClimbLadder_TemplateNew3",
+    "webID": "Ladder2",
+    "frontFace": 4,
+    "frontNormal": [
+      -0.9999999999926282,
+      -3.839724354766818e-06,
+      0.0
+    ],
+    "vertices": [
+      [
+        906.9984552917671,
+        -2118.8591436949455,
+        843.1052400000003
+      ],
+      [
+        906.9983447077057,
+        -2090.0591436951577,
+        843.1052400000003
+      ],
+      [
+        905.9984552917745,
+        -2118.85914753467,
+        843.1052400000003
+      ],
+      [
+        905.998344707713,
+        -2090.059147534882,
+        359.9852400000004
+      ],
+      [
+        905.9984552917745,
+        -2118.85914753467,
+        359.9852400000004
+      ],
+      [
+        905.998344707713,
+        -2090.059147534882,
+        843.1052400000003
+      ],
+      [
+        906.9983447077057,
+        -2090.0591436951577,
+        359.9852400000004
+      ],
+      [
+        906.9984552917671,
+        -2118.8591436949455,
+        359.9852400000004
+      ]
+    ],
+    "thicknessCS2": 1,
+    "sourceClimbVolume": {
+      "matrixCS2": [
+        [
+          1.382300767609479e-06,
+          -0.3599999999973461,
+          0.0,
+          892.5983999998425
+        ],
+        [
+          -0.3599999999973461,
+          -1.382300767609479e-06,
+          0.0,
+          -2104.4591989870823
+        ],
+        [
+          0.0,
+          0.0,
+          0.36,
+          601.5452400000004
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "halfExtentsLocalUEcm": {
+        "X": 40.0,
+        "Y": 40.0,
+        "Z": 671.0
+      },
+      "frontNormalCS2": [
+        -0.9999999999926282,
+        -3.839724354470776e-06,
+        0.0
+      ],
+      "source": "LadderBox source extents and full socket-composed transform",
+      "backPlaneSignedDistanceCS2": 2.965983014746598e-11,
+      "mustStayFrontOfRungPlane": true,
+      "faces": {
+        "front": "ONLY_CLIMBABLE_FACE aligned intendedFrontNormalCS2",
+        "back": "NONCLIMBABLE",
+        "sides": "NONCLIMBABLE",
+        "top": "NONCLIMBABLE",
+        "bottom": "NONCLIMBABLE",
+        "source2FaceEntitySemanticsVerification": "PENDING_IMPLEMENTATION_QA"
+      },
+      "material": "materials/tools/toolsinvisibleladder.vmat",
+      "materialEvidence": "E:\\df-extract-20261105\\placements\\validation\\door-ladder-audit\\source2-ladder-material-proof.json"
+    },
+    "endpoints": {
+      "LadderBottomEndTransform": [
+        888.7572000001092,
+        -2104.459270041174,
+        373.4276399999999
+      ],
+      "LadderBottomStartTransform": [
+        882.8784000001324,
+        -2104.459292614134,
+        359.98524
+      ],
+      "LadderTopEndTransform": [
+        888.3057600001048,
+        -2104.459271774598,
+        783.9273599999997
+      ],
+      "LadderTopStartTransform": [
+        919.9789199998486,
+        -2104.4591501583636,
+        869.9946191999998
+      ]
+    },
+    "clearanceEvidence": {
+      "sourceBottomBoxZRange": [
+        360.3452399999998,
+        381.94523999999984
+      ],
+      "sourceTopBoxZRange": [
+        836.5713861600003,
+        901.3713861600003
+      ],
+      "contingencyClipZRange": [
+        383.94523999999984,
+        834.5713861600003
+      ],
+      "sourceBottomArrowCrossesRungPlane": null,
+      "sourceTopArrowCrossesRungPlane": {
+        "t": 0.40982712176402264,
+        "positionCS2": [
+          906.9983999999822,
+          -2104.459199999995,
+          834.7219220839456
+        ]
+      },
+      "frontApproachRayMinDistanceCS2": 69.39805635522755,
+      "frontApproachRaysNotPlayerHull": true,
+      "topoutWarning": "Top transition crosses the ladder plane. Do not extend a backing clip through the source TopBox/top-out corridor.",
+      "liveClimbabilityVerified": false
+    },
+    "runtimeVerified": false,
+    "sideBackTopBottomMaterial": "materials/tools/toolsnodraw.vmat"
+  }
+]

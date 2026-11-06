@@ -1,0 +1,27 @@
+{
+  "id": "m_02b4f8038044d59a",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/HD_Only/Government/SM_H_Government_Hospital_Syringe_01.SM_H_Government_Hospital_Syringe_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\HD_Only\\Government\\SM_H_Government_Hospital_Syringe_01.glb",
+  "sourceSHA256": "F14F18F28FC230499B241BB8EF5B5E312D0F7E02EFF08C1E418C8CB529B0AAAB",
+  "model": "models/df_v24/m_02b4f8038044d59a.vmdl",
+  "materials": {
+    "mat_4ecc19dbfaeed065": "DeltaForce/Content/Environment/Props/HAAVK/HD_Only/Government/00_Materials/HD/MI_H_Government_Hospital_InfusionBottle_01_HD.MI_H_Government_Hospital_InfusionBottle_01_HD",
+    "mat_a3918763e3ee1229": "DeltaForce/Content/Environment/Props/HAAVK/HD_Only/Government/00_Materials/HD/MI_H_Government_Hospital_InfusionBottle_03_HD.MI_H_Government_Hospital_InfusionBottle_03_HD"
+  },
+  "vertices": 576,
+  "polygons": 570,
+  "bounds": [
+    [
+      -0.5198849439620972,
+      -3.3597986698150635,
+      -6.60208669955864e-08
+    ],
+    [
+      0.5198845267295837,
+      3.3597986698150635,
+      0.720338761806488
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

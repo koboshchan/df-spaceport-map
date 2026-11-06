@@ -1,0 +1,26 @@
+{
+  "id": "m_af8fb370201b5afa",
+  "objectPath": "DeltaForce/Content/Environment/Gameplay/Feature/SM_Fence_Irongauze_03C.SM_Fence_Irongauze_03C",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Gameplay\\Feature\\SM_Fence_Irongauze_03C.glb",
+  "sourceSHA256": "F891180C2AFB0C97D64B1D28EA27AF2AC3F570D8FAB3CA0E3C673341AC890A8B",
+  "model": "models/df_v24/m_af8fb370201b5afa.vmdl",
+  "materials": {
+    "mat_4940bf7a7162c928": "DeltaForce/Content/Environment/Gameplay/Feature/00_Materials/HD/MI_Fence_Irongauze_03B_HD.MI_Fence_Irongauze_03B_HD"
+  },
+  "vertices": 476,
+  "polygons": 404,
+  "bounds": [
+    [
+      -0.08506317436695099,
+      -62.309261322021484,
+      2.617522716522217
+    ],
+    [
+      0.09494133293628693,
+      -22.112882614135742,
+      53.39867401123047
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

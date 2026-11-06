@@ -1,0 +1,433 @@
+{
+  "selectionId": "selection-286",
+  "result": "SOURCE_COLLAPSED_COMPONENT_NOT_EXPORT_PLACEHOLDER",
+  "effectiveComponentScale": [
+    0,
+    0,
+    0
+  ],
+  "instanceScaleOverride": false,
+  "scaleSource": "E:\\df-extract-20261105\\placements\\validation\\resolution\\metadata\\objects\\DeltaForce\\Content\\BluePrints\\Interact\\BP_InteractorContainer_Rocket\\000010.json",
+  "mesh": "props_collect_box_657_3P",
+  "attachmentChain": [
+    "InteractorSkeletalMesh",
+    "DefaultSceneRoot"
+  ],
+  "absoluteFlags": {
+    "bAbsoluteLocation": "not serialized anywhere in inspected instance/template chain; native default false",
+    "bAbsoluteRotation": "not serialized anywhere in inspected instance/template chain; native default false",
+    "bAbsoluteScale": "not serialized anywhere in inspected instance/template chain; native default false"
+  },
+  "eventClassification": {
+    "instanceTag": "SOL_QA_929001_2_1",
+    "bLockedAfterContractEnd": false,
+    "SaveID": 954,
+    "sourceUniqueIdentity": "航天城_合同_发射区_航空储物箱_29-53",
+    "status": "QA/contract-associated source actor; exact runtime activation/exclusion logic not proven from serialized fields alone",
+    "action": "retain source row; do not resurrect zero scale or silently remove; report306recordsnot306visible"
+  },
+  "evidence": [
+    {
+      "file": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\GenericConfig\\SpaceCenter_BFR\\000024-BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.source.json",
+      "sha256": "170d90d1c19cc13614d711d0c246b51da9d2e863f0acb7ee7082c200613a33ad",
+      "source": {
+        "Type": "BP_InteractorContainer_Rocket_C",
+        "Name": "BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false",
+        "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+        "Class": "BlueprintGeneratedClass'DeltaForce/Content/BluePrints/Interact/BP_InteractorContainer_Rocket.BP_InteractorContainer_Rocket_C'",
+        "Outer": {
+          "ObjectName": "Level'SpaceCenter_BFR:PersistentLevel'",
+          "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.50"
+        },
+        "Template": {
+          "ObjectName": "BP_InteractorContainer_Rocket_C'Default__BP_InteractorContainer_Rocket_C'",
+          "ObjectPath": "DeltaForce/Content/BluePrints/Interact/BP_InteractorContainer_Rocket.2"
+        },
+        "Properties": {
+          "SM_H_FutureTech_Furniture_Controller_02": {
+            "ObjectName": "StaticMeshComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.SM_H_FutureTech_Furniture_Controller_02'",
+            "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.87"
+          },
+          "SM_H_FutureTech_Furniture_Controller_01": {
+            "ObjectName": "StaticMeshComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.SM_H_FutureTech_Furniture_Controller_01'",
+            "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.86"
+          },
+          "Box": {
+            "ObjectName": "BoxComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.Box'",
+            "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.5"
+          },
+          "InteractorSkeletalMesh": {
+            "ObjectName": "InteractorSkeletalMeshComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.InteractorSkeletalMesh'",
+            "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.49"
+          },
+          "EditOnlyBox": null,
+          "InteractorPoint": {
+            "ObjectName": "SceneComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.InteractorPoint'",
+            "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.63"
+          },
+          "AnimSwitcher": {
+            "ObjectName": "BP_ContainerAnimSwitcherComponent_C'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.AnimSwitcher'",
+            "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.12"
+          },
+          "OpenProcess": {
+            "ObjectName": "BP_ContainerOperatorProcessComponent_C'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.OpenProcess'",
+            "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.14"
+          },
+          "ProcessPawnClose": {
+            "ObjectName": "InteractorProcessPawnAnimComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.ProcessPawnClose'",
+            "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.47"
+          },
+          "ProcessPawnOpen": {
+            "ObjectName": "BP_ProcessPawnOpenContainer_C'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.ProcessPawnOpen'",
+            "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.25"
+          },
+          "CloseProcess": {
+            "ObjectName": "BP_ContainerOperatorProcessComponent_C'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.CloseProcess'",
+            "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.13"
+          },
+          "ProcessPawnPickup": {
+            "ObjectName": "InteractorProcessPawnAnimComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.ProcessPawnPickup'",
+            "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.48"
+          },
+          "SmallAreaConfig": null,
+          "BigArea": null,
+          "TextRender": null,
+          "LootDebug": null,
+          "地图": "EnumLootMapName::NewEnumerator3",
+          "地图大区域": "EnumDamArea::NewEnumerator53",
+          "地图小区域自定义名称": "发射区",
+          "Loot容器分类": "EnumLootBoxType::NewEnumerator42",
+          "唯一性": "航天城_合同_发射区_航空储物箱_29-53",
+          "SaveID": 954,
+          "DefaultSceneRoot": {
+            "ObjectName": "SceneComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.DefaultSceneRoot'",
+            "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.62"
+          },
+          "StackCount": 1,
+          "bLockedAfterContractEnd": false,
+          "PrimaryActorTick": {
+            "AggregateClass": {
+              "ObjectName": "Class'InventoryPickup_OpenBox'",
+              "ObjectPath": "/Script/DFMGameplay"
+            },
+            "OwnerLevel": {
+              "ObjectName": "Level'SpaceCenter_BFR:PersistentLevel'",
+              "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.50"
+            }
+          },
+          "RootComponent": {
+            "ObjectName": "SceneComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.DefaultSceneRoot'",
+            "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.62"
+          },
+          "Tags": [
+            "SOL_QA_929001_2_1"
+          ],
+          "BlueprintCreatedComponents": [
+            {
+              "ObjectName": "SceneComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.DefaultSceneRoot'",
+              "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.62"
+            },
+            null,
+            null,
+            null,
+            null,
+            {
+              "ObjectName": "InteractorProcessPawnAnimComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.ProcessPawnPickup'",
+              "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.48"
+            },
+            {
+              "ObjectName": "BP_ContainerOperatorProcessComponent_C'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.CloseProcess'",
+              "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.13"
+            },
+            {
+              "ObjectName": "BP_ProcessPawnOpenContainer_C'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.ProcessPawnOpen'",
+              "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.25"
+            },
+            {
+              "ObjectName": "InteractorProcessPawnAnimComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.ProcessPawnClose'",
+              "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.47"
+            },
+            {
+              "ObjectName": "BP_ContainerOperatorProcessComponent_C'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.OpenProcess'",
+              "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.14"
+            },
+            {
+              "ObjectName": "BP_ContainerAnimSwitcherComponent_C'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.AnimSwitcher'",
+              "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.12"
+            },
+            {
+              "ObjectName": "SceneComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.InteractorPoint'",
+              "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.63"
+            },
+            null,
+            {
+              "ObjectName": "InteractorSkeletalMeshComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.InteractorSkeletalMesh'",
+              "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.49"
+            },
+            {
+              "ObjectName": "BoxComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.Box'",
+              "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.5"
+            },
+            {
+              "ObjectName": "StaticMeshComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.SM_H_FutureTech_Furniture_Controller_01'",
+              "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.86"
+            },
+            {
+              "ObjectName": "StaticMeshComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.SM_H_FutureTech_Furniture_Controller_02'",
+              "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.87"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\GenericConfig\\SpaceCenter_BFR\\000050-InteractorSkeletalMesh.source.json",
+      "sha256": "6924e0ef5eaa36d2718c1bec6b38f6500bb89e7b0d5ff3332f2c4cfbec5f8079",
+      "source": {
+        "Type": "InteractorSkeletalMeshComponent",
+        "Name": "InteractorSkeletalMesh",
+        "Flags": "RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'InteractorSkeletalMeshComponent'",
+        "Outer": {
+          "ObjectName": "BP_InteractorContainer_Rocket_C'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false'",
+          "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.23"
+        },
+        "Template": {
+          "ObjectName": "InteractorSkeletalMeshComponent'BP_InteractorContainer_Rocket_C:InteractorSkeletalMesh_GEN_VARIABLE'",
+          "ObjectPath": "DeltaForce/Content/BluePrints/Interact/BP_InteractorContainer_Rocket.10"
+        },
+        "Properties": {
+          "AttachParent": {
+            "ObjectName": "SceneComponent'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false.DefaultSceneRoot'",
+            "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.62"
+          },
+          "Mobility": "EComponentMobility::Movable",
+          "PrimaryComponentTick": {
+            "AggregateClass": {
+              "ObjectName": "Class'InteractorSkeletalMeshComponent'",
+              "ObjectPath": "/Script/DFMGameplay"
+            },
+            "OwnerLevel": {
+              "ObjectName": "Level'SpaceCenter_BFR:PersistentLevel'",
+              "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.50"
+            }
+          },
+          "bNetAddressable": true,
+          "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript",
+          "UCSModifiedProperties": [
+            {
+              "MemberParent": {
+                "ObjectName": "Class'SceneComponent'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "MemberName": "Mobility",
+              "MemberGuid": "00000000-00000000-00000000-00000000"
+            },
+            {
+              "MemberParent": {
+                "ObjectName": "Class'ActorComponent'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "MemberName": "PrimaryComponentTick",
+              "MemberGuid": "00000000-00000000-00000000-00000000"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\GenericConfig\\SpaceCenter_BFR\\000063-DefaultSceneRoot.source.json",
+      "sha256": "8c8be19f8550224fb838df304f58f12660c91bb241421b403af23417dc8de1fe",
+      "source": {
+        "Type": "SceneComponent",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_WasLoaded | RF_LoadCompleted",
+        "Class": "UScriptClass'SceneComponent'",
+        "Outer": {
+          "ObjectName": "BP_InteractorContainer_Rocket_C'SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_航天城_合同_发射区_航空储物箱_29-53false'",
+          "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.23"
+        },
+        "Template": {
+          "ObjectName": "SceneComponent'BP_InteractorContainer_Rocket_C:ICH-DefaultSceneRoot_GEN_VARIABLE'",
+          "ObjectPath": "DeltaForce/Content/BluePrints/Interact/BP_InteractorContainer_Rocket.12"
+        },
+        "Properties": {
+          "RelativeLocation": {
+            "X": 660295.6,
+            "Y": -416530.88,
+            "Z": -21072.8
+          },
+          "RelativeRotation": {
+            "Pitch": 0.0,
+            "Yaw": -134.32954,
+            "Roll": 0.0
+          },
+          "PrimaryComponentTick": {
+            "AggregateClass": {
+              "ObjectName": "Class'SceneComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          "bNetAddressable": true,
+          "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript",
+          "UCSModifiedProperties": [
+            {
+              "MemberParent": {
+                "ObjectName": "Class'SceneComponent'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "MemberName": "RelativeLocation",
+              "MemberGuid": "00000000-00000000-00000000-00000000"
+            },
+            {
+              "MemberParent": {
+                "ObjectName": "Class'SceneComponent'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "MemberName": "RelativeRotation",
+              "MemberGuid": "00000000-00000000-00000000-00000000"
+            },
+            {
+              "MemberParent": {
+                "ObjectName": "Class'ActorComponent'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "MemberName": "PrimaryComponentTick",
+              "MemberGuid": "00000000-00000000-00000000-00000000"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "file": "E:\\df-extract-20261105\\placements\\validation\\resolution\\metadata\\objects\\DeltaForce\\Content\\BluePrints\\Interact\\BP_InteractorContainer_Rocket\\000010.json",
+      "sha256": "3977f979683d103ff393e69ea13c4c3d69a79b3c5a333d4377571b73ad1f23f4",
+      "source": {
+        "package": "DeltaForce/Content/BluePrints/Interact/BP_InteractorContainer_Rocket.uasset",
+        "objectPath": "DeltaForce/Content/BluePrints/Interact/BP_InteractorContainer_Rocket.BP_InteractorContainer_Rocket_C:InteractorSkeletalMesh_GEN_VARIABLE",
+        "className": "InteractorSkeletalMeshComponent",
+        "parserType": "CUE4Parse.UE4.Assets.Exports.UObject",
+        "template": "DeltaForce/Content/BluePrints/Interact/BP_Interact_AnimSwitcherContainer.BP_Interact_AnimSwitcherContainer_C:InteractorSkeletalMesh_GEN_VARIABLE",
+        "outer": "DeltaForce/Content/BluePrints/Interact/BP_InteractorContainer_Rocket.BP_InteractorContainer_Rocket_C",
+        "classPath": "/Script/DFMGameplay.InteractorSkeletalMeshComponent",
+        "super": null,
+        "source": {
+          "Type": "InteractorSkeletalMeshComponent",
+          "Name": "InteractorSkeletalMesh_GEN_VARIABLE",
+          "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+          "Class": "UScriptClass'InteractorSkeletalMeshComponent'",
+          "Outer": {
+            "ObjectName": "BlueprintGeneratedClass'BP_InteractorContainer_Rocket_C'",
+            "ObjectPath": "DeltaForce/Content/BluePrints/Interact/BP_InteractorContainer_Rocket.1"
+          },
+          "Template": {
+            "ObjectName": "InteractorSkeletalMeshComponent'BP_Interact_AnimSwitcherContainer_C:InteractorSkeletalMesh_GEN_VARIABLE'",
+            "ObjectPath": "DeltaForce/Content/BluePrints/Interact/BP_Interact_AnimSwitcherContainer.25"
+          },
+          "Properties": {
+            "AnimClass": {
+              "ObjectName": "AnimBlueprintGeneratedClass'ABP_Aircargo_C'",
+              "ObjectPath": "DeltaForce/Content/BluePrints/Interact/Animation/ABP_Aircargo.0"
+            },
+            "SkeletalMesh": {
+              "ObjectName": "SkeletalMesh'props_collect_box_657_3P'",
+              "ObjectPath": "DeltaForce/Content/Models/Props/Collect/props_collect_box_657/props_collect_box_657_3P.0"
+            },
+            "CullingScreenSize": 0.0041342415,
+            "RelativeLocation": {
+              "X": 2.109253,
+              "Y": -216.18752,
+              "Z": -3.25489
+            },
+            "RelativeScale3D": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Mobility": "EComponentMobility::Stationary"
+          }
+        },
+        "probe": null
+      }
+    },
+    {
+      "file": "E:\\df-extract-20261105\\placements\\validation\\resolution\\metadata\\objects\\DeltaForce\\Content\\BluePrints\\Interact\\BP_InteractorContainer_Rocket\\000012.json",
+      "sha256": "83b4370aa4cabb1ac9fe5cbdd2a5841e53a2c40dd8edb353503f376f5e567c1f",
+      "source": {
+        "package": "DeltaForce/Content/BluePrints/Interact/BP_InteractorContainer_Rocket.uasset",
+        "objectPath": "DeltaForce/Content/BluePrints/Interact/BP_InteractorContainer_Rocket.BP_InteractorContainer_Rocket_C:ICH-DefaultSceneRoot_GEN_VARIABLE",
+        "className": "SceneComponent",
+        "parserType": "CUE4Parse.UE4.Assets.Exports.Component.USceneComponent",
+        "template": "DeltaForce/Content/BluePrints/Interact/BP_Interact_AnimSwitcherContainer.BP_Interact_AnimSwitcherContainer_C:ICH-DefaultSceneRoot_GEN_VARIABLE",
+        "outer": "DeltaForce/Content/BluePrints/Interact/BP_InteractorContainer_Rocket.BP_InteractorContainer_Rocket_C",
+        "classPath": "/Script/Engine.SceneComponent",
+        "super": null,
+        "source": {
+          "Type": "SceneComponent",
+          "Name": "ICH-DefaultSceneRoot_GEN_VARIABLE",
+          "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+          "Class": "UScriptClass'SceneComponent'",
+          "Outer": {
+            "ObjectName": "BlueprintGeneratedClass'BP_InteractorContainer_Rocket_C'",
+            "ObjectPath": "DeltaForce/Content/BluePrints/Interact/BP_InteractorContainer_Rocket.1"
+          },
+          "Template": {
+            "ObjectName": "SceneComponent'BP_Interact_AnimSwitcherContainer_C:ICH-DefaultSceneRoot_GEN_VARIABLE'",
+            "ObjectPath": "DeltaForce/Content/BluePrints/Interact/BP_Interact_AnimSwitcherContainer.27"
+          }
+        },
+        "probe": null
+      }
+    },
+    {
+      "file": "E:\\df-extract-20261105\\placements\\validation\\resolution\\metadata\\objects\\DeltaForce\\Content\\BluePrints\\Interact\\BP_Interact_AnimSwitcherContainer\\000025.json",
+      "sha256": "1b50a9fe2105757cc6168daea2b1f3dc3d414452b596acedbabda25c22b5c1f1",
+      "source": {
+        "package": "DeltaForce/Content/BluePrints/Interact/BP_Interact_AnimSwitcherContainer.uasset",
+        "objectPath": "DeltaForce/Content/BluePrints/Interact/BP_Interact_AnimSwitcherContainer.BP_Interact_AnimSwitcherContainer_C:InteractorSkeletalMesh_GEN_VARIABLE",
+        "className": "InteractorSkeletalMeshComponent",
+        "parserType": "CUE4Parse.UE4.Assets.Exports.UObject",
+        "template": null,
+        "outer": "DeltaForce/Content/BluePrints/Interact/BP_Interact_AnimSwitcherContainer.BP_Interact_AnimSwitcherContainer_C",
+        "classPath": "/Script/DFMGameplay.InteractorSkeletalMeshComponent",
+        "super": null,
+        "source": {
+          "Type": "InteractorSkeletalMeshComponent",
+          "Name": "InteractorSkeletalMesh_GEN_VARIABLE",
+          "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+          "Class": "UScriptClass'InteractorSkeletalMeshComponent'",
+          "Outer": {
+            "ObjectName": "BlueprintGeneratedClass'BP_Interact_AnimSwitcherContainer_C'",
+            "ObjectPath": "DeltaForce/Content/BluePrints/Interact/BP_Interact_AnimSwitcherContainer.14"
+          }
+        },
+        "probe": null
+      }
+    },
+    {
+      "file": "E:\\df-extract-20261105\\placements\\validation\\resolution\\metadata\\objects\\DeltaForce\\Content\\BluePrints\\Interact\\BP_Interact_AnimSwitcherContainer\\000027.json",
+      "sha256": "d7b14fa28d5c4714e334e15e01e008f0d6271fe63b1ea640f347dd5ec3c3fe04",
+      "source": {
+        "package": "DeltaForce/Content/BluePrints/Interact/BP_Interact_AnimSwitcherContainer.uasset",
+        "objectPath": "DeltaForce/Content/BluePrints/Interact/BP_Interact_AnimSwitcherContainer.BP_Interact_AnimSwitcherContainer_C:ICH-DefaultSceneRoot_GEN_VARIABLE",
+        "className": "SceneComponent",
+        "parserType": "CUE4Parse.UE4.Assets.Exports.Component.USceneComponent",
+        "template": null,
+        "outer": "DeltaForce/Content/BluePrints/Interact/BP_Interact_AnimSwitcherContainer.BP_Interact_AnimSwitcherContainer_C",
+        "classPath": "/Script/Engine.SceneComponent",
+        "super": null,
+        "source": {
+          "Type": "SceneComponent",
+          "Name": "ICH-DefaultSceneRoot_GEN_VARIABLE",
+          "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+          "Class": "UScriptClass'SceneComponent'",
+          "Outer": {
+            "ObjectName": "BlueprintGeneratedClass'BP_Interact_AnimSwitcherContainer_C'",
+            "ObjectPath": "DeltaForce/Content/BluePrints/Interact/BP_Interact_AnimSwitcherContainer.14"
+          }
+        },
+        "probe": null
+      }
+    }
+  ]
+}

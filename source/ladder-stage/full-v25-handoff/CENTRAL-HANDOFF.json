@@ -1,0 +1,65 @@
+{
+  "owner": "central49f09f11 sole promotion/compiler",
+  "compileAuthorized": true,
+  "installAuthorized": false,
+  "inputs": {
+    "world536": {
+      "path": "E:\\df-v25-build-20261106\\ladder-stage\\world-collision-candidate\\df_v25_ladder_solids_candidate.vmap",
+      "sha256": "00bd0a01d29f724e1627df1825ba84dc6326d2c6c47619bfb2cb48e6f5c3b99b",
+      "bytes": 6550396
+    },
+    "nativeAll10": {
+      "path": "E:\\df-v25-build-20261106\\ladder-stage\\full-v25-handoff\\df_v25_native_ladders_all10.vmap",
+      "sha256": "74de3435ec8f01628ac6c986602159eb1313aa55f3ba97899b60b8ce21e220d7",
+      "bytes": 128055
+    }
+  },
+  "sourceReceipts": {
+    "solids": {
+      "path": "E:\\df-v25-build-20261106\\ladder-stage\\world-collision-candidate\\solid-world-boxes-proposal.json",
+      "sha256": "fb1b2ef2ccc7a706423a2b169aa71222db4164dc1759a76193995f2e1f18d15e",
+      "bytes": 963628
+    },
+    "native": {
+      "path": "E:\\df-v25-build-20261106\\ladder-stage\\full-v25-handoff\\native-ladder-geometry-proposal.json",
+      "sha256": "43e9fdc19076be0da1d4575a749fad05add144ccc4bbb044ef54969f924803fd",
+      "bytes": 41681
+    }
+  },
+  "compiledProofs": {
+    "solids": {
+      "path": "E:\\df-v25-build-20261106\\ladder-stage\\solids-compiled-audit\\polygon-union-acceptance.json",
+      "sha256": "93ef280ccafc806f9b1ead8da75f5ce811382d0226baf7eb41068d146bf5340f",
+      "bytes": 409
+    },
+    "solidsAttributes": {
+      "path": "E:\\df-v25-build-20261106\\ladder-stage\\solids-compiled-audit\\compiled-acceptance.json",
+      "sha256": "76f650352e0f11fc5f4bb322f7ddc9786e648667df46adcd4de000f15ff6c6d5",
+      "bytes": 708
+    },
+    "nativeOne": {
+      "path": "E:\\df-v25-build-20261106\\ladder-stage\\native-compiled-audit\\native-front-surface-acceptance.json",
+      "sha256": "eba09f82824cc76c1584aa120771e0ad2ccc873c1e16b4baed650ad8b5e3820c",
+      "bytes": 2547
+    }
+  },
+  "dependencies": {
+    "path": "E:\\df-v25-build-20261106\\ladder-stage\\pilot-dependency-closure.json",
+    "sha256": "ee1b9a121102fd853a279e732b7c71405d957e9191cc69310c53125be32d4c1d",
+    "bytes": 2521
+  },
+  "promotionInstructions": [
+    "extract536 CMapMesh world children from solids VMAP and10 CMapMesh children from native VMAP into appropriate v25 children; native default nodeIDs5100000..5100009 solids5200000..5200535; retain source world coordinates identity origin",
+    "replace original TEN lc_ collision-only prop_static entries ONLY when exact536 world boxes promoted; retain142 visible ladder segments; no duplicate old lc collision routes",
+    "Do not replace full map with standalone pilot worlds; copy world.children CMapMesh only preserving destination sky lighting spawns",
+    "central sole E-only detached compiler fullRAM no guards; no install authorization"
+  ],
+  "boundedGates": [
+    "on combined compile verify all536boxes3216faces worldPHYS surface/normal and default solidity",
+    "all10 native front faces should compile20 ladder tris and100nonladder side/back/top/bottom tris, count reference only enforce source orientation/planes too",
+    "142 visible ladder segments exact model/RERL material texture closure and actual yellow slot evidence; ERROR render mesh identity NOT proven by background hits47/48; do not edit background",
+    "runtime front/back bottom/topout bullet/player later approved test required; not claimed by compile"
+  ],
+  "errorAssetStatus": "UNRESOLVED exact ERROR renderer. Hits47/48 proven BACKGROUND wall/support, cannot identify ladder renderer or material. No inferred background removal/material fix.",
+  "runtimeVerified": false
+}

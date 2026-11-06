@@ -1,0 +1,26 @@
+{
+  "id": "m_87a8b597376afe67",
+  "objectPath": "DeltaForce/Content/Maps/Tide/LD/L0FBX/SM_WaterPlan_Tide_PC_06.SM_WaterPlan_Tide_PC_06",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Maps\\Tide\\LD\\L0FBX\\SM_WaterPlan_Tide_PC_06.glb",
+  "sourceSHA256": "12E32D2DC2DB7AE25B486EE6686792554AC2D53C30BB7624E161CF99A88F8625",
+  "model": "models/df_v24/m_87a8b597376afe67.vmdl",
+  "materials": {
+    "mat_7b6e3928157ec967": "DeltaForce/Content/MaterialLib/Materials_HD/Water/MaterialInstances/MI_WaterHD_Tide.MI_WaterHD_Tide"
+  },
+  "vertices": 653,
+  "polygons": 1204,
+  "bounds": [
+    [
+      -2004.8975830078125,
+      -3048.546875,
+      -1.8666966301698895e-13
+    ],
+    [
+      2207.1015625,
+      1397.444580078125,
+      8.556879976719806e-14
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "m_c89ae6ae9465584a",
+  "objectPath": "DeltaForce/Content/Models/Vehicles/F35/Appearance_Base/F35_TrailingEdge02.F35_TrailingEdge02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Vehicles\\F35\\Appearance_Base\\F35_TrailingEdge02.glb",
+  "sourceSHA256": "2CA241DFCF59E86137F7895D9A90811A25CEE676BA38B3D96489CB5C1AC05B69",
+  "model": "models/df_v24/m_c89ae6ae9465584a.vmdl",
+  "materials": {
+    "mat_738e91d78a0c2bd6": "DeltaForce/Content/Models/Vehicles/F35/Appearance_Base/Materials/carrier_wing_F35_drivable_body_02.carrier_wing_F35_drivable_body_02",
+    "mat_41bfee5b7c2efb9c": "DeltaForce/Content/Models/Vehicles/F35/Appearance_Base/Materials/carrier_wing_F35_drivable_body_01.carrier_wing_F35_drivable_body_01"
+  },
+  "vertices": 84,
+  "polygons": 68,
+  "bounds": [
+    [
+      -62.966529846191406,
+      -34.04273986816406,
+      -5.3464579582214355
+    ],
+    [
+      15.598459243774414,
+      30.30635643005371,
+      2.6848607063293457
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

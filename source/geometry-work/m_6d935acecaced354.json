@@ -1,0 +1,26 @@
+{
+  "id": "m_6d935acecaced354",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Transport/Utility/SM_H_Transport_Utility_Column_01.SM_H_Transport_Utility_Column_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Transport\\Utility\\SM_H_Transport_Utility_Column_01.glb",
+  "sourceSHA256": "4E58061CCE930F2C4DFE4F41DBFF34C6A3723204D9B5C40BD5D7300463A7B381",
+  "model": "models/df_v24/m_6d935acecaced354.vmdl",
+  "materials": {
+    "mat_ccd5fccf2ff4197a": "DeltaForce/Content/Environment/Props/HAAVK/Transport/Utility/00_Materials/HD/MI_H_Transport_Utility_Column_01_HD.MI_H_Transport_Utility_Column_01_HD"
+  },
+  "vertices": 789,
+  "polygons": 764,
+  "bounds": [
+    [
+      -3.178635835647583,
+      -3.178643226623535,
+      -1.201629629576928e-06
+    ],
+    [
+      3.178635835647583,
+      3.178645610809326,
+      29.683706283569336
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

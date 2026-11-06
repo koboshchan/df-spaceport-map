@@ -1,0 +1,30 @@
+{
+  "id": "m_9208b39b317bd1d4",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Government/Tide/SM_H_Government_Tide_Bridge_01c.SM_H_Government_Tide_Bridge_01c",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Government\\Tide\\SM_H_Government_Tide_Bridge_01c.glb",
+  "sourceSHA256": "8F9023117453C4F8D665CADC570E9B08310E7DDE5AE2BB53FE28955DB72090FC",
+  "model": "models/df_v24/m_9208b39b317bd1d4.vmdl",
+  "materials": {
+    "mat_0d0cf733efdeca2b": "DeltaForce/Content/Environment/Props/HAAVK/Government/Tide/00_Materials/HD/MI_H_Government_Tide_Crane_01B_HD.MI_H_Government_Tide_Crane_01B_HD",
+    "mat_3a60b085ef28f10d": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Tide/00_Materials/HD/MI_H_Building_Tide_Trim_Indoor_05_HD.MI_H_Building_Tide_Trim_Indoor_05_HD",
+    "mat_a470bb7a4be0d311": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Tide/00_Materials/HD/MI_H_Building_Tide_Glass_02_HD.MI_H_Building_Tide_Glass_02_HD",
+    "mat_c15257826cf94adc": "DeltaForce/Content/Environment/Props/HAAVK/Government/Tide/00_Materials/HD/MI_H_Government_Tide_Bridge_01b_HD.MI_H_Government_Tide_Bridge_01b_HD",
+    "mat_b7fb4f3833e2407c": "DeltaForce/Content/Environment/Decal/Connect/00_Materials/HD/MI_I_Connect_Decal_01A_HD.MI_I_Connect_Decal_01A_HD"
+  },
+  "vertices": 24726,
+  "polygons": 23334,
+  "bounds": [
+    [
+      -67.01709747314453,
+      -300.4397888183594,
+      -38.68766784667969
+    ],
+    [
+      67.01709747314453,
+      6.565978050231934,
+      2.3312931060791016
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

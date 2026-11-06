@@ -1,0 +1,526 @@
+[
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Gameplay/Gameplay_x26_y18_0.Gameplay_x26_y18_0:PersistentLevel.BP_Interactor_DFMZipline_Type3_0.NODE_AddSplineMeshComponent-0",
+    "model": "models/df_v24/s_c3a87451d10e4a46.vmdl",
+    "id": "s_c3a87451d10e4a46",
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "worldBaked": true,
+    "collisionEnabled": false,
+    "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\Gameplay\\Gameplay_x26_y18_0\\000412-NODE_AddSplineMeshComponent-0.source.json",
+    "forwardAxis": "Z from Type1/Type2 archetype",
+    "sourceSplineParams": {
+      "StartPos": {
+        "X": -0.106006,
+        "Y": -0.06624,
+        "Z": 1.0
+      },
+      "StartTangent": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.0
+      },
+      "EndPos": {
+        "X": 29.677902,
+        "Y": -0.186031,
+        "Z": -5067.6387
+      },
+      "EndTangent": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.0
+      }
+    },
+    "basis": "sourceUE Hermite deformation then fullSourceWorldMatrix then UE->CS2",
+    "validation": "endpoint Hermite equality analytic; native visual parity not yet runtime verified",
+    "vertices": 18
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Gameplay/Gameplay_x26_y18_0.Gameplay_x26_y18_0:PersistentLevel.BP_Interactor_DFMZipline_Type4.NODE_AddSplineMeshComponent-0",
+    "model": "models/df_v24/s_12ce45cbcd4cb98a.vmdl",
+    "id": "s_12ce45cbcd4cb98a",
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "worldBaked": true,
+    "collisionEnabled": false,
+    "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\Gameplay\\Gameplay_x26_y18_0\\000413-NODE_AddSplineMeshComponent-0.source.json",
+    "forwardAxis": "Z from Type1/Type2 archetype",
+    "sourceSplineParams": {
+      "StartPos": {
+        "X": -12.190825,
+        "Y": -0.289812,
+        "Z": 1.046875
+      },
+      "StartTangent": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.0
+      },
+      "EndPos": {
+        "X": -11.30438,
+        "Y": 0.371151,
+        "Z": -5066.451
+      },
+      "EndTangent": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.0
+      }
+    },
+    "basis": "sourceUE Hermite deformation then fullSourceWorldMatrix then UE->CS2",
+    "validation": "endpoint Hermite equality analytic; native visual parity not yet runtime verified",
+    "vertices": 18
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Gameplay/Gameplay_x26_y18_2.Gameplay_x26_y18_2:PersistentLevel.BP_Interactor_DFMZipline_Type11.NODE_AddSplineMeshComponent-0",
+    "model": "models/df_v24/s_0da464861ac91307.vmdl",
+    "id": "s_0da464861ac91307",
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "worldBaked": true,
+    "collisionEnabled": false,
+    "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\Gameplay\\Gameplay_x26_y18_2\\000565-NODE_AddSplineMeshComponent-0.source.json",
+    "forwardAxis": "Z from Type1/Type2 archetype",
+    "sourceSplineParams": {
+      "StartPos": {
+        "X": -0.8124989,
+        "Y": -1.9375005,
+        "Z": -151.96094
+      },
+      "StartTangent": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.0
+      },
+      "EndPos": {
+        "X": -3.09375,
+        "Y": -0.062501,
+        "Z": -1439.9668
+      },
+      "EndTangent": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.0
+      }
+    },
+    "basis": "sourceUE Hermite deformation then fullSourceWorldMatrix then UE->CS2",
+    "validation": "endpoint Hermite equality analytic; native visual parity not yet runtime verified",
+    "vertices": 18
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Gameplay/Gameplay_x27_y18_2.Gameplay_x27_y18_2:PersistentLevel.BP_Interactor_DFMZipline_Type4_2.NODE_AddSplineMeshComponent-0",
+    "model": "models/df_v24/s_082869e3cdf21393.vmdl",
+    "id": "s_082869e3cdf21393",
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "worldBaked": true,
+    "collisionEnabled": false,
+    "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\Gameplay\\Gameplay_x27_y18_2\\000338-NODE_AddSplineMeshComponent-0.source.json",
+    "forwardAxis": "Z from Type1/Type2 archetype",
+    "sourceSplineParams": {
+      "StartTangent": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.0
+      },
+      "EndPos": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -1047.5059
+      },
+      "EndTangent": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.0
+      }
+    },
+    "basis": "sourceUE Hermite deformation then fullSourceWorldMatrix then UE->CS2",
+    "validation": "endpoint Hermite equality analytic; native visual parity not yet runtime verified",
+    "vertices": 18
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Gameplay/Gameplay_x26_y18_3.Gameplay_x26_y18_3:PersistentLevel.BP_Interactor_DFMZipline_Type1_2.NODE_AddSplineMeshComponent-0",
+    "model": "models/df_v24/s_bb50236aec4411aa.vmdl",
+    "id": "s_bb50236aec4411aa",
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "worldBaked": true,
+    "collisionEnabled": false,
+    "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\Gameplay\\Gameplay_x26_y18_3\\000195-NODE_AddSplineMeshComponent-0.source.json",
+    "forwardAxis": "Z from Type1/Type2 archetype",
+    "sourceSplineParams": {
+      "StartPos": {
+        "X": 151.99998,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "StartTangent": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.0
+      },
+      "EndPos": {
+        "X": 4601.9683,
+        "Y": 131.6875,
+        "Z": -725.74414
+      },
+      "EndTangent": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.0
+      }
+    },
+    "basis": "sourceUE Hermite deformation then fullSourceWorldMatrix then UE->CS2",
+    "validation": "endpoint Hermite equality analytic; native visual parity not yet runtime verified",
+    "vertices": 18
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Gameplay/Gameplay_x26_y18_3.Gameplay_x26_y18_3:PersistentLevel.BP_Interactor_DFMZipline_Type2.NODE_AddSplineMeshComponent-0",
+    "model": "models/df_v24/s_0d96346c966c8907.vmdl",
+    "id": "s_0d96346c966c8907",
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "worldBaked": true,
+    "collisionEnabled": false,
+    "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\Gameplay\\Gameplay_x26_y18_3\\000196-NODE_AddSplineMeshComponent-0.source.json",
+    "forwardAxis": "Z from Type1/Type2 archetype",
+    "sourceSplineParams": {
+      "StartPos": {
+        "X": -137.00003,
+        "Y": 366.99994,
+        "Z": 0.0
+      },
+      "StartTangent": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.0
+      },
+      "EndPos": {
+        "X": 2909.656,
+        "Y": 234.6875,
+        "Z": 97.32422
+      },
+      "EndTangent": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.0
+      }
+    },
+    "basis": "sourceUE Hermite deformation then fullSourceWorldMatrix then UE->CS2",
+    "validation": "endpoint Hermite equality analytic; native visual parity not yet runtime verified",
+    "vertices": 18
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Gameplay/Gameplay_x26_y17_0.Gameplay_x26_y17_0:PersistentLevel.BP_Interactor_DFMZipline_Type10.NODE_AddSplineMeshComponent-0",
+    "model": "models/df_v24/s_a37dc6379b747425.vmdl",
+    "id": "s_a37dc6379b747425",
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "worldBaked": true,
+    "collisionEnabled": false,
+    "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\Gameplay\\Gameplay_x26_y17_0\\000292-NODE_AddSplineMeshComponent-0.source.json",
+    "forwardAxis": "Z from Type1/Type2 archetype",
+    "sourceSplineParams": {
+      "StartPos": {
+        "X": -0.066291,
+        "Y": 0.15468,
+        "Z": 2.15625
+      },
+      "StartTangent": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.0
+      },
+      "EndPos": {
+        "X": 53.430756,
+        "Y": 0.044276,
+        "Z": -759.30273
+      },
+      "EndTangent": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.0
+      }
+    },
+    "basis": "sourceUE Hermite deformation then fullSourceWorldMatrix then UE->CS2",
+    "validation": "endpoint Hermite equality analytic; native visual parity not yet runtime verified",
+    "vertices": 18
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Gameplay/Gameplay_x26_y17_0.Gameplay_x26_y17_0:PersistentLevel.BP_Interactor_DFMZipline_Type7.NODE_AddSplineMeshComponent-0",
+    "model": "models/df_v24/s_633b7bfd61db2de8.vmdl",
+    "id": "s_633b7bfd61db2de8",
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "worldBaked": true,
+    "collisionEnabled": false,
+    "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\Gameplay\\Gameplay_x26_y17_0\\000293-NODE_AddSplineMeshComponent-0.source.json",
+    "forwardAxis": "Z from Type1/Type2 archetype",
+    "sourceSplineParams": {
+      "StartPos": {
+        "X": -0.68501,
+        "Y": -2.541165,
+        "Z": -174.16992
+      },
+      "StartTangent": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.0
+      },
+      "EndPos": {
+        "X": 6.1208925,
+        "Y": -0.5966215,
+        "Z": -1059.0488
+      },
+      "EndTangent": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.0
+      }
+    },
+    "basis": "sourceUE Hermite deformation then fullSourceWorldMatrix then UE->CS2",
+    "validation": "endpoint Hermite equality analytic; native visual parity not yet runtime verified",
+    "vertices": 18
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Gameplay/Gameplay_x26_y17_0.Gameplay_x26_y17_0:PersistentLevel.BP_Interactor_DFMZipline_Type8.NODE_AddSplineMeshComponent-0",
+    "model": "models/df_v24/s_236580b2fd06101f.vmdl",
+    "id": "s_236580b2fd06101f",
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "worldBaked": true,
+    "collisionEnabled": false,
+    "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\Gameplay\\Gameplay_x26_y17_0\\000294-NODE_AddSplineMeshComponent-0.source.json",
+    "forwardAxis": "Z from Type1/Type2 archetype",
+    "sourceSplineParams": {
+      "StartPos": {
+        "X": -0.8175924,
+        "Y": -1.9224468,
+        "Z": -151.96094
+      },
+      "StartTangent": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.0
+      },
+      "EndPos": {
+        "X": 122.241104,
+        "Y": -0.17677307,
+        "Z": -1059.4805
+      },
+      "EndTangent": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.0
+      }
+    },
+    "basis": "sourceUE Hermite deformation then fullSourceWorldMatrix then UE->CS2",
+    "validation": "endpoint Hermite equality analytic; native visual parity not yet runtime verified",
+    "vertices": 18
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Gameplay/Gameplay_x26_y17_3.Gameplay_x26_y17_3:PersistentLevel.BP_Interactor_DFMZipline_Type5_2.NODE_AddSplineMeshComponent-0",
+    "model": "models/df_v24/s_e28d9c88531907ed.vmdl",
+    "id": "s_e28d9c88531907ed",
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "worldBaked": true,
+    "collisionEnabled": false,
+    "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\Gameplay\\Gameplay_x26_y17_3\\000299-NODE_AddSplineMeshComponent-0.source.json",
+    "forwardAxis": "Z from Type1/Type2 archetype",
+    "sourceSplineParams": {
+      "StartTangent": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.0
+      },
+      "EndPos": {
+        "X": -1.768608,
+        "Y": -0.069559,
+        "Z": -1058.9961
+      },
+      "EndTangent": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.0
+      }
+    },
+    "basis": "sourceUE Hermite deformation then fullSourceWorldMatrix then UE->CS2",
+    "validation": "endpoint Hermite equality analytic; native visual parity not yet runtime verified",
+    "vertices": 18
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Gameplay/Gameplay_x27_y17_1.Gameplay_x27_y17_1:PersistentLevel.BP_Interactor_DFMZipline_Type6.NODE_AddSplineMeshComponent-0",
+    "model": "models/df_v24/s_b728575026a62841.vmdl",
+    "id": "s_b728575026a62841",
+    "origin": [
+      0,
+      0,
+      0
+    ],
+    "angles": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "worldBaked": true,
+    "collisionEnabled": false,
+    "source": "E:\\df-extract-20261105\\placements\\DeltaForce\\Content\\Maps\\SpaceCenter_Ma1\\InterActors\\Gameplay\\Gameplay_x27_y17_1\\000038-NODE_AddSplineMeshComponent-0.source.json",
+    "forwardAxis": "Z from Type1/Type2 archetype",
+    "sourceSplineParams": {
+      "StartTangent": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.0
+      },
+      "EndPos": {
+        "X": 56.48592,
+        "Y": -0.18596649,
+        "Z": -1526.2305
+      },
+      "EndTangent": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.0
+      }
+    },
+    "basis": "sourceUE Hermite deformation then fullSourceWorldMatrix then UE->CS2",
+    "validation": "endpoint Hermite equality analytic; native visual parity not yet runtime verified",
+    "vertices": 18
+  }
+]

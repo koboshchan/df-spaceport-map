@@ -1,0 +1,31 @@
+{
+  "id": "m_c7dff0ab580fe669",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_Building_FutureTech_H_01/SM_H_Building_FutureTech_HLight_01_InterWall_09.SM_H_Building_FutureTech_HLight_01_InterWall_09",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_Building_FutureTech_H_01\\SM_H_Building_FutureTech_HLight_01_InterWall_09.glb",
+  "sourceSHA256": "D4D1E43E22E81FA9159C9A96A2900786634FE0F705BD807D5C3B9EC106AB47F8",
+  "model": "models/df_v24/m_c7dff0ab580fe669.vmdl",
+  "materials": {
+    "mat_57c102789a468b7d": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_07B_HD.MI_GEN_Metal_Painting_07B_HD",
+    "mat_a2e38387bfade7b5": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_PaintingFloor_02_HD.MI_GEN_Metal_PaintingFloor_02_HD",
+    "mat_1b58319710d2fd64": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_06_HD.MI_GEN_Metal_Painting_06_HD",
+    "mat_43c147dbe2c0f521": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_HLight_01_InterWall_09_HD.MI_H_Building_FutureTech_HLight_01_InterWall_09_HD",
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD"
+  },
+  "vertices": 685,
+  "polygons": 534,
+  "bounds": [
+    [
+      -1776.646484375,
+      1577.2049560546875,
+      184.31997680664062
+    ],
+    [
+      -1127.385009765625,
+      2165.760009765625,
+      875.5602416992188
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

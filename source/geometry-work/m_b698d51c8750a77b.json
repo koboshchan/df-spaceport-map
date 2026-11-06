@@ -1,0 +1,27 @@
+{
+  "id": "m_b698d51c8750a77b",
+  "objectPath": "DeltaForce/Content/Models/Props/container/props_Container_hornmouth_1302/props_Container_hornmouth_1302_LAY.props_Container_hornmouth_1302_LAY",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Props\\container\\props_Container_hornmouth_1302\\props_Container_hornmouth_1302_LAY.glb",
+  "sourceSHA256": "01320927AABE3D681CDEC1FE633209C700D58C415DB82364CE09B713C1113AAA",
+  "model": "models/df_v24/m_b698d51c8750a77b.vmdl",
+  "materials": {
+    "mat_c41a14fe738a1577": "DeltaForce/Content/Models/Props/container/props_Container_hornmouth_1302/Materials/props_Container_hornmouth_1302_01.props_Container_hornmouth_1302_01",
+    "mat_0e5c3b4948e2a4e9": "DeltaForce/Content/Models/Props/container/props_Container_hornmouth_1302/Materials/props_Container_hornmouth_1302_02.props_Container_hornmouth_1302_02"
+  },
+  "vertices": 3725,
+  "polygons": 6380,
+  "bounds": [
+    [
+      -33.29964828491211,
+      -14.33285140991211,
+      -3.891489028930664
+    ],
+    [
+      33.60972595214844,
+      14.597929000854492,
+      93.20585632324219
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

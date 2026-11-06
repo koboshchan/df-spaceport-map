@@ -1,0 +1,28 @@
+{
+  "id": "m_02f2fa7b262ab1c4",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Door/Customiz/SM_H_Customiz_SlidingDoor_01_Frame.SM_H_Customiz_SlidingDoor_01_Frame",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Door\\Customiz\\SM_H_Customiz_SlidingDoor_01_Frame.glb",
+  "sourceSHA256": "8827B7566BE10A7F1D6F3E994D95F81E3B4ADC0914D63D0310CF13F91C22E398",
+  "model": "models/df_v24/m_02f2fa7b262ab1c4.vmdl",
+  "materials": {
+    "mat_5f34bbc7c211be54": "DeltaForce/Content/Environment/Structures/HAAVK/Door/00_Materials/HD/MI_H_Customiz_SlidingDoor_01A_HD.MI_H_Customiz_SlidingDoor_01A_HD",
+    "mat_99147ede1cfdbb6f": "DeltaForce/Content/Environment/Structures/HAAVK/Door/00_Materials/HD/MI_H_Customiz_SlidingDoor_01c_HD.MI_H_Customiz_SlidingDoor_01c_HD",
+    "mat_c47fc14452fd7a10": "DeltaForce/Content/Environment/Structures/HAAVK/Door/00_Materials/HD/MI_H_Customiz_SlidingDoor_01B_HD.MI_H_Customiz_SlidingDoor_01B_HD"
+  },
+  "vertices": 14539,
+  "polygons": 13226,
+  "bounds": [
+    [
+      -369.99334716796875,
+      -60.20027542114258,
+      0.6683302521705627
+    ],
+    [
+      1.3534936904907227,
+      33.564510345458984,
+      700.774169921875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

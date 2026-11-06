@@ -1,0 +1,26 @@
+{
+  "id": "m_56297a71a1091c45",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Branding/Poster/SM_H_Branding_Poster_Banner_01C.SM_H_Branding_Poster_Banner_01C",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Branding\\Poster\\SM_H_Branding_Poster_Banner_01C.glb",
+  "sourceSHA256": "CB061DFE6AAFFFEC22FFF408008841B29568E6CD25F56413FBE0891CAE602179",
+  "model": "models/df_v24/m_56297a71a1091c45.vmdl",
+  "materials": {
+    "mat_c81aa786b8625478": "DeltaForce/Content/Environment/Props/HAAVK/Branding/00_Materials/HD/MI_H_Branding_Poster_Banner_01C_HD.MI_H_Branding_Poster_Banner_01C_HD"
+  },
+  "vertices": 600,
+  "polygons": 933,
+  "bounds": [
+    [
+      23.562660217285156,
+      -68.59957885742188,
+      39.01436233520508
+    ],
+    [
+      255.23919677734375,
+      17.987499237060547,
+      380.05316162109375
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "m_6849f5443786bc85",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_Dormitory/SM_H_Building_FutureTech_Dormitory_02_InterWall_04.SM_H_Building_FutureTech_Dormitory_02_InterWall_04",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_Dormitory\\SM_H_Building_FutureTech_Dormitory_02_InterWall_04.glb",
+  "sourceSHA256": "8FBF5516CB865B1FC59978EDCC92326DAC69107D169DFDF87B354DF63BE348CD",
+  "model": "models/df_v24/m_6849f5443786bc85.vmdl",
+  "materials": {
+    "mat_79071d76426b9c38": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Fabric_Wall_01_HD.MI_GEN_Fabric_Wall_01_HD",
+    "mat_cf4bffa2e71ba398": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Concrete_Base_02_HD.MI_GEN_Concrete_Base_02_HD",
+    "mat_e20034a5b5aeebed": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Fabric_Floor_01_HD.MI_GEN_Fabric_Floor_01_HD",
+    "mat_c6f758474e05beb4": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Base_01_HD.MI_GEN_Marble_Base_01_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_0c3d4725e8f3b0b6": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Wooden_Plank_02C_HD.MI_GEN_Wooden_Plank_02C_HD"
+  },
+  "vertices": 2032,
+  "polygons": 2268,
+  "bounds": [
+    [
+      -394.1294860839844,
+      -728.440673828125,
+      149.69915771484375
+    ],
+    [
+      -11.1383056640625,
+      -8.639988899230957,
+      287.9989013671875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

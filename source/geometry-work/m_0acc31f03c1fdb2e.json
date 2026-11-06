@@ -1,0 +1,27 @@
+{
+  "id": "m_0acc31f03c1fdb2e",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/IceLand/SM_H_IceLand_Props_IndustrialRoadblock_01a.SM_H_IceLand_Props_IndustrialRoadblock_01a",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\IceLand\\SM_H_IceLand_Props_IndustrialRoadblock_01a.glb",
+  "sourceSHA256": "607384F3FEFC2223BE30EB4BDAF2AE0ED64756FB27C0DBBF88C34E0A5DFF9C4F",
+  "model": "models/df_v24/m_0acc31f03c1fdb2e.vmdl",
+  "materials": {
+    "mat_50b75248f60cec66": "DeltaForce/Content/Maps/Iceland/Asset/Props/00_Materials/HD/MI_H_IceLand_Props_IndustrialRoadblock_01a_HD.MI_H_IceLand_Props_IndustrialRoadblock_01a_HD",
+    "mat_6ee24cd80449264b": "DeltaForce/Content/Maps/Iceland/Asset/Props/00_Materials/HD/MI_IceLand_Props_IndustrialPipeline_02c_HD.MI_IceLand_Props_IndustrialPipeline_02c_HD"
+  },
+  "vertices": 320,
+  "polygons": 456,
+  "bounds": [
+    [
+      -64.5333251953125,
+      -2.699371814727783,
+      -5.458831583382562e-05
+    ],
+    [
+      -0.6206726431846619,
+      2.699371099472046,
+      6.924369812011719
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

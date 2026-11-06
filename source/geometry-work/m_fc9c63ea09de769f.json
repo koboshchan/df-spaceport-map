@@ -1,0 +1,28 @@
+{
+  "id": "m_fc9c63ea09de769f",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/SM_H_Government_Office_FrontDesk_02.SM_H_Government_Office_FrontDesk_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Government\\Office\\SM_H_Government_Office_FrontDesk_02.glb",
+  "sourceSHA256": "CDB7FB65224437EACC9340179B5C07FEF869ADA0DA928DF47876437E28DD10F6",
+  "model": "models/df_v24/m_fc9c63ea09de769f.vmdl",
+  "materials": {
+    "mat_c6f758474e05beb4": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Base_01_HD.MI_GEN_Marble_Base_01_HD",
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD",
+    "mat_1dc6bf98a54aafeb": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Checkred_06_HD.MI_GEN_Marble_Checkred_06_HD"
+  },
+  "vertices": 957,
+  "polygons": 1068,
+  "bounds": [
+    [
+      -232.66416931152344,
+      -94.08656311035156,
+      -5.62921749009326e-15
+    ],
+    [
+      0.9102309942245483,
+      1.8486144542694092,
+      39.474647521972656
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

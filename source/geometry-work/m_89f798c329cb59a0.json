@@ -1,0 +1,28 @@
+{
+  "id": "m_89f798c329cb59a0",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/SM_H_FutureTech_Furniture_Speakers_01_C.SM_H_FutureTech_Furniture_Speakers_01_C",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\SM_H_FutureTech_Furniture_Speakers_01_C.glb",
+  "sourceSHA256": "AF9DF931339C31AA480187E02869CC3313FD2A29203F502DB520A2634B074B8D",
+  "model": "models/df_v24/m_89f798c329cb59a0.vmdl",
+  "materials": {
+    "mat_8608b90c6a089ddf": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Furniture_Speakers_01_A_HD.MI_H_FutureTech_Furniture_Speakers_01_A_HD",
+    "mat_6f957376ebbd47cb": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Furniture_Speakers_01_B_HD.MI_H_FutureTech_Furniture_Speakers_01_B_HD",
+    "mat_8e924da7c5555239": "DeltaForce/Content/Environment/Props/Branding/00_Materials/HD/MI_Branding_Sticker_Number_01D_HD.MI_Branding_Sticker_Number_01D_HD"
+  },
+  "vertices": 2110,
+  "polygons": 2186,
+  "bounds": [
+    [
+      -23.323436737060547,
+      -11.388111114501953,
+      -19.86167335510254
+    ],
+    [
+      23.32478141784668,
+      3.427434206008911,
+      -0.001363677904009819
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

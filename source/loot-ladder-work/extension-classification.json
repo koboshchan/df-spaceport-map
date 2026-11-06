@@ -1,0 +1,622 @@
+{
+  "reason": "original approved27 skeletal targets omitted source-primary variants797/589/1092; direct Level2 ordinary source actors identify15 additional placements, not substitutions",
+  "rows": [
+    {
+      "selectionId": "selection-100",
+      "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/InnerLoot/InnerLoot_x26_y18_8.InnerLoot_x26_y18_8:PersistentLevel.BP_Interactor_SingleItemContainer_Cabinet_1_C_航天城_中心区_H3一楼储物间_低级个人储物柜_74-78false_BLoot0.InteractorAsyncSkeletalMesh",
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/InnerLoot/InnerLoot_x26_y18_8.InnerLoot_x26_y18_8:PersistentLevel.BP_Interactor_SingleItemContainer_Cabinet_1_C_航天城_中心区_H3一楼储物间_低级个人储物柜_74-78false_BLoot0",
+      "meshObjectPath": "DeltaForce/Content/Models/SceneObjects/props_container_Locker_797/props_container_Locker_797_3P.uasset",
+      "canonicalType": "c_locker",
+      "category": "ORDINARY_LOCKER",
+      "fullSourceWorldMatrix": [
+        [
+          3.4906585055782813e-07,
+          -0.999999999999939,
+          0.0,
+          673741.0
+        ],
+        [
+          0.999999999999939,
+          3.4906585055782813e-07,
+          0.0,
+          -459785.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.9,
+          -22037.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "positionCS2": [
+        1562.7599999999802,
+        714.6000000000058,
+        119.52000000000044
+      ],
+      "collisionEnabled": true,
+      "reason": "source primary mesh outside approved27; exact asset conversion required"
+    },
+    {
+      "selectionId": "selection-101",
+      "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/InnerLoot/InnerLoot_x26_y18_8.InnerLoot_x26_y18_8:PersistentLevel.BP_Interactor_SingleItemContainer_Cabinet_1_C_航天城_中心区_H3一楼储物间_低级个人储物柜_74-87false_BLoot0.InteractorAsyncSkeletalMesh",
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/InnerLoot/InnerLoot_x26_y18_8.InnerLoot_x26_y18_8:PersistentLevel.BP_Interactor_SingleItemContainer_Cabinet_1_C_航天城_中心区_H3一楼储物间_低级个人储物柜_74-87false_BLoot0",
+      "meshObjectPath": "DeltaForce/Content/Models/SceneObjects/props_container_Locker_797/props_container_Locker_797_3P.uasset",
+      "canonicalType": "c_locker",
+      "category": "ORDINARY_LOCKER",
+      "fullSourceWorldMatrix": [
+        [
+          3.4906585055782813e-07,
+          -0.999999999999939,
+          0.0,
+          673741.0
+        ],
+        [
+          0.999999999999939,
+          3.4906585055782813e-07,
+          0.0,
+          -459873.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.9,
+          -22037.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "positionCS2": [
+        1562.7599999999802,
+        746.2799999999988,
+        119.52000000000044
+      ],
+      "collisionEnabled": true,
+      "reason": "source primary mesh outside approved27; exact asset conversion required"
+    },
+    {
+      "selectionId": "selection-118",
+      "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Loot/Loot_x26_y18_0.Loot_x26_y18_0:PersistentLevel.BP_InteractorContainer_Cloth_Grab_C_航天城_中心区_H2医务室外_衣服_83-86false_BLoot0.InteractorAsyncSkeletalMesh",
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Loot/Loot_x26_y18_0.Loot_x26_y18_0:PersistentLevel.BP_InteractorContainer_Cloth_Grab_C_航天城_中心区_H2医务室外_衣服_83-86false_BLoot0",
+      "meshObjectPath": "DeltaForce/Content/Models/Props/Collect/props_collect_box_589/props_collect_box_589_3P.uasset",
+      "canonicalType": "c_piece_of_clothing",
+      "category": "ORDINARY_CLOTHING_ALTERNATE_MODEL",
+      "fullSourceWorldMatrix": [
+        [
+          -0.17364869331104005,
+          -0.9848076620901,
+          0.0,
+          663831.0383555436
+        ],
+        [
+          0.9848076620901,
+          -0.17364869331104005,
+          0.0,
+          -454866.28028719587
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -21263.16782
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "positionCS2": [
+        -2004.826192004315,
+        -1056.1390966094914,
+        398.09958480000114
+      ],
+      "collisionEnabled": true,
+      "reason": "source primary mesh outside approved27; exact asset conversion required"
+    },
+    {
+      "selectionId": "selection-228",
+      "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Loot/Loot_x26_y18_2.Loot_x26_y18_2:PersistentLevel.BP_Interactor_SingleItemContainer_WeaponBoxnew_C_航天城_中心区_H3一楼走廊_黑色潮汐武器箱_4-0false_BLoot0.InteractorAsyncSkeletalMesh",
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Loot/Loot_x26_y18_2.Loot_x26_y18_2:PersistentLevel.BP_Interactor_SingleItemContainer_WeaponBoxnew_C_航天城_中心区_H3一楼走廊_黑色潮汐武器箱_4-0false_BLoot0",
+      "meshObjectPath": "DeltaForce/Content/Models/Props/Collect/props_collect_box_1092/props_collect_box_1092_3P.uasset",
+      "canonicalType": null,
+      "category": "ORDINARY_CONTAINER",
+      "fullSourceWorldMatrix": [
+        [
+          -0.999999999996573,
+          -2.617993877804384e-06,
+          0.0,
+          675045.0
+        ],
+        [
+          2.617993877804384e-06,
+          -0.999999999996573,
+          0.0,
+          -456004.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -22037.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "positionCS2": [
+        2032.1999999999825,
+        -646.5599999999977,
+        119.52000000000044
+      ],
+      "collisionEnabled": true,
+      "reason": "source primary mesh outside approved27; exact asset conversion required"
+    },
+    {
+      "selectionId": "selection-229",
+      "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Loot/Loot_x26_y18_2.Loot_x26_y18_2:PersistentLevel.BP_Interactor_SingleItemContainer_WeaponBoxnew_C_航天城_中心区_H3玻璃房_黑色潮汐武器箱_21-12false_BLoot0.InteractorAsyncSkeletalMesh",
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Loot/Loot_x26_y18_2.Loot_x26_y18_2:PersistentLevel.BP_Interactor_SingleItemContainer_WeaponBoxnew_C_航天城_中心区_H3玻璃房_黑色潮汐武器箱_21-12false_BLoot0",
+      "meshObjectPath": "DeltaForce/Content/Models/Props/Collect/props_collect_box_1092/props_collect_box_1092_3P.uasset",
+      "canonicalType": null,
+      "category": "ORDINARY_CONTAINER",
+      "fullSourceWorldMatrix": [
+        [
+          -0.2429805185080336,
+          -0.9700311683784018,
+          0.0,
+          673214.0
+        ],
+        [
+          0.9700311683784018,
+          -0.2429805185080336,
+          0.0,
+          -456129.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -22037.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "positionCS2": [
+        1373.039999999979,
+        -601.5599999999977,
+        119.52000000000044
+      ],
+      "collisionEnabled": true,
+      "reason": "source primary mesh outside approved27; exact asset conversion required"
+    },
+    {
+      "selectionId": "selection-336",
+      "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/InnerLoot/InnerLoot_x26_y17_15.InnerLoot_x26_y17_15:PersistentLevel.BP_InteractorContainer_Cloth_Grab_C_航天城_中心区_H4一楼更衣室_衣服_38-54false_BLoot0.InteractorAsyncSkeletalMesh",
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/InnerLoot/InnerLoot_x26_y17_15.InnerLoot_x26_y17_15:PersistentLevel.BP_InteractorContainer_Cloth_Grab_C_航天城_中心区_H4一楼更衣室_衣服_38-54false_BLoot0",
+      "meshObjectPath": "DeltaForce/Content/Models/Props/Collect/props_collect_box_589/props_collect_box_589_3P.uasset",
+      "canonicalType": "c_piece_of_clothing",
+      "category": "ORDINARY_CLOTHING_ALTERNATE_MODEL",
+      "fullSourceWorldMatrix": [
+        [
+          0.4952709701267973,
+          -0.8687385487876434,
+          0.0,
+          676380.825161549
+        ],
+        [
+          0.8687385487876434,
+          0.4952709701267973,
+          0.0,
+          -450539.53950885776
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -21808.16782
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "positionCS2": [
+        2513.0970581576403,
+        -2613.7657768111967,
+        201.89958480000132
+      ],
+      "collisionEnabled": true,
+      "reason": "source primary mesh outside approved27; exact asset conversion required"
+    },
+    {
+      "selectionId": "selection-337",
+      "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/InnerLoot/InnerLoot_x26_y17_15.InnerLoot_x26_y17_15:PersistentLevel.BP_InteractorContainer_Cloth_Grab_C_航天城_中心区_H4一楼更衣室_衣服_44-8false_BLoot0.InteractorAsyncSkeletalMesh",
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/InnerLoot/InnerLoot_x26_y17_15.InnerLoot_x26_y17_15:PersistentLevel.BP_InteractorContainer_Cloth_Grab_C_航天城_中心区_H4一楼更衣室_衣服_44-8false_BLoot0",
+      "meshObjectPath": "DeltaForce/Content/Models/Props/Collect/props_collect_box_589/props_collect_box_589_3P.uasset",
+      "canonicalType": "c_piece_of_clothing",
+      "category": "ORDINARY_CLOTHING_ALTERNATE_MODEL",
+      "fullSourceWorldMatrix": [
+        [
+          0.08715678596025879,
+          -0.9961946068219188,
+          0.0,
+          676437.9442060044
+        ],
+        [
+          0.9961946068219188,
+          0.08715678596025879,
+          0.0,
+          -450087.4948452138
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -21804.16782
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "positionCS2": [
+        2533.6599141615734,
+        -2776.501855723036,
+        203.33958480000092
+      ],
+      "collisionEnabled": true,
+      "reason": "source primary mesh outside approved27; exact asset conversion required"
+    },
+    {
+      "selectionId": "selection-376",
+      "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/InnerLoot/InnerLoot_x26_y17_7.InnerLoot_x26_y17_7:PersistentLevel.BP_Interactor_SingleItemContainer_Cabinet_1_C_航天城_中心区_H1二楼办公室_低级个人储物柜_68-47false_BLoot0.InteractorAsyncSkeletalMesh",
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/InnerLoot/InnerLoot_x26_y17_7.InnerLoot_x26_y17_7:PersistentLevel.BP_Interactor_SingleItemContainer_Cabinet_1_C_航天城_中心区_H1二楼办公室_低级个人储物柜_68-47false_BLoot0",
+      "meshObjectPath": "DeltaForce/Content/Models/SceneObjects/props_container_Locker_797/props_container_Locker_797_3P.uasset",
+      "canonicalType": "c_locker",
+      "category": "ORDINARY_LOCKER",
+      "fullSourceWorldMatrix": [
+        [
+          8.028514557611999e-07,
+          -0.9999999999996777,
+          0.0,
+          664680.0
+        ],
+        [
+          0.9999999999996777,
+          8.028514557611999e-07,
+          0.0,
+          -448479.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.9,
+          -21004.791
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "positionCS2": [
+        -1699.2000000000116,
+        -3355.5599999999977,
+        491.1152400000001
+      ],
+      "collisionEnabled": true,
+      "reason": "source primary mesh outside approved27; exact asset conversion required"
+    },
+    {
+      "selectionId": "selection-377",
+      "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/InnerLoot/InnerLoot_x26_y17_7.InnerLoot_x26_y17_7:PersistentLevel.BP_Interactor_SingleItemContainer_Cabinet_1_C_航天城_中心区_H1二楼办公室_低级个人储物柜_68-56false_BLoot0.InteractorAsyncSkeletalMesh",
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/InnerLoot/InnerLoot_x26_y17_7.InnerLoot_x26_y17_7:PersistentLevel.BP_Interactor_SingleItemContainer_Cabinet_1_C_航天城_中心区_H1二楼办公室_低级个人储物柜_68-56false_BLoot0",
+      "meshObjectPath": "DeltaForce/Content/Models/SceneObjects/props_container_Locker_797/props_container_Locker_797_3P.uasset",
+      "canonicalType": "c_locker",
+      "category": "ORDINARY_LOCKER",
+      "fullSourceWorldMatrix": [
+        [
+          8.028514557611999e-07,
+          -0.9999999999996777,
+          0.0,
+          664680.0
+        ],
+        [
+          0.9999999999996777,
+          8.028514557611999e-07,
+          0.0,
+          -448569.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.9,
+          -21004.791
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "positionCS2": [
+        -1699.2000000000116,
+        -3323.1600000000035,
+        491.1152400000001
+      ],
+      "collisionEnabled": true,
+      "reason": "source primary mesh outside approved27; exact asset conversion required"
+    },
+    {
+      "selectionId": "selection-378",
+      "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/InnerLoot/InnerLoot_x26_y17_7.InnerLoot_x26_y17_7:PersistentLevel.BP_Interactor_SingleItemContainer_Cabinet_1_C_航天城_中心区_H1二楼办公室_低级个人储物柜_68-65false_BLoot0.InteractorAsyncSkeletalMesh",
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/InnerLoot/InnerLoot_x26_y17_7.InnerLoot_x26_y17_7:PersistentLevel.BP_Interactor_SingleItemContainer_Cabinet_1_C_航天城_中心区_H1二楼办公室_低级个人储物柜_68-65false_BLoot0",
+      "meshObjectPath": "DeltaForce/Content/Models/SceneObjects/props_container_Locker_797/props_container_Locker_797_3P.uasset",
+      "canonicalType": "c_locker",
+      "category": "ORDINARY_LOCKER",
+      "fullSourceWorldMatrix": [
+        [
+          8.028514557611999e-07,
+          -0.9999999999996777,
+          0.0,
+          664680.0
+        ],
+        [
+          0.9999999999996777,
+          8.028514557611999e-07,
+          0.0,
+          -448658.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.9,
+          -21004.791
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "positionCS2": [
+        -1699.2000000000116,
+        -3291.1199999999953,
+        491.1152400000001
+      ],
+      "collisionEnabled": true,
+      "reason": "source primary mesh outside approved27; exact asset conversion required"
+    },
+    {
+      "selectionId": "selection-379",
+      "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/InnerLoot/InnerLoot_x26_y17_7.InnerLoot_x26_y17_7:PersistentLevel.BP_Interactor_SingleItemContainer_Cabinet_1_C_航天城_中心区_H1二楼办公室_低级个人储物柜_68-74false_BLoot0.InteractorAsyncSkeletalMesh",
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/InnerLoot/InnerLoot_x26_y17_7.InnerLoot_x26_y17_7:PersistentLevel.BP_Interactor_SingleItemContainer_Cabinet_1_C_航天城_中心区_H1二楼办公室_低级个人储物柜_68-74false_BLoot0",
+      "meshObjectPath": "DeltaForce/Content/Models/SceneObjects/props_container_Locker_797/props_container_Locker_797_3P.uasset",
+      "canonicalType": "c_locker",
+      "category": "ORDINARY_LOCKER",
+      "fullSourceWorldMatrix": [
+        [
+          8.028514557611999e-07,
+          -0.9999999999996777,
+          0.0,
+          664680.0
+        ],
+        [
+          0.9999999999996777,
+          8.028514557611999e-07,
+          0.0,
+          -448747.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.9,
+          -21004.791
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "positionCS2": [
+        -1699.2000000000116,
+        -3259.0800000000163,
+        491.1152400000001
+      ],
+      "collisionEnabled": true,
+      "reason": "source primary mesh outside approved27; exact asset conversion required"
+    },
+    {
+      "selectionId": "selection-392",
+      "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Loot/Loot_x26_y17_1.Loot_x26_y17_1:PersistentLevel.BP_Interactor_SingleItemContainer_Cabinet_1_C_航天城_中心区_H1一楼医疗房_低级个人储物柜_26-89false_BLoot0.InteractorAsyncSkeletalMesh",
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Loot/Loot_x26_y17_1.Loot_x26_y17_1:PersistentLevel.BP_Interactor_SingleItemContainer_Cabinet_1_C_航天城_中心区_H1一楼医疗房_低级个人储物柜_26-89false_BLoot0",
+      "meshObjectPath": "DeltaForce/Content/Models/SceneObjects/props_container_Locker_797/props_container_Locker_797_3P.uasset",
+      "canonicalType": "c_locker",
+      "category": "ORDINARY_LOCKER",
+      "fullSourceWorldMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          663262.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -452892.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.9,
+          -22036.791
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "positionCS2": [
+        -2209.680000000022,
+        -1766.8800000000047,
+        119.59523999999965
+      ],
+      "collisionEnabled": true,
+      "reason": "source primary mesh outside approved27; exact asset conversion required"
+    },
+    {
+      "selectionId": "selection-393",
+      "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Loot/Loot_x26_y17_1.Loot_x26_y17_1:PersistentLevel.BP_Interactor_SingleItemContainer_Cabinet_1_C_航天城_中心区_H1一楼医疗房_低级个人储物柜_35-89false_BLoot0.InteractorAsyncSkeletalMesh",
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Loot/Loot_x26_y17_1.Loot_x26_y17_1:PersistentLevel.BP_Interactor_SingleItemContainer_Cabinet_1_C_航天城_中心区_H1一楼医疗房_低级个人储物柜_35-89false_BLoot0",
+      "meshObjectPath": "DeltaForce/Content/Models/SceneObjects/props_container_Locker_797/props_container_Locker_797_3P.uasset",
+      "canonicalType": "c_locker",
+      "category": "ORDINARY_LOCKER",
+      "fullSourceWorldMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          663351.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -452892.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.9,
+          -22036.791
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "positionCS2": [
+        -2177.640000000014,
+        -1766.8800000000047,
+        119.59523999999965
+      ],
+      "collisionEnabled": true,
+      "reason": "source primary mesh outside approved27; exact asset conversion required"
+    },
+    {
+      "selectionId": "selection-394",
+      "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Loot/Loot_x26_y17_1.Loot_x26_y17_1:PersistentLevel.BP_Interactor_SingleItemContainer_WeaponBoxnew_C_航天城_中心区_H1一楼阴暗走廊_黑色潮汐武器箱_9-64false_BLoot0.InteractorAsyncSkeletalMesh",
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Loot/Loot_x26_y17_1.Loot_x26_y17_1:PersistentLevel.BP_Interactor_SingleItemContainer_WeaponBoxnew_C_航天城_中心区_H1一楼阴暗走廊_黑色潮汐武器箱_9-64false_BLoot0",
+      "meshObjectPath": "DeltaForce/Content/Models/Props/Collect/props_collect_box_1092/props_collect_box_1092_3P.uasset",
+      "canonicalType": null,
+      "category": "ORDINARY_CONTAINER",
+      "fullSourceWorldMatrix": [
+        [
+          -5.235987752261195e-07,
+          0.9999999999998628,
+          0.0,
+          662091.0
+        ],
+        [
+          -0.9999999999998628,
+          -5.235987752261195e-07,
+          0.0,
+          -452645.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -22036.791
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "positionCS2": [
+        -2631.24000000002,
+        -1855.8000000000175,
+        119.59523999999965
+      ],
+      "collisionEnabled": true,
+      "reason": "source primary mesh outside approved27; exact asset conversion required"
+    },
+    {
+      "selectionId": "selection-395",
+      "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Loot/Loot_x26_y17_1.Loot_x26_y17_1:PersistentLevel.BP_Interactor_SingleItemContainer_WeaponBoxnew_C_航天城_中心区_H1二楼储物间_黑色潮汐武器箱_28-35false_BLoot0.InteractorAsyncSkeletalMesh",
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Loot/Loot_x26_y17_1.Loot_x26_y17_1:PersistentLevel.BP_Interactor_SingleItemContainer_WeaponBoxnew_C_航天城_中心区_H1二楼储物间_黑色潮汐武器箱_28-35false_BLoot0",
+      "meshObjectPath": "DeltaForce/Content/Models/Props/Collect/props_collect_box_1092/props_collect_box_1092_3P.uasset",
+      "canonicalType": null,
+      "category": "ORDINARY_CONTAINER",
+      "fullSourceWorldMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          661287.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -449357.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -21013.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "positionCS2": [
+        -2920.680000000022,
+        -3039.4800000000105,
+        488.16000000000076
+      ],
+      "collisionEnabled": true,
+      "reason": "source primary mesh outside approved27; exact asset conversion required"
+    }
+  ],
+  "exclusionsUnchanged": true,
+  "approved27LockUnchanged": true
+}

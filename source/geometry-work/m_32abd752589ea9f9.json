@@ -1,0 +1,35 @@
+{
+  "id": "m_32abd752589ea9f9",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_Dormitory/SM_H_Building_FutureTech_Dormitory_02_ExterWall_01F.SM_H_Building_FutureTech_Dormitory_02_ExterWall_01F",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_Dormitory\\SM_H_Building_FutureTech_Dormitory_02_ExterWall_01F.glb",
+  "sourceSHA256": "546670E8281A1A0D7F39A3DB84AE410802A562A86C800D815674AD79CE273C2B",
+  "model": "models/df_v24/m_32abd752589ea9f9.vmdl",
+  "materials": {
+    "mat_73ba1a90aa784a7d": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_Dormitory_02_ExterWall_01_HD.MI_H_Building_FutureTech_Dormitory_02_ExterWall_01_HD",
+    "mat_45e2c73b465457a0": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Wooden_Plank_02_HD.MI_GEN_Wooden_Plank_02_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_31c3b94e803e1374": "DeltaForce/Content/Environment/Structures/Window/00_Materials/HD/MI_Window_Glass_01_HD.MI_Window_Glass_01_HD",
+    "mat_4951146017f824b0": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Checkred_03_HD.MI_GEN_Marble_Checkred_03_HD",
+    "mat_d7817e80fd3d1bec": "DeltaForce/Content/Environment/Structures/Morocco/Building/Commercial/00_Materials/HD/MI_M_Building_Commercial_Decal_02a_HD.MI_M_Building_Commercial_Decal_02a_HD",
+    "mat_c4c64a8f88aa08ae": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Concrete_Base_01_HD.MI_GEN_Concrete_Base_01_HD",
+    "mat_c6f758474e05beb4": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Base_01_HD.MI_GEN_Marble_Base_01_HD",
+    "mat_652a606455361a38": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_DecalAlpha_04_HD.MI_H_Building_FutureTech_DecalAlpha_04_HD",
+    "mat_3568c3d4868e875d": "DeltaForce/Content/Environment/Structures/Window/00_Materials/HD/MI_Window_Glass_02_HD.MI_Window_Glass_02_HD"
+  },
+  "vertices": 25292,
+  "polygons": 24559,
+  "bounds": [
+    [
+      -723.010986328125,
+      -744.27783203125,
+      -36.0
+    ],
+    [
+      5.050722599029541,
+      5.750083923339844,
+      538.7246704101562
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

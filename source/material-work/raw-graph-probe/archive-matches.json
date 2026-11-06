@@ -1,0 +1,1649 @@
+{
+  "version": 1,
+  "count": 107739,
+  "contiguous": true,
+  "archiveSHA256": "b7ce1f850e513216532137dc4f837c38e89aba2ed1e5002a9f635c3ab33f7903",
+  "materials": [
+    {
+      "tail": "E:\\df-v25-build-20261106\\material-work\\raw-graph-probe\\light-root.native-tail.bin",
+      "sha256": "1a1ac4fac9dbc282dbb01071ffe63e2e074cb52c4cf2badcf3d92f89c5154989",
+      "hits": [
+        {
+          "index": 60,
+          "hash": "16343c3941247aac3a55c305491476d3d9058321",
+          "tailOffset": 201713,
+          "archiveOffset": 4241236,
+          "size": 1414,
+          "uncompressedSize": 5555,
+          "frequency": 0
+        },
+        {
+          "index": 244,
+          "hash": "f1437676dd5b184f923fb173872ad23d4320d93a",
+          "tailOffset": 202230,
+          "archiveOffset": 4771931,
+          "size": 191,
+          "uncompressedSize": 300,
+          "frequency": 5
+        },
+        {
+          "index": 61,
+          "hash": "e54ba40ed91b51e5f92b1c007b9c688812587962",
+          "tailOffset": 202707,
+          "archiveOffset": 4242650,
+          "size": 1699,
+          "uncompressedSize": 6575,
+          "frequency": 0
+        },
+        {
+          "index": 62,
+          "hash": "e5f9b8922d8d75273f88c0f9528070ace158800e",
+          "tailOffset": 203290,
+          "archiveOffset": 4244349,
+          "size": 1442,
+          "uncompressedSize": 5667,
+          "frequency": 0
+        },
+        {
+          "index": 29,
+          "hash": "1198027913c38293e186df1043e75af37b6a71e4",
+          "tailOffset": 203807,
+          "archiveOffset": 4192328,
+          "size": 283,
+          "uncompressedSize": 460,
+          "frequency": 5
+        },
+        {
+          "index": 245,
+          "hash": "12aad9b44b993b112a99f05c4e21c85133808654",
+          "tailOffset": 204270,
+          "archiveOffset": 4772122,
+          "size": 164,
+          "uncompressedSize": 264,
+          "frequency": 5
+        },
+        {
+          "index": 12997,
+          "hash": "de2e979c85ae77e9293245a89022d3c01089ca64",
+          "tailOffset": 204781,
+          "archiveOffset": 47504454,
+          "size": 3322,
+          "uncompressedSize": 12372,
+          "frequency": 5
+        },
+        {
+          "index": 64,
+          "hash": "20c8517f6090b355828b28d3abcc7d07bbb79c10",
+          "tailOffset": 205348,
+          "archiveOffset": 4249294,
+          "size": 1698,
+          "uncompressedSize": 6607,
+          "frequency": 0
+        },
+        {
+          "index": 12998,
+          "hash": "630812a6c021455815a619b2a5110e79e7b802a6",
+          "tailOffset": 205937,
+          "archiveOffset": 47507776,
+          "size": 2989,
+          "uncompressedSize": 13396,
+          "frequency": 0
+        },
+        {
+          "index": 12999,
+          "hash": "03abe292c56399e12797ee720392d0cecabe0931",
+          "tailOffset": 206540,
+          "archiveOffset": 47510765,
+          "size": 2866,
+          "uncompressedSize": 10695,
+          "frequency": 5
+        },
+        {
+          "index": 13000,
+          "hash": "3c629cd170922c65e4e34acdcbf83b984c0c2d78",
+          "tailOffset": 207123,
+          "archiveOffset": 47513631,
+          "size": 3306,
+          "uncompressedSize": 12267,
+          "frequency": 5
+        },
+        {
+          "index": 35,
+          "hash": "dae3572b790d8ec80def6ae318bd269a8c03ae43",
+          "tailOffset": 208786,
+          "archiveOffset": 4204999,
+          "size": 729,
+          "uncompressedSize": 8264,
+          "frequency": 6
+        },
+        {
+          "index": 68,
+          "hash": "9e6a82b4e4b81121e240211374e43d7c943c77f2",
+          "tailOffset": 209257,
+          "archiveOffset": 4260460,
+          "size": 1517,
+          "uncompressedSize": 6231,
+          "frequency": 0
+        },
+        {
+          "index": 112,
+          "hash": "dc6b182e9620f0afd5db231b53b3ca0a63137a6a",
+          "tailOffset": 209782,
+          "archiveOffset": 4389711,
+          "size": 1596,
+          "uncompressedSize": 6379,
+          "frequency": 0
+        },
+        {
+          "index": 37,
+          "hash": "9187d480438aa01af13d7c7a135b5c6f06216692",
+          "tailOffset": 210293,
+          "archiveOffset": 4207252,
+          "size": 155,
+          "uncompressedSize": 228,
+          "frequency": 5
+        },
+        {
+          "index": 69,
+          "hash": "144d42088f4488f36340c4cddacba3e99e33fb71",
+          "tailOffset": 212299,
+          "archiveOffset": 4261977,
+          "size": 1306,
+          "uncompressedSize": 4455,
+          "frequency": 0
+        },
+        {
+          "index": 70,
+          "hash": "ec026ef8cae89191f33e60eb2d0a1910d0c0b42f",
+          "tailOffset": 213293,
+          "archiveOffset": 4263283,
+          "size": 1594,
+          "uncompressedSize": 5475,
+          "frequency": 0
+        },
+        {
+          "index": 71,
+          "hash": "f98e695287a572bc083e258117bef56f56c1dae7",
+          "tailOffset": 213876,
+          "archiveOffset": 4264877,
+          "size": 1334,
+          "uncompressedSize": 4567,
+          "frequency": 0
+        },
+        {
+          "index": 72,
+          "hash": "63e357d9358a3b55418a277a85323cbffd15efd6",
+          "tailOffset": 215934,
+          "archiveOffset": 4266211,
+          "size": 1591,
+          "uncompressedSize": 5507,
+          "frequency": 0
+        },
+        {
+          "index": 13001,
+          "hash": "434aab36e4f199eee458ad35daa4ed7fa1724a39",
+          "tailOffset": 216523,
+          "archiveOffset": 47516937,
+          "size": 2725,
+          "uncompressedSize": 11192,
+          "frequency": 0
+        },
+        {
+          "index": 74,
+          "hash": "37d55c3ca4f98b4bed4b45c29ef9dad8dbcd80d8",
+          "tailOffset": 219843,
+          "archiveOffset": 4270500,
+          "size": 1395,
+          "uncompressedSize": 4891,
+          "frequency": 0
+        },
+        {
+          "index": 121,
+          "hash": "5890b4ccb3e55db3f19b1f8cdc77e2a7f67333ed",
+          "tailOffset": 220368,
+          "archiveOffset": 4402663,
+          "size": 1488,
+          "uncompressedSize": 5279,
+          "frequency": 0
+        },
+        {
+          "index": 13002,
+          "hash": "c6c073438e17fe3d117464218716915ca9b0a6cf",
+          "tailOffset": 222919,
+          "archiveOffset": 47519662,
+          "size": 4886,
+          "uncompressedSize": 19422,
+          "frequency": 5
+        },
+        {
+          "index": 13003,
+          "hash": "cfcdd7c4dddaa18d604da13695524d239e4dc091",
+          "tailOffset": 223524,
+          "archiveOffset": 47524548,
+          "size": 2533,
+          "uncompressedSize": 9508,
+          "frequency": 0
+        },
+        {
+          "index": 13004,
+          "hash": "cbe6d132cc4f19b4eb6fbba31c4186815c44e569",
+          "tailOffset": 224125,
+          "archiveOffset": 47527081,
+          "size": 4145,
+          "uncompressedSize": 15900,
+          "frequency": 5
+        },
+        {
+          "index": 44,
+          "hash": "b18023ea2b34ff383a61515e2e6901df5b369304",
+          "tailOffset": 224706,
+          "archiveOffset": 4217412,
+          "size": 1174,
+          "uncompressedSize": 3459,
+          "frequency": 0
+        },
+        {
+          "index": 45,
+          "hash": "519115524636eb9348603c6ef3dfd0f85a8663d4",
+          "tailOffset": 225710,
+          "archiveOffset": 4218586,
+          "size": 1463,
+          "uncompressedSize": 4479,
+          "frequency": 0
+        },
+        {
+          "index": 46,
+          "hash": "7c1035accd498362ff968591d686d7b7dd4c2781",
+          "tailOffset": 226303,
+          "archiveOffset": 4220049,
+          "size": 1206,
+          "uncompressedSize": 3571,
+          "frequency": 0
+        },
+        {
+          "index": 13005,
+          "hash": "f42e5a9409bf76c60edeec368cc7c0cd9a4d13f1",
+          "tailOffset": 228409,
+          "archiveOffset": 47531226,
+          "size": 4703,
+          "uncompressedSize": 18670,
+          "frequency": 5
+        },
+        {
+          "index": 47,
+          "hash": "ac1a34fd26de30aaded65b934f1562092e74ef82",
+          "tailOffset": 229008,
+          "archiveOffset": 4221255,
+          "size": 1467,
+          "uncompressedSize": 4511,
+          "frequency": 0
+        },
+        {
+          "index": 13006,
+          "hash": "95278f07916471abcf87ceedc7cae188afca2e09",
+          "tailOffset": 229607,
+          "archiveOffset": 47535929,
+          "size": 2441,
+          "uncompressedSize": 8984,
+          "frequency": 0
+        },
+        {
+          "index": 13007,
+          "hash": "06b9890c57af3e79535e7950dcd4c5a606265040",
+          "tailOffset": 230759,
+          "archiveOffset": 47538370,
+          "size": 2519,
+          "uncompressedSize": 9424,
+          "frequency": 0
+        },
+        {
+          "index": 13008,
+          "hash": "c8fbe8808d4c725f0b07c0f983de5e664081c40f",
+          "tailOffset": 231360,
+          "archiveOffset": 47540889,
+          "size": 3923,
+          "uncompressedSize": 15084,
+          "frequency": 5
+        },
+        {
+          "index": 49,
+          "hash": "eb2304f53fac4e4f593dca8bbc3cbf873d84ee52",
+          "tailOffset": 234103,
+          "archiveOffset": 4225209,
+          "size": 1124,
+          "uncompressedSize": 3435,
+          "frequency": 0
+        },
+        {
+          "index": 13009,
+          "hash": "661fe5306f8d7dc0470f2e92c7b72f1c0259aaf3",
+          "tailOffset": 234620,
+          "archiveOffset": 47544812,
+          "size": 1450,
+          "uncompressedSize": 4508,
+          "frequency": 0
+        },
+        {
+          "index": 13010,
+          "hash": "60dcffea83e2f8cb25cd34e315d9e69a4dd1dc55",
+          "tailOffset": 237173,
+          "archiveOffset": 47546262,
+          "size": 4866,
+          "uncompressedSize": 19558,
+          "frequency": 5
+        },
+        {
+          "index": 13011,
+          "hash": "07e585cda1d04855a8c2eed67e7b1c610d1e0fdb",
+          "tailOffset": 237916,
+          "archiveOffset": 47551128,
+          "size": 3035,
+          "uncompressedSize": 11408,
+          "frequency": 0
+        },
+        {
+          "index": 13012,
+          "hash": "a9a390171bdd22c72ea8d03f4dc2016188625996",
+          "tailOffset": 238549,
+          "archiveOffset": 47554163,
+          "size": 4125,
+          "uncompressedSize": 16016,
+          "frequency": 5
+        },
+        {
+          "index": 13013,
+          "hash": "09afb09e4e4ed58ecc896e996466e5abfe1c4099",
+          "tailOffset": 239268,
+          "archiveOffset": 47558288,
+          "size": 1873,
+          "uncompressedSize": 6436,
+          "frequency": 0
+        },
+        {
+          "index": 5321,
+          "hash": "f901c8f1aa1596f3293f334e668c5e3f57caef5c",
+          "tailOffset": 239835,
+          "archiveOffset": 20991947,
+          "size": 418,
+          "uncompressedSize": 896,
+          "frequency": 5
+        },
+        {
+          "index": 13014,
+          "hash": "83ad5b7fb3ce0b9286705fe639a11fc54fa02a78",
+          "tailOffset": 240446,
+          "archiveOffset": 47560161,
+          "size": 2136,
+          "uncompressedSize": 7444,
+          "frequency": 0
+        },
+        {
+          "index": 13015,
+          "hash": "8c192c5725110ca7921631f94a10d124822d55e8",
+          "tailOffset": 241205,
+          "archiveOffset": 47562297,
+          "size": 1902,
+          "uncompressedSize": 6528,
+          "frequency": 0
+        },
+        {
+          "index": 5324,
+          "hash": "6298025ee8ac28d671e246369668ec5649fe8950",
+          "tailOffset": 241772,
+          "archiveOffset": 20996351,
+          "size": 507,
+          "uncompressedSize": 1056,
+          "frequency": 5
+        },
+        {
+          "index": 5325,
+          "hash": "2e88bfc4b84a36b5f86fedd1cc0d9bb30ddf02d9",
+          "tailOffset": 242235,
+          "archiveOffset": 20996858,
+          "size": 419,
+          "uncompressedSize": 872,
+          "frequency": 5
+        },
+        {
+          "index": 13016,
+          "hash": "10fbd553422ae031f3d6fde4bb017f958b8be195",
+          "tailOffset": 242746,
+          "archiveOffset": 47564199,
+          "size": 3334,
+          "uncompressedSize": 12532,
+          "frequency": 5
+        },
+        {
+          "index": 13017,
+          "hash": "51b5f159942b5147626ff51cc1c7efab7386d984",
+          "tailOffset": 243347,
+          "archiveOffset": 47567533,
+          "size": 4670,
+          "uncompressedSize": 18742,
+          "frequency": 5
+        },
+        {
+          "index": 13018,
+          "hash": "a78ebdd207e1ae310aa55077f40730e226cd75a6",
+          "tailOffset": 244084,
+          "archiveOffset": 47572203,
+          "size": 2136,
+          "uncompressedSize": 7476,
+          "frequency": 0
+        },
+        {
+          "index": 13019,
+          "hash": "3e3524c21adbd6dd738422bc111217ca47d41261",
+          "tailOffset": 244849,
+          "archiveOffset": 47574339,
+          "size": 2932,
+          "uncompressedSize": 10924,
+          "frequency": 0
+        },
+        {
+          "index": 13020,
+          "hash": "64cd3e063116f2350e64b0b09566e3797800d1bb",
+          "tailOffset": 245482,
+          "archiveOffset": 47577271,
+          "size": 2871,
+          "uncompressedSize": 10855,
+          "frequency": 5
+        },
+        {
+          "index": 13021,
+          "hash": "275ea1d863ed890eac56b22cf1ccaf6bfdd630b7",
+          "tailOffset": 246171,
+          "archiveOffset": 47580142,
+          "size": 3012,
+          "uncompressedSize": 11324,
+          "frequency": 0
+        },
+        {
+          "index": 13022,
+          "hash": "16b06c7c11bd9f17db03fb45e3a2d8d35d071625",
+          "tailOffset": 246804,
+          "archiveOffset": 47583154,
+          "size": 3972,
+          "uncompressedSize": 15220,
+          "frequency": 5
+        },
+        {
+          "index": 13023,
+          "hash": "84b376c79b86fa8dce6587580a2addd12af95509",
+          "tailOffset": 247423,
+          "archiveOffset": 47587126,
+          "size": 3306,
+          "uncompressedSize": 12427,
+          "frequency": 5
+        },
+        {
+          "index": 5331,
+          "hash": "ae81a04632910dae4a345d78d6e911563415e933",
+          "tailOffset": 249250,
+          "archiveOffset": 21011371,
+          "size": 913,
+          "uncompressedSize": 10988,
+          "frequency": 6
+        },
+        {
+          "index": 254,
+          "hash": "05c8c6982984d7defa798695971703a3e64d71f2",
+          "tailOffset": 249855,
+          "archiveOffset": 4782998,
+          "size": 1498,
+          "uncompressedSize": 5235,
+          "frequency": 0
+        },
+        {
+          "index": 13024,
+          "hash": "7135700887f6f03445f133662710af8e2e19c366",
+          "tailOffset": 250542,
+          "archiveOffset": 47590432,
+          "size": 1708,
+          "uncompressedSize": 5900,
+          "frequency": 0
+        },
+        {
+          "index": 13025,
+          "hash": "feaac0cd4d760e4d2972e0b8fa60cd696c78842f",
+          "tailOffset": 257733,
+          "archiveOffset": 47592140,
+          "size": 2495,
+          "uncompressedSize": 9200,
+          "frequency": 0
+        },
+        {
+          "index": 13026,
+          "hash": "79ba6f4a4b64c23031a5b03ac2e8d3dea65a5d09",
+          "tailOffset": 264918,
+          "archiveOffset": 47594635,
+          "size": 4331,
+          "uncompressedSize": 19002,
+          "frequency": 0
+        },
+        {
+          "index": 13027,
+          "hash": "69b7e7c852fd3e6e59203139c583792953b6f3b9",
+          "tailOffset": 266312,
+          "archiveOffset": 47598966,
+          "size": 2574,
+          "uncompressedSize": 10834,
+          "frequency": 0
+        },
+        {
+          "index": 13028,
+          "hash": "e4b7fb5a0452b78ffca7a341d806b3b6b215eafb",
+          "tailOffset": 267532,
+          "archiveOffset": 47601540,
+          "size": 2855,
+          "uncompressedSize": 11822,
+          "frequency": 0
+        },
+        {
+          "index": 13029,
+          "hash": "aa118ae21d45a175be2ca5b758d8f41d2870a08e",
+          "tailOffset": 268333,
+          "archiveOffset": 47604395,
+          "size": 2598,
+          "uncompressedSize": 10926,
+          "frequency": 0
+        },
+        {
+          "index": 13030,
+          "hash": "d0438d5ab3fdcc4b2da116e51bb17c5069571063",
+          "tailOffset": 271254,
+          "archiveOffset": 47606993,
+          "size": 2863,
+          "uncompressedSize": 11854,
+          "frequency": 0
+        },
+        {
+          "index": 13031,
+          "hash": "9f6d0f9a844795f032db42972f7e97390330add1",
+          "tailOffset": 272061,
+          "archiveOffset": 47609856,
+          "size": 4208,
+          "uncompressedSize": 18502,
+          "frequency": 0
+        },
+        {
+          "index": 13032,
+          "hash": "6282ab0994ede6c4945ca3ed314f811c2433c8e0",
+          "tailOffset": 273425,
+          "archiveOffset": 47614064,
+          "size": 4305,
+          "uncompressedSize": 18918,
+          "frequency": 0
+        },
+        {
+          "index": 1248,
+          "hash": "d000d85f884d417207df5de118daec93d28cd5e5",
+          "tailOffset": 277193,
+          "archiveOffset": 7653045,
+          "size": 2218,
+          "uncompressedSize": 9421,
+          "frequency": 0
+        },
+        {
+          "index": 13033,
+          "hash": "679d18180b58b13dcef45caddb1b1965800edb47",
+          "tailOffset": 277940,
+          "archiveOffset": 47618369,
+          "size": 2438,
+          "uncompressedSize": 9890,
+          "frequency": 0
+        },
+        {
+          "index": 13034,
+          "hash": "1622df42526896ba1be5eea56767b9ddab0b51b7",
+          "tailOffset": 288017,
+          "archiveOffset": 47620807,
+          "size": 3602,
+          "uncompressedSize": 13340,
+          "frequency": 5
+        },
+        {
+          "index": 5191,
+          "hash": "f4ad99672a907b44f3173b9cdaf095ffda5ff21a",
+          "tailOffset": 289185,
+          "archiveOffset": 20448805,
+          "size": 2984,
+          "uncompressedSize": 13396,
+          "frequency": 0
+        },
+        {
+          "index": 13035,
+          "hash": "42a5e9ae446e8617b663fcfcf51d806b703278b3",
+          "tailOffset": 289794,
+          "archiveOffset": 47624409,
+          "size": 3143,
+          "uncompressedSize": 11567,
+          "frequency": 5
+        },
+        {
+          "index": 13036,
+          "hash": "8a0b2f36b64fa79bc3db13eab5dc1a03f78f49e9",
+          "tailOffset": 290383,
+          "archiveOffset": 47627552,
+          "size": 3582,
+          "uncompressedSize": 13235,
+          "frequency": 5
+        },
+        {
+          "index": 5194,
+          "hash": "2e426c530053cd69234db62dd70118410f304b4d",
+          "tailOffset": 299891,
+          "archiveOffset": 20460220,
+          "size": 2728,
+          "uncompressedSize": 11192,
+          "frequency": 0
+        },
+        {
+          "index": 13037,
+          "hash": "f24ad584631c16a256c82196963244dac29d85c2",
+          "tailOffset": 306359,
+          "archiveOffset": 47631134,
+          "size": 5195,
+          "uncompressedSize": 20422,
+          "frequency": 5
+        },
+        {
+          "index": 5196,
+          "hash": "d1e760ceb977aefd7d443adbb6324fcdd3d7a0ec",
+          "tailOffset": 306970,
+          "archiveOffset": 20468945,
+          "size": 2534,
+          "uncompressedSize": 9508,
+          "frequency": 0
+        },
+        {
+          "index": 13038,
+          "hash": "629ce44eceac4b0f12a7cc5dad7f32992c2bb41b",
+          "tailOffset": 307577,
+          "archiveOffset": 47636329,
+          "size": 4386,
+          "uncompressedSize": 16840,
+          "frequency": 5
+        },
+        {
+          "index": 13039,
+          "hash": "1a873c0c30e885bda306d233083e43375b73a267",
+          "tailOffset": 311909,
+          "archiveOffset": 47640715,
+          "size": 4953,
+          "uncompressedSize": 19606,
+          "frequency": 5
+        },
+        {
+          "index": 5199,
+          "hash": "9c1105609fbd38c074bb7de19e1ab420987686b6",
+          "tailOffset": 313119,
+          "archiveOffset": 20482466,
+          "size": 2443,
+          "uncompressedSize": 8984,
+          "frequency": 0
+        },
+        {
+          "index": 5200,
+          "hash": "6f39cec184078df6b9d97104328eb2d4d671986a",
+          "tailOffset": 314283,
+          "archiveOffset": 20484909,
+          "size": 2519,
+          "uncompressedSize": 9424,
+          "frequency": 0
+        },
+        {
+          "index": 13040,
+          "hash": "396cf105f566d99434d318d8f5cc9417bb0f22cd",
+          "tailOffset": 314890,
+          "archiveOffset": 47645668,
+          "size": 4205,
+          "uncompressedSize": 16056,
+          "frequency": 5
+        },
+        {
+          "index": 5202,
+          "hash": "032b6fbeb340f618bf8d52c8c9b2b0d1db83f945",
+          "tailOffset": 318186,
+          "archiveOffset": 20492339,
+          "size": 1451,
+          "uncompressedSize": 4508,
+          "frequency": 0
+        },
+        {
+          "index": 13041,
+          "hash": "026861bb25a0c5a6c677814ebfe3c2e81cdd3046",
+          "tailOffset": 320769,
+          "archiveOffset": 47649873,
+          "size": 5219,
+          "uncompressedSize": 20558,
+          "frequency": 5
+        },
+        {
+          "index": 13042,
+          "hash": "a50e11b7b52a5313ecf862d0cfc10eb6b4f22dc2",
+          "tailOffset": 321518,
+          "archiveOffset": 47655092,
+          "size": 3031,
+          "uncompressedSize": 11408,
+          "frequency": 0
+        },
+        {
+          "index": 13043,
+          "hash": "20b0268aaf05ee29ef23da556a6347dfd7456a2c",
+          "tailOffset": 322157,
+          "archiveOffset": 47658123,
+          "size": 4494,
+          "uncompressedSize": 17004,
+          "frequency": 5
+        },
+        {
+          "index": 13044,
+          "hash": "13fc3048f94ee81e57b50f4c4bee476ef0a09ee0",
+          "tailOffset": 322882,
+          "archiveOffset": 47662617,
+          "size": 1873,
+          "uncompressedSize": 6436,
+          "frequency": 0
+        },
+        {
+          "index": 13045,
+          "hash": "e992122f096e7c471084149bb532d99c920febcf",
+          "tailOffset": 324072,
+          "archiveOffset": 47664490,
+          "size": 2135,
+          "uncompressedSize": 7444,
+          "frequency": 0
+        },
+        {
+          "index": 13046,
+          "hash": "693674b5b49400ad11337a4fffed93eea995ccf5",
+          "tailOffset": 324837,
+          "archiveOffset": 47666625,
+          "size": 1905,
+          "uncompressedSize": 6528,
+          "frequency": 0
+        },
+        {
+          "index": 13047,
+          "hash": "f9b6adb8a8bb8f250f2dba18888c48412914e4d7",
+          "tailOffset": 326396,
+          "archiveOffset": 47668530,
+          "size": 3678,
+          "uncompressedSize": 13500,
+          "frequency": 5
+        },
+        {
+          "index": 13048,
+          "hash": "0b16acb2fbb92a29089506ae0801fa519d829fcd",
+          "tailOffset": 327003,
+          "archiveOffset": 47672208,
+          "size": 5044,
+          "uncompressedSize": 19690,
+          "frequency": 5
+        },
+        {
+          "index": 13049,
+          "hash": "2504e294324ace8d3937e654ca408abd19c6ee93",
+          "tailOffset": 327746,
+          "archiveOffset": 47677252,
+          "size": 2137,
+          "uncompressedSize": 7476,
+          "frequency": 0
+        },
+        {
+          "index": 13050,
+          "hash": "78046e549590b1323f6f23c29d518d1380eac00e",
+          "tailOffset": 328517,
+          "archiveOffset": 47679389,
+          "size": 2933,
+          "uncompressedSize": 10924,
+          "frequency": 0
+        },
+        {
+          "index": 13051,
+          "hash": "34de4a886ab22ba4b13652bb61a4d1313e124544",
+          "tailOffset": 329156,
+          "archiveOffset": 47682322,
+          "size": 3218,
+          "uncompressedSize": 11727,
+          "frequency": 5
+        },
+        {
+          "index": 13052,
+          "hash": "ff42088d804f06677b64dd521b94446f208e0dd4",
+          "tailOffset": 329851,
+          "archiveOffset": 47685540,
+          "size": 3012,
+          "uncompressedSize": 11324,
+          "frequency": 0
+        },
+        {
+          "index": 13053,
+          "hash": "da729e521f570f6ea2c3435814aff8ef7b90cde2",
+          "tailOffset": 330490,
+          "archiveOffset": 47688552,
+          "size": 4237,
+          "uncompressedSize": 16220,
+          "frequency": 5
+        },
+        {
+          "index": 13054,
+          "hash": "68d5f3aacf477b1f589b478394fb9ad47e873a77",
+          "tailOffset": 331115,
+          "archiveOffset": 47692789,
+          "size": 3652,
+          "uncompressedSize": 13395,
+          "frequency": 5
+        },
+        {
+          "index": 5217,
+          "hash": "554044c7690906aed0d5cfa03cf699f9fa69fb17",
+          "tailOffset": 334264,
+          "archiveOffset": 20544831,
+          "size": 1704,
+          "uncompressedSize": 5900,
+          "frequency": 0
+        },
+        {
+          "index": 5218,
+          "hash": "1537957c3905dd15d5fbbaff86b9ffec850714d1",
+          "tailOffset": 341533,
+          "archiveOffset": 20546535,
+          "size": 2499,
+          "uncompressedSize": 9200,
+          "frequency": 0
+        },
+        {
+          "index": 13055,
+          "hash": "77f57d19deba49aa4e7d742547cc20448cf9d0e3",
+          "tailOffset": 348796,
+          "archiveOffset": 47696441,
+          "size": 4334,
+          "uncompressedSize": 19002,
+          "frequency": 0
+        },
+        {
+          "index": 13056,
+          "hash": "e2b632c8be25a15603a72f9b3d5ba2de4f88e93a",
+          "tailOffset": 350202,
+          "archiveOffset": 47700775,
+          "size": 2572,
+          "uncompressedSize": 10834,
+          "frequency": 0
+        },
+        {
+          "index": 13057,
+          "hash": "083209ff40bb451a4c53b9274892fdf90f0cb4eb",
+          "tailOffset": 351434,
+          "archiveOffset": 47703347,
+          "size": 2855,
+          "uncompressedSize": 11822,
+          "frequency": 0
+        },
+        {
+          "index": 13058,
+          "hash": "9b74246c2231e5a093bb519b4414864952e0f48b",
+          "tailOffset": 352241,
+          "archiveOffset": 47706202,
+          "size": 2600,
+          "uncompressedSize": 10926,
+          "frequency": 0
+        },
+        {
+          "index": 13059,
+          "hash": "bf40e017e208a2db2b66a1b27e15b9bfd70fcba5",
+          "tailOffset": 355192,
+          "archiveOffset": 47708802,
+          "size": 2861,
+          "uncompressedSize": 11854,
+          "frequency": 0
+        },
+        {
+          "index": 13060,
+          "hash": "648de05ac6a0363de77f916bd93ec62338574c2b",
+          "tailOffset": 356005,
+          "archiveOffset": 47711663,
+          "size": 4229,
+          "uncompressedSize": 18502,
+          "frequency": 0
+        },
+        {
+          "index": 13061,
+          "hash": "a79a8f74d41d6cfdbb83a40dadbf56c3d126a152",
+          "tailOffset": 357381,
+          "archiveOffset": 47715892,
+          "size": 4309,
+          "uncompressedSize": 18918,
+          "frequency": 0
+        },
+        {
+          "index": 13062,
+          "hash": "78dc04ab772cff2353db0aa5f68c2b96c862f12f",
+          "tailOffset": 361938,
+          "archiveOffset": 47720201,
+          "size": 2440,
+          "uncompressedSize": 9890,
+          "frequency": 0
+        }
+      ]
+    },
+    {
+      "tail": "E:\\df-v25-build-20261106\\material-work\\raw-graph-probe\\props-root.native-tail.bin",
+      "sha256": "755af20fa8cdcbc8e22b5a402a354cd2ff501d6d2847a1ac6ea4d108b1a14239",
+      "hits": [
+        {
+          "index": 60,
+          "hash": "16343c3941247aac3a55c305491476d3d9058321",
+          "tailOffset": 536207,
+          "archiveOffset": 4241236,
+          "size": 1414,
+          "uncompressedSize": 5555,
+          "frequency": 0
+        },
+        {
+          "index": 244,
+          "hash": "f1437676dd5b184f923fb173872ad23d4320d93a",
+          "tailOffset": 536765,
+          "archiveOffset": 4771931,
+          "size": 191,
+          "uncompressedSize": 300,
+          "frequency": 5
+        },
+        {
+          "index": 61,
+          "hash": "e54ba40ed91b51e5f92b1c007b9c688812587962",
+          "tailOffset": 537283,
+          "archiveOffset": 4242650,
+          "size": 1699,
+          "uncompressedSize": 6575,
+          "frequency": 0
+        },
+        {
+          "index": 62,
+          "hash": "e5f9b8922d8d75273f88c0f9528070ace158800e",
+          "tailOffset": 537907,
+          "archiveOffset": 4244349,
+          "size": 1442,
+          "uncompressedSize": 5667,
+          "frequency": 0
+        },
+        {
+          "index": 29,
+          "hash": "1198027913c38293e186df1043e75af37b6a71e4",
+          "tailOffset": 538465,
+          "archiveOffset": 4192328,
+          "size": 283,
+          "uncompressedSize": 460,
+          "frequency": 5
+        },
+        {
+          "index": 245,
+          "hash": "12aad9b44b993b112a99f05c4e21c85133808654",
+          "tailOffset": 538969,
+          "archiveOffset": 4772122,
+          "size": 164,
+          "uncompressedSize": 264,
+          "frequency": 5
+        },
+        {
+          "index": 2139,
+          "hash": "b76a4d345bf76b8afdbe9ab88d769e2b8f325f38",
+          "tailOffset": 539521,
+          "archiveOffset": 10206845,
+          "size": 4411,
+          "uncompressedSize": 17592,
+          "frequency": 5
+        },
+        {
+          "index": 64,
+          "hash": "20c8517f6090b355828b28d3abcc7d07bbb79c10",
+          "tailOffset": 540129,
+          "archiveOffset": 4249294,
+          "size": 1698,
+          "uncompressedSize": 6607,
+          "frequency": 0
+        },
+        {
+          "index": 419,
+          "hash": "d5739d404c7e8b40aeb7135ce716fc64cb981888",
+          "tailOffset": 540759,
+          "archiveOffset": 5317614,
+          "size": 2979,
+          "uncompressedSize": 13411,
+          "frequency": 0
+        },
+        {
+          "index": 2140,
+          "hash": "e8c9884b33d0b3aae87df5a0feda836351d7e163",
+          "tailOffset": 541399,
+          "archiveOffset": 10211256,
+          "size": 3963,
+          "uncompressedSize": 15819,
+          "frequency": 5
+        },
+        {
+          "index": 2141,
+          "hash": "15bce66c51aa594f9aacfb29efd36742575e41e5",
+          "tailOffset": 542023,
+          "archiveOffset": 10215219,
+          "size": 4381,
+          "uncompressedSize": 17487,
+          "frequency": 5
+        },
+        {
+          "index": 35,
+          "hash": "dae3572b790d8ec80def6ae318bd269a8c03ae43",
+          "tailOffset": 543805,
+          "archiveOffset": 4204999,
+          "size": 729,
+          "uncompressedSize": 8264,
+          "frequency": 6
+        },
+        {
+          "index": 68,
+          "hash": "9e6a82b4e4b81121e240211374e43d7c943c77f2",
+          "tailOffset": 544317,
+          "archiveOffset": 4260460,
+          "size": 1517,
+          "uncompressedSize": 6231,
+          "frequency": 0
+        },
+        {
+          "index": 112,
+          "hash": "dc6b182e9620f0afd5db231b53b3ca0a63137a6a",
+          "tailOffset": 544883,
+          "archiveOffset": 4389711,
+          "size": 1596,
+          "uncompressedSize": 6379,
+          "frequency": 0
+        },
+        {
+          "index": 37,
+          "hash": "9187d480438aa01af13d7c7a135b5c6f06216692",
+          "tailOffset": 545435,
+          "archiveOffset": 4207252,
+          "size": 155,
+          "uncompressedSize": 228,
+          "frequency": 5
+        },
+        {
+          "index": 69,
+          "hash": "144d42088f4488f36340c4cddacba3e99e33fb71",
+          "tailOffset": 547605,
+          "archiveOffset": 4261977,
+          "size": 1306,
+          "uncompressedSize": 4455,
+          "frequency": 0
+        },
+        {
+          "index": 70,
+          "hash": "ec026ef8cae89191f33e60eb2d0a1910d0c0b42f",
+          "tailOffset": 548681,
+          "archiveOffset": 4263283,
+          "size": 1594,
+          "uncompressedSize": 5475,
+          "frequency": 0
+        },
+        {
+          "index": 71,
+          "hash": "f98e695287a572bc083e258117bef56f56c1dae7",
+          "tailOffset": 549305,
+          "archiveOffset": 4264877,
+          "size": 1334,
+          "uncompressedSize": 4567,
+          "frequency": 0
+        },
+        {
+          "index": 72,
+          "hash": "63e357d9358a3b55418a277a85323cbffd15efd6",
+          "tailOffset": 551527,
+          "archiveOffset": 4266211,
+          "size": 1591,
+          "uncompressedSize": 5507,
+          "frequency": 0
+        },
+        {
+          "index": 429,
+          "hash": "bf3b55877b8e454a00ba621e7f4d825841f470dd",
+          "tailOffset": 552157,
+          "archiveOffset": 5334692,
+          "size": 2731,
+          "uncompressedSize": 11207,
+          "frequency": 0
+        },
+        {
+          "index": 74,
+          "hash": "37d55c3ca4f98b4bed4b45c29ef9dad8dbcd80d8",
+          "tailOffset": 555715,
+          "archiveOffset": 4270500,
+          "size": 1395,
+          "uncompressedSize": 4891,
+          "frequency": 0
+        },
+        {
+          "index": 121,
+          "hash": "5890b4ccb3e55db3f19b1f8cdc77e2a7f67333ed",
+          "tailOffset": 556281,
+          "archiveOffset": 4402663,
+          "size": 1488,
+          "uncompressedSize": 5279,
+          "frequency": 0
+        },
+        {
+          "index": 2142,
+          "hash": "32548d1ae5536f9e4099a1acd671d2144ec13531",
+          "tailOffset": 559037,
+          "archiveOffset": 10219600,
+          "size": 5899,
+          "uncompressedSize": 24566,
+          "frequency": 5
+        },
+        {
+          "index": 1215,
+          "hash": "8581f84efec794fb95afc370e8ece562af4c4dec",
+          "tailOffset": 559683,
+          "archiveOffset": 7558264,
+          "size": 2558,
+          "uncompressedSize": 9599,
+          "frequency": 0
+        },
+        {
+          "index": 2143,
+          "hash": "3ddb7b53e0b93abcb7066eaa1be9de220358eef6",
+          "tailOffset": 560321,
+          "archiveOffset": 10225499,
+          "size": 5142,
+          "uncompressedSize": 21044,
+          "frequency": 5
+        },
+        {
+          "index": 44,
+          "hash": "b18023ea2b34ff383a61515e2e6901df5b369304",
+          "tailOffset": 560943,
+          "archiveOffset": 4217412,
+          "size": 1174,
+          "uncompressedSize": 3459,
+          "frequency": 0
+        },
+        {
+          "index": 45,
+          "hash": "519115524636eb9348603c6ef3dfd0f85a8663d4",
+          "tailOffset": 562029,
+          "archiveOffset": 4218586,
+          "size": 1463,
+          "uncompressedSize": 4479,
+          "frequency": 0
+        },
+        {
+          "index": 46,
+          "hash": "7c1035accd498362ff968591d686d7b7dd4c2781",
+          "tailOffset": 562663,
+          "archiveOffset": 4220049,
+          "size": 1206,
+          "uncompressedSize": 3571,
+          "frequency": 0
+        },
+        {
+          "index": 2144,
+          "hash": "663832a711844ac8c11d34cb5ba82999a30e30e9",
+          "tailOffset": 564933,
+          "archiveOffset": 10230641,
+          "size": 5714,
+          "uncompressedSize": 23782,
+          "frequency": 5
+        },
+        {
+          "index": 47,
+          "hash": "ac1a34fd26de30aaded65b934f1562092e74ef82",
+          "tailOffset": 565573,
+          "archiveOffset": 4221255,
+          "size": 1467,
+          "uncompressedSize": 4511,
+          "frequency": 0
+        },
+        {
+          "index": 435,
+          "hash": "c881a76ea2583245c88acb23e1516facd8c0f204",
+          "tailOffset": 566213,
+          "archiveOffset": 5345333,
+          "size": 2448,
+          "uncompressedSize": 9075,
+          "frequency": 0
+        },
+        {
+          "index": 1220,
+          "hash": "cd6b9e76262c8d73d377255aadcdfdfaa2689187",
+          "tailOffset": 567443,
+          "archiveOffset": 7575523,
+          "size": 2533,
+          "uncompressedSize": 9515,
+          "frequency": 0
+        },
+        {
+          "index": 2145,
+          "hash": "84e4eee5827970272619f5c165642c87466ddd33",
+          "tailOffset": 568081,
+          "archiveOffset": 10236355,
+          "size": 4982,
+          "uncompressedSize": 20228,
+          "frequency": 5
+        },
+        {
+          "index": 49,
+          "hash": "eb2304f53fac4e4f593dca8bbc3cbf873d84ee52",
+          "tailOffset": 571025,
+          "archiveOffset": 4225209,
+          "size": 1124,
+          "uncompressedSize": 3435,
+          "frequency": 0
+        },
+        {
+          "index": 657,
+          "hash": "3e94f392eaee6fcd460cc778d4ef6b5b527b140a",
+          "tailOffset": 571583,
+          "archiveOffset": 6070111,
+          "size": 1410,
+          "uncompressedSize": 4415,
+          "frequency": 0
+        },
+        {
+          "index": 2146,
+          "hash": "2711aec3bac257aa842d72e66f30dacb1fd8d6ca",
+          "tailOffset": 574337,
+          "archiveOffset": 10241337,
+          "size": 5903,
+          "uncompressedSize": 24590,
+          "frequency": 5
+        },
+        {
+          "index": 1224,
+          "hash": "c4339cfa4d76797a56be5fa6e13ccd949defbf20",
+          "tailOffset": 575121,
+          "archiveOffset": 7589968,
+          "size": 2919,
+          "uncompressedSize": 11135,
+          "frequency": 0
+        },
+        {
+          "index": 2147,
+          "hash": "fae875b5fced067262b3889f942b2b7525034f74",
+          "tailOffset": 575791,
+          "archiveOffset": 10247240,
+          "size": 5152,
+          "uncompressedSize": 21068,
+          "frequency": 5
+        },
+        {
+          "index": 1226,
+          "hash": "7ee395de9ea50d6262d7711e15fad9f1c23a4146",
+          "tailOffset": 576551,
+          "archiveOffset": 7596924,
+          "size": 1740,
+          "uncompressedSize": 6035,
+          "frequency": 0
+        },
+        {
+          "index": 1227,
+          "hash": "ffcc0883d68fc3400603b6701c0222bf5996f601",
+          "tailOffset": 577155,
+          "archiveOffset": 7598664,
+          "size": 405,
+          "uncompressedSize": 876,
+          "frequency": 5
+        },
+        {
+          "index": 1228,
+          "hash": "91f4e4419d2ef0404c378cf5b5fb35a820ac1782",
+          "tailOffset": 577807,
+          "archiveOffset": 7599069,
+          "size": 2007,
+          "uncompressedSize": 7023,
+          "frequency": 0
+        },
+        {
+          "index": 1229,
+          "hash": "27f9e4f2a2af73c187abe05d7ab41eeecd8b5f4b",
+          "tailOffset": 578603,
+          "archiveOffset": 7601076,
+          "size": 1767,
+          "uncompressedSize": 6127,
+          "frequency": 0
+        },
+        {
+          "index": 1230,
+          "hash": "afb08a790d77f8bd7bb5b8b4474571d4dae17f8b",
+          "tailOffset": 579207,
+          "archiveOffset": 7602843,
+          "size": 485,
+          "uncompressedSize": 1036,
+          "frequency": 5
+        },
+        {
+          "index": 1231,
+          "hash": "5281bb36d9e61a3e7ebf1e0d3ef9453944548d26",
+          "tailOffset": 579711,
+          "archiveOffset": 7603328,
+          "size": 399,
+          "uncompressedSize": 852,
+          "frequency": 5
+        },
+        {
+          "index": 2148,
+          "hash": "9ebd500ccc190c0afbd8feb2f850e705ab1d9ba4",
+          "tailOffset": 580263,
+          "archiveOffset": 10252392,
+          "size": 4410,
+          "uncompressedSize": 17616,
+          "frequency": 5
+        },
+        {
+          "index": 2149,
+          "hash": "99e6320c801fe7fb5b4916636c7763e08c939dde",
+          "tailOffset": 580905,
+          "archiveOffset": 10256802,
+          "size": 5715,
+          "uncompressedSize": 23806,
+          "frequency": 5
+        },
+        {
+          "index": 1234,
+          "hash": "f9343ef82c0bab2b12094735c5f8699f5f95b553",
+          "tailOffset": 581683,
+          "archiveOffset": 7611623,
+          "size": 2005,
+          "uncompressedSize": 7055,
+          "frequency": 0
+        },
+        {
+          "index": 1235,
+          "hash": "f4e09278904bc8854c858de89b20358f2948af7c",
+          "tailOffset": 582485,
+          "archiveOffset": 7613628,
+          "size": 2841,
+          "uncompressedSize": 10651,
+          "frequency": 0
+        },
+        {
+          "index": 2150,
+          "hash": "2ded61010e3222e90098f5ad8ae31a7151f4b7e9",
+          "tailOffset": 583155,
+          "archiveOffset": 10262517,
+          "size": 3969,
+          "uncompressedSize": 15843,
+          "frequency": 5
+        },
+        {
+          "index": 1237,
+          "hash": "d8882b424f5e89bbf283e173361b224f42941d8a",
+          "tailOffset": 583885,
+          "archiveOffset": 7619269,
+          "size": 2900,
+          "uncompressedSize": 11051,
+          "frequency": 0
+        },
+        {
+          "index": 2151,
+          "hash": "ff2d2f43290e749799743332b2405c0aea41a2fe",
+          "tailOffset": 584555,
+          "archiveOffset": 10266486,
+          "size": 4987,
+          "uncompressedSize": 20252,
+          "frequency": 5
+        },
+        {
+          "index": 2152,
+          "hash": "4aa0275dc422c2799d551862684317755f73f6ca",
+          "tailOffset": 585215,
+          "archiveOffset": 10271473,
+          "size": 4384,
+          "uncompressedSize": 17511,
+          "frequency": 5
+        },
+        {
+          "index": 1240,
+          "hash": "f624abaf74cb7155291b42734d423747204189d0",
+          "tailOffset": 587161,
+          "archiveOffset": 7629237,
+          "size": 886,
+          "uncompressedSize": 11380,
+          "frequency": 6
+        },
+        {
+          "index": 254,
+          "hash": "05c8c6982984d7defa798695971703a3e64d71f2",
+          "tailOffset": 587807,
+          "archiveOffset": 4782998,
+          "size": 1498,
+          "uncompressedSize": 5235,
+          "frequency": 0
+        },
+        {
+          "index": 673,
+          "hash": "f3d3484b91f12c913a1857350fcfcfd2967693c9",
+          "tailOffset": 588535,
+          "archiveOffset": 6100021,
+          "size": 1665,
+          "uncompressedSize": 5807,
+          "frequency": 0
+        },
+        {
+          "index": 437,
+          "hash": "5d7130af102d8799b88757f3182bd829c7c055b2",
+          "tailOffset": 596255,
+          "archiveOffset": 5349313,
+          "size": 2510,
+          "uncompressedSize": 9291,
+          "frequency": 0
+        },
+        {
+          "index": 1241,
+          "hash": "e1563a2c26daeddac32dd96874a97b9851990849",
+          "tailOffset": 603961,
+          "archiveOffset": 7630123,
+          "size": 4180,
+          "uncompressedSize": 18397,
+          "frequency": 0
+        },
+        {
+          "index": 1242,
+          "hash": "cdce8f9d8c39ee1052771c8d918a0c5f6db3820e",
+          "tailOffset": 605433,
+          "archiveOffset": 7634303,
+          "size": 2485,
+          "uncompressedSize": 9993,
+          "frequency": 0
+        },
+        {
+          "index": 1243,
+          "hash": "a3c7f0da89ed024658b079facf442f20d1c0115d",
+          "tailOffset": 606731,
+          "archiveOffset": 7636788,
+          "size": 2749,
+          "uncompressedSize": 10981,
+          "frequency": 0
+        },
+        {
+          "index": 1244,
+          "hash": "6c7d14ee574a49895853220207befd23e70eabec",
+          "tailOffset": 607569,
+          "archiveOffset": 7639537,
+          "size": 2515,
+          "uncompressedSize": 10085,
+          "frequency": 0
+        },
+        {
+          "index": 1245,
+          "hash": "67343a748a331cfa86b4d8efbc7c7e458cd358bd",
+          "tailOffset": 610691,
+          "archiveOffset": 7642052,
+          "size": 2761,
+          "uncompressedSize": 11013,
+          "frequency": 0
+        },
+        {
+          "index": 1246,
+          "hash": "db651434ab4c501a0dc21da104ad05eb31921125",
+          "tailOffset": 611535,
+          "archiveOffset": 7644813,
+          "size": 4081,
+          "uncompressedSize": 17913,
+          "frequency": 0
+        },
+        {
+          "index": 1247,
+          "hash": "db0ccc728810f1562c8af6c05cd88905989f3d83",
+          "tailOffset": 612977,
+          "archiveOffset": 7648894,
+          "size": 4151,
+          "uncompressedSize": 18313,
+          "frequency": 0
+        },
+        {
+          "index": 1248,
+          "hash": "d000d85f884d417207df5de118daec93d28cd5e5",
+          "tailOffset": 616983,
+          "archiveOffset": 7653045,
+          "size": 2218,
+          "uncompressedSize": 9421,
+          "frequency": 0
+        },
+        {
+          "index": 1249,
+          "hash": "780660565c1b2a5f5483923a25e111b045ec55f5",
+          "tailOffset": 617771,
+          "archiveOffset": 7655263,
+          "size": 2395,
+          "uncompressedSize": 9797,
+          "frequency": 0
+        },
+        {
+          "index": 2153,
+          "hash": "9710095d5b3a17ac8cf8bbdc33d9637e45e2ed3c",
+          "tailOffset": 808342,
+          "archiveOffset": 10275857,
+          "size": 4868,
+          "uncompressedSize": 20084,
+          "frequency": 5
+        },
+        {
+          "index": 2154,
+          "hash": "1f400751fe267e40a3774b9c10192cbbdc93f8c5",
+          "tailOffset": 810256,
+          "archiveOffset": 10280725,
+          "size": 4427,
+          "uncompressedSize": 18343,
+          "frequency": 5
+        },
+        {
+          "index": 2155,
+          "hash": "74f3951724e9d861c7f301b29a3cc39294f581d8",
+          "tailOffset": 810892,
+          "archiveOffset": 10285152,
+          "size": 4848,
+          "uncompressedSize": 19979,
+          "frequency": 5
+        },
+        {
+          "index": 2156,
+          "hash": "2514432b91b6ee40c486b6b7713cec720b603627",
+          "tailOffset": 828266,
+          "archiveOffset": 10290000,
+          "size": 6240,
+          "uncompressedSize": 26970,
+          "frequency": 5
+        },
+        {
+          "index": 2157,
+          "hash": "d27754d470fbad7512d9a1b2f2214365aff916f4",
+          "tailOffset": 829574,
+          "archiveOffset": 10296240,
+          "size": 5539,
+          "uncompressedSize": 23416,
+          "frequency": 5
+        },
+        {
+          "index": 2158,
+          "hash": "cfbf5c0b3b2d28290062b98b7a4da6fa89917708",
+          "tailOffset": 834282,
+          "archiveOffset": 10301779,
+          "size": 6067,
+          "uncompressedSize": 26134,
+          "frequency": 5
+        },
+        {
+          "index": 2159,
+          "hash": "0aa71a00ab3c7850288fb0a599432bf9a5d9b221",
+          "tailOffset": 837490,
+          "archiveOffset": 10307846,
+          "size": 5308,
+          "uncompressedSize": 22632,
+          "frequency": 5
+        },
+        {
+          "index": 2160,
+          "hash": "dc5a98e45d5617e617e8da10adf97a051bf300c8",
+          "tailOffset": 843878,
+          "archiveOffset": 10313154,
+          "size": 6241,
+          "uncompressedSize": 26994,
+          "frequency": 5
+        },
+        {
+          "index": 2161,
+          "hash": "59ff4e5bfe454d2717e9faee8eece41cea703f4d",
+          "tailOffset": 845356,
+          "archiveOffset": 10319395,
+          "size": 5553,
+          "uncompressedSize": 23440,
+          "frequency": 5
+        },
+        {
+          "index": 2162,
+          "hash": "ab8974b9c42980492d6f01483a2f6320f69a52d7",
+          "tailOffset": 849912,
+          "archiveOffset": 10324948,
+          "size": 4875,
+          "uncompressedSize": 20108,
+          "frequency": 5
+        },
+        {
+          "index": 2163,
+          "hash": "2ef8ae24e586d3c6c51fe8b686f0c52b44a91b63",
+          "tailOffset": 850566,
+          "archiveOffset": 10329823,
+          "size": 6070,
+          "uncompressedSize": 26158,
+          "frequency": 5
+        },
+        {
+          "index": 2164,
+          "hash": "03ee788780e0bd579c2e098d54129abdff14a78a",
+          "tailOffset": 852852,
+          "archiveOffset": 10335893,
+          "size": 4430,
+          "uncompressedSize": 18367,
+          "frequency": 5
+        },
+        {
+          "index": 2165,
+          "hash": "f7172005db1c96c6510b254ba6f1ff5d739c6c45",
+          "tailOffset": 854276,
+          "archiveOffset": 10340323,
+          "size": 5311,
+          "uncompressedSize": 22656,
+          "frequency": 5
+        },
+        {
+          "index": 2166,
+          "hash": "8dbca9ec6c251249ced1dc084b75eccdc2f76b2a",
+          "tailOffset": 854948,
+          "archiveOffset": 10345634,
+          "size": 4859,
+          "uncompressedSize": 20003,
+          "frequency": 5
+        }
+      ]
+    }
+  ]
+}

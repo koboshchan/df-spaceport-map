@@ -1,0 +1,30 @@
+{
+  "id": "m_7b06560d7776f5e8",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/SM_H_Industrial_Mechanical_MetalSilo_03_Ruin_a.SM_H_Industrial_Mechanical_MetalSilo_03_Ruin_a",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\Mechanical\\SM_H_Industrial_Mechanical_MetalSilo_03_Ruin_a.glb",
+  "sourceSHA256": "5CCE92CEFD683D2393A01215D9DDB9AFCED2C681C3530104E39A8E74AE2028BE",
+  "model": "models/df_v24/m_7b06560d7776f5e8.vmdl",
+  "materials": {
+    "mat_e7a81cd64ab3053b": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/00_Materials/HD/MI_H_Industrial_Mechanical_MetalSilo_03_Ruin_03_HD.MI_H_Industrial_Mechanical_MetalSilo_03_Ruin_03_HD",
+    "mat_7349e97d12ce9175": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/00_Materials/HD/MI_H_Industrial_Mechanical_MetalSilo_03_Ruin_02_HD.MI_H_Industrial_Mechanical_MetalSilo_03_Ruin_02_HD",
+    "mat_bea28a417c7684dc": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/00_Materials/HD/MI_H_Industrial_Mechanical_MetalSilo_03_Ruin_04_HD.MI_H_Industrial_Mechanical_MetalSilo_03_Ruin_04_HD",
+    "mat_5c7fd5cb22225714": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/00_Materials/HD/MI_H_Industrial_Mechanical_MetalSilo_03g_HD.MI_H_Industrial_Mechanical_MetalSilo_03g_HD",
+    "mat_e63497626911519d": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/00_Materials/HD/MI_H_Industrial_Mechanical_MetalSilo_03_Ruin_05_HD.MI_H_Industrial_Mechanical_MetalSilo_03_Ruin_05_HD"
+  },
+  "vertices": 19948,
+  "polygons": 18296,
+  "bounds": [
+    [
+      -125.96795654296875,
+      -142.35508728027344,
+      -4.9438473070040345e-05
+    ],
+    [
+      145.05458068847656,
+      127.06250762939453,
+      651.7307739257812
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

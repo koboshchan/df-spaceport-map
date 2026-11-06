@@ -1,0 +1,466 @@
+[
+  {
+    "archiveIndex": 2160,
+    "bits": 123,
+    "DXBCStart": 296,
+    "arrays": [
+      {
+        "label": "textureTokenArrayCandidate",
+        "start": 8,
+        "end": 112,
+        "values": [
+          0,
+          7,
+          0,
+          9,
+          10,
+          14,
+          23,
+          16788992,
+          16789249,
+          50331655,
+          67110152,
+          67110409,
+          67110666,
+          67111179,
+          83888145,
+          83888658,
+          83889171,
+          83889684,
+          83890197,
+          83890710,
+          83891223,
+          83891736,
+          83892249,
+          100663813,
+          100664070,
+          4294967295
+        ],
+        "candidateMaterialBuffer5Tokens": [
+          {
+            "uint": 83888145,
+            "hex": "0x5000811",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 8,
+            "candidateBindIndex": 17
+          },
+          {
+            "uint": 83888658,
+            "hex": "0x5000a12",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 10,
+            "candidateBindIndex": 18
+          },
+          {
+            "uint": 83889171,
+            "hex": "0x5000c13",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 12,
+            "candidateBindIndex": 19
+          },
+          {
+            "uint": 83889684,
+            "hex": "0x5000e14",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 14,
+            "candidateBindIndex": 20
+          },
+          {
+            "uint": 83890197,
+            "hex": "0x5001015",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 16,
+            "candidateBindIndex": 21
+          },
+          {
+            "uint": 83890710,
+            "hex": "0x5001216",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 18,
+            "candidateBindIndex": 22
+          },
+          {
+            "uint": 83891223,
+            "hex": "0x5001417",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 20,
+            "candidateBindIndex": 23
+          },
+          {
+            "uint": 83891736,
+            "hex": "0x5001618",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 22,
+            "candidateBindIndex": 24
+          },
+          {
+            "uint": 83892249,
+            "hex": "0x5001819",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 24,
+            "candidateBindIndex": 25
+          }
+        ]
+      },
+      {
+        "label": "srvTokenArrayCandidate",
+        "start": 116,
+        "end": 160,
+        "values": [
+          7,
+          8,
+          0,
+          0,
+          9,
+          0,
+          0,
+          11008,
+          16791297,
+          67111426,
+          4294967295
+        ],
+        "candidateMaterialBuffer5Tokens": []
+      },
+      {
+        "label": "samplerTokenArrayCandidate",
+        "start": 164,
+        "end": 196,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4294967295
+        ],
+        "candidateMaterialBuffer5Tokens": []
+      },
+      {
+        "label": "layoutHashesCandidate",
+        "start": 200,
+        "end": 228,
+        "values": [
+          516295256,
+          162923992,
+          0,
+          2097174,
+          234032779,
+          88606728,
+          105252358
+        ],
+        "candidateMaterialBuffer5Tokens": [
+          {
+            "uint": 88606728,
+            "hex": "0x5480808",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 18440,
+            "candidateBindIndex": 8
+          }
+        ]
+      }
+    ],
+    "scope": "array boundaries exact; labels/token bit semantics require source corroboration, no parameter binding claimed",
+    "authoritativeCorrection": "binding-correction-authoritative.json; no extra5float4 header claim is valid"
+  },
+  {
+    "archiveIndex": 2156,
+    "bits": 123,
+    "DXBCStart": 296,
+    "arrays": [
+      {
+        "label": "textureTokenArrayCandidate",
+        "start": 8,
+        "end": 112,
+        "values": [
+          0,
+          7,
+          0,
+          9,
+          10,
+          14,
+          23,
+          16788992,
+          16789249,
+          50331655,
+          67110152,
+          67110409,
+          67110666,
+          67111179,
+          83888145,
+          83888658,
+          83889171,
+          83889684,
+          83890197,
+          83890710,
+          83891223,
+          83891736,
+          83892249,
+          100663813,
+          100664070,
+          4294967295
+        ],
+        "candidateMaterialBuffer5Tokens": [
+          {
+            "uint": 83888145,
+            "hex": "0x5000811",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 8,
+            "candidateBindIndex": 17
+          },
+          {
+            "uint": 83888658,
+            "hex": "0x5000a12",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 10,
+            "candidateBindIndex": 18
+          },
+          {
+            "uint": 83889171,
+            "hex": "0x5000c13",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 12,
+            "candidateBindIndex": 19
+          },
+          {
+            "uint": 83889684,
+            "hex": "0x5000e14",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 14,
+            "candidateBindIndex": 20
+          },
+          {
+            "uint": 83890197,
+            "hex": "0x5001015",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 16,
+            "candidateBindIndex": 21
+          },
+          {
+            "uint": 83890710,
+            "hex": "0x5001216",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 18,
+            "candidateBindIndex": 22
+          },
+          {
+            "uint": 83891223,
+            "hex": "0x5001417",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 20,
+            "candidateBindIndex": 23
+          },
+          {
+            "uint": 83891736,
+            "hex": "0x5001618",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 22,
+            "candidateBindIndex": 24
+          },
+          {
+            "uint": 83892249,
+            "hex": "0x5001819",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 24,
+            "candidateBindIndex": 25
+          }
+        ]
+      },
+      {
+        "label": "srvTokenArrayCandidate",
+        "start": 116,
+        "end": 160,
+        "values": [
+          7,
+          8,
+          0,
+          0,
+          9,
+          0,
+          0,
+          11008,
+          16791297,
+          67111426,
+          4294967295
+        ],
+        "candidateMaterialBuffer5Tokens": []
+      },
+      {
+        "label": "samplerTokenArrayCandidate",
+        "start": 164,
+        "end": 196,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4294967295
+        ],
+        "candidateMaterialBuffer5Tokens": []
+      },
+      {
+        "label": "layoutHashesCandidate",
+        "start": 200,
+        "end": 228,
+        "values": [
+          516295256,
+          162923992,
+          0,
+          2097174,
+          234032779,
+          88606728,
+          105252358
+        ],
+        "candidateMaterialBuffer5Tokens": [
+          {
+            "uint": 88606728,
+            "hex": "0x5480808",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 18440,
+            "candidateBindIndex": 8
+          }
+        ]
+      }
+    ],
+    "scope": "array boundaries exact; labels/token bit semantics require source corroboration, no parameter binding claimed",
+    "authoritativeCorrection": "binding-correction-authoritative.json; no extra5float4 header claim is valid"
+  },
+  {
+    "archiveIndex": 13041,
+    "bits": 122,
+    "DXBCStart": 276,
+    "arrays": [
+      {
+        "label": "textureTokenArrayCandidate",
+        "start": 8,
+        "end": 92,
+        "values": [
+          0,
+          7,
+          0,
+          9,
+          10,
+          14,
+          17,
+          16788992,
+          16789249,
+          50331656,
+          67110153,
+          67110410,
+          67110667,
+          67111180,
+          83887120,
+          83887633,
+          83888146,
+          100663557,
+          100663814,
+          100664071,
+          4294967295
+        ],
+        "candidateMaterialBuffer5Tokens": [
+          {
+            "uint": 83887120,
+            "hex": "0x5000410",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 4,
+            "candidateBindIndex": 16
+          },
+          {
+            "uint": 83887633,
+            "hex": "0x5000611",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 6,
+            "candidateBindIndex": 17
+          },
+          {
+            "uint": 83888146,
+            "hex": "0x5000812",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 8,
+            "candidateBindIndex": 18
+          }
+        ]
+      },
+      {
+        "label": "srvTokenArrayCandidate",
+        "start": 96,
+        "end": 148,
+        "values": [
+          0,
+          7,
+          0,
+          0,
+          8,
+          9,
+          0,
+          16791296,
+          67111425,
+          83887362,
+          83887875,
+          83888388,
+          4294967295
+        ],
+        "candidateMaterialBuffer5Tokens": [
+          {
+            "uint": 83887362,
+            "hex": "0x5000502",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 5,
+            "candidateBindIndex": 2
+          },
+          {
+            "uint": 83887875,
+            "hex": "0x5000703",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 7,
+            "candidateBindIndex": 3
+          },
+          {
+            "uint": 83888388,
+            "hex": "0x5000904",
+            "candidateBuffer": 5,
+            "candidateResourceIndex": 9,
+            "candidateBindIndex": 4
+          }
+        ]
+      },
+      {
+        "label": "samplerTokenArrayCandidate",
+        "start": 152,
+        "end": 184,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4294967295
+        ],
+        "candidateMaterialBuffer5Tokens": []
+      },
+      {
+        "label": "layoutHashesCandidate",
+        "start": 188,
+        "end": 216,
+        "values": [
+          0,
+          162923992,
+          0,
+          2097174,
+          234032779,
+          74779397,
+          105252358
+        ],
+        "candidateMaterialBuffer5Tokens": []
+      }
+    ],
+    "scope": "array boundaries exact; labels/token bit semantics require source corroboration, no parameter binding claimed",
+    "authoritativeCorrection": "binding-correction-authoritative.json; no extra5float4 header claim is valid"
+  }
+]

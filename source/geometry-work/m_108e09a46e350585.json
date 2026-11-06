@@ -1,0 +1,26 @@
+{
+  "id": "m_108e09a46e350585",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Grass/NavalBattle/SM_GR_SeaGrass_50cm_HD.SM_GR_SeaGrass_50cm_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Grass\\NavalBattle\\SM_GR_SeaGrass_50cm_HD.glb",
+  "sourceSHA256": "C22B8EA07460ABECE60B6C84549CA144199D9792F1540A73A4A00CBC8CB9E46C",
+  "model": "models/df_v24/m_108e09a46e350585.vmdl",
+  "materials": {
+    "mat_1c2324a1e4463497": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Grass/NavalBattle/00_Materials/MI_GR_SeaGrass_50cm_Leaf_HD.MI_GR_SeaGrass_50cm_Leaf_HD"
+  },
+  "vertices": 1279,
+  "polygons": 701,
+  "bounds": [
+    [
+      -42.12262725830078,
+      -45.46788787841797,
+      -2.285254955291748
+    ],
+    [
+      48.733768463134766,
+      43.32102966308594,
+      21.51007080078125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

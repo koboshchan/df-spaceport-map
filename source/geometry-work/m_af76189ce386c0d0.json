@@ -1,0 +1,26 @@
+{
+  "id": "m_af76189ce386c0d0",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Commercial/Lighting/SM_M_Commercial_Lighting_GardenLights_01.SM_M_Commercial_Lighting_GardenLights_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Commercial\\Lighting\\SM_M_Commercial_Lighting_GardenLights_01.glb",
+  "sourceSHA256": "70078B6C5EC0F038CCEF7FB959286D58D401D520670E26B9AE999977AA87DE38",
+  "model": "models/df_v24/m_af76189ce386c0d0.vmdl",
+  "materials": {
+    "mat_c7caa9a70a026841": "DeltaForce/Content/Environment/Props/Morocco/Commercial/00_Materials/HD/MI_M_Commercial_Lighting_GardenLights_01_C_HD.MI_M_Commercial_Lighting_GardenLights_01_c_HD"
+  },
+  "vertices": 308,
+  "polygons": 276,
+  "bounds": [
+    [
+      -2.036863088607788,
+      -2.0368824005126953,
+      -0.1855655014514923
+    ],
+    [
+      2.0367953777313232,
+      2.037097215652466,
+      8.950675010681152
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

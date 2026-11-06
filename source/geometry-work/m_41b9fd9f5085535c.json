@@ -1,0 +1,26 @@
+{
+  "id": "m_41b9fd9f5085535c",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/SM_H_Government_Office_FlowerPot_02.SM_H_Government_Office_FlowerPot_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Government\\Office\\SM_H_Government_Office_FlowerPot_02.glb",
+  "sourceSHA256": "05128076472DF1F555C002A4E92D1D4C5B29475C361EE22A9CD0E9D95C8BF59E",
+  "model": "models/df_v24/m_41b9fd9f5085535c.vmdl",
+  "materials": {
+    "mat_35d4357a2831276b": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/00_Materials/HD/MI_H_Government_Office_FlowerPot_02_HD.MI_H_Government_Office_FlowerPot_02_HD"
+  },
+  "vertices": 1963,
+  "polygons": 2634,
+  "bounds": [
+    [
+      -7.666164875030518,
+      -8.990694046020508,
+      -9.448335731576663e-07
+    ],
+    [
+      8.706332206726074,
+      8.685349464416504,
+      26.049036026000977
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,37 @@
+﻿{
+    "timestampUTC":  "2026-11-06T16:13:26.4451738Z",
+    "status":  "BLOCKED_NATIVE_PACKING_NOT_INDEPENDENTLY_ESTABLISHED",
+    "scope":  "517 MatBlend +53 light, one Props resource8 archive2160 and one light resource2 archive13010 first",
+    "evidenceSHA256":  {
+                           "props2160-uniform-expression-crosswalk.json":  "40e54fa7aaf952d68aa56364a616d25c55708bdcceb8ea4a4490395d9bfe8fb9",
+                           "props-root.native-tail.bin":  "755af20fa8cdcbc8e22b5a402a354cd2ff501d6d2847a1ac6ea4d108b1a14239",
+                           "light-root.native-tail.bin":  "1a1ac4fac9dbc282dbb01071ffe63e2e074cb52c4cf2badcf3d92f89c5154989",
+                           "ps-resource-locations.json":  "8f1b689d20568f543670ad372c1f7ec392733168492465a4056f10c98f120db2",
+                           "priority-vt-records.json":  "ad4bdcd5bcac6c34e3e7bd01f5465144a0a1024debba4eaa58bce74a57b4b789",
+                           "finite-two-pilot-verification-gate.json":  "39a717fcec4cca5ceb08eab13179f3cbf462498dc5d2ba7c26b1a6fe1e737585",
+                           "permutation-binding-crosscheck.json":  "5fa86837b85ee6d726eac74e6e9006cec823da9717d52cdc2a2c4ed922bd8040",
+                           "binding-correction-authoritative.json":  "9f3f7d114d4418b305eb715d627f18dde12ca19e19572b519f57c16950892e8d"
+                       },
+    "known":  [
+                  "Exact native root/permutation DXBC matches are evidence, not guessed archive neighbors",
+                  "SM5 identity feature3 corroborated by embedded compile strings and enum",
+                  "Named VT expression records and candidate stack membership exist",
+                  "Scalar/vector expression trees and instruction tokens exist"
+              ],
+    "unknown":  [
+                    "No independently verified DF runtime uniform buffer member-offset metadata",
+                    "No proved named VT expression -\u003e physical SRV/register mapping",
+                    "No proved actual MI static switch set -\u003e selected root permutation correspondence"
+                ],
+    "rejectedClaims":  [
+                           "3 float4 per VT stack is NOT independently proven here",
+                           "Vector base =3*stackCount+namedVTCount remains candidate, not runtime layout evidence",
+                           "No arbitrary ordinal named texture to sample register assignment"
+                       ],
+    "nextFiniteStep":  "Extract native shader frozen parameter/resource tables for EXACT Props resource8 hash2160 and light resource2 hash13010, recover Material uniform-buffer layout/member offsets and resource table mapping. Cross-check those explicit byte offsets against existing expression crosswalk; if DF frozen image lacks names/layout, exact DF runtime serializer or generated uniform-buffer declaration is required. Do not substitute generic UE layout as proof.",
+    "duplicateWorkAvoided":  "Existing crosswalk retained; no rerun archive decode, expression parser or material conversion",
+    "activeResearchSeconds":  null,
+    "historicalWallSeconds":  null,
+    "timingNote":  "This timestamp is audit receipt creation only, not start or duration of research",
+    "noActiveAssetMutation":  true
+}

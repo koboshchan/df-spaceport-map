@@ -1,0 +1,27 @@
+{
+  "owner": "49f09f11",
+  "requester": "9544e193",
+  "state": "RESERVED_WAITING_STAGED_VMAP_AND_MANIFEST",
+  "scope": "small isolated native ladder mesh pilot only",
+  "root": "E:/df-v25-build-20261106/orchestrator/ladder-pilot",
+  "compilerOwnerOnly": true,
+  "requires": [
+    "staged VMAP exact path and SHA256",
+    "complete source dependency manifest including verified toolsinvisibleladder resource",
+    "pilot geometry bounds front entry top-out and source-grounded surface orientation",
+    "explicit output isolation no live game mount or existing v24 target writes"
+  ],
+  "launch": "central owner only detached scheduled task with persistent stdout stderr exit receipts",
+  "acceptance": [
+    "compiled native dependencies and CRC",
+    "compiled material ladder/playerclip flags",
+    "compiled geometry physics registration transforms",
+    "front-only entry/top-out geometry review; runtime not claimed"
+  ],
+  "notAuthorization": [
+    "full v25 compile gate closure",
+    "install",
+    "restart",
+    "live runtime mutation"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "m_a8dcdc6a3b31f4b3",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Pipeline/SM_H_PipeLineRack_01.SM_H_PipeLineRack_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Pipeline\\SM_H_PipeLineRack_01.glb",
+  "sourceSHA256": "3B5305938276FC5091E83B805712F483D3EE5B022F3882469FAFD6BC13BF1F90",
+  "model": "models/df_v24/m_a8dcdc6a3b31f4b3.vmdl",
+  "materials": {
+    "mat_c9e75ab9b7623828": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_HD.MI_I_WalkwaySystem_MetalFloor_01_HD"
+  },
+  "vertices": 296,
+  "polygons": 288,
+  "bounds": [
+    [
+      -39.04041290283203,
+      -7.138375282287598,
+      -1.6698330682629603e-06
+    ],
+    [
+      2.449795961380005,
+      0.10038413852453232,
+      48.511512756347656
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

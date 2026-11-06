@@ -1,0 +1,26 @@
+{
+  "id": "m_85a225175e697703",
+  "objectPath": "DeltaForce/Content/Environment/Props/Industrial/Tools/SM_Industrial_Tools_Stepladder_02B.SM_Industrial_Tools_Stepladder_02B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Industrial\\Tools\\SM_Industrial_Tools_Stepladder_02B.glb",
+  "sourceSHA256": "45ABE21A3A6319D3145189516B948BC6A3A05D1589E8DD54FA5B87C4B441FFC8",
+  "model": "models/df_v24/m_85a225175e697703.vmdl",
+  "materials": {
+    "mat_df5b058bf99f17cb": "DeltaForce/Content/Environment/Props/Industrial/00_Materials/MI_GEN_Props_stepladder_01.MI_GEN_Props_stepladder_01"
+  },
+  "vertices": 288,
+  "polygons": 256,
+  "bounds": [
+    [
+      -14.612083435058594,
+      -0.9539999961853027,
+      -1.1683130735434485e-16
+    ],
+    [
+      14.615123748779297,
+      0.9539999961853027,
+      13.680000305175781
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

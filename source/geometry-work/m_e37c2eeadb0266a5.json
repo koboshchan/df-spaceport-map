@@ -1,0 +1,26 @@
+{
+  "id": "m_e37c2eeadb0266a5",
+  "objectPath": "DeltaForce/Content/Environment/Props/Lighting/SM_Generic_Lighting_Chandelier_11.SM_Generic_Lighting_Chandelier_11",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Lighting\\SM_Generic_Lighting_Chandelier_11.glb",
+  "sourceSHA256": "1B8C03F0AAA4A0357C8BDE84AEC5601F0333465C6C6CEF6F250789DDF30A60B6",
+  "model": "models/df_v24/m_e37c2eeadb0266a5.vmdl",
+  "materials": {
+    "mat_6d198dd287e0dafe": "DeltaForce/Content/Environment/Props/Lighting/00_Materials/HD/MI_Generic_Lighting_Chandelier_11_HD.MI_Generic_Lighting_Chandelier_11_HD"
+  },
+  "vertices": 232,
+  "polygons": 132,
+  "bounds": [
+    [
+      -31.519001007080078,
+      -1.455515742301941,
+      -0.17160052061080933
+    ],
+    [
+      31.486042022705078,
+      1.455517053604126,
+      4.080173969268799
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "m_1934a59273822a30",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/SM_I_RoadFacility_Ground_L_04f.SM_I_RoadFacility_Ground_L_04f",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter_Ma1\\SM_I_RoadFacility_Ground_L_04f.glb",
+  "sourceSHA256": "8308C3786A98825A1C61600F16FBB37AE077C8D1D63C94FF6480C78E747204EE",
+  "model": "models/df_v24/m_1934a59273822a30.vmdl",
+  "materials": {
+    "mat_01d685f1273166fa": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_RoadCurb_01_HD.MI_RoadCurb_01_HD",
+    "mat_8d3bef7d61f3b3e0": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_L_02_HD.MI_I_RoadFacility_Ground_L_02_HD",
+    "mat_801936e282a6fbf6": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_L_07B_HD.MI_I_RoadFacility_Ground_L_07B_HD",
+    "mat_81141676929f02f1": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Tide/00_Materials/HD/MI_H_Building_Tide_PrisonMain_14_Layer_01c_HD.MI_H_Building_Tide_PrisonMain_14_Layer_01c_HD",
+    "mat_d8495265b4c73574": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Brakkesh/00_Materials/HD/MI_I_RoadFacility_Ground_L_03_HD.MI_I_RoadFacility_Ground_L_03_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD"
+  },
+  "vertices": 8222,
+  "polygons": 8102,
+  "bounds": [
+    [
+      -1859.7261962890625,
+      -4484.9091796875,
+      -1085.98779296875
+    ],
+    [
+      1859.681884765625,
+      103.21400451660156,
+      387.49652099609375
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

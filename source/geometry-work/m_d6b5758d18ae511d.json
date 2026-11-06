@@ -1,0 +1,31 @@
+{
+  "id": "m_d6b5758d18ae511d",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/SM_I_RoadFacility_Ground_H_12.SM_I_RoadFacility_Ground_H_12",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter_Ma1\\SM_I_RoadFacility_Ground_H_12.glb",
+  "sourceSHA256": "96898D7DA5287117CEB872F66BD3473D3F398B34F7B723F3B86B7D7B5202E68D",
+  "model": "models/df_v24/m_d6b5758d18ae511d.vmdl",
+  "materials": {
+    "mat_46e162a33f17fe6d": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_I_RoadFacility_Ground_H_18_01A_HD.MI_I_RoadFacility_Ground_H_18_01A_HD",
+    "mat_df7be38332dfb8f1": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_H_01G_HD.MI_I_RoadFacility_Ground_H_01G_HD",
+    "mat_682788c896099f3d": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_H_05G_HD.MI_I_RoadFacility_Ground_H_05G_HD",
+    "mat_38f3a85edb7e19ad": "DeltaForce/Content/Environment/Structures/HAAVK/Decal/WellLid/00_Materials/HD/MI_H_Decal_WellLid_01_HD.MI_H_Decal_WellLid_01_HD",
+    "mat_e106fa21d22b77ef": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_H_06G_HD.MI_I_RoadFacility_Ground_H_06G_HD",
+    "mat_4d074cd817a641c6": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_H_02G_HD.MI_I_RoadFacility_Ground_H_02G_HD"
+  },
+  "vertices": 9336,
+  "polygons": 8064,
+  "bounds": [
+    [
+      47.94449996948242,
+      -2949.029296875,
+      -9.565374374389648
+    ],
+    [
+      4093.37890625,
+      0.716764509677887,
+      1.2795346975326538
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "m_44cdbed35235cc80",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Nature/Rocks/IceLand/SM_IceLand_Nature_Rock_Medium_BeachRock_01e.SM_IceLand_Nature_Rock_Medium_BeachRock_01e",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Nature\\Rocks\\IceLand\\SM_IceLand_Nature_Rock_Medium_BeachRock_01e.glb",
+  "sourceSHA256": "193BF5C6F6553DC84D3B6A89759DC853A176A04D9760B9CDB34E1989620EE803",
+  "model": "models/df_v24/m_44cdbed35235cc80.vmdl",
+  "materials": {
+    "mat_b636ca287bc7c381": "DeltaForce/Content/Environment/Biome/Nature/Rocks/IceLand/00_Materials/HD/MI_IceLand_Nature_Rock_Medium_BeachRock_01e_HD.MI_IceLand_Nature_Rock_Medium_BeachRock_01e_HD"
+  },
+  "vertices": 1086,
+  "polygons": 1604,
+  "bounds": [
+    [
+      -135.3571014404297,
+      -80.35189819335938,
+      0.012373438104987144
+    ],
+    [
+      139.19430541992188,
+      82.80352783203125,
+      115.60498046875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "m_fd3591a21be2ad37",
+  "objectPath": "DeltaForce/Content/Environment/ProxyMesh/SpaceCenter/PM_SM_H_Building_FutureTech_HLight_01_ExterWall_01A.PM_SM_H_Building_FutureTech_HLight_01_ExterWall_01A",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\ProxyMesh\\SpaceCenter\\PM_SM_H_Building_FutureTech_HLight_01_ExterWall_01A.glb",
+  "sourceSHA256": "CC49CF5E01C7FB9FF18C4F0C175AEA4B9CE61A312DD6F653C94070DD383729D6",
+  "model": "models/df_v24/m_fd3591a21be2ad37.vmdl",
+  "materials": {
+    "mat_df854bd442dbd2ae": "DeltaForce/Content/Environment/ProxyMesh/SpaceCenter/00_Materials/MI_PM_H_Building_FutureTech_HLight_01_ExterWall_01.MI_PM_H_Building_FutureTech_HLight_01_ExterWall_01"
+  },
+  "vertices": 272,
+  "polygons": 136,
+  "bounds": [
+    [
+      -3152.1806640625,
+      -218.91163635253906,
+      102.23995208740234
+    ],
+    [
+      -938.3863525390625,
+      2341.250732421875,
+      1693.023193359375
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

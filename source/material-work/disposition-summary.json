@@ -1,0 +1,26 @@
+{
+  "scope": "657 packed fallback materials only; 45 unused/unpacked excluded",
+  "createdUTC": "2026-11-06T15:44:41.730130+00:00",
+  "sourceReadOnly": true,
+  "v24Edited": false,
+  "inputTreeEditAllowed": false,
+  "allRowsBlockedPendingGraphTrace": 657,
+  "families": {
+    "NoEffectiveTextureReferences": 13,
+    "LightEmission": 53,
+    "MatBlend": 517,
+    "Special": 1,
+    "AdvancedRock": 15,
+    "WaterPool": 10,
+    "ScreenGlitch": 13,
+    "MeshDecal": 8,
+    "FakeInterior": 10,
+    "Plant": 1,
+    "ThreeLayer": 1,
+    "NormalOnlyDecal": 4,
+    "ProceduralFX": 11
+  },
+  "sourceReceipts": "E:\\df-v24-research-20261106\\white-binding-readonly",
+  "noSilentFallback": true,
+  "noDFParityClaim": true
+}

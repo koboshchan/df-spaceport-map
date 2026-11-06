@@ -1,0 +1,44 @@
+import bpy,json,hashlib,math,struct
+from pathlib import Path
+from mathutils import Vector,Matrix
+R=Path('E:/df-v24-build-20261106');W=R/'geometry-work';O=R/'content/kat/models/df_v24'
+S=Path('E:/df-extract-20261105/placements')
+rows=json.loads((R/'component-work/spline-remediation.json').read_text(encoding='utf8'))
+base={x['objectPath']:x for x in [json.loads(l) for l in (W/'models.jsonl').read_text(encoding='utf8').splitlines()]}
+out=[]
+for row in rows:
+ mid='s_'+hashlib.sha256(row['objectPath'].encode()).hexdigest()[:16]
+ src=next(root/row['sourceJson'] for root in [S]+[S/'parallel'/('shard-'+str(i)) for i in range(8)] if (root/row['sourceJson']).exists())
+ props=json.loads(src.read_text(encoding='utf8'))['Properties'];sp=props['SplineParams']
+ def vec(n):return Vector([sp.get(n,{}).get(k,0.0) for k in ['X','Y','Z']])
+ start,end,ts,te=vec('StartPos'),vec('EndPos'),vec('StartTangent'),vec('EndTangent')
+ bpy.ops.object.select_all(action='SELECT');bpy.ops.object.delete(use_global=False)
+ b=base[row['meshObjectPath']]
+ bpy.ops.import_scene.fbx(filepath=str(O/(b['id']+'.fbx')),use_anim=False)
+ obs=[ob for ob in bpy.context.scene.objects if ob.type=='MESH']
+ # FBX importer metadata rotation is deliberately ignored, geometry local frame matches converter axis proof.
+ zvals=[v.co.z/0.36 for ob in obs for v in ob.data.vertices]
+ zmin,zmax=min(zvals),max(zvals);assert zmax>zmin
+ world=Matrix(row['fullSourceWorldMatrix'])
+ for ob in obs:
+  me=ob.data
+  for v in me.vertices:
+   local=Vector([v.co.x/0.36,-v.co.y/0.36,v.co.z/0.36])
+   a=(local.z-zmin)/(zmax-zmin);a2=a*a;a3=a2*a
+   pos=(2*a3-3*a2+1)*start+(a3-2*a2+a)*ts+(-2*a3+3*a2)*end+(a3-a2)*te
+   tangent=(6*a2-6*a)*start+(3*a2-4*a+1)*ts+(-6*a2+6*a)*end+(3*a2-2*a)*te
+   tangent.normalize();cross=Vector((0,0,1)).cross(tangent)
+   assert cross.length>1e-8,'degenerate native spline up frame'
+   cross.normalize();up=tangent.cross(cross).normalized()
+   # Forward Z means source transverse axes X,Y correspond to native baseX,baseY.
+   deformed=pos+cross*local.x+up*local.y
+   p=world@deformed
+   v.co=Vector((p.x*0.36-240984,-p.y*0.36-164808,p.z*0.36+8052.84))
+  ob.matrix_world=Matrix.Identity(4);ob.select_set(True)
+ bpy.ops.export_scene.fbx(filepath=str(O/(mid+'.fbx')),global_scale=1,apply_unit_scale=False,apply_scale_options='FBX_SCALE_ALL',axis_forward='-X',axis_up='Z',use_space_transform=False,bake_space_transform=False,use_selection=True,object_types={'MESH'},use_mesh_modifiers=False,bake_anim=False,add_leaf_bones=False,use_triangles=True,mesh_smooth_type='FACE',path_mode='STRIP')
+ text=(O/(b['id']+'.vmdl')).read_text(encoding='utf8').replace(b['id']+'.fbx',mid+'.fbx')
+ (O/(mid+'.vmdl')).write_text(text,encoding='utf8')
+ out.append({'objectPath':row['objectPath'],'model':'models/df_v24/'+mid+'.vmdl','id':mid,'origin':[0,0,0],'angles':[0,0,0],'scale':[1,1,1],'worldBaked':True,'collisionEnabled':False,'source':str(src),'forwardAxis':'Z from Type1/Type2 archetype','sourceSplineParams':sp,'basis':'sourceUE Hermite deformation then fullSourceWorldMatrix then UE->CS2','validation':'endpoint Hermite equality analytic; native visual parity not yet runtime verified','vertices':sum(len(ob.data.vertices) for ob in obs)})
+ print('SPLINE_DONE',mid,flush=True)
+(W/'spline-models.json').write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding='utf8')
+print('SPLINES',len(out),flush=True)

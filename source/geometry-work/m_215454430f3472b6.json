@@ -1,0 +1,30 @@
+{
+  "id": "m_215454430f3472b6",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_Building_FutureTech_H_01/SM_H_Building_FutureTech_HLight_01_InterWall_02C.SM_H_Building_FutureTech_HLight_01_InterWall_02C",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_Building_FutureTech_H_01\\SM_H_Building_FutureTech_HLight_01_InterWall_02C.glb",
+  "sourceSHA256": "DB4EBE2973CF453AE7C9C8524F776A128F2F3582E561FFD6911204E7BF2EB6C6",
+  "model": "models/df_v24/m_215454430f3472b6.vmdl",
+  "materials": {
+    "mat_5c93c24fe8668312": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_DecalAlpha_01_HD.MI_H_Building_FutureTech_DecalAlpha_01_HD",
+    "mat_b2cce2838c324de6": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Industrial/00_Materials/HD/MI_H_Building_Industrial_Posun_02_HD.MI_H_Building_Industrial_Posun_02_HD",
+    "mat_83b0464406b475c0": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_DecalAlpha_03a_HD.MI_H_Building_FutureTech_DecalAlpha_03a_HD",
+    "mat_9c2d72dcc6b40266": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Industrial/00_Materials/HD/MI_H_Building_Industrial_Posun_HD.MI_H_Building_Industrial_Posun_HD",
+    "mat_2b67451cfd0435de": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_DecalAlpha_03_HD.MI_H_Building_FutureTech_DecalAlpha_03_HD"
+  },
+  "vertices": 2577,
+  "polygons": 1131,
+  "bounds": [
+    [
+      -1983.466796875,
+      1440.06201171875,
+      135.5548553466797
+    ],
+    [
+      -1773.912353515625,
+      2223.230224609375,
+      1061.6214599609375
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

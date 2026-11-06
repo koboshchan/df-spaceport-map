@@ -1,0 +1,28 @@
+{
+  "id": "m_efdd1ffc8ae4c3e7",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/Furniture/SM_H_FutureTech_Furniture_Table_02.SM_H_FutureTech_Furniture_Table_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\Furniture\\SM_H_FutureTech_Furniture_Table_02.glb",
+  "sourceSHA256": "4F283783299273DC207167568507F0D24A14C432F6A57CED26935883EB3F35BA",
+  "model": "models/df_v24/m_efdd1ffc8ae4c3e7.vmdl",
+  "materials": {
+    "mat_8e924da7c5555239": "DeltaForce/Content/Environment/Props/Branding/00_Materials/HD/MI_Branding_Sticker_Number_01D_HD.MI_Branding_Sticker_Number_01D_HD",
+    "mat_c99d239c788c6c00": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/Furniture/00_Materials/HD/MI_H_FutureTech_Furniture_Table_02_HD.MI_H_FutureTech_Furniture_Table_02_HD",
+    "mat_e9069620cda90fb5": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/Furniture/00_Materials/HD/MI_H_FutureTech_Furniture_Table_02B_HD.MI_H_FutureTech_Furniture_Table_02B_HD"
+  },
+  "vertices": 2086,
+  "polygons": 2054,
+  "bounds": [
+    [
+      -96.21258544921875,
+      -41.324684143066406,
+      -0.27027755975723267
+    ],
+    [
+      96.21112060546875,
+      41.26860427856445,
+      23.60576820373535
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

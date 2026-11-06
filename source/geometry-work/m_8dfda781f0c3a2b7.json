@@ -1,0 +1,29 @@
+{
+  "id": "m_8dfda781f0c3a2b7",
+  "objectPath": "DeltaForce/Content/Environment/Vehicle/00_Mesh/SM_Industrial_Vehicle_AerialWorkPlatform_01/SM_Industrial_Vehicle_AerialWorkPlatform_01_C.SM_Industrial_Vehicle_AerialWorkPlatform_01_C",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Vehicle\\00_Mesh\\SM_Industrial_Vehicle_AerialWorkPlatform_01\\SM_Industrial_Vehicle_AerialWorkPlatform_01_C.glb",
+  "sourceSHA256": "D4AB0AC4D6E0A90747BCF1CD077B426489BF85610D63F0088E8B62DC2DCA273B",
+  "model": "models/df_v24/m_8dfda781f0c3a2b7.vmdl",
+  "materials": {
+    "mat_b6a76d5f0a2b058a": "DeltaForce/Content/Environment/Vehicle/00_Materials/HD/MI_Industrial_Vehicle_AerialWorkPlatform_01_B_HD.MI_Industrial_Vehicle_AerialWorkPlatform_01_B_HD",
+    "mat_ed610f0efeda88c7": "DeltaForce/Content/Environment/Vehicle/00_Materials/HD/MI_Industrial_Vehicle_AerialWorkPlatform_01_A_HD.MI_Industrial_Vehicle_AerialWorkPlatform_01_A_HD",
+    "mat_a24a4c43442280b2": "DeltaForce/Content/Environment/Vehicle/00_Materials/HD/MI_Generic_Vehicle_Decal_03_HD.MI_Generic_Vehicle_Decal_03_HD",
+    "mat_21dcfd05851a8ce8": "DeltaForce/Content/Environment/Vehicle/00_Materials/HD/MI_Generic_Vehicle_Decal_04_HD.MI_Generic_Vehicle_Decal_04_HD"
+  },
+  "vertices": 9584,
+  "polygons": 6306,
+  "bounds": [
+    [
+      -88.78282165527344,
+      -44.734291076660156,
+      -0.05113036930561066
+    ],
+    [
+      89.03985595703125,
+      44.762290954589844,
+      61.997344970703125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

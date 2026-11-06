@@ -1,0 +1,26 @@
+{
+  "id": "m_22482fa265f9e427",
+  "objectPath": "DeltaForce/Content/Models/Props/Collect/props_collect_dagger_942/props_collect_dagger_942_3P.props_collect_dagger_942_3P",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Props\\Collect\\props_collect_dagger_942\\props_collect_dagger_942_3P.glb",
+  "sourceSHA256": "83F9F8F398F65A14281FFC76997F6FDA5E99CE4972E578CA2247097924E4C0EF",
+  "model": "models/df_v24/m_22482fa265f9e427.vmdl",
+  "materials": {
+    "mat_cd20354efee8733e": "DeltaForce/Content/Models/Props/Collect/props_collect_dagger_942/Materials/props_collect_dagger_942.props_collect_dagger_942"
+  },
+  "vertices": 2185,
+  "polygons": 1964,
+  "bounds": [
+    [
+      -0.7666099071502686,
+      -9.834234237670898,
+      -0.3425031900405884
+    ],
+    [
+      1.4059205055236816,
+      3.859050750732422,
+      0.3425031900405884
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

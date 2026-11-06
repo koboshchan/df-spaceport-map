@@ -1,0 +1,32 @@
+{
+  "id": "m_ef8e4f9090695386",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_ProductionArea_01/SM_H_Building_FutureTech_PrintArea_InterWall_04.SM_H_Building_FutureTech_PrintArea_InterWall_04",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_ProductionArea_01\\SM_H_Building_FutureTech_PrintArea_InterWall_04.glb",
+  "sourceSHA256": "7DDCC440FDB039A59977CABD1890D8D8AD1FAB3940AF61F498F8C0FB77A3AA2C",
+  "model": "models/df_v24/m_ef8e4f9090695386.vmdl",
+  "materials": {
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_d15cf9faec972d37": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_04_HD.MI_GEN_Metal_Painting_04_HD",
+    "mat_635da925508effce": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_07_HD.MI_GEN_Metal_Painting_07_HD",
+    "mat_d783b614f1783cff": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_01_HD.MI_GEN_Metal_Painting_01_HD",
+    "mat_d0a6920f7cfe2b30": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Rubber_Epoxy_01_HD.MI_GEN_Rubber_Epoxy_01_HD",
+    "mat_b077cd0b2c4b8052": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_PaintingFloor_01_HD.MI_GEN_Metal_PaintingFloor_01_HD",
+    "mat_22f03e613509f8ee": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Rubber_Painting_01_HD.MI_GEN_Rubber_Painting_01_HD"
+  },
+  "vertices": 3213,
+  "polygons": 2483,
+  "bounds": [
+    [
+      -2128.5146484375,
+      40.310386657714844,
+      80.63674926757812
+    ],
+    [
+      -1525.679931640625,
+      1464.5123291015625,
+      691.2176513671875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

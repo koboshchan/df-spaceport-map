@@ -1,0 +1,27 @@
+{
+  "id": "m_3e32a0a8471dfd07",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/SM_H_Government_Office_Table_04.SM_H_Government_Office_Table_04",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Government\\Office\\SM_H_Government_Office_Table_04.glb",
+  "sourceSHA256": "34AAF48F310F6DB45F703B586C4CA42E96CCEA5925C5A4069541A0F1E6280ACF",
+  "model": "models/df_v24/m_3e32a0a8471dfd07.vmdl",
+  "materials": {
+    "mat_b7380312fcaa5e88": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/00_Materials/HD/MI_H_Government_Office_Table_04A_HD.MI_H_Government_Office_Table_04A_HD",
+    "mat_5f7df36634d36a28": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/00_Materials/HD/MI_H_Government_Office_Table_04B_HD.MI_H_Government_Office_Table_04B_HD"
+  },
+  "vertices": 208,
+  "polygons": 128,
+  "bounds": [
+    [
+      -19.800003051757812,
+      -18.972003936767578,
+      -3.3688543226162437e-06
+    ],
+    [
+      19.797313690185547,
+      18.97199821472168,
+      18.0000057220459
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

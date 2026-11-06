@@ -1,0 +1,30 @@
+{
+  "id": "m_0d55852b77e41e39",
+  "objectPath": "DeltaForce/Content/Environment/Props/FutureTech/Office/SM_FutureTech_Office_Instrument_02C.SM_FutureTech_Office_Instrument_02C",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\FutureTech\\Office\\SM_FutureTech_Office_Instrument_02C.glb",
+  "sourceSHA256": "1B5DE9744E60175B27CFFB36582019AB5232409761C78741B847989E828F2E38",
+  "model": "models/df_v24/m_0d55852b77e41e39.vmdl",
+  "materials": {
+    "mat_ddfee9284a868802": "DeltaForce/Content/Environment/Props/FutureTech/Office/00_Materials/HD/MI_FutureTech_Office_Instrument_02C_01_HD.MI_FutureTech_Office_Instrument_02C_01_HD",
+    "mat_673b4fd991f31016": "DeltaForce/Content/Environment/Props/FutureTech/Office/00_Materials/HD/MI_FutureTech_Office_Instrument_02C_02_HD.MI_FutureTech_Office_Instrument_02C_02_HD",
+    "mat_ce515409d0a82492": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD",
+    "mat_b7fb4f3833e2407c": "DeltaForce/Content/Environment/Decal/Connect/00_Materials/HD/MI_I_Connect_Decal_01A_HD.MI_I_Connect_Decal_01A_HD",
+    "mat_9cf0ee41d80ffb9d": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_02_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_02_Decal_HD"
+  },
+  "vertices": 15456,
+  "polygons": 16075,
+  "bounds": [
+    [
+      -52.357688903808594,
+      -25.734848022460938,
+      -0.11921539157629013
+    ],
+    [
+      47.50624084472656,
+      25.734859466552734,
+      46.95490646362305
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

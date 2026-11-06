@@ -1,0 +1,26 @@
+{
+  "id": "m_32392feb92241031",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_Aerospace_02D_05.SM_H_Building_FutureTech_Aerospace_02D_05",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_Aerospace_02D_05.glb",
+  "sourceSHA256": "88F0F448E385F0290CFA8E7DFFAC780B6B17D6541281488CAE6FFFBDEB43EB92",
+  "model": "models/df_v24/m_32392feb92241031.vmdl",
+  "materials": {
+    "mat_f6dc2771eb1ba9ac": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_B_HD.MI_I_WalkwaySystem_MetalFloor_01_B_HD"
+  },
+  "vertices": 21052,
+  "polygons": 13588,
+  "bounds": [
+    [
+      -1027.2784423828125,
+      1320.0419921875,
+      287.479736328125
+    ],
+    [
+      199.23646545410156,
+      2464.73876953125,
+      328.2019348144531
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

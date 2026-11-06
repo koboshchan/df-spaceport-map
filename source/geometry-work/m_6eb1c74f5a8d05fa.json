@@ -1,0 +1,29 @@
+{
+  "id": "m_6eb1c74f5a8d05fa",
+  "objectPath": "DeltaForce/Content/Models/Vehicles/AgainstBoat/Appearance_Base/Damaged/AgainstBoat_Body_Damage_3P.AgainstBoat_Body_Damage_3P",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Vehicles\\AgainstBoat\\Appearance_Base\\Damaged\\AgainstBoat_Body_Damage_3P.glb",
+  "sourceSHA256": "82F701BB9C4E0EF8FA5F2417DF38ED66C36DBE7106A1BB920807E55370CD7BE6",
+  "model": "models/df_v24/m_6eb1c74f5a8d05fa.vmdl",
+  "materials": {
+    "mat_00b76faad516780a": "DeltaForce/Content/Models/Vehicles/AgainstBoat/Appearance_Base/Damaged/Materials/carrier_boat_RCB90_D_004.carrier_boat_RCB90_D_004",
+    "mat_84507b6a1abef5d0": "DeltaForce/Content/Models/Vehicles/AgainstBoat/Appearance_Base/Damaged/Materials/carrier_boat_RCB90_D_002.carrier_boat_RCB90_D_002",
+    "mat_12e18ddeb92fda02": "DeltaForce/Content/Models/Vehicles/AgainstBoat/Appearance_Base/Damaged/Materials/carrier_boat_RCB90_D_001.carrier_boat_RCB90_D_001",
+    "mat_9a905d0f8c79dc1b": "DeltaForce/Content/Models/Vehicles/AgainstBoat/Appearance_Base/Damaged/Materials/carrier_boat_RCB90_D_003.carrier_boat_RCB90_D_003"
+  },
+  "vertices": 29067,
+  "polygons": 26689,
+  "bounds": [
+    [
+      -262.1863098144531,
+      -66.6635971069336,
+      1.080142855644226
+    ],
+    [
+      279.16070556640625,
+      66.66362762451172,
+      177.73683166503906
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

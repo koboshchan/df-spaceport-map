@@ -1,0 +1,26 @@
+{
+  "id": "m_856cacb24544ea98",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/Label/SM_H_FutureTech_Barrier_Roadblock_03.SM_H_FutureTech_Barrier_Roadblock_03",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\Label\\SM_H_FutureTech_Barrier_Roadblock_03.glb",
+  "sourceSHA256": "DF69B644C3B211BC16C29D0278803C6E053786A1596FAFE34CDBDE8409B8C2FA",
+  "model": "models/df_v24/m_856cacb24544ea98.vmdl",
+  "materials": {
+    "mat_90c2cca2d680a86e": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Barrier_Roadblock_03_HD.MI_H_FutureTech_Barrier_Roadblock_03_HD"
+  },
+  "vertices": 122,
+  "polygons": 86,
+  "bounds": [
+    [
+      -68.97399139404297,
+      -6.2859344482421875,
+      -2.698154276004061e-06
+    ],
+    [
+      68.97399139404297,
+      6.2859344482421875,
+      1.4577240943908691
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

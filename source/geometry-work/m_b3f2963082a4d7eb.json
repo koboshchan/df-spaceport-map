@@ -1,0 +1,32 @@
+{
+  "id": "m_b3f2963082a4d7eb",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_ProductionArea_01/SM_H_Building_FutureTech_AssemblyArea_InterWall_05.SM_H_Building_FutureTech_AssemblyArea_InterWall_05",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_ProductionArea_01\\SM_H_Building_FutureTech_AssemblyArea_InterWall_05.glb",
+  "sourceSHA256": "109569E0817F16E6948B04EBB378AE3408A7B6EA14359E2320757F341FF5F729",
+  "model": "models/df_v24/m_b3f2963082a4d7eb.vmdl",
+  "materials": {
+    "mat_b077cd0b2c4b8052": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_PaintingFloor_01_HD.MI_GEN_Metal_PaintingFloor_01_HD",
+    "mat_22f03e613509f8ee": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Rubber_Painting_01_HD.MI_GEN_Rubber_Painting_01_HD",
+    "mat_d15cf9faec972d37": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_04_HD.MI_GEN_Metal_Painting_04_HD",
+    "mat_cf4bffa2e71ba398": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Concrete_Base_02_HD.MI_GEN_Concrete_Base_02_HD",
+    "mat_14707910a004505e": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_Roof_06_HD.MI_H_Building_FutureTech_Roof_06_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_ebe2c68b91602cff": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Road_Decal_02_HD.MI_H_FutureTech_Road_Decal_02_HD"
+  },
+  "vertices": 1202,
+  "polygons": 840,
+  "bounds": [
+    [
+      -1910.9130859375,
+      834.4053955078125,
+      287.95648193359375
+    ],
+    [
+      -1652.892333984375,
+      1365.009033203125,
+      461.81561279296875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

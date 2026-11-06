@@ -1,0 +1,26 @@
+{
+  "id": "m_b7490314d67c58af",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/SM_BS_ArecaPalm_360cm_HD.SM_BS_ArecaPalm_360cm_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Bush\\SM_BS_ArecaPalm_360cm_HD.glb",
+  "sourceSHA256": "0FA8040A33D6B65715B9235D785566B082A0A1CE15CFB9F84B4FC84927B4DD1F",
+  "model": "models/df_v24/m_b7490314d67c58af.vmdl",
+  "materials": {
+    "mat_e8746e4cca651803": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/00_Materials/MI_BS_ArecaPalm_360cm_Leaf_HD.MI_BS_ArecaPalm_360cm_Leaf_HD"
+  },
+  "vertices": 2161,
+  "polygons": 2319,
+  "bounds": [
+    [
+      -67.5760269165039,
+      -52.61594009399414,
+      -2.6302061080932617
+    ],
+    [
+      56.32682418823242,
+      59.603004455566406,
+      129.4116973876953
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

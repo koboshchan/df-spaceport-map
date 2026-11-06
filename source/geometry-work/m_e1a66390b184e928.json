@@ -1,0 +1,33 @@
+{
+  "id": "m_e1a66390b184e928",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/SM_H_Industrial_ISS_Centrifuge_01.SM_H_Industrial_ISS_Centrifuge_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\ISS\\SM_H_Industrial_ISS_Centrifuge_01.glb",
+  "sourceSHA256": "0DBBE7E7BA73A5FF0268358391D5F61444E979B3F16B26591682FFFD9417A14F",
+  "model": "models/df_v24/m_e1a66390b184e928.vmdl",
+  "materials": {
+    "mat_ce578fc4e09e685f": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Centrifuge_05_HD.MI_H_Industrial_ISS_Centrifuge_05_HD",
+    "mat_95b3afb74520d0a5": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Centrifuge_02_HD.MI_H_Industrial_ISS_Centrifuge_02_HD",
+    "mat_621c2b0085d92aad": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Centrifuge_06_HD.MI_H_Industrial_ISS_Centrifuge_06_HD",
+    "mat_aa08281e51148ead": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Centrifuge_04_HD.MI_H_Industrial_ISS_Centrifuge_04_HD",
+    "mat_242aaac8d3c6d527": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Centrifuge_03_HD.MI_H_Industrial_ISS_Centrifuge_03_HD",
+    "mat_94248c13ef132f8c": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Centrifuge_01_HD.MI_H_Industrial_ISS_Centrifuge_01_HD",
+    "mat_b9bece769323d013": "DeltaForce/Content/Environment/Props/Branding/00_Materials/T_Branding_Sticker_Number_01D.T_Branding_Sticker_Number_01D",
+    "mat_9cf0ee41d80ffb9d": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_02_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_02_Decal_HD"
+  },
+  "vertices": 13244,
+  "polygons": 12510,
+  "bounds": [
+    [
+      -358.7794189453125,
+      -84.51249694824219,
+      36.607017517089844
+    ],
+    [
+      69.81561279296875,
+      84.51264953613281,
+      133.0472412109375
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

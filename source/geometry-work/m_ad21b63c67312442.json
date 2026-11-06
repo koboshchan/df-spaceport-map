@@ -1,0 +1,26 @@
+{
+  "id": "m_ad21b63c67312442",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/Label/SM_H_FutureTech_Continuous_Rubber_01f.SM_H_FutureTech_Continuous_Rubber_01f",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\Label\\SM_H_FutureTech_Continuous_Rubber_01f.glb",
+  "sourceSHA256": "BF3B691298A34ECF3314CE7CE1AFA217A997F9DA51D2890A5CD4F37121950342",
+  "model": "models/df_v24/m_ad21b63c67312442.vmdl",
+  "materials": {
+    "mat_1824b171397cbc6d": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Continuous_Rubber_01a_HD.MI_H_FutureTech_Continuous_Rubber_01a_HD"
+  },
+  "vertices": 508,
+  "polygons": 598,
+  "bounds": [
+    [
+      2.7465819130156888e-06,
+      -1.051487684249878,
+      -45.34991455078125
+    ],
+    [
+      35.329376220703125,
+      1.4591070413589478,
+      2.1150081157684326
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

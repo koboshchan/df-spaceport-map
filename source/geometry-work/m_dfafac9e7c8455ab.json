@@ -1,0 +1,27 @@
+{
+  "id": "m_dfafac9e7c8455ab",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/SM_I_RoadFacility_Ground_R_02Cb.SM_I_RoadFacility_Ground_R_02Cb",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter_Ma1\\SM_I_RoadFacility_Ground_R_02Cb.glb",
+  "sourceSHA256": "4F479630ABAB4ADADD81E57925F240D73FFF63EA271B98B289F793A4C5E3A0BE",
+  "model": "models/df_v24/m_dfafac9e7c8455ab.vmdl",
+  "materials": {
+    "mat_b44708f13febc042": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_H_09M_HD.MI_I_RoadFacility_Ground_H_09M_HD",
+    "mat_81141676929f02f1": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Tide/00_Materials/HD/MI_H_Building_Tide_PrisonMain_14_Layer_01c_HD.MI_H_Building_Tide_PrisonMain_14_Layer_01c_HD"
+  },
+  "vertices": 198,
+  "polygons": 162,
+  "bounds": [
+    [
+      -10.216779708862305,
+      -2085.14013671875,
+      -914.9293212890625
+    ],
+    [
+      2141.229736328125,
+      93.36262512207031,
+      55.6087532043457
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

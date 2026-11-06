@@ -1,0 +1,26 @@
+{
+  "id": "m_cdd6c8bdff0fd46c",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Government/Hospital/SM_H_Government_Hospital_MedicalScreen_02.SM_H_Government_Hospital_MedicalScreen_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Government\\Hospital\\SM_H_Government_Hospital_MedicalScreen_02.glb",
+  "sourceSHA256": "F025CD4AB2C78375CD94D495E9D17308FA1B56693082927D56A50AA865C7F6B8",
+  "model": "models/df_v24/m_cdd6c8bdff0fd46c.vmdl",
+  "materials": {
+    "mat_0310b96c239b4eee": "DeltaForce/Content/Environment/Props/HAAVK/Government/Hospital/00_Materials/HD/MI_H_Government_Hospital_MedicalScreen_02_HD.MI_H_Government_Hospital_MedicalScreen_02_HD"
+  },
+  "vertices": 1300,
+  "polygons": 1412,
+  "bounds": [
+    [
+      -23.471162796020508,
+      -1.1990941762924194,
+      -119.76400756835938
+    ],
+    [
+      25.95556640625,
+      3.3854122161865234,
+      -1.2433116436004639
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

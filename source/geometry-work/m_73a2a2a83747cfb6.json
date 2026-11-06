@@ -1,0 +1,33 @@
+{
+  "id": "m_73a2a2a83747cfb6",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/SM_I_RoadFacility_Ground_T_17.SM_I_RoadFacility_Ground_T_17",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter_Ma1\\SM_I_RoadFacility_Ground_T_17.glb",
+  "sourceSHA256": "B560717E1B15FA4E9064A9C87F740BB4A0022823BD1F26F54FA950E4E920193B",
+  "model": "models/df_v24/m_73a2a2a83747cfb6.vmdl",
+  "materials": {
+    "mat_efe2e42c491db69c": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_T_01_06_HD.MI_I_RoadFacility_Ground_T_01_06_HD",
+    "mat_71de2cc8194918d0": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_T_01_04_HD.MI_I_RoadFacility_Ground_T_01_04_HD",
+    "mat_4226acbd6c7ec744": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_T_01_08_HD.MI_I_RoadFacility_Ground_T_01_08_HD",
+    "mat_f50141530fa660de": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_T_01_01_HD.MI_I_RoadFacility_Ground_T_01_01_HD",
+    "mat_f5906dc206a794cd": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_T_01_02_HD.MI_I_RoadFacility_Ground_T_01_02_HD",
+    "mat_8fe1fa8646360d4c": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_10_HD.MI_GEN_Metal_Painting_10_HD",
+    "mat_8b5d279a6d2e73a7": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_D_HD.MI_I_WalkwaySystem_MetalFloor_01_D_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD"
+  },
+  "vertices": 16500,
+  "polygons": 16843,
+  "bounds": [
+    [
+      -1.7365429401397705,
+      -912.820068359375,
+      -292.319091796875
+    ],
+    [
+      1844.654541015625,
+      1.45458984375,
+      98.7933120727539
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,126 @@
+{
+  "utc": "2026-11-06T16:15:11.746386+00:00",
+  "authorization": "Full conversion and compile authorized, no ask; NO install",
+  "order": [
+    "verified material bindings",
+    "exact proven render+PHYS exclusions",
+    "sky and exact 32 spawns",
+    "536 ladder boxes and 10 front-climb meshes",
+    "all-asset/full-map compile"
+  ],
+  "materials": {
+    "status": "CLOSED_BLOCKED_SCHEMA_UNAVAILABLE",
+    "authoritativeRoot": "E:\\df-v25-build-20261106\\material-work\\raw-graph-probe",
+    "proof": "native hashes VT stack tokens shader math proven; named VT resource and runtime uniform mapping NOT proven",
+    "next": "d007b190 finite one Props + one Light native table crosscheck then real MI pilot",
+    "forbidden": "No 3float4 ordinal promotion or silent fallback",
+    "all657Blocked": true,
+    "boundedCheckComplete": true,
+    "noMoreNeighborhoodScanning": true,
+    "conclusionReceipt": "E:\\df-v25-build-20261106\\material-work\\raw-graph-probe\\finite-envelope-conclusion.json",
+    "conclusionSHA256": "9ae3e1694f77ef441d5d541bc119db6dcbdbd343c0438d2c2cc07f533ffb70d5",
+    "unlock": [
+      "exact DF serializer and version/format branches",
+      "or generated DF uniform declaration with independently validated named-resource mapping AND actual MI static-permutation correspondence"
+    ],
+    "notEstablished": [
+      "frozen envelope and object/table/root boundaries",
+      "uniform member offsets",
+      "named VT physical SRV mapping",
+      "nonfrozen or metadata omission",
+      "3float4 runtime packing"
+    ]
+  },
+  "visibility": {
+    "status": "SOURCE_READY_NOT_PROMOTED",
+    "union": 360,
+    "bothRenderPhysics": 358,
+    "renderOnlyKeepPhysics": 2,
+    "preserveUnconfirmedRow": 24326,
+    "preserve": [
+      "floor hit40",
+      "500 door masks",
+      "221 attachments",
+      "all nontargets"
+    ],
+    "receipt": "E:\\df-v25-build-20261106\\visibility-stage\\READY-source-exclusions.json"
+  },
+  "skySpawns": {
+    "status": "SOURCE_READY_NOT_PROMOTED",
+    "parentCandidate": "E:\\df-v25-build-20261106\\orchestrator\\df_spaceport_v25-parent-candidate.vmap",
+    "bake": "UNPROVEN linked-world route; no baked claim"
+  },
+  "ladders": {
+    "status": "HANDOFF_HASHES_VERIFIED_NOT_PROMOTED",
+    "handoffSHA256": "c084d4513303264112bb5448741f50f06800984f0ed1c083b92006ba93e2c7e4",
+    "verified": [
+      {
+        "section": "inputs",
+        "key": "world536",
+        "path": "E:\\df-v25-build-20261106\\ladder-stage\\world-collision-candidate\\df_v25_ladder_solids_candidate.vmap",
+        "sha256": "00bd0a01d29f724e1627df1825ba84dc6326d2c6c47619bfb2cb48e6f5c3b99b"
+      },
+      {
+        "section": "inputs",
+        "key": "nativeAll10",
+        "path": "E:\\df-v25-build-20261106\\ladder-stage\\full-v25-handoff\\df_v25_native_ladders_all10.vmap",
+        "sha256": "74de3435ec8f01628ac6c986602159eb1313aa55f3ba97899b60b8ce21e220d7"
+      },
+      {
+        "section": "sourceReceipts",
+        "key": "solids",
+        "path": "E:\\df-v25-build-20261106\\ladder-stage\\world-collision-candidate\\solid-world-boxes-proposal.json",
+        "sha256": "fb1b2ef2ccc7a706423a2b169aa71222db4164dc1759a76193995f2e1f18d15e"
+      },
+      {
+        "section": "sourceReceipts",
+        "key": "native",
+        "path": "E:\\df-v25-build-20261106\\ladder-stage\\full-v25-handoff\\native-ladder-geometry-proposal.json",
+        "sha256": "43e9fdc19076be0da1d4575a749fad05add144ccc4bbb044ef54969f924803fd"
+      },
+      {
+        "section": "compiledProofs",
+        "key": "solids",
+        "path": "E:\\df-v25-build-20261106\\ladder-stage\\solids-compiled-audit\\polygon-union-acceptance.json",
+        "sha256": "93ef280ccafc806f9b1ead8da75f5ce811382d0226baf7eb41068d146bf5340f"
+      },
+      {
+        "section": "compiledProofs",
+        "key": "solidsAttributes",
+        "path": "E:\\df-v25-build-20261106\\ladder-stage\\solids-compiled-audit\\compiled-acceptance.json",
+        "sha256": "76f650352e0f11fc5f4bb322f7ddc9786e648667df46adcd4de000f15ff6c6d5"
+      },
+      {
+        "section": "compiledProofs",
+        "key": "nativeOne",
+        "path": "E:\\df-v25-build-20261106\\ladder-stage\\native-compiled-audit\\native-front-surface-acceptance.json",
+        "sha256": "eba09f82824cc76c1584aa120771e0ad2ccc873c1e16b4baed650ad8b5e3820c"
+      }
+    ],
+    "instructions": [
+      "extract536 CMapMesh world children from solids VMAP and10 CMapMesh children from native VMAP into appropriate v25 children; native default nodeIDs5100000..5100009 solids5200000..5200535; retain source world coordinates identity origin",
+      "replace original TEN lc_ collision-only prop_static entries ONLY when exact536 world boxes promoted; retain142 visible ladder segments; no duplicate old lc collision routes",
+      "Do not replace full map with standalone pilot worlds; copy world.children CMapMesh only preserving destination sky lighting spawns",
+      "central sole E-only detached compiler fullRAM no guards; no install authorization"
+    ],
+    "postCompileGates": [
+      "on combined compile verify all536boxes3216faces worldPHYS surface/normal and default solidity",
+      "all10 native front faces should compile20 ladder tris and100nonladder side/back/top/bottom tris, count reference only enforce source orientation/planes too",
+      "142 visible ladder segments exact model/RERL material texture closure and actual yellow slot evidence; ERROR render mesh identity NOT proven by background hits47/48; do not edit background",
+      "runtime front/back bottom/topout bullet/player later approved test required; not claimed by compile"
+    ]
+  },
+  "errorAsset": "UNIDENTIFIED; marks47/48 background cannot fix by inference",
+  "regressionRisk": "Repeated client scenesystem.dll+77936 C0000005 null write preserved; not solved",
+  "execution": {
+    "Eonly": true,
+    "fullComputeRAM": true,
+    "noRAMGuards": true,
+    "detachedLongJobs": true,
+    "persistentLogs": true,
+    "centralExclusivePromotionCompile": true,
+    "noLiveActions": true
+  },
+  "projectStatus": "ACTIVE_RESUMABLE_BLOCKED_MATERIAL_NOT_COMPLETE",
+  "HUD": "Approved layout/stylesheet resources inside map VPK only; nonblocking AFTER core; no new work now"
+}

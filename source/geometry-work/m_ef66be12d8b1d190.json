@@ -1,0 +1,26 @@
+{
+  "id": "m_ef66be12d8b1d190",
+  "objectPath": "DeltaForce/Content/Models/Props/PlaySKU/Poker/Prop_PlaySKU_Poker_DeckBox_1536/Prop_PlaySKU_Poker_DeckBox_1536_Lay.Prop_PlaySKU_Poker_DeckBox_1536_Lay",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Props\\PlaySKU\\Poker\\Prop_PlaySKU_Poker_DeckBox_1536\\Prop_PlaySKU_Poker_DeckBox_1536_Lay.glb",
+  "sourceSHA256": "F9BEC5C383DA5EF71DF0DC966391D5236759C6DD63D1306665EEC865B17D3EF6",
+  "model": "models/df_v24/m_ef66be12d8b1d190.vmdl",
+  "materials": {
+    "mat_31ab0b11a9cfd223": "DeltaForce/Content/Models/Props/PlaySKU/Poker/Prop_PlaySKU_Poker_DeckBox_1536/Material/Prop_PlaySKU_Poker_DeckBox_1536_01.Prop_PlaySKU_Poker_DeckBox_1536_01"
+  },
+  "vertices": 1710,
+  "polygons": 1660,
+  "bounds": [
+    [
+      -1.4584314823150635,
+      -0.6077983379364014,
+      -0.0017279862659052014
+    ],
+    [
+      1.4584325551986694,
+      0.60971599817276,
+      5.018111705780029
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

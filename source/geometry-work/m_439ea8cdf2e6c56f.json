@@ -1,0 +1,28 @@
+{
+  "id": "m_439ea8cdf2e6c56f",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/SM_I_RoadFacility_Ground_C_02I.SM_I_RoadFacility_Ground_C_02I",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter_Ma1\\SM_I_RoadFacility_Ground_C_02I.glb",
+  "sourceSHA256": "7A1EF42B52FB6C52BAE10E1543946C16089D19CC831C5B60A38A14917C73E9B4",
+  "model": "models/df_v24/m_439ea8cdf2e6c56f.vmdl",
+  "materials": {
+    "mat_a0872f5153408108": "DeltaForce/Content/Environment/Structures/HAAVK/Building/NavalBattle/00_Materials/HD/MI_H_Building_Militarily_NavalBattle_S6_Ground_05f_HD.MI_H_Building_Militarily_NavalBattle_S6_Ground_05f_HD",
+    "mat_4e3f9e937a2f8e72": "DeltaForce/Content/Environment/Structures/City/RoadFacility/Collapse/Bridge/00_Materials/HD/MI_C_RoadFacility_Collapse_Bridge_Decal_01B_HD.MI_C_RoadFacility_Collapse_Bridge_Decal_01B_HD",
+    "mat_63693602bdc0a1c5": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_C_02d_HD.MI_I_RoadFacility_Ground_C_02d_HD"
+  },
+  "vertices": 12166,
+  "polygons": 15081,
+  "bounds": [
+    [
+      -1261.74365234375,
+      555.3171997070312,
+      122.35107421875
+    ],
+    [
+      -823.0302734375,
+      1014.404541015625,
+      224.96524047851562
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

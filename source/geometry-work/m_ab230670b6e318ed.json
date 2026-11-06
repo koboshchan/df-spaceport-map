@@ -1,0 +1,26 @@
+{
+  "id": "m_ab230670b6e318ed",
+  "objectPath": "DeltaForce/Content/Environment/ProxyMesh/SpaceCenter/PM_SM_H_Industrial_Mechanical_MetalSilo_03_Ruin.PM_SM_H_Industrial_Mechanical_MetalSilo_03_Ruin",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\ProxyMesh\\SpaceCenter\\PM_SM_H_Industrial_Mechanical_MetalSilo_03_Ruin.glb",
+  "sourceSHA256": "F69B5FC313C919BB5A2D6B71E8115AA661DC9F23F801519463E7B5DDD6739755",
+  "model": "models/df_v24/m_ab230670b6e318ed.vmdl",
+  "materials": {
+    "mat_332a4540b0fa3ed0": "DeltaForce/Content/Environment/ProxyMesh/SpaceCenter/00_Materials/MI_PM_H_Industrial_Mechanical_MetalSilo_03.MI_PM_H_Industrial_Mechanical_MetalSilo_03"
+  },
+  "vertices": 53,
+  "polygons": 38,
+  "bounds": [
+    [
+      -114.40252685546875,
+      -142.45872497558594,
+      2.557271718978882
+    ],
+    [
+      145.0574951171875,
+      114.4025650024414,
+      625.807861328125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

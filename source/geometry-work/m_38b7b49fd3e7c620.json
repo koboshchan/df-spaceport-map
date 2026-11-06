@@ -1,0 +1,26 @@
+{
+  "id": "m_38b7b49fd3e7c620",
+  "objectPath": "DeltaForce/Content/Environment/Props/Industrial/Tools/SM_M_Government_Electrical_Wire_08_HD.SM_M_Government_Electrical_Wire_08_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Industrial\\Tools\\SM_M_Government_Electrical_Wire_08_HD.glb",
+  "sourceSHA256": "F3DD4AE2EA8A2FD7F3F416E11707322D3D5CF5955812317E677DB48A2655BDD2",
+  "model": "models/df_v24/m_38b7b49fd3e7c620.vmdl",
+  "materials": {
+    "mat_9546c3272354e029": "DeltaForce/Content/Environment/Props/Morocco/Government/00_Materials/HD/MI_M_Government_Electrical_Wire_HD.MI_M_Government_Electrical_Wire_HD"
+  },
+  "vertices": 1014,
+  "polygons": 1500,
+  "bounds": [
+    [
+      -91.18104553222656,
+      -14.657281875610352,
+      -0.019380182027816772
+    ],
+    [
+      91.17452239990234,
+      14.667972564697266,
+      1.013951063156128
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

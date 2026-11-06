@@ -1,0 +1,30 @@
+{
+  "id": "m_fa60d749152583d3",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Container/SM_H_Industrial_Container_SupplyBox_02.SM_H_Industrial_Container_SupplyBox_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\Container\\SM_H_Industrial_Container_SupplyBox_02.glb",
+  "sourceSHA256": "76CB0392BC8286685D4A413D6C94795B390440C0A68C69C7D67AA5AC6FB3BE6D",
+  "model": "models/df_v24/m_fa60d749152583d3.vmdl",
+  "materials": {
+    "mat_4610ad67f0a57aff": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Container/00_Materials/HD/MI_H_Industrial_Container_SupplyBox_02A_Black_HD.MI_H_Industrial_Container_SupplyBox_02A_Black_HD",
+    "mat_c03e19463858c2b2": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Container/00_Materials/HD/MI_H_Industrial_Container_SupplyBox_02A_Metal_HD.MI_H_Industrial_Container_SupplyBox_02A_Metal_HD",
+    "mat_34b345216e617d48": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Container/00_Materials/HD/MI_H_Industrial_Container_SupplyBox_02A_HD.MI_H_Industrial_Container_SupplyBox_02A_HD",
+    "mat_ce515409d0a82492": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD",
+    "mat_9e2a1afa599abfe1": "DeltaForce/Content/Environment/Structures/HAAVK/Door/00_Materials/HD/MI_H_Small_Door_11_decal_01A_HD.MI_H_Small_Door_11_decal_01A_HD"
+  },
+  "vertices": 9612,
+  "polygons": 6798,
+  "bounds": [
+    [
+      -25.456403732299805,
+      -18.571958541870117,
+      -6.444442078645807e-06
+    ],
+    [
+      25.456401824951172,
+      18.570493698120117,
+      48.05708694458008
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

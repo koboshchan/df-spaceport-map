@@ -1,0 +1,26 @@
+{
+  "id": "m_2e565196e236213a",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech_Ma1/SM_Residential_Bedroom_Cushion_01_04b.SM_Residential_Bedroom_Cushion_01_04b",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech_Ma1\\SM_Residential_Bedroom_Cushion_01_04b.glb",
+  "sourceSHA256": "E71F0FF2C8C3A436C188CC0DEF089794E41DF3EB23B23D8E67769F7350145E1A",
+  "model": "models/df_v24/m_2e565196e236213a.vmdl",
+  "materials": {
+    "mat_99443bf24f53b147": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech_Ma1/00_Materials/HD/MI_Residential_Bedroom_Cushion_04b_HD.MI_Residential_Bedroom_Cushion_04b_HD"
+  },
+  "vertices": 166,
+  "polygons": 246,
+  "bounds": [
+    [
+      -11.4923677444458,
+      -10.806039810180664,
+      -3.057184869703633e-07
+    ],
+    [
+      11.308117866516113,
+      10.950563430786133,
+      11.585235595703125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

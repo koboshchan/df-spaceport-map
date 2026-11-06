@@ -1,0 +1,26 @@
+{
+  "id": "m_c77a7f0b2d3bfd79",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech_Ma1/SM_H_Props_FutureTech_Helicopter_01_Glass.SM_H_Props_FutureTech_Helicopter_01_Glass",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech_Ma1\\SM_H_Props_FutureTech_Helicopter_01_Glass.glb",
+  "sourceSHA256": "207C1E8E33B8DB64BFF44700699A891EC1C95D95B296722244CE1D1939EDD889",
+  "model": "models/df_v24/m_c77a7f0b2d3bfd79.vmdl",
+  "materials": {
+    "mat_67a5cb01c5712627": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech_Ma1/00_Materials/HD/MI_H_Building_FutureTech_Helicopter_01_Glass_HD.MI_H_Building_FutureTech_Helicopter_01_Glass_HD"
+  },
+  "vertices": 152,
+  "polygons": 202,
+  "bounds": [
+    [
+      119.581298828125,
+      -21.163055419921875,
+      74.90067291259766
+    ],
+    [
+      217.43704223632812,
+      21.163055419921875,
+      113.22113037109375
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

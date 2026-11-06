@@ -1,0 +1,36 @@
+{
+  "id": "m_9a223b128dbd3d6f",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_ProductionArea_01/SM_H_Building_FutureTech_AssemblyArea_InterWall_04.SM_H_Building_FutureTech_AssemblyArea_InterWall_04",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_ProductionArea_01\\SM_H_Building_FutureTech_AssemblyArea_InterWall_04.glb",
+  "sourceSHA256": "CF5E6355A44FA6D4D786B495717196C1679CC60FD6D24567976E88EB6B8BCD75",
+  "model": "models/df_v24/m_9a223b128dbd3d6f.vmdl",
+  "materials": {
+    "mat_b077cd0b2c4b8052": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_PaintingFloor_01_HD.MI_GEN_Metal_PaintingFloor_01_HD",
+    "mat_ee05397d2df7898c": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Rubber_Epoxy_01B_HD.MI_GEN_Rubber_Epoxy_01B_HD",
+    "mat_22f03e613509f8ee": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Rubber_Painting_01_HD.MI_GEN_Rubber_Painting_01_HD",
+    "mat_d15cf9faec972d37": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_04_HD.MI_GEN_Metal_Painting_04_HD",
+    "mat_cf4bffa2e71ba398": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Concrete_Base_02_HD.MI_GEN_Concrete_Base_02_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_20fabdfebe348075": "DeltaForce/Content/Environment/Structures/HAAVK/Pipeline/00_Materials/HD/MI_H_PipeLine_HD.MI_H_PipeLine_HD",
+    "mat_e20034a5b5aeebed": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Fabric_Floor_01_HD.MI_GEN_Fabric_Floor_01_HD",
+    "mat_14707910a004505e": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_Roof_06_HD.MI_H_Building_FutureTech_Roof_06_HD",
+    "mat_18ae99e6e5fc46d9": "DeltaForce/Content/Environment/Structures/Morocco/Building/Retrowar/00_Materials/HD/MI_H_Retrowar_Building_TrimMetal_C_HD.MI_H_Retrowar_Building_TrimMetal_C_HD",
+    "mat_ebe2c68b91602cff": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Road_Decal_02_HD.MI_H_FutureTech_Road_Decal_02_HD"
+  },
+  "vertices": 8894,
+  "polygons": 5483,
+  "bounds": [
+    [
+      -1480.166748046875,
+      351.16326904296875,
+      286.804443359375
+    ],
+    [
+      -1007.9714965820312,
+      1710.716064453125,
+      449.5354919433594
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

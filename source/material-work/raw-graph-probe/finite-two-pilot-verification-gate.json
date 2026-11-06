@@ -1,0 +1,64 @@
+{
+  "status": "BLOCKED_NOT_CONVERTED",
+  "scope": "Finite two-permutation verification, no broad additional root recovery until these pass",
+  "pilots": [
+    {
+      "root": "props-root",
+      "resource": 8,
+      "archiveIndex": 2160,
+      "feature": 3,
+      "qualityRaw": 4,
+      "nativeStart": 799767,
+      "nativeEnd": 891110,
+      "requiredNamedTextures": [
+        "01_R_Base",
+        "02_G_Base",
+        "BlendMask",
+        "01_R_Normal",
+        "02_G_Normal",
+        "01_R_MRA",
+        "02_G_MRA"
+      ],
+      "candidateVectorBase": 21
+    },
+    {
+      "root": "light-root",
+      "resource": 2,
+      "archiveIndex": 13010,
+      "feature": 3,
+      "requiredNamedTextures": [
+        "EMMap",
+        "BAMap"
+      ],
+      "channelsMustRemainSeparate": [
+        "baseColor",
+        "emissive"
+      ]
+    }
+  ],
+  "passCriteria": [
+    "DF-native or exact-version runtime metadata establishes uniform packing and physical VT resource ordering, not only observed counts",
+    "Resolve root static permutation against actual MI static overrides before choosing shader",
+    "Every needed named texture, tint, scalar, UV expression maps to native binding with provenance",
+    "Extract color/normal/roughness/emission math and view/world/vertex-dependent terms; declare terms requiring per-mesh bake or unsupported runtime logic",
+    "Only then stage real-MI pilot and independent reference check; unresolved cases remain explicitly blocked"
+  ],
+  "missingFields": [
+    "FUniformExpressionSet DF runtime uniform-buffer member offset metadata or exact serializer implementation",
+    "DF physical VT resource layout mapping named expression index to resource-table member index",
+    "Actual MI static switch to chosen root shader permutation correspondence"
+  ],
+  "prohibited": [
+    "first-texture selection",
+    "silent fallbackgray",
+    "treat emission as base color",
+    "claim faithful conversion by compile success",
+    "write copied content or install VPK"
+  ],
+  "evidenceHashes": {
+    "binding-correction-authoritative.json": "9f3f7d114d4418b305eb715d627f18dde12ca19e19572b519f57c16950892e8d",
+    "permutation-binding-crosscheck.json": "5fa86837b85ee6d726eac74e6e9006cec823da9717d52cdc2a2c4ed922bd8040",
+    "props2160-uniform-expression-crosswalk.json": "40e54fa7aaf952d68aa56364a616d25c55708bdcceb8ea4a4490395d9bfe8fb9",
+    "props2160-basecolor-native-slice.asm": "ff2f54835f4851187a4a2b7c06fb2289cab381c03d771adca15f90d0bb337316"
+  }
+}

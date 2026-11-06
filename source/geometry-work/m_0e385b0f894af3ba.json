@@ -1,0 +1,27 @@
+{
+  "id": "m_0e385b0f894af3ba",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_Dormitory/SM_H_Building_FutureTech_Dormitory_02_InterWall_01.SM_H_Building_FutureTech_Dormitory_02_InterWall_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_Dormitory\\SM_H_Building_FutureTech_Dormitory_02_InterWall_01.glb",
+  "sourceSHA256": "A22AF65D9804293079A22E1FE5491DAB03B9E3310289D19A95AA5C0872DC7BD4",
+  "model": "models/df_v24/m_0e385b0f894af3ba.vmdl",
+  "materials": {
+    "mat_381323acfdf46e9e": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Wooden_Base_01_HD.MI_GEN_Wooden_Base_01_HD",
+    "mat_7be3ba5081704a77": "DeltaForce/Content/Environment/Structures/Door/00_Materials/HD/MI_Customiz_DoubleDoor_03_HD.MI_Customiz_DoubleDoor_03_HD"
+  },
+  "vertices": 3999,
+  "polygons": 2464,
+  "bounds": [
+    [
+      -394.129150390625,
+      -728.5961303710938,
+      149.71588134765625
+    ],
+    [
+      -9.407394409179688,
+      -11.151387214660645,
+      288.5050354003906
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

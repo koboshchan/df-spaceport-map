@@ -1,0 +1,32 @@
+{
+  "id": "m_e5522f5135b636d9",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/SM_I_RoadFacility_Ground_L_04G.SM_I_RoadFacility_Ground_L_04G",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter_Ma1\\SM_I_RoadFacility_Ground_L_04G.glb",
+  "sourceSHA256": "7B7564FECF7131B79279E71FB9AECE57AC3446AA33573FED0F7EBFE8187122BC",
+  "model": "models/df_v24/m_e5522f5135b636d9.vmdl",
+  "materials": {
+    "mat_407456fb0418426e": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_A_01_09_HD.MI_I_RoadFacility_Ground_A_01_09_HD",
+    "mat_8f7e2c00c0770c58": "DeltaForce/Content/Environment/Structures/Morocco/Decal/00_Materials/MI_GEN_Moss_Water_01_HD.MI_GEN_Moss_Water_01_HD",
+    "mat_ebe2c68b91602cff": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Road_Decal_02_HD.MI_H_FutureTech_Road_Decal_02_HD",
+    "mat_f47ac22043562039": "DeltaForce/Content/Environment/Decal/Abrasion/00_Materials/HD/MI_I_Abrasion_Decal_01_HD.MI_I_Abrasion_Decal_01_HD",
+    "mat_d925d27862cd468a": "DeltaForce/Content/Environment/Structures/Decal/00_Materials/HD/MI_GEN_Decal_ExterWall_07_HD.MI_GEN_Decal_ExterWall_07_HD",
+    "mat_c3f7d2a9e5560335": "DeltaForce/Content/Environment/Decal/Dirt/00_Materials/HD/MI_I_Dirt_Decal_13k_HD.MI_I_Dirt_Decal_13k_HD",
+    "mat_65cb25faf5cbd434": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Industrial/00_Materials/HD/MI_H_Building_Industrial_Posun_02c_HD.MI_H_Building_Industrial_Posun_02c_HD"
+  },
+  "vertices": 13839,
+  "polygons": 12289,
+  "bounds": [
+    [
+      -1838.02783203125,
+      -4484.91650390625,
+      -612.21728515625
+    ],
+    [
+      1839.349853515625,
+      100.31959533691406,
+      667.4261474609375
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "m_e16787f8b373de54",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_Aerospace_02C.SM_H_Building_FutureTech_Aerospace_02C",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_Aerospace_02C.glb",
+  "sourceSHA256": "E6E98A2CAC0CC5E4DB2CB40C0541D114359669E4B75E399057304CF7CB9C8688",
+  "model": "models/df_v24/m_e16787f8b373de54.vmdl",
+  "materials": {
+    "mat_20fabdfebe348075": "DeltaForce/Content/Environment/Structures/HAAVK/Pipeline/00_Materials/HD/MI_H_PipeLine_HD.MI_H_PipeLine_HD",
+    "mat_4c2162fb22eb8930": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Brakkesh/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_HD.MI_I_WalkwaySystem_MetalFloor_01_HD",
+    "mat_4e06b33bb10b28ef": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Brakkesh/00_Materials/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD"
+  },
+  "vertices": 9560,
+  "polygons": 10281,
+  "bounds": [
+    [
+      -1270.5966796875,
+      -23.76351547241211,
+      -16.94759750366211
+    ],
+    [
+      1259.839599609375,
+      4509.9111328125,
+      284.2295227050781
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

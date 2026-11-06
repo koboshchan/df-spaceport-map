@@ -1,0 +1,33 @@
+{
+  "id": "m_4583d8f5b9a8b501",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/SM_I_RoadFacility_Ground_L_05H_Ruin.SM_I_RoadFacility_Ground_L_05H_Ruin",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter_Ma1\\SM_I_RoadFacility_Ground_L_05H_Ruin.glb",
+  "sourceSHA256": "4A87E62C0231952F853E87064820B2C210C0C4AA854BC78D1C8F0E26945D036F",
+  "model": "models/df_v24/m_4583d8f5b9a8b501.vmdl",
+  "materials": {
+    "mat_ac87084a050aa0a9": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/00_Materials/HD/MI_I_RoadFacility_Ground_L_10_Ruin_08_HD.MI_I_RoadFacility_Ground_L_10_Ruin_08_HD",
+    "mat_267aefec8a370c6a": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_L_05_Ruin_03_HD.MI_I_RoadFacility_Ground_L_05_Ruin_03_HD",
+    "mat_4a01bec807ddc38b": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_L_10_Ruin_06_HD.MI_I_RoadFacility_Ground_L_10_Ruin_06_HD",
+    "mat_b55d7148084943ba": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_L_10_Ruin_04_HD.MI_I_RoadFacility_Ground_L_10_Ruin_04_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_2134d3de1ebc6446": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/00_Materials/HD/MI_I_RoadFacility_Ground_L_10_Ruin_10_HD.MI_I_RoadFacility_Ground_L_10_Ruin_10_HD",
+    "mat_654f33e66ba43cc5": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_L_05_Ruin_01_HD.MI_I_RoadFacility_Ground_L_05_Ruin_01_HD",
+    "mat_4a25bc28a50edc9e": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/00_Materials/HD/MI_I_RoadFacility_Ground_L_10_Ruin_09_HD.MI_I_RoadFacility_Ground_L_10_Ruin_09_HD"
+  },
+  "vertices": 16923,
+  "polygons": 16624,
+  "bounds": [
+    [
+      -934.8023071289062,
+      1524.435546875,
+      -404.19378662109375
+    ],
+    [
+      -391.17431640625,
+      2258.931640625,
+      -194.3083038330078
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

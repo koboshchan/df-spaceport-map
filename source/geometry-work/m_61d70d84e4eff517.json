@@ -1,0 +1,26 @@
+{
+  "id": "m_61d70d84e4eff517",
+  "objectPath": "DeltaForce/Content/Models/Props/Collect/props_collect_militaryPDA_930/props_collect_militaryPDA_930_UI.props_collect_militaryPDA_930_UI",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Props\\Collect\\props_collect_militaryPDA_930\\props_collect_militaryPDA_930_UI.glb",
+  "sourceSHA256": "FC8F555CACF1D9E9A70D18715E8EFA8C2575FA3DB419766E2723D552C0479194",
+  "model": "models/df_v24/m_61d70d84e4eff517.vmdl",
+  "materials": {
+    "mat_820d29c299993c27": "DeltaForce/Content/Models/Props/Collect/props_collect_militaryPDA_930/Materials/props_collect_militaryPDA_930.props_collect_militaryPDA_930"
+  },
+  "vertices": 4283,
+  "polygons": 4168,
+  "bounds": [
+    [
+      -5.796865463256836,
+      -3.8592371940612793,
+      -0.00033508302294649184
+    ],
+    [
+      5.796865463256836,
+      3.8568613529205322,
+      1.422656536102295
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "m_cdc3e4340c77ae3b",
+  "objectPath": "DeltaForce/Content/GenDecalDir/Meshes/SpaceCenter_Ma1/46502DF44AAF63D17CADBEAF10BE9C07.46502DF44AAF63D17CADBEAF10BE9C07",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\GenDecalDir\\Meshes\\SpaceCenter_Ma1\\46502DF44AAF63D17CADBEAF10BE9C07.glb",
+  "sourceSHA256": "241A95802EFE44D53629538E7A20D91D495BD931B5CD1B78A37D87B137A6E046",
+  "model": "models/df_v24/m_cdc3e4340c77ae3b.vmdl",
+  "materials": {
+    "mat_ef2e8dd7c5a5399e": "DeltaForce/Content/GenDecalDir/MaterialsHD/M_DeferredMeshDecal_PBR_Inst_MI_Branding_Sticker_Number_11_HD.M_DeferredMeshDecal_PBR_Inst_MI_Branding_Sticker_Number_11_HD"
+  },
+  "vertices": 6,
+  "polygons": 4,
+  "bounds": [
+    [
+      -0.9197899699211121,
+      -12.59999942779541,
+      -2.794548988342285
+    ],
+    [
+      0.38991212844848633,
+      12.599639892578125,
+      2.7967045307159424
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

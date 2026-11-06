@@ -1,0 +1,26 @@
+{
+  "id": "m_6a61a4b6f93b5a9a",
+  "objectPath": "DeltaForce/Content/Environment/Props/Industrial/Electrical/SM_Industrial_Electrical_Cable_03.SM_Industrial_Electrical_Cable_03",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Industrial\\Electrical\\SM_Industrial_Electrical_Cable_03.glb",
+  "sourceSHA256": "832AE705F4BC3F8C181761DE90AA2CC28337D8839376EAD570EC1C89EEC1DBCC",
+  "model": "models/df_v24/m_6a61a4b6f93b5a9a.vmdl",
+  "materials": {
+    "mat_5b5b0fec7b6501a3": "DeltaForce/Content/Environment/Props/FutureTech/00_Materials/MI_FutureTech_Office_DvingShoes_01.MI_FutureTech_Office_DvingShoes_01"
+  },
+  "vertices": 24,
+  "polygons": 12,
+  "bounds": [
+    [
+      0.0,
+      -2.879999876022339,
+      -2.879999876022339
+    ],
+    [
+      23.03999900817871,
+      2.879999876022339,
+      2.879999876022339
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

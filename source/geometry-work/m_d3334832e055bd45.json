@@ -1,0 +1,26 @@
+{
+  "id": "m_d3334832e055bd45",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Nature/Rocks/SM_Nature_Rock_Big_Rock_30.SM_Nature_Rock_Big_Rock_30",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Nature\\Rocks\\SM_Nature_Rock_Big_Rock_30.glb",
+  "sourceSHA256": "CD8EDD8A7B121FD8FA3578AC75249FFD6C67473E3C9769765B636BB1862FC8FA",
+  "model": "models/df_v24/m_d3334832e055bd45.vmdl",
+  "materials": {
+    "mat_e9b7f261b75cf3e0": "DeltaForce/Content/Environment/Biome/Nature_HD/Rocks_HD/00_Materials/MI_Nature_Rock_Big_Rock_30_HD.MI_Nature_Rock_Big_Rock_30_HD"
+  },
+  "vertices": 5354,
+  "polygons": 7970,
+  "bounds": [
+    [
+      -160.0044403076172,
+      -97.2315673828125,
+      -0.49768954515457153
+    ],
+    [
+      171.5955047607422,
+      94.9708251953125,
+      90.66260528564453
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

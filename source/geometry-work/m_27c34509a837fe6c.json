@@ -1,0 +1,31 @@
+{
+  "id": "m_27c34509a837fe6c",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_HLight_01_InterWall_12.SM_H_Building_FutureTech_HLight_01_InterWall_12",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_HLight_01_InterWall_12.glb",
+  "sourceSHA256": "699C1085628C52B9229C201FBE028F7B2B1CA719C82F0FE68DC62402B77483A9",
+  "model": "models/df_v24/m_27c34509a837fe6c.vmdl",
+  "materials": {
+    "mat_1b58319710d2fd64": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_06_HD.MI_GEN_Metal_Painting_06_HD",
+    "mat_3800e879a30c15a9": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_08_HD.MI_GEN_Metal_Painting_08_HD",
+    "mat_5dd7a81c9b4d78f1": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_PaintingFloor_03_HD.MI_GEN_Metal_PaintingFloor_03_HD",
+    "mat_635da925508effce": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_07_HD.MI_GEN_Metal_Painting_07_HD",
+    "mat_a80cad6d08c046e6": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Acrylic_01_HD.MI_GEN_Acrylic_01_HD",
+    "mat_14707910a004505e": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_Roof_06_HD.MI_H_Building_FutureTech_Roof_06_HD"
+  },
+  "vertices": 5702,
+  "polygons": 4134,
+  "bounds": [
+    [
+      -2761.256103515625,
+      10.720096588134766,
+      181.69403076171875
+    ],
+    [
+      -1024.2161865234375,
+      1578.970458984375,
+      565.0712280273438
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

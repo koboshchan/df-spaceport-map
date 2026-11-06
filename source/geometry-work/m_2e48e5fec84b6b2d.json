@@ -1,0 +1,28 @@
+{
+  "id": "m_2e48e5fec84b6b2d",
+  "objectPath": "DeltaForce/Content/Environment/Structures/prop/storage/SM_H_Industrial_Door_General_02.SM_H_Industrial_Door_General_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\prop\\storage\\SM_H_Industrial_Door_General_02.glb",
+  "sourceSHA256": "96BF8AE51FF82C8B90B1F1AA972C77C6038284809593F60DE0CB83D4DF2DF8CC",
+  "model": "models/df_v24/m_2e48e5fec84b6b2d.vmdl",
+  "materials": {
+    "mat_39890a1ae38ad71f": "DeltaForce/Content/Environment/Structures/prop/storage/00_Materials/HD/MI_H_Industrial_Door_General_02_HD.MI_H_Industrial_Door_General_02_HD",
+    "mat_3160b645310bb44a": "DeltaForce/Content/Environment/Structures/prop/storage/00_Materials/HD/MI_H_Industrial_Door_General_01_HD.MI_H_Industrial_Door_General_01_HD",
+    "mat_ce515409d0a82492": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD"
+  },
+  "vertices": 5409,
+  "polygons": 4682,
+  "bounds": [
+    [
+      -25.809494018554688,
+      -5.5165863037109375,
+      -0.14867490530014038
+    ],
+    [
+      26.14531707763672,
+      8.779929161071777,
+      89.3907470703125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

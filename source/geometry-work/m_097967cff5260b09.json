@@ -1,0 +1,26 @@
+{
+  "id": "m_097967cff5260b09",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Government/Tide/SM_H_Government_Tide_Book_02B.SM_H_Government_Tide_Book_02B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Government\\Tide\\SM_H_Government_Tide_Book_02B.glb",
+  "sourceSHA256": "B7E38AE6E25DA0F33840FD391B1B47576B91C9295F63DFB174F12E7CC48F45FF",
+  "model": "models/df_v24/m_097967cff5260b09.vmdl",
+  "materials": {
+    "mat_4b1d5f742551e6db": "DeltaForce/Content/Environment/Props/HAAVK/Government/Tide/00_Materials/HD/MI_H_Government_Tide_Book_01_HD.MI_H_Government_Tide_Book_01_HD"
+  },
+  "vertices": 1376,
+  "polygons": 862,
+  "bounds": [
+    [
+      -32.39200210571289,
+      -0.11340697109699249,
+      -0.0018308544531464577
+    ],
+    [
+      1.7166136956348055e-07,
+      11.102472305297852,
+      12.849716186523438
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

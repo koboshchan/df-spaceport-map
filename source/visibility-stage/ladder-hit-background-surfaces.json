@@ -1,0 +1,157 @@
+[
+  {
+    "line": 47,
+    "uuid": "d8257bd6d9f948c0825afbad8f7eb94b",
+    "hitObject": {
+      "rowIndex": 3053,
+      "objectPath": "DeltaForce/Content/Maps/BuildMaps_HD/SpaceCenter_Ma1/Runtime/BigMeshGroup/BigMeshGroup_52_-36.BigMeshGroup_52_-36:PersistentLevel.BigMeshGroup_52_-36_10.StaticMeshComponent35",
+      "model": "models/df_v24/m_0daef6f07e5c475e.vmdl",
+      "mesh": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_HBlack_01_InterWall_04H.SM_H_Building_FutureTech_HBlack_01_InterWall_04H",
+      "distanceBounds": 0.0,
+      "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_HBlack_01_InterWall_04H.glb",
+      "matrixCS2": [
+        [
+          0.36,
+          0.0,
+          0.0,
+          -204.00750000000698
+        ],
+        [
+          0.0,
+          -0.36,
+          0.0,
+          -1207.4530320000194
+        ],
+        [
+          0.0,
+          0.0,
+          0.36,
+          -18.64472399999977
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangleIndex": 2241,
+      "triangle": [
+        [
+          913.4323269653248,
+          -2056.4718003105663,
+          845.3552760000001
+        ],
+        [
+          821.2721401977467,
+          -2001.056555254414,
+          845.3552760000001
+        ],
+        [
+          971.0320660400319,
+          -2001.056555254414,
+          845.3552760000001
+        ]
+      ],
+      "triangleDistance": 2.3999999939405825e-05,
+      "normal": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "normalAbsoluteAgreement": 1.0
+    },
+    "glTFMaterialSlot": 2,
+    "glTFMaterial": {
+      "name": "MI_Building_Storage_Metal_05B_HD",
+      "pbrMetallicRoughness": {
+        "metallicFactor": 0
+      }
+    },
+    "modelMaterialBindings": {
+      "mat_3800e879a30c15a9": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_08_HD.MI_GEN_Metal_Painting_08_HD",
+      "mat_1b58319710d2fd64": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_06_HD.MI_GEN_Metal_Painting_06_HD",
+      "mat_659a24691983afc5": "DeltaForce/Content/Environment/MatBlend/Metal/Iris/00_Materials/MI_Building_Storage_Metal_05B_HD.MI_Building_Storage_Metal_05B_HD",
+      "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+      "mat_5c162a1cab107fa4": "DeltaForce/Content/Environment/Structures/HAAVK/Window/00_Materials/HD/MI_H_Window_01_HD.MI_H_Window_01_HD",
+      "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD",
+      "mat_742c7fee90c86bab": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_04_HD.MI_GEN_Metal_Base_04_HD"
+    },
+    "warning": "hit surface is behind/around user-reported pass-through ladder, NOT ladder identification; no removal authorized from these hits"
+  },
+  {
+    "line": 48,
+    "uuid": "ca7899d3a0c74c8fa8291681a4cb4d46",
+    "hitObject": {
+      "rowIndex": 42425,
+      "objectPath": "DeltaForce/Content/Maps/BuildMaps_HD/SpaceCenter_Ma1/Runtime/Room/RoomBuilder_SpaceCenterH4.RoomBuilder_SpaceCenterH4:PersistentLevel.RoomBuilder_SpaceCenterH4_4.StaticMeshComponent22",
+      "model": "models/df_v24/m_3ee939ca7a72488e.vmdl",
+      "mesh": "DeltaForce/Content/Environment/Structures/HAAVK/WalkwaySystem/SM_H_WalkwaySystem_MetalSupport_10.SM_H_WalkwaySystem_MetalSupport_10",
+      "distanceBounds": 0.0,
+      "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\WalkwaySystem\\SM_H_WalkwaySystem_MetalSupport_10.glb",
+      "matrixCS2": [
+        [
+          -5.026548245634643e-07,
+          -0.35999999999964905,
+          0.0,
+          917.3159999999916
+        ],
+        [
+          -0.35999999999964905,
+          5.026548245634643e-07,
+          0.0,
+          -2671.3116000000155
+        ],
+        [
+          0.0,
+          0.0,
+          0.36,
+          165.3504120000007
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "triangleIndex": 23168,
+      "triangle": [
+        [
+          917.3154862990574,
+          -2031.9474718858821,
+          360.0442653782966
+        ],
+        [
+          834.498325167849,
+          -2114.7909994398683,
+          360.0442310460212
+        ],
+        [
+          917.3185786344128,
+          -2114.791733059714,
+          360.0439220555427
+        ]
+      ],
+      "triangleDistance": 0.0053885925327086855,
+      "normal": [
+        3.7308197622723167e-06,
+        -4.144055509586705e-06,
+        0.9999999999844539
+      ],
+      "normalAbsoluteAgreement": 0.9999999999844539
+    },
+    "glTFMaterialSlot": 1,
+    "glTFMaterial": {
+      "name": "MI_I_WalkwaySystem_MetalFloor_01_C_HD",
+      "pbrMetallicRoughness": {
+        "metallicFactor": 0
+      }
+    },
+    "modelMaterialBindings": {
+      "mat_8b5d279a6d2e73a7": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_D_HD.MI_I_WalkwaySystem_MetalFloor_01_D_HD",
+      "mat_33602b4bfdc71367": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_C_HD.MI_I_WalkwaySystem_MetalFloor_01_C_HD"
+    },
+    "warning": "hit surface is behind/around user-reported pass-through ladder, NOT ladder identification; no removal authorized from these hits"
+  }
+]

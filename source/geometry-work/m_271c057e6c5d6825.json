@@ -1,0 +1,26 @@
+{
+  "id": "m_271c057e6c5d6825",
+  "objectPath": "DeltaForce/Content/Environment/Props/SafeHouseP/Military/Hospital/SM_BS_Military_Hospital_Equipment_04_V2.SM_BS_Military_Hospital_Equipment_04_V2",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\SafeHouseP\\Military\\Hospital\\SM_BS_Military_Hospital_Equipment_04_V2.glb",
+  "sourceSHA256": "C40E4C34D02F7C0D6B1F608E90BEFDD98251E268AC768608C51BD7DD74EB5C6F",
+  "model": "models/df_v24/m_271c057e6c5d6825.vmdl",
+  "materials": {
+    "mat_006cc8f63729b9b1": "DeltaForce/Content/Environment/Props/SafeHouseP/Military/Hospital/00_Materials/HD/MI_BS_Military_Hospital_Equipment_04_V2_HD.MI_BS_Military_Hospital_Equipment_04_V2_HD"
+  },
+  "vertices": 1088,
+  "polygons": 960,
+  "bounds": [
+    [
+      -13.244033813476562,
+      -9.400472640991211,
+      -3.571617654238204e-16
+    ],
+    [
+      13.244033813476562,
+      9.400472640991211,
+      38.90786361694336
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

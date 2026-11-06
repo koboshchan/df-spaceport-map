@@ -1,0 +1,34 @@
+{
+  "id": "m_3fc373c5c44f0440",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_Building_FutureTech_H_01/SM_H_Building_FutureTech_HBlack_RoomDoor_01B.SM_H_Building_FutureTech_HBlack_RoomDoor_01B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_Building_FutureTech_H_01\\SM_H_Building_FutureTech_HBlack_RoomDoor_01B.glb",
+  "sourceSHA256": "9B9DD8B6BB2B02BE9A6A21598A04428A8C0FAE5AD17D48220A6C1751A4DA9F5C",
+  "model": "models/df_v24/m_3fc373c5c44f0440.vmdl",
+  "materials": {
+    "mat_1ddbf91ff528f54b": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_HBlack_RoomDoor_01B_HD.MI_H_Building_FutureTech_HBlack_RoomDoor_01B_HD",
+    "mat_e596102cc7361d50": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_HBlack_RoomDoor_01A_HD.MI_H_Building_FutureTech_HBlack_RoomDoor_01A_HD",
+    "mat_ce515409d0a82492": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD",
+    "mat_f6dc2771eb1ba9ac": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_B_HD.MI_I_WalkwaySystem_MetalFloor_01_B_HD",
+    "mat_33602b4bfdc71367": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_C_HD.MI_I_WalkwaySystem_MetalFloor_01_C_HD",
+    "mat_01c3dc048cb526cf": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_HBlack_RoomDoor_01C_HD.MI_H_Building_FutureTech_HBlack_RoomDoor_01C_HD",
+    "mat_663f3250ddcdc0eb": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_HBlack_RoomDoor_01E_HD.MI_H_Building_FutureTech_HBlack_RoomDoor_01E_HD",
+    "mat_1824b171397cbc6d": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Continuous_Rubber_01a_HD.MI_H_FutureTech_Continuous_Rubber_01a_HD",
+    "mat_a952c1b99bc22a42": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_HBlack_RoomDoor_01D_HD.MI_H_Building_FutureTech_HBlack_RoomDoor_01D_HD"
+  },
+  "vertices": 11669,
+  "polygons": 9198,
+  "bounds": [
+    [
+      77.74821472167969,
+      -125.04438781738281,
+      -0.0001332092215307057
+    ],
+    [
+      536.16845703125,
+      2.719350814819336,
+      565.425048828125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

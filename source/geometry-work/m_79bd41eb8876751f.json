@@ -1,0 +1,28 @@
+{
+  "id": "m_79bd41eb8876751f",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/SM_I_RoadFacility_Ground_T_04_Decal.SM_I_RoadFacility_Ground_T_04_Decal",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter\\SM_I_RoadFacility_Ground_T_04_Decal.glb",
+  "sourceSHA256": "402EDC463ABFE20CC94F7866B68D8B865DF137A1E69C35F13C7ACD2FC483E253",
+  "model": "models/df_v24/m_79bd41eb8876751f.vmdl",
+  "materials": {
+    "mat_69b9ff7a811ece89": "DeltaForce/Content/Environment/Structures/Morocco/Decal/00_Materials/MI_C_WallDamaged_Decal_01A_HD.MI_C_WallDamaged_Decal_01A_HD",
+    "mat_ebe2c68b91602cff": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Road_Decal_02_HD.MI_H_FutureTech_Road_Decal_02_HD",
+    "mat_4a938b9ab898b8af": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Brakkesh/00_Materials/HD/MI_I_Connect_Decal_01_HD.MI_I_Connect_Decal_01_HD"
+  },
+  "vertices": 5539,
+  "polygons": 4465,
+  "bounds": [
+    [
+      -164.67942810058594,
+      -1880.6728515625,
+      -288.04803466796875
+    ],
+    [
+      2005.9813232421875,
+      679.0556030273438,
+      -188.8438262939453
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "m_e3d0ae70bb17f2f7",
+  "objectPath": "DeltaForce/Content/Models/Props/Med/props_collect_box_medicalchestB_807/props_collect_box_medicalchestB_807_UI0.props_collect_box_medicalchestB_807_UI0",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Props\\Med\\props_collect_box_medicalchestB_807\\props_collect_box_medicalchestB_807_UI0.glb",
+  "sourceSHA256": "1EC3C3A2D837117A186A41E25C3B4B93986A70DDBBF41A83272855044E2FCB10",
+  "model": "models/df_v24/m_e3d0ae70bb17f2f7.vmdl",
+  "materials": {
+    "mat_51eb942eb6b89dd6": "DeltaForce/Content/Models/Props/Med/props_collect_box_medicalchestB_807/Materials/props_collect_box_medicalchestB_807.props_collect_box_medicalchestB_807"
+  },
+  "vertices": 8056,
+  "polygons": 7746,
+  "bounds": [
+    [
+      -18.94219398498535,
+      -11.697101593017578,
+      -0.0008057474624365568
+    ],
+    [
+      18.94219398498535,
+      11.697100639343262,
+      13.8251371383667
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

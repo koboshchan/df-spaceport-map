@@ -1,0 +1,29 @@
+{
+  "id": "m_136c61a44162fe37",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/SM_H_Industrial_Mechanical_MinorCranClip_01.SM_H_Industrial_Mechanical_MinorCranClip_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\Mechanical\\SM_H_Industrial_Mechanical_MinorCranClip_01.glb",
+  "sourceSHA256": "52F4826896A7FBD0B6BD980EFCF9741740EC2F7AD439637ED62AF8FA04006291",
+  "model": "models/df_v24/m_136c61a44162fe37.vmdl",
+  "materials": {
+    "mat_ec80ce453959a83c": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/00_Materials/HD/MI_H_Industrial_Mechanical_MinorCranClip_01A_HD.MI_H_Industrial_Mechanical_MinorCranClip_01A_HD",
+    "mat_f7585959836e0680": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/00_Materials/HD/MI_H_Industrial_Mechanical_MinorCranClip_01D_HD.MI_H_Industrial_Mechanical_MinorCranClip_01D_HD",
+    "mat_53409af6a1edab84": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/00_Materials/HD/MI_H_Industrial_Mechanical_MinorCranClip_01C_HD.MI_H_Industrial_Mechanical_MinorCranClip_01C_HD",
+    "mat_fb22c04287189ddb": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/00_Materials/HD/MI_H_Industrial_Mechanical_MinorCranClip_01B_HD.MI_H_Industrial_Mechanical_MinorCranClip_01B_HD"
+  },
+  "vertices": 13586,
+  "polygons": 11324,
+  "bounds": [
+    [
+      -94.46305847167969,
+      -72.47917175292969,
+      -225.404541015625
+    ],
+    [
+      94.46305847167969,
+      72.47917175292969,
+      -126.46942138671875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

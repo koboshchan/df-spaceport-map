@@ -1,0 +1,35 @@
+{
+  "id": "m_724f8a6728999f38",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/SM_I_RoadFacility_Ground_C_04C.SM_I_RoadFacility_Ground_C_04C",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter\\SM_I_RoadFacility_Ground_C_04C.glb",
+  "sourceSHA256": "3089A1A0A03A2CF47AAB3F8C459FDDF4AFC08E4B5674FE2AEFB4FD0B63E868D6",
+  "model": "models/df_v24/m_724f8a6728999f38.vmdl",
+  "materials": {
+    "mat_618dce10771d7cb5": "DeltaForce/Content/Environment/Decal/Connect/00_Materials/HD/MI_I_Connect_Decal_04_HD.MI_I_Connect_Decal_04_HD",
+    "mat_0cc8878c06a78d0e": "DeltaForce/Content/Environment/Decal/Dirt/00_Materials/HD/MI_I_Dirt_Decal_14_HD.MI_I_Dirt_Decal_14_HD",
+    "mat_5c93c24fe8668312": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_DecalAlpha_01_HD.MI_H_Building_FutureTech_DecalAlpha_01_HD",
+    "mat_20f6975d983bce3b": "DeltaForce/Content/Maps/Iceland/Asset/Structures/00_Materials/HD/MI_H_IceLand_Building_Decal_01_HD.MI_H_IceLand_Building_Decal_01_HD",
+    "mat_8e178b45e13d34f2": "DeltaForce/Content/Environment/Decal/WallDamaged/00_Materials/HD/MI_I_WallDamaged_Decal_03b_HD.MI_I_WallDamaged_Decal_03b_HD",
+    "mat_db14650e4bed6490": "DeltaForce/Content/Environment/Decal/Crack/00_Materials/MI_I_Crack_Decal_01_HD.MI_I_Crack_Decal_01_HD",
+    "mat_83b0464406b475c0": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_DecalAlpha_03a_HD.MI_H_Building_FutureTech_DecalAlpha_03a_HD",
+    "mat_0c598fa3c01b4fca": "DeltaForce/Content/Environment/Decal/WallDamaged/00_Materials/MI_I_WallDamaged_Decal_03_HD.MI_I_WallDamaged_Decal_03_HD",
+    "mat_41116c24a791a4e4": "DeltaForce/Content/Environment/Decal/Other/00_Materials/MI_I_Other_Decal_14_HD.MI_I_Other_Decal_14_HD",
+    "mat_f31e5ec6d40f3976": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_I_RoadFacility_Ground_C_09c_HD.MI_I_RoadFacility_Ground_C_09c_HD"
+  },
+  "vertices": 11078,
+  "polygons": 10449,
+  "bounds": [
+    [
+      4605.66357421875,
+      131.21441650390625,
+      -103.04277038574219
+    ],
+    [
+      7241.669921875,
+      2396.47900390625,
+      300.03570556640625
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

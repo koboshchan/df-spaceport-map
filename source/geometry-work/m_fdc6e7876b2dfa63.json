@@ -1,0 +1,27 @@
+{
+  "id": "m_fdc6e7876b2dfa63",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_AgainstWar_01b_Rail.SM_H_Building_FutureTech_AgainstWar_01b_Rail",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_AgainstWar_01b_Rail.glb",
+  "sourceSHA256": "9497E3C9FEF368F63BD094A28BCAFD7C55A744048447C9FA9F5D79FE24FC549E",
+  "model": "models/df_v24/m_fdc6e7876b2dfa63.vmdl",
+  "materials": {
+    "mat_3ad5fc978e7d2b72": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_Terrace_256_01_HD.MI_I_WalkwaySystem_Terrace_256_01_HD",
+    "mat_38b39ab9bd6e8fae": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_03_HD.MI_GEN_Metal_Painting_03_HD"
+  },
+  "vertices": 4169,
+  "polygons": 3440,
+  "bounds": [
+    [
+      -1258.64111328125,
+      863.4483032226562,
+      139.0699462890625
+    ],
+    [
+      -908.59130859375,
+      1213.18017578125,
+      175.35995483398438
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

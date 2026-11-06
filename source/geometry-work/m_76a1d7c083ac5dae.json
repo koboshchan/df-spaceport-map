@@ -1,0 +1,26 @@
+{
+  "id": "m_76a1d7c083ac5dae",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/SM_H_Government_Office_Statue_03B.SM_H_Government_Office_Statue_03B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Government\\Office\\SM_H_Government_Office_Statue_03B.glb",
+  "sourceSHA256": "E465BD72CAF12EECBCEA3DEC228CE051152836FB01B80C84A49A71429AFF304D",
+  "model": "models/df_v24/m_76a1d7c083ac5dae.vmdl",
+  "materials": {
+    "mat_e162e3be3f9fce88": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/00_Materials/HD/MI_H_Government_Office_Statue_03B_HD.MI_H_Government_Office_Statue_03B_HD"
+  },
+  "vertices": 104,
+  "polygons": 92,
+  "bounds": [
+    [
+      -4.7550201998092234e-05,
+      -8.30838016115977e-15,
+      -0.214556485414505
+    ],
+    [
+      2.5383763313293457,
+      130.87159729003906,
+      140.06991577148438
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

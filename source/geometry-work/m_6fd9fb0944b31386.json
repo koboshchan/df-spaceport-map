@@ -1,0 +1,26 @@
+{
+  "id": "m_6fd9fb0944b31386",
+  "objectPath": "DeltaForce/Content/Effects_HD/Destructible_HD/Destructible_Mesh_HD/SM_Debris_Metal_02A/SM_Debris_Metal_03B_Lod0.SM_Debris_Metal_03B_Lod0",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Effects_HD\\Destructible_HD\\Destructible_Mesh_HD\\SM_Debris_Metal_02A\\SM_Debris_Metal_03B_Lod0.glb",
+  "sourceSHA256": "E60113877D76C22874D534F0939DCCADC2DD0C3AE363DE11EE2C96139C595474",
+  "model": "models/df_v24/m_6fd9fb0944b31386.vmdl",
+  "materials": {
+    "mat_c500f2d1f3d09145": "DeltaForce/Content/Effects_HD/Destructible_HD/Destructible_Mesh_HD/SM_Debris_Metal_02A/MI_Debris_Metal_01_HD.MI_Debris_Metal_01_HD"
+  },
+  "vertices": 140,
+  "polygons": 148,
+  "bounds": [
+    [
+      -2.6302337646484375,
+      -3.6250829696655273,
+      -2.391462802886963
+    ],
+    [
+      2.634675979614258,
+      3.8033173084259033,
+      1.5565365552902222
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

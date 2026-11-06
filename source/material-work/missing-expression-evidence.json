@@ -1,0 +1,2654 @@
+[
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/Emission/M_SW_NRMAC_Light_CPD_Master_HD.M_SW_NRMAC_Light_CPD_Master_HD",
+    "scope": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_Data_BADNNRM_MatLayer.23",
+    "missingReferencedExpressionCount": 19,
+    "missingExpressionNames": [
+      "MaterialExpressionComponentMask_3",
+      "MaterialExpressionComponentMask_4",
+      "MaterialExpressionComponentMask_5",
+      "MaterialExpressionComponentMask_6",
+      "MaterialExpressionConstant3Vector_1",
+      "MaterialExpressionConstant_0",
+      "MaterialExpressionConstant_1",
+      "MaterialExpressionReroute_0"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Default",
+        "missingExpressionName": "MaterialExpressionComponentMask_4"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionComponentMask_4"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionComponentMask_4"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Default",
+        "missingExpressionName": "MaterialExpressionComponentMask_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionComponentMask_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionComponentMask_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_3/Inputs",
+        "missingExpressionName": "MaterialExpressionConstant3Vector_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_4/Default",
+        "missingExpressionName": "MaterialExpressionReroute_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_4/Inputs",
+        "missingExpressionName": "MaterialExpressionConstant_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_4/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_4/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_5/Default",
+        "missingExpressionName": "MaterialExpressionComponentMask_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_5/Inputs",
+        "missingExpressionName": "MaterialExpressionComponentMask_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_5/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionComponentMask_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_5/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionComponentMask_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_6/Default",
+        "missingExpressionName": "MaterialExpressionComponentMask_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_6/Inputs",
+        "missingExpressionName": "MaterialExpressionConstant_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_6/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionComponentMask_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_6/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionComponentMask_6"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/Emission/M_SW_NRMAC_Light_CPD_Master_HD.M_SW_NRMAC_Light_CPD_Master_HD",
+    "scope": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/MF_Emission_CPD_HD.8",
+    "missingReferencedExpressionCount": 5,
+    "missingExpressionNames": [
+      "MaterialExpressionAtlasBatchNumericArgument_1",
+      "MaterialExpressionMultiply_3"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Default",
+        "missingExpressionName": "MaterialExpressionMultiply_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs",
+        "missingExpressionName": "MaterialExpressionMultiply_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionMultiply_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionMultiply_3"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_6/A",
+        "missingExpressionName": "MaterialExpressionAtlasBatchNumericArgument_1"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/Emission/M_SW_NRMAC_Light_CPD_Master_HD.M_SW_NRMAC_Light_CPD_Master_HD",
+    "scope": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/MF_LFBPFlick_MatLaye_HD.8",
+    "missingReferencedExpressionCount": 2,
+    "missingExpressionNames": [
+      "MaterialExpressionCustom_0",
+      "MaterialExpressionLinearInterpolate_0"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/A",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/B",
+        "missingExpressionName": "MaterialExpressionCustom_0"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/Emission/M_SW_NRMAC_Light_CPD_Master_HD.M_SW_NRMAC_Light_CPD_Master_HD",
+    "scope": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/Moist/Functions/FN_WetPass.5",
+    "missingReferencedExpressionCount": 1,
+    "missingExpressionNames": [
+      "MaterialExpressionSetMaterialAttributes_1"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_11/A",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_1"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Ground_Master.M_MatBlend_Ground_Master",
+    "scope": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Ground_Master.M_MatBlend_Ground_Master",
+    "missingReferencedExpressionCount": 5,
+    "missingExpressionNames": [
+      "MaterialExpressionConstant_3",
+      "MaterialExpressionReroute_0",
+      "MaterialExpressionSaturate_2",
+      "MaterialExpressionTextureCoordinate_0",
+      "MaterialExpressionTextureCoordinate_1"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/A",
+        "missingExpressionName": "MaterialExpressionSaturate_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/B",
+        "missingExpressionName": "MaterialExpressionReroute_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_2/A",
+        "missingExpressionName": "MaterialExpressionTextureCoordinate_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_2/B",
+        "missingExpressionName": "MaterialExpressionTextureCoordinate_1"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_4/B",
+        "missingExpressionName": "MaterialExpressionConstant_3"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Ground_Master.M_MatBlend_Ground_Master",
+    "scope": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/MF_BlendRVTWithDither.28",
+    "missingReferencedExpressionCount": 10,
+    "missingExpressionNames": [
+      "MaterialExpressionConstant_2",
+      "MaterialExpressionConstant_4",
+      "MaterialExpressionLinearInterpolate_7",
+      "MaterialExpressionLinearInterpolate_8",
+      "MaterialExpressionSetMaterialAttributes_2",
+      "MaterialExpressionSetMaterialAttributes_3"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_3"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/A",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_7"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/B",
+        "missingExpressionName": "MaterialExpressionConstant_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_2/A",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_8"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_2/B",
+        "missingExpressionName": "MaterialExpressionConstant_4"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_3/A",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_3/B",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_3"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Ground_Master.M_MatBlend_Ground_Master",
+    "scope": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/Moist/Functions/FN_WetPass.5",
+    "missingReferencedExpressionCount": 1,
+    "missingExpressionNames": [
+      "MaterialExpressionSetMaterialAttributes_1"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_11/A",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_1"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Ground_Master.M_MatBlend_Ground_Master",
+    "scope": "DeltaForce/Content/MaterialLib/MaterialFunctions/MF_MeshDecal.23",
+    "missingReferencedExpressionCount": 13,
+    "missingExpressionNames": [
+      "MaterialExpressionLinearInterpolate_0",
+      "MaterialExpressionLinearInterpolate_2",
+      "MaterialExpressionReroute_0",
+      "MaterialExpressionReroute_10",
+      "MaterialExpressionReroute_11",
+      "MaterialExpressionReroute_12",
+      "MaterialExpressionReroute_14",
+      "MaterialExpressionReroute_4",
+      "MaterialExpressionReroute_8",
+      "MaterialExpressionReroute_9"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionAtlasTextureSample_0/Coordinates",
+        "missingExpressionName": "MaterialExpressionReroute_11"
+      },
+      {
+        "property": "MaterialExpressionAtlasTextureSample_0/TextureObject",
+        "missingExpressionName": "MaterialExpressionReroute_10"
+      },
+      {
+        "property": "MaterialExpressionAtlasTextureSample_1/Coordinates",
+        "missingExpressionName": "MaterialExpressionReroute_4"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_12"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_14"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_14"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_14"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/A",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/B",
+        "missingExpressionName": "MaterialExpressionReroute_8"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/A",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/B",
+        "missingExpressionName": "MaterialExpressionReroute_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_4/B",
+        "missingExpressionName": "MaterialExpressionReroute_9"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_2/Coordinates",
+        "missingExpressionName": "MaterialExpressionReroute_4"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Ground_Master.M_MatBlend_Ground_Master",
+    "scope": "DeltaForce/Content/MaterialLib/MaterialFunctions/MF_General_Overlay_HD.23",
+    "missingReferencedExpressionCount": 23,
+    "missingExpressionNames": [
+      "MaterialExpressionReroute_1",
+      "MaterialExpressionReroute_3",
+      "MaterialExpressionReroute_5",
+      "MaterialExpressionReroute_6",
+      "MaterialExpressionStaticSwitch_0",
+      "MaterialExpressionTextureCoordinate_0"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionAtlasTextureSample_0/Coordinates",
+        "missingExpressionName": "MaterialExpressionTextureCoordinate_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Default",
+        "missingExpressionName": "MaterialExpressionReroute_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionReroute_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionReroute_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Default",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Default",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/B",
+        "missingExpressionName": "MaterialExpressionReroute_5"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/B",
+        "missingExpressionName": "MaterialExpressionReroute_3"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_3/A",
+        "missingExpressionName": "MaterialExpressionStaticSwitch_0"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_0/Coordinates",
+        "missingExpressionName": "MaterialExpressionTextureCoordinate_0"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Ground_Master.M_MatBlend_Ground_Master",
+    "scope": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Ground_MatBlend.77",
+    "missingReferencedExpressionCount": 34,
+    "missingExpressionNames": [
+      "MaterialExpressionAtlasBatchNumericArgument_0",
+      "MaterialExpressionAtlasBatchNumericArgument_1",
+      "MaterialExpressionBreakMaterialAttributes_0",
+      "MaterialExpressionConstant3Vector_0",
+      "MaterialExpressionConstant3Vector_1",
+      "MaterialExpressionConstant_1",
+      "MaterialExpressionConstant_5",
+      "MaterialExpressionLinearInterpolate_3",
+      "MaterialExpressionLinearInterpolate_5",
+      "MaterialExpressionLinearInterpolate_7",
+      "MaterialExpressionLinearInterpolate_8",
+      "MaterialExpressionMakeMaterialAttributes_13",
+      "MaterialExpressionMultiply_0",
+      "MaterialExpressionMultiply_1",
+      "MaterialExpressionMultiply_44",
+      "MaterialExpressionMultiply_7",
+      "MaterialExpressionSaturate_2"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Default",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Default",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Default",
+        "missingExpressionName": "MaterialExpressionBreakMaterialAttributes_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs",
+        "missingExpressionName": "MaterialExpressionConstant_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionBreakMaterialAttributes_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionConstant_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_3/Inputs",
+        "missingExpressionName": "MaterialExpressionConstant3Vector_1"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/A",
+        "missingExpressionName": "MaterialExpressionAtlasBatchNumericArgument_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_10/B",
+        "missingExpressionName": "MaterialExpressionSaturate_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_3/B",
+        "missingExpressionName": "MaterialExpressionConstant3Vector_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_5/A",
+        "missingExpressionName": "MaterialExpressionAtlasBatchNumericArgument_1"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_7/A",
+        "missingExpressionName": "MaterialExpressionMakeMaterialAttributes_13"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_8/A",
+        "missingExpressionName": "MaterialExpressionConstant_1"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_9/A",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_7"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_9/B",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_8"
+      },
+      {
+        "property": "MaterialExpressionTextureSampleParameter2D_0/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_7"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_14/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_44"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_17/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_44"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_19/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_44"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_3/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_0"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_4/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_0"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_5/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_1"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_6/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_1"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_7/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_0"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_8/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_1"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Structures_Master.M_MatBlend_Structures_Master",
+    "scope": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Structures_Master.M_MatBlend_Structures_Master",
+    "missingReferencedExpressionCount": 7,
+    "missingExpressionNames": [
+      "MaterialExpressionCustom_0",
+      "MaterialExpressionReroute_0",
+      "MaterialExpressionSaturate_2",
+      "MaterialExpressionSetMaterialAttributes_0",
+      "MaterialExpressionSetMaterialAttributes_1",
+      "MaterialExpressionTextureCoordinate_0",
+      "MaterialExpressionTextureCoordinate_2"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionExtraOutput_0/CustomOutputs/0/Input",
+        "missingExpressionName": "MaterialExpressionCustom_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/A",
+        "missingExpressionName": "MaterialExpressionSaturate_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/B",
+        "missingExpressionName": "MaterialExpressionReroute_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_2/A",
+        "missingExpressionName": "MaterialExpressionTextureCoordinate_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_2/B",
+        "missingExpressionName": "MaterialExpressionTextureCoordinate_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_3/A",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_1"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_3/B",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_0"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Structures_Master.M_MatBlend_Structures_Master",
+    "scope": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Structures_MatBlend.78",
+    "missingReferencedExpressionCount": 47,
+    "missingExpressionNames": [
+      "MaterialExpressionAtlasBatchNumericArgument_0",
+      "MaterialExpressionAtlasBatchNumericArgument_1",
+      "MaterialExpressionBreakMaterialAttributes_0",
+      "MaterialExpressionConstant3Vector_15",
+      "MaterialExpressionConstant3Vector_2",
+      "MaterialExpressionConstant_5",
+      "MaterialExpressionLinearInterpolate_3",
+      "MaterialExpressionLinearInterpolate_5",
+      "MaterialExpressionMakeMaterialAttributes_13",
+      "MaterialExpressionMultiply_0",
+      "MaterialExpressionMultiply_1",
+      "MaterialExpressionMultiply_4",
+      "MaterialExpressionMultiply_44",
+      "MaterialExpressionMultiply_50",
+      "MaterialExpressionMultiply_7",
+      "MaterialExpressionReroute_2",
+      "MaterialExpressionReroute_3",
+      "MaterialExpressionReroute_4",
+      "MaterialExpressionReroute_5",
+      "MaterialExpressionReroute_6",
+      "MaterialExpressionSaturate_2",
+      "MaterialExpressionTransform_0"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Default",
+        "missingExpressionName": "MaterialExpressionReroute_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Default",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Default",
+        "missingExpressionName": "MaterialExpressionBreakMaterialAttributes_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs",
+        "missingExpressionName": "MaterialExpressionConstant_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionBreakMaterialAttributes_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionConstant_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_3/Default",
+        "missingExpressionName": "MaterialExpressionReroute_4"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_3/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_4"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_3/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_4"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_3/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_3/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionReroute_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_3/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionReroute_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_32/Inputs",
+        "missingExpressionName": "MaterialExpressionConstant3Vector_15"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_33/Default",
+        "missingExpressionName": "MaterialExpressionMultiply_50"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_33/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionMultiply_50"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_33/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionMultiply_50"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_7/Default",
+        "missingExpressionName": "MaterialExpressionReroute_2"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_7/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_2"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_7/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_2"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_7/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_2"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_7/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionReroute_2"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_7/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionReroute_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/B",
+        "missingExpressionName": "MaterialExpressionMultiply_4"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/A",
+        "missingExpressionName": "MaterialExpressionAtlasBatchNumericArgument_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_10/B",
+        "missingExpressionName": "MaterialExpressionSaturate_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_5/A",
+        "missingExpressionName": "MaterialExpressionAtlasBatchNumericArgument_1"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_6/A",
+        "missingExpressionName": "MaterialExpressionMakeMaterialAttributes_13"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_7/A",
+        "missingExpressionName": "MaterialExpressionConstant3Vector_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_7/B",
+        "missingExpressionName": "MaterialExpressionTransform_0"
+      },
+      {
+        "property": "MaterialExpressionTextureSampleParameter2D_0/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_7"
+      },
+      {
+        "property": "MaterialExpressionTextureSampleParameter2D_26/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_44"
+      },
+      {
+        "property": "MaterialExpressionTextureSampleParameter2D_29/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_44"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_3/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_0"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_4/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_0"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_5/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_1"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_6/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_1"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_7/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_0"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_8/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_1"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Structures_Master.M_MatBlend_Structures_Master",
+    "scope": "DeltaForce/Content/MaterialLib/Materials/Landscape/MF_SpecluarAO.11",
+    "missingReferencedExpressionCount": 3,
+    "missingExpressionNames": [
+      "MaterialExpressionConstant_1",
+      "MaterialExpressionCustom_3",
+      "MaterialExpressionMultiply_3"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/A",
+        "missingExpressionName": "MaterialExpressionMultiply_3"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/A",
+        "missingExpressionName": "MaterialExpressionCustom_3"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/B",
+        "missingExpressionName": "MaterialExpressionConstant_1"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Structures_Master.M_MatBlend_Structures_Master",
+    "scope": "DeltaForce/Content/MaterialLib/MaterialFunctions/MF_MeshDecal.23",
+    "missingReferencedExpressionCount": 13,
+    "missingExpressionNames": [
+      "MaterialExpressionLinearInterpolate_0",
+      "MaterialExpressionLinearInterpolate_2",
+      "MaterialExpressionReroute_0",
+      "MaterialExpressionReroute_10",
+      "MaterialExpressionReroute_11",
+      "MaterialExpressionReroute_12",
+      "MaterialExpressionReroute_14",
+      "MaterialExpressionReroute_4",
+      "MaterialExpressionReroute_8",
+      "MaterialExpressionReroute_9"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionAtlasTextureSample_0/Coordinates",
+        "missingExpressionName": "MaterialExpressionReroute_11"
+      },
+      {
+        "property": "MaterialExpressionAtlasTextureSample_0/TextureObject",
+        "missingExpressionName": "MaterialExpressionReroute_10"
+      },
+      {
+        "property": "MaterialExpressionAtlasTextureSample_1/Coordinates",
+        "missingExpressionName": "MaterialExpressionReroute_4"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_12"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_14"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_14"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_14"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/A",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/B",
+        "missingExpressionName": "MaterialExpressionReroute_8"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/A",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/B",
+        "missingExpressionName": "MaterialExpressionReroute_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_4/B",
+        "missingExpressionName": "MaterialExpressionReroute_9"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_2/Coordinates",
+        "missingExpressionName": "MaterialExpressionReroute_4"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Structures_Master.M_MatBlend_Structures_Master",
+    "scope": "DeltaForce/Content/MaterialLib/MaterialFunctions/MF_General_Overlay_HD.23",
+    "missingReferencedExpressionCount": 23,
+    "missingExpressionNames": [
+      "MaterialExpressionReroute_1",
+      "MaterialExpressionReroute_3",
+      "MaterialExpressionReroute_5",
+      "MaterialExpressionReroute_6",
+      "MaterialExpressionStaticSwitch_0",
+      "MaterialExpressionTextureCoordinate_0"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionAtlasTextureSample_0/Coordinates",
+        "missingExpressionName": "MaterialExpressionTextureCoordinate_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Default",
+        "missingExpressionName": "MaterialExpressionReroute_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionReroute_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionReroute_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Default",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Default",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/B",
+        "missingExpressionName": "MaterialExpressionReroute_5"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/B",
+        "missingExpressionName": "MaterialExpressionReroute_3"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_3/A",
+        "missingExpressionName": "MaterialExpressionStaticSwitch_0"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_0/Coordinates",
+        "missingExpressionName": "MaterialExpressionTextureCoordinate_0"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Structures_Master.M_MatBlend_Structures_Master",
+    "scope": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/Moist/Functions/FN_WetPass.5",
+    "missingReferencedExpressionCount": 1,
+    "missingExpressionNames": [
+      "MaterialExpressionSetMaterialAttributes_1"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_11/A",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_1"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Props_Master.M_MatBlend_Props_Master",
+    "scope": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Props_Master.M_MatBlend_Props_Master",
+    "missingReferencedExpressionCount": 5,
+    "missingExpressionNames": [
+      "MaterialExpressionCustom_0",
+      "MaterialExpressionReroute_0",
+      "MaterialExpressionSaturate_2",
+      "MaterialExpressionTextureCoordinate_1",
+      "MaterialExpressionTextureCoordinate_2"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionExtraOutput_0/CustomOutputs/0/Input",
+        "missingExpressionName": "MaterialExpressionCustom_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/A",
+        "missingExpressionName": "MaterialExpressionSaturate_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/B",
+        "missingExpressionName": "MaterialExpressionReroute_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_2/A",
+        "missingExpressionName": "MaterialExpressionTextureCoordinate_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_2/B",
+        "missingExpressionName": "MaterialExpressionTextureCoordinate_1"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Props_Master.M_MatBlend_Props_Master",
+    "scope": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Props_MatBlend.62",
+    "missingReferencedExpressionCount": 26,
+    "missingExpressionNames": [
+      "MaterialExpressionAtlasBatchNumericArgument_0",
+      "MaterialExpressionAtlasBatchNumericArgument_1",
+      "MaterialExpressionConstant3Vector_0",
+      "MaterialExpressionLinearInterpolate_3",
+      "MaterialExpressionLinearInterpolate_6",
+      "MaterialExpressionMakeMaterialAttributes_13",
+      "MaterialExpressionMultiply_0",
+      "MaterialExpressionMultiply_1",
+      "MaterialExpressionMultiply_11",
+      "MaterialExpressionMultiply_7",
+      "MaterialExpressionReroute_16",
+      "MaterialExpressionSaturate_2"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Default",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Default",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_3"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/B",
+        "missingExpressionName": "MaterialExpressionConstant3Vector_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/A",
+        "missingExpressionName": "MaterialExpressionAtlasBatchNumericArgument_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_11/B",
+        "missingExpressionName": "MaterialExpressionSaturate_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_12/B",
+        "missingExpressionName": "MaterialExpressionReroute_16"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_5/A",
+        "missingExpressionName": "MaterialExpressionAtlasBatchNumericArgument_1"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_6/A",
+        "missingExpressionName": "MaterialExpressionMakeMaterialAttributes_13"
+      },
+      {
+        "property": "MaterialExpressionTextureSampleParameter2D_0/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_7"
+      },
+      {
+        "property": "MaterialExpressionTextureSampleParameter2D_1/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_11"
+      },
+      {
+        "property": "MaterialExpressionTextureSampleParameter2D_2/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_11"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_3/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_0"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_4/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_0"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_5/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_1"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_6/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_1"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_7/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_0"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_8/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_1"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Props_Master.M_MatBlend_Props_Master",
+    "scope": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/MF_Basic_MatLayer.13",
+    "missingReferencedExpressionCount": 2,
+    "missingExpressionNames": [
+      "MaterialExpressionSetMaterialAttributes_0",
+      "MaterialExpressionSetMaterialAttributes_1"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_5/A",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_1"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_5/B",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_0"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Props_Master.M_MatBlend_Props_Master",
+    "scope": "DeltaForce/Content/MaterialLib/MaterialFunctions/MF_MeshDecal.23",
+    "missingReferencedExpressionCount": 13,
+    "missingExpressionNames": [
+      "MaterialExpressionLinearInterpolate_0",
+      "MaterialExpressionLinearInterpolate_2",
+      "MaterialExpressionReroute_0",
+      "MaterialExpressionReroute_10",
+      "MaterialExpressionReroute_11",
+      "MaterialExpressionReroute_12",
+      "MaterialExpressionReroute_14",
+      "MaterialExpressionReroute_4",
+      "MaterialExpressionReroute_8",
+      "MaterialExpressionReroute_9"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionAtlasTextureSample_0/Coordinates",
+        "missingExpressionName": "MaterialExpressionReroute_11"
+      },
+      {
+        "property": "MaterialExpressionAtlasTextureSample_0/TextureObject",
+        "missingExpressionName": "MaterialExpressionReroute_10"
+      },
+      {
+        "property": "MaterialExpressionAtlasTextureSample_1/Coordinates",
+        "missingExpressionName": "MaterialExpressionReroute_4"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_12"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_14"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_14"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_14"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/A",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/B",
+        "missingExpressionName": "MaterialExpressionReroute_8"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/A",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/B",
+        "missingExpressionName": "MaterialExpressionReroute_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_4/B",
+        "missingExpressionName": "MaterialExpressionReroute_9"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_2/Coordinates",
+        "missingExpressionName": "MaterialExpressionReroute_4"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Props_Master.M_MatBlend_Props_Master",
+    "scope": "DeltaForce/Content/MaterialLib/MaterialFunctions/MF_General_Overlay_HD.23",
+    "missingReferencedExpressionCount": 23,
+    "missingExpressionNames": [
+      "MaterialExpressionReroute_1",
+      "MaterialExpressionReroute_3",
+      "MaterialExpressionReroute_5",
+      "MaterialExpressionReroute_6",
+      "MaterialExpressionStaticSwitch_0",
+      "MaterialExpressionTextureCoordinate_0"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionAtlasTextureSample_0/Coordinates",
+        "missingExpressionName": "MaterialExpressionTextureCoordinate_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Default",
+        "missingExpressionName": "MaterialExpressionReroute_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionReroute_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionReroute_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Default",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Default",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/B",
+        "missingExpressionName": "MaterialExpressionReroute_5"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/B",
+        "missingExpressionName": "MaterialExpressionReroute_3"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_3/A",
+        "missingExpressionName": "MaterialExpressionStaticSwitch_0"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_0/Coordinates",
+        "missingExpressionName": "MaterialExpressionTextureCoordinate_0"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Props_Master.M_MatBlend_Props_Master",
+    "scope": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/CommonBurnEffect/MF_CommonBurn.25",
+    "missingReferencedExpressionCount": 19,
+    "missingExpressionNames": [
+      "MaterialExpressionConstant_5",
+      "MaterialExpressionFunctionInput_0",
+      "MaterialExpressionLinearInterpolate_1",
+      "MaterialExpressionLinearInterpolate_2",
+      "MaterialExpressionLocalVariableUsage_16",
+      "MaterialExpressionLocalVariableUsage_19",
+      "MaterialExpressionMultiply_14",
+      "MaterialExpressionSetMaterialAttributes_0"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs",
+        "missingExpressionName": "MaterialExpressionConstant_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionConstant_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Default",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_2"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs",
+        "missingExpressionName": "MaterialExpressionLocalVariableUsage_19"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionLocalVariableUsage_19"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_2"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_2"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_2"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[5]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_2"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Default",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs",
+        "missingExpressionName": "MaterialExpressionLocalVariableUsage_16"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionLocalVariableUsage_16"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionLocalVariableUsage_16"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[5]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_1"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/A",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/B",
+        "missingExpressionName": "MaterialExpressionFunctionInput_0"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_1/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_14"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Props_Master.M_MatBlend_Props_Master",
+    "scope": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/Moist/Functions/FN_WetPass.5",
+    "missingReferencedExpressionCount": 1,
+    "missingExpressionNames": [
+      "MaterialExpressionSetMaterialAttributes_1"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_11/A",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_1"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_ThreeGround_Master.M_MatBlend_ThreeGround_Master",
+    "scope": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_ThreeGround_Master.M_MatBlend_ThreeGround_Master",
+    "missingReferencedExpressionCount": 5,
+    "missingExpressionNames": [
+      "MaterialExpressionConstant_3",
+      "MaterialExpressionReroute_0",
+      "MaterialExpressionSaturate_2",
+      "MaterialExpressionTextureCoordinate_0",
+      "MaterialExpressionTextureCoordinate_1"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/A",
+        "missingExpressionName": "MaterialExpressionSaturate_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/B",
+        "missingExpressionName": "MaterialExpressionReroute_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_2/A",
+        "missingExpressionName": "MaterialExpressionTextureCoordinate_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_2/B",
+        "missingExpressionName": "MaterialExpressionTextureCoordinate_1"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_4/B",
+        "missingExpressionName": "MaterialExpressionConstant_3"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_ThreeGround_Master.M_MatBlend_ThreeGround_Master",
+    "scope": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/MF_BlendRVTWithDither.28",
+    "missingReferencedExpressionCount": 10,
+    "missingExpressionNames": [
+      "MaterialExpressionConstant_2",
+      "MaterialExpressionConstant_4",
+      "MaterialExpressionLinearInterpolate_7",
+      "MaterialExpressionLinearInterpolate_8",
+      "MaterialExpressionSetMaterialAttributes_2",
+      "MaterialExpressionSetMaterialAttributes_3"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_3"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/A",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_7"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/B",
+        "missingExpressionName": "MaterialExpressionConstant_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_2/A",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_8"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_2/B",
+        "missingExpressionName": "MaterialExpressionConstant_4"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_3/A",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_3/B",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_3"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_ThreeGround_Master.M_MatBlend_ThreeGround_Master",
+    "scope": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/Moist/Functions/FN_WetPass.5",
+    "missingReferencedExpressionCount": 1,
+    "missingExpressionNames": [
+      "MaterialExpressionSetMaterialAttributes_1"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_11/A",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_1"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_ThreeGround_Master.M_MatBlend_ThreeGround_Master",
+    "scope": "DeltaForce/Content/MaterialLib/Materials_HD/Landscape/MF_SpecluarAO.15",
+    "missingReferencedExpressionCount": 2,
+    "missingExpressionNames": [
+      "MaterialExpressionConstant_0",
+      "MaterialExpressionCustom_2"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/A",
+        "missingExpressionName": "MaterialExpressionCustom_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/B",
+        "missingExpressionName": "MaterialExpressionConstant_0"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_ThreeGround_Master.M_MatBlend_ThreeGround_Master",
+    "scope": "DeltaForce/Content/MaterialLib/MaterialFunctions/MF_MeshDecal.23",
+    "missingReferencedExpressionCount": 13,
+    "missingExpressionNames": [
+      "MaterialExpressionLinearInterpolate_0",
+      "MaterialExpressionLinearInterpolate_2",
+      "MaterialExpressionReroute_0",
+      "MaterialExpressionReroute_10",
+      "MaterialExpressionReroute_11",
+      "MaterialExpressionReroute_12",
+      "MaterialExpressionReroute_14",
+      "MaterialExpressionReroute_4",
+      "MaterialExpressionReroute_8",
+      "MaterialExpressionReroute_9"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionAtlasTextureSample_0/Coordinates",
+        "missingExpressionName": "MaterialExpressionReroute_11"
+      },
+      {
+        "property": "MaterialExpressionAtlasTextureSample_0/TextureObject",
+        "missingExpressionName": "MaterialExpressionReroute_10"
+      },
+      {
+        "property": "MaterialExpressionAtlasTextureSample_1/Coordinates",
+        "missingExpressionName": "MaterialExpressionReroute_4"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_12"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_14"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_14"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_14"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/A",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/B",
+        "missingExpressionName": "MaterialExpressionReroute_8"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/A",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/B",
+        "missingExpressionName": "MaterialExpressionReroute_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_4/B",
+        "missingExpressionName": "MaterialExpressionReroute_9"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_2/Coordinates",
+        "missingExpressionName": "MaterialExpressionReroute_4"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_ThreeGround_Master.M_MatBlend_ThreeGround_Master",
+    "scope": "DeltaForce/Content/MaterialLib/MaterialFunctions/MF_General_Overlay_HD.23",
+    "missingReferencedExpressionCount": 23,
+    "missingExpressionNames": [
+      "MaterialExpressionReroute_1",
+      "MaterialExpressionReroute_3",
+      "MaterialExpressionReroute_5",
+      "MaterialExpressionReroute_6",
+      "MaterialExpressionStaticSwitch_0",
+      "MaterialExpressionTextureCoordinate_0"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionAtlasTextureSample_0/Coordinates",
+        "missingExpressionName": "MaterialExpressionTextureCoordinate_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Default",
+        "missingExpressionName": "MaterialExpressionReroute_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionReroute_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionReroute_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Default",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Default",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/B",
+        "missingExpressionName": "MaterialExpressionReroute_5"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/B",
+        "missingExpressionName": "MaterialExpressionReroute_3"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_3/A",
+        "missingExpressionName": "MaterialExpressionStaticSwitch_0"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_0/Coordinates",
+        "missingExpressionName": "MaterialExpressionTextureCoordinate_0"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_ThreeGround_Master.M_MatBlend_ThreeGround_Master",
+    "scope": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_ThreeLayer_Ground_MatBlend.68",
+    "missingReferencedExpressionCount": 35,
+    "missingExpressionNames": [
+      "MaterialExpressionAtlasBatchNumericArgument_0",
+      "MaterialExpressionAtlasBatchNumericArgument_1",
+      "MaterialExpressionBreakMaterialAttributes_0",
+      "MaterialExpressionConstant3Vector_1",
+      "MaterialExpressionConstant3Vector_15",
+      "MaterialExpressionConstant_5",
+      "MaterialExpressionLinearInterpolate_0",
+      "MaterialExpressionLinearInterpolate_5",
+      "MaterialExpressionMultiply_0",
+      "MaterialExpressionMultiply_1",
+      "MaterialExpressionMultiply_4",
+      "MaterialExpressionMultiply_44",
+      "MaterialExpressionMultiply_50",
+      "MaterialExpressionMultiply_7",
+      "MaterialExpressionSaturate_2"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Default",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Default",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Default",
+        "missingExpressionName": "MaterialExpressionBreakMaterialAttributes_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs",
+        "missingExpressionName": "MaterialExpressionConstant_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionBreakMaterialAttributes_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionConstant_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_3/Inputs",
+        "missingExpressionName": "MaterialExpressionConstant3Vector_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_32/Inputs",
+        "missingExpressionName": "MaterialExpressionConstant3Vector_15"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_33/Default",
+        "missingExpressionName": "MaterialExpressionMultiply_50"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_33/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionMultiply_50"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_33/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionMultiply_50"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/B",
+        "missingExpressionName": "MaterialExpressionMultiply_4"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/A",
+        "missingExpressionName": "MaterialExpressionAtlasBatchNumericArgument_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_2/B",
+        "missingExpressionName": "MaterialExpressionMultiply_4"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_5/A",
+        "missingExpressionName": "MaterialExpressionAtlasBatchNumericArgument_1"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_9/B",
+        "missingExpressionName": "MaterialExpressionSaturate_2"
+      },
+      {
+        "property": "MaterialExpressionTextureSampleParameter2D_0/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_7"
+      },
+      {
+        "property": "MaterialExpressionTextureSampleParameter2D_26/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_44"
+      },
+      {
+        "property": "MaterialExpressionTextureSampleParameter2D_29/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_44"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_3/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_0"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_4/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_0"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_5/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_1"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_6/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_1"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_7/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_0"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_8/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_1"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_9/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_44"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_ThreeGround_Master.M_MatBlend_ThreeGround_Master",
+    "scope": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/Moist/Functions/FN_WetPass.5",
+    "missingReferencedExpressionCount": 1,
+    "missingExpressionNames": [
+      "MaterialExpressionSetMaterialAttributes_1"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_11/A",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_1"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_ThreeGround_Master.M_MatBlend_ThreeGround_Master",
+    "scope": "DeltaForce/Content/MaterialLib/Materials_HD/Landscape/MF_SpecluarAO.15",
+    "missingReferencedExpressionCount": 2,
+    "missingExpressionNames": [
+      "MaterialExpressionConstant_0",
+      "MaterialExpressionCustom_2"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/A",
+        "missingExpressionName": "MaterialExpressionCustom_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/B",
+        "missingExpressionName": "MaterialExpressionConstant_0"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Structures_SK_Master.M_MatBlend_Structures_SK_Master",
+    "scope": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Structures_SK_Master.M_MatBlend_Structures_SK_Master",
+    "missingReferencedExpressionCount": 5,
+    "missingExpressionNames": [
+      "MaterialExpressionCustom_0",
+      "MaterialExpressionReroute_0",
+      "MaterialExpressionSaturate_2",
+      "MaterialExpressionTextureCoordinate_0",
+      "MaterialExpressionTextureCoordinate_2"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionExtraOutput_0/CustomOutputs/0/Input",
+        "missingExpressionName": "MaterialExpressionCustom_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/A",
+        "missingExpressionName": "MaterialExpressionSaturate_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/B",
+        "missingExpressionName": "MaterialExpressionReroute_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_2/A",
+        "missingExpressionName": "MaterialExpressionTextureCoordinate_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_2/B",
+        "missingExpressionName": "MaterialExpressionTextureCoordinate_0"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Structures_SK_Master.M_MatBlend_Structures_SK_Master",
+    "scope": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_TwoLayer_Structures_MatBlend.78",
+    "missingReferencedExpressionCount": 47,
+    "missingExpressionNames": [
+      "MaterialExpressionAtlasBatchNumericArgument_0",
+      "MaterialExpressionAtlasBatchNumericArgument_1",
+      "MaterialExpressionBreakMaterialAttributes_0",
+      "MaterialExpressionConstant3Vector_15",
+      "MaterialExpressionConstant3Vector_2",
+      "MaterialExpressionConstant_5",
+      "MaterialExpressionLinearInterpolate_3",
+      "MaterialExpressionLinearInterpolate_5",
+      "MaterialExpressionMakeMaterialAttributes_13",
+      "MaterialExpressionMultiply_0",
+      "MaterialExpressionMultiply_1",
+      "MaterialExpressionMultiply_4",
+      "MaterialExpressionMultiply_44",
+      "MaterialExpressionMultiply_50",
+      "MaterialExpressionMultiply_7",
+      "MaterialExpressionReroute_2",
+      "MaterialExpressionReroute_3",
+      "MaterialExpressionReroute_4",
+      "MaterialExpressionReroute_5",
+      "MaterialExpressionReroute_6",
+      "MaterialExpressionSaturate_2",
+      "MaterialExpressionTransform_0"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Default",
+        "missingExpressionName": "MaterialExpressionReroute_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Default",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Default",
+        "missingExpressionName": "MaterialExpressionBreakMaterialAttributes_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs",
+        "missingExpressionName": "MaterialExpressionConstant_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionBreakMaterialAttributes_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionConstant_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_3/Default",
+        "missingExpressionName": "MaterialExpressionReroute_4"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_3/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_4"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_3/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_4"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_3/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_3/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionReroute_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_3/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionReroute_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_32/Inputs",
+        "missingExpressionName": "MaterialExpressionConstant3Vector_15"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_33/Default",
+        "missingExpressionName": "MaterialExpressionMultiply_50"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_33/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionMultiply_50"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_33/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionMultiply_50"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_7/Default",
+        "missingExpressionName": "MaterialExpressionReroute_2"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_7/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_2"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_7/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_2"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_7/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_2"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_7/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionReroute_2"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_7/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionReroute_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/B",
+        "missingExpressionName": "MaterialExpressionMultiply_4"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/A",
+        "missingExpressionName": "MaterialExpressionAtlasBatchNumericArgument_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_10/B",
+        "missingExpressionName": "MaterialExpressionSaturate_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_5/A",
+        "missingExpressionName": "MaterialExpressionAtlasBatchNumericArgument_1"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_6/A",
+        "missingExpressionName": "MaterialExpressionMakeMaterialAttributes_13"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_7/A",
+        "missingExpressionName": "MaterialExpressionConstant3Vector_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_7/B",
+        "missingExpressionName": "MaterialExpressionTransform_0"
+      },
+      {
+        "property": "MaterialExpressionTextureSampleParameter2D_0/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_7"
+      },
+      {
+        "property": "MaterialExpressionTextureSampleParameter2D_26/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_44"
+      },
+      {
+        "property": "MaterialExpressionTextureSampleParameter2D_29/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_44"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_3/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_0"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_4/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_0"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_5/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_1"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_6/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_1"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_7/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_0"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_8/Coordinates",
+        "missingExpressionName": "MaterialExpressionMultiply_1"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Structures_SK_Master.M_MatBlend_Structures_SK_Master",
+    "scope": "DeltaForce/Content/MaterialLib/Materials/Landscape/MF_SpecluarAO.11",
+    "missingReferencedExpressionCount": 3,
+    "missingExpressionNames": [
+      "MaterialExpressionConstant_1",
+      "MaterialExpressionCustom_3",
+      "MaterialExpressionMultiply_3"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/A",
+        "missingExpressionName": "MaterialExpressionMultiply_3"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/A",
+        "missingExpressionName": "MaterialExpressionCustom_3"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/B",
+        "missingExpressionName": "MaterialExpressionConstant_1"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Structures_SK_Master.M_MatBlend_Structures_SK_Master",
+    "scope": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/MF_Basic_MatLayer.13",
+    "missingReferencedExpressionCount": 2,
+    "missingExpressionNames": [
+      "MaterialExpressionSetMaterialAttributes_0",
+      "MaterialExpressionSetMaterialAttributes_1"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_5/A",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_1"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_5/B",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_0"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Structures_SK_Master.M_MatBlend_Structures_SK_Master",
+    "scope": "DeltaForce/Content/MaterialLib/MaterialFunctions/MF_MeshDecal.23",
+    "missingReferencedExpressionCount": 13,
+    "missingExpressionNames": [
+      "MaterialExpressionLinearInterpolate_0",
+      "MaterialExpressionLinearInterpolate_2",
+      "MaterialExpressionReroute_0",
+      "MaterialExpressionReroute_10",
+      "MaterialExpressionReroute_11",
+      "MaterialExpressionReroute_12",
+      "MaterialExpressionReroute_14",
+      "MaterialExpressionReroute_4",
+      "MaterialExpressionReroute_8",
+      "MaterialExpressionReroute_9"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionAtlasTextureSample_0/Coordinates",
+        "missingExpressionName": "MaterialExpressionReroute_11"
+      },
+      {
+        "property": "MaterialExpressionAtlasTextureSample_0/TextureObject",
+        "missingExpressionName": "MaterialExpressionReroute_10"
+      },
+      {
+        "property": "MaterialExpressionAtlasTextureSample_1/Coordinates",
+        "missingExpressionName": "MaterialExpressionReroute_4"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_12"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_14"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_14"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_14"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/A",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_2"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/B",
+        "missingExpressionName": "MaterialExpressionReroute_8"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/A",
+        "missingExpressionName": "MaterialExpressionLinearInterpolate_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/B",
+        "missingExpressionName": "MaterialExpressionReroute_0"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_4/B",
+        "missingExpressionName": "MaterialExpressionReroute_9"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_2/Coordinates",
+        "missingExpressionName": "MaterialExpressionReroute_4"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Structures_SK_Master.M_MatBlend_Structures_SK_Master",
+    "scope": "DeltaForce/Content/MaterialLib/MaterialFunctions/MF_General_Overlay_HD.23",
+    "missingReferencedExpressionCount": 23,
+    "missingExpressionNames": [
+      "MaterialExpressionReroute_1",
+      "MaterialExpressionReroute_3",
+      "MaterialExpressionReroute_5",
+      "MaterialExpressionReroute_6",
+      "MaterialExpressionStaticSwitch_0",
+      "MaterialExpressionTextureCoordinate_0"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionAtlasTextureSample_0/Coordinates",
+        "missingExpressionName": "MaterialExpressionTextureCoordinate_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Default",
+        "missingExpressionName": "MaterialExpressionReroute_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionReroute_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionReroute_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Default",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Default",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[3]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_2/Inputs[4]",
+        "missingExpressionName": "MaterialExpressionReroute_6"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_0/B",
+        "missingExpressionName": "MaterialExpressionReroute_5"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_1/B",
+        "missingExpressionName": "MaterialExpressionReroute_3"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_3/A",
+        "missingExpressionName": "MaterialExpressionStaticSwitch_0"
+      },
+      {
+        "property": "MaterialExpressionTextureSample_0/Coordinates",
+        "missingExpressionName": "MaterialExpressionTextureCoordinate_0"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/MatBlend/M_MatBlend_Structures_SK_Master.M_MatBlend_Structures_SK_Master",
+    "scope": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/Moist/Functions/FN_WetPass.5",
+    "missingReferencedExpressionCount": 1,
+    "missingExpressionNames": [
+      "MaterialExpressionSetMaterialAttributes_1"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_11/A",
+        "missingExpressionName": "MaterialExpressionSetMaterialAttributes_1"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials/Scene/NRMACMat/M_SW_NRMAC_Emission_CPD_Master.M_SW_NRMAC_Emission_CPD_Master",
+    "scope": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/DataProvider/MF_Data_BADNNRM_MatLayer_NoSVT.23",
+    "missingReferencedExpressionCount": 19,
+    "missingExpressionNames": [
+      "MaterialExpressionComponentMask_3",
+      "MaterialExpressionComponentMask_4",
+      "MaterialExpressionComponentMask_5",
+      "MaterialExpressionComponentMask_6",
+      "MaterialExpressionConstant3Vector_1",
+      "MaterialExpressionConstant_0",
+      "MaterialExpressionConstant_1",
+      "MaterialExpressionReroute_0"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Default",
+        "missingExpressionName": "MaterialExpressionComponentMask_4"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionComponentMask_4"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionComponentMask_4"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Default",
+        "missingExpressionName": "MaterialExpressionComponentMask_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionComponentMask_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_1/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionComponentMask_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_3/Inputs",
+        "missingExpressionName": "MaterialExpressionConstant3Vector_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_4/Default",
+        "missingExpressionName": "MaterialExpressionReroute_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_4/Inputs",
+        "missingExpressionName": "MaterialExpressionConstant_1"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_4/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionReroute_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_4/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionReroute_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_5/Default",
+        "missingExpressionName": "MaterialExpressionComponentMask_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_5/Inputs",
+        "missingExpressionName": "MaterialExpressionComponentMask_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_5/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionComponentMask_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_5/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionComponentMask_5"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_6/Default",
+        "missingExpressionName": "MaterialExpressionComponentMask_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_6/Inputs",
+        "missingExpressionName": "MaterialExpressionConstant_0"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_6/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionComponentMask_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_6/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionComponentMask_6"
+      }
+    ]
+  },
+  {
+    "root": "DeltaForce/Content/MaterialLib/Materials/Scene/NRMACMat/M_SW_NRMAC_Emission_CPD_Master.M_SW_NRMAC_Emission_CPD_Master",
+    "scope": "DeltaForce/Content/MaterialLib/MaterialFunctions/Tools/MaterialLayers/MF_Emission_CPD.10",
+    "missingReferencedExpressionCount": 5,
+    "missingExpressionNames": [
+      "MaterialExpressionAtlasBatchNumericArgument_1",
+      "MaterialExpressionMultiply_3",
+      "MaterialExpressionMultiply_6"
+    ],
+    "references": [
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Default",
+        "missingExpressionName": "MaterialExpressionMultiply_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs",
+        "missingExpressionName": "MaterialExpressionMultiply_6"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[1]",
+        "missingExpressionName": "MaterialExpressionMultiply_3"
+      },
+      {
+        "property": "MaterialExpressionQualitySwitch_0/Inputs[2]",
+        "missingExpressionName": "MaterialExpressionMultiply_3"
+      },
+      {
+        "property": "MaterialExpressionStaticSwitchParameter_6/A",
+        "missingExpressionName": "MaterialExpressionAtlasBatchNumericArgument_1"
+      }
+    ]
+  }
+]

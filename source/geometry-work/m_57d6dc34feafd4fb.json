@@ -1,0 +1,27 @@
+{
+  "id": "m_57d6dc34feafd4fb",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/SM_H_Industrial_ISS_Centrifuge_01B.SM_H_Industrial_ISS_Centrifuge_01B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\ISS\\SM_H_Industrial_ISS_Centrifuge_01B.glb",
+  "sourceSHA256": "B99B463BE9BE1E631DA3EF5B7B90736015EA3D1B2077E84FE4D3FEE00484CEDD",
+  "model": "models/df_v24/m_57d6dc34feafd4fb.vmdl",
+  "materials": {
+    "mat_95b3afb74520d0a5": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Centrifuge_02_HD.MI_H_Industrial_ISS_Centrifuge_02_HD",
+    "mat_242aaac8d3c6d527": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Centrifuge_03_HD.MI_H_Industrial_ISS_Centrifuge_03_HD"
+  },
+  "vertices": 563,
+  "polygons": 618,
+  "bounds": [
+    [
+      -59.46470642089844,
+      -57.56824493408203,
+      -3.2958982046693563e-05
+    ],
+    [
+      55.36652374267578,
+      57.26300811767578,
+      46.49457550048828
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

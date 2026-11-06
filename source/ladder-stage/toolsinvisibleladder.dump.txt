@@ -1,0 +1,481 @@
+	Resource Type: Material [Version 1] [Header Version: 12]
+	File Size: 3157 bytes
+
+
+--- Resource External Refs: ---
+	Id:               Resource Name:                                  
+	C529987579F25BF7  materials/default/default_normal_tga_7652cb.vtex
+	4598D654E117FC80  materials/default/default_normal_tga_b3f4ec4c.vtex
+	5DAC8ADBCD567441  materials/tools/toolsinvisibleladder_color_tga_dd58c82d.vtex
+
+
+--- Resource Blocks: Count 4 ---
+	-- Block: RERL  Size: 217    bytes [Offset:     64]
+	-- Block: RED2  Size: 1513   bytes [Offset:    288]
+	-- Block: DATA  Size: 846    bytes [Offset:   1808]
+	-- Block: INSG  Size: 501    bytes [Offset:   2656]
+
+
+--- Data for block "RERL" ---
+ResourceExtRefList_t
+{
+	Struct m_resourceRefInfoList[3] =
+	[
+		ResourceReferenceInfo_t
+		{
+			uint64 m_nId = 0xC529987579F25BF7
+			CResourceString m_pResourceName = "materials/default/default_normal_tga_7652cb.vtex"
+		}
+		ResourceReferenceInfo_t
+		{
+			uint64 m_nId = 0x4598D654E117FC80
+			CResourceString m_pResourceName = "materials/default/default_normal_tga_b3f4ec4c.vtex"
+		}
+		ResourceReferenceInfo_t
+		{
+			uint64 m_nId = 0x5DAC8ADBCD567441
+			CResourceString m_pResourceName = "materials/tools/toolsinvisibleladder_color_tga_dd58c82d.vtex"
+		}
+	]
+}
+
+--- Data for block "RED2" ---
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	m_InputDependencies = 
+	[
+		{
+			m_RelativeFilename = "materials/default/default_gloss.tga"
+			m_SearchPath = "core"
+			m_nFileCRC = 3527264036
+			m_bOptional = false
+			m_bFileExists = true
+			m_bIsGameFile = false
+		},
+		{
+			m_RelativeFilename = "materials/default/default_gloss.txt"
+			m_SearchPath = "core"
+			m_nFileCRC = 0
+			m_bOptional = true
+			m_bFileExists = false
+			m_bIsGameFile = false
+		},
+		{
+			m_RelativeFilename = "materials/default/default_normal.tga"
+			m_SearchPath = "core"
+			m_nFileCRC = 2820580514
+			m_bOptional = false
+			m_bFileExists = true
+			m_bIsGameFile = false
+		},
+		{
+			m_RelativeFilename = "materials/default/default_normal.txt"
+			m_SearchPath = "core"
+			m_nFileCRC = 1948310964
+			m_bOptional = true
+			m_bFileExists = true
+			m_bIsGameFile = false
+		},
+		{
+			m_RelativeFilename = "materials/tools/toolsinvisibleladder.vmat"
+			m_SearchPath = "core"
+			m_nFileCRC = 89272073
+			m_bOptional = false
+			m_bFileExists = true
+			m_bIsGameFile = false
+		},
+		{
+			m_RelativeFilename = "materials/tools/toolsinvisibleladder_color.tga"
+			m_SearchPath = "core"
+			m_nFileCRC = 967192701
+			m_bOptional = false
+			m_bFileExists = true
+			m_bIsGameFile = false
+		},
+		{
+			m_RelativeFilename = "materials/tools/toolsinvisibleladder_color.txt"
+			m_SearchPath = "core"
+			m_nFileCRC = 0
+			m_bOptional = true
+			m_bFileExists = false
+			m_bIsGameFile = false
+		},
+		{
+			m_RelativeFilename = "materials/tools/toolsinvisibleladder_trans.tga"
+			m_SearchPath = "core"
+			m_nFileCRC = 344310659
+			m_bOptional = false
+			m_bFileExists = true
+			m_bIsGameFile = false
+		},
+		{
+			m_RelativeFilename = "materials/tools/toolsinvisibleladder_trans.txt"
+			m_SearchPath = "core"
+			m_nFileCRC = 0
+			m_bOptional = true
+			m_bFileExists = false
+			m_bIsGameFile = false
+		},
+	]
+	m_AdditionalInputDependencies = [  ]
+	m_ArgumentDependencies = 
+	[
+		{
+			m_ParameterName = "___OverrideInputData___"
+			m_ParameterType = "BinaryBlobArg"
+			m_nFingerprint = 0
+			m_nFingerprintDefault = 0
+		},
+		{
+			m_ParameterName = "etc"
+			m_ParameterType = "IntArg"
+			m_nFingerprint = 0
+			m_nFingerprintDefault = 0
+		},
+		{
+			m_ParameterName = "fast"
+			m_ParameterType = "IntArg"
+			m_nFingerprint = 0
+			m_nFingerprintDefault = 0
+		},
+		{
+			m_ParameterName = "final"
+			m_ParameterType = "IntArg"
+			m_nFingerprint = 0
+			m_nFingerprintDefault = 0
+		},
+		{
+			m_ParameterName = "materials/default/default_gloss.tga"
+			m_ParameterType = "ImageArg"
+			m_nFingerprint = 0
+			m_nFingerprintDefault = 0
+		},
+		{
+			m_ParameterName = "materials/default/default_gloss.tga"
+			m_ParameterType = "BinaryBlobArg"
+			m_nFingerprint = 0
+			m_nFingerprintDefault = 0
+		},
+		{
+			m_ParameterName = "materials/default/default_normal.tga"
+			m_ParameterType = "ImageArg"
+			m_nFingerprint = 0
+			m_nFingerprintDefault = 0
+		},
+		{
+			m_ParameterName = "materials/default/default_normal.tga"
+			m_ParameterType = "BinaryBlobArg"
+			m_nFingerprint = 0
+			m_nFingerprintDefault = 0
+		},
+		{
+			m_ParameterName = "materials/tools/toolsinvisibleladder_color.tga"
+			m_ParameterType = "ImageArg"
+			m_nFingerprint = 0
+			m_nFingerprintDefault = 0
+		},
+		{
+			m_ParameterName = "materials/tools/toolsinvisibleladder_color.tga"
+			m_ParameterType = "BinaryBlobArg"
+			m_nFingerprint = 0
+			m_nFingerprintDefault = 0
+		},
+		{
+			m_ParameterName = "materials/tools/toolsinvisibleladder_trans.tga"
+			m_ParameterType = "ImageArg"
+			m_nFingerprint = 0
+			m_nFingerprintDefault = 0
+		},
+		{
+			m_ParameterName = "materials/tools/toolsinvisibleladder_trans.tga"
+			m_ParameterType = "BinaryBlobArg"
+			m_nFingerprint = 0
+			m_nFingerprintDefault = 0
+		},
+		{
+			m_ParameterName = "maxcompiledtextureres"
+			m_ParameterType = "FloatArg"
+			m_nFingerprint = 0
+			m_nFingerprintDefault = 0
+		},
+		{
+			m_ParameterName = "maxmipsize"
+			m_ParameterType = "FloatArg"
+			m_nFingerprint = 1233125376
+			m_nFingerprintDefault = 1233125376
+		},
+		{
+			m_ParameterName = "minmipsize"
+			m_ParameterType = "FloatArg"
+			m_nFingerprint = 0
+			m_nFingerprintDefault = 0
+		},
+	]
+	m_SpecialDependencies = 
+	[
+		{
+			m_String = "core/generic.vfx"
+			m_CompilerIdentifier = "CompileMaterial"
+			m_nFingerprint = 0
+			m_nUserData = 0
+		},
+		{
+			m_String = "Material Compiler Version"
+			m_CompilerIdentifier = "CompileMaterial"
+			m_nFingerprint = 25
+			m_nUserData = 0
+		},
+		{
+			m_String = "Texture Compiler Version"
+			m_CompilerIdentifier = "CompileTexture"
+			m_nFingerprint = 11
+			m_nUserData = 0
+		},
+		{
+			m_String = "Texture Compiler Version Image NormalizeNormals"
+			m_CompilerIdentifier = "CompileTexture"
+			m_nFingerprint = 1
+			m_nUserData = 0
+		},
+		{
+			m_String = "Texture Compiler Version Mip AlphaWeighted"
+			m_CompilerIdentifier = "CompileTexture"
+			m_nFingerprint = 1
+			m_nUserData = 0
+		},
+		{
+			m_String = "Texture Compiler Version Mip AnisoNormals"
+			m_CompilerIdentifier = "CompileTexture"
+			m_nFingerprint = 5
+			m_nUserData = 0
+		},
+		{
+			m_String = "Texture Compiler Version Mip Box"
+			m_CompilerIdentifier = "CompileTexture"
+			m_nFingerprint = 1
+			m_nUserData = 0
+		},
+		{
+			m_String = "Texture Compiler Version Mip Normals"
+			m_CompilerIdentifier = "CompileTexture"
+			m_nFingerprint = 1
+			m_nUserData = 0
+		},
+		{
+			m_String = "Texture Encode Quality"
+			m_CompilerIdentifier = "CompileTexture"
+			m_nFingerprint = 1
+			m_nUserData = 3
+		},
+	]
+	m_AdditionalRelatedFiles = [  ]
+	m_ChildResourceList = 
+	[
+		"materials/default/default_normal_tga_7652cb.vtex",
+		"materials/default/default_normal_tga_b3f4ec4c.vtex",
+		"materials/tools/toolsinvisibleladder_color_tga_dd58c82d.vtex",
+	]
+	m_WeakReferenceList = [  ]
+	m_SearchableUserData = 
+	{
+		NeedsLightProbe = 1
+		LightSim_DiffuseAlbedoTexture = "materials/tools/toolsinvisibleladder_color_tga_dd58c82d.vtex"
+		RepresentativeTexture = "materials/tools/toolsinvisibleladder_color_tga_dd58c82d.vtex"
+		SupportsMappingDimensions = 1
+		translucent = 1
+		shader = "generic.vfx"
+		mapbuilder.ladder = 1.0
+		mapbuilder.nodraw = 1.0
+		mapbuilder.npcclip = 1.0
+		mapbuilder.playerclip = 1.0
+		RepresentativeTextureHeight = 64
+		RepresentativeTextureWidth = 64
+		tools.toolsmaterial = 1.0
+		PhysicsSurfaceProperties = "ladder"
+		IsChildResource = 0
+	}
+	m_SubassetReferences = null
+	m_SubassetDefinitions = null
+}
+
+--- Data for block "DATA" ---
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	m_materialName = "materials/tools/toolsinvisibleladder.vmat"
+	m_shaderName = "generic.vfx"
+	m_intParams = 
+	[
+		{
+			m_name = "F_TRANSLUCENT"
+			m_nValue = 1
+		},
+		{
+			m_name = "g_bFogEnabled"
+			m_nValue = 1
+		},
+	]
+	m_floatParams = 
+	[
+		{
+			m_name = "g_flBumpStrength"
+			m_flValue = 1.0
+		},
+		{
+			m_name = "g_flOpacityScale"
+			m_flValue = 1.0
+		},
+	]
+	m_vectorParams = 
+	[
+		{
+			m_name = "g_vColorTint"
+			m_value = [ 1.0, 1.0, 1.0, 0.0 ]
+		},
+	]
+	m_textureParams = 
+	[
+		{
+			m_name = "g_tColor"
+			m_pValue = resource:"materials/tools/toolsinvisibleladder_color_tga_dd58c82d.vtex"
+		},
+		{
+			m_name = "g_tNormal"
+			m_pValue = resource:"materials/default/default_normal_tga_7652cb.vtex"
+		},
+		{
+			m_name = "g_tRoughness"
+			m_pValue = resource:"materials/default/default_normal_tga_b3f4ec4c.vtex"
+		},
+	]
+	m_dynamicParams = [  ]
+	m_dynamicTextureParams = [  ]
+	m_intAttributes = 
+	[
+		{
+			m_name = "mapbuilder.ladder"
+			m_nValue = 1
+		},
+		{
+			m_name = "mapbuilder.nodraw"
+			m_nValue = 1
+		},
+		{
+			m_name = "mapbuilder.npcclip"
+			m_nValue = 1
+		},
+		{
+			m_name = "mapbuilder.playerclip"
+			m_nValue = 1
+		},
+		{
+			m_name = "RepresentativeTextureHeight"
+			m_nValue = 64
+		},
+		{
+			m_name = "RepresentativeTextureHeight"
+			m_nValue = 64
+		},
+		{
+			m_name = "RepresentativeTextureWidth"
+			m_nValue = 64
+		},
+		{
+			m_name = "RepresentativeTextureWidth"
+			m_nValue = 64
+		},
+		{
+			m_name = "tools.toolsmaterial"
+			m_nValue = 1
+		},
+	]
+	m_floatAttributes = 
+	[
+		{
+			m_name = "mapbuilder.ladder"
+			m_flValue = 1.0
+		},
+		{
+			m_name = "mapbuilder.nodraw"
+			m_flValue = 1.0
+		},
+		{
+			m_name = "mapbuilder.npcclip"
+			m_flValue = 1.0
+		},
+		{
+			m_name = "mapbuilder.playerclip"
+			m_flValue = 1.0
+		},
+		{
+			m_name = "tools.toolsmaterial"
+			m_flValue = 1.0
+		},
+	]
+	m_vectorAttributes = [  ]
+	m_textureAttributes = [  ]
+	m_stringAttributes = 
+	[
+		{
+			m_name = "PhysicsSurfaceProperties"
+			m_value = "ladder"
+		},
+	]
+	m_renderAttributesUsed = [  ]
+}
+
+--- Data for block "INSG" ---
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	m_elems = 
+	[
+		{
+			m_pName = "vBlendIndices"
+			m_pSemantic = "BlendIndices"
+			m_pD3DSemanticName = "BLENDINDICES"
+			m_nD3DSemanticIndex = 0
+		},
+		{
+			m_pName = "vBlendWeight"
+			m_pSemantic = "BlendWeight"
+			m_pD3DSemanticName = "BLENDWEIGHT"
+			m_nD3DSemanticIndex = 0
+		},
+		{
+			m_pName = "nPackedFrame"
+			m_pSemantic = "CompressedTangentFrame"
+			m_pD3DSemanticName = "NORMAL"
+			m_nD3DSemanticIndex = 0
+		},
+		{
+			m_pName = "vNormalOs"
+			m_pSemantic = "Normal"
+			m_pD3DSemanticName = "NORMAL"
+			m_nD3DSemanticIndex = 0
+		},
+		{
+			m_pName = "vPositionOs"
+			m_pSemantic = "PosXyz"
+			m_pD3DSemanticName = "POSITION"
+			m_nD3DSemanticIndex = 0
+		},
+		{
+			m_pName = "vTangentUOs_flTangentVSign"
+			m_pSemantic = "TangentU_SignV"
+			m_pD3DSemanticName = "TANGENT"
+			m_nD3DSemanticIndex = 0
+		},
+		{
+			m_pName = "vTexCoord"
+			m_pSemantic = "LowPrecisionUv"
+			m_pD3DSemanticName = "TEXCOORD"
+			m_nD3DSemanticIndex = 0
+		},
+		{
+			m_pName = "nTransformBufferOffset"
+			m_pSemantic = "InstanceTransformUv"
+			m_pD3DSemanticName = "TEXCOORD"
+			m_nD3DSemanticIndex = 13
+		},
+	]
+}
+

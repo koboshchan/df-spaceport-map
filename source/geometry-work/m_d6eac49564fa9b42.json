@@ -1,0 +1,27 @@
+{
+  "id": "m_d6eac49564fa9b42",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/SM_I_RoadFacility_Ground_T_12_Decal.SM_I_RoadFacility_Ground_T_12_Decal",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter\\SM_I_RoadFacility_Ground_T_12_Decal.glb",
+  "sourceSHA256": "5EAC031E5E3B4D82821693E28AFF949BE42FF73D8C08B5248BF8D9A463B15C14",
+  "model": "models/df_v24/m_d6eac49564fa9b42.vmdl",
+  "materials": {
+    "mat_482069f5db613f8e": "DeltaForce/Content/Environment/Decal/Connect/00_Materials/MI_I_Connect_Decal_01_HD.MI_I_Connect_Decal_01_HD",
+    "mat_ebe2c68b91602cff": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Road_Decal_02_HD.MI_H_FutureTech_Road_Decal_02_HD"
+  },
+  "vertices": 74,
+  "polygons": 40,
+  "bounds": [
+    [
+      -369.17059326171875,
+      -0.002260939683765173,
+      -39.53474426269531
+    ],
+    [
+      151.17642211914062,
+      2019.513427734375,
+      0.2198474109172821
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "m_fc8a7a70afba1c21",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/WalkwaySystem_Ma1/SM_I_WalkwaySystem_Terrace_128_01C.SM_I_WalkwaySystem_Terrace_128_01C",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\WalkwaySystem_Ma1\\SM_I_WalkwaySystem_Terrace_128_01C.glb",
+  "sourceSHA256": "58EADF175B3E8F4AD329C0BD492BF81E4A8618C737A7711A44810DA08A4D1532",
+  "model": "models/df_v24/m_fc8a7a70afba1c21.vmdl",
+  "materials": {
+    "mat_3ad5fc978e7d2b72": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_Terrace_256_01_HD.MI_I_WalkwaySystem_Terrace_256_01_HD"
+  },
+  "vertices": 1026,
+  "polygons": 740,
+  "bounds": [
+    [
+      -2.9925684928894043,
+      -69.11993408203125,
+      -44.12367248535156
+    ],
+    [
+      1.5487399101257324,
+      -0.013524169102311134,
+      34.5109977722168
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "m_ac4536e5eababc10",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_Building_FutureTech_H_01/SM_H_Building_FutureTech_HBlue_01_InterWall_05C.SM_H_Building_FutureTech_HBlue_01_InterWall_05C",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_Building_FutureTech_H_01\\SM_H_Building_FutureTech_HBlue_01_InterWall_05C.glb",
+  "sourceSHA256": "94C711FD128FD4B64FED381283D74CD94C233E8788E5FED0CC78A8CCFB655BDB",
+  "model": "models/df_v24/m_ac4536e5eababc10.vmdl",
+  "materials": {
+    "mat_3568c3d4868e875d": "DeltaForce/Content/Environment/Structures/Window/00_Materials/HD/MI_Window_Glass_02_HD.MI_Window_Glass_02_HD"
+  },
+  "vertices": 12,
+  "polygons": 8,
+  "bounds": [
+    [
+      1135.1044921875,
+      829.1199951171875,
+      531.6058349609375
+    ],
+    [
+      1135.59814453125,
+      1025.33154296875,
+      643.556640625
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "m_506f594b008d9b0c",
+  "objectPath": "DeltaForce/Content/Effects_HD/Scene_HD/Gibraltar_HD/fish/fish02/vertex_animation_textures1_mesh.vertex_animation_textures1_mesh",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Effects_HD\\Scene_HD\\Gibraltar_HD\\fish\\fish02\\vertex_animation_textures1_mesh.glb",
+  "sourceSHA256": "A345439018021D72A56459E30AD42598AF9CC87ABAE2411C5085DB3D0AF6209D",
+  "model": "models/df_v24/m_506f594b008d9b0c.vmdl",
+  "materials": {
+    "mat_5e134b1b43d973eb": "DeltaForce/Content/Effects_HD/Scene_HD/Gibraltar_HD/fish/fish02/MI_EFX_VAT_Fish3_HD.MI_EFX_VAT_Fish3_HD"
+  },
+  "vertices": 1337,
+  "polygons": 1612,
+  "bounds": [
+    [
+      -2.8237648010253906,
+      -0.7054211497306824,
+      -0.5425823330879211
+    ],
+    [
+      2.8865084648132324,
+      0.7032413482666016,
+      2.459332227706909
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

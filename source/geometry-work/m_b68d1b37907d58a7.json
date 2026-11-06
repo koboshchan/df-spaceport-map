@@ -1,0 +1,34 @@
+{
+  "id": "m_b68d1b37907d58a7",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/SM_I_RoadFacility_Ground_T_05.SM_I_RoadFacility_Ground_T_05",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter\\SM_I_RoadFacility_Ground_T_05.glb",
+  "sourceSHA256": "75EA83635324490C8C0A6781D3F3952764D0FF031FAF1B13FFE4D91AA20DCE06",
+  "model": "models/df_v24/m_b68d1b37907d58a7.vmdl",
+  "materials": {
+    "mat_4e06b33bb10b28ef": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Brakkesh/00_Materials/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_00f302f124792cff": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_L_01_09_HD.MI_I_RoadFacility_Ground_L_01_09_HD",
+    "mat_9ceefb8f9b4c6bd5": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_L_08_HD.MI_I_RoadFacility_Ground_L_08_HD",
+    "mat_a3437a1040c03e5e": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_T_01_02_HD_2.MI_I_RoadFacility_Ground_T_01_02_HD",
+    "mat_5addcceb48dec4a7": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_T_01_03_HD.MI_I_RoadFacility_Ground_T_01_03_HD",
+    "mat_f50141530fa660de": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_T_01_01_HD.MI_I_RoadFacility_Ground_T_01_01_HD",
+    "mat_37447e9304cca7f7": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_A_01_01_HD.MI_I_RoadFacility_Ground_A_01_01_HD",
+    "mat_0f1517f3ed175b67": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_RoadCurb_01_A_HD.MI_RoadCurb_01_A_HD",
+    "mat_edad0df27e3a2d66": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Brakkesh/00_Materials/HD/MI_H_Decal_WellLid_01_HD.MI_H_Decal_WellLid_01_HD"
+  },
+  "vertices": 11509,
+  "polygons": 9120,
+  "bounds": [
+    [
+      -800.5581665039062,
+      -4343.25732421875,
+      -296.9975891113281
+    ],
+    [
+      3424.39990234375,
+      -1359.481689453125,
+      -177.61598205566406
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

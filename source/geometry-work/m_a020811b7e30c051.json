@@ -1,0 +1,26 @@
+{
+  "id": "m_a020811b7e30c051",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/SM_I_Terrain_Road_Desert_Decal_Sand_07.SM_I_Terrain_Road_Desert_Decal_Sand_07",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter\\SM_I_Terrain_Road_Desert_Decal_Sand_07.glb",
+  "sourceSHA256": "64660B772844D86D5FB00C8EC587E7E6B2FC68DEC39AC68C9487BF6B0FB92977",
+  "model": "models/df_v24/m_a020811b7e30c051.vmdl",
+  "materials": {
+    "mat_c4943c92106aaa6a": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_C_11_HD.MI_I_RoadFacility_Ground_C_11_HD"
+  },
+  "vertices": 704,
+  "polygons": 1296,
+  "bounds": [
+    [
+      -140.28317260742188,
+      -21.006120681762695,
+      -0.4915226101875305
+    ],
+    [
+      140.1342010498047,
+      20.88276481628418,
+      7.153213977813721
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

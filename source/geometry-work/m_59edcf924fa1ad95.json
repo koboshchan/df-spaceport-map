@@ -1,0 +1,26 @@
+{
+  "id": "m_59edcf924fa1ad95",
+  "objectPath": "DeltaForce/Content/Effects/Common/Mesh/Cone/SM_Cylinder_Corner.SM_Cylinder_Corner",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Effects\\Common\\Mesh\\Cone\\SM_Cylinder_Corner.glb",
+  "sourceSHA256": "113D6074E4C37D67BBD287654F02517CC38E5404B1E6AC55D988AB515A82002F",
+  "model": "models/df_v24/m_59edcf924fa1ad95.vmdl",
+  "materials": {
+    "mat_87fa7d325eb743c4": "Engine/Content/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+  },
+  "vertices": 162,
+  "polygons": 272,
+  "bounds": [
+    [
+      -0.18000008165836334,
+      -0.36000001430511475,
+      -0.3600010871887207
+    ],
+    [
+      0.18000009655952454,
+      0.36000001430511475,
+      0.36000096797943115
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

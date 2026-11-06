@@ -1,0 +1,26 @@
+{
+  "id": "m_3552479d32ff05a1",
+  "objectPath": "DeltaForce/Content/Environment/Props/Branding/Sticker/SM_Branding_Sticker_NumberLetter_01_04.SM_Branding_Sticker_NumberLetter_01_04",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Branding\\Sticker\\SM_Branding_Sticker_NumberLetter_01_04.glb",
+  "sourceSHA256": "6DB40A5C3F68F9874E52778EFD3A4A73E78A8F98CD8064EB661D12E2CB23F3B1",
+  "model": "models/df_v24/m_3552479d32ff05a1.vmdl",
+  "materials": {
+    "mat_e581e059831e53de": "DeltaForce/Content/Environment/Props/Branding/00_Materials/T_Branding_Sticker_Number_01A.T_Branding_Sticker_Number_01A"
+  },
+  "vertices": 4,
+  "polygons": 2,
+  "bounds": [
+    [
+      -19.420513153076172,
+      -2.9555676482606597e-13,
+      -17.47753143310547
+    ],
+    [
+      19.420515060424805,
+      2.9555676482606597e-13,
+      17.47753143310547
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

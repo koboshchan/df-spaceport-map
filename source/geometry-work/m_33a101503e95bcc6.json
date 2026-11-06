@@ -1,0 +1,30 @@
+{
+  "id": "m_33a101503e95bcc6",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Container/SM_H_Industrial_Container_SupplyBox_02B.SM_H_Industrial_Container_SupplyBox_02B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\Container\\SM_H_Industrial_Container_SupplyBox_02B.glb",
+  "sourceSHA256": "FD79455804987902BA62E68B013C6FF2E8B929070EE0B126E370B43944B40096",
+  "model": "models/df_v24/m_33a101503e95bcc6.vmdl",
+  "materials": {
+    "mat_b54026e628fe4931": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Container/00_Materials/HD/MI_H_Industrial_Container_SupplyBox_02B_HD.MI_H_Industrial_Container_SupplyBox_02B_HD",
+    "mat_c03e19463858c2b2": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Container/00_Materials/HD/MI_H_Industrial_Container_SupplyBox_02A_Metal_HD.MI_H_Industrial_Container_SupplyBox_02A_Metal_HD",
+    "mat_4610ad67f0a57aff": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Container/00_Materials/HD/MI_H_Industrial_Container_SupplyBox_02A_Black_HD.MI_H_Industrial_Container_SupplyBox_02A_Black_HD",
+    "mat_4c639ddf627bb66a": "DeltaForce/Content/Maps/Iceland/Asset/Props/00_Materials/HD/MI_IceLand_Props_IndustrialRadar_02_HD.MI_Iceland_Props_IndustrialRadar_02_HD",
+    "mat_9cf0ee41d80ffb9d": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_02_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_02_Decal_HD"
+  },
+  "vertices": 5853,
+  "polygons": 5492,
+  "bounds": [
+    [
+      -26.415672302246094,
+      -20.009449005126953,
+      -0.032552774995565414
+    ],
+    [
+      26.209583282470703,
+      20.15277099609375,
+      48.61839294433594
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

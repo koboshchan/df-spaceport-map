@@ -1,0 +1,26 @@
+{
+  "id": "m_23ef464d601c715e",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/SM_H_Industrial_ISS_RocketTransporter_01D.SM_H_Industrial_ISS_RocketTransporter_01D",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\ISS\\SM_H_Industrial_ISS_RocketTransporter_01D.glb",
+  "sourceSHA256": "32EEA5F006EA178D90AD564E05CABD6D87B34A39A9AF1DC9A1F959DA29F9B7AA",
+  "model": "models/df_v24/m_23ef464d601c715e.vmdl",
+  "materials": {
+    "mat_df550a6715e961e5": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_RocketTransporter_01C_HD.MI_H_Industrial_ISS_RocketTransporter_01C_HD"
+  },
+  "vertices": 2848,
+  "polygons": 2720,
+  "bounds": [
+    [
+      -37.14684295654297,
+      -21.225038528442383,
+      -21.225059509277344
+    ],
+    [
+      37.14685821533203,
+      21.22512435913086,
+      21.22505760192871
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

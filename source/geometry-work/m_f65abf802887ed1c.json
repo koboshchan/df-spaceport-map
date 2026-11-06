@@ -1,0 +1,26 @@
+{
+  "id": "m_f65abf802887ed1c",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/SM_H_Residential_Electrical_Charher_01.SM_H_Residential_Electrical_Charher_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\SM_H_Residential_Electrical_Charher_01.glb",
+  "sourceSHA256": "92FFA9AD9705661991DAB58D2878C2DEDA4A76C825F9890C88D3359EEE54A457",
+  "model": "models/df_v24/m_f65abf802887ed1c.vmdl",
+  "materials": {
+    "mat_2464c8d5821cb617": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_Residential_Electrical_Charher_01_HD.MI_H_Residential_Electrical_Charher_01_HD"
+  },
+  "vertices": 2751,
+  "polygons": 4040,
+  "bounds": [
+    [
+      -6.891942501068115,
+      -5.339746475219727,
+      -0.7241418361663818
+    ],
+    [
+      6.749031066894531,
+      2.5128121376037598,
+      58.620880126953125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

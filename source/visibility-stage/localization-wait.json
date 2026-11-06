@@ -1,0 +1,10 @@
+{
+  "status": "awaiting-parent-newhit-relay",
+  "targets": [
+    "astronaut wall",
+    "tall crate column"
+  ],
+  "method": "world-hit normal to exact selected instance transformed render and physics triangles; nearest triangle, normal agreement, ambiguity retained",
+  "liveWatcher": false,
+  "liveMutation": false
+}

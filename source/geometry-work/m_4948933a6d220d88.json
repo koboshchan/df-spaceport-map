@@ -1,0 +1,26 @@
+{
+  "id": "m_4948933a6d220d88",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/SM_BS_Monstera_150cm_HD.SM_BS_Monstera_150cm_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Bush\\SM_BS_Monstera_150cm_HD.glb",
+  "sourceSHA256": "CE3D23E66E3B0620E429C2236252B6E64C6E3204C25DA757327327F14BE72330",
+  "model": "models/df_v24/m_4948933a6d220d88.vmdl",
+  "materials": {
+    "mat_da8ee824b4c38645": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/00_Materials/MI_BS_Monstera_150cm_Leaf_HD.MI_BS_Monstera_150cm_Leaf_HD"
+  },
+  "vertices": 880,
+  "polygons": 1323,
+  "bounds": [
+    [
+      -35.4210205078125,
+      -29.768112182617188,
+      -7.904273986816406
+    ],
+    [
+      34.198184967041016,
+      36.213768005371094,
+      48.39842987060547
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

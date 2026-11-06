@@ -1,0 +1,26 @@
+{
+  "id": "m_ff81c22257aa0581",
+  "objectPath": "DeltaForce/Content/Effects/Common/Mesh/Plane/SM_EFX_Plan_002.SM_EFX_Plan_002",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Effects\\Common\\Mesh\\Plane\\SM_EFX_Plan_002.glb",
+  "sourceSHA256": "646EEB0EC6A7CB38A00B3BAEFB970E222DBCC4117DE56F0691F6CD670B2447A2",
+  "model": "models/df_v24/m_ff81c22257aa0581.vmdl",
+  "materials": {
+    "mat_87fa7d325eb743c4": "Engine/Content/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+  },
+  "vertices": 121,
+  "polygons": 200,
+  "bounds": [
+    [
+      0.042479321360588074,
+      -3.3479995727539062,
+      -3.3479995727539062
+    ],
+    [
+      0.8486672043800354,
+      3.3480002880096436,
+      3.3480000495910645
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

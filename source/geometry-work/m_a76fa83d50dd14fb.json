@@ -1,0 +1,26 @@
+{
+  "id": "m_a76fa83d50dd14fb",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Industrial/Lighting/SM_M_Industrial_Lighting_Vent_01.SM_M_Industrial_Lighting_Vent_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Industrial\\Lighting\\SM_M_Industrial_Lighting_Vent_01.glb",
+  "sourceSHA256": "F66B7E72FE8CF0133AF8065495E3EBD9072C9374F0B649BCC87E23F854B0AE90",
+  "model": "models/df_v24/m_a76fa83d50dd14fb.vmdl",
+  "materials": {
+    "mat_0908851bfd0d1915": "DeltaForce/Content/Environment/Props/Morocco/Military/Lighting/00_Materials/HD/MI_M_Military_Lighting_FloodlightTower_01a_HD.MI_M_Military_Lighting_FloodlightTower_01a_HD"
+  },
+  "vertices": 312,
+  "polygons": 222,
+  "bounds": [
+    [
+      -11.55350399017334,
+      -11.55349349975586,
+      -1.7535550594329834
+    ],
+    [
+      11.55351448059082,
+      11.553512573242188,
+      0.737647294998169
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

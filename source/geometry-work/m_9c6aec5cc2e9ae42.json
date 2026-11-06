@@ -1,0 +1,26 @@
+{
+  "id": "m_9c6aec5cc2e9ae42",
+  "objectPath": "DeltaForce/Content/Maps/Iceland/Asset/Props/SM_H_IceLand_Props_IndustrialExtinguisher_01b.SM_H_IceLand_Props_IndustrialExtinguisher_01b",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Maps\\Iceland\\Asset\\Props\\SM_H_IceLand_Props_IndustrialExtinguisher_01b.glb",
+  "sourceSHA256": "D1B01DF43DA6602DF12E825A1F7D2CD1457A57C1C16E78708D33C8B90AF7117C",
+  "model": "models/df_v24/m_9c6aec5cc2e9ae42.vmdl",
+  "materials": {
+    "mat_a4182821e4ea3a89": "DeltaForce/Content/Maps/Iceland/Asset/Props/00_Materials/HD/MI_H_IceLand_Props_IndustrialExtinguisher_01d_HD.MI_H_IceLand_Props_IndustrialExtinguisher_01d_HD"
+  },
+  "vertices": 355,
+  "polygons": 405,
+  "bounds": [
+    [
+      0.46799996495246887,
+      -11.077204704284668,
+      19.231197357177734
+    ],
+    [
+      3.6935999393463135,
+      10.191596984863281,
+      40.55400085449219
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

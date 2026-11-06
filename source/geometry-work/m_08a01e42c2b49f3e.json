@@ -1,0 +1,26 @@
+{
+  "id": "m_08a01e42c2b49f3e",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Branding/Screen/SM_H_Branding_Screen_Monitor_02B.SM_H_Branding_Screen_Monitor_02B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Branding\\Screen\\SM_H_Branding_Screen_Monitor_02B.glb",
+  "sourceSHA256": "CCC7E5973B810332EE67ECDC00ED19650FACF5BE798A5123D5B7596F177BD250",
+  "model": "models/df_v24/m_08a01e42c2b49f3e.vmdl",
+  "materials": {
+    "mat_c04a1357c1e44a96": "DeltaForce/Content/Environment/Props/HAAVK/Branding/00_Materials/HD/MI_H_Branding_Screen_Monitor_02B_HD.MI_H_Branding_Screen_Monitor_02B_HD"
+  },
+  "vertices": 4,
+  "polygons": 2,
+  "bounds": [
+    [
+      -115.81158447265625,
+      -0.9577556252479553,
+      3.374082565307617
+    ],
+    [
+      115.81153869628906,
+      -0.9577372074127197,
+      102.36463928222656
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

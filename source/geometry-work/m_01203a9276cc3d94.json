@@ -1,0 +1,26 @@
+{
+  "id": "m_01203a9276cc3d94",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/IceLand/SM_H_Iceland_Props_Cable_Rubber_02.SM_H_Iceland_Props_Cable_Rubber_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\IceLand\\SM_H_Iceland_Props_Cable_Rubber_02.glb",
+  "sourceSHA256": "C0820FD4B9BB6D5DE6EC714ED54707A2B8FDCCBB97C653B1FA53BD54781DABC8",
+  "model": "models/df_v24/m_01203a9276cc3d94.vmdl",
+  "materials": {
+    "mat_1324191e9fd15dd3": "DeltaForce/Content/Maps/Iceland/Asset/Props/00_Materials/HD/MI_IceLand_Props_IndustrialPipeline_02b_HD.MI_IceLand_Props_IndustrialPipeline_02b_HD"
+  },
+  "vertices": 1071,
+  "polygons": 1498,
+  "bounds": [
+    [
+      -36.32865905761719,
+      -30.830699920654297,
+      -0.05167247727513313
+    ],
+    [
+      36.32865905761719,
+      30.83069610595703,
+      2.637989044189453
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

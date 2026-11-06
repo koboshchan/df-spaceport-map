@@ -1,0 +1,35 @@
+{
+  "id": "m_ac9ea3ee3e66fa5c",
+  "objectPath": "DeltaForce/Content/Environment/Props/FutureTech/ISS/SM_FutureTech_ISS_Destiny_02.SM_FutureTech_ISS_Destiny_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\FutureTech\\ISS\\SM_FutureTech_ISS_Destiny_02.glb",
+  "sourceSHA256": "32C413A783D1EE8034EB8FD195ECF866BD182651293197D9EB2A93AC6E480A9A",
+  "model": "models/df_v24/m_ac9ea3ee3e66fa5c.vmdl",
+  "materials": {
+    "mat_7059746fe01b839f": "DeltaForce/Content/Environment/Props/FutureTech/00_Materials/HD/MI_FutureTech_ISS_Destiny_01B_HD.MI_FutureTech_ISS_Destiny_01B_HD",
+    "mat_9e2a1afa599abfe1": "DeltaForce/Content/Environment/Structures/HAAVK/Door/00_Materials/HD/MI_H_Small_Door_11_decal_01A_HD.MI_H_Small_Door_11_decal_01A_HD",
+    "mat_3f402cae14a70515": "DeltaForce/Content/Environment/Props/FutureTech/00_Materials/HD/MI_FutureTech_ISS_Destiny_01F_HD.MI_FutureTech_ISS_Destiny_01F_HD",
+    "mat_13aca723f919223c": "DeltaForce/Content/Environment/Props/FutureTech/00_Materials/HD/MI_FutureTech_ISS_Destiny_02B_HD.MI_FutureTech_ISS_Destiny_02B_HD",
+    "mat_ce515409d0a82492": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD",
+    "mat_f7b6d59f678364b3": "DeltaForce/Content/Environment/Props/FutureTech/00_Materials/HD/MI_FutureTech_ISS_Destiny_02C_HD.MI_FutureTech_ISS_Destiny_02C_HD",
+    "mat_b2e363f2270ecb4c": "DeltaForce/Content/Environment/Props/FutureTech/00_Materials/HD/MI_FutureTech_ISS_Destiny_01E_HD.MI_FutureTech_ISS_Destiny_01E_HD",
+    "mat_90782f12b347c85c": "DeltaForce/Content/Environment/Props/FutureTech/00_Materials/HD/MI_FutureTech_ISS_Destiny_01C_HD.MI_FutureTech_ISS_Destiny_01C_HD",
+    "mat_93487b79f30eafea": "DeltaForce/Content/Environment/Props/FutureTech/00_Materials/HD/MI_FutureTech_ISS_Destiny_01A_HD.MI_FutureTech_ISS_Destiny_01A_HD",
+    "mat_224c9f5d8b6c69d6": "DeltaForce/Content/Environment/Props/FutureTech/00_Materials/HD/MI_FutureTech_ISS_Destiny_02A_HD.MI_FutureTech_ISS_Destiny_02A_HD"
+  },
+  "vertices": 18219,
+  "polygons": 15953,
+  "bounds": [
+    [
+      -81.01762390136719,
+      -121.59999084472656,
+      -6.6014204025268555
+    ],
+    [
+      81.01762390136719,
+      121.59999084472656,
+      168.85208129882812
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

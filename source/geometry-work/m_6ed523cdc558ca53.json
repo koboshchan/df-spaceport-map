@@ -1,0 +1,26 @@
+{
+  "id": "m_6ed523cdc558ca53",
+  "objectPath": "DeltaForce/Content/Environment/Gameplay/Door/SM_Door_05_32_Frame.SM_Door_05_32_Frame",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Gameplay\\Door\\SM_Door_05_32_Frame.glb",
+  "sourceSHA256": "5298EABF4BC537D7AC7C4251E9DBF320F5A9674687DD4A2C836854D0E4495865",
+  "model": "models/df_v24/m_6ed523cdc558ca53.vmdl",
+  "materials": {
+    "mat_80965a5ef1a3665f": "DeltaForce/Content/Environment/Props/Morocco/Lighting/00_Material/HD/MI_M_Commercial_Lighting_StreetLamp_09_HD.MI_M_Commercial_Lighting_StreetLamp_09_HD"
+  },
+  "vertices": 180,
+  "polygons": 182,
+  "bounds": [
+    [
+      -57.599998474121094,
+      -1.373290979245212e-05,
+      -5.4931638260313775e-06
+    ],
+    [
+      0.0,
+      12.807310104370117,
+      92.16000366210938
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

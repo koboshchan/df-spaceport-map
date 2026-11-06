@@ -1,0 +1,844 @@
+{
+  "source": "E:\\cs2-spaceport-private\\reports\\v24-spawn-fix.jsonl",
+  "snapshotUTC": "2026-11-06T15:32:45.5035618Z",
+  "T": 16,
+  "CT": 16,
+  "unique": 32,
+  "minXY": 64.0,
+  "allEnabled": true,
+  "groundRaise": 4,
+  "spawns": [
+    {
+      "team": "T",
+      "classname": "info_player_terrorist",
+      "Index": 16440,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        -9642.324,
+        -1183.0449,
+        -86.35036
+      ],
+      "acceptedSite": "2030206001",
+      "groundReceipt": {
+        "Id": "2030206001",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          -9642.324,
+          -1183.0449,
+          -90.35036
+        ],
+        "normalZ": 1,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "T",
+      "classname": "info_player_terrorist",
+      "Index": 16438,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        6850.793,
+        7794.0723,
+        -205.10965
+      ],
+      "acceptedSite": "2030206007",
+      "groundReceipt": {
+        "Id": "2030206007",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          6850.793,
+          7794.0723,
+          -209.10965
+        ],
+        "normalZ": 0.9999992,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "T",
+      "classname": "info_player_terrorist",
+      "Index": 16436,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        9957.744,
+        2481.207,
+        -196.51047
+      ],
+      "acceptedSite": "2030206005",
+      "groundReceipt": {
+        "Id": "2030206005",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          9957.744,
+          2481.207,
+          -200.51047
+        ],
+        "normalZ": 0.9999999,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "T",
+      "classname": "info_player_terrorist",
+      "Index": 16434,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        -9706.324,
+        -1311.0449,
+        -86.35988
+      ],
+      "acceptedSite": "2030206001",
+      "groundReceipt": {
+        "Id": "2030206001",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          -9706.324,
+          -1311.0449,
+          -90.35988
+        ],
+        "normalZ": 1,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "T",
+      "classname": "info_player_terrorist",
+      "Index": 16432,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        6850.793,
+        7922.0723,
+        -205.10965
+      ],
+      "acceptedSite": "2030206007",
+      "groundReceipt": {
+        "Id": "2030206007",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          6850.793,
+          7922.0723,
+          -209.10965
+        ],
+        "normalZ": 0.9999992,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "T",
+      "classname": "info_player_terrorist",
+      "Index": 16430,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        -9910.793,
+        5338,
+        59.08008
+      ],
+      "acceptedSite": "2030206002",
+      "groundReceipt": {
+        "Id": "2030206002",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          -9910.793,
+          5338,
+          55.08008
+        ],
+        "normalZ": 0.99999994,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "T",
+      "classname": "info_player_terrorist",
+      "Index": 16428,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        6534.4414,
+        -3688.207,
+        -213.2285
+      ],
+      "acceptedSite": "2030206008",
+      "groundReceipt": {
+        "Id": "2030206008",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          6534.4414,
+          -3688.207,
+          -217.2285
+        ],
+        "normalZ": 1,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "T",
+      "classname": "info_player_terrorist",
+      "Index": 16426,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        9893.744,
+        2545.207,
+        -196.52252
+      ],
+      "acceptedSite": "2030206005",
+      "groundReceipt": {
+        "Id": "2030206005",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          9893.744,
+          2545.207,
+          -200.52252
+        ],
+        "normalZ": 1,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "T",
+      "classname": "info_player_terrorist",
+      "Index": 16424,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        -9770.324,
+        -1247.0449,
+        -86.35985
+      ],
+      "acceptedSite": "2030206001",
+      "groundReceipt": {
+        "Id": "2030206001",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          -9770.324,
+          -1247.0449,
+          -90.35985
+        ],
+        "normalZ": 0.99999994,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "T",
+      "classname": "info_player_terrorist",
+      "Index": 16422,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        6914.793,
+        7858.0723,
+        -203.23068
+      ],
+      "acceptedSite": "2030206007",
+      "groundReceipt": {
+        "Id": "2030206007",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          6914.793,
+          7858.0723,
+          -207.23068
+        ],
+        "normalZ": 0.97988355,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "T",
+      "classname": "info_player_terrorist",
+      "Index": 16420,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        10021.744,
+        2545.207,
+        -196.49806
+      ],
+      "acceptedSite": "2030206005",
+      "groundReceipt": {
+        "Id": "2030206005",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          10021.744,
+          2545.207,
+          -200.49806
+        ],
+        "normalZ": 1,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "T",
+      "classname": "info_player_terrorist",
+      "Index": 16418,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        -9846.793,
+        5274,
+        59.08008
+      ],
+      "acceptedSite": "2030206002",
+      "groundReceipt": {
+        "Id": "2030206002",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          -9846.793,
+          5274,
+          55.08008
+        ],
+        "normalZ": 1,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "T",
+      "classname": "info_player_terrorist",
+      "Index": 16416,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        6598.4414,
+        -3688.207,
+        -213.22826
+      ],
+      "acceptedSite": "2030206008",
+      "groundReceipt": {
+        "Id": "2030206008",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          6598.4414,
+          -3688.207,
+          -217.22826
+        ],
+        "normalZ": 1,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "T",
+      "classname": "info_player_terrorist",
+      "Index": 16414,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        3523.6758,
+        3953.8477,
+        13.000092
+      ],
+      "acceptedSite": "2030206006",
+      "groundReceipt": {
+        "Id": "2030206006",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          3523.6758,
+          3953.8477,
+          9.000092
+        ],
+        "normalZ": 0.99999994,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "T",
+      "classname": "info_player_terrorist",
+      "Index": 16412,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        -1292.6953,
+        7667.5254,
+        163.52805
+      ],
+      "acceptedSite": "2030206004",
+      "groundReceipt": {
+        "Id": "2030206004",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          -1292.6953,
+          7667.5254,
+          159.52805
+        ],
+        "normalZ": 1,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "T",
+      "classname": "info_player_terrorist",
+      "Index": 16410,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        -9706.324,
+        -1247.0449,
+        -86.35985
+      ],
+      "acceptedSite": "2030206001",
+      "groundReceipt": {
+        "Id": "2030206001",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          -9706.324,
+          -1247.0449,
+          -90.35985
+        ],
+        "normalZ": 1,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "CT",
+      "classname": "info_player_counterterrorist",
+      "Index": 16441,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        10021.744,
+        2609.207,
+        -196.4986
+      ],
+      "acceptedSite": "2030206005",
+      "groundReceipt": {
+        "Id": "2030206005",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          10021.744,
+          2609.207,
+          -200.4986
+        ],
+        "normalZ": 1,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "CT",
+      "classname": "info_player_counterterrorist",
+      "Index": 16439,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        6598.4414,
+        -3752.207,
+        -213.22833
+      ],
+      "acceptedSite": "2030206008",
+      "groundReceipt": {
+        "Id": "2030206008",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          6598.4414,
+          -3752.207,
+          -217.22833
+        ],
+        "normalZ": 1,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "CT",
+      "classname": "info_player_counterterrorist",
+      "Index": 16437,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        3523.6758,
+        3889.8477,
+        13.000092
+      ],
+      "acceptedSite": "2030206006",
+      "groundReceipt": {
+        "Id": "2030206006",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          3523.6758,
+          3889.8477,
+          9.000092
+        ],
+        "normalZ": 1,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "CT",
+      "classname": "info_player_counterterrorist",
+      "Index": 16435,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        -9910.793,
+        5210,
+        59.08008
+      ],
+      "acceptedSite": "2030206002",
+      "groundReceipt": {
+        "Id": "2030206002",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          -9910.793,
+          5210,
+          55.08008
+        ],
+        "normalZ": 1,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "CT",
+      "classname": "info_player_counterterrorist",
+      "Index": 16433,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        6598.4414,
+        -3624.207,
+        -213.22821
+      ],
+      "acceptedSite": "2030206008",
+      "groundReceipt": {
+        "Id": "2030206008",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          6598.4414,
+          -3624.207,
+          -217.22821
+        ],
+        "normalZ": 1,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "CT",
+      "classname": "info_player_counterterrorist",
+      "Index": 16431,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        9957.744,
+        2609.207,
+        -196.51047
+      ],
+      "acceptedSite": "2030206005",
+      "groundReceipt": {
+        "Id": "2030206005",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          9957.744,
+          2609.207,
+          -200.51047
+        ],
+        "normalZ": 0.9999999,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "CT",
+      "classname": "info_player_counterterrorist",
+      "Index": 16429,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        -9706.324,
+        -1183.0449,
+        -86.339516
+      ],
+      "acceptedSite": "2030206001",
+      "groundReceipt": {
+        "Id": "2030206001",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          -9706.324,
+          -1183.0449,
+          -90.339516
+        ],
+        "normalZ": 1,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "CT",
+      "classname": "info_player_counterterrorist",
+      "Index": 16427,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        6786.793,
+        7858.0723,
+        -205.02771
+      ],
+      "acceptedSite": "2030206007",
+      "groundReceipt": {
+        "Id": "2030206007",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          6786.793,
+          7858.0723,
+          -209.02771
+        ],
+        "normalZ": 0.99999917,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "CT",
+      "classname": "info_player_counterterrorist",
+      "Index": 16425,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        -9974.793,
+        5274,
+        59.08008
+      ],
+      "acceptedSite": "2030206002",
+      "groundReceipt": {
+        "Id": "2030206002",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          -9974.793,
+          5274,
+          55.08008
+        ],
+        "normalZ": 1,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "CT",
+      "classname": "info_player_counterterrorist",
+      "Index": 16423,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        6662.4414,
+        -3688.207,
+        -213.22803
+      ],
+      "acceptedSite": "2030206008",
+      "groundReceipt": {
+        "Id": "2030206008",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          6662.4414,
+          -3688.207,
+          -217.22803
+        ],
+        "normalZ": 1,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "CT",
+      "classname": "info_player_counterterrorist",
+      "Index": 16421,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        3587.6758,
+        3953.8477,
+        13.000092
+      ],
+      "acceptedSite": "2030206006",
+      "groundReceipt": {
+        "Id": "2030206006",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          3587.6758,
+          3953.8477,
+          9.000092
+        ],
+        "normalZ": 0.99999994,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "CT",
+      "classname": "info_player_counterterrorist",
+      "Index": 16419,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        -1228.6953,
+        7667.5254,
+        170.00821
+      ],
+      "acceptedSite": "2030206004",
+      "groundReceipt": {
+        "Id": "2030206004",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          -1228.6953,
+          7667.5254,
+          166.00821
+        ],
+        "normalZ": 1,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "CT",
+      "classname": "info_player_counterterrorist",
+      "Index": 16417,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        -9642.324,
+        -1247.0449,
+        -86.35985
+      ],
+      "acceptedSite": "2030206001",
+      "groundReceipt": {
+        "Id": "2030206001",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          -9642.324,
+          -1247.0449,
+          -90.35985
+        ],
+        "normalZ": 1,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "CT",
+      "classname": "info_player_counterterrorist",
+      "Index": 16415,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        6850.793,
+        7858.0723,
+        -205.10965
+      ],
+      "acceptedSite": "2030206007",
+      "groundReceipt": {
+        "Id": "2030206007",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          6850.793,
+          7858.0723,
+          -209.10965
+        ],
+        "normalZ": 0.99999917,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "CT",
+      "classname": "info_player_counterterrorist",
+      "Index": 16413,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        9957.744,
+        2545.207,
+        -196.51047
+      ],
+      "acceptedSite": "2030206005",
+      "groundReceipt": {
+        "Id": "2030206005",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          9957.744,
+          2545.207,
+          -200.51047
+        ],
+        "normalZ": 0.9999999,
+        "clear": true,
+        "accepted": true
+      }
+    },
+    {
+      "team": "CT",
+      "classname": "info_player_counterterrorist",
+      "Index": 16411,
+      "Enabled": true,
+      "Priority": 0,
+      "position": [
+        -9910.793,
+        5274,
+        60.964783
+      ],
+      "acceptedSite": "2030206002",
+      "groundReceipt": {
+        "Id": "2030206002",
+        "hit": true,
+        "solid": false,
+        "ground": [
+          -9910.793,
+          5274,
+          56.964783
+        ],
+        "normalZ": 0.9171185,
+        "clear": true,
+        "accepted": true
+      }
+    }
+  ]
+}

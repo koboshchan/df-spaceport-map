@@ -1,0 +1,26 @@
+{
+  "id": "m_4c9447c284cda2ce",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Commercial/Bedroom/SM_M_Residential_Bedroom_Cushion_02a.SM_M_Residential_Bedroom_Cushion_02a",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Commercial\\Bedroom\\SM_M_Residential_Bedroom_Cushion_02a.glb",
+  "sourceSHA256": "F78BCA432E64F786E32261C0833D9B294999AA6A5308861D5154F09267ADF898",
+  "model": "models/df_v24/m_4c9447c284cda2ce.vmdl",
+  "materials": {
+    "mat_35cd548026b5f827": "DeltaForce/Content/Environment/Props/Morocco/Commercial/00_Materials/HD/MI_M_Residential_Bedroom_Cushion_02_HD.MI_M_Residential_Bedroom_Cushion_02_HD"
+  },
+  "vertices": 598,
+  "polygons": 1034,
+  "bounds": [
+    [
+      -13.78648853302002,
+      -9.291706085205078,
+      -1.2264759540557861
+    ],
+    [
+      14.299694061279297,
+      8.723738670349121,
+      20.993179321289062
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

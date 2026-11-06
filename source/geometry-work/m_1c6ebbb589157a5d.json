@@ -1,0 +1,28 @@
+{
+  "id": "m_1c6ebbb589157a5d",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/SM_I_RoadFacility_Ground_H_13B.SM_I_RoadFacility_Ground_H_13B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter\\SM_I_RoadFacility_Ground_H_13B.glb",
+  "sourceSHA256": "7FFE3F4A2A37F1CD09A3D76BCDD0EBCAE46B9342809B5006B0065DA6B7B45F6A",
+  "model": "models/df_v24/m_1c6ebbb589157a5d.vmdl",
+  "materials": {
+    "mat_ebe2c68b91602cff": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Road_Decal_02_HD.MI_H_FutureTech_Road_Decal_02_HD",
+    "mat_69b9ff7a811ece89": "DeltaForce/Content/Environment/Structures/Morocco/Decal/00_Materials/MI_C_WallDamaged_Decal_01A_HD.MI_C_WallDamaged_Decal_01A_HD",
+    "mat_b2cce2838c324de6": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Industrial/00_Materials/HD/MI_H_Building_Industrial_Posun_02_HD.MI_H_Building_Industrial_Posun_02_HD"
+  },
+  "vertices": 2304,
+  "polygons": 1585,
+  "bounds": [
+    [
+      -1243.892822265625,
+      -640.39794921875,
+      -8.943310737609863
+    ],
+    [
+      138.62350463867188,
+      462.1854248046875,
+      117.29513549804688
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "m_991a33517a2e7c3a",
+  "objectPath": "DeltaForce/Content/PCG/SpaceCenter_Long3/Road/Meshes_HD/SpaceCenter_Long3_GenerateRoad_Asphalt_PCGMesh_Decal_Mesh_x114_y59_18071_HD.SpaceCenter_Long3_GenerateRoad_Asphalt_PCGMesh_Decal_Mesh_x114_y59_18071_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\PCG\\SpaceCenter_Long3\\Road\\Meshes_HD\\SpaceCenter_Long3_GenerateRoad_Asphalt_PCGMesh_Decal_Mesh_x114_y59_18071_HD.glb",
+  "sourceSHA256": "09929F8F6D9D26BB7AE1371260B4D82F4EF194F3B66C4470F4ABA4423BA9BE37",
+  "model": "models/df_v24/m_991a33517a2e7c3a.vmdl",
+  "materials": {
+    "mat_08f41d820caa2bfe": "DeltaForce/Content/Environment/Biome/Terrain_HD/Road_HD/00_Materials/MI_Terrain_Road_Hills_Asphalt_Macadam_02_HD.MI_Terrain_Road_Hills_Asphalt_Macadam_02_HD"
+  },
+  "vertices": 22,
+  "polygons": 20,
+  "bounds": [
+    [
+      -121.22999572753906,
+      -36.29249954223633,
+      -8130.630859375
+    ],
+    [
+      121.22999572753906,
+      36.303749084472656,
+      -8124.59716796875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

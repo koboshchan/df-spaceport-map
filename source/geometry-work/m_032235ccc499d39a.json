@@ -1,0 +1,28 @@
+{
+  "id": "m_032235ccc499d39a",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Fence_SoundproofWall_03d.SM_H_Fence_SoundproofWall_03d",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Fence_SoundproofWall_03d.glb",
+  "sourceSHA256": "448934797192938D6374ACA18A183E077E94F7BE237DA3AA4AFD2369BA7E2C13",
+  "model": "models/df_v24/m_032235ccc499d39a.vmdl",
+  "materials": {
+    "mat_5f05df3d1d12addd": "DeltaForce/Content/Environment/Structures/HAAVK/Fence/00_Materials/HD/MI_H_Fence_SoundproofWall_02b_HD.MI_H_Fence_SoundproofWall_02b_HD",
+    "mat_b63a6e41f7a23f5f": "DeltaForce/Content/Environment/Structures/HAAVK/Fence/00_Materials/HD/MI_H_Fence_SoundproofWall_02a_HD.MI_H_Fence_SoundproofWall_02a_HD",
+    "mat_ca1bbbe2593d44b8": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/00_Materials/HD/MI_H_Industrial_Mechanical_MetalSilo_02c_HD.MI_H_Industrial_Mechanical_MetalSilo_02c_HD"
+  },
+  "vertices": 5744,
+  "polygons": 6404,
+  "bounds": [
+    [
+      -129.6513214111328,
+      -13.3613920211792,
+      -0.00013214648060966283
+    ],
+    [
+      0.016428131610155106,
+      13.361505508422852,
+      169.01528930664062
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

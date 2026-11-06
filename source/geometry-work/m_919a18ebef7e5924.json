@@ -1,0 +1,26 @@
+{
+  "id": "m_919a18ebef7e5924",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Government/Office/SM_M_Government_Office_CleanRobot_01_Bot.SM_M_Government_Office_CleanRobot_01_Bot",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Government\\Office\\SM_M_Government_Office_CleanRobot_01_Bot.glb",
+  "sourceSHA256": "9E725602102D34AB8166640B98EF441F7C9CE620E7CA18E301970ABCD8DA185B",
+  "model": "models/df_v24/m_919a18ebef7e5924.vmdl",
+  "materials": {
+    "mat_ca28d0610968b2a1": "DeltaForce/Content/Environment/Props/Morocco/Government/Office/00_Materials/HD/MI_M_Government_Office_CleanRobot_01_HD.MI_M_Government_Office_CleanRobot_01_HD"
+  },
+  "vertices": 490,
+  "polygons": 388,
+  "bounds": [
+    [
+      -7.8097028732299805,
+      -5.770660400390625,
+      3.0185596674271254e-16
+    ],
+    [
+      7.809708118438721,
+      7.800824165344238,
+      3.421849012374878
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

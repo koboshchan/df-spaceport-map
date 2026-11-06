@@ -1,0 +1,26 @@
+{
+  "id": "m_55a2cf2d9a65e4b5",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/HD_Only/Government/SM_H_Government_Hospital_MedicineBottle_01.SM_H_Government_Hospital_MedicineBottle_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\HD_Only\\Government\\SM_H_Government_Hospital_MedicineBottle_01.glb",
+  "sourceSHA256": "B8B7D896DE14DF3DB378E519E7473F84212906E92543A24D3FB967AD097DDEAC",
+  "model": "models/df_v24/m_55a2cf2d9a65e4b5.vmdl",
+  "materials": {
+    "mat_a3918763e3ee1229": "DeltaForce/Content/Environment/Props/HAAVK/HD_Only/Government/00_Materials/HD/MI_H_Government_Hospital_InfusionBottle_03_HD.MI_H_Government_Hospital_InfusionBottle_03_HD"
+  },
+  "vertices": 288,
+  "polygons": 382,
+  "bounds": [
+    [
+      -0.9981353282928467,
+      -0.9981355667114258,
+      -7.948472102725646e-08
+    ],
+    [
+      0.9981353282928467,
+      0.9981356859207153,
+      3.7689733505249023
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

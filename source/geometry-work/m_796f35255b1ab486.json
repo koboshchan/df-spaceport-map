@@ -1,0 +1,26 @@
+{
+  "id": "m_796f35255b1ab486",
+  "objectPath": "DeltaForce/Content/Environment/Props/Branding/LocationSign/SM_Branding_Office_doorplate_RoomUnit_10.SM_Branding_Office_Doorplate_RoomUnit_10",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Branding\\LocationSign\\SM_Branding_Office_doorplate_RoomUnit_10.glb",
+  "sourceSHA256": "CA10FF1DD96CC1AF370482E27E4B6F2F5C753B6461087303FC7CED3D30C2BBBF",
+  "model": "models/df_v24/m_796f35255b1ab486.vmdl",
+  "materials": {
+    "mat_ce224f50bb1cd657": "DeltaForce/Content/Environment/Props/Branding/00_Materials/HD/MI_Branding_Office_Doorplate_01_HD.MI_Branding_Office_Doorplate_01_HD"
+  },
+  "vertices": 4,
+  "polygons": 2,
+  "bounds": [
+    [
+      -8.034201622009277,
+      -3.874845920234587e-16,
+      9.655951771492255e-08
+    ],
+    [
+      8.034201622009277,
+      2.0799402239597697e-16,
+      2.9313042163848877
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

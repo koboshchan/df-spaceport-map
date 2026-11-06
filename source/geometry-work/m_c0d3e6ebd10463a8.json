@@ -1,0 +1,26 @@
+{
+  "id": "m_c0d3e6ebd10463a8",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/Lounge/SM_H_FutureTech_Sanitary_Cosmetics_03.SM_H_FutureTech_Sanitary_Cosmetics_03",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\Lounge\\SM_H_FutureTech_Sanitary_Cosmetics_03.glb",
+  "sourceSHA256": "494887C05AD2BA48FF4BE1509AB00079BC4AA85A21EF1248E19D30797D53817B",
+  "model": "models/df_v24/m_c0d3e6ebd10463a8.vmdl",
+  "materials": {
+    "mat_60073a2b07234500": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/Lounge/00_Materials/HD/MI_H_FutureTech_Sanitary_Cosmetics_03_HD.MI_H_FutureTech_Sanitary_Cosmetics_03_HD"
+  },
+  "vertices": 524,
+  "polygons": 730,
+  "bounds": [
+    [
+      -2.336013078689575,
+      -2.779073715209961,
+      0.07188915461301804
+    ],
+    [
+      2.336013078689575,
+      2.779073715209961,
+      6.417848110198975
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

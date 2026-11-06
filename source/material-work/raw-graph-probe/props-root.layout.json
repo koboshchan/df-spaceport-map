@@ -1,0 +1,153 @@
+{
+  "tailSHA256": "755af20fa8cdcbc8e22b5a402a354cd2ff501d6d2847a1ac6ea4d108b1a14239",
+  "resourceCountPrefix": 10,
+  "nameCount": 39,
+  "names": [
+    "FMaterialUniformExpressionVectorParameter",
+    "Debug",
+    "FMaterialUniformExpressionComponentSwizzle",
+    "BaseColorScaler_01_R",
+    "BaseColorScaler_02_G",
+    "Layer01Tint",
+    "Layer02Tint",
+    "FMaterialUniformExpressionScalarParameter",
+    "DistanceFadeWidth",
+    "DistanceFadeMin",
+    "FMaterialUniformExpressionFoldedMath",
+    "Texcoord_01_R",
+    "Texcoord_02_G",
+    "Heightblend Cover Scale",
+    "Heightblend Base Scale",
+    "FMaterialUniformExpressionConstant",
+    "Heightblend Offset",
+    "Heightblend Hardness",
+    "HeightBlend Origin",
+    "HeightBlend Origin_TintColor",
+    "WetRainBase",
+    "WetPorosity",
+    "Layer01Metal",
+    "Layer02Metal",
+    "Layer01Roughness",
+    "Layer02Roughness",
+    "WetMaskStrength",
+    "FMaterialUniformExpressionTextureParameter",
+    "NormalMap",
+    "01_R_Normal",
+    "02_G_Normal",
+    "01_R_Base",
+    "02_G_Base",
+    "BlendMask",
+    "01_R_MRA",
+    "02_G_MRA",
+    "DetailNormalTiling",
+    "DetailNormalScale",
+    "DetailNormal"
+  ],
+  "locationCount": 10,
+  "resourceDataBase": 1141,
+  "declaredResourceDataLength": 981312,
+  "locations": [
+    {
+      "offset": 0,
+      "threeVersionOrPlatformBytes": [
+        4,
+        1,
+        48
+      ],
+      "nativeTailStart": 1141,
+      "nativeTailEnd": 106304
+    },
+    {
+      "offset": 105163,
+      "threeVersionOrPlatformBytes": [
+        4,
+        2,
+        48
+      ],
+      "nativeTailStart": 106304,
+      "nativeTailEnd": 211467
+    },
+    {
+      "offset": 210326,
+      "threeVersionOrPlatformBytes": [
+        4,
+        3,
+        48
+      ],
+      "nativeTailStart": 211467,
+      "nativeTailEnd": 316630
+    },
+    {
+      "offset": 315489,
+      "threeVersionOrPlatformBytes": [
+        4,
+        4,
+        48
+      ],
+      "nativeTailStart": 316630,
+      "nativeTailEnd": 423911
+    },
+    {
+      "offset": 422770,
+      "threeVersionOrPlatformBytes": [
+        4,
+        5,
+        48
+      ],
+      "nativeTailStart": 423911,
+      "nativeTailEnd": 531192
+    },
+    {
+      "offset": 530051,
+      "threeVersionOrPlatformBytes": [
+        3,
+        1,
+        0
+      ],
+      "nativeTailStart": 531192,
+      "nativeTailEnd": 620717
+    },
+    {
+      "offset": 619576,
+      "threeVersionOrPlatformBytes": [
+        3,
+        2,
+        0
+      ],
+      "nativeTailStart": 620717,
+      "nativeTailEnd": 710242
+    },
+    {
+      "offset": 709101,
+      "threeVersionOrPlatformBytes": [
+        3,
+        3,
+        0
+      ],
+      "nativeTailStart": 710242,
+      "nativeTailEnd": 799767
+    },
+    {
+      "offset": 798626,
+      "threeVersionOrPlatformBytes": [
+        3,
+        4,
+        0
+      ],
+      "nativeTailStart": 799767,
+      "nativeTailEnd": 891110
+    },
+    {
+      "offset": 889969,
+      "threeVersionOrPlatformBytes": [
+        3,
+        5,
+        0
+      ],
+      "nativeTailStart": 891110,
+      "nativeTailEnd": 982453
+    }
+  ],
+  "layoutGame": "GAME_DeltaForce UE4.27 baseline; trailing3 location bytes deliberately not semantically renamed",
+  "fullShaderMapDecode": false
+}

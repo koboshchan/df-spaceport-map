@@ -1,0 +1,26 @@
+{
+  "id": "m_6efdedadfb93c408",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/IceLand/Lighting/SM_H_IceLand_Lighting_StreetLamp_07b.SM_H_IceLand_Lighting_StreetLamp_07b",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\IceLand\\Lighting\\SM_H_IceLand_Lighting_StreetLamp_07b.glb",
+  "sourceSHA256": "0DAEE47904D841F4301045C874D7C30D9C8B739698E0D01FEF8692C90332D824",
+  "model": "models/df_v24/m_6efdedadfb93c408.vmdl",
+  "materials": {
+    "mat_1b09a1cfb9a00208": "DeltaForce/Content/Environment/Props/HAAVK/IceLand/Lighting/00_Materials/HD/MI_H_IceLand_Lighting_StreetLamp_07b_HD.MI_H_IceLand_Lighting_StreetLamp_07b_HD"
+  },
+  "vertices": 818,
+  "polygons": 670,
+  "bounds": [
+    [
+      -9.883589744567871,
+      -8.656099319458008,
+      0.0644497498869896
+    ],
+    [
+      11.558473587036133,
+      5.600431442260742,
+      17.81852149963379
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

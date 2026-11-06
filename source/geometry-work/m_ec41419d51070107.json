@@ -1,0 +1,26 @@
+{
+  "id": "m_ec41419d51070107",
+  "objectPath": "DeltaForce/Content/Models/Vehicles/F35/Appearance_Base/F35_Missle_UI.F35_Missle_UI",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Vehicles\\F35\\Appearance_Base\\F35_Missle_UI.glb",
+  "sourceSHA256": "C65B3078A3DB9DE6114F0F22DC5C07A8334FD754DD02F685DEBA5EF7D57F9722",
+  "model": "models/df_v24/m_ec41419d51070107.vmdl",
+  "materials": {
+    "mat_561d2e2fefd18bb8": "DeltaForce/Content/Models/Vehicles/F35/Appearance_Base/Materials/carrier_wing_F35_drivable_missle.carrier_wing_F35_drivable_missle"
+  },
+  "vertices": 1076,
+  "polygons": 930,
+  "bounds": [
+    [
+      -60.411865234375,
+      -9.422874450683594,
+      -9.422869682312012
+    ],
+    [
+      60.41187286376953,
+      9.42288589477539,
+      9.422869682312012
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

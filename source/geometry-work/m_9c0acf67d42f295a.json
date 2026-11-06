@@ -1,0 +1,26 @@
+{
+  "id": "m_9c0acf67d42f295a",
+  "objectPath": "DeltaForce/Content/Models/Weapons/Parts/Bullet/Bullets_12Gauge_830/Bullets_12Gauge_830_1P.Bullets_12Gauge_830_1P",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Weapons\\Parts\\Bullet\\Bullets_12Gauge_830\\Bullets_12Gauge_830_1P.glb",
+  "sourceSHA256": "62AD385AB426D066AE5CB840D884105A47C4965669DD0CF982FB28CD67A74215",
+  "model": "models/df_v24/m_9c0acf67d42f295a.vmdl",
+  "materials": {
+    "mat_f2ba10289dc9e397": "DeltaForce/Content/Models/Weapons/Parts/Bullet/Bullets_12Gauge_830/Materials/Bullets_12Gauge_830.Bullets_12Gauge_830"
+  },
+  "vertices": 821,
+  "polygons": 924,
+  "bounds": [
+    [
+      -0.345432311296463,
+      -2.184763193130493,
+      -0.3455466628074646
+    ],
+    [
+      0.34543225169181824,
+      8.136748510878533e-05,
+      0.34554600715637207
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

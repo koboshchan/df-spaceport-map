@@ -1,0 +1,26 @@
+{
+  "id": "m_6fe24b17f8db9987",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/SM_BS_Cytisus_120cm_HD.SM_BS_Cytisus_120cm_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Bush\\SM_BS_Cytisus_120cm_HD.glb",
+  "sourceSHA256": "95CFC02E5217CA16BFFA57B89AC842044F514EAC8D7DA5D04BE1E99AE7145784",
+  "model": "models/df_v24/m_6fe24b17f8db9987.vmdl",
+  "materials": {
+    "mat_716216b6e2b88def": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/00_Materials/MI_BS_Cytisus_120cm_Leaf_HD.MI_BS_Cytisus_120cm_Leaf_HD"
+  },
+  "vertices": 2838,
+  "polygons": 1643,
+  "bounds": [
+    [
+      -66.26840209960938,
+      -61.26893615722656,
+      -7.2071099281311035
+    ],
+    [
+      73.82167053222656,
+      64.19678497314453,
+      68.07549285888672
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

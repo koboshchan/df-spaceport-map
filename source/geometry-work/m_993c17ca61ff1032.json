@@ -1,0 +1,26 @@
+{
+  "id": "m_993c17ca61ff1032",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Commercial/Supplies/SM_BS_BostonIvy_01_B.SM_BS_BostonIvy_01_B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Commercial\\Supplies\\SM_BS_BostonIvy_01_B.glb",
+  "sourceSHA256": "EA5D9D2B3E79A59518A5194291E647D712AF89DAB2A44F599027CA6031E7A318",
+  "model": "models/df_v24/m_993c17ca61ff1032.vmdl",
+  "materials": {
+    "mat_d08966ebfe5218c5": "DeltaForce/Content/Environment/Props/Morocco/Commercial/00_Materials/HD/MI_BS_BostonIvy_01_C_HD.MI_BS_BostonIvy_01_C_HD"
+  },
+  "vertices": 9347,
+  "polygons": 8319,
+  "bounds": [
+    [
+      -103.98237609863281,
+      -11.833616256713867,
+      16.897533416748047
+    ],
+    [
+      103.98238372802734,
+      11.833616256713867,
+      174.6901397705078
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

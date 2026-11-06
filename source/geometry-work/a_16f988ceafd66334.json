@@ -1,0 +1,50 @@
+{
+  "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.SM_I_Fence_WoodWall_512x512_52.StaticMeshComponent0",
+  "instanceIndex": null,
+  "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+  "model": "models/df_v24/a_16f988ceafd66334.vmdl",
+  "id": "a_16f988ceafd66334",
+  "positionCS2": [
+    -8722.9714041017,
+    2098.934711804526,
+    113.52619440000035
+  ],
+  "origin": [
+    -8722.9714041017,
+    2098.934711804526,
+    113.52619440000035
+  ],
+  "angles": [
+    0,
+    0,
+    0
+  ],
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "bakedCS2LocalTransform": true,
+  "collisionEnabled": true,
+  "linearDeterminant": 0.14150217175483704,
+  "windingReversed": false,
+  "maxLinearCheckError": 1.1920928955078125e-07,
+  "bakeReason": "source shear needs exact baked model 0.00010392825008787233",
+  "localLinearMatrix": [
+    [
+      -10.240127563476562,
+      -7.20481330063194e-06,
+      0.0
+    ],
+    [
+      3.587080527722719e-06,
+      -0.06909199804067612,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.19999998807907104
+    ]
+  ]
+}

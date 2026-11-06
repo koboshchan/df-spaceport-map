@@ -1,0 +1,26 @@
+{
+  "id": "m_4f4b2b9dbffb32b4",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/SM_BS_Milkweed_180cm_HD.SM_BS_Milkweed_180cm_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Bush\\SM_BS_Milkweed_180cm_HD.glb",
+  "sourceSHA256": "9CFB586AF3AEA5ED4113A415D76D70ADF30B13CF42C74C30C2886C8828F04C6F",
+  "model": "models/df_v24/m_4f4b2b9dbffb32b4.vmdl",
+  "materials": {
+    "mat_fd9939c4684470da": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/00_Materials/MI_BS_Milkweed_180cm_Leaf_HD.MI_BS_Milkweed_180cm_Leaf_HD"
+  },
+  "vertices": 2742,
+  "polygons": 1734,
+  "bounds": [
+    [
+      -34.41653060913086,
+      -33.965267181396484,
+      -2.462200164794922
+    ],
+    [
+      30.707202911376953,
+      34.11166000366211,
+      69.98248291015625
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

@@ -1,0 +1,1918 @@
+[
+  {
+    "material": "props-root",
+    "resource": 0,
+    "location": [
+      0,
+      4,
+      1,
+      48
+    ],
+    "tableStart": 2843,
+    "tableEnd": 3143,
+    "count": 8,
+    "records": [
+      {
+        "start": 2847,
+        "end": 2884,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 28,
+        "parameterName": "NormalMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          36,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 2884,
+        "end": 2921,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 29,
+        "parameterName": "01_R_Normal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          30,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 2921,
+        "end": 2958,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 30,
+        "parameterName": "02_G_Normal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          34,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 2958,
+        "end": 2995,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 31,
+        "parameterName": "01_R_Base",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          28,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 2995,
+        "end": 3032,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 32,
+        "parameterName": "02_G_Base",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          33,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 3032,
+        "end": 3069,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 33,
+        "parameterName": "BlendMask",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          26,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 3069,
+        "end": 3106,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 34,
+        "parameterName": "01_R_MRA",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          38,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 3106,
+        "end": 3143,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 35,
+        "parameterName": "02_G_MRA",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          40,
+          -1,
+          0,
+          1
+        ]
+      }
+    ],
+    "next64hex": "0000000003000000020000000000000005000000ffffffff03000000010000000300000006000000ffffffff03000000020000000400000007000000ffffffff"
+  },
+  {
+    "material": "props-root",
+    "resource": 1,
+    "location": [
+      105163,
+      4,
+      2,
+      48
+    ],
+    "tableStart": 108006,
+    "tableEnd": 108306,
+    "count": 8,
+    "records": [
+      {
+        "start": 108010,
+        "end": 108047,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 28,
+        "parameterName": "NormalMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          36,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 108047,
+        "end": 108084,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 29,
+        "parameterName": "01_R_Normal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          30,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 108084,
+        "end": 108121,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 30,
+        "parameterName": "02_G_Normal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          34,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 108121,
+        "end": 108158,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 31,
+        "parameterName": "01_R_Base",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          28,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 108158,
+        "end": 108195,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 32,
+        "parameterName": "02_G_Base",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          33,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 108195,
+        "end": 108232,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 33,
+        "parameterName": "BlendMask",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          26,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 108232,
+        "end": 108269,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 34,
+        "parameterName": "01_R_MRA",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          38,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 108269,
+        "end": 108306,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 35,
+        "parameterName": "02_G_MRA",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          40,
+          -1,
+          0,
+          1
+        ]
+      }
+    ],
+    "next64hex": "0000000003000000020000000000000005000000ffffffff03000000010000000300000006000000ffffffff03000000020000000400000007000000ffffffff"
+  },
+  {
+    "material": "props-root",
+    "resource": 2,
+    "location": [
+      210326,
+      4,
+      3,
+      48
+    ],
+    "tableStart": 213169,
+    "tableEnd": 213469,
+    "count": 8,
+    "records": [
+      {
+        "start": 213173,
+        "end": 213210,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 28,
+        "parameterName": "NormalMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          36,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 213210,
+        "end": 213247,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 29,
+        "parameterName": "01_R_Normal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          30,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 213247,
+        "end": 213284,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 30,
+        "parameterName": "02_G_Normal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          34,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 213284,
+        "end": 213321,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 31,
+        "parameterName": "01_R_Base",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          28,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 213321,
+        "end": 213358,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 32,
+        "parameterName": "02_G_Base",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          33,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 213358,
+        "end": 213395,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 33,
+        "parameterName": "BlendMask",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          26,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 213395,
+        "end": 213432,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 34,
+        "parameterName": "01_R_MRA",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          38,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 213432,
+        "end": 213469,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 35,
+        "parameterName": "02_G_MRA",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          40,
+          -1,
+          0,
+          1
+        ]
+      }
+    ],
+    "next64hex": "0000000003000000020000000000000005000000ffffffff03000000010000000300000006000000ffffffff03000000020000000400000007000000ffffffff"
+  },
+  {
+    "material": "props-root",
+    "resource": 3,
+    "location": [
+      315489,
+      4,
+      4,
+      48
+    ],
+    "tableStart": 318445,
+    "tableEnd": 318782,
+    "count": 9,
+    "records": [
+      {
+        "start": 318449,
+        "end": 318486,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 38,
+        "parameterName": "DetailNormal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          45,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 318486,
+        "end": 318523,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 28,
+        "parameterName": "NormalMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          36,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 318523,
+        "end": 318560,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 29,
+        "parameterName": "01_R_Normal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          30,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 318560,
+        "end": 318597,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 30,
+        "parameterName": "02_G_Normal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          34,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 318597,
+        "end": 318634,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 31,
+        "parameterName": "01_R_Base",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          28,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 318634,
+        "end": 318671,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 32,
+        "parameterName": "02_G_Base",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          33,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 318671,
+        "end": 318708,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 33,
+        "parameterName": "BlendMask",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          26,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 318708,
+        "end": 318745,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 34,
+        "parameterName": "01_R_MRA",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          38,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 318745,
+        "end": 318782,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 35,
+        "parameterName": "02_G_MRA",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          40,
+          -1,
+          0,
+          1
+        ]
+      }
+    ],
+    "next64hex": "00000000040000000100000000000000ffffffff020000000100000006000000ffffffff03000000020000000400000007000000ffffffff0300000003000000"
+  },
+  {
+    "material": "props-root",
+    "resource": 4,
+    "location": [
+      422770,
+      4,
+      5,
+      48
+    ],
+    "tableStart": 425726,
+    "tableEnd": 426063,
+    "count": 9,
+    "records": [
+      {
+        "start": 425730,
+        "end": 425767,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 38,
+        "parameterName": "DetailNormal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          45,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 425767,
+        "end": 425804,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 28,
+        "parameterName": "NormalMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          36,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 425804,
+        "end": 425841,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 29,
+        "parameterName": "01_R_Normal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          30,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 425841,
+        "end": 425878,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 30,
+        "parameterName": "02_G_Normal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          34,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 425878,
+        "end": 425915,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 31,
+        "parameterName": "01_R_Base",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          28,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 425915,
+        "end": 425952,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 32,
+        "parameterName": "02_G_Base",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          33,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 425952,
+        "end": 425989,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 33,
+        "parameterName": "BlendMask",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          26,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 425989,
+        "end": 426026,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 34,
+        "parameterName": "01_R_MRA",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          38,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 426026,
+        "end": 426063,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 35,
+        "parameterName": "02_G_MRA",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          40,
+          -1,
+          0,
+          1
+        ]
+      }
+    ],
+    "next64hex": "00000000040000000100000000000000ffffffff020000000100000006000000ffffffff03000000020000000400000007000000ffffffff0300000003000000"
+  },
+  {
+    "material": "props-root",
+    "resource": 5,
+    "location": [
+      530051,
+      3,
+      1,
+      0
+    ],
+    "tableStart": 532894,
+    "tableEnd": 533194,
+    "count": 8,
+    "records": [
+      {
+        "start": 532898,
+        "end": 532935,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 28,
+        "parameterName": "NormalMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          36,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 532935,
+        "end": 532972,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 29,
+        "parameterName": "01_R_Normal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          30,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 532972,
+        "end": 533009,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 30,
+        "parameterName": "02_G_Normal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          34,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 533009,
+        "end": 533046,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 31,
+        "parameterName": "01_R_Base",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          28,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 533046,
+        "end": 533083,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 32,
+        "parameterName": "02_G_Base",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          33,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 533083,
+        "end": 533120,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 33,
+        "parameterName": "BlendMask",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          26,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 533120,
+        "end": 533157,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 34,
+        "parameterName": "01_R_MRA",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          38,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 533157,
+        "end": 533194,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 35,
+        "parameterName": "02_G_MRA",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          40,
+          -1,
+          0,
+          1
+        ]
+      }
+    ],
+    "next64hex": "0000000003000000020000000000000005000000ffffffff03000000010000000300000006000000ffffffff03000000020000000400000007000000ffffffff"
+  },
+  {
+    "material": "props-root",
+    "resource": 6,
+    "location": [
+      619576,
+      3,
+      2,
+      0
+    ],
+    "tableStart": 622419,
+    "tableEnd": 622719,
+    "count": 8,
+    "records": [
+      {
+        "start": 622423,
+        "end": 622460,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 28,
+        "parameterName": "NormalMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          36,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 622460,
+        "end": 622497,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 29,
+        "parameterName": "01_R_Normal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          30,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 622497,
+        "end": 622534,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 30,
+        "parameterName": "02_G_Normal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          34,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 622534,
+        "end": 622571,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 31,
+        "parameterName": "01_R_Base",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          28,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 622571,
+        "end": 622608,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 32,
+        "parameterName": "02_G_Base",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          33,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 622608,
+        "end": 622645,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 33,
+        "parameterName": "BlendMask",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          26,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 622645,
+        "end": 622682,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 34,
+        "parameterName": "01_R_MRA",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          38,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 622682,
+        "end": 622719,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 35,
+        "parameterName": "02_G_MRA",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          40,
+          -1,
+          0,
+          1
+        ]
+      }
+    ],
+    "next64hex": "0000000003000000020000000000000005000000ffffffff03000000010000000300000006000000ffffffff03000000020000000400000007000000ffffffff"
+  },
+  {
+    "material": "props-root",
+    "resource": 7,
+    "location": [
+      709101,
+      3,
+      3,
+      0
+    ],
+    "tableStart": 711944,
+    "tableEnd": 712244,
+    "count": 8,
+    "records": [
+      {
+        "start": 711948,
+        "end": 711985,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 28,
+        "parameterName": "NormalMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          36,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 711985,
+        "end": 712022,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 29,
+        "parameterName": "01_R_Normal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          30,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 712022,
+        "end": 712059,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 30,
+        "parameterName": "02_G_Normal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          34,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 712059,
+        "end": 712096,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 31,
+        "parameterName": "01_R_Base",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          28,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 712096,
+        "end": 712133,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 32,
+        "parameterName": "02_G_Base",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          33,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 712133,
+        "end": 712170,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 33,
+        "parameterName": "BlendMask",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          26,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 712170,
+        "end": 712207,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 34,
+        "parameterName": "01_R_MRA",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          38,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 712207,
+        "end": 712244,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 35,
+        "parameterName": "02_G_MRA",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          40,
+          -1,
+          0,
+          1
+        ]
+      }
+    ],
+    "next64hex": "0000000003000000020000000000000005000000ffffffff03000000010000000300000006000000ffffffff03000000020000000400000007000000ffffffff"
+  },
+  {
+    "material": "props-root",
+    "resource": 8,
+    "location": [
+      798626,
+      3,
+      4,
+      0
+    ],
+    "tableStart": 801582,
+    "tableEnd": 801919,
+    "count": 9,
+    "records": [
+      {
+        "start": 801586,
+        "end": 801623,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 38,
+        "parameterName": "DetailNormal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          45,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 801623,
+        "end": 801660,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 28,
+        "parameterName": "NormalMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          36,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 801660,
+        "end": 801697,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 29,
+        "parameterName": "01_R_Normal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          30,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 801697,
+        "end": 801734,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 30,
+        "parameterName": "02_G_Normal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          34,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 801734,
+        "end": 801771,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 31,
+        "parameterName": "01_R_Base",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          28,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 801771,
+        "end": 801808,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 32,
+        "parameterName": "02_G_Base",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          33,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 801808,
+        "end": 801845,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 33,
+        "parameterName": "BlendMask",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          26,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 801845,
+        "end": 801882,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 34,
+        "parameterName": "01_R_MRA",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          38,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 801882,
+        "end": 801919,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 35,
+        "parameterName": "02_G_MRA",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          40,
+          -1,
+          0,
+          1
+        ]
+      }
+    ],
+    "next64hex": "00000000040000000100000000000000ffffffff020000000100000006000000ffffffff03000000020000000400000007000000ffffffff0300000003000000"
+  },
+  {
+    "material": "props-root",
+    "resource": 9,
+    "location": [
+      889969,
+      3,
+      5,
+      0
+    ],
+    "tableStart": 892925,
+    "tableEnd": 893262,
+    "count": 9,
+    "records": [
+      {
+        "start": 892929,
+        "end": 892966,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 38,
+        "parameterName": "DetailNormal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          45,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 892966,
+        "end": 893003,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 28,
+        "parameterName": "NormalMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          36,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 893003,
+        "end": 893040,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 29,
+        "parameterName": "01_R_Normal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          30,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 893040,
+        "end": 893077,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 30,
+        "parameterName": "02_G_Normal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          34,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 893077,
+        "end": 893114,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 31,
+        "parameterName": "01_R_Base",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          28,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 893114,
+        "end": 893151,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 32,
+        "parameterName": "02_G_Base",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          33,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 893151,
+        "end": 893188,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 33,
+        "parameterName": "BlendMask",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          26,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 893188,
+        "end": 893225,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 34,
+        "parameterName": "01_R_MRA",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          38,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 893225,
+        "end": 893262,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 35,
+        "parameterName": "02_G_MRA",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          40,
+          -1,
+          0,
+          1
+        ]
+      }
+    ],
+    "next64hex": "00000000040000000100000000000000ffffffff020000000100000006000000ffffffff03000000020000000400000007000000ffffffff0300000003000000"
+  },
+  {
+    "material": "light-root",
+    "resource": 0,
+    "location": [
+      0,
+      4,
+      1,
+      48
+    ],
+    "tableStart": 1955,
+    "tableEnd": 2033,
+    "count": 2,
+    "records": [
+      {
+        "start": 1959,
+        "end": 1996,
+        "typeIndex": 20,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 21,
+        "parameterName": "EMMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          25,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 1996,
+        "end": 2033,
+        "typeIndex": 20,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 22,
+        "parameterName": "BAMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          17,
+          -1,
+          0,
+          1
+        ]
+      }
+    ],
+    "next64hex": "00000000020000000100000000000000ffffffff0100000001000000ffffffff0000000000000000000000000000000000000000000002000200020200004b01"
+  },
+  {
+    "material": "light-root",
+    "resource": 1,
+    "location": [
+      97890,
+      4,
+      6,
+      48
+    ],
+    "tableStart": 99795,
+    "tableEnd": 99910,
+    "count": 3,
+    "records": [
+      {
+        "start": 99799,
+        "end": 99836,
+        "typeIndex": 20,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 23,
+        "parameterName": "NRMMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          18,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 99836,
+        "end": 99873,
+        "typeIndex": 20,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 21,
+        "parameterName": "EMMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          25,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 99873,
+        "end": 99910,
+        "typeIndex": 20,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 22,
+        "parameterName": "BAMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          17,
+          -1,
+          0,
+          1
+        ]
+      }
+    ],
+    "next64hex": "0000000002000000020000000000000002000000ffffffff0100000001000000ffffffff00000000000000000000000000000000000000000000030003000202"
+  },
+  {
+    "material": "light-root",
+    "resource": 2,
+    "location": [
+      196749,
+      3,
+      1,
+      0
+    ],
+    "tableStart": 198704,
+    "tableEnd": 198782,
+    "count": 2,
+    "records": [
+      {
+        "start": 198708,
+        "end": 198745,
+        "typeIndex": 20,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 21,
+        "parameterName": "EMMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          25,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 198745,
+        "end": 198782,
+        "typeIndex": 20,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 22,
+        "parameterName": "BAMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          17,
+          -1,
+          0,
+          1
+        ]
+      }
+    ],
+    "next64hex": "00000000020000000100000000000000ffffffff0100000001000000ffffffff0000000000000000000000000000000000000000000002000200020200004b01"
+  },
+  {
+    "material": "light-root",
+    "resource": 3,
+    "location": [
+      279952,
+      3,
+      6,
+      0
+    ],
+    "tableStart": 281857,
+    "tableEnd": 281972,
+    "count": 3,
+    "records": [
+      {
+        "start": 281861,
+        "end": 281898,
+        "typeIndex": 20,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 23,
+        "parameterName": "NRMMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          18,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 281898,
+        "end": 281935,
+        "typeIndex": 20,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 21,
+        "parameterName": "EMMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          25,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 281935,
+        "end": 281972,
+        "typeIndex": 20,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 22,
+        "parameterName": "BAMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          17,
+          -1,
+          0,
+          1
+        ]
+      }
+    ],
+    "next64hex": "0000000002000000020000000000000002000000ffffffff0100000001000000ffffffff00000000000000000000000000000000000000000000030003000202"
+  }
+]

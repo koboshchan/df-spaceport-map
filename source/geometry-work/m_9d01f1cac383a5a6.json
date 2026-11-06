@@ -1,0 +1,33 @@
+{
+  "id": "m_9d01f1cac383a5a6",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/SM_I_RoadFacility_Ground_D_08A.SM_I_RoadFacility_Ground_D_08A",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter_Ma1\\SM_I_RoadFacility_Ground_D_08A.glb",
+  "sourceSHA256": "76482ABC752E109FF45CF25E9D59DFEFA0D78B54CAA6F294C3E36D0DEA64F347",
+  "model": "models/df_v24/m_9d01f1cac383a5a6.vmdl",
+  "materials": {
+    "mat_5d69b518feac9244": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_I_RoadFacility_Ground_D_08E_HD.MI_I_RoadFacility_Ground_D_08E_HD",
+    "mat_8ccee3c6522a338e": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_I_RoadFacility_Ground_D_08D_HD.MI_I_RoadFacility_Ground_D_08D_HD",
+    "mat_7b9d26cf1474869f": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_I_RoadFacility_Ground_D_08B_HD.MI_I_RoadFacility_Ground_D_08B_HD",
+    "mat_17461a7c4c3e4ce9": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_I_RoadFacility_Ground_D_08A_HD.MI_I_RoadFacility_Ground_D_08A_HD",
+    "mat_c4c64a8f88aa08ae": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Concrete_Base_01_HD.MI_GEN_Concrete_Base_01_HD",
+    "mat_0f1517f3ed175b67": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_RoadCurb_01_A_HD.MI_RoadCurb_01_A_HD",
+    "mat_4a25bc28a50edc9e": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/00_Materials/HD/MI_I_RoadFacility_Ground_L_10_Ruin_09_HD.MI_I_RoadFacility_Ground_L_10_Ruin_09_HD",
+    "mat_81141676929f02f1": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Tide/00_Materials/HD/MI_H_Building_Tide_PrisonMain_14_Layer_01c_HD.MI_H_Building_Tide_PrisonMain_14_Layer_01c_HD"
+  },
+  "vertices": 44234,
+  "polygons": 40098,
+  "bounds": [
+    [
+      -123.8320083618164,
+      -425.67852783203125,
+      -912.181396484375
+    ],
+    [
+      2969.653564453125,
+      2083.53271484375,
+      123.87403869628906
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

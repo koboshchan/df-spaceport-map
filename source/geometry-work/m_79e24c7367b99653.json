@@ -1,0 +1,27 @@
+{
+  "id": "m_79e24c7367b99653",
+  "objectPath": "DeltaForce/Content/Models/Vehicles/Weapon/BOSS03_C601_Weapon/Appearance_Base/BOSS03_C601_Weapon2_Base.BOSS03_C601_Weapon2_Base",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Vehicles\\Weapon\\BOSS03_C601_Weapon\\Appearance_Base\\BOSS03_C601_Weapon2_Base.glb",
+  "sourceSHA256": "CF681FF27B9E6B75617EB778C7F8E8E2FE21FA379EB3626BB78DC5B814BE9F85",
+  "model": "models/df_v24/m_79e24c7367b99653.vmdl",
+  "materials": {
+    "mat_6abbbd9a0451e039": "DeltaForce/Content/Models/Vehicles/RCV_AI/Appearance_Base/Materials/M_HS_BOSS03_RCV.M_HS_BOSS03_RCV",
+    "mat_ca40428d7a5f7e05": "DeltaForce/Content/Models/Vehicles/RCV_AI/Appearance_Base/Materials/M_HS_BOSS03_RCV_Light.M_HS_BOSS03_RCV_Light"
+  },
+  "vertices": 2062,
+  "polygons": 1624,
+  "bounds": [
+    [
+      -7.987537384033203,
+      -10.484513282775879,
+      -2.2367422580718994
+    ],
+    [
+      4.659165382385254,
+      0.11806869506835938,
+      8.79683780670166
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

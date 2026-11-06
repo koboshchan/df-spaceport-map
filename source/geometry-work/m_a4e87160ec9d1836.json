@@ -1,0 +1,26 @@
+{
+  "id": "m_a4e87160ec9d1836",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/Lounge/SM_H_FutureTech_Kitchen_Bread_02.SM_H_FutureTech_Kitchen_Bread_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\Lounge\\SM_H_FutureTech_Kitchen_Bread_02.glb",
+  "sourceSHA256": "015998E2EDF79CD850E23CFE91A2E8EB88DCCF208CEE49CD895C4C27F400F877",
+  "model": "models/df_v24/m_a4e87160ec9d1836.vmdl",
+  "materials": {
+    "mat_f77a2c7f41b62443": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Kitchen_Bread_02_A_HD.MI_H_FutureTech_Kitchen_Bread_02_A_HD"
+  },
+  "vertices": 4765,
+  "polygons": 7888,
+  "bounds": [
+    [
+      -3.8466849327087402,
+      -4.095476150512695,
+      0.30733102560043335
+    ],
+    [
+      3.986431121826172,
+      4.186238765716553,
+      2.0339694023132324
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

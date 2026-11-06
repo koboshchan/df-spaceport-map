@@ -1,0 +1,30 @@
+{
+  "id": "m_58967b94b4d7f5dc",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_Dock_02a.SM_H_Building_FutureTech_Dock_02a",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_Dock_02a.glb",
+  "sourceSHA256": "DD91D7A572E0EFF75D1F76AD5B985F29F12118276ABB6A14EEEEBA98C3FD29E7",
+  "model": "models/df_v24/m_58967b94b4d7f5dc.vmdl",
+  "materials": {
+    "mat_389db5688a50652e": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_GEN_Grass_Base_01_HD.MI_GEN_Grass_Base_01_HD",
+    "mat_7e216fdcbb468202": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/00_Materials/HD/MI_H_Building_FutureTech_Stones_01_HD.MI_H_Building_FutureTech_Stones_01_HD",
+    "mat_ee48c2314b87b2ef": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Checkred_05_HD.MI_GEN_Marble_Checkred_05_HD",
+    "mat_150cb1b447239d8e": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Checkred_02B_HD.MI_GEN_Marble_Checkred_02B_HD",
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD"
+  },
+  "vertices": 1754,
+  "polygons": 1939,
+  "bounds": [
+    [
+      -603.0870361328125,
+      -192.29815673828125,
+      -11.761919021606445
+    ],
+    [
+      602.9254150390625,
+      194.0998077392578,
+      11.761919021606445
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

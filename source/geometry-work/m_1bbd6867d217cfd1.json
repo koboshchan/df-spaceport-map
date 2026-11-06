@@ -1,0 +1,26 @@
+{
+  "id": "m_1bbd6867d217cfd1",
+  "objectPath": "DeltaForce/Content/Effects/Common/Mesh/Glass/SM_Debris_Glass_02G_MB_Lod0.SM_Debris_Glass_02G_MB_Lod0",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Effects\\Common\\Mesh\\Glass\\SM_Debris_Glass_02G_MB_Lod0.glb",
+  "sourceSHA256": "97A2AEC0BC936FB24E3440D973697CD7968C213F5911DD4F3F56F746121A8CD5",
+  "model": "models/df_v24/m_1bbd6867d217cfd1.vmdl",
+  "materials": {
+    "mat_c49b50a963ffea20": "DeltaForce/Content/Effects_HD/Common_HD/MaterialInstance_HD/Glass_HD/MI_EFX_Glass_03_HD.MI_EFX_Glass_03_HD"
+  },
+  "vertices": 96,
+  "polygons": 60,
+  "bounds": [
+    [
+      -3.9331231117248535,
+      -2.0971386432647705,
+      -0.06597483903169632
+    ],
+    [
+      3.0378007888793945,
+      2.2888731956481934,
+      5.793571062895353e-07
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

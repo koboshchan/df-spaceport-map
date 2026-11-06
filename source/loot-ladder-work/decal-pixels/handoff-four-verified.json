@@ -1,0 +1,84 @@
+{
+  "count": 4,
+  "verifiedPNGSha": true,
+  "actualSourceVT": true,
+  "mip": 1,
+  "resolution": [
+    1024,
+    1024
+  ],
+  "advertised": [
+    2048,
+    2048
+  ],
+  "textures": [
+    {
+      "sourceObjectPath": "DeltaForce/Content/Environment/Decal/Dirt/00_Textures/HD/T_I_Dirt_Decal_13b_C_HD.0",
+      "package": "DeltaForce/Content/Environment/Decal/Dirt/00_Textures/HD/T_I_Dirt_Decal_13b_C_HD.uasset",
+      "archive": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Delta Force\\Game\\DeltaForce\\Content\\Paks\\pak-0-1-pakchunk80-WindowsClient.pak",
+      "output": "E:\\df-v24-build-20261106\\loot-ladder-work\\decal-pixels\\T_I_Dirt_Decal_13b_C_HD.png",
+      "Width": 1024,
+      "Height": 1024,
+      "pixelFormat": "PF_R8G8B8A8",
+      "virtualTexture": true,
+      "bytes": 795802,
+      "sha256": "FBCFA797CB43176E8E92078DB4F61BC564AB7312308461BD49D84A456D6739FF",
+      "actualPixels": true,
+      "mip": 1,
+      "highestAvailableCompleteMip": true,
+      "advertisedWidth": 2048,
+      "advertisedHeight": 2048
+    },
+    {
+      "sourceObjectPath": "DeltaForce/Content/Environment/Decal/Dirt/00_Textures/HD/T_I_Dirt_Decal_13b_MRC_HD.0",
+      "package": "DeltaForce/Content/Environment/Decal/Dirt/00_Textures/HD/T_I_Dirt_Decal_13b_MRC_HD.uasset",
+      "archive": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Delta Force\\Game\\DeltaForce\\Content\\Paks\\pak-0-1-pakchunk80-WindowsClient.pak",
+      "output": "E:\\df-v24-build-20261106\\loot-ladder-work\\decal-pixels\\T_I_Dirt_Decal_13b_MRC_HD.png",
+      "Width": 1024,
+      "Height": 1024,
+      "pixelFormat": "PF_R8G8B8A8",
+      "virtualTexture": true,
+      "bytes": 230942,
+      "sha256": "78025F58437A0235FA6D93AA7F8D255748DF82D2F279482E55E7E55E26B317F9",
+      "actualPixels": true,
+      "mip": 1,
+      "highestAvailableCompleteMip": true,
+      "advertisedWidth": 2048,
+      "advertisedHeight": 2048
+    },
+    {
+      "sourceObjectPath": "DeltaForce/Content/Environment/Structures/Morocco/Decal/00_Textures/HD/T_GEN_Burnt_Floor_01_A_CC_HD.0",
+      "package": "DeltaForce/Content/Environment/Structures/Morocco/Decal/00_Textures/HD/T_GEN_Burnt_Floor_01_A_CC_HD.uasset",
+      "archive": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Delta Force\\Game\\DeltaForce\\Content\\Paks\\pak-0-1-pakchunk80-WindowsClient.pak",
+      "output": "E:\\df-v24-build-20261106\\loot-ladder-work\\decal-pixels\\T_GEN_Burnt_Floor_01_A_CC_HD.png",
+      "Width": 1024,
+      "Height": 1024,
+      "pixelFormat": "PF_R8G8B8A8",
+      "virtualTexture": true,
+      "bytes": 955541,
+      "sha256": "878B4DCFA2AEFDFBC463A6F0E3561791378DF7FB77EC62770FAABEEB59D0E26A",
+      "actualPixels": true,
+      "mip": 1,
+      "highestAvailableCompleteMip": true,
+      "advertisedWidth": 2048,
+      "advertisedHeight": 2048
+    },
+    {
+      "sourceObjectPath": "DeltaForce/Content/Environment/Structures/Morocco/Decal/00_Textures/HD/T_GEN_Burnt_Floor_01_A_MRA_HD.0",
+      "package": "DeltaForce/Content/Environment/Structures/Morocco/Decal/00_Textures/HD/T_GEN_Burnt_Floor_01_A_MRA_HD.uasset",
+      "archive": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Delta Force\\Game\\DeltaForce\\Content\\Paks\\pak-0-1-pakchunk80-WindowsClient.pak",
+      "output": "E:\\df-v24-build-20261106\\loot-ladder-work\\decal-pixels\\T_GEN_Burnt_Floor_01_A_MRA_HD.png",
+      "Width": 1024,
+      "Height": 1024,
+      "pixelFormat": "PF_R8G8B8A8",
+      "virtualTexture": true,
+      "bytes": 515206,
+      "sha256": "E288F1F4396E6D183DE531C359E76376F01B594B0D41074B8A9B0D2CA7A0A2BE",
+      "actualPixels": true,
+      "mip": 1,
+      "highestAvailableCompleteMip": true,
+      "advertisedWidth": 2048,
+      "advertisedHeight": 2048
+    }
+  ]
+}

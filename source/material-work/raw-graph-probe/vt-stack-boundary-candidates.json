@@ -1,0 +1,694 @@
+[
+  {
+    "material": "props-root",
+    "resource": 0,
+    "start": 3143,
+    "end": 3207,
+    "firstIntUninterpreted": 0,
+    "count": 3,
+    "candidateVariableLengthStacks": [
+      {
+        "numLayers": 2,
+        "parameterIndices": [
+          0,
+          5
+        ],
+        "parameterNames": [
+          "NormalMap",
+          "BlendMask"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 3,
+        "parameterIndices": [
+          1,
+          3,
+          6
+        ],
+        "parameterNames": [
+          "01_R_Normal",
+          "01_R_Base",
+          "01_R_MRA"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 3,
+        "parameterIndices": [
+          2,
+          4,
+          7
+        ],
+        "parameterNames": [
+          "02_G_Normal",
+          "02_G_Base",
+          "02_G_MRA"
+        ],
+        "suffixIntUninterpreted": -1
+      }
+    ],
+    "scope": "exact boundary/name links proven; runtime physical register/CB layout not proven",
+    "following32hex": "00000000000000000000000001000000ac01d8d492a1f64c83c54f14621086fb"
+  },
+  {
+    "material": "props-root",
+    "resource": 1,
+    "start": 108306,
+    "end": 108370,
+    "firstIntUninterpreted": 0,
+    "count": 3,
+    "candidateVariableLengthStacks": [
+      {
+        "numLayers": 2,
+        "parameterIndices": [
+          0,
+          5
+        ],
+        "parameterNames": [
+          "NormalMap",
+          "BlendMask"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 3,
+        "parameterIndices": [
+          1,
+          3,
+          6
+        ],
+        "parameterNames": [
+          "01_R_Normal",
+          "01_R_Base",
+          "01_R_MRA"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 3,
+        "parameterIndices": [
+          2,
+          4,
+          7
+        ],
+        "parameterNames": [
+          "02_G_Normal",
+          "02_G_Base",
+          "02_G_MRA"
+        ],
+        "suffixIntUninterpreted": -1
+      }
+    ],
+    "scope": "exact boundary/name links proven; runtime physical register/CB layout not proven",
+    "following32hex": "00000000000000000000000001000000ac01d8d492a1f64c83c54f14621086fb"
+  },
+  {
+    "material": "props-root",
+    "resource": 2,
+    "start": 213469,
+    "end": 213533,
+    "firstIntUninterpreted": 0,
+    "count": 3,
+    "candidateVariableLengthStacks": [
+      {
+        "numLayers": 2,
+        "parameterIndices": [
+          0,
+          5
+        ],
+        "parameterNames": [
+          "NormalMap",
+          "BlendMask"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 3,
+        "parameterIndices": [
+          1,
+          3,
+          6
+        ],
+        "parameterNames": [
+          "01_R_Normal",
+          "01_R_Base",
+          "01_R_MRA"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 3,
+        "parameterIndices": [
+          2,
+          4,
+          7
+        ],
+        "parameterNames": [
+          "02_G_Normal",
+          "02_G_Base",
+          "02_G_MRA"
+        ],
+        "suffixIntUninterpreted": -1
+      }
+    ],
+    "scope": "exact boundary/name links proven; runtime physical register/CB layout not proven",
+    "following32hex": "00000000000000000000000001000000ac01d8d492a1f64c83c54f14621086fb"
+  },
+  {
+    "material": "props-root",
+    "resource": 3,
+    "start": 318782,
+    "end": 318858,
+    "firstIntUninterpreted": 0,
+    "count": 4,
+    "candidateVariableLengthStacks": [
+      {
+        "numLayers": 1,
+        "parameterIndices": [
+          0
+        ],
+        "parameterNames": [
+          "DetailNormal"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 2,
+        "parameterIndices": [
+          1,
+          6
+        ],
+        "parameterNames": [
+          "NormalMap",
+          "BlendMask"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 3,
+        "parameterIndices": [
+          2,
+          4,
+          7
+        ],
+        "parameterNames": [
+          "01_R_Normal",
+          "01_R_Base",
+          "01_R_MRA"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 3,
+        "parameterIndices": [
+          3,
+          5,
+          8
+        ],
+        "parameterNames": [
+          "02_G_Normal",
+          "02_G_Base",
+          "02_G_MRA"
+        ],
+        "suffixIntUninterpreted": -1
+      }
+    ],
+    "scope": "exact boundary/name links proven; runtime physical register/CB layout not proven",
+    "following32hex": "00000000000000000000000001000000ac01d8d492a1f64c83c54f14621086fb"
+  },
+  {
+    "material": "props-root",
+    "resource": 4,
+    "start": 426063,
+    "end": 426139,
+    "firstIntUninterpreted": 0,
+    "count": 4,
+    "candidateVariableLengthStacks": [
+      {
+        "numLayers": 1,
+        "parameterIndices": [
+          0
+        ],
+        "parameterNames": [
+          "DetailNormal"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 2,
+        "parameterIndices": [
+          1,
+          6
+        ],
+        "parameterNames": [
+          "NormalMap",
+          "BlendMask"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 3,
+        "parameterIndices": [
+          2,
+          4,
+          7
+        ],
+        "parameterNames": [
+          "01_R_Normal",
+          "01_R_Base",
+          "01_R_MRA"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 3,
+        "parameterIndices": [
+          3,
+          5,
+          8
+        ],
+        "parameterNames": [
+          "02_G_Normal",
+          "02_G_Base",
+          "02_G_MRA"
+        ],
+        "suffixIntUninterpreted": -1
+      }
+    ],
+    "scope": "exact boundary/name links proven; runtime physical register/CB layout not proven",
+    "following32hex": "00000000000000000000000001000000ac01d8d492a1f64c83c54f14621086fb"
+  },
+  {
+    "material": "props-root",
+    "resource": 5,
+    "start": 533194,
+    "end": 533258,
+    "firstIntUninterpreted": 0,
+    "count": 3,
+    "candidateVariableLengthStacks": [
+      {
+        "numLayers": 2,
+        "parameterIndices": [
+          0,
+          5
+        ],
+        "parameterNames": [
+          "NormalMap",
+          "BlendMask"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 3,
+        "parameterIndices": [
+          1,
+          3,
+          6
+        ],
+        "parameterNames": [
+          "01_R_Normal",
+          "01_R_Base",
+          "01_R_MRA"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 3,
+        "parameterIndices": [
+          2,
+          4,
+          7
+        ],
+        "parameterNames": [
+          "02_G_Normal",
+          "02_G_Base",
+          "02_G_MRA"
+        ],
+        "suffixIntUninterpreted": -1
+      }
+    ],
+    "scope": "exact boundary/name links proven; runtime physical register/CB layout not proven",
+    "following32hex": "00000000000000000000000001000000ac01d8d492a1f64c83c54f14621086fb"
+  },
+  {
+    "material": "props-root",
+    "resource": 6,
+    "start": 622719,
+    "end": 622783,
+    "firstIntUninterpreted": 0,
+    "count": 3,
+    "candidateVariableLengthStacks": [
+      {
+        "numLayers": 2,
+        "parameterIndices": [
+          0,
+          5
+        ],
+        "parameterNames": [
+          "NormalMap",
+          "BlendMask"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 3,
+        "parameterIndices": [
+          1,
+          3,
+          6
+        ],
+        "parameterNames": [
+          "01_R_Normal",
+          "01_R_Base",
+          "01_R_MRA"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 3,
+        "parameterIndices": [
+          2,
+          4,
+          7
+        ],
+        "parameterNames": [
+          "02_G_Normal",
+          "02_G_Base",
+          "02_G_MRA"
+        ],
+        "suffixIntUninterpreted": -1
+      }
+    ],
+    "scope": "exact boundary/name links proven; runtime physical register/CB layout not proven",
+    "following32hex": "00000000000000000000000001000000ac01d8d492a1f64c83c54f14621086fb"
+  },
+  {
+    "material": "props-root",
+    "resource": 7,
+    "start": 712244,
+    "end": 712308,
+    "firstIntUninterpreted": 0,
+    "count": 3,
+    "candidateVariableLengthStacks": [
+      {
+        "numLayers": 2,
+        "parameterIndices": [
+          0,
+          5
+        ],
+        "parameterNames": [
+          "NormalMap",
+          "BlendMask"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 3,
+        "parameterIndices": [
+          1,
+          3,
+          6
+        ],
+        "parameterNames": [
+          "01_R_Normal",
+          "01_R_Base",
+          "01_R_MRA"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 3,
+        "parameterIndices": [
+          2,
+          4,
+          7
+        ],
+        "parameterNames": [
+          "02_G_Normal",
+          "02_G_Base",
+          "02_G_MRA"
+        ],
+        "suffixIntUninterpreted": -1
+      }
+    ],
+    "scope": "exact boundary/name links proven; runtime physical register/CB layout not proven",
+    "following32hex": "00000000000000000000000001000000ac01d8d492a1f64c83c54f14621086fb"
+  },
+  {
+    "material": "props-root",
+    "resource": 8,
+    "start": 801919,
+    "end": 801995,
+    "firstIntUninterpreted": 0,
+    "count": 4,
+    "candidateVariableLengthStacks": [
+      {
+        "numLayers": 1,
+        "parameterIndices": [
+          0
+        ],
+        "parameterNames": [
+          "DetailNormal"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 2,
+        "parameterIndices": [
+          1,
+          6
+        ],
+        "parameterNames": [
+          "NormalMap",
+          "BlendMask"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 3,
+        "parameterIndices": [
+          2,
+          4,
+          7
+        ],
+        "parameterNames": [
+          "01_R_Normal",
+          "01_R_Base",
+          "01_R_MRA"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 3,
+        "parameterIndices": [
+          3,
+          5,
+          8
+        ],
+        "parameterNames": [
+          "02_G_Normal",
+          "02_G_Base",
+          "02_G_MRA"
+        ],
+        "suffixIntUninterpreted": -1
+      }
+    ],
+    "scope": "exact boundary/name links proven; runtime physical register/CB layout not proven",
+    "following32hex": "00000000000000000000000001000000ac01d8d492a1f64c83c54f14621086fb"
+  },
+  {
+    "material": "props-root",
+    "resource": 9,
+    "start": 893262,
+    "end": 893338,
+    "firstIntUninterpreted": 0,
+    "count": 4,
+    "candidateVariableLengthStacks": [
+      {
+        "numLayers": 1,
+        "parameterIndices": [
+          0
+        ],
+        "parameterNames": [
+          "DetailNormal"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 2,
+        "parameterIndices": [
+          1,
+          6
+        ],
+        "parameterNames": [
+          "NormalMap",
+          "BlendMask"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 3,
+        "parameterIndices": [
+          2,
+          4,
+          7
+        ],
+        "parameterNames": [
+          "01_R_Normal",
+          "01_R_Base",
+          "01_R_MRA"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 3,
+        "parameterIndices": [
+          3,
+          5,
+          8
+        ],
+        "parameterNames": [
+          "02_G_Normal",
+          "02_G_Base",
+          "02_G_MRA"
+        ],
+        "suffixIntUninterpreted": -1
+      }
+    ],
+    "scope": "exact boundary/name links proven; runtime physical register/CB layout not proven",
+    "following32hex": "00000000000000000000000001000000ac01d8d492a1f64c83c54f14621086fb"
+  },
+  {
+    "material": "light-root",
+    "resource": 0,
+    "start": 2033,
+    "end": 2065,
+    "firstIntUninterpreted": 0,
+    "count": 2,
+    "candidateVariableLengthStacks": [
+      {
+        "numLayers": 1,
+        "parameterIndices": [
+          0
+        ],
+        "parameterNames": [
+          "EMMap"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 1,
+        "parameterIndices": [
+          1
+        ],
+        "parameterNames": [
+          "BAMap"
+        ],
+        "suffixIntUninterpreted": -1
+      }
+    ],
+    "scope": "exact boundary/name links proven; runtime physical register/CB layout not proven",
+    "following32hex": "0000000000000000000000000000000000000000000002000200020200004b01"
+  },
+  {
+    "material": "light-root",
+    "resource": 1,
+    "start": 99910,
+    "end": 99946,
+    "firstIntUninterpreted": 0,
+    "count": 2,
+    "candidateVariableLengthStacks": [
+      {
+        "numLayers": 2,
+        "parameterIndices": [
+          0,
+          2
+        ],
+        "parameterNames": [
+          "NRMMap",
+          "BAMap"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 1,
+        "parameterIndices": [
+          1
+        ],
+        "parameterNames": [
+          "EMMap"
+        ],
+        "suffixIntUninterpreted": -1
+      }
+    ],
+    "scope": "exact boundary/name links proven; runtime physical register/CB layout not proven",
+    "following32hex": "0000000000000000000000000000000000000000000003000300020200004b01"
+  },
+  {
+    "material": "light-root",
+    "resource": 2,
+    "start": 198782,
+    "end": 198814,
+    "firstIntUninterpreted": 0,
+    "count": 2,
+    "candidateVariableLengthStacks": [
+      {
+        "numLayers": 1,
+        "parameterIndices": [
+          0
+        ],
+        "parameterNames": [
+          "EMMap"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 1,
+        "parameterIndices": [
+          1
+        ],
+        "parameterNames": [
+          "BAMap"
+        ],
+        "suffixIntUninterpreted": -1
+      }
+    ],
+    "scope": "exact boundary/name links proven; runtime physical register/CB layout not proven",
+    "following32hex": "0000000000000000000000000000000000000000000002000200020200004b01"
+  },
+  {
+    "material": "light-root",
+    "resource": 3,
+    "start": 281972,
+    "end": 282008,
+    "firstIntUninterpreted": 0,
+    "count": 2,
+    "candidateVariableLengthStacks": [
+      {
+        "numLayers": 2,
+        "parameterIndices": [
+          0,
+          2
+        ],
+        "parameterNames": [
+          "NRMMap",
+          "BAMap"
+        ],
+        "suffixIntUninterpreted": -1
+      },
+      {
+        "numLayers": 1,
+        "parameterIndices": [
+          1
+        ],
+        "parameterNames": [
+          "EMMap"
+        ],
+        "suffixIntUninterpreted": -1
+      }
+    ],
+    "scope": "exact boundary/name links proven; runtime physical register/CB layout not proven",
+    "following32hex": "0000000000000000000000000000000000000000000003000300020200004b01"
+  }
+]

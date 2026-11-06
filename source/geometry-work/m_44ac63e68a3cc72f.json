@@ -1,0 +1,26 @@
+{
+  "id": "m_44ac63e68a3cc72f",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Grass/SM_GR_GenDryGrass_80cm_HD.SM_GR_GenDryGrass_80cm_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Grass\\SM_GR_GenDryGrass_80cm_HD.glb",
+  "sourceSHA256": "F51AB211A8866539677A3A2A5FB7EFF686BE007EACDAB031484CE5F1E03FABCF",
+  "model": "models/df_v24/m_44ac63e68a3cc72f.vmdl",
+  "materials": {
+    "mat_d349e76beecfabdc": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Grass/00_Materials/MI_GR_GenDryGrass_80cm_Leaf_HD.MI_GR_GenDryGrass_80cm_Leaf_HD"
+  },
+  "vertices": 675,
+  "polygons": 614,
+  "bounds": [
+    [
+      -65.72062683105469,
+      -55.7269172668457,
+      -4.392129421234131
+    ],
+    [
+      43.882164001464844,
+      50.3807373046875,
+      31.848161697387695
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

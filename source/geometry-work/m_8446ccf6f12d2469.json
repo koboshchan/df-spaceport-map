@@ -1,0 +1,29 @@
+{
+  "id": "m_8446ccf6f12d2469",
+  "objectPath": "DeltaForce/Content/Models/Vehicles/BOSS07_ADS/BOSS07_ADS_Destructed.BOSS07_ADS_Destructed",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Vehicles\\BOSS07_ADS\\BOSS07_ADS_Destructed.glb",
+  "sourceSHA256": "31510A78C00CEBF33A114A883A7CB1CF49D28D5A89EA990BB91B3153D2B46E29",
+  "model": "models/df_v24/m_8446ccf6f12d2469.vmdl",
+  "materials": {
+    "mat_36033bdaebc23a24": "DeltaForce/Content/Models/Vehicles/BOSS07_ADS/Materials/MI_BOSS07_ADS_Destructed.MI_BOSS07_ADS_Destructed",
+    "mat_30c148639423ccf1": "DeltaForce/Content/Models/Vehicles/RCV_AI/Appearance_Base/Materials/M_HS_BOSS03_RCV_Destructed.M_HS_BOSS03_RCV_Destructed",
+    "mat_4eb37bfdd877c053": "DeltaForce/Content/Models/Vehicles/RCV_AI/Appearance_Base/Materials/M_HS_BOSS03_RCV_Light_Destructed.M_HS_BOSS03_RCV_Light_Destructed",
+    "mat_b5d5d0c501e4e1fc": "DeltaForce/Content/Models/Vehicles/RCV_AI/Appearance_Base/Materials/M_HS_BOSS03_RCV_Wheels_Destructed.M_HS_BOSS03_RCV_Wheels_Destructed"
+  },
+  "vertices": 31464,
+  "polygons": 27828,
+  "bounds": [
+    [
+      -50.90198516845703,
+      -29.443126678466797,
+      0.014628982171416283
+    ],
+    [
+      38.872222900390625,
+      31.097070693969727,
+      52.46165466308594
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

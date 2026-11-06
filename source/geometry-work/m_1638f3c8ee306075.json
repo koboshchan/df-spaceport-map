@@ -1,0 +1,27 @@
+{
+  "id": "m_1638f3c8ee306075",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_SentryBox_02_Decal.SM_H_Building_FutureTech_SentryBox_02_Decal",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_SentryBox_02_Decal.glb",
+  "sourceSHA256": "A5231C6F886EB5A27285E516C87F074D0701063B56CF6BFEA60E09EF3731460C",
+  "model": "models/df_v24/m_1638f3c8ee306075.vmdl",
+  "materials": {
+    "mat_3523ce614b1026a6": "DeltaForce/Content/Environment/Structures/Decal/00_Materials/MI_GEN_Decal_ExterWall_07.MI_GEN_Decal_ExterWall_07",
+    "mat_a7f51d1a48b5a844": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Industrial/00_Materials/MI_H_Building_Industrial_Posun_03.MI_H_Building_Industrial_Posun_03"
+  },
+  "vertices": 695,
+  "polygons": 447,
+  "bounds": [
+    [
+      -312.1166687011719,
+      -21.68961524963379,
+      -17.744935989379883
+    ],
+    [
+      186.1850128173828,
+      326.1706237792969,
+      235.38116455078125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

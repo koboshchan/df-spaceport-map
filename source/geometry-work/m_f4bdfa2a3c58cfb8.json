@@ -1,0 +1,30 @@
+{
+  "id": "m_f4bdfa2a3c58cfb8",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Transport/Branding/SM_M_Transport_Branding_StreetPlate_02.SM_M_Transport_Branding_StreetPlate_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Transport\\Branding\\SM_M_Transport_Branding_StreetPlate_02.glb",
+  "sourceSHA256": "2D8435AD3C7CA3AD07107BC45B8E60C499C140BD2C2C5D1639CE42173552CCBC",
+  "model": "models/df_v24/m_f4bdfa2a3c58cfb8.vmdl",
+  "materials": {
+    "mat_2a3a0a2bdfb2272d": "DeltaForce/Content/Environment/Structures/Morocco/Building/Religious/00_Materials/HD/MI_M_Building_Religious_Church_01_Decal_13b_HD.MI_M_Building_Religious_Church_01_Decal_13b_HD",
+    "mat_eacab4ef760bc341": "DeltaForce/Content/Environment/Structures/Morocco/Building/Military/00_Materials/HD/MI_M_Military_PlayerBase_SignalTower_01_e_HD.MI_M_Military_PlayerBase_SignalTower_01_e_HD",
+    "mat_da6f28d44374b53c": "DeltaForce/Content/Environment/Structures/Morocco/Building/Religious/00_Materials/HD/MI_M_Building_Religious_Church_01_Decal_15_HD.MI_M_Building_Religious_Church_01_Decal_15_HD",
+    "mat_5f4ae8f031efca67": "DeltaForce/Content/Environment/Props/Morocco/Transport/00_Materials/HD/MI_M_Transport_Branding_StreetPlate_01c_HD.MI_M_Transport_Branding_StreetPlate_01c_HD",
+    "mat_ecc540ededffca2c": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/00_Materials/HD/MI_H_Industrial_SteelShelf_01_HD.MI_H_Industrial_SteelShelf_01_HD"
+  },
+  "vertices": 4776,
+  "polygons": 4303,
+  "bounds": [
+    [
+      -15.863840103149414,
+      -15.132953643798828,
+      -0.010947875678539276
+    ],
+    [
+      175.10586547851562,
+      14.413573265075684,
+      313.03155517578125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

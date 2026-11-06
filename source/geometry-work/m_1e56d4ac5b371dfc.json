@@ -1,0 +1,26 @@
+{
+  "id": "m_1e56d4ac5b371dfc",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Gibraltar/Commercial/SM_H_Gibraltar_Props_Commercial_Pier_01.SM_H_Gibraltar_Props_Commercial_Pier_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Gibraltar\\Commercial\\SM_H_Gibraltar_Props_Commercial_Pier_01.glb",
+  "sourceSHA256": "89206A3581772A3BF1BEE6A3923F4A68D3A27DFF32CA414199E4D919348BD3F5",
+  "model": "models/df_v24/m_1e56d4ac5b371dfc.vmdl",
+  "materials": {
+    "mat_1eab59a5ad81fdfd": "DeltaForce/Content/Battlefield/Destructible/Structures/Gibraltar/00_Materials/HD/MI_H_Gibraltar_Props_Commercial_Pier_01_SK_HD.MI_H_Gibraltar_Props_Commercial_Pier_01_SK_HD"
+  },
+  "vertices": 1326,
+  "polygons": 2358,
+  "bounds": [
+    [
+      -15.584606170654297,
+      -15.584606170654297,
+      -0.5249071717262268
+    ],
+    [
+      15.584606170654297,
+      15.584606170654297,
+      33.49022674560547
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

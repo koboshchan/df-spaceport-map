@@ -1,0 +1,32 @@
+{
+  "id": "m_79982a0249d4ecd0",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/SM_I_RoadFacility_Ground_H_01.SM_I_RoadFacility_Ground_H_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter\\SM_I_RoadFacility_Ground_H_01.glb",
+  "sourceSHA256": "C80F878A86AF9566D7608F004A74A3C663436EC210556D5AF65EFBE16194477E",
+  "model": "models/df_v24/m_79982a0249d4ecd0.vmdl",
+  "materials": {
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD",
+    "mat_030f6553cc805922": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Stones_Base_01_HD.MI_GEN_Stones_Base_01_HD",
+    "mat_9ae0cbbe320a2e30": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Checkred_02_HD.MI_GEN_Marble_Checkred_02_HD",
+    "mat_9ce06f3eca0efe6c": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_H_02A_HD.MI_I_RoadFacility_Ground_H_02A_HD",
+    "mat_ae3d335c4d22dcc5": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_I_RoadFacility_Ground_H_01_01A_HD.MI_I_RoadFacility_Ground_H_01_01A_HD",
+    "mat_f5f6a4bc7cf71b80": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Concrete_Checkred_02_HD.MI_GEN_Concrete_Checkred_02_HD",
+    "mat_a3e35d5d925fdd27": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_HTerrace_01_01A_HD.MI_H_Building_FutureTech_HTerrace_01_01A_HD"
+  },
+  "vertices": 19388,
+  "polygons": 21369,
+  "bounds": [
+    [
+      -46.07930374145508,
+      53.94071960449219,
+      -45.71890640258789
+    ],
+    [
+      2065.739501953125,
+      2211.7724609375,
+      36.35183334350586
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

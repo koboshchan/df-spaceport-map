@@ -1,0 +1,26 @@
+{
+  "id": "m_4953b90a8cbf5d93",
+  "objectPath": "DeltaForce/Content/Models/Vehicles/Blackhawk1993_AI/Appearance_Base/Blackhawk1993_Destructed.Blackhawk1993_Destructed",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Vehicles\\Blackhawk1993_AI\\Appearance_Base\\Blackhawk1993_Destructed.glb",
+  "sourceSHA256": "FFD404CCCCCC18E89ED3A3B4B1D43704FE33B9E1B5172BDBBF61350AD1F37409",
+  "model": "models/df_v24/m_4953b90a8cbf5d93.vmdl",
+  "materials": {
+    "mat_87fa7d325eb743c4": "Engine/Content/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+  },
+  "vertices": 4,
+  "polygons": 2,
+  "bounds": [
+    [
+      -0.021100733429193497,
+      -0.017146922647953033,
+      -18.095294952392578
+    ],
+    [
+      0.021100733429193497,
+      0.017141764983534813,
+      -18.095294952392578
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

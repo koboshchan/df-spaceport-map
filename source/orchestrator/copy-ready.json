@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "finishedUTC": "2026-11-06T15:49:34.128517+00:00",
+  "directories": [
+    {
+      "directory": "content",
+      "files": 19292,
+      "verified": true
+    },
+    {
+      "directory": "geometry-work",
+      "files": 5857,
+      "verified": true
+    },
+    {
+      "directory": "component-work",
+      "files": 45,
+      "verified": true
+    },
+    {
+      "directory": "loot-ladder-work",
+      "files": 1083,
+      "verified": true
+    }
+  ],
+  "spawn32sha256": "2c47aaf9337f89e2ad85ae5a6042d148d785eee9b9f59f1f902d177c1906d54c",
+  "spawn32": "E:\\df-v25-build-20261106\\orchestrator\\spawn32-validated-source.json",
+  "referenceScriptsNOTExecutableUntilRebased": true,
+  "v24Untouched": true,
+  "compiledGameNotCopied": true
+}

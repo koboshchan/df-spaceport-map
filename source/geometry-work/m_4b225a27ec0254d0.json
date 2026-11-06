@@ -1,0 +1,26 @@
+{
+  "id": "m_4b225a27ec0254d0",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/Lighting/SM_H_FutureTech_Table_Lamp_01.SM_H_FutureTech_Table_Lamp_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\Lighting\\SM_H_FutureTech_Table_Lamp_01.glb",
+  "sourceSHA256": "F88DAE44014F10308F7FF68FF174A0D77ABCAF544C133A66C4ACE43F0549DE25",
+  "model": "models/df_v24/m_4b225a27ec0254d0.vmdl",
+  "materials": {
+    "mat_b0df8dcc25d85ee4": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Table_Lamp_01_HD.MI_H_FutureTech_Table_Lamp_01_HD"
+  },
+  "vertices": 1644,
+  "polygons": 2086,
+  "bounds": [
+    [
+      -12.052224159240723,
+      -2.773458242416382,
+      -0.011645889841020107
+    ],
+    [
+      9.811487197875977,
+      2.773458242416382,
+      17.66948127746582
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

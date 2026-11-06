@@ -1,0 +1,26 @@
+{
+  "id": "m_a92463c808742484",
+  "objectPath": "DeltaForce/Content/Effects/Common/Mesh/Paper/SM_EFX_Paper_06.SM_EFX_Paper_06",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Effects\\Common\\Mesh\\Paper\\SM_EFX_Paper_06.glb",
+  "sourceSHA256": "B5E511D9AC0F9F29C494E7563FFE471E83AD1E613EF34CD41F25E17068373D89",
+  "model": "models/df_v24/m_a92463c808742484.vmdl",
+  "materials": {
+    "mat_87fa7d325eb743c4": "Engine/Content/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+  },
+  "vertices": 49,
+  "polygons": 72,
+  "bounds": [
+    [
+      -1.7999999523162842,
+      -1.7999999523162842,
+      -7.288487911224365
+    ],
+    [
+      1.799999713897705,
+      1.799999713897705,
+      -5.627959728240967
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

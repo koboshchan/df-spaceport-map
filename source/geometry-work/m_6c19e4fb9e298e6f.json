@@ -1,0 +1,27 @@
+{
+  "id": "m_6c19e4fb9e298e6f",
+  "objectPath": "DeltaForce/Content/Models/Props/Med/props_collect_Med_1313/props_collect_Med_1313_LAY.props_collect_Med_1313_LAY",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Props\\Med\\props_collect_Med_1313\\props_collect_Med_1313_LAY.glb",
+  "sourceSHA256": "8776F624E69E72D7B510A8DA816D4A304D14F7DF0E291BD3848C6901D9623028",
+  "model": "models/df_v24/m_6c19e4fb9e298e6f.vmdl",
+  "materials": {
+    "mat_49b809f89a3e779b": "DeltaForce/Content/Models/Props/Med/props_collect_Med_1313/Materials/props_collect_Med_1313.props_collect_Med_1313",
+    "mat_e13f32ab0fcf67d7": "DeltaForce/Content/Models/Props/Med/props_Med_654/Materials/props_Med_654_glass.props_Med_654_glass"
+  },
+  "vertices": 1558,
+  "polygons": 1306,
+  "bounds": [
+    [
+      -0.3325673043727875,
+      -2.363377332687378,
+      0.04443744197487831
+    ],
+    [
+      0.3325674533843994,
+      2.3557281494140625,
+      0.709572434425354
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

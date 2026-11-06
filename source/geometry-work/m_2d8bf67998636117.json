@@ -1,0 +1,28 @@
+{
+  "id": "m_2d8bf67998636117",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_PipeHouse_01_InterWall_01B.SM_H_Building_FutureTech_PipeHouse_01_InterWall_01B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_PipeHouse_01_InterWall_01B.glb",
+  "sourceSHA256": "BC82F5C29F4245872BB2BE7B3B24D10F8299899CA510A8D4B374DB823C360C92",
+  "model": "models/df_v24/m_2d8bf67998636117.vmdl",
+  "materials": {
+    "mat_20fabdfebe348075": "DeltaForce/Content/Environment/Structures/HAAVK/Pipeline/00_Materials/HD/MI_H_PipeLine_HD.MI_H_PipeLine_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD"
+  },
+  "vertices": 18634,
+  "polygons": 13516,
+  "bounds": [
+    [
+      42.206573486328125,
+      -2152.108154296875,
+      -364.09814453125
+    ],
+    [
+      643.1517333984375,
+      -25.762222290039062,
+      235.069091796875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

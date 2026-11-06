@@ -1,0 +1,22 @@
+{
+  "success": true,
+  "candidate": "E:\\df-v25-build-20261106\\orchestrator\\df_spaceport_v25-parent-candidate.vmap",
+  "SHA256": "5a6369c24cd721497f8ba26c0242995d9c87a7c73780d6faa8a62a877a54c92b",
+  "counts": {
+    "info_spawngroup_landmark": 1,
+    "info_spawngroup_load_unload": 6,
+    "logic_auto": 1,
+    "light_environment": 1,
+    "env_sky": 1,
+    "info_player_terrorist": 16,
+    "info_player_counterterrorist": 16
+  },
+  "spawnSnapshotSHA256": "2c47aaf9337f89e2ad85ae5a6042d148d785eee9b9f59f1f902d177c1906d54c",
+  "minXY": 64.0,
+  "exactPositions": true,
+  "childNamesRebased": true,
+  "sourceOnlyNotCompiled": true,
+  "skySemanticMerge": true,
+  "childVMAPsNotYetRebased": true,
+  "bakeUnverified": true
+}

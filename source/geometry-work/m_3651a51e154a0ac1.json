@@ -1,0 +1,26 @@
+{
+  "id": "m_3651a51e154a0ac1",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Commercial/Bar/SM_M_Commercial_Kitchen_Bottle_01_c.SM_M_Commercial_Kitchen_Bottle_01_c",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Commercial\\Bar\\SM_M_Commercial_Kitchen_Bottle_01_c.glb",
+  "sourceSHA256": "6B6E3AA05E7DD313E98EA6F481E86A3D295E41B8B8985946801E9D6E0CC99AB7",
+  "model": "models/df_v24/m_3651a51e154a0ac1.vmdl",
+  "materials": {
+    "mat_b523acf179061dda": "DeltaForce/Content/Environment/Props/Morocco/Commercial/00_Materials/HD/MI_M_Commercial_Kitchen_Bottle_01_HD.MI_M_Commercial_Kitchen_Bottle_01_HD"
+  },
+  "vertices": 306,
+  "polygons": 380,
+  "bounds": [
+    [
+      -2.621826171875,
+      -2.6218249797821045,
+      3.6209819143095956e-08
+    ],
+    [
+      2.621826171875,
+      2.6218268871307373,
+      12.279913902282715
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

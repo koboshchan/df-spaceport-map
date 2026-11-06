@@ -1,0 +1,26 @@
+{
+  "id": "m_20ac8501ef51fda5",
+  "objectPath": "DeltaForce/Content/Models/Vehicles/M_HS_BOSS03_C601/Appearance_Base/M_HS_BOSS03_C601_Light.M_HS_BOSS03_C601_Light",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Vehicles\\M_HS_BOSS03_C601\\Appearance_Base\\M_HS_BOSS03_C601_Light.glb",
+  "sourceSHA256": "0EE227873CE0FCE036AA4E3236E09F276A05D7CE65483A6B96E05498A667F96A",
+  "model": "models/df_v24/m_20ac8501ef51fda5.vmdl",
+  "materials": {
+    "mat_6abbbd9a0451e039": "DeltaForce/Content/Models/Vehicles/RCV_AI/Appearance_Base/Materials/M_HS_BOSS03_RCV.M_HS_BOSS03_RCV"
+  },
+  "vertices": 232,
+  "polygons": 120,
+  "bounds": [
+    [
+      -0.6840252876281738,
+      -20.614078521728516,
+      0.5325265526771545
+    ],
+    [
+      0.6515111923217773,
+      20.614078521728516,
+      9.159274101257324
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

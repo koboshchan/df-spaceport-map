@@ -1,0 +1,26 @@
+{
+  "id": "m_2a36b4e6f1278cca",
+  "objectPath": "DeltaForce/Content/Environment/Props/Commercial/Resort/SM_Commercial_Resort_DeckChair_01.SM_Commercial_Resort_DeckChair_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Commercial\\Resort\\SM_Commercial_Resort_DeckChair_01.glb",
+  "sourceSHA256": "529AA64D7838E00071493591C9CA22205907776194FAC984D1A36626B643F6E6",
+  "model": "models/df_v24/m_2a36b4e6f1278cca.vmdl",
+  "materials": {
+    "mat_b0c41c34e32cf8d4": "DeltaForce/Content/Environment/Props/Commercial/Resort/00_Materials/HD/MI_Commercial_Resort_DeckChair_01_HD.MI_Commercial_Resort_DeckChair_01_HD"
+  },
+  "vertices": 3734,
+  "polygons": 4624,
+  "bounds": [
+    [
+      -19.466968536376953,
+      -34.05198287963867,
+      -4.1198727558366954e-06
+    ],
+    [
+      12.682268142700195,
+      28.31439208984375,
+      26.66824722290039
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

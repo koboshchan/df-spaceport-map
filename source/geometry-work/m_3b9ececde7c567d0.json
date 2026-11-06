@@ -1,0 +1,27 @@
+{
+  "id": "m_3b9ececde7c567d0",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_Dock_Pipe_04.SM_H_Building_FutureTech_Dock_Pipe_04",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_Dock_Pipe_04.glb",
+  "sourceSHA256": "76EC21EA78518AFCC484D530B09D6BDD0263FEE422CC12F9B3927AD8F88E2F0B",
+  "model": "models/df_v24/m_3b9ececde7c567d0.vmdl",
+  "materials": {
+    "mat_cc3fdc6503104420": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Continuous_Metal_09_Black_A_HD.MI_H_FutureTech_Continuous_Metal_09_Black_A_HD",
+    "mat_d126adf14b0099e9": "DeltaForce/Content/Environment/Structures/HAAVK/Pipeline/00_Materials/HD/MI_H_PipeLine_01_HD.MI_H_PipeLine_01_HD"
+  },
+  "vertices": 2436,
+  "polygons": 2368,
+  "bounds": [
+    [
+      -25.130739212036133,
+      -140.4732666015625,
+      -968.1846923828125
+    ],
+    [
+      35.3348388671875,
+      182.47238159179688,
+      -26.533052444458008
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

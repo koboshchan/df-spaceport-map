@@ -1,0 +1,29 @@
+{
+  "id": "m_08399c695198594b",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_Building_FutureTech_H_01/SM_H_Building_FutureTech_HOrange_01_InterWall_02B.SM_H_Building_FutureTech_HOrange_01_InterWall_02B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_Building_FutureTech_H_01\\SM_H_Building_FutureTech_HOrange_01_InterWall_02B.glb",
+  "sourceSHA256": "5B93C1BCA7EDE7119A9889847A4EF0D6F11F4F577802C5D3A6EBB8F66099E365",
+  "model": "models/df_v24/m_08399c695198594b.vmdl",
+  "materials": {
+    "mat_20fabdfebe348075": "DeltaForce/Content/Environment/Structures/HAAVK/Pipeline/00_Materials/HD/MI_H_PipeLine_HD.MI_H_PipeLine_HD",
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD",
+    "mat_d15cf9faec972d37": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_04_HD.MI_GEN_Metal_Painting_04_HD",
+    "mat_c582498c25aa7d13": "DeltaForce/Content/Maps/Iceland/Asset/Structures/00_Materials/HD/MI_H_IceLand_Building_TrimMetal_C_HD.MI_H_IceLand_Building_TrimMetal_C_HD"
+  },
+  "vertices": 19764,
+  "polygons": 16172,
+  "bounds": [
+    [
+      -2764.358642578125,
+      -2015.9129638671875,
+      181.24063110351562
+    ],
+    [
+      -1485.78125,
+      -541.96484375,
+      446.1405334472656
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

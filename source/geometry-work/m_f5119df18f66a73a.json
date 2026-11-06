@@ -1,0 +1,26 @@
+{
+  "id": "m_f5119df18f66a73a",
+  "objectPath": "DeltaForce/Content/PCG/SpaceCenter_Long3/Road/Meshes_HD/SpaceCenter_Long3_GenerateRoad_JTDecal_Asphalt_BM_Line_Mesh_x113_y62_17916_HD.SpaceCenter_Long3_GenerateRoad_JTDecal_Asphalt_BM_Line_Mesh_x113_y62_17916_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\PCG\\SpaceCenter_Long3\\Road\\Meshes_HD\\SpaceCenter_Long3_GenerateRoad_JTDecal_Asphalt_BM_Line_Mesh_x113_y62_17916_HD.glb",
+  "sourceSHA256": "D393F327BDA9160F7A3322B71A98CD3B2D54A60D1AC4823804EE6D18840BD32C",
+  "model": "models/df_v24/m_f5119df18f66a73a.vmdl",
+  "materials": {
+    "mat_353c7720e840fd44": "DeltaForce/Content/Environment/Biome/Terrain_HD/Road_HD/00_Materials/MI_GEN_Decal_Roadline_Example_02_HD.MI_GEN_Decal_Roadline_Example_02_HD"
+  },
+  "vertices": 15,
+  "polygons": 7,
+  "bounds": [
+    [
+      -143.19000244140625,
+      -774.9224853515625,
+      -53.78273391723633
+    ],
+    [
+      143.19000244140625,
+      774.9449462890625,
+      53.7834358215332
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

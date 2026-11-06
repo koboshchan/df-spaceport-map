@@ -1,0 +1,26 @@
+{
+  "id": "m_9d971b68cd5dfcb6",
+  "objectPath": "DeltaForce/Content/Models/Weapons/MilitaryProps/AmmoBox/AmmoBox_3P.AmmoBox_3P",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Weapons\\MilitaryProps\\AmmoBox\\AmmoBox_3P.glb",
+  "sourceSHA256": "1622D1D3329F88468A83A2CE6C87692494F44FA6AE9D6D647CE79C60CFF2E1EE",
+  "model": "models/df_v24/m_9d971b68cd5dfcb6.vmdl",
+  "materials": {
+    "mat_79a0bf0e5f02ea5f": "DeltaForce/Content/Models/Weapons/MilitaryProps/AmmoBox/Materials/AmmoBox_001.AmmoBox_001"
+  },
+  "vertices": 565,
+  "polygons": 493,
+  "bounds": [
+    [
+      -3.652217388153076,
+      -5.203547477722168,
+      0.039631545543670654
+    ],
+    [
+      3.4701497554779053,
+      9.07569694519043,
+      5.7602057456970215
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

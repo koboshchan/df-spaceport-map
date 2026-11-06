@@ -1,0 +1,27 @@
+{
+  "id": "m_0f3515693ab7e6e8",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Fence/SM_H_Fence_Metal_1024x768_01B.SM_H_Fence_Metal_1024x768_01B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Fence\\SM_H_Fence_Metal_1024x768_01B.glb",
+  "sourceSHA256": "8CE2FE13F24DB85CDF31EC752DA1944B01AD59405E0FF511E620790932D2BA55",
+  "model": "models/df_v24/m_0f3515693ab7e6e8.vmdl",
+  "materials": {
+    "mat_c8fdc59a780b0491": "DeltaForce/Content/Environment/Structures/HAAVK/Fence/00_Materials/HD/MI_H_Fence_Metal_1024x768_01b_HD.MI_H_Fence_Metal_1024x768_01b_HD",
+    "mat_66e0a1d0d4f261af": "DeltaForce/Content/Environment/Structures/HAAVK/Fence/00_Materials/HD/MI_H_Fence_Metal_1024x768_01f_HD.MI_H_Fence_Metal_1024x768_01f_HD"
+  },
+  "vertices": 5653,
+  "polygons": 7948,
+  "bounds": [
+    [
+      -1.574066162109375,
+      -139.7962646484375,
+      -54.4183464050293
+    ],
+    [
+      278.0540771484375,
+      1.5591254234313965,
+      7.952178955078125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "m_c51a22fbcce9b1b8",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_Dormitory/SM_H_Building_FutureTech_Dormitory_01B.SM_H_Building_FutureTech_Dormitory_01B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_Dormitory\\SM_H_Building_FutureTech_Dormitory_01B.glb",
+  "sourceSHA256": "B51CEB5CE2C296CDFBDD530304B8B756D30A7556C8B0565BF2A5C10D64D232C7",
+  "model": "models/df_v24/m_c51a22fbcce9b1b8.vmdl",
+  "materials": {
+    "mat_3568c3d4868e875d": "DeltaForce/Content/Environment/Structures/Window/00_Materials/HD/MI_Window_Glass_02_HD.MI_Window_Glass_02_HD",
+    "mat_0f75d55591a49a4b": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/Room/SpaceCenter/MI_Window_FakeInterior_01_03_HD.MI_Window_FakeInterior_01_03_HD",
+    "mat_d25a1aaf7ed05866": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/Room/SpaceCenter/MI_Window_FakeInterior_01_04_HD.MI_Window_FakeInterior_01_04_HD",
+    "mat_15b879ac038504ed": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/Room/SpaceCenter/MI_Window_FakeInterior_01_HD.MI_Window_FakeInterior_01_HD",
+    "mat_8874af97711990ca": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/Room/SpaceCenter/MI_Window_FakeInterior_01_02_HD.MI_Window_FakeInterior_01_02_HD",
+    "mat_d3a90b423aab9267": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/Room/SpaceCenter/MI_Window_FakeInterior_01_01_HD.MI_Window_FakeInterior_01_01_HD",
+    "mat_3a7efa3aa6b5a1ea": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/Room/SpaceCenter/MI_Window_FakeInterior_02_01_HD.MI_Window_FakeInterior_02_01_HD",
+    "mat_c863f51a511c5843": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/Room/SpaceCenter/MI_Window_FakeInterior_02_02_HD.MI_Window_FakeInterior_02_02_HD",
+    "mat_204b32cf74c966eb": "DeltaForce/Content/MaterialLib/Materials_HD/Scene/Room/SpaceCenter/MI_Window_FakeInterior_02_HD.MI_Window_FakeInterior_02_HD"
+  },
+  "vertices": 3786,
+  "polygons": 2996,
+  "bounds": [
+    [
+      -540.7799072265625,
+      -668.458984375,
+      11.527612686157227
+    ],
+    [
+      47.38433074951172,
+      17.71319007873535,
+      1009.7764892578125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

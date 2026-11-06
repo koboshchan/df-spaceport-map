@@ -1,0 +1,28 @@
+{
+  "id": "m_a49177023612cbfb",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_Dock_02_decal.SM_H_Building_FutureTech_Dock_02_decal",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_Dock_02_decal.glb",
+  "sourceSHA256": "FFAB103D7633B711D654FCAA6C74598AF98477C080401149CC9B66CCECBA9A2E",
+  "model": "models/df_v24/m_a49177023612cbfb.vmdl",
+  "materials": {
+    "mat_618dce10771d7cb5": "DeltaForce/Content/Environment/Decal/Connect/00_Materials/HD/MI_I_Connect_Decal_04_HD.MI_I_Connect_Decal_04_HD",
+    "mat_482069f5db613f8e": "DeltaForce/Content/Environment/Decal/Connect/00_Materials/MI_I_Connect_Decal_01_HD.MI_I_Connect_Decal_01_HD",
+    "mat_8f7e2c00c0770c58": "DeltaForce/Content/Environment/Structures/Morocco/Decal/00_Materials/MI_GEN_Moss_Water_01_HD.MI_GEN_Moss_Water_01_HD"
+  },
+  "vertices": 652,
+  "polygons": 394,
+  "bounds": [
+    [
+      -3181.197509765625,
+      -2366.520751953125,
+      -394.3085632324219
+    ],
+    [
+      61.8486328125,
+      -29.21870994567871,
+      -126.053955078125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

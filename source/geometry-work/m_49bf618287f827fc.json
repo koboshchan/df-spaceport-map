@@ -1,0 +1,26 @@
+{
+  "id": "m_49bf618287f827fc",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Commercial/Furniture/SM_M_Commercial_Furniture_SafeBox_06.SM_M_Commercial_Furniture_SafeBox_06",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Commercial\\Furniture\\SM_M_Commercial_Furniture_SafeBox_06.glb",
+  "sourceSHA256": "5429A37931A0A21F9118D345F52DA4DF96C79FCAE2119639C6BE84D7D6133E3A",
+  "model": "models/df_v24/m_49bf618287f827fc.vmdl",
+  "materials": {
+    "mat_603e8ffa9c223297": "DeltaForce/Content/Environment/Props/Morocco/Commercial/00_Materials/HD/MI_M_Commercial_Furniture_SafeBox_01_HD.MI_M_Commercial_Furniture_SafeBox_01_HD"
+  },
+  "vertices": 112,
+  "polygons": 84,
+  "bounds": [
+    [
+      -9.539900779724121,
+      -4.435461521148682,
+      -2.355144404896244e-16
+    ],
+    [
+      9.539900779724121,
+      4.201891899108887,
+      6.464330673217773
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "m_0d6f089e04c081ab",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/SM_H_Government_Office_Chair_01.SM_H_Government_Office_Chair_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Government\\Office\\SM_H_Government_Office_Chair_01.glb",
+  "sourceSHA256": "89CBD7384CD36607A8CA9F28BCA7C6864DCFFC175EFBA0AEFDAF30F6B5E1E5DC",
+  "model": "models/df_v24/m_0d6f089e04c081ab.vmdl",
+  "materials": {
+    "mat_b7f55cf4a850ed2b": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/00_Materials/HD/MI_H_Government_Office_Chair_01_HD.MI_H_Government_Office_Chair_01_HD"
+  },
+  "vertices": 2170,
+  "polygons": 2455,
+  "bounds": [
+    [
+      -14.57037353515625,
+      -8.980960845947266,
+      -0.02228575013577938
+    ],
+    [
+      14.56937313079834,
+      11.077020645141602,
+      46.38343048095703
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

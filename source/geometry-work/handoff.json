@@ -1,0 +1,31 @@
+{
+  "staticModels": 4703,
+  "splineModels": 11,
+  "staticCoverage": {
+    "selectedRows": 55027,
+    "missingRows": 0,
+    "missing": [],
+    "generatedModels": 4703
+  },
+  "staticFilesRoot": "E:\\df-v24-build-20261106\\content\\kat\\models\\df_v24",
+  "modelsManifest": "E:\\df-v24-build-20261106\\geometry-work\\models.jsonl",
+  "splineManifest": "E:\\df-v24-build-20261106\\geometry-work\\spline-models.json",
+  "staticExit": {
+    "pid": 134176,
+    "exit": 0,
+    "end": 1793961572.689437
+  },
+  "splineExit": {
+    "pid": 141416,
+    "exit": 0,
+    "end": 1793961622.9831688
+  },
+  "nativePilotOwnedByExecutionOwner": "E:\\df-v24-build-20261106\\compile-work\\pilot-result.json",
+  "collisionPartitionHelper": "E:\\df-v24-build-20261106\\geometry-work\\partition_physics.py",
+  "limits": [
+    "4 null-source-material models unselected, not fabricated",
+    "spline native visual parity runtime unverified",
+    "map instance collision classification remains component owned",
+    "full map compiler and installation not run by geometry worker"
+  ]
+}

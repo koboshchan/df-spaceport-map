@@ -1,0 +1,26 @@
+{
+  "id": "m_4dd5a248f0a83806",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Transport/Utility/SM_H_Transport_Utility_StreetLamp_09.SM_H_Transport_Utility_StreetLamp_09",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Transport\\Utility\\SM_H_Transport_Utility_StreetLamp_09.glb",
+  "sourceSHA256": "00F7E8E9B162EFB650D2E58008CE34565E4DB82485A670B6C7565AC1A9776069",
+  "model": "models/df_v24/m_4dd5a248f0a83806.vmdl",
+  "materials": {
+    "mat_7462ca99dbf7bdc2": "DeltaForce/Content/Environment/Props/HAAVK/Transport/Utility/00_Materials/HD/MI_H_Transport_Utility_StreetLamp_09_HD.MI_H_Transport_Utility_StreetLamp_09_HD"
+  },
+  "vertices": 170,
+  "polygons": 218,
+  "bounds": [
+    [
+      -3.2289576530456543,
+      -3.2240755558013916,
+      -36.0
+    ],
+    [
+      3.228954553604126,
+      3.2183423042297363,
+      43.27330017089844
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

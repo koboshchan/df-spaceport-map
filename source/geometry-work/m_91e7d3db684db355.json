@@ -1,0 +1,26 @@
+{
+  "id": "m_91e7d3db684db355",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_AgainstWar_01d.SM_H_Building_FutureTech_AgainstWar_01d",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_AgainstWar_01d.glb",
+  "sourceSHA256": "61A6F8B286F57527C8D0B52E9A4A509BDA56BF15137231E625238A3887B9569F",
+  "model": "models/df_v24/m_91e7d3db684db355.vmdl",
+  "materials": {
+    "mat_27d83f1b28aedb60": "DeltaForce/Content/Environment/Props/HAAVK/Government/Tide/00_Materials/HD/MI_H_Building_Tide_Brick_03_HD.MI_H_Building_Tide_Brick_03_HD"
+  },
+  "vertices": 7032,
+  "polygons": 6422,
+  "bounds": [
+    [
+      -996.661376953125,
+      105.45819854736328,
+      -10.377937316894531
+    ],
+    [
+      -932.9786376953125,
+      224.08084106445312,
+      78.98958587646484
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

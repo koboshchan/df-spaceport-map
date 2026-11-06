@@ -1,0 +1,26 @@
+{
+  "id": "m_a42e8ae87407bac3",
+  "objectPath": "DeltaForce/Content/Environment/Vehicle/00_Mesh/SM_H_FutureTech_Vehicle_DriverlessVans_01/SM_H_FutureTech_Vehicle_DriverlessVans_06.SM_H_FutureTech_Vehicle_DriverlessVans_06",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Vehicle\\00_Mesh\\SM_H_FutureTech_Vehicle_DriverlessVans_01\\SM_H_FutureTech_Vehicle_DriverlessVans_06.glb",
+  "sourceSHA256": "80880BB18551EE5AE97020B4EB60840C8D4D09BBAD1BAFBCBA4D67ED065FE90F",
+  "model": "models/df_v24/m_a42e8ae87407bac3.vmdl",
+  "materials": {
+    "mat_efa52aa0f301d9da": "DeltaForce/Content/Environment/Vehicle/00_Materials/HD/MI_H_FutureTech_Vehicle_DriverlessVans_01h_HD.MI_H_FutureTech_Vehicle_DriverlessVans_01h_HD"
+  },
+  "vertices": 1035,
+  "polygons": 1082,
+  "bounds": [
+    [
+      -3.9241294860839844,
+      -28.562936782836914,
+      -30.218280792236328
+    ],
+    [
+      4.691030025482178,
+      28.562936782836914,
+      30.218284606933594
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

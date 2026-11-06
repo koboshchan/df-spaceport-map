@@ -1,0 +1,30 @@
+{
+  "id": "m_666bccc8781768eb",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/SM_I_RoadFacility_Ground_T_07_InterWall_05.SM_I_RoadFacility_Ground_T_07_InterWall_05",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter_Ma1\\SM_I_RoadFacility_Ground_T_07_InterWall_05.glb",
+  "sourceSHA256": "81B79956D4FC97BA8FB442464075002745182A2A48D02E6EFFEE1B695F65F40E",
+  "model": "models/df_v24/m_666bccc8781768eb.vmdl",
+  "materials": {
+    "mat_9257e7010dd18b27": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Concrete_Checkred_05_HD.MI_GEN_Concrete_Checkred_05_HD",
+    "mat_71de2cc8194918d0": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_I_RoadFacility_Ground_T_01_04_HD.MI_I_RoadFacility_Ground_T_01_04_HD",
+    "mat_8b5d279a6d2e73a7": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_D_HD.MI_I_WalkwaySystem_MetalFloor_01_D_HD",
+    "mat_ba296184c60d3451": "DeltaForce/Content/Environment/Props/Morocco/Industrial/Construction/00_Materials/HD/MI_M_Industrial_Construction_Pillars_01_HD.MI_M_Industrial_Construction_Pillars_01_HD",
+    "mat_6441e432f8dab7b9": "DeltaForce/Content/Environment/MatBlend/Concrete/Iris/00_Materials/HD/MI_M_Building_Concrete_Damaged_01_HD.MI_M_Building_Concrete_Damaged_01_HD"
+  },
+  "vertices": 6676,
+  "polygons": 6072,
+  "bounds": [
+    [
+      -1861.1099853515625,
+      213.88894653320312,
+      -291.517333984375
+    ],
+    [
+      -48.35983657836914,
+      651.83642578125,
+      -95.02974700927734
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

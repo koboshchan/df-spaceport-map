@@ -1,0 +1,26 @@
+[
+  {
+    "sourceMesh": "DeltaForce/Content/Models/SceneObjects/props_container_Locker_797/props_container_Locker_797_3P.uasset",
+    "slotIndex": 0,
+    "sourceIdentity": "DeltaForce/Content/Models/Props/Collect/props_container_Locker_797/Materials/props_container_Locker_797.props_container_Locker_797",
+    "vmat": "materials/df_v24/mat_4381b6b45fd726cc.vmat"
+  },
+  {
+    "sourceMesh": "DeltaForce/Content/Models/SceneObjects/props_container_Locker_797/props_container_Locker_797_3P.uasset",
+    "slotIndex": 1,
+    "sourceIdentity": "DeltaForce/Content/Models/Props/Collect/props_container_Locker_797/Materials/props_container_Locker_797_02.props_container_Locker_797_02",
+    "vmat": "materials/df_v24/mat_cc0fd5c1d90cb274.vmat"
+  },
+  {
+    "sourceMesh": "DeltaForce/Content/Models/Props/Collect/props_collect_box_589/props_collect_box_589_3P.uasset",
+    "slotIndex": 0,
+    "sourceIdentity": "DeltaForce/Content/Models/Props/Collect/props_collect_box_589/Materials/props_collect_box_589.props_collect_box_589",
+    "vmat": "materials/df_v24/mat_b0378b904a2aa4b6.vmat"
+  },
+  {
+    "sourceMesh": "DeltaForce/Content/Models/Props/Collect/props_collect_box_1092/props_collect_box_1092_3P.uasset",
+    "slotIndex": 0,
+    "sourceIdentity": "DeltaForce/Content/Models/Props/Collect/props_collect_box_1092/Materials/props_collect_box_1092.props_collect_box_1092",
+    "vmat": "materials/df_v24/mat_0f212212ed0421d5.vmat"
+  }
+]

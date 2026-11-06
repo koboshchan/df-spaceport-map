@@ -1,0 +1,26 @@
+{
+  "id": "m_c65f4e6fe35db755",
+  "objectPath": "DeltaForce/Content/PCG/SpaceCenter_Long3/Road/Meshes_HD/SpaceCenter_Long3_GenerateRoad_Sand_TireTracks_Width_Mesh_x98_y70_15554_HD.SpaceCenter_Long3_GenerateRoad_Sand_TireTracks_Width_Mesh_x98_y70_15554_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\PCG\\SpaceCenter_Long3\\Road\\Meshes_HD\\SpaceCenter_Long3_GenerateRoad_Sand_TireTracks_Width_Mesh_x98_y70_15554_HD.glb",
+  "sourceSHA256": "6CC76268E1FC151F0ABD561B345A29553F006F9782FC727E37A37C6C9AEF8B2A",
+  "model": "models/df_v24/m_c65f4e6fe35db755.vmdl",
+  "materials": {
+    "mat_ad2bcea3039e2c0f": "DeltaForce/Content/Environment/Biome/Terrain_HD/Road_HD/00_Materials/MI_Terrain_Road_Desert_Track_02_HD.MI_Terrain_Road_Desert_Track_02_HD"
+  },
+  "vertices": 198,
+  "polygons": 320,
+  "bounds": [
+    [
+      -543.9375,
+      -830.4750366210938,
+      -92.10514831542969
+    ],
+    [
+      543.9824829101562,
+      830.4862060546875,
+      92.10444641113281
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

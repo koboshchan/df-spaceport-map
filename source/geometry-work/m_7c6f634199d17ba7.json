@@ -1,0 +1,26 @@
+{
+  "id": "m_7c6f634199d17ba7",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/SM_H_FutureTech_Props_IndustrialExtinguisher_01_C.SM_H_FutureTech_Props_IndustrialExtinguisher_01_C",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\SM_H_FutureTech_Props_IndustrialExtinguisher_01_C.glb",
+  "sourceSHA256": "935ED5C76723A49C1D62597AEF4F5653DFC45B9B31E1D55E852A6AE15455C0B2",
+  "model": "models/df_v24/m_7c6f634199d17ba7.vmdl",
+  "materials": {
+    "mat_f8fb916cc05a63c2": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Props_IndustrialExtinguisher_01c_HD.MI_H_FutureTech_Props_IndustrialExtinguisher_01c_HD"
+  },
+  "vertices": 1314,
+  "polygons": 1292,
+  "bounds": [
+    [
+      -3.36721134185791,
+      -0.886581540107727,
+      0.7437605857849121
+    ],
+    [
+      2.9831888675689697,
+      11.793111801147461,
+      20.38099479675293
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

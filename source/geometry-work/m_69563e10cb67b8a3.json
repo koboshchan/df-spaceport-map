@@ -1,0 +1,26 @@
+{
+  "id": "m_69563e10cb67b8a3",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/SM_BS_Ephedra_96cm_HD.SM_BS_Ephedra_96cm_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Bush\\SM_BS_Ephedra_96cm_HD.glb",
+  "sourceSHA256": "9E6C4E83076575038EDA18C11D654360383CC7E758A158256DF36D396EEF515C",
+  "model": "models/df_v24/m_69563e10cb67b8a3.vmdl",
+  "materials": {
+    "mat_7782e079b95a1110": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/00_Materials/MI_BS_Ephedra_96cm_Leaf_HD.MI_BS_Ephedra_96cm_Leaf_HD"
+  },
+  "vertices": 2105,
+  "polygons": 1599,
+  "bounds": [
+    [
+      -26.183866500854492,
+      -29.08605194091797,
+      -7.210183143615723
+    ],
+    [
+      28.75835609436035,
+      23.200363159179688,
+      35.20943832397461
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

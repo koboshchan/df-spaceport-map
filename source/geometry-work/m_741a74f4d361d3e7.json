@@ -1,0 +1,26 @@
+{
+  "id": "m_741a74f4d361d3e7",
+  "objectPath": "DeltaForce/Content/Models/Props/Collect/Props_Collect_Intelligence_459/Props_Collect_Intelligence_459_3P.Props_Collect_Intelligence_459_3P",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Props\\Collect\\Props_Collect_Intelligence_459\\Props_Collect_Intelligence_459_3P.glb",
+  "sourceSHA256": "EB9A9B399A3ABB5F1903D259E2BC7C484C5D5A0317D7ECD992333AF64C6C1630",
+  "model": "models/df_v24/m_741a74f4d361d3e7.vmdl",
+  "materials": {
+    "mat_0ce3c26914d2444f": "DeltaForce/Content/Models/Props/Collect/Props_Collect_Intelligence_459/Materials/Props_Collect_Intelligence_459.Props_Collect_Intelligence_459"
+  },
+  "vertices": 513,
+  "polygons": 450,
+  "bounds": [
+    [
+      -3.7261250019073486,
+      -5.542603492736816,
+      -0.1112293154001236
+    ],
+    [
+      3.8336124420166016,
+      5.149395942687988,
+      0.8599531054496765
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

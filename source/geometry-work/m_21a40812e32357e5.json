@@ -1,0 +1,28 @@
+{
+  "id": "m_21a40812e32357e5",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/SM_H_Industrial_Mechanical_MetalSilo_02.SM_H_Industrial_Mechanical_MetalSilo_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\Mechanical\\SM_H_Industrial_Mechanical_MetalSilo_02.glb",
+  "sourceSHA256": "4A196DBA7627E1EBBA4E91B2233A8E0C61D5C4EC3BE15777DFAAE5B710B54720",
+  "model": "models/df_v24/m_21a40812e32357e5.vmdl",
+  "materials": {
+    "mat_78d4d0ad2fd2be7b": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/00_Materials/HD/MI_H_Industrial_Mechanical_MetalSilo_02a_HD.MI_H_Industrial_Mechanical_MetalSilo_02a_HD",
+    "mat_506e59b1bac8b812": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/00_Materials/HD/MI_H_Industrial_Mechanical_MetalSilo_02b_HD.MI_H_Industrial_Mechanical_MetalSilo_02b_HD",
+    "mat_ca1bbbe2593d44b8": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/00_Materials/HD/MI_H_Industrial_Mechanical_MetalSilo_02c_HD.MI_H_Industrial_Mechanical_MetalSilo_02c_HD"
+  },
+  "vertices": 17309,
+  "polygons": 16698,
+  "bounds": [
+    [
+      -358.24774169921875,
+      -84.50802612304688,
+      -0.5936902165412903
+    ],
+    [
+      358.24774169921875,
+      84.50819396972656,
+      253.76971435546875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

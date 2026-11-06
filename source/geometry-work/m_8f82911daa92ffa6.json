@@ -1,0 +1,33 @@
+{
+  "id": "m_8f82911daa92ffa6",
+  "objectPath": "DeltaForce/Content/Environment/Props/Generic/SM_Generic_Militarybox_01.SM_Generic_Militarybox_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Generic\\SM_Generic_Militarybox_01.glb",
+  "sourceSHA256": "A3BD748E5F57B99E5A6BCA73B47284590E4AAAC461453B9E9CBB78A8B2BEF483",
+  "model": "models/df_v24/m_8f82911daa92ffa6.vmdl",
+  "materials": {
+    "mat_9076b32da60cb1ba": "DeltaForce/Content/Environment/Props/Generic/00_Materials/HD/MI_Generic_Militarybox_01a_HD.MI_Generic_Militarybox_01a_HD",
+    "mat_bb3a5723b38e9d58": "DeltaForce/Content/Environment/Props/Industrial/00_Materials/HD/MI_Industrial_Tools_Tarp_14_HD.MI_Industrial_Tools_Tarp_14_HD",
+    "mat_10f9e590cc388c0b": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Container/00_Materials/HD/MI_Industrial_Container_WoodenBox_02_01_HD.MI_Industrial_Container_WoodenBox_02_01_HD",
+    "mat_46683c4cc4cda6ff": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Container/00_Materials/HD/MI_Industrial_Container_WoodenBox_02_02_HD.MI_Industrial_Container_WoodenBox_02_02_HD",
+    "mat_d5c8de88ab5e3efd": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Container/00_Materials/HD/MI_Industrial_Container_WoodenBox_02_03_HD.MI_Industrial_Container_WoodenBox_02_03_HD",
+    "mat_74949a67cf85b690": "DeltaForce/Content/Environment/Props/Morocco/Agricultural/00_Materials/HD/MI_Industrial_Tools_WoodenBoard_02_HD.MI_Industrial_Tools_WoodenBoard_02_HD",
+    "mat_0386f261b8236351": "DeltaForce/Content/Environment/Props/Generic/00_Materials/HD/MI_Generic_Militarybox_01b_HD.MI_Generic_Militarybox_01b_HD",
+    "mat_18c84a5fd08826e3": "DeltaForce/Content/Environment/Props/Generic/00_Materials/HD/MI_Generic_Militarybox_01c_HD.MI_Generic_Militarybox_01c_HD"
+  },
+  "vertices": 18827,
+  "polygons": 17465,
+  "bounds": [
+    [
+      -28.24005889892578,
+      -19.430496215820312,
+      -0.05476364120841026
+    ],
+    [
+      24.493532180786133,
+      34.898555755615234,
+      47.41364288330078
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

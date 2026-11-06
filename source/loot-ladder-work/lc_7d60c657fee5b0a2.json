@@ -1,0 +1,15 @@
+{
+  "id": "lc_7d60c657fee5b0a2",
+  "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Gameplay/Gameplay_x26_y17_3.Gameplay_x26_y17_3:PersistentLevel.BP_Interactor_ClimbLadder_TemplateNew3#sourceOBB",
+  "model": "models/df_v24/lc_7d60c657fee5b0a2.vmdl",
+  "sourceBoxes": 98,
+  "vertices": 784,
+  "polygons": 588,
+  "collisionMode": "exact closed box surfaces from source simple collision OBBs; native compiled/runtime verification pending",
+  "source": "ladder-solid-collision-manifest.json",
+  "centerCS2": [
+    907.3176084536633,
+    -2100.304327900572,
+    627.7097465485718
+  ]
+}

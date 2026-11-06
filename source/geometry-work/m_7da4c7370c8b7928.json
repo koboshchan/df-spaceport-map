@@ -1,0 +1,27 @@
+{
+  "id": "m_7da4c7370c8b7928",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/SM_I_RoadFacility_Ground_L_20_PipeLine_01B.SM_I_RoadFacility_Ground_L_20_PipeLine_01B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter_Ma1\\SM_I_RoadFacility_Ground_L_20_PipeLine_01B.glb",
+  "sourceSHA256": "C699B2602D844C39FD95099728B05651DCB2EF211BA257D4BCFF2C9707861E66",
+  "model": "models/df_v24/m_7da4c7370c8b7928.vmdl",
+  "materials": {
+    "mat_1824b171397cbc6d": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Continuous_Rubber_01a_HD.MI_H_FutureTech_Continuous_Rubber_01a_HD",
+    "mat_310b7b8db77e63b8": "DeltaForce/Content/Environment/Structures/City/RoadFacility/Collapse/Bridge/00_Materials/HD/MI_C_RoadFacility_Collapse_Bridge_Pipeline_01B_HD.MI_C_RoadFacility_Collapse_Bridge_Pipeline_01B_HD"
+  },
+  "vertices": 19157,
+  "polygons": 18892,
+  "bounds": [
+    [
+      -240.99005126953125,
+      -466.2528991699219,
+      -153.7076416015625
+    ],
+    [
+      290.08856201171875,
+      2112.802490234375,
+      -87.03199768066406
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

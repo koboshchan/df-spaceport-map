@@ -1,0 +1,26 @@
+{
+  "id": "m_92c0e4c980789085",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Commercial/Kitchen/SM_M_Residential_Kitchen_CoffeMachine_01_c.SM_M_Residential_Kitchen_CoffeMachine_01_c",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Commercial\\Kitchen\\SM_M_Residential_Kitchen_CoffeMachine_01_c.glb",
+  "sourceSHA256": "DFC1EC558B4EC09D174D901E0A20F7D551BBD614172F520D66A347D5693E7929",
+  "model": "models/df_v24/m_92c0e4c980789085.vmdl",
+  "materials": {
+    "mat_114f4fc57449f84c": "DeltaForce/Content/Environment/Props/Morocco/Commercial/00_Materials/HD/MI_M_Residential_Kitchen_CoffeMachine_01_HD.MI_M_Residential_Kitchen_CoffeMachine_01_HD"
+  },
+  "vertices": 1208,
+  "polygons": 1320,
+  "bounds": [
+    [
+      -1.6116050481796265,
+      -5.692788124084473,
+      -0.004521732218563557
+    ],
+    [
+      1.611396312713623,
+      5.6927900314331055,
+      2.498349666595459
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "m_c8340d1f62af0335",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/River/SM_I_RoadFacility_River_DockFloor_01.SM_I_RoadFacility_River_DockFloor_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\River\\SM_I_RoadFacility_River_DockFloor_01.glb",
+  "sourceSHA256": "A0E4E0C4E7536B1C6F983F2F9F549C97584D4FD5B0E5B52315A4D62AC4542799",
+  "model": "models/df_v24/m_c8340d1f62af0335.vmdl",
+  "materials": {
+    "mat_38b39ab9bd6e8fae": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_03_HD.MI_GEN_Metal_Painting_03_HD",
+    "mat_2eb140729266ee0c": "DeltaForce/Content/Environment/Decal/Connect/00_Materials/MI_I_Connect_Decal_05_HD.MI_I_Connect_Decal_05_HD",
+    "mat_652a606455361a38": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_DecalAlpha_04_HD.MI_H_Building_FutureTech_DecalAlpha_04_HD",
+    "mat_ebe2c68b91602cff": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Road_Decal_02_HD.MI_H_FutureTech_Road_Decal_02_HD",
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD",
+    "mat_4f8ba93190fb6eae": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_Ground_23_HD.MI_H_Building_FutureTech_Ground_23_HD",
+    "mat_5dd7a81c9b4d78f1": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_PaintingFloor_03_HD.MI_GEN_Metal_PaintingFloor_03_HD"
+  },
+  "vertices": 14530,
+  "polygons": 11466,
+  "bounds": [
+    [
+      -214.30491638183594,
+      -747.3001708984375,
+      -1.0986327652062755e-05
+    ],
+    [
+      214.30491638183594,
+      1.0808757543563843,
+      90.28070831298828
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

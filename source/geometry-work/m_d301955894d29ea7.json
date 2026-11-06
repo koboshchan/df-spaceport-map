@@ -1,0 +1,31 @@
+{
+  "id": "m_d301955894d29ea7",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/SM_H_Industrial_ISS_Satellite_01.SM_H_Industrial_ISS_Satellite_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\ISS\\SM_H_Industrial_ISS_Satellite_01.glb",
+  "sourceSHA256": "4F996E498C348D4E4CD03564621D913DCA07A5FCCF8D76ACDDB6B5BE37F584E8",
+  "model": "models/df_v24/m_d301955894d29ea7.vmdl",
+  "materials": {
+    "mat_9d0ee586dfdc5cab": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Satellite_01a_HD.MI_H_Industrial_ISS_Satellite_01a_HD",
+    "mat_8dc96ee9950254c1": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Satellite_01b_HD.MI_H_Industrial_ISS_Satellite_01b_HD",
+    "mat_3ee3b88d7de666f0": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Satellite_01c_HD.MI_H_Industrial_ISS_Satellite_01c_HD",
+    "mat_5c18dbf5e22af2c9": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Satellite_01d_HD.MI_H_Industrial_ISS_Satellite_01d_HD",
+    "mat_e49063a805365eda": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_Satellite_01e_HD.MI_H_Industrial_ISS_Satellite_01e_HD",
+    "mat_ce515409d0a82492": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD"
+  },
+  "vertices": 53161,
+  "polygons": 67524,
+  "bounds": [
+    [
+      -216.38760375976562,
+      -194.9239501953125,
+      11.967668533325195
+    ],
+    [
+      216.92776489257812,
+      63.47804641723633,
+      455.72174072265625
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

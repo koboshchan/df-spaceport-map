@@ -1,0 +1,26 @@
+{
+  "id": "m_c055ef9f26fc23f8",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Decoration_HD/Decals/SM_DECOR_GrassDebris_Less_01_HD.SM_DECOR_GrassDebris_Less_01_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Decoration_HD\\Decals\\SM_DECOR_GrassDebris_Less_01_HD.glb",
+  "sourceSHA256": "1C592F39D22211A23BD654246AD8AA3B9812231C2CB337552450E3BC3138FDA5",
+  "model": "models/df_v24/m_c055ef9f26fc23f8.vmdl",
+  "materials": {
+    "mat_2b4a8bb1f9d8c122": "DeltaForce/Content/Environment/Biome/Decoration_HD/Decals/00_Materials/MI_DECOR_GrassDebris_Less_01_Leaf_HD.MI_DECOR_GrassDebris_Less_01_Leaf_HD"
+  },
+  "vertices": 4,
+  "polygons": 2,
+  "bounds": [
+    [
+      -89.7113037109375,
+      -88.83834838867188,
+      1.3028733730316162
+    ],
+    [
+      91.88909912109375,
+      87.55115509033203,
+      1.3029026985168457
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

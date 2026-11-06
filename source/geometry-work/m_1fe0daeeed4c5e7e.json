@@ -1,0 +1,31 @@
+{
+  "id": "m_1fe0daeeed4c5e7e",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Container/SM_H_Industrial_Container_02.SM_H_Industrial_Container_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\Container\\SM_H_Industrial_Container_02.glb",
+  "sourceSHA256": "FE00980FFF41C52190A23333B1D1E8ED87DB24FC86F845EF00CCC55ECC324278",
+  "model": "models/df_v24/m_1fe0daeeed4c5e7e.vmdl",
+  "materials": {
+    "mat_6a246f5186ad0345": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Container/00_Materials/HD/MI_H_Industrial_Container_02B_HD.MI_H_Industrial_Container_02B_HD",
+    "mat_8750614a1b7913f6": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Container/00_Materials/HD/MI_H_Industrial_Container_02D_HD.MI_H_Industrial_Container_02D_HD",
+    "mat_c06e0474d12d6443": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Container/00_Materials/HD/MI_H_Industrial_Container_02C_HD.MI_H_Industrial_Container_02C_HD",
+    "mat_0556c7d7764aca4a": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Container/00_Materials/HD/MI_H_Industrial_Container_02A_HD.MI_H_Industrial_Container_02A_HD",
+    "mat_ce515409d0a82492": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD",
+    "mat_b7fb4f3833e2407c": "DeltaForce/Content/Environment/Decal/Connect/00_Materials/HD/MI_I_Connect_Decal_01A_HD.MI_I_Connect_Decal_01A_HD"
+  },
+  "vertices": 6226,
+  "polygons": 6756,
+  "bounds": [
+    [
+      -0.0006536864675581455,
+      -0.04273681342601776,
+      -1.023181495448831e-14
+    ],
+    [
+      85.85286712646484,
+      221.88165283203125,
+      92.20809173583984
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

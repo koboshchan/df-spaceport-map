@@ -1,0 +1,27 @@
+{
+  "id": "m_3e0f04d39044035c",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_HStairs_04_ExterWall_01C.SM_H_Building_FutureTech_HStairs_04_ExterWall_01C",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_HStairs_04_ExterWall_01C.glb",
+  "sourceSHA256": "2D1EEB446A060B7BF0C28D57ACAEC5DB81F64A43890FA043175B6815F2238608",
+  "model": "models/df_v24/m_3e0f04d39044035c.vmdl",
+  "materials": {
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD",
+    "mat_c39eb4f34b8416de": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_HBoss_01_ExterWall_01_01A_HD.MI_H_Building_FutureTech_HBoss_01_ExterWall_01_01A_HD"
+  },
+  "vertices": 2112,
+  "polygons": 1293,
+  "bounds": [
+    [
+      -1002.2401123046875,
+      -138.2877197265625,
+      875.519775390625
+    ],
+    [
+      -622.0799560546875,
+      1541.2174072265625,
+      1109.73828125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

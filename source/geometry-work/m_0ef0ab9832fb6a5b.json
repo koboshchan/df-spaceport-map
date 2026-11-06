@@ -1,0 +1,31 @@
+{
+  "id": "m_0ef0ab9832fb6a5b",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_Bridge_01C.SM_H_Building_FutureTech_Bridge_01C",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_Bridge_01C.glb",
+  "sourceSHA256": "46B31D2D34AA67D2BC06834B1DAFC9587A4FA4239E924791FE6D20397558D123",
+  "model": "models/df_v24/m_0ef0ab9832fb6a5b.vmdl",
+  "materials": {
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_eb523c7bf3c7e15c": "DeltaForce/Content/Environment/Structures/Building/FutureTech/00_Materials/MI_FutureTech_Lighting_BillBoard_05A.MI_FutureTech_Lighting_BillBoard_05A",
+    "mat_ae862582cab4625c": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_05_HD.MI_GEN_Metal_Painting_05_HD",
+    "mat_2939ccf7c8d2cd77": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_Bridge_01C_01a_HD.MI_H_Building_FutureTech_Bridge_01C_01a_HD",
+    "mat_ea9418000482ef5c": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_Bridge_01C_01b_HD.MI_H_Building_FutureTech_Bridge_01C_01b_HD"
+  },
+  "vertices": 21045,
+  "polygons": 22528,
+  "bounds": [
+    [
+      -180.81761169433594,
+      -2115.53955078125,
+      287.82110595703125
+    ],
+    [
+      180.81764221191406,
+      -26.58841896057129,
+      542.2644653320312
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

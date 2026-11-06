@@ -1,0 +1,26 @@
+{
+  "id": "m_52a63a96d7293887",
+  "objectPath": "DeltaForce/Content/Models/Props/Tactical/props_tactical_Vehicleparachute_936/props_tactical_Vehicleparachute_936_rope.props_tactical_Vehicleparachute_936_rope",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Props\\Tactical\\props_tactical_Vehicleparachute_936\\props_tactical_Vehicleparachute_936_rope.glb",
+  "sourceSHA256": "E7210353DED9B7171CC8874C98C2C7E020CAD1172436EDF2940C156F6C4E907B",
+  "model": "models/df_v24/m_52a63a96d7293887.vmdl",
+  "materials": {
+    "mat_93134546bb305046": "DeltaForce/Content/Models/Props/Tactical/props_tactical_Vehicleparachute_936/Materials/props_tactical_Vehicleparachute_936.props_tactical_Vehicleparachute_936"
+  },
+  "vertices": 35,
+  "polygons": 48,
+  "bounds": [
+    [
+      -0.6765819787979126,
+      -0.7090446949005127,
+      0.19388671219348907
+    ],
+    [
+      0.6765819787979126,
+      0.7090801000595093,
+      131.09786987304688
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

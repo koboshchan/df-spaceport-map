@@ -1,0 +1,27 @@
+{
+  "id": "m_1596807502942a91",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/SM_BS_Saguaro_500cm_HD.SM_BS_Saguaro_500cm_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Bush\\SM_BS_Saguaro_500cm_HD.glb",
+  "sourceSHA256": "F193825CD0B2A13B8C9749A4401BF9A5F8354EF54F428BEC2AC8D301899392FA",
+  "model": "models/df_v24/m_1596807502942a91.vmdl",
+  "materials": {
+    "mat_6f5c1e4650fd57e6": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/00_Materials/MI_BS_Saguaro_500cm_Leaf_HD.MI_BS_Saguaro_500cm_Leaf_HD",
+    "mat_d6902ea90e27fbe3": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/00_Materials/MI_BS_Saguaro_500cm_Trunk_01_HD.MI_BS_Saguaro_500cm_Trunk_01_HD"
+  },
+  "vertices": 2774,
+  "polygons": 3029,
+  "bounds": [
+    [
+      -21.491243362426758,
+      -21.73615264892578,
+      -7.126725196838379
+    ],
+    [
+      25.015073776245117,
+      21.83309555053711,
+      185.21347045898438
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

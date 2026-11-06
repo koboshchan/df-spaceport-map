@@ -1,0 +1,26 @@
+{
+  "id": "m_0e7aa7b46b131fc9",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/SM_H_Industrial_ISS_LaunchLauncher_01L.SM_H_Industrial_ISS_LaunchLauncher_01L",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\ISS\\SM_H_Industrial_ISS_LaunchLauncher_01L.glb",
+  "sourceSHA256": "B5FD1FC37EB01F4BF388500D06CAB88053A12030D62A5618D845DE4E19AD3451",
+  "model": "models/df_v24/m_0e7aa7b46b131fc9.vmdl",
+  "materials": {
+    "mat_4431e7124976ed9c": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_LaunchLauncher_01_04_HD.MI_H_Industrial_ISS_LaunchLauncher_01_04_HD"
+  },
+  "vertices": 14424,
+  "polygons": 13666,
+  "bounds": [
+    [
+      -825.5428466796875,
+      -983.031005859375,
+      38.07553482055664
+    ],
+    [
+      860.41064453125,
+      384.5545654296875,
+      3617.052734375
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "m_2e614a6b9cf4d233",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/SM_I_RoadFacility_Ground_HStairs_01.SM_I_RoadFacility_Ground_HStairs_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter\\SM_I_RoadFacility_Ground_HStairs_01.glb",
+  "sourceSHA256": "F370C70259261BF7084D376E346E214DC1CD53E4CC80F1E67FEE04E86BF76B73",
+  "model": "models/df_v24/m_2e614a6b9cf4d233.vmdl",
+  "materials": {
+    "mat_40b9dd6e452c79fe": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_C_Building_WallInside_01_HD.MI_C_Building_WallInside_01_HD",
+    "mat_f5f6a4bc7cf71b80": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Concrete_Checkred_02_HD.MI_GEN_Concrete_Checkred_02_HD",
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD",
+    "mat_a3e35d5d925fdd27": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_HTerrace_01_01A_HD.MI_H_Building_FutureTech_HTerrace_01_01A_HD"
+  },
+  "vertices": 4475,
+  "polygons": 3649,
+  "bounds": [
+    [
+      -0.00027116775163449347,
+      -270.9974365234375,
+      -120.24005126953125
+    ],
+    [
+      1174.9822998046875,
+      0.809999942779541,
+      0.20124754309654236
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

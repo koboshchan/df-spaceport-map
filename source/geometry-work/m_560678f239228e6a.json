@@ -1,0 +1,27 @@
+{
+  "id": "m_560678f239228e6a",
+  "objectPath": "DeltaForce/Content/Environment/Gameplay/Feature/SM_Feature_StreetLamp_01.SM_Feature_StreetLamp_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Gameplay\\Feature\\SM_Feature_StreetLamp_01.glb",
+  "sourceSHA256": "89D9DB54CB666F40A84165937466FD09AC0CE971666EFA12806DB34167697399",
+  "model": "models/df_v24/m_560678f239228e6a.vmdl",
+  "materials": {
+    "mat_7e2851e5501cac1d": "DeltaForce/Content/Environment/Gameplay/Feature/00_Materials/HD/MI_Feature_StreetLamp_01_HD.MI_Feature_StreetLamp_01_HD",
+    "mat_b7fb4f3833e2407c": "DeltaForce/Content/Environment/Decal/Connect/00_Materials/HD/MI_I_Connect_Decal_01A_HD.MI_I_Connect_Decal_01A_HD"
+  },
+  "vertices": 11366,
+  "polygons": 11122,
+  "bounds": [
+    [
+      -37.656517028808594,
+      -8.17968463897705,
+      -4.0355757159320107e-16
+    ],
+    [
+      37.656517028808594,
+      8.313129425048828,
+      217.1048583984375
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "m_728a4ea1a2b59916",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_WatchTower_01b.SM_H_Building_FutureTech_WatchTower_01b",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_WatchTower_01b.glb",
+  "sourceSHA256": "961AC14272F5D1B4B696AEF938C81C01BC7C145C14434729FB0F4BEB50971742",
+  "model": "models/df_v24/m_728a4ea1a2b59916.vmdl",
+  "materials": {
+    "mat_8b5d279a6d2e73a7": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_D_HD.MI_I_WalkwaySystem_MetalFloor_01_D_HD",
+    "mat_3f2ed2c36d985dc9": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_01B_HD.MI_GEN_Metal_Painting_01B_HD",
+    "mat_de3fe7bdb321717b": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_WatchTower_01_02_HD.MI_H_Building_FutureTech_WatchTower_01_02_HD",
+    "mat_03b27ff9fc3e0370": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01F_HD.MI_I_WalkwaySystem_MetalFloor_01F_HD"
+  },
+  "vertices": 5715,
+  "polygons": 4475,
+  "bounds": [
+    [
+      10.43458366394043,
+      -152.57693481445312,
+      195.62403869628906
+    ],
+    [
+      304.25299072265625,
+      116.41897583007812,
+      572.2653198242188
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

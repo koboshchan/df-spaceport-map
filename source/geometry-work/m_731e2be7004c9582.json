@@ -1,0 +1,26 @@
+{
+  "id": "m_731e2be7004c9582",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Tools/SM_H_Industrial_Tools_Cabinet_01D.SM_H_Industrial_Tools_Cabinet_01D",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\Tools\\SM_H_Industrial_Tools_Cabinet_01D.glb",
+  "sourceSHA256": "CAE5034D502C20C8005312075EF524A2274B4E9005CB3C3997EAB587F6D53587",
+  "model": "models/df_v24/m_731e2be7004c9582.vmdl",
+  "materials": {
+    "mat_c1bcfd2c4b030381": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Tools/00_Materials/HD/MI_H_Industrial_Tools_Cabinet_01_HD.MI_H_Industrial_Tools_Cabinet_01_HD"
+  },
+  "vertices": 1228,
+  "polygons": 988,
+  "bounds": [
+    [
+      -3.6065917015075684,
+      -28.416961669921875,
+      1.3732909565078444e-06
+    ],
+    [
+      26.82301139831543,
+      3.6446449756622314,
+      33.37241744995117
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

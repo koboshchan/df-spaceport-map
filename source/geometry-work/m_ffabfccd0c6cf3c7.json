@@ -1,0 +1,27 @@
+{
+  "id": "m_ffabfccd0c6cf3c7",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech_Ma1/SM_H_Props_FutureTech_Chandelier_02.SM_H_Props_FutureTech_Chandelier_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech_Ma1\\SM_H_Props_FutureTech_Chandelier_02.glb",
+  "sourceSHA256": "D3EBEC04A9D6FF79AC7ED5A230DB65135C9827A1173C839D85FE5EC60048A801",
+  "model": "models/df_v24/m_ffabfccd0c6cf3c7.vmdl",
+  "materials": {
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD",
+    "mat_66d6d7a25da60739": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Lighting_02_HD.MI_GEN_Lighting_02_HD"
+  },
+  "vertices": 3863,
+  "polygons": 3754,
+  "bounds": [
+    [
+      -37.244232177734375,
+      -11.843546867370605,
+      -61.857704162597656
+    ],
+    [
+      37.10279083251953,
+      29.87905502319336,
+      4.699662685394287
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

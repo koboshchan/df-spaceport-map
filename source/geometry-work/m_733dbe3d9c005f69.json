@@ -1,0 +1,28 @@
+{
+  "id": "m_733dbe3d9c005f69",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_AgainstWar_01c_Pipe_02.SM_H_Building_FutureTech_AgainstWar_01c_Pipe_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_AgainstWar_01c_Pipe_02.glb",
+  "sourceSHA256": "841580B05219569E675AC566F710D156750D085EAD13A4347A3A5ED0722CC14A",
+  "model": "models/df_v24/m_733dbe3d9c005f69.vmdl",
+  "materials": {
+    "mat_3256e33b102ed13e": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/Mechanical/00_Materials/HD/MI_H_Industrial_Mechanical_MetalSilo_01a_HD.MI_H_Industrial_Mechanical_MetalSilo_01a_HD",
+    "mat_c582498c25aa7d13": "DeltaForce/Content/Maps/Iceland/Asset/Structures/00_Materials/HD/MI_H_IceLand_Building_TrimMetal_C_HD.MI_H_IceLand_Building_TrimMetal_C_HD",
+    "mat_20fabdfebe348075": "DeltaForce/Content/Environment/Structures/HAAVK/Pipeline/00_Materials/HD/MI_H_PipeLine_HD.MI_H_PipeLine_HD"
+  },
+  "vertices": 12088,
+  "polygons": 14082,
+  "bounds": [
+    [
+      -982.8587036132812,
+      80.74072265625,
+      -7.916253566741943
+    ],
+    [
+      -614.462646484375,
+      224.77674865722656,
+      214.99444580078125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "m_4cb19b34e887cd44",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Grass/SM_GR_TileForest_Yellow02_60cm_HD.SM_GR_TileForest_Yellow02_60cm_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Grass\\SM_GR_TileForest_Yellow02_60cm_HD.glb",
+  "sourceSHA256": "EA91447A71923C5FFE47598BB2C530EDEDD307EBB0820F944AA888324D0FF901",
+  "model": "models/df_v24/m_4cb19b34e887cd44.vmdl",
+  "materials": {
+    "mat_15033c2635e0565a": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Grass/00_Materials/MI_GR_TileForest_Yellow02_60cm_Leaf_HD.MI_GR_TileForest_Yellow02_60cm_Leaf_HD"
+  },
+  "vertices": 1406,
+  "polygons": 1096,
+  "bounds": [
+    [
+      -58.45033264160156,
+      -53.41398620605469,
+      -6.316770553588867
+    ],
+    [
+      53.740020751953125,
+      50.29493713378906,
+      19.11559295654297
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

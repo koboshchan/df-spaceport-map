@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "files": [
+    {
+      "path": "parent-sky-template.vmap",
+      "expected": "115d81b8b6f505f7321a2a665d922b2e5c61242ec770e725730c86d556b01188",
+      "actual": "115d81b8b6f505f7321a2a665d922b2e5c61242ec770e725730c86d556b01188",
+      "match": true
+    },
+    {
+      "path": "parent-sky.patch",
+      "expected": "b932d9c11a182f14153dc85f7f3f68f228011594449fb2618fc12eb9e10fe069",
+      "actual": "b932d9c11a182f14153dc85f7f3f68f228011594449fb2618fc12eb9e10fe069",
+      "match": true
+    },
+    {
+      "path": "REPORT.txt",
+      "expected": "b180469cefb86e2875ee5739d797ef1001021b851a76e7cc8c991cacc35a1330",
+      "actual": "b180469cefb86e2875ee5739d797ef1001021b851a76e7cc8c991cacc35a1330",
+      "match": true
+    },
+    {
+      "path": "sky-closure.json",
+      "expected": "c61f62c456d766069e9a7b65d77132d233fcca9b15f1903cf3891fdb12bc30db",
+      "actual": "c61f62c456d766069e9a7b65d77132d233fcca9b15f1903cf3891fdb12bc30db",
+      "match": true
+    },
+    {
+      "path": "sky_de_nuke.vmat_c",
+      "expected": "c750c75c2e3b49f6c73826e08555a91a337f272cdd05e0090526eef9d54edfdc",
+      "actual": "c750c75c2e3b49f6c73826e08555a91a337f272cdd05e0090526eef9d54edfdc",
+      "match": true
+    },
+    {
+      "path": "sky_de_nuke_exr_f04e84b2.vtex_c",
+      "expected": "29af86e9fb76ac325233ddea3312835f2b24bd82eef802715dd14bc63de1b03c",
+      "actual": "29af86e9fb76ac325233ddea3312835f2b24bd82eef802715dd14bc63de1b03c",
+      "match": true
+    }
+  ],
+  "verifiedUTC": "2026-11-06T15:46:45.287896+00:00",
+  "semanticMergePending": true,
+  "bakeFeasibility": "UNKNOWN aggregate linked-world route unproven"
+}

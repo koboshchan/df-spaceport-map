@@ -1,0 +1,32 @@
+{
+  "id": "m_0daef6f07e5c475e",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_HBlack_01_InterWall_04H.SM_H_Building_FutureTech_HBlack_01_InterWall_04H",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_HBlack_01_InterWall_04H.glb",
+  "sourceSHA256": "E46AC0BA9C0344AD0EF10073672119D750258C03EB624314C7DE86B42A2D38AE",
+  "model": "models/df_v24/m_0daef6f07e5c475e.vmdl",
+  "materials": {
+    "mat_3800e879a30c15a9": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_08_HD.MI_GEN_Metal_Painting_08_HD",
+    "mat_1b58319710d2fd64": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_06_HD.MI_GEN_Metal_Painting_06_HD",
+    "mat_659a24691983afc5": "DeltaForce/Content/Environment/MatBlend/Metal/Iris/00_Materials/MI_Building_Storage_Metal_05B_HD.MI_Building_Storage_Metal_05B_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_5c162a1cab107fa4": "DeltaForce/Content/Environment/Structures/HAAVK/Window/00_Materials/HD/MI_H_Window_01_HD.MI_H_Window_01_HD",
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD",
+    "mat_742c7fee90c86bab": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_04_HD.MI_GEN_Metal_Base_04_HD"
+  },
+  "vertices": 24120,
+  "polygons": 18960,
+  "bounds": [
+    [
+      1020.6792602539062,
+      -1579.4278564453125,
+      154.96804809570312
+    ],
+    [
+      2826.494140625,
+      -29.962966918945312,
+      1495.263671875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

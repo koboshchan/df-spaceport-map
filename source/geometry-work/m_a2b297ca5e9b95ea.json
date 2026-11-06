@@ -1,0 +1,26 @@
+{
+  "id": "m_a2b297ca5e9b95ea",
+  "objectPath": "DeltaForce/Content/Environment/Structures/prop/storage/SM_H_Industrial_Door_General_01.SM_H_Industrial_Door_General_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\prop\\storage\\SM_H_Industrial_Door_General_01.glb",
+  "sourceSHA256": "03CDEED5102C8AC413B959DBBB6DEC9E09881AA8AF41E70F8670630054A2D24D",
+  "model": "models/df_v24/m_a2b297ca5e9b95ea.vmdl",
+  "materials": {
+    "mat_3160b645310bb44a": "DeltaForce/Content/Environment/Structures/prop/storage/00_Materials/HD/MI_H_Industrial_Door_General_01_HD.MI_H_Industrial_Door_General_01_HD"
+  },
+  "vertices": 1178,
+  "polygons": 976,
+  "bounds": [
+    [
+      -28.87584686279297,
+      -8.818634033203125,
+      -0.14866143465042114
+    ],
+    [
+      31.972904205322266,
+      6.8695502281188965,
+      92.44718933105469
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

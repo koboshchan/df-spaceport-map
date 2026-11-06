@@ -1,0 +1,28 @@
+{
+  "id": "m_4d2acbc89afbec08",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_HBlack_01_InterWall_05e.SM_H_Building_FutureTech_HBlack_01_InterWall_05e",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_HBlack_01_InterWall_05e.glb",
+  "sourceSHA256": "86B4C27E4BDDFDA1748BE9FB5C619295E83057506CA9D8480037B9212F089EEF",
+  "model": "models/df_v24/m_4d2acbc89afbec08.vmdl",
+  "materials": {
+    "mat_2fb85da5f233e75b": "DeltaForce/Content/Environment/Structures/HAAVK/Pipeline/00_Materials/HD/MI_H_PipeLine_Ring_01B_HD.MI_H_PipeLine_Ring_01B_HD",
+    "mat_8b5d279a6d2e73a7": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_D_HD.MI_I_WalkwaySystem_MetalFloor_01_D_HD",
+    "mat_20fabdfebe348075": "DeltaForce/Content/Environment/Structures/HAAVK/Pipeline/00_Materials/HD/MI_H_PipeLine_HD.MI_H_PipeLine_HD"
+  },
+  "vertices": 6746,
+  "polygons": 8970,
+  "bounds": [
+    [
+      1796.01025390625,
+      -2225.944580078125,
+      584.98583984375
+    ],
+    [
+      1974.224365234375,
+      -1906.65185546875,
+      722.285400390625
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

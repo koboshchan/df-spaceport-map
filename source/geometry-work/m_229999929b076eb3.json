@@ -1,0 +1,26 @@
+{
+  "id": "m_229999929b076eb3",
+  "objectPath": "DeltaForce/Content/Environment/Props/Government/Office/SM_Government_Office_Newspaper_06.SM_Government_Office_Newspaper_06",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Government\\Office\\SM_Government_Office_Newspaper_06.glb",
+  "sourceSHA256": "D234CA3EAD27C97800042D8ED8A4CD7EDD9FCC039C3EF20E2CD50C47A9F8B34B",
+  "model": "models/df_v24/m_229999929b076eb3.vmdl",
+  "materials": {
+    "mat_a3ab10f7128ac080": "DeltaForce/Content/Environment/Props/Government/00_Materials/SM_Government_Office_Newspaper02.SM_Government_Office_Newspaper02"
+  },
+  "vertices": 251,
+  "polygons": 196,
+  "bounds": [
+    [
+      -6.360324382781982,
+      -8.71286392211914,
+      1.5871421727196118e-15
+    ],
+    [
+      6.393829822540283,
+      8.697663307189941,
+      10.963031768798828
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

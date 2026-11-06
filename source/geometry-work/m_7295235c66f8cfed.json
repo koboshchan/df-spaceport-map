@@ -1,0 +1,26 @@
+{
+  "id": "m_7295235c66f8cfed",
+  "objectPath": "DeltaForce/Content/Effects/Vehicle/Jet/Mesh_Vehicle_Jet_03.Mesh_Vehicle_Jet_03",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Effects\\Vehicle\\Jet\\Mesh_Vehicle_Jet_03.glb",
+  "sourceSHA256": "8B03C4E0FA13B3A9D091C5BB0183F1437ABFE4D2C60AFE5EC8A1BC782A616523",
+  "model": "models/df_v24/m_7295235c66f8cfed.vmdl",
+  "materials": {
+    "mat_87fa7d325eb743c4": "Engine/Content/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+  },
+  "vertices": 615,
+  "polygons": 1120,
+  "bounds": [
+    [
+      -4.718251705169678,
+      -1.073951005935669,
+      -4.7182536125183105
+    ],
+    [
+      4.718251705169678,
+      12.844152450561523,
+      4.718251705169678
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

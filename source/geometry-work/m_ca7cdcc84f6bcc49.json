@@ -1,0 +1,26 @@
+{
+  "id": "m_ca7cdcc84f6bcc49",
+  "objectPath": "DeltaForce/Content/Environment/Props/Industrial/Lighting/SM_Industrial_Lighting_Floodlight_01.SM_Industrial_Lighting_Floodlight_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Industrial\\Lighting\\SM_Industrial_Lighting_Floodlight_01.glb",
+  "sourceSHA256": "CC0505E3047D5D83567334D46FB3596062D889D195D47B4C3A70EC12927D91A4",
+  "model": "models/df_v24/m_ca7cdcc84f6bcc49.vmdl",
+  "materials": {
+    "mat_41d231001ea68d18": "DeltaForce/Content/Environment/Props/Industrial/00_Materials/MI_GEN_Emissive_FloodlightStand_01.MI_GEN_Emissive_FloodlightStand_01"
+  },
+  "vertices": 166,
+  "polygons": 72,
+  "bounds": [
+    [
+      -4.524322986602783,
+      -2.115994930267334,
+      0.19495202600955963
+    ],
+    [
+      4.524322986602783,
+      3.7812845706939697,
+      7.327149391174316
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

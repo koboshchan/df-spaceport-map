@@ -1,0 +1,31 @@
+{
+  "id": "m_dc94111ce4411660",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/SM_H_Industrial_ISS_LaunchLauncher_01C.SM_H_Industrial_ISS_LaunchLauncher_01C",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\ISS\\SM_H_Industrial_ISS_LaunchLauncher_01C.glb",
+  "sourceSHA256": "C3334BBBA2B73D4A11CC0701D211E035CE4A1CA71C5A2EE1459A146830F96156",
+  "model": "models/df_v24/m_dc94111ce4411660.vmdl",
+  "materials": {
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_ce515409d0a82492": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD",
+    "mat_56623d11afaa2815": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS/00_Materials/HD/MI_H_Industrial_ISS_LaunchLauncher_01_09_HD.MI_H_Industrial_ISS_LaunchLauncher_01_09_HD",
+    "mat_c7f6d8eea8cb374a": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Lighting_01D_HD.MI_GEN_Lighting_01D_HD",
+    "mat_ebe2c68b91602cff": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Road_Decal_02_HD.MI_H_FutureTech_Road_Decal_02_HD",
+    "mat_652a606455361a38": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_DecalAlpha_04_HD.MI_H_Building_FutureTech_DecalAlpha_04_HD"
+  },
+  "vertices": 16055,
+  "polygons": 10302,
+  "bounds": [
+    [
+      -699.936279296875,
+      -487.64813232421875,
+      396.4290771484375
+    ],
+    [
+      699.936279296875,
+      609.4895629882812,
+      4447.92236328125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

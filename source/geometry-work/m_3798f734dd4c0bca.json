@@ -1,0 +1,29 @@
+{
+  "id": "m_3798f734dd4c0bca",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Door/Customiz/SM_H_Customiz_FoldDoor_01_Farme.SM_H_Customiz_FoldDoor_01_Farme",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Door\\Customiz\\SM_H_Customiz_FoldDoor_01_Farme.glb",
+  "sourceSHA256": "CF51A5E8593181533D69DF972CF5D6026C20144FAE740ABAB2F6299B77665760",
+  "model": "models/df_v24/m_3798f734dd4c0bca.vmdl",
+  "materials": {
+    "mat_a6a28c0baa0d2fe8": "DeltaForce/Content/Environment/Structures/HAAVK/Door/00_Materials/HD/MI_H_Customiz_FoldDoor_01a_HD.MI_H_Customiz_FoldDoor_01a_HD",
+    "mat_ce515409d0a82492": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD",
+    "mat_dac7180d17364f71": "DeltaForce/Content/Environment/Structures/HAAVK/Door/00_Materials/HD/MI_H_Customiz_FoldDoor_01b_HD.MI_H_Customiz_FoldDoor_01b_HD",
+    "mat_83553f276aaa0e3a": "DeltaForce/Content/Environment/Structures/HAAVK/Door/00_Materials/HD/MI_H_Customiz_FoldDoor_01c_HD.MI_H_Customiz_FoldDoor_01c_HD"
+  },
+  "vertices": 3520,
+  "polygons": 2284,
+  "bounds": [
+    [
+      0.0,
+      -20.590362548828125,
+      -3.0552539825439453
+    ],
+    [
+      460.8001708984375,
+      10.356237411499023,
+      391.96868896484375
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

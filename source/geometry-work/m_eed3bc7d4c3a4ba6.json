@@ -1,0 +1,27 @@
+{
+  "id": "m_eed3bc7d4c3a4ba6",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Tree/SM_TR_CaliforniaPalm_5m_HD.SM_TR_CaliforniaPalm_5m_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Tree\\SM_TR_CaliforniaPalm_5m_HD.glb",
+  "sourceSHA256": "BDDC9F9CB5317B94B970A4CE957F2F7DB8E5D76BF197C0D49ED258D20F0BBA0C",
+  "model": "models/df_v24/m_eed3bc7d4c3a4ba6.vmdl",
+  "materials": {
+    "mat_65fa215b73a3ea15": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Tree/00_Materials/MI_TR_CaliforniaPalm_5m_Leaf_HD.MI_TR_CaliforniaPalm_5m_Leaf_HD",
+    "mat_27d3dd1b6a15e018": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Tree/00_Materials/MI_TR_CaliforniaPalm_5m_Trunk_01_HD.MI_TR_CaliforniaPalm_5m_Trunk_01_HD"
+  },
+  "vertices": 3773,
+  "polygons": 4636,
+  "bounds": [
+    [
+      -106.33837127685547,
+      -92.60185241699219,
+      -4.280688285827637
+    ],
+    [
+      90.96832275390625,
+      91.7033462524414,
+      197.61666870117188
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

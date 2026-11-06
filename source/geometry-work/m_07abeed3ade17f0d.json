@@ -1,0 +1,26 @@
+{
+  "id": "m_07abeed3ade17f0d",
+  "objectPath": "DeltaForce/Content/Models/Props/container/Prop_Container_TreasureCaseSkin_1534/Prop_Container_TreasureCaseSkin_1534_Lay.Prop_Container_TreasureCaseSkin_1534_Lay",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Props\\container\\Prop_Container_TreasureCaseSkin_1534\\Prop_Container_TreasureCaseSkin_1534_Lay.glb",
+  "sourceSHA256": "729F0233CAB5BAF2DE18BC8B4500C05C47613C6499C27BA9B50BDFD2CB90396C",
+  "model": "models/df_v24/m_07abeed3ade17f0d.vmdl",
+  "materials": {
+    "mat_eabb0598770e5408": "DeltaForce/Content/Models/Props/container/Prop_Container_TreasureCaseSkin_1534/Material/Prop_Container_TreasureCaseSkin_1534.Prop_Container_TreasureCaseSkin_1534"
+  },
+  "vertices": 8120,
+  "polygons": 8320,
+  "bounds": [
+    [
+      -9.3985595703125,
+      -13.183252334594727,
+      0.005654267966747284
+    ],
+    [
+      12.817475318908691,
+      13.996305465698242,
+      10.731966018676758
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

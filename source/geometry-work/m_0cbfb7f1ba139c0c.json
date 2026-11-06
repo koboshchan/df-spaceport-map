@@ -1,0 +1,26 @@
+{
+  "id": "m_0cbfb7f1ba139c0c",
+  "objectPath": "DeltaForce/Content/Environment/Props/Commercial/Lighting/SM_Commercial_Lighting_EXIT_01.SM_Commercial_Lighting_EXIT_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Commercial\\Lighting\\SM_Commercial_Lighting_EXIT_01.glb",
+  "sourceSHA256": "DEFDEB142757B0E02C801D3B622393959D8A0C1B432FF78439572D5BC8D85AD9",
+  "model": "models/df_v24/m_0cbfb7f1ba139c0c.vmdl",
+  "materials": {
+    "mat_e7e079a64f6b821f": "DeltaForce/Content/Environment/Props/Commercial/00_Materials/HD/MI_Commercial_Lighting_EXIT_01_HD.MI_Commercial_Lighting_EXIT_01_HD"
+  },
+  "vertices": 283,
+  "polygons": 244,
+  "bounds": [
+    [
+      -7.032855987548828,
+      -0.5958201289176941,
+      0.019187279045581818
+    ],
+    [
+      7.047385215759277,
+      0.6219128966331482,
+      4.613635063171387
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

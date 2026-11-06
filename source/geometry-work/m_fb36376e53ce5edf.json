@@ -1,0 +1,28 @@
+{
+  "id": "m_fb36376e53ce5edf",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_Dormitory/SM_H_Building_FutureTech_Dormitory_02_InterWall_02.SM_H_Building_FutureTech_Dormitory_02_InterWall_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_Dormitory\\SM_H_Building_FutureTech_Dormitory_02_InterWall_02.glb",
+  "sourceSHA256": "40579D1FF20257D9557A7C96CA28BA9C506612DE5B0D39A2C3C71BB17224D0C0",
+  "model": "models/df_v24/m_fb36376e53ce5edf.vmdl",
+  "materials": {
+    "mat_2321ffa234259f93": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Checkred_04_HD.MI_GEN_Marble_Checkred_04_HD",
+    "mat_381323acfdf46e9e": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Wooden_Base_01_HD.MI_GEN_Wooden_Base_01_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD"
+  },
+  "vertices": 8111,
+  "polygons": 7370,
+  "bounds": [
+    [
+      -549.9979858398438,
+      -728.4406127929688,
+      -4.887027263641357
+    ],
+    [
+      -143.0915985107422,
+      -204.28460693359375,
+      148.7327423095703
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

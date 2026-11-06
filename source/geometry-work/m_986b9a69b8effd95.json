@@ -1,0 +1,29 @@
+{
+  "id": "m_986b9a69b8effd95",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/SM_H_Update_Container_PlasticBox_02.SM_H_Update_Container_PlasticBox_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\SM_H_Update_Container_PlasticBox_02.glb",
+  "sourceSHA256": "A0F9D36F0FC20F0ED68D705554F8F17D824E9A4F4BB2EC140BB50312E4D403F6",
+  "model": "models/df_v24/m_986b9a69b8effd95.vmdl",
+  "materials": {
+    "mat_0d29dbc070c6aba4": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_Update_Container_PlasticBox_02A_HD.MI_H_Update_Container_PlasticBox_02A_HD",
+    "mat_85cbfe1b20ebfa0d": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_Update_Container_PlasticBox_02B_HD.MI_H_Update_Container_PlasticBox_02B_HD",
+    "mat_9cf0ee41d80ffb9d": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_02_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_02_Decal_HD",
+    "mat_ce515409d0a82492": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD"
+  },
+  "vertices": 4773,
+  "polygons": 3699,
+  "bounds": [
+    [
+      -15.917734146118164,
+      -23.563655853271484,
+      9.863018931355327e-05
+    ],
+    [
+      16.112104415893555,
+      23.563655853271484,
+      31.710634231567383
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

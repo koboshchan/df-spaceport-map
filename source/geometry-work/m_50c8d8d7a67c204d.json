@@ -1,0 +1,34 @@
+{
+  "id": "m_50c8d8d7a67c204d",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Residential/Bedroom/SM_H_Residential_Bedroom_Cupboard_01.SM_H_Residential_Bedroom_Cupboard_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Residential\\Bedroom\\SM_H_Residential_Bedroom_Cupboard_01.glb",
+  "sourceSHA256": "EA54F39346E21AE5A64E4091ED49DC2A0DAE0E38E9BBBCBD54118662DA3776A3",
+  "model": "models/df_v24/m_50c8d8d7a67c204d.vmdl",
+  "materials": {
+    "mat_0691fd8062e3ad59": "DeltaForce/Content/Environment/Props/HAAVK/Residential/Bedroom/00_Materials/HD/MI_H_Residential_Bedroom_Cabinet_01A_HD.MI_H_Residential_Bedroom_Cabinet_01A_HD",
+    "mat_3229a11472f345bc": "DeltaForce/Content/Environment/Props/HAAVK/Residential/Bedroom/00_Materials/HD/MI_H_Residential_Bedroom_Cabinet_02A_HD.MI_H_Residential_Bedroom_Cabinet_02A_HD",
+    "mat_01e13fe79c4c4062": "DeltaForce/Content/Environment/Props/HAAVK/Residential/Bedroom/00_Materials/HD/MI_H_Residential_Bedroom_Cabinet_02B_HD.MI_H_Residential_Bedroom_Cabinet_02B_HD",
+    "mat_1c97c0ae963ac1e2": "DeltaForce/Content/Environment/Props/HAAVK/Residential/Bedroom/00_Materials/HD/MI_H_Residential_Bedroom_Cabinet_01B_HD.MI_H_Residential_Bedroom_Cabinet_01B_HD",
+    "mat_1dfbb4f6a0b5cf2d": "DeltaForce/Content/Environment/Props/HAAVK/Residential/Bedroom/00_Materials/HD/MI_H_Residential_Bedroom_Shelf_01A_HD.MI_H_Residential_Bedroom_Shelf_01A_HD",
+    "mat_0d87525c7ccb3a29": "DeltaForce/Content/Environment/Props/HAAVK/Residential/Bedroom/00_Materials/HD/MI_H_Residential_Bedroom_Cupboard_01A_HD.MI_H_Residential_Bedroom_Cupboard_01A_HD",
+    "mat_9d2de9ccaadbc2f1": "DeltaForce/Content/Environment/Props/HAAVK/Residential/Bedroom/00_Materials/HD/MI_H_Residential_Bedroom_Cupboard_01C_HD.MI_H_Residential_Bedroom_Cupboard_01C_HD",
+    "mat_7ba1b6b8047fea0b": "DeltaForce/Content/Environment/Props/HAAVK/Residential/Bedroom/00_Materials/HD/MI_H_Residential_Bedroom_Cupboard_01B_HD.MI_H_Residential_Bedroom_Cupboard_01B_HD",
+    "mat_b3b4a274ddd93025": "DeltaForce/Content/Environment/Props/HAAVK/Residential/Bedroom/00_Materials/HD/MI_H_Residential_Bedroom_Cupboard_01D_HD.MI_H_Residential_Bedroom_Cupboard_01D_HD"
+  },
+  "vertices": 2919,
+  "polygons": 2227,
+  "bounds": [
+    [
+      -101.7958755493164,
+      -6.591796409338713e-05,
+      -0.009810790419578552
+    ],
+    [
+      35.0639762878418,
+      326.3178405761719,
+      132.70545959472656
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

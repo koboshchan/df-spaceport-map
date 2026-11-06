@@ -1,0 +1,31 @@
+{
+  "id": "m_1f9e15bd8f21024c",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/SM_I_RoadFacility_Ground_C_11.SM_I_RoadFacility_Ground_C_11",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter\\SM_I_RoadFacility_Ground_C_11.glb",
+  "sourceSHA256": "44AB4971B37CE0C95BF3D1474FBC8899F7C9EE242474C7D504B20334A9CF7E85",
+  "model": "models/df_v24/m_1f9e15bd8f21024c.vmdl",
+  "materials": {
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD",
+    "mat_389db5688a50652e": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/00_Materials/HD/MI_GEN_Grass_Base_01_HD.MI_GEN_Grass_Base_01_HD",
+    "mat_9ae0cbbe320a2e30": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Checkred_02_HD.MI_GEN_Marble_Checkred_02_HD",
+    "mat_45e2c73b465457a0": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Wooden_Plank_02_HD.MI_GEN_Wooden_Plank_02_HD",
+    "mat_9abb213c5f93b0f7": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Wooden_Plank_01_HD.MI_GEN_Wooden_Plank_01_HD",
+    "mat_ee48c2314b87b2ef": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Marble_Checkred_05_HD.MI_GEN_Marble_Checkred_05_HD"
+  },
+  "vertices": 12087,
+  "polygons": 12529,
+  "bounds": [
+    [
+      -3119.4892578125,
+      1535.56982421875,
+      114.47045135498047
+    ],
+    [
+      -791.8697509765625,
+      3754.10205078125,
+      211.94674682617188
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

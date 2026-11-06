@@ -1,0 +1,26 @@
+{
+  "id": "m_a5d9a56b8d82452a",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Grass/SM_GR_Bulrush_120cm_HD.SM_GR_Bulrush_120cm_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Grass\\SM_GR_Bulrush_120cm_HD.glb",
+  "sourceSHA256": "6FEDADD218B2CB2B6720D4225D96A467CC8B1FF1443382DF95FADFCA2C4CEDEE",
+  "model": "models/df_v24/m_a5d9a56b8d82452a.vmdl",
+  "materials": {
+    "mat_bddc6507194b48d2": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Grass/00_Materials/MI_GR_Bulrush_120cm_Leaf_HD.MI_GR_Bulrush_120cm_Leaf_HD"
+  },
+  "vertices": 414,
+  "polygons": 310,
+  "bounds": [
+    [
+      -40.849666595458984,
+      -37.80424499511719,
+      -10.22823715209961
+    ],
+    [
+      35.89450454711914,
+      38.40836715698242,
+      48.78845977783203
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

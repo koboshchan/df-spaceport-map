@@ -1,0 +1,26 @@
+{
+  "id": "m_32280a0ae5de647d",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter_Ma1/SM_I_RoadFacility_Ground_C_02H.SM_I_RoadFacility_Ground_C_02H",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter_Ma1\\SM_I_RoadFacility_Ground_C_02H.glb",
+  "sourceSHA256": "D0657FCA619576F5DC7E9FE89CB467BA7BA784108B41A7ED1C2053D2F5B4668C",
+  "model": "models/df_v24/m_32280a0ae5de647d.vmdl",
+  "materials": {
+    "mat_fd395e18bbedc3cc": "DeltaForce/Content/Environment/Structures/HAAVK/Building/NavalBattle/00_Materials/HD/MI_H_Building_Militarily_NavalBattle_S6_Ground_02i_HD.MI_H_Building_Militarily_NavalBattle_S6_Ground_02i_HD"
+  },
+  "vertices": 8794,
+  "polygons": 17230,
+  "bounds": [
+    [
+      -1302.541748046875,
+      509.1217346191406,
+      121.85502624511719
+    ],
+    [
+      -813.7342529296875,
+      1038.2835693359375,
+      223.43687438964844
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

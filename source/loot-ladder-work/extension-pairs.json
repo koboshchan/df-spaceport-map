@@ -1,0 +1,22 @@
+[
+  [
+    "DeltaForce/Content/Models/SceneObjects/props_container_Locker_797/props_container_Locker_797_3P.uasset",
+    "DeltaForce/Content/Models/SceneObjects/props_container_Locker_797/Anim/props_container_Locker_797_Closeidle.uasset"
+  ],
+  [
+    "DeltaForce/Content/Models/SceneObjects/props_container_Locker_797/props_container_Locker_797_3P.uasset",
+    "DeltaForce/Content/Models/SceneObjects/props_container_Locker_797/Anim/props_container_Locker_797_Openidle.uasset"
+  ],
+  [
+    "DeltaForce/Content/Models/Props/Collect/props_collect_box_589/props_collect_box_589_3P.uasset",
+    "DeltaForce/Content/Models/Props/Collect/props_collect_box_589/Anims/props_collect_box_589_UES.uasset"
+  ],
+  [
+    "DeltaForce/Content/Models/Props/Collect/props_collect_box_1092/props_collect_box_1092_3P.uasset",
+    "DeltaForce/Content/Models/Props/Collect/props_collect_box_555/Anims/props_collect_box_555_Close_Idle.uasset"
+  ],
+  [
+    "DeltaForce/Content/Models/Props/Collect/props_collect_box_1092/props_collect_box_1092_3P.uasset",
+    "DeltaForce/Content/Models/Props/Collect/props_collect_box_555/Anims/props_collect_box_555_Open_Idle.uasset"
+  ]
+]

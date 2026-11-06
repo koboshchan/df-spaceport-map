@@ -1,0 +1,26 @@
+{
+  "id": "m_dca882657bb7a67e",
+  "objectPath": "DeltaForce/Content/Environment/Props/Lighting/SM_Generic_Lighting_WallLamp_07.SM_Generic_Lighting_WallLamp_07",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Lighting\\SM_Generic_Lighting_WallLamp_07.glb",
+  "sourceSHA256": "09900A234D5FF5B7BE51330DDF2DDE5BB3A6C71A0EC666CE0E83180DED47DCE9",
+  "model": "models/df_v24/m_dca882657bb7a67e.vmdl",
+  "materials": {
+    "mat_5af405d0d238036a": "DeltaForce/Content/Environment/Props/Lighting/00_Materials/HD/MI_Generic_Lighting_WallLamp_07_HD.MI_Generic_Lighting_WallLamp_07_HD"
+  },
+  "vertices": 210,
+  "polygons": 220,
+  "bounds": [
+    [
+      -17.35000228881836,
+      -4.157787799835205,
+      -4.037817478179932
+    ],
+    [
+      17.350004196166992,
+      4.1577863693237305,
+      0.11418433487415314
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

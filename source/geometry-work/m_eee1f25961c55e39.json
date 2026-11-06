@@ -1,0 +1,26 @@
+{
+  "id": "m_eee1f25961c55e39",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Decal/WellLid/SM_H_Decal_WellLid_03.SM_H_Decal_WellLid_03",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Decal\\WellLid\\SM_H_Decal_WellLid_03.glb",
+  "sourceSHA256": "B32B0AC15EE3BA78E0A07E19B6341C5DE0C59A3ACD2E7EA60A56B8E71365E63F",
+  "model": "models/df_v24/m_eee1f25961c55e39.vmdl",
+  "materials": {
+    "mat_913753db272a1cd5": "DeltaForce/Content/Environment/Structures/HAAVK/Decal/WellLid/00_Materials/HD/MI_H_Decal_WellLid_01B_HD.MI_H_Decal_WellLid_01B_HD"
+  },
+  "vertices": 33,
+  "polygons": 24,
+  "bounds": [
+    [
+      5.493163916980848e-05,
+      -0.42524290084838867,
+      -2.6038616670487295e-17
+    ],
+    [
+      7.604076862335205,
+      0.44995546340942383,
+      92.15999603271484
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

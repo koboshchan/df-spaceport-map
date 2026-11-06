@@ -1,0 +1,29 @@
+{
+  "id": "m_b4593cb009bace99",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_CtControl_01_ExterWall_02B.SM_H_Building_FutureTech_CtControl_01_ExterWall_02B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_CtControl_01_ExterWall_02B.glb",
+  "sourceSHA256": "8B94955E142E0E81379B7621BE28DD517876AD997F225AD078101D0356CC4207",
+  "model": "models/df_v24/m_b4593cb009bace99.vmdl",
+  "materials": {
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_acfe0c8c271d1ddb": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_WatchTower_01_05_HD.MI_H_Building_FutureTech_WatchTower_01_05_HD",
+    "mat_38f3a85edb7e19ad": "DeltaForce/Content/Environment/Structures/HAAVK/Decal/WellLid/00_Materials/HD/MI_H_Decal_WellLid_01_HD.MI_H_Decal_WellLid_01_HD"
+  },
+  "vertices": 13716,
+  "polygons": 8508,
+  "bounds": [
+    [
+      1960.810546875,
+      -507.4379577636719,
+      209.81272888183594
+    ],
+    [
+      3533.7509765625,
+      1834.1627197265625,
+      850.7571411132812
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

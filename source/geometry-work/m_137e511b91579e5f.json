@@ -1,0 +1,26 @@
+{
+  "id": "m_137e511b91579e5f",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Grass/SM_GR_Zoysia_Matrella_38cm_HD.SM_GR_Zoysia_Matrella_38cm_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Grass\\SM_GR_Zoysia_Matrella_38cm_HD.glb",
+  "sourceSHA256": "89EA3C2238C49C93366098EA6CC461660C1F66192C152C24876C07C5C8609DA7",
+  "model": "models/df_v24/m_137e511b91579e5f.vmdl",
+  "materials": {
+    "mat_a23c89fd4b759718": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Grass/00_Materials/MI_GR_Zoysia_Matrella_38cm_Leaf_HD.MI_GR_Zoysia_Matrella_38cm_Leaf_HD"
+  },
+  "vertices": 102,
+  "polygons": 76,
+  "bounds": [
+    [
+      -19.4143123626709,
+      -19.396469116210938,
+      -1.9794453382492065
+    ],
+    [
+      20.651065826416016,
+      17.653024673461914,
+      11.998403549194336
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

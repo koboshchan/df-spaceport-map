@@ -1,0 +1,27 @@
+{
+  "id": "m_4d8134ea29660ed4",
+  "objectPath": "DeltaForce/Content/Environment/Props/FutureTech/Office/SM_FutureTech_Office_Speakers_01.SM_FutureTech_Office_Speakers_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\FutureTech\\Office\\SM_FutureTech_Office_Speakers_01.glb",
+  "sourceSHA256": "C81AE7FECA553D6423853044000F8CBED9E1EA27B0D837289C0B6A71185F9671",
+  "model": "models/df_v24/m_4d8134ea29660ed4.vmdl",
+  "materials": {
+    "mat_39fe41ee3c6accdb": "DeltaForce/Content/Environment/Props/FutureTech/00_Materials/HD/MI_FutureTech_Office_Speakers_01_HD.MI_FutureTech_Office_Speakers_01_HD",
+    "mat_0f94f2ec6fd92749": "DeltaForce/Content/Environment/Props/FutureTech/00_Materials/HD/MI_FutureTech_Office_Speakers_01A_HD.MI_FutureTech_Office_Speakers_01A_HD"
+  },
+  "vertices": 927,
+  "polygons": 976,
+  "bounds": [
+    [
+      -14.271448135375977,
+      -10.471152305603027,
+      2.574545760580804e-06
+    ],
+    [
+      14.271448135375977,
+      16.72032356262207,
+      79.95446014404297
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

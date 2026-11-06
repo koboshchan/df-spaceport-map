@@ -1,0 +1,27 @@
+{
+  "id": "m_4f86b0c8f9063dfd",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Generic/SM_M_Generic_WarningLamp_02.SM_M_Generic_WarningLamp_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Generic\\SM_M_Generic_WarningLamp_02.glb",
+  "sourceSHA256": "ACEDCFF6CFBC6DC951464F60149342D0AEC82A981767DE63D4A4DE0BFE2697D5",
+  "model": "models/df_v24/m_4f86b0c8f9063dfd.vmdl",
+  "materials": {
+    "mat_0b809afb2fcf31a0": "DeltaForce/Content/Environment/Props/Morocco/Generic/00_Materials/HD/MI_M_Generic_WarningLamp_01_01_HD.MI_M_Generic_WarningLamp_01_01_HD",
+    "mat_7c2bf397f71ec429": "DeltaForce/Content/Environment/Structures/Window/00_Materials/HD/MI_Window_Glass_00_HD.MI_Window_Glass_00_HD"
+  },
+  "vertices": 574,
+  "polygons": 614,
+  "bounds": [
+    [
+      -2.5498414039611816,
+      -2.5498416423797607,
+      -5.1688886060219374e-08
+    ],
+    [
+      2.5498762130737305,
+      2.549872875213623,
+      5.726064205169678
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

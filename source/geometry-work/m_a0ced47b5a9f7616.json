@@ -1,0 +1,26 @@
+{
+  "id": "m_a0ced47b5a9f7616",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/RoadFacility/Ground/SpaceCenter/SM_H_Building_FutureTech_HTerrace_01c.SM_H_Building_FutureTech_HTerrace_01c",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\RoadFacility\\Ground\\SpaceCenter\\SM_H_Building_FutureTech_HTerrace_01c.glb",
+  "sourceSHA256": "2FCD75ECF46212866538DA3863D64A4BE931B18C29448933B8A5460EF60A6012",
+  "model": "models/df_v24/m_a0ced47b5a9f7616.vmdl",
+  "materials": {
+    "mat_ec09a4234266485f": "DeltaForce/Content/Environment/Structures/Building/FutureTech/00_Materials/MI_GEN_Marble_BoundlessPool.MI_GEN_Marble_BoundlessPool"
+  },
+  "vertices": 192,
+  "polygons": 274,
+  "bounds": [
+    [
+      -98.92134094238281,
+      -1825.965576171875,
+      260.2933654785156
+    ],
+    [
+      98.93641662597656,
+      -1307.1639404296875,
+      290.7792053222656
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

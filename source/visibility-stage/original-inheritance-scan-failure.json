@@ -1,0 +1,11 @@
+{
+  "exitCode": 1,
+  "error": "SSH invocation returned empty output; exact process stderr was not persisted by original SSH-attached run and is unavailable",
+  "outputArtifactAbsent": "unknown316-owner-source-index.json",
+  "replacement": "targeted-resume.py",
+  "replacementPID": 89796,
+  "stdout": "targeted-resume.log",
+  "stderr": "targeted-resume-stderr.log",
+  "exit": "targeted-resume-exit.json",
+  "method": "single objects.jsonl index pass then only matching owner/component/template files, detached Start-Process; no recursive source scan repeat"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "m_e8d627b3db6252b5",
+  "objectPath": "DeltaForce/Content/Environment/Structures/Building/FutureTech/SM_Building_FutureTech_H_01/SM_H_Building_FutureTech_HScreen_02.SM_H_Building_FutureTech_HScreen_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\Building\\FutureTech\\SM_Building_FutureTech_H_01\\SM_H_Building_FutureTech_HScreen_02.glb",
+  "sourceSHA256": "3A48FAFBBAE8707287B307734276C8AA19B01DDC15180A3DD8A6246CA877648E",
+  "model": "models/df_v24/m_e8d627b3db6252b5.vmdl",
+  "materials": {
+    "mat_a80cad6d08c046e6": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Acrylic_01_HD.MI_GEN_Acrylic_01_HD",
+    "mat_815b9d6d8da04001": "DeltaForce/Content/Environment/Structures/Building/Industrial/00_Materials/HD/MI_FutureTech_Lighting_BillBoard_04A_HD.MI_FutureTech_Lighting_BillBoard_04A_HD"
+  },
+  "vertices": 882,
+  "polygons": 744,
+  "bounds": [
+    [
+      -12.266398429870605,
+      -108.40583038330078,
+      -186.07095336914062
+    ],
+    [
+      31.989492416381836,
+      127.78536987304688,
+      185.64280700683594
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

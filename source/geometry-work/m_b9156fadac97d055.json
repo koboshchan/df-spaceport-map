@@ -1,0 +1,27 @@
+{
+  "id": "m_b9156fadac97d055",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_HBlack_InterSupport_01A.SM_H_Building_FutureTech_HBlack_InterSupport_01A",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_HBlack_InterSupport_01A.glb",
+  "sourceSHA256": "E398F0E9FB29242E64CCCBB6A34601F6AAE3448AB37E6B30CE89FBE9E153EE9E",
+  "model": "models/df_v24/m_b9156fadac97d055.vmdl",
+  "materials": {
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_20fabdfebe348075": "DeltaForce/Content/Environment/Structures/HAAVK/Pipeline/00_Materials/HD/MI_H_PipeLine_HD.MI_H_PipeLine_HD"
+  },
+  "vertices": 31102,
+  "polygons": 17842,
+  "bounds": [
+    [
+      1023.8309326171875,
+      -1580.500244140625,
+      183.10226440429688
+    ],
+    [
+      2762.056884765625,
+      -453.50933837890625,
+      1325.2276611328125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

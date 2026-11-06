@@ -1,0 +1,1919 @@
+{
+  "names": [
+    "FMaterialUniformExpressionVectorParameter",
+    "UVScale_Offset",
+    "FMaterialUniformExpressionAppendVector",
+    "FMaterialUniformExpressionComponentSwizzle",
+    "FMaterialUniformExpressionScalarParameter",
+    "DistanceFadeWidth",
+    "DistanceFadeMin",
+    "FMaterialUniformExpressionFoldedMath",
+    "EmissionMaskMax",
+    "EmissionMaskMin",
+    "EmissionColor-BaseColorEmissionWeight",
+    "FMaterialUniformExpressionConstant",
+    "GrazeDecayMin",
+    "GrazeDecayMax",
+    "EnableDecay",
+    "WetRainBase",
+    "WetPorosity",
+    "LowQualityMetallic",
+    "LowQualityRoughness",
+    "WetMaskStrength",
+    "FMaterialUniformExpressionTextureParameter",
+    "EMMap",
+    "BAMap",
+    "NRMMap"
+  ],
+  "base": 774,
+  "resources": [
+    {
+      "resourceIndex": 0,
+      "location": [
+        0,
+        4,
+        1,
+        48
+      ],
+      "base": 774,
+      "uniformStart": 893,
+      "vectors": [
+        {
+          "offset": 897,
+          "type": "FMaterialUniformExpressionVectorParameter",
+          "name": "UVScale_Offset",
+          "association": 2,
+          "index": -1,
+          "default": [
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "end": 934
+        },
+        {
+          "offset": 934,
+          "type": "FMaterialUniformExpressionAppendVector",
+          "A": {
+            "offset": 942,
+            "type": "FMaterialUniformExpressionComponentSwizzle",
+            "X": {
+              "offset": 950,
+              "type": "FMaterialUniformExpressionVectorParameter",
+              "name": "UVScale_Offset",
+              "association": 2,
+              "index": -1,
+              "default": [
+                1.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              "end": 987
+            },
+            "swizzle": [
+              0,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "end": 992
+          },
+          "B": {
+            "offset": 992,
+            "type": "FMaterialUniformExpressionComponentSwizzle",
+            "X": {
+              "offset": 1000,
+              "type": "FMaterialUniformExpressionVectorParameter",
+              "name": "UVScale_Offset",
+              "association": 2,
+              "index": -1,
+              "default": [
+                1.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              "end": 1037
+            },
+            "swizzle": [
+              1,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "end": 1042
+          },
+          "numComponentsA": 1,
+          "end": 1046
+        },
+        {
+          "offset": 1046,
+          "type": "FMaterialUniformExpressionAppendVector",
+          "A": {
+            "offset": 1054,
+            "type": "FMaterialUniformExpressionComponentSwizzle",
+            "X": {
+              "offset": 1062,
+              "type": "FMaterialUniformExpressionVectorParameter",
+              "name": "UVScale_Offset",
+              "association": 2,
+              "index": -1,
+              "default": [
+                1.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              "end": 1099
+            },
+            "swizzle": [
+              2,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "end": 1104
+          },
+          "B": {
+            "offset": 1104,
+            "type": "FMaterialUniformExpressionComponentSwizzle",
+            "X": {
+              "offset": 1112,
+              "type": "FMaterialUniformExpressionVectorParameter",
+              "name": "UVScale_Offset",
+              "association": 2,
+              "index": -1,
+              "default": [
+                1.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              "end": 1149
+            },
+            "swizzle": [
+              3,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "end": 1154
+          },
+          "numComponentsA": 1,
+          "end": 1158
+        }
+      ],
+      "scalars": [
+        {
+          "offset": 1162,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "DistanceFadeWidth",
+          "association": 2,
+          "index": -1,
+          "default": 6000.0,
+          "end": 1187
+        },
+        {
+          "offset": 1187,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "DistanceFadeMin",
+          "association": 2,
+          "index": -1,
+          "default": 6000.0,
+          "end": 1212
+        },
+        {
+          "offset": 1212,
+          "type": "FMaterialUniformExpressionFoldedMath",
+          "A": {
+            "offset": 1220,
+            "type": "FMaterialUniformExpressionScalarParameter",
+            "name": "DistanceFadeWidth",
+            "association": 2,
+            "index": -1,
+            "default": 6000.0,
+            "end": 1245
+          },
+          "B": {
+            "offset": 1245,
+            "type": "FMaterialUniformExpressionScalarParameter",
+            "name": "DistanceFadeMin",
+            "association": 2,
+            "index": -1,
+            "default": 6000.0,
+            "end": 1270
+          },
+          "op": 0,
+          "valueType": 15,
+          "end": 1275
+        },
+        {
+          "offset": 1275,
+          "type": "FMaterialUniformExpressionComponentSwizzle",
+          "X": {
+            "offset": 1283,
+            "type": "FMaterialUniformExpressionVectorParameter",
+            "name": "UVScale_Offset",
+            "association": 2,
+            "index": -1,
+            "default": [
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            "end": 1320
+          },
+          "swizzle": [
+            1,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "end": 1325
+        },
+        {
+          "offset": 1325,
+          "type": "FMaterialUniformExpressionComponentSwizzle",
+          "X": {
+            "offset": 1333,
+            "type": "FMaterialUniformExpressionVectorParameter",
+            "name": "UVScale_Offset",
+            "association": 2,
+            "index": -1,
+            "default": [
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            "end": 1370
+          },
+          "swizzle": [
+            0,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "end": 1375
+        },
+        {
+          "offset": 1375,
+          "type": "FMaterialUniformExpressionComponentSwizzle",
+          "X": {
+            "offset": 1383,
+            "type": "FMaterialUniformExpressionVectorParameter",
+            "name": "UVScale_Offset",
+            "association": 2,
+            "index": -1,
+            "default": [
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            "end": 1420
+          },
+          "swizzle": [
+            3,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "end": 1425
+        },
+        {
+          "offset": 1425,
+          "type": "FMaterialUniformExpressionComponentSwizzle",
+          "X": {
+            "offset": 1433,
+            "type": "FMaterialUniformExpressionVectorParameter",
+            "name": "UVScale_Offset",
+            "association": 2,
+            "index": -1,
+            "default": [
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            "end": 1470
+          },
+          "swizzle": [
+            2,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "end": 1475
+        },
+        {
+          "offset": 1475,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "EmissionMaskMax",
+          "association": 2,
+          "index": -1,
+          "default": 1.0,
+          "end": 1500
+        },
+        {
+          "offset": 1500,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "EmissionMaskMin",
+          "association": 2,
+          "index": -1,
+          "default": 0.0,
+          "end": 1525
+        },
+        {
+          "offset": 1525,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "EmissionColor-BaseColorEmissionWeight",
+          "association": 2,
+          "index": -1,
+          "default": 0.0,
+          "end": 1550
+        },
+        {
+          "offset": 1550,
+          "type": "FMaterialUniformExpressionFoldedMath",
+          "A": {
+            "offset": 1558,
+            "type": "FMaterialUniformExpressionConstant",
+            "value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "valueType": 15,
+            "end": 1583
+          },
+          "B": {
+            "offset": 1583,
+            "type": "FMaterialUniformExpressionScalarParameter",
+            "name": "EmissionColor-BaseColorEmissionWeight",
+            "association": 2,
+            "index": -1,
+            "default": 0.0,
+            "end": 1608
+          },
+          "op": 1,
+          "valueType": 15,
+          "end": 1613
+        },
+        {
+          "offset": 1613,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "GrazeDecayMin",
+          "association": 2,
+          "index": -1,
+          "default": 0.10000000149011612,
+          "end": 1638
+        },
+        {
+          "offset": 1638,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "GrazeDecayMax",
+          "association": 2,
+          "index": -1,
+          "default": 0.5,
+          "end": 1663
+        },
+        {
+          "offset": 1663,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "EnableDecay",
+          "association": 2,
+          "index": -1,
+          "default": 1.0,
+          "end": 1688
+        },
+        {
+          "offset": 1688,
+          "type": "FMaterialUniformExpressionFoldedMath",
+          "A": {
+            "offset": 1696,
+            "type": "FMaterialUniformExpressionConstant",
+            "value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "valueType": 15,
+            "end": 1721
+          },
+          "B": {
+            "offset": 1721,
+            "type": "FMaterialUniformExpressionScalarParameter",
+            "name": "EnableDecay",
+            "association": 2,
+            "index": -1,
+            "default": 1.0,
+            "end": 1746
+          },
+          "op": 1,
+          "valueType": 15,
+          "end": 1751
+        },
+        {
+          "offset": 1751,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "WetRainBase",
+          "association": 2,
+          "index": -1,
+          "default": -0.5,
+          "end": 1776
+        },
+        {
+          "offset": 1776,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "WetPorosity",
+          "association": 2,
+          "index": -1,
+          "default": 0.20000000298023224,
+          "end": 1801
+        },
+        {
+          "offset": 1801,
+          "type": "FMaterialUniformExpressionFoldedMath",
+          "A": {
+            "offset": 1809,
+            "type": "FMaterialUniformExpressionScalarParameter",
+            "name": "WetRainBase",
+            "association": 2,
+            "index": -1,
+            "default": -0.5,
+            "end": 1834
+          },
+          "B": {
+            "offset": 1834,
+            "type": "FMaterialUniformExpressionConstant",
+            "value": [
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0
+            ],
+            "valueType": 15,
+            "end": 1859
+          },
+          "op": 0,
+          "valueType": 15,
+          "end": 1864
+        },
+        {
+          "offset": 1864,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "LowQualityMetallic",
+          "association": 2,
+          "index": -1,
+          "default": 0.0,
+          "end": 1889
+        },
+        {
+          "offset": 1889,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "LowQualityRoughness",
+          "association": 2,
+          "index": -1,
+          "default": 1.0,
+          "end": 1914
+        },
+        {
+          "offset": 1914,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "WetMaskStrength",
+          "association": 2,
+          "index": -1,
+          "default": 0.3499999940395355,
+          "end": 1939
+        }
+      ],
+      "textures": [],
+      "cubeTextures": [],
+      "volumeTextures": [],
+      "virtualTextures": [],
+      "end": 1955,
+      "followingBytes": "020000001400000000000000150000000000000002ffffffff19000000ffffffff00000000010000001400000000000000160000000000000002ffffffff11000000ffffffff000000000100000000000000020000000100000000000000ffffffff0100000001000000ffffffff000000000000000000000000000000000000"
+    },
+    {
+      "resourceIndex": 1,
+      "location": [
+        97890,
+        4,
+        6,
+        48
+      ],
+      "base": 98664,
+      "uniformStart": 98783,
+      "vectors": [
+        {
+          "offset": 98787,
+          "type": "FMaterialUniformExpressionVectorParameter",
+          "name": "UVScale_Offset",
+          "association": 2,
+          "index": -1,
+          "default": [
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "end": 98824
+        },
+        {
+          "offset": 98824,
+          "type": "FMaterialUniformExpressionAppendVector",
+          "A": {
+            "offset": 98832,
+            "type": "FMaterialUniformExpressionComponentSwizzle",
+            "X": {
+              "offset": 98840,
+              "type": "FMaterialUniformExpressionVectorParameter",
+              "name": "UVScale_Offset",
+              "association": 2,
+              "index": -1,
+              "default": [
+                1.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              "end": 98877
+            },
+            "swizzle": [
+              0,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "end": 98882
+          },
+          "B": {
+            "offset": 98882,
+            "type": "FMaterialUniformExpressionComponentSwizzle",
+            "X": {
+              "offset": 98890,
+              "type": "FMaterialUniformExpressionVectorParameter",
+              "name": "UVScale_Offset",
+              "association": 2,
+              "index": -1,
+              "default": [
+                1.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              "end": 98927
+            },
+            "swizzle": [
+              1,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "end": 98932
+          },
+          "numComponentsA": 1,
+          "end": 98936
+        },
+        {
+          "offset": 98936,
+          "type": "FMaterialUniformExpressionAppendVector",
+          "A": {
+            "offset": 98944,
+            "type": "FMaterialUniformExpressionComponentSwizzle",
+            "X": {
+              "offset": 98952,
+              "type": "FMaterialUniformExpressionVectorParameter",
+              "name": "UVScale_Offset",
+              "association": 2,
+              "index": -1,
+              "default": [
+                1.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              "end": 98989
+            },
+            "swizzle": [
+              2,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "end": 98994
+          },
+          "B": {
+            "offset": 98994,
+            "type": "FMaterialUniformExpressionComponentSwizzle",
+            "X": {
+              "offset": 99002,
+              "type": "FMaterialUniformExpressionVectorParameter",
+              "name": "UVScale_Offset",
+              "association": 2,
+              "index": -1,
+              "default": [
+                1.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              "end": 99039
+            },
+            "swizzle": [
+              3,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "end": 99044
+          },
+          "numComponentsA": 1,
+          "end": 99048
+        }
+      ],
+      "scalars": [
+        {
+          "offset": 99052,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "DistanceFadeWidth",
+          "association": 2,
+          "index": -1,
+          "default": 6000.0,
+          "end": 99077
+        },
+        {
+          "offset": 99077,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "DistanceFadeMin",
+          "association": 2,
+          "index": -1,
+          "default": 6000.0,
+          "end": 99102
+        },
+        {
+          "offset": 99102,
+          "type": "FMaterialUniformExpressionFoldedMath",
+          "A": {
+            "offset": 99110,
+            "type": "FMaterialUniformExpressionScalarParameter",
+            "name": "DistanceFadeWidth",
+            "association": 2,
+            "index": -1,
+            "default": 6000.0,
+            "end": 99135
+          },
+          "B": {
+            "offset": 99135,
+            "type": "FMaterialUniformExpressionScalarParameter",
+            "name": "DistanceFadeMin",
+            "association": 2,
+            "index": -1,
+            "default": 6000.0,
+            "end": 99160
+          },
+          "op": 0,
+          "valueType": 15,
+          "end": 99165
+        },
+        {
+          "offset": 99165,
+          "type": "FMaterialUniformExpressionComponentSwizzle",
+          "X": {
+            "offset": 99173,
+            "type": "FMaterialUniformExpressionVectorParameter",
+            "name": "UVScale_Offset",
+            "association": 2,
+            "index": -1,
+            "default": [
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            "end": 99210
+          },
+          "swizzle": [
+            1,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "end": 99215
+        },
+        {
+          "offset": 99215,
+          "type": "FMaterialUniformExpressionComponentSwizzle",
+          "X": {
+            "offset": 99223,
+            "type": "FMaterialUniformExpressionVectorParameter",
+            "name": "UVScale_Offset",
+            "association": 2,
+            "index": -1,
+            "default": [
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            "end": 99260
+          },
+          "swizzle": [
+            0,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "end": 99265
+        },
+        {
+          "offset": 99265,
+          "type": "FMaterialUniformExpressionComponentSwizzle",
+          "X": {
+            "offset": 99273,
+            "type": "FMaterialUniformExpressionVectorParameter",
+            "name": "UVScale_Offset",
+            "association": 2,
+            "index": -1,
+            "default": [
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            "end": 99310
+          },
+          "swizzle": [
+            3,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "end": 99315
+        },
+        {
+          "offset": 99315,
+          "type": "FMaterialUniformExpressionComponentSwizzle",
+          "X": {
+            "offset": 99323,
+            "type": "FMaterialUniformExpressionVectorParameter",
+            "name": "UVScale_Offset",
+            "association": 2,
+            "index": -1,
+            "default": [
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            "end": 99360
+          },
+          "swizzle": [
+            2,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "end": 99365
+        },
+        {
+          "offset": 99365,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "EmissionMaskMax",
+          "association": 2,
+          "index": -1,
+          "default": 1.0,
+          "end": 99390
+        },
+        {
+          "offset": 99390,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "EmissionMaskMin",
+          "association": 2,
+          "index": -1,
+          "default": 0.0,
+          "end": 99415
+        },
+        {
+          "offset": 99415,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "EmissionColor-BaseColorEmissionWeight",
+          "association": 2,
+          "index": -1,
+          "default": 0.0,
+          "end": 99440
+        },
+        {
+          "offset": 99440,
+          "type": "FMaterialUniformExpressionFoldedMath",
+          "A": {
+            "offset": 99448,
+            "type": "FMaterialUniformExpressionConstant",
+            "value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "valueType": 15,
+            "end": 99473
+          },
+          "B": {
+            "offset": 99473,
+            "type": "FMaterialUniformExpressionScalarParameter",
+            "name": "EmissionColor-BaseColorEmissionWeight",
+            "association": 2,
+            "index": -1,
+            "default": 0.0,
+            "end": 99498
+          },
+          "op": 1,
+          "valueType": 15,
+          "end": 99503
+        },
+        {
+          "offset": 99503,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "GrazeDecayMin",
+          "association": 2,
+          "index": -1,
+          "default": 0.10000000149011612,
+          "end": 99528
+        },
+        {
+          "offset": 99528,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "GrazeDecayMax",
+          "association": 2,
+          "index": -1,
+          "default": 0.5,
+          "end": 99553
+        },
+        {
+          "offset": 99553,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "EnableDecay",
+          "association": 2,
+          "index": -1,
+          "default": 1.0,
+          "end": 99578
+        },
+        {
+          "offset": 99578,
+          "type": "FMaterialUniformExpressionFoldedMath",
+          "A": {
+            "offset": 99586,
+            "type": "FMaterialUniformExpressionConstant",
+            "value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "valueType": 15,
+            "end": 99611
+          },
+          "B": {
+            "offset": 99611,
+            "type": "FMaterialUniformExpressionScalarParameter",
+            "name": "EnableDecay",
+            "association": 2,
+            "index": -1,
+            "default": 1.0,
+            "end": 99636
+          },
+          "op": 1,
+          "valueType": 15,
+          "end": 99641
+        },
+        {
+          "offset": 99641,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "WetRainBase",
+          "association": 2,
+          "index": -1,
+          "default": -0.5,
+          "end": 99666
+        },
+        {
+          "offset": 99666,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "WetPorosity",
+          "association": 2,
+          "index": -1,
+          "default": 0.20000000298023224,
+          "end": 99691
+        },
+        {
+          "offset": 99691,
+          "type": "FMaterialUniformExpressionFoldedMath",
+          "A": {
+            "offset": 99699,
+            "type": "FMaterialUniformExpressionScalarParameter",
+            "name": "WetRainBase",
+            "association": 2,
+            "index": -1,
+            "default": -0.5,
+            "end": 99724
+          },
+          "B": {
+            "offset": 99724,
+            "type": "FMaterialUniformExpressionConstant",
+            "value": [
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0
+            ],
+            "valueType": 15,
+            "end": 99749
+          },
+          "op": 0,
+          "valueType": 15,
+          "end": 99754
+        },
+        {
+          "offset": 99754,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "WetMaskStrength",
+          "association": 2,
+          "index": -1,
+          "default": 0.3499999940395355,
+          "end": 99779
+        }
+      ],
+      "textures": [],
+      "cubeTextures": [],
+      "volumeTextures": [],
+      "virtualTextures": [],
+      "end": 99795,
+      "followingBytes": "030000001400000000000000170000000000000002ffffffff12000000ffffffff00000000010000001400000000000000150000000000000002ffffffff19000000ffffffff00000000010000001400000000000000160000000000000002ffffffff11000000ffffffff000000000100000000000000020000000200000000"
+    },
+    {
+      "resourceIndex": 2,
+      "location": [
+        196749,
+        3,
+        1,
+        0
+      ],
+      "base": 197523,
+      "uniformStart": 197642,
+      "vectors": [
+        {
+          "offset": 197646,
+          "type": "FMaterialUniformExpressionVectorParameter",
+          "name": "UVScale_Offset",
+          "association": 2,
+          "index": -1,
+          "default": [
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "end": 197683
+        },
+        {
+          "offset": 197683,
+          "type": "FMaterialUniformExpressionAppendVector",
+          "A": {
+            "offset": 197691,
+            "type": "FMaterialUniformExpressionComponentSwizzle",
+            "X": {
+              "offset": 197699,
+              "type": "FMaterialUniformExpressionVectorParameter",
+              "name": "UVScale_Offset",
+              "association": 2,
+              "index": -1,
+              "default": [
+                1.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              "end": 197736
+            },
+            "swizzle": [
+              0,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "end": 197741
+          },
+          "B": {
+            "offset": 197741,
+            "type": "FMaterialUniformExpressionComponentSwizzle",
+            "X": {
+              "offset": 197749,
+              "type": "FMaterialUniformExpressionVectorParameter",
+              "name": "UVScale_Offset",
+              "association": 2,
+              "index": -1,
+              "default": [
+                1.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              "end": 197786
+            },
+            "swizzle": [
+              1,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "end": 197791
+          },
+          "numComponentsA": 1,
+          "end": 197795
+        },
+        {
+          "offset": 197795,
+          "type": "FMaterialUniformExpressionAppendVector",
+          "A": {
+            "offset": 197803,
+            "type": "FMaterialUniformExpressionComponentSwizzle",
+            "X": {
+              "offset": 197811,
+              "type": "FMaterialUniformExpressionVectorParameter",
+              "name": "UVScale_Offset",
+              "association": 2,
+              "index": -1,
+              "default": [
+                1.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              "end": 197848
+            },
+            "swizzle": [
+              2,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "end": 197853
+          },
+          "B": {
+            "offset": 197853,
+            "type": "FMaterialUniformExpressionComponentSwizzle",
+            "X": {
+              "offset": 197861,
+              "type": "FMaterialUniformExpressionVectorParameter",
+              "name": "UVScale_Offset",
+              "association": 2,
+              "index": -1,
+              "default": [
+                1.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              "end": 197898
+            },
+            "swizzle": [
+              3,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "end": 197903
+          },
+          "numComponentsA": 1,
+          "end": 197907
+        }
+      ],
+      "scalars": [
+        {
+          "offset": 197911,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "DistanceFadeWidth",
+          "association": 2,
+          "index": -1,
+          "default": 6000.0,
+          "end": 197936
+        },
+        {
+          "offset": 197936,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "DistanceFadeMin",
+          "association": 2,
+          "index": -1,
+          "default": 6000.0,
+          "end": 197961
+        },
+        {
+          "offset": 197961,
+          "type": "FMaterialUniformExpressionFoldedMath",
+          "A": {
+            "offset": 197969,
+            "type": "FMaterialUniformExpressionScalarParameter",
+            "name": "DistanceFadeWidth",
+            "association": 2,
+            "index": -1,
+            "default": 6000.0,
+            "end": 197994
+          },
+          "B": {
+            "offset": 197994,
+            "type": "FMaterialUniformExpressionScalarParameter",
+            "name": "DistanceFadeMin",
+            "association": 2,
+            "index": -1,
+            "default": 6000.0,
+            "end": 198019
+          },
+          "op": 0,
+          "valueType": 15,
+          "end": 198024
+        },
+        {
+          "offset": 198024,
+          "type": "FMaterialUniformExpressionComponentSwizzle",
+          "X": {
+            "offset": 198032,
+            "type": "FMaterialUniformExpressionVectorParameter",
+            "name": "UVScale_Offset",
+            "association": 2,
+            "index": -1,
+            "default": [
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            "end": 198069
+          },
+          "swizzle": [
+            1,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "end": 198074
+        },
+        {
+          "offset": 198074,
+          "type": "FMaterialUniformExpressionComponentSwizzle",
+          "X": {
+            "offset": 198082,
+            "type": "FMaterialUniformExpressionVectorParameter",
+            "name": "UVScale_Offset",
+            "association": 2,
+            "index": -1,
+            "default": [
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            "end": 198119
+          },
+          "swizzle": [
+            0,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "end": 198124
+        },
+        {
+          "offset": 198124,
+          "type": "FMaterialUniformExpressionComponentSwizzle",
+          "X": {
+            "offset": 198132,
+            "type": "FMaterialUniformExpressionVectorParameter",
+            "name": "UVScale_Offset",
+            "association": 2,
+            "index": -1,
+            "default": [
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            "end": 198169
+          },
+          "swizzle": [
+            3,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "end": 198174
+        },
+        {
+          "offset": 198174,
+          "type": "FMaterialUniformExpressionComponentSwizzle",
+          "X": {
+            "offset": 198182,
+            "type": "FMaterialUniformExpressionVectorParameter",
+            "name": "UVScale_Offset",
+            "association": 2,
+            "index": -1,
+            "default": [
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            "end": 198219
+          },
+          "swizzle": [
+            2,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "end": 198224
+        },
+        {
+          "offset": 198224,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "EmissionMaskMax",
+          "association": 2,
+          "index": -1,
+          "default": 1.0,
+          "end": 198249
+        },
+        {
+          "offset": 198249,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "EmissionMaskMin",
+          "association": 2,
+          "index": -1,
+          "default": 0.0,
+          "end": 198274
+        },
+        {
+          "offset": 198274,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "EmissionColor-BaseColorEmissionWeight",
+          "association": 2,
+          "index": -1,
+          "default": 0.0,
+          "end": 198299
+        },
+        {
+          "offset": 198299,
+          "type": "FMaterialUniformExpressionFoldedMath",
+          "A": {
+            "offset": 198307,
+            "type": "FMaterialUniformExpressionConstant",
+            "value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "valueType": 15,
+            "end": 198332
+          },
+          "B": {
+            "offset": 198332,
+            "type": "FMaterialUniformExpressionScalarParameter",
+            "name": "EmissionColor-BaseColorEmissionWeight",
+            "association": 2,
+            "index": -1,
+            "default": 0.0,
+            "end": 198357
+          },
+          "op": 1,
+          "valueType": 15,
+          "end": 198362
+        },
+        {
+          "offset": 198362,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "GrazeDecayMin",
+          "association": 2,
+          "index": -1,
+          "default": 0.10000000149011612,
+          "end": 198387
+        },
+        {
+          "offset": 198387,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "GrazeDecayMax",
+          "association": 2,
+          "index": -1,
+          "default": 0.5,
+          "end": 198412
+        },
+        {
+          "offset": 198412,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "EnableDecay",
+          "association": 2,
+          "index": -1,
+          "default": 1.0,
+          "end": 198437
+        },
+        {
+          "offset": 198437,
+          "type": "FMaterialUniformExpressionFoldedMath",
+          "A": {
+            "offset": 198445,
+            "type": "FMaterialUniformExpressionConstant",
+            "value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "valueType": 15,
+            "end": 198470
+          },
+          "B": {
+            "offset": 198470,
+            "type": "FMaterialUniformExpressionScalarParameter",
+            "name": "EnableDecay",
+            "association": 2,
+            "index": -1,
+            "default": 1.0,
+            "end": 198495
+          },
+          "op": 1,
+          "valueType": 15,
+          "end": 198500
+        },
+        {
+          "offset": 198500,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "WetRainBase",
+          "association": 2,
+          "index": -1,
+          "default": -0.5,
+          "end": 198525
+        },
+        {
+          "offset": 198525,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "WetPorosity",
+          "association": 2,
+          "index": -1,
+          "default": 0.20000000298023224,
+          "end": 198550
+        },
+        {
+          "offset": 198550,
+          "type": "FMaterialUniformExpressionFoldedMath",
+          "A": {
+            "offset": 198558,
+            "type": "FMaterialUniformExpressionScalarParameter",
+            "name": "WetRainBase",
+            "association": 2,
+            "index": -1,
+            "default": -0.5,
+            "end": 198583
+          },
+          "B": {
+            "offset": 198583,
+            "type": "FMaterialUniformExpressionConstant",
+            "value": [
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0
+            ],
+            "valueType": 15,
+            "end": 198608
+          },
+          "op": 0,
+          "valueType": 15,
+          "end": 198613
+        },
+        {
+          "offset": 198613,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "LowQualityMetallic",
+          "association": 2,
+          "index": -1,
+          "default": 0.0,
+          "end": 198638
+        },
+        {
+          "offset": 198638,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "LowQualityRoughness",
+          "association": 2,
+          "index": -1,
+          "default": 1.0,
+          "end": 198663
+        },
+        {
+          "offset": 198663,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "WetMaskStrength",
+          "association": 2,
+          "index": -1,
+          "default": 0.3499999940395355,
+          "end": 198688
+        }
+      ],
+      "textures": [],
+      "cubeTextures": [],
+      "volumeTextures": [],
+      "virtualTextures": [],
+      "end": 198704,
+      "followingBytes": "020000001400000000000000150000000000000002ffffffff19000000ffffffff00000000010000001400000000000000160000000000000002ffffffff11000000ffffffff000000000100000000000000020000000100000000000000ffffffff0100000001000000ffffffff000000000000000000000000000000000000"
+    },
+    {
+      "resourceIndex": 3,
+      "location": [
+        279952,
+        3,
+        6,
+        0
+      ],
+      "base": 280726,
+      "uniformStart": 280845,
+      "vectors": [
+        {
+          "offset": 280849,
+          "type": "FMaterialUniformExpressionVectorParameter",
+          "name": "UVScale_Offset",
+          "association": 2,
+          "index": -1,
+          "default": [
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "end": 280886
+        },
+        {
+          "offset": 280886,
+          "type": "FMaterialUniformExpressionAppendVector",
+          "A": {
+            "offset": 280894,
+            "type": "FMaterialUniformExpressionComponentSwizzle",
+            "X": {
+              "offset": 280902,
+              "type": "FMaterialUniformExpressionVectorParameter",
+              "name": "UVScale_Offset",
+              "association": 2,
+              "index": -1,
+              "default": [
+                1.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              "end": 280939
+            },
+            "swizzle": [
+              0,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "end": 280944
+          },
+          "B": {
+            "offset": 280944,
+            "type": "FMaterialUniformExpressionComponentSwizzle",
+            "X": {
+              "offset": 280952,
+              "type": "FMaterialUniformExpressionVectorParameter",
+              "name": "UVScale_Offset",
+              "association": 2,
+              "index": -1,
+              "default": [
+                1.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              "end": 280989
+            },
+            "swizzle": [
+              1,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "end": 280994
+          },
+          "numComponentsA": 1,
+          "end": 280998
+        },
+        {
+          "offset": 280998,
+          "type": "FMaterialUniformExpressionAppendVector",
+          "A": {
+            "offset": 281006,
+            "type": "FMaterialUniformExpressionComponentSwizzle",
+            "X": {
+              "offset": 281014,
+              "type": "FMaterialUniformExpressionVectorParameter",
+              "name": "UVScale_Offset",
+              "association": 2,
+              "index": -1,
+              "default": [
+                1.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              "end": 281051
+            },
+            "swizzle": [
+              2,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "end": 281056
+          },
+          "B": {
+            "offset": 281056,
+            "type": "FMaterialUniformExpressionComponentSwizzle",
+            "X": {
+              "offset": 281064,
+              "type": "FMaterialUniformExpressionVectorParameter",
+              "name": "UVScale_Offset",
+              "association": 2,
+              "index": -1,
+              "default": [
+                1.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              "end": 281101
+            },
+            "swizzle": [
+              3,
+              -1,
+              -1,
+              -1,
+              1
+            ],
+            "end": 281106
+          },
+          "numComponentsA": 1,
+          "end": 281110
+        }
+      ],
+      "scalars": [
+        {
+          "offset": 281114,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "DistanceFadeWidth",
+          "association": 2,
+          "index": -1,
+          "default": 6000.0,
+          "end": 281139
+        },
+        {
+          "offset": 281139,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "DistanceFadeMin",
+          "association": 2,
+          "index": -1,
+          "default": 6000.0,
+          "end": 281164
+        },
+        {
+          "offset": 281164,
+          "type": "FMaterialUniformExpressionFoldedMath",
+          "A": {
+            "offset": 281172,
+            "type": "FMaterialUniformExpressionScalarParameter",
+            "name": "DistanceFadeWidth",
+            "association": 2,
+            "index": -1,
+            "default": 6000.0,
+            "end": 281197
+          },
+          "B": {
+            "offset": 281197,
+            "type": "FMaterialUniformExpressionScalarParameter",
+            "name": "DistanceFadeMin",
+            "association": 2,
+            "index": -1,
+            "default": 6000.0,
+            "end": 281222
+          },
+          "op": 0,
+          "valueType": 15,
+          "end": 281227
+        },
+        {
+          "offset": 281227,
+          "type": "FMaterialUniformExpressionComponentSwizzle",
+          "X": {
+            "offset": 281235,
+            "type": "FMaterialUniformExpressionVectorParameter",
+            "name": "UVScale_Offset",
+            "association": 2,
+            "index": -1,
+            "default": [
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            "end": 281272
+          },
+          "swizzle": [
+            1,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "end": 281277
+        },
+        {
+          "offset": 281277,
+          "type": "FMaterialUniformExpressionComponentSwizzle",
+          "X": {
+            "offset": 281285,
+            "type": "FMaterialUniformExpressionVectorParameter",
+            "name": "UVScale_Offset",
+            "association": 2,
+            "index": -1,
+            "default": [
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            "end": 281322
+          },
+          "swizzle": [
+            0,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "end": 281327
+        },
+        {
+          "offset": 281327,
+          "type": "FMaterialUniformExpressionComponentSwizzle",
+          "X": {
+            "offset": 281335,
+            "type": "FMaterialUniformExpressionVectorParameter",
+            "name": "UVScale_Offset",
+            "association": 2,
+            "index": -1,
+            "default": [
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            "end": 281372
+          },
+          "swizzle": [
+            3,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "end": 281377
+        },
+        {
+          "offset": 281377,
+          "type": "FMaterialUniformExpressionComponentSwizzle",
+          "X": {
+            "offset": 281385,
+            "type": "FMaterialUniformExpressionVectorParameter",
+            "name": "UVScale_Offset",
+            "association": 2,
+            "index": -1,
+            "default": [
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            "end": 281422
+          },
+          "swizzle": [
+            2,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "end": 281427
+        },
+        {
+          "offset": 281427,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "EmissionMaskMax",
+          "association": 2,
+          "index": -1,
+          "default": 1.0,
+          "end": 281452
+        },
+        {
+          "offset": 281452,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "EmissionMaskMin",
+          "association": 2,
+          "index": -1,
+          "default": 0.0,
+          "end": 281477
+        },
+        {
+          "offset": 281477,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "EmissionColor-BaseColorEmissionWeight",
+          "association": 2,
+          "index": -1,
+          "default": 0.0,
+          "end": 281502
+        },
+        {
+          "offset": 281502,
+          "type": "FMaterialUniformExpressionFoldedMath",
+          "A": {
+            "offset": 281510,
+            "type": "FMaterialUniformExpressionConstant",
+            "value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "valueType": 15,
+            "end": 281535
+          },
+          "B": {
+            "offset": 281535,
+            "type": "FMaterialUniformExpressionScalarParameter",
+            "name": "EmissionColor-BaseColorEmissionWeight",
+            "association": 2,
+            "index": -1,
+            "default": 0.0,
+            "end": 281560
+          },
+          "op": 1,
+          "valueType": 15,
+          "end": 281565
+        },
+        {
+          "offset": 281565,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "GrazeDecayMin",
+          "association": 2,
+          "index": -1,
+          "default": 0.10000000149011612,
+          "end": 281590
+        },
+        {
+          "offset": 281590,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "GrazeDecayMax",
+          "association": 2,
+          "index": -1,
+          "default": 0.5,
+          "end": 281615
+        },
+        {
+          "offset": 281615,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "EnableDecay",
+          "association": 2,
+          "index": -1,
+          "default": 1.0,
+          "end": 281640
+        },
+        {
+          "offset": 281640,
+          "type": "FMaterialUniformExpressionFoldedMath",
+          "A": {
+            "offset": 281648,
+            "type": "FMaterialUniformExpressionConstant",
+            "value": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "valueType": 15,
+            "end": 281673
+          },
+          "B": {
+            "offset": 281673,
+            "type": "FMaterialUniformExpressionScalarParameter",
+            "name": "EnableDecay",
+            "association": 2,
+            "index": -1,
+            "default": 1.0,
+            "end": 281698
+          },
+          "op": 1,
+          "valueType": 15,
+          "end": 281703
+        },
+        {
+          "offset": 281703,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "WetRainBase",
+          "association": 2,
+          "index": -1,
+          "default": -0.5,
+          "end": 281728
+        },
+        {
+          "offset": 281728,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "WetPorosity",
+          "association": 2,
+          "index": -1,
+          "default": 0.20000000298023224,
+          "end": 281753
+        },
+        {
+          "offset": 281753,
+          "type": "FMaterialUniformExpressionFoldedMath",
+          "A": {
+            "offset": 281761,
+            "type": "FMaterialUniformExpressionScalarParameter",
+            "name": "WetRainBase",
+            "association": 2,
+            "index": -1,
+            "default": -0.5,
+            "end": 281786
+          },
+          "B": {
+            "offset": 281786,
+            "type": "FMaterialUniformExpressionConstant",
+            "value": [
+              -2.0,
+              -2.0,
+              -2.0,
+              -2.0
+            ],
+            "valueType": 15,
+            "end": 281811
+          },
+          "op": 0,
+          "valueType": 15,
+          "end": 281816
+        },
+        {
+          "offset": 281816,
+          "type": "FMaterialUniformExpressionScalarParameter",
+          "name": "WetMaskStrength",
+          "association": 2,
+          "index": -1,
+          "default": 0.3499999940395355,
+          "end": 281841
+        }
+      ],
+      "textures": [],
+      "cubeTextures": [],
+      "volumeTextures": [],
+      "virtualTextures": [],
+      "end": 281857,
+      "followingBytes": "030000001400000000000000170000000000000002ffffffff12000000ffffffff00000000010000001400000000000000150000000000000002ffffffff19000000ffffffff00000000010000001400000000000000160000000000000002ffffffff11000000ffffffff000000000100000000000000020000000200000000"
+    }
+  ]
+}

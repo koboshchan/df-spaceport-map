@@ -1,0 +1,14 @@
+{
+  "materials/skybox/sky_de_nuke.vmat_c": {
+    "archive": "E:\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\csgo\\pak01_386.vpk",
+    "offset": 91130160,
+    "size": 2204,
+    "sha256": "c750c75c2e3b49f6c73826e08555a91a337f272cdd05e0090526eef9d54edfdc"
+  },
+  "materials/skybox/sky_de_nuke_exr_f04e84b2.vtex_c": {
+    "archive": "E:\\SteamLibrary\\steamapps\\common\\Counter-Strike Global Offensive\\game\\csgo\\pak01_261.vpk",
+    "offset": 70202640,
+    "size": 384301,
+    "sha256": "29af86e9fb76ac325233ddea3312835f2b24bd82eef802715dd14bc63de1b03c"
+  }
+}

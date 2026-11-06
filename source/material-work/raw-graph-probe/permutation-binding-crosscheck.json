@@ -1,0 +1,554 @@
+[
+  {
+    "material": "props-root",
+    "archiveIndex": 2146,
+    "resourceIndex": 5,
+    "feature": 3,
+    "nativeTailSHA256": "755af20fa8cdcbc8e22b5a402a354cd2ff501d6d2847a1ac6ea4d108b1a14239",
+    "payloadSHA256": "2ecbc1ab468f489b8651908506edde386264f3faca1768ebb624c26b38632ac6",
+    "stackCount": 3,
+    "namedVTCount": 8,
+    "nativeVTRecords": [
+      {
+        "start": 532898,
+        "end": 532935,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 28,
+        "parameterName": "NormalMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          36,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 532935,
+        "end": 532972,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 29,
+        "parameterName": "01_R_Normal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          30,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 532972,
+        "end": 533009,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 30,
+        "parameterName": "02_G_Normal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          34,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 533009,
+        "end": 533046,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 31,
+        "parameterName": "01_R_Base",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          28,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 533046,
+        "end": 533083,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 32,
+        "parameterName": "02_G_Base",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          33,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 533083,
+        "end": 533120,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 33,
+        "parameterName": "BlendMask",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          26,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 533120,
+        "end": 533157,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 34,
+        "parameterName": "01_R_MRA",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          38,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 533157,
+        "end": 533194,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 35,
+        "parameterName": "02_G_MRA",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          40,
+          -1,
+          0,
+          1
+        ]
+      }
+    ],
+    "physicalTextureTokens": [
+      {
+        "resourceIndex": 6,
+        "register": 16
+      },
+      {
+        "resourceIndex": 8,
+        "register": 17
+      },
+      {
+        "resourceIndex": 10,
+        "register": 18
+      },
+      {
+        "resourceIndex": 12,
+        "register": 19
+      },
+      {
+        "resourceIndex": 14,
+        "register": 20
+      },
+      {
+        "resourceIndex": 16,
+        "register": 21
+      },
+      {
+        "resourceIndex": 18,
+        "register": 22
+      },
+      {
+        "resourceIndex": 20,
+        "register": 23
+      }
+    ],
+    "observedResourceFormula": true,
+    "vectorBaseCandidate": 17,
+    "status": "resource formula observed in exact permutations; assigning each token to ordered VT record is SOURCE-CORROBORATED CANDIDATE only, DF runtime layout proof outstanding"
+  },
+  {
+    "material": "props-root",
+    "archiveIndex": 2160,
+    "resourceIndex": 8,
+    "feature": 3,
+    "nativeTailSHA256": "755af20fa8cdcbc8e22b5a402a354cd2ff501d6d2847a1ac6ea4d108b1a14239",
+    "payloadSHA256": "21cdb9edcf1262c57a46346dba595d0c7350364d6eed2707fc12fd97bd2cf2e0",
+    "stackCount": 4,
+    "namedVTCount": 9,
+    "nativeVTRecords": [
+      {
+        "start": 801586,
+        "end": 801623,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 38,
+        "parameterName": "DetailNormal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          45,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 801623,
+        "end": 801660,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 28,
+        "parameterName": "NormalMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          36,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 801660,
+        "end": 801697,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 29,
+        "parameterName": "01_R_Normal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          30,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 801697,
+        "end": 801734,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 30,
+        "parameterName": "02_G_Normal",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          34,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 801734,
+        "end": 801771,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 31,
+        "parameterName": "01_R_Base",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          28,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 801771,
+        "end": 801808,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 32,
+        "parameterName": "02_G_Base",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          33,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 801808,
+        "end": 801845,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 33,
+        "parameterName": "BlendMask",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          26,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start": 801845,
+        "end": 801882,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 34,
+        "parameterName": "01_R_MRA",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          38,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 801882,
+        "end": 801919,
+        "typeIndex": 27,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 35,
+        "parameterName": "02_G_MRA",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          40,
+          -1,
+          0,
+          1
+        ]
+      }
+    ],
+    "physicalTextureTokens": [
+      {
+        "resourceIndex": 8,
+        "register": 17
+      },
+      {
+        "resourceIndex": 10,
+        "register": 18
+      },
+      {
+        "resourceIndex": 12,
+        "register": 19
+      },
+      {
+        "resourceIndex": 14,
+        "register": 20
+      },
+      {
+        "resourceIndex": 16,
+        "register": 21
+      },
+      {
+        "resourceIndex": 18,
+        "register": 22
+      },
+      {
+        "resourceIndex": 20,
+        "register": 23
+      },
+      {
+        "resourceIndex": 22,
+        "register": 24
+      },
+      {
+        "resourceIndex": 24,
+        "register": 25
+      }
+    ],
+    "observedResourceFormula": true,
+    "vectorBaseCandidate": 21,
+    "status": "resource formula observed in exact permutations; assigning each token to ordered VT record is SOURCE-CORROBORATED CANDIDATE only, DF runtime layout proof outstanding"
+  },
+  {
+    "material": "light-root",
+    "archiveIndex": 13010,
+    "resourceIndex": 2,
+    "feature": 3,
+    "nativeTailSHA256": "1a1ac4fac9dbc282dbb01071ffe63e2e074cb52c4cf2badcf3d92f89c5154989",
+    "payloadSHA256": "bdbcca10bbf3406bb1ed41e1fc71fd3a18f525f63c62b8e3e02a86d3aa50318f",
+    "stackCount": 2,
+    "namedVTCount": 2,
+    "nativeVTRecords": [
+      {
+        "start": 198708,
+        "end": 198745,
+        "typeIndex": 20,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 21,
+        "parameterName": "EMMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          25,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 198745,
+        "end": 198782,
+        "typeIndex": 20,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 22,
+        "parameterName": "BAMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          17,
+          -1,
+          0,
+          1
+        ]
+      }
+    ],
+    "physicalTextureTokens": [
+      {
+        "resourceIndex": 4,
+        "register": 16
+      },
+      {
+        "resourceIndex": 6,
+        "register": 17
+      }
+    ],
+    "observedResourceFormula": true,
+    "vectorBaseCandidate": 8,
+    "status": "resource formula observed in exact permutations; assigning each token to ordered VT record is SOURCE-CORROBORATED CANDIDATE only, DF runtime layout proof outstanding"
+  },
+  {
+    "material": "light-root",
+    "archiveIndex": 13041,
+    "resourceIndex": 3,
+    "feature": 3,
+    "nativeTailSHA256": "1a1ac4fac9dbc282dbb01071ffe63e2e074cb52c4cf2badcf3d92f89c5154989",
+    "payloadSHA256": "8e46315b20473bbf5b93a0e62039153668357ee17820286f284bcb8685631c1e",
+    "stackCount": 2,
+    "namedVTCount": 3,
+    "nativeVTRecords": [
+      {
+        "start": 281861,
+        "end": 281898,
+        "typeIndex": 20,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 23,
+        "parameterName": "NRMMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          18,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 281898,
+        "end": 281935,
+        "typeIndex": 20,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 21,
+        "parameterName": "EMMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          25,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "start": 281935,
+        "end": 281972,
+        "typeIndex": 20,
+        "typeName": "FMaterialUniformExpressionTextureParameter",
+        "typeNumber": 0,
+        "parameterIndex": 22,
+        "parameterName": "BAMap",
+        "parameterNumber": 0,
+        "association": 2,
+        "fiveIntsUninterpreted": [
+          -1,
+          17,
+          -1,
+          0,
+          1
+        ]
+      }
+    ],
+    "physicalTextureTokens": [
+      {
+        "resourceIndex": 4,
+        "register": 16
+      },
+      {
+        "resourceIndex": 6,
+        "register": 17
+      },
+      {
+        "resourceIndex": 8,
+        "register": 18
+      }
+    ],
+    "observedResourceFormula": true,
+    "vectorBaseCandidate": 9,
+    "status": "resource formula observed in exact permutations; assigning each token to ordered VT record is SOURCE-CORROBORATED CANDIDATE only, DF runtime layout proof outstanding"
+  }
+]

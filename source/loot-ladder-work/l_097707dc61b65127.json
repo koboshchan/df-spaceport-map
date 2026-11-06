@@ -1,0 +1,32 @@
+{
+  "canonical": "SM_GEN_Construction_Dupmster",
+  "state": "closed",
+  "id": "l_097707dc61b65127",
+  "objectPath": "DeltaForce/Content/Models/SceneObjects/Dupmster/SM_GEN_Construction_Dupmster.uasset|closed",
+  "source": "E:\\df-extract-20261105\\loot-skeletal\\static-paired-v3\\SM_GEN_Construction_Dupmster\\closed.glb",
+  "sourceSHA256": "dd46caea22a29a088df8d626791d3453108719ecaab469c3cfd1df024342b88f",
+  "model": "models/df_v24/l_097707dc61b65127.vmdl",
+  "materials": {
+    "mat_4051bdb88f7aaf24": "DeltaForce/Content/Environment/Gameplay/Feature/00_Materials/HD/MI_M_Feature_TrashCan_01A_HD.MI_M_Feature_TrashCan_01A_HD",
+    "mat_3487e6473a67e874": "DeltaForce/Content/Environment/Gameplay/Feature/00_Materials/HD/MI_M_Feature_TrashCan_01B_HD.MI_M_Feature_TrashCan_01B_HD",
+    "mat_3744be68d52966dc": "DeltaForce/Content/Environment/Gameplay/Feature/00_Materials/HD/MI_M_Feature_Container_01A_Decal_HD.MI_M_Feature_Container_01A_Decal_HD",
+    "mat_031750daaf9c4547": "DeltaForce/Content/Environment/Decal/Connect/00_Materials/HD/MI_GEN_Decal_Leaking_02_HD.MI_GEN_Decal_Leaking_02_HD",
+    "mat_d172c567ecbb9122": "DeltaForce/Content/Environment/Decal/Connect/00_Materials/HD/MI_I_Connect_Decal_06b_HD.MI_I_Connect_Decal_06b_HD"
+  },
+  "vertices": 13914,
+  "polygons": 18570,
+  "bounds": [
+    [
+      -32.1739616394043,
+      -51.078330993652344,
+      -0.18522948026657104
+    ],
+    [
+      31.26806640625,
+      50.45746612548828,
+      69.30497741699219
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

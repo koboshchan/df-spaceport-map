@@ -1,0 +1,28 @@
+{
+  "id": "m_8111bcc6a0a07e4a",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_Dock_06a_InterWall_02a.SM_H_Building_FutureTech_Dock_06a_InterWall_02a",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_Dock_06a_InterWall_02a.glb",
+  "sourceSHA256": "C40BA2138C000CD9B37B41FD0D353B98098684B8E74D8A1FA2261D8AF5C0CA10",
+  "model": "models/df_v24/m_8111bcc6a0a07e4a.vmdl",
+  "materials": {
+    "mat_79071d76426b9c38": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Fabric_Wall_01_HD.MI_GEN_Fabric_Wall_01_HD",
+    "mat_0c3d4725e8f3b0b6": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Wooden_Plank_02C_HD.MI_GEN_Wooden_Plank_02C_HD",
+    "mat_61dec35a85fbcd34": "DeltaForce/Content/Environment/Props/HAAVK/Residential/Bedroom/00_Materials/HD/MI_H_Residential_Bedroom_Shelf_01C_HD.MI_H_Residential_Bedroom_Shelf_01C_HD"
+  },
+  "vertices": 14735,
+  "polygons": 19912,
+  "bounds": [
+    [
+      1132.081298828125,
+      1127.4814453125,
+      176.6013641357422
+    ],
+    [
+      2035.41796875,
+      1528.6226806640625,
+      214.27854919433594
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

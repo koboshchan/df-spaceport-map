@@ -1,0 +1,27 @@
+{
+  "id": "m_0ab1f284f62df2b2",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/SM_H_Building_FutureTech_Dam_Pipe_02.SM_H_Building_FutureTech_Dam_Pipe_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\SM_H_Building_FutureTech_Dam_Pipe_02.glb",
+  "sourceSHA256": "D7A34CBCD911A1A7CE49F26AB2774FADF24F59AEB4BCAA64F7BD1BA28ED8F2C3",
+  "model": "models/df_v24/m_0ab1f284f62df2b2.vmdl",
+  "materials": {
+    "mat_c2007be28888a6c9": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Continuous_Metal_09_Black_B_HD.MI_H_FutureTech_Continuous_Metal_09_Black_B_HD",
+    "mat_cc3fdc6503104420": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Continuous_Metal_09_Black_A_HD.MI_H_FutureTech_Continuous_Metal_09_Black_A_HD"
+  },
+  "vertices": 1160,
+  "polygons": 896,
+  "bounds": [
+    [
+      -10.455890655517578,
+      -10.4558744430542,
+      -5.3743711703191366e-08
+    ],
+    [
+      10.455845832824707,
+      10.455891609191895,
+      46.08000183105469
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

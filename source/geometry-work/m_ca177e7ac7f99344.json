@@ -1,0 +1,26 @@
+{
+  "id": "m_ca177e7ac7f99344",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/SM_H_FutureTech_Road_FlowerBed_04_01.SM_H_FutureTech_Road_FlowerBed_04_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\FutureTech\\SM_H_FutureTech_Road_FlowerBed_04_01.glb",
+  "sourceSHA256": "1808E03A432DE94EA2A2735D68CB2630BD6EA0490F8AE506055B548BB98CC66A",
+  "model": "models/df_v24/m_ca177e7ac7f99344.vmdl",
+  "materials": {
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD"
+  },
+  "vertices": 1044,
+  "polygons": 1728,
+  "bounds": [
+    [
+      -10.976371765136719,
+      -66.1794662475586,
+      2.7465819130156888e-06
+    ],
+    [
+      10.976371765136719,
+      66.1794662475586,
+      20.83047103881836
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

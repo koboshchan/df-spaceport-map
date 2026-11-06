@@ -1,0 +1,26 @@
+{
+  "id": "m_9a1de72613cfc1bb",
+  "objectPath": "DeltaForce/Content/Environment/Structures/IRIS/Fence/SM_I_Fence_ConcreteWall_260x40_01.SM_I_Fence_ConcreteWall_260x40_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\IRIS\\Fence\\SM_I_Fence_ConcreteWall_260x40_01.glb",
+  "sourceSHA256": "D352A00E4A1D0D9724FB32BE4ACDFD3F917A2B4DEF244F8F56419CD3FCAA5CFE",
+  "model": "models/df_v24/m_9a1de72613cfc1bb.vmdl",
+  "materials": {
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD"
+  },
+  "vertices": 174,
+  "polygons": 180,
+  "bounds": [
+    [
+      -1.7166136956348055e-07,
+      -12.959999084472656,
+      -7.935710863598059e-16
+    ],
+    [
+      14.399999618530273,
+      1.4399999380111694,
+      93.24479675292969
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

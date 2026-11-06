@@ -1,0 +1,26 @@
+{
+  "id": "m_5b6bd4ccf12aad14",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Transport/Utility/SM_H_Transport_Utility_TrafficLight_01.SM_H_Transport_Utility_TrafficLight_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Transport\\Utility\\SM_H_Transport_Utility_TrafficLight_01.glb",
+  "sourceSHA256": "FBE1E7C1E03B778C33E2501F3A0B03EE9D7F934D55F4F78BE21F84AF04CC197C",
+  "model": "models/df_v24/m_5b6bd4ccf12aad14.vmdl",
+  "materials": {
+    "mat_814f63411773a67f": "DeltaForce/Content/Environment/Props/HAAVK/Transport/Utility/00_Materials/HD/MI_H_Transport_Utility_TrafficLight_01_HD.MI_H_Transport_Utility_TrafficLight_01_HD"
+  },
+  "vertices": 2260,
+  "polygons": 1996,
+  "bounds": [
+    [
+      -341.419189453125,
+      -5.368029594421387,
+      -0.0009664642857387662
+    ],
+    [
+      64.41230010986328,
+      5.368028163909912,
+      254.46112060546875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

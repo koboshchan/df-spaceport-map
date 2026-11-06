@@ -1,0 +1,26 @@
+{
+  "id": "m_c980b526eace39d5",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/SM_BS_Aglaonema_60cm_HD.SM_BS_Aglaonema_60cm_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Bush\\SM_BS_Aglaonema_60cm_HD.glb",
+  "sourceSHA256": "8C46661E98AFC1D2435F785A06B6214F5DF44E4F9000BF31E620F94C10EE73D6",
+  "model": "models/df_v24/m_c980b526eace39d5.vmdl",
+  "materials": {
+    "mat_b48c4c4c7b6ab7b8": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/00_Materials/MI_BS_Aglaonema_60cm_Leaf_HD.MI_BS_Aglaonema_60cm_Leaf_HD"
+  },
+  "vertices": 455,
+  "polygons": 569,
+  "bounds": [
+    [
+      -15.01141357421875,
+      -16.521726608276367,
+      -2.547194719314575
+    ],
+    [
+      18.190933227539062,
+      18.647232055664062,
+      23.389217376708984
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

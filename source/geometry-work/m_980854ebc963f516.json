@@ -1,0 +1,26 @@
+{
+  "id": "m_980854ebc963f516",
+  "objectPath": "DeltaForce/Content/Environment/Props/Government/Office/SM_M_Government_Office_Pencil_01.SM_M_Government_Office_Pencil_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Government\\Office\\SM_M_Government_Office_Pencil_01.glb",
+  "sourceSHA256": "BAD9B189994674ECFBC3F616DCA2CA4F2527E14140106474321E58515134E9AE",
+  "model": "models/df_v24/m_980854ebc963f516.vmdl",
+  "materials": {
+    "mat_672421bf3651d057": "DeltaForce/Content/Environment/Props/Government/Office/00_Materials/HD/MI_M_Government_Office_Brushpot_02_HD.MI_M_Government_Office_Brushpot_02_HD"
+  },
+  "vertices": 137,
+  "polygons": 150,
+  "bounds": [
+    [
+      -0.1435033082962036,
+      -3.5880491733551025,
+      0.0006015014951117337
+    ],
+    [
+      0.14311492443084717,
+      3.5828282833099365,
+      0.291408896446228
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

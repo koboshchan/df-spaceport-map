@@ -1,0 +1,29 @@
+{
+  "id": "m_61ad3f8b17cf20c7",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_Dormitory/SM_H_Building_FutureTech_GlassStair_01.SM_H_Building_FutureTech_GlassStair_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_Dormitory\\SM_H_Building_FutureTech_GlassStair_01.glb",
+  "sourceSHA256": "4E56EFC7A40EC8D4FB4BC3B4250EDCDFAC2DFAAFF1222215BECEEF443E23C925",
+  "model": "models/df_v24/m_61ad3f8b17cf20c7.vmdl",
+  "materials": {
+    "mat_38b39ab9bd6e8fae": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_03_HD.MI_GEN_Metal_Painting_03_HD",
+    "mat_9abb213c5f93b0f7": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Wooden_Plank_01_HD.MI_GEN_Wooden_Plank_01_HD",
+    "mat_3ad5fc978e7d2b72": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_Terrace_256_01_HD.MI_I_WalkwaySystem_Terrace_256_01_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD"
+  },
+  "vertices": 21917,
+  "polygons": 19106,
+  "bounds": [
+    [
+      -1.7657992839813232,
+      -0.8631518483161926,
+      -207.17453002929688
+    ],
+    [
+      93.96244812011719,
+      406.74920654296875,
+      38.586727142333984
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

@@ -1,0 +1,1301 @@
+{
+  "schema": "hit8-exact-target-actions-v1",
+  "actions": [
+    {
+      "rowIndex": 24748,
+      "placement": {
+        "objectPath": "DeltaForce/Content/Maps/BuildMaps_HD/SpaceCenter_Ma1/Runtime/Default/Default_26_-18.Default_26_-18:PersistentLevel.InteriorVolume123.Sequence Volume.Interior Fog.FogMesh",
+        "instanceIndex": null,
+        "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+        "fullSourceWorldMatrix": [
+          [
+            -50.28452999998086,
+            5.0498147937863474e-05,
+            0.0,
+            674163.5161913148
+          ],
+          [
+            -4.3881530566906906e-05,
+            -57.86661499997798,
+            0.0,
+            -451456.6345485077
+          ],
+          [
+            0.0,
+            0.0,
+            38.065487,
+            -20233.516600000003
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixCS2": [
+          [
+            -18.102430799993108,
+            1.817933325763085e-05,
+            0.0,
+            1714.8658288733277
+          ],
+          [
+            1.5797351004086485e-05,
+            20.831981399992074,
+            0.0,
+            -2283.611562537233
+          ],
+          [
+            0.0,
+            0.0,
+            13.703575319999999,
+            768.7740239999994
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "sourceMatrixSpace": "UE centimeters local to world; ISM matrices already world composed",
+        "positionCS2": [
+          1714.8658288733277,
+          -2283.611562537233,
+          768.7740239999994
+        ],
+        "collisionEnabled": true,
+        "collisionProof": "PRESERVE_SOURCE_COLLISION_NOT_VERIFIED_RUNTIME",
+        "collisionClassification": null,
+        "sourceCollisionFields": null,
+        "meshSource": {
+          "mesh": "Engine/Content/BasicShapes/Cube.Cube",
+          "available": true,
+          "outputs": [
+            "E:\\df-extract-20261105\\meshes\\Engine\\Content\\BasicShapes\\Cube.glb"
+          ],
+          "sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumFaces": 48
+            }
+          ],
+          "collisionSidecar": {
+            "path": "Engine/Content/BasicShapes/Cube.collision.json",
+            "bytes": 937
+          }
+        },
+        "sourceMetadata": "DeltaForce/Content/Maps/BuildMaps_HD/SpaceCenter_Ma1/Runtime/Default/Default_26_-18/002084-FogMesh.metadata.json",
+        "sourceJson": "DeltaForce/Content/Maps/BuildMaps_HD/SpaceCenter_Ma1/Runtime/Default/Default_26_-18/002084-FogMesh.source.json",
+        "className": "StaticMeshComponent",
+        "selectionReason": "3902_COOKED_CELL",
+        "triangleMask": "KEEP_ALL_UNLESS_EXACT_COMPONENT_EXCLUDED",
+        "transformOverride": null,
+        "requiresSourceDeformation": false
+      },
+      "sourceProperties": {
+        "StaticMesh": {
+          "ObjectName": "StaticMesh'Cube'",
+          "ObjectPath": "Engine/Content/BasicShapes/Cube.1"
+        },
+        "OverrideMaterials": [
+          {
+            "ObjectName": "MaterialInstanceDynamic'Default_26_-18:PersistentLevel.InteriorVolume123.Sequence Volume.Interior Fog.FogMesh.MaterialInstanceDynamic_0'",
+            "ObjectPath": "DeltaForce/Content/Maps/BuildMaps_HD/SpaceCenter_Ma1/Runtime/Default/Default_26_-18.1032"
+          }
+        ],
+        "BodyInstance": {
+          "CollisionEnabled": "ECollisionEnabled::NoCollision",
+          "bInterpolateWhenSubStepping": false,
+          "CollisionProfileName": "Custom",
+          "MaxAngularVelocity": 3599.9998
+        },
+        "AttachParent": {
+          "ObjectName": "InteriorFogComponent'Default_26_-18:PersistentLevel.InteriorVolume123.Sequence Volume.Interior Fog'",
+          "ObjectPath": "DeltaForce/Content/Maps/BuildMaps_HD/SpaceCenter_Ma1/Runtime/Default/Default_26_-18.773"
+        },
+        "RelativeScale3D": {
+          "X": 50.28453,
+          "Y": 57.866615,
+          "Z": 38.065487
+        },
+        "bVisible": false,
+        "PrimaryComponentTick": {
+          "AggregateClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          }
+        },
+        "CreationMethod": "EComponentCreationMethod::Instance"
+      },
+      "model": "models/df_v24/m_ef43b23de4958867.vmdl",
+      "physicsFromRender": true,
+      "sourceSHA256": "42b20974b0f2675b61524041b82473fbba04fdfa3b48c37b62f82fa72aa21371",
+      "lines": [
+        42
+      ],
+      "renderExclude": true,
+      "collisionExclude": true,
+      "reason": "explicit user unwanted target hit; transformed source triangle match under 0.001 units and normal agreement; exact instance only",
+      "verificationRequired": "post-merge compiled render+physics absence, independent volume/clip scan and hull clearance"
+    },
+    {
+      "rowIndex": 24754,
+      "placement": {
+        "objectPath": "DeltaForce/Content/Maps/BuildMaps_HD/SpaceCenter_Ma1/Runtime/Default/Default_26_-18.Default_26_-18:PersistentLevel.InteriorVolume129.Sequence Volume.Interior Fog.FogMesh",
+        "instanceIndex": null,
+        "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+        "fullSourceWorldMatrix": [
+          [
+            -20.160005999992325,
+            1.4800385948601432e-05,
+            0.0,
+            675137.3037140587
+          ],
+          [
+            -1.7592924096497007e-05,
+            -16.959992999993545,
+            0.0,
+            -458701.9949987206
+          ],
+          [
+            0.0,
+            0.0,
+            3.640005,
+            -22318.791230000003
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixCS2": [
+          [
+            -7.257602159997237,
+            5.328138941496516e-06,
+            0.0,
+            2065.4293370611267
+          ],
+          [
+            6.333452674738922e-06,
+            6.105597479997676,
+            0.0,
+            324.71819953940576
+          ],
+          [
+            0.0,
+            0.0,
+            1.3104018,
+            18.07515719999992
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "sourceMatrixSpace": "UE centimeters local to world; ISM matrices already world composed",
+        "positionCS2": [
+          2065.4293370611267,
+          324.71819953940576,
+          18.07515719999992
+        ],
+        "collisionEnabled": true,
+        "collisionProof": "PRESERVE_SOURCE_COLLISION_NOT_VERIFIED_RUNTIME",
+        "collisionClassification": null,
+        "sourceCollisionFields": null,
+        "meshSource": {
+          "mesh": "Engine/Content/BasicShapes/Cube.Cube",
+          "available": true,
+          "outputs": [
+            "E:\\df-extract-20261105\\meshes\\Engine\\Content\\BasicShapes\\Cube.glb"
+          ],
+          "sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumFaces": 48
+            }
+          ],
+          "collisionSidecar": {
+            "path": "Engine/Content/BasicShapes/Cube.collision.json",
+            "bytes": 937
+          }
+        },
+        "sourceMetadata": "DeltaForce/Content/Maps/BuildMaps_HD/SpaceCenter_Ma1/Runtime/Default/Default_26_-18/002090-FogMesh.metadata.json",
+        "sourceJson": "DeltaForce/Content/Maps/BuildMaps_HD/SpaceCenter_Ma1/Runtime/Default/Default_26_-18/002090-FogMesh.source.json",
+        "className": "StaticMeshComponent",
+        "selectionReason": "3902_COOKED_CELL",
+        "triangleMask": "KEEP_ALL_UNLESS_EXACT_COMPONENT_EXCLUDED",
+        "transformOverride": null,
+        "requiresSourceDeformation": false
+      },
+      "sourceProperties": {
+        "StaticMesh": {
+          "ObjectName": "StaticMesh'Cube'",
+          "ObjectPath": "Engine/Content/BasicShapes/Cube.1"
+        },
+        "OverrideMaterials": [
+          {
+            "ObjectName": "MaterialInstanceDynamic'Default_26_-18:PersistentLevel.InteriorVolume129.Sequence Volume.Interior Fog.FogMesh.MaterialInstanceDynamic_0'",
+            "ObjectPath": "DeltaForce/Content/Maps/BuildMaps_HD/SpaceCenter_Ma1/Runtime/Default/Default_26_-18.1038"
+          }
+        ],
+        "BodyInstance": {
+          "CollisionEnabled": "ECollisionEnabled::NoCollision",
+          "bInterpolateWhenSubStepping": false,
+          "CollisionProfileName": "Custom",
+          "MaxAngularVelocity": 3599.9998
+        },
+        "AttachParent": {
+          "ObjectName": "InteriorFogComponent'Default_26_-18:PersistentLevel.InteriorVolume129.Sequence Volume.Interior Fog'",
+          "ObjectPath": "DeltaForce/Content/Maps/BuildMaps_HD/SpaceCenter_Ma1/Runtime/Default/Default_26_-18.779"
+        },
+        "RelativeScale3D": {
+          "X": 20.160006,
+          "Y": 16.959993,
+          "Z": 3.640005
+        },
+        "bVisible": false,
+        "PrimaryComponentTick": {
+          "AggregateClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          }
+        },
+        "CreationMethod": "EComponentCreationMethod::Instance"
+      },
+      "model": "models/df_v24/m_ef43b23de4958867.vmdl",
+      "physicsFromRender": true,
+      "sourceSHA256": "42b20974b0f2675b61524041b82473fbba04fdfa3b48c37b62f82fa72aa21371",
+      "lines": [
+        40
+      ],
+      "renderExclude": true,
+      "collisionExclude": true,
+      "reason": "explicit user unwanted target hit; transformed source triangle match under 0.001 units and normal agreement; exact instance only",
+      "verificationRequired": "post-merge compiled render+physics absence, independent volume/clip scan and hull clearance"
+    },
+    {
+      "rowIndex": 24758,
+      "placement": {
+        "objectPath": "DeltaForce/Content/Maps/BuildMaps_HD/SpaceCenter_Ma1/Runtime/Default/Default_26_-18.Default_26_-18:PersistentLevel.InteriorVolume133.Sequence Volume.Interior Fog.FogMesh",
+        "instanceIndex": null,
+        "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+        "fullSourceWorldMatrix": [
+          [
+            -39.35999999998502,
+            5.445427266348102e-06,
+            0.0,
+            673681.3015428693
+          ],
+          [
+            -3.434807968004187e-05,
+            -6.239999999997625,
+            0.0,
+            -456213.9957693212
+          ],
+          [
+            0.0,
+            0.0,
+            7.24,
+            -21774.791
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixCS2": [
+          [
+            -14.169599999994608,
+            1.9603538158853165e-06,
+            0.0,
+            1541.2685554329364
+          ],
+          [
+            1.2365308684815074e-05,
+            2.246399999999145,
+            0.0,
+            -570.9615230443596
+          ],
+          [
+            0.0,
+            0.0,
+            2.6064,
+            213.91524000000027
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "sourceMatrixSpace": "UE centimeters local to world; ISM matrices already world composed",
+        "positionCS2": [
+          1541.2685554329364,
+          -570.9615230443596,
+          213.91524000000027
+        ],
+        "collisionEnabled": true,
+        "collisionProof": "PRESERVE_SOURCE_COLLISION_NOT_VERIFIED_RUNTIME",
+        "collisionClassification": null,
+        "sourceCollisionFields": null,
+        "meshSource": {
+          "mesh": "Engine/Content/BasicShapes/Cube.Cube",
+          "available": true,
+          "outputs": [
+            "E:\\df-extract-20261105\\meshes\\Engine\\Content\\BasicShapes\\Cube.glb"
+          ],
+          "sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumFaces": 48
+            }
+          ],
+          "collisionSidecar": {
+            "path": "Engine/Content/BasicShapes/Cube.collision.json",
+            "bytes": 937
+          }
+        },
+        "sourceMetadata": "DeltaForce/Content/Maps/BuildMaps_HD/SpaceCenter_Ma1/Runtime/Default/Default_26_-18/002094-FogMesh.metadata.json",
+        "sourceJson": "DeltaForce/Content/Maps/BuildMaps_HD/SpaceCenter_Ma1/Runtime/Default/Default_26_-18/002094-FogMesh.source.json",
+        "className": "StaticMeshComponent",
+        "selectionReason": "3902_COOKED_CELL",
+        "triangleMask": "KEEP_ALL_UNLESS_EXACT_COMPONENT_EXCLUDED",
+        "transformOverride": null,
+        "requiresSourceDeformation": false
+      },
+      "sourceProperties": {
+        "StaticMesh": {
+          "ObjectName": "StaticMesh'Cube'",
+          "ObjectPath": "Engine/Content/BasicShapes/Cube.1"
+        },
+        "OverrideMaterials": [
+          {
+            "ObjectName": "MaterialInstanceDynamic'Default_26_-18:PersistentLevel.InteriorVolume133.Sequence Volume.Interior Fog.FogMesh.MaterialInstanceDynamic_0'",
+            "ObjectPath": "DeltaForce/Content/Maps/BuildMaps_HD/SpaceCenter_Ma1/Runtime/Default/Default_26_-18.1042"
+          }
+        ],
+        "BodyInstance": {
+          "CollisionEnabled": "ECollisionEnabled::NoCollision",
+          "bInterpolateWhenSubStepping": false,
+          "CollisionProfileName": "Custom",
+          "MaxAngularVelocity": 3599.9998
+        },
+        "AttachParent": {
+          "ObjectName": "InteriorFogComponent'Default_26_-18:PersistentLevel.InteriorVolume133.Sequence Volume.Interior Fog'",
+          "ObjectPath": "DeltaForce/Content/Maps/BuildMaps_HD/SpaceCenter_Ma1/Runtime/Default/Default_26_-18.783"
+        },
+        "RelativeScale3D": {
+          "X": 39.36,
+          "Y": 6.24,
+          "Z": 7.24
+        },
+        "bVisible": false,
+        "PrimaryComponentTick": {
+          "AggregateClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          }
+        },
+        "CreationMethod": "EComponentCreationMethod::Instance"
+      },
+      "model": "models/df_v24/m_ef43b23de4958867.vmdl",
+      "physicsFromRender": true,
+      "sourceSHA256": "42b20974b0f2675b61524041b82473fbba04fdfa3b48c37b62f82fa72aa21371",
+      "lines": [
+        39
+      ],
+      "renderExclude": true,
+      "collisionExclude": true,
+      "reason": "explicit user unwanted target hit; transformed source triangle match under 0.001 units and normal agreement; exact instance only",
+      "verificationRequired": "post-merge compiled render+physics absence, independent volume/clip scan and hull clearance"
+    },
+    {
+      "rowIndex": 24759,
+      "placement": {
+        "objectPath": "DeltaForce/Content/Maps/BuildMaps_HD/SpaceCenter_Ma1/Runtime/Default/Default_26_-18.Default_26_-18:PersistentLevel.InteriorVolume134.Sequence Volume.Interior Fog.FogMesh",
+        "instanceIndex": null,
+        "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+        "fullSourceWorldMatrix": [
+          [
+            -40.32000399998465,
+            3.1276303687119394e-05,
+            0.0,
+            674945.3033789551
+          ],
+          [
+            -3.5185841211677006e-05,
+            -35.84000399998636,
+            0.0,
+            -458317.9946662723
+          ],
+          [
+            0.0,
+            0.0,
+            24.91147,
+            -20891.217500000002
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixCS2": [
+          [
+            -14.515201439994474,
+            1.1259469327362982e-05,
+            0.0,
+            1996.3092164238333
+          ],
+          [
+            1.2666902836203722e-05,
+            12.902401439995089,
+            0.0,
+            186.4780798580323
+          ],
+          [
+            0.0,
+            0.0,
+            8.9681292,
+            532.0016999999998
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "sourceMatrixSpace": "UE centimeters local to world; ISM matrices already world composed",
+        "positionCS2": [
+          1996.3092164238333,
+          186.4780798580323,
+          532.0016999999998
+        ],
+        "collisionEnabled": true,
+        "collisionProof": "PRESERVE_SOURCE_COLLISION_NOT_VERIFIED_RUNTIME",
+        "collisionClassification": null,
+        "sourceCollisionFields": null,
+        "meshSource": {
+          "mesh": "Engine/Content/BasicShapes/Cube.Cube",
+          "available": true,
+          "outputs": [
+            "E:\\df-extract-20261105\\meshes\\Engine\\Content\\BasicShapes\\Cube.glb"
+          ],
+          "sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumFaces": 48
+            }
+          ],
+          "collisionSidecar": {
+            "path": "Engine/Content/BasicShapes/Cube.collision.json",
+            "bytes": 937
+          }
+        },
+        "sourceMetadata": "DeltaForce/Content/Maps/BuildMaps_HD/SpaceCenter_Ma1/Runtime/Default/Default_26_-18/002095-FogMesh.metadata.json",
+        "sourceJson": "DeltaForce/Content/Maps/BuildMaps_HD/SpaceCenter_Ma1/Runtime/Default/Default_26_-18/002095-FogMesh.source.json",
+        "className": "StaticMeshComponent",
+        "selectionReason": "3902_COOKED_CELL",
+        "triangleMask": "KEEP_ALL_UNLESS_EXACT_COMPONENT_EXCLUDED",
+        "transformOverride": null,
+        "requiresSourceDeformation": false
+      },
+      "sourceProperties": {
+        "StaticMesh": {
+          "ObjectName": "StaticMesh'Cube'",
+          "ObjectPath": "Engine/Content/BasicShapes/Cube.1"
+        },
+        "OverrideMaterials": [
+          {
+            "ObjectName": "MaterialInstanceDynamic'Default_26_-18:PersistentLevel.InteriorVolume134.Sequence Volume.Interior Fog.FogMesh.MaterialInstanceDynamic_0'",
+            "ObjectPath": "DeltaForce/Content/Maps/BuildMaps_HD/SpaceCenter_Ma1/Runtime/Default/Default_26_-18.1043"
+          }
+        ],
+        "BodyInstance": {
+          "CollisionEnabled": "ECollisionEnabled::NoCollision",
+          "bInterpolateWhenSubStepping": false,
+          "CollisionProfileName": "Custom",
+          "MaxAngularVelocity": 3599.9998
+        },
+        "AttachParent": {
+          "ObjectName": "InteriorFogComponent'Default_26_-18:PersistentLevel.InteriorVolume134.Sequence Volume.Interior Fog'",
+          "ObjectPath": "DeltaForce/Content/Maps/BuildMaps_HD/SpaceCenter_Ma1/Runtime/Default/Default_26_-18.784"
+        },
+        "RelativeScale3D": {
+          "X": 40.320004,
+          "Y": 35.840004,
+          "Z": 24.91147
+        },
+        "bVisible": false,
+        "PrimaryComponentTick": {
+          "AggregateClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          }
+        },
+        "CreationMethod": "EComponentCreationMethod::Instance"
+      },
+      "model": "models/df_v24/m_ef43b23de4958867.vmdl",
+      "physicsFromRender": true,
+      "sourceSHA256": "42b20974b0f2675b61524041b82473fbba04fdfa3b48c37b62f82fa72aa21371",
+      "lines": [
+        39,
+        40,
+        41
+      ],
+      "renderExclude": true,
+      "collisionExclude": true,
+      "reason": "explicit user unwanted target hit; transformed source triangle match under 0.001 units and normal agreement; exact instance only",
+      "verificationRequired": "post-merge compiled render+physics absence, independent volume/clip scan and hull clearance"
+    },
+    {
+      "rowIndex": 36171,
+      "placement": {
+        "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/Spacecenter_EmergencyBorderWall.Spacecenter_EmergencyBorderWall:PersistentLevel.Collision874.StaticMeshComponent0",
+        "instanceIndex": null,
+        "meshObjectPath": "DeltaForce/Content/Maps/TestMap/Level_Prototype/BSP_Resorce/LDmesh/BlockWallCube.BlockWallCube",
+        "fullSourceWorldMatrix": [
+          [
+            -1.6456633790193314,
+            2.112780313184725,
+            0.0,
+            674174.2
+          ],
+          [
+            -1.6495431540626413,
+            -2.1078109904295723,
+            0.0,
+            -441034.53
+          ],
+          [
+            0.0,
+            0.0,
+            10.4027815,
+            -21001.49
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixCS2": [
+          [
+            -0.5924388164469593,
+            0.760600912746501,
+            0.0,
+            1718.7119999999704
+          ],
+          [
+            0.5938355354625509,
+            0.7588119565546461,
+            0.0,
+            -6035.569199999998
+          ],
+          [
+            0.0,
+            0.0,
+            3.74500134,
+            492.3036000000002
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "sourceMatrixSpace": "UE centimeters local to world; ISM matrices already world composed",
+        "positionCS2": [
+          1718.7119999999704,
+          -6035.569199999998,
+          492.3036000000002
+        ],
+        "collisionEnabled": true,
+        "collisionProof": "PRESERVE_SOURCE_COLLISION_NOT_VERIFIED_RUNTIME",
+        "collisionClassification": null,
+        "sourceCollisionFields": null,
+        "meshSource": {
+          "mesh": "DeltaForce/Content/Maps/TestMap/Level_Prototype/BSP_Resorce/LDmesh/BlockWallCube.BlockWallCube",
+          "available": true,
+          "outputs": [
+            "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Maps\\TestMap\\Level_Prototype\\BSP_Resorce\\LDmesh\\BlockWallCube.glb"
+          ],
+          "sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumFaces": 12
+            }
+          ],
+          "collisionSidecar": {
+            "path": "DeltaForce/Content/Maps/TestMap/Level_Prototype/BSP_Resorce/LDmesh/BlockWallCube.collision.json",
+            "bytes": 1651
+          }
+        },
+        "sourceMetadata": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/Spacecenter_EmergencyBorderWall/000486-StaticMeshComponent0.metadata.json",
+        "sourceJson": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/Spacecenter_EmergencyBorderWall/000486-StaticMeshComponent0.source.json",
+        "className": "StaticMeshComponent",
+        "selectionReason": "3902_COOKED_CELL",
+        "triangleMask": "KEEP_ALL_UNLESS_EXACT_COMPONENT_EXCLUDED",
+        "transformOverride": null,
+        "requiresSourceDeformation": false
+      },
+      "sourceProperties": {
+        "StaticMesh": {
+          "ObjectName": "StaticMesh'BlockWallCube'",
+          "ObjectPath": "DeltaForce/Content/Maps/TestMap/Level_Prototype/BSP_Resorce/LDmesh/BlockWallCube.1"
+        },
+        "LightmassSettings": {
+          "bJoinLocalLightBake": false
+        },
+        "OverrideMaterials": [
+          {
+            "ObjectName": "MaterialInstanceConstant'Base_LD_BlockVolume'",
+            "ObjectPath": "DeltaForce/Content/Maps/TestMap/Level_Prototype/BSP_Resorce/LDMaterial/Base_LD_BlockVolume.0"
+          }
+        ],
+        "bVisibleInRayTracingTag": false,
+        "RayTracingCullingDistance": 1732.0508,
+        "bVisibleInLumenSceneTag": false,
+        "LumenSceneCullingDistance": 1732.0508,
+        "BodyInstance": {
+          "CollisionProfileName": "Custom",
+          "CollisionResponses": {
+            "ResponseArray": [
+              {
+                "Channel": "Visibility",
+                "Response": "ECR_Ignore"
+              },
+              {
+                "Channel": "Camera",
+                "Response": "ECR_Ignore"
+              },
+              {
+                "Channel": "EngineTraceChannel1",
+                "Response": "ECR_Block"
+              },
+              {
+                "Channel": "Weapon",
+                "Response": "ECR_Ignore"
+              },
+              {
+                "Channel": "Projectile",
+                "Response": "ECR_Ignore"
+              },
+              {
+                "Channel": "ProjectileShootable",
+                "Response": "ECR_Ignore"
+              },
+              {
+                "Channel": "WenponAmbient",
+                "Response": "ECR_Ignore"
+              },
+              {
+                "Channel": "VehicleCamera",
+                "Response": "ECR_Ignore"
+              }
+            ]
+          }
+        },
+        "RelativeLocation": {
+          "X": 674174.2,
+          "Y": -441034.53,
+          "Z": -21001.49
+        },
+        "RelativeRotation": {
+          "Pitch": 0.0,
+          "Yaw": -134.93254,
+          "Roll": 0.0
+        },
+        "RelativeScale3D": {
+          "X": 2.3300645,
+          "Y": 2.9844108,
+          "Z": 10.4027815
+        },
+        "PrimaryComponentTick": {
+          "AggregateClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      "model": "models/df_v24/m_30605db6f1985d1f.vmdl",
+      "physicsFromRender": true,
+      "sourceSHA256": "2e383bccc3bc77cdc023a680d77c5a61c0a289850b27829d99281f95b3533d03",
+      "lines": [
+        45
+      ],
+      "renderExclude": true,
+      "collisionExclude": true,
+      "reason": "explicit user unwanted target hit; transformed source triangle match under 0.001 units and normal agreement; exact instance only",
+      "verificationRequired": "post-merge compiled render+physics absence, independent volume/clip scan and hull clearance"
+    },
+    {
+      "rowIndex": 36232,
+      "placement": {
+        "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/Spacecenter_EmergencyBorderWall.Spacecenter_EmergencyBorderWall:PersistentLevel.Collision950.StaticMeshComponent0",
+        "instanceIndex": null,
+        "meshObjectPath": "DeltaForce/Content/Maps/TestMap/Level_Prototype/BSP_Resorce/LDmesh/BlockWallCube.BlockWallCube",
+        "fullSourceWorldMatrix": [
+          [
+            -1.993880489551719,
+            1.6677534647866374,
+            0.0,
+            674991.7
+          ],
+          [
+            -1.9985812125922446,
+            -1.663830858545548,
+            0.0,
+            -441779.22
+          ],
+          [
+            0.0,
+            0.0,
+            10.402781,
+            -21001.49
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixCS2": [
+          [
+            -0.7177969762386188,
+            0.6003912473231895,
+            0.0,
+            2013.011999999988
+          ],
+          [
+            0.7194892365332081,
+            0.5989791090763972,
+            0.0,
+            -5767.480800000019
+          ],
+          [
+            0.0,
+            0.0,
+            3.7450011599999997,
+            492.3036000000002
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "sourceMatrixSpace": "UE centimeters local to world; ISM matrices already world composed",
+        "positionCS2": [
+          2013.011999999988,
+          -5767.480800000019,
+          492.3036000000002
+        ],
+        "collisionEnabled": true,
+        "collisionProof": "PRESERVE_SOURCE_COLLISION_NOT_VERIFIED_RUNTIME",
+        "collisionClassification": null,
+        "sourceCollisionFields": null,
+        "meshSource": {
+          "mesh": "DeltaForce/Content/Maps/TestMap/Level_Prototype/BSP_Resorce/LDmesh/BlockWallCube.BlockWallCube",
+          "available": true,
+          "outputs": [
+            "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Maps\\TestMap\\Level_Prototype\\BSP_Resorce\\LDmesh\\BlockWallCube.glb"
+          ],
+          "sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumFaces": 12
+            }
+          ],
+          "collisionSidecar": {
+            "path": "DeltaForce/Content/Maps/TestMap/Level_Prototype/BSP_Resorce/LDmesh/BlockWallCube.collision.json",
+            "bytes": 1651
+          }
+        },
+        "sourceMetadata": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/Spacecenter_EmergencyBorderWall/000547-StaticMeshComponent0.metadata.json",
+        "sourceJson": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/Spacecenter_EmergencyBorderWall/000547-StaticMeshComponent0.source.json",
+        "className": "StaticMeshComponent",
+        "selectionReason": "3902_COOKED_CELL",
+        "triangleMask": "KEEP_ALL_UNLESS_EXACT_COMPONENT_EXCLUDED",
+        "transformOverride": null,
+        "requiresSourceDeformation": false
+      },
+      "sourceProperties": {
+        "StaticMesh": {
+          "ObjectName": "StaticMesh'BlockWallCube'",
+          "ObjectPath": "DeltaForce/Content/Maps/TestMap/Level_Prototype/BSP_Resorce/LDmesh/BlockWallCube.1"
+        },
+        "LightmassSettings": {
+          "bJoinLocalLightBake": false
+        },
+        "OverrideMaterials": [
+          {
+            "ObjectName": "MaterialInstanceConstant'Base_LD_BlockVolume'",
+            "ObjectPath": "DeltaForce/Content/Maps/TestMap/Level_Prototype/BSP_Resorce/LDMaterial/Base_LD_BlockVolume.0"
+          }
+        ],
+        "bVisibleInRayTracingTag": false,
+        "RayTracingCullingDistance": 1732.0508,
+        "bVisibleInLumenSceneTag": false,
+        "LumenSceneCullingDistance": 1732.0508,
+        "BodyInstance": {
+          "CollisionProfileName": "Custom",
+          "CollisionResponses": {
+            "ResponseArray": [
+              {
+                "Channel": "Visibility",
+                "Response": "ECR_Ignore"
+              },
+              {
+                "Channel": "Camera",
+                "Response": "ECR_Ignore"
+              },
+              {
+                "Channel": "EngineTraceChannel1",
+                "Response": "ECR_Block"
+              },
+              {
+                "Channel": "Weapon",
+                "Response": "ECR_Ignore"
+              },
+              {
+                "Channel": "Projectile",
+                "Response": "ECR_Ignore"
+              },
+              {
+                "Channel": "ProjectileShootable",
+                "Response": "ECR_Ignore"
+              },
+              {
+                "Channel": "WenponAmbient",
+                "Response": "ECR_Ignore"
+              },
+              {
+                "Channel": "VehicleCamera",
+                "Response": "ECR_Ignore"
+              }
+            ]
+          }
+        },
+        "RelativeLocation": {
+          "X": 674991.7,
+          "Y": -441779.22,
+          "Z": -21001.49
+        },
+        "RelativeRotation": {
+          "Pitch": 0.0,
+          "Yaw": -134.93254,
+          "Roll": 0.0
+        },
+        "RelativeScale3D": {
+          "X": 2.8230987,
+          "Y": 2.3557875,
+          "Z": 10.402781
+        },
+        "PrimaryComponentTick": {
+          "AggregateClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      "model": "models/df_v24/m_30605db6f1985d1f.vmdl",
+      "physicsFromRender": true,
+      "sourceSHA256": "2e383bccc3bc77cdc023a680d77c5a61c0a289850b27829d99281f95b3533d03",
+      "lines": [
+        46
+      ],
+      "renderExclude": true,
+      "collisionExclude": true,
+      "reason": "explicit user unwanted target hit; transformed source triangle match under 0.001 units and normal agreement; exact instance only",
+      "verificationRequired": "post-merge compiled render+physics absence, independent volume/clip scan and hull clearance"
+    },
+    {
+      "rowIndex": 38576,
+      "placement": {
+        "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/Spacecenter_EmergencyBorderWall_1.Spacecenter_EmergencyBorderWall_1:PersistentLevel.Collision1306.StaticMeshComponent0",
+        "instanceIndex": null,
+        "meshObjectPath": "DeltaForce/Content/Maps/TestMap/Level_Prototype/BSP_Resorce/LDmesh/BlockWallCube.BlockWallCube",
+        "fullSourceWorldMatrix": [
+          [
+            12.629161959643664,
+            -0.7631897006741508,
+            0.0,
+            674905.56
+          ],
+          [
+            2.7278583327499675,
+            3.5333383042766937,
+            0.0,
+            -443246.88
+          ],
+          [
+            0.0,
+            0.0,
+            9.583427,
+            -21383.566
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixCS2": [
+          [
+            4.546498305471719,
+            -0.27474829224269426,
+            0.0,
+            1982.0016000000178
+          ],
+          [
+            -0.9820289997899883,
+            -1.2720017895396096,
+            0.0,
+            -5239.123200000002
+          ],
+          [
+            0.0,
+            0.0,
+            3.45003372,
+            354.7562400000006
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "sourceMatrixSpace": "UE centimeters local to world; ISM matrices already world composed",
+        "positionCS2": [
+          1982.0016000000178,
+          -5239.123200000002,
+          354.7562400000006
+        ],
+        "collisionEnabled": true,
+        "collisionProof": "PRESERVE_SOURCE_COLLISION_NOT_VERIFIED_RUNTIME",
+        "collisionClassification": null,
+        "sourceCollisionFields": null,
+        "meshSource": {
+          "mesh": "DeltaForce/Content/Maps/TestMap/Level_Prototype/BSP_Resorce/LDmesh/BlockWallCube.BlockWallCube",
+          "available": true,
+          "outputs": [
+            "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Maps\\TestMap\\Level_Prototype\\BSP_Resorce\\LDmesh\\BlockWallCube.glb"
+          ],
+          "sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumFaces": 12
+            }
+          ],
+          "collisionSidecar": {
+            "path": "DeltaForce/Content/Maps/TestMap/Level_Prototype/BSP_Resorce/LDmesh/BlockWallCube.collision.json",
+            "bytes": 1651
+          }
+        },
+        "sourceMetadata": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/Spacecenter_EmergencyBorderWall_1/000430-StaticMeshComponent0.metadata.json",
+        "sourceJson": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/Spacecenter_EmergencyBorderWall_1/000430-StaticMeshComponent0.source.json",
+        "className": "StaticMeshComponent",
+        "selectionReason": "3902_COOKED_CELL",
+        "triangleMask": "KEEP_ALL_UNLESS_EXACT_COMPONENT_EXCLUDED",
+        "transformOverride": null,
+        "requiresSourceDeformation": false
+      },
+      "sourceProperties": {
+        "StaticMesh": {
+          "ObjectName": "StaticMesh'BlockWallCube'",
+          "ObjectPath": "DeltaForce/Content/Maps/TestMap/Level_Prototype/BSP_Resorce/LDmesh/BlockWallCube.1"
+        },
+        "LightmassSettings": {
+          "bJoinLocalLightBake": false
+        },
+        "OverrideMaterials": [
+          {
+            "ObjectName": "MaterialInstanceConstant'Base_LD_BlockVolume'",
+            "ObjectPath": "DeltaForce/Content/Maps/TestMap/Level_Prototype/BSP_Resorce/LDMaterial/Base_LD_BlockVolume.0"
+          }
+        ],
+        "BodyInstance": {
+          "CollisionProfileName": "Custom",
+          "CollisionResponses": {
+            "ResponseArray": [
+              {
+                "Channel": "Visibility",
+                "Response": "ECR_Ignore"
+              },
+              {
+                "Channel": "Camera",
+                "Response": "ECR_Ignore"
+              },
+              {
+                "Channel": "EngineTraceChannel1",
+                "Response": "ECR_Block"
+              },
+              {
+                "Channel": "Weapon",
+                "Response": "ECR_Ignore"
+              },
+              {
+                "Channel": "Projectile",
+                "Response": "ECR_Ignore"
+              },
+              {
+                "Channel": "ProjectileShootable",
+                "Response": "ECR_Ignore"
+              },
+              {
+                "Channel": "WenponAmbient",
+                "Response": "ECR_Ignore"
+              },
+              {
+                "Channel": "VehicleCamera",
+                "Response": "ECR_Ignore"
+              }
+            ]
+          }
+        },
+        "RelativeLocation": {
+          "X": 674905.56,
+          "Y": -443246.88,
+          "Z": -21383.566
+        },
+        "RelativeRotation": {
+          "Pitch": 0.0,
+          "Yaw": 12.188457,
+          "Roll": 0.0
+        },
+        "RelativeScale3D": {
+          "X": 12.920408,
+          "Y": 3.614822,
+          "Z": 9.583427
+        },
+        "PrimaryComponentTick": {
+          "AggregateClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      "model": "models/df_v24/m_30605db6f1985d1f.vmdl",
+      "physicsFromRender": true,
+      "sourceSHA256": "2e383bccc3bc77cdc023a680d77c5a61c0a289850b27829d99281f95b3533d03",
+      "lines": [
+        44
+      ],
+      "renderExclude": true,
+      "collisionExclude": true,
+      "reason": "explicit user unwanted target hit; transformed source triangle match under 0.001 units and normal agreement; exact instance only",
+      "verificationRequired": "post-merge compiled render+physics absence, independent volume/clip scan and hull clearance"
+    },
+    {
+      "rowIndex": 43681,
+      "placement": {
+        "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/Spacecenter_EmergencyBorderWall_10.Spacecenter_EmergencyBorderWall_10:PersistentLevel.Collision1530.StaticMeshComponent0",
+        "instanceIndex": null,
+        "meshObjectPath": "DeltaForce/Content/Maps/TestMap/Level_Prototype/BSP_Resorce/LDmesh/BlockWallCube.BlockWallCube",
+        "fullSourceWorldMatrix": [
+          [
+            1.3809858456232824,
+            -0.3020481572603651,
+            0.0,
+            673886.06
+          ],
+          [
+            0.29828849756072984,
+            1.3983919369476705,
+            0.0,
+            -444138.16
+          ],
+          [
+            0.0,
+            0.0,
+            7.314042,
+            -20996.146
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixCS2": [
+          [
+            0.49715490442438165,
+            -0.10873733661373143,
+            0.0,
+            1614.9815999999992
+          ],
+          [
+            -0.10738385912186274,
+            -0.5034210973011614,
+            0.0,
+            -4918.262400000007
+          ],
+          [
+            0.0,
+            0.0,
+            2.63305512,
+            494.22744000000057
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "sourceMatrixSpace": "UE centimeters local to world; ISM matrices already world composed",
+        "positionCS2": [
+          1614.9815999999992,
+          -4918.262400000007,
+          494.22744000000057
+        ],
+        "collisionEnabled": true,
+        "collisionProof": "PRESERVE_SOURCE_COLLISION_NOT_VERIFIED_RUNTIME",
+        "collisionClassification": null,
+        "sourceCollisionFields": null,
+        "meshSource": {
+          "mesh": "DeltaForce/Content/Maps/TestMap/Level_Prototype/BSP_Resorce/LDmesh/BlockWallCube.BlockWallCube",
+          "available": true,
+          "outputs": [
+            "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Maps\\TestMap\\Level_Prototype\\BSP_Resorce\\LDmesh\\BlockWallCube.glb"
+          ],
+          "sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumFaces": 12
+            }
+          ],
+          "collisionSidecar": {
+            "path": "DeltaForce/Content/Maps/TestMap/Level_Prototype/BSP_Resorce/LDmesh/BlockWallCube.collision.json",
+            "bytes": 1651
+          }
+        },
+        "sourceMetadata": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/Spacecenter_EmergencyBorderWall_10/000096-StaticMeshComponent0.metadata.json",
+        "sourceJson": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/Spacecenter_EmergencyBorderWall_10/000096-StaticMeshComponent0.source.json",
+        "className": "StaticMeshComponent",
+        "selectionReason": "3902_COOKED_CELL",
+        "triangleMask": "KEEP_ALL_UNLESS_EXACT_COMPONENT_EXCLUDED",
+        "transformOverride": null,
+        "requiresSourceDeformation": false
+      },
+      "sourceProperties": {
+        "StaticMesh": {
+          "ObjectName": "StaticMesh'BlockWallCube'",
+          "ObjectPath": "DeltaForce/Content/Maps/TestMap/Level_Prototype/BSP_Resorce/LDmesh/BlockWallCube.1"
+        },
+        "LightmassSettings": {
+          "bJoinLocalLightBake": false
+        },
+        "OverrideMaterials": [
+          {
+            "ObjectName": "MaterialInstanceConstant'Base_LD_BlockVolume'",
+            "ObjectPath": "DeltaForce/Content/Maps/TestMap/Level_Prototype/BSP_Resorce/LDMaterial/Base_LD_BlockVolume.0"
+          }
+        ],
+        "bVisibleInRayTracingTag": false,
+        "RayTracingCullingDistance": 1732.0508,
+        "bVisibleInLumenSceneTag": false,
+        "LumenSceneCullingDistance": 1732.0508,
+        "BodyInstance": {
+          "CollisionProfileName": "Custom",
+          "CollisionResponses": {
+            "ResponseArray": [
+              {
+                "Channel": "Visibility",
+                "Response": "ECR_Ignore"
+              },
+              {
+                "Channel": "Camera",
+                "Response": "ECR_Ignore"
+              },
+              {
+                "Channel": "EngineTraceChannel1",
+                "Response": "ECR_Block"
+              },
+              {
+                "Channel": "Weapon",
+                "Response": "ECR_Ignore"
+              },
+              {
+                "Channel": "Projectile",
+                "Response": "ECR_Ignore"
+              },
+              {
+                "Channel": "ProjectileShootable",
+                "Response": "ECR_Ignore"
+              },
+              {
+                "Channel": "WenponAmbient",
+                "Response": "ECR_Ignore"
+              },
+              {
+                "Channel": "VehicleCamera",
+                "Response": "ECR_Ignore"
+              }
+            ]
+          }
+        },
+        "RelativeLocation": {
+          "X": 673886.06,
+          "Y": -444138.16,
+          "Z": -20996.146
+        },
+        "RelativeRotation": {
+          "Pitch": 0.0,
+          "Yaw": 12.188457,
+          "Roll": 0.0
+        },
+        "RelativeScale3D": {
+          "X": 1.4128333,
+          "Y": 1.4306408,
+          "Z": 7.314042
+        },
+        "PrimaryComponentTick": {
+          "AggregateClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      "model": "models/df_v24/m_30605db6f1985d1f.vmdl",
+      "physicsFromRender": true,
+      "sourceSHA256": "2e383bccc3bc77cdc023a680d77c5a61c0a289850b27829d99281f95b3533d03",
+      "lines": [
+        43
+      ],
+      "renderExclude": true,
+      "collisionExclude": true,
+      "reason": "explicit user unwanted target hit; transformed source triangle match under 0.001 units and normal agreement; exact instance only",
+      "verificationRequired": "post-merge compiled render+physics absence, independent volume/clip scan and hull clearance"
+    }
+  ],
+  "ambiguity": "39 two coplanar cubes;40 two coplanar cubes upward face, not structural floor identification; retain both candidates explicitly pending final target review. Four column hits unique source surface.",
+  "limitations": "source render triangles verified. PhysicsMeshFromRender model verified; compiled physics mesh not decoded, so physical triangulation byte identity unverified. GLB node transforms not independently audited; near-zero matches support transform. Not global asset deletion."
+}

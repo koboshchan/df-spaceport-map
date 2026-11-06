@@ -1,0 +1,27 @@
+{
+  "id": "m_8514eb7898dc41bd",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_ProductionArea_01/SM_H_Building_FutureTech_AssemblyArea_InterWall_08.SM_H_Building_FutureTech_AssemblyArea_InterWall_08",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_ProductionArea_01\\SM_H_Building_FutureTech_AssemblyArea_InterWall_08.glb",
+  "sourceSHA256": "77998B563A067D1CE42D4641258A327CEB8BBD75A646097E2BFB9C150458BA98",
+  "model": "models/df_v24/m_8514eb7898dc41bd.vmdl",
+  "materials": {
+    "mat_d05d7a33dc4874ea": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AssemblyArea_InterWall_08_HD.MI_H_Building_FutureTech_AssemblyArea_InterWall_08_HD",
+    "mat_ce515409d0a82492": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD"
+  },
+  "vertices": 2621,
+  "polygons": 2998,
+  "bounds": [
+    [
+      -23.03997802734375,
+      -0.7207250595092773,
+      -5.115907477244155e-15
+    ],
+    [
+      218.8765869140625,
+      91.79804229736328,
+      76.59710693359375
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

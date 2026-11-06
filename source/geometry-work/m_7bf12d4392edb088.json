@@ -1,0 +1,26 @@
+{
+  "id": "m_7bf12d4392edb088",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/SM_BS_Laurestine_100cm_HD.SM_BS_Laurestine_100cm_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Bush\\SM_BS_Laurestine_100cm_HD.glb",
+  "sourceSHA256": "2A31F2D6A2253580D672CF60E79CF73716D71185682BBEEC4391A92457BD5363",
+  "model": "models/df_v24/m_7bf12d4392edb088.vmdl",
+  "materials": {
+    "mat_67c7209c93b03991": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/00_Materials/MI_BS_Laurestine_100cm_Leaf_HD.MI_BS_Laurestine_100cm_Leaf_HD"
+  },
+  "vertices": 442,
+  "polygons": 305,
+  "bounds": [
+    [
+      -22.689767837524414,
+      -24.708547592163086,
+      -8.86782169342041
+    ],
+    [
+      33.320281982421875,
+      23.697757720947266,
+      47.796119689941406
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

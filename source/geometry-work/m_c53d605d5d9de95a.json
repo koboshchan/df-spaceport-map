@@ -1,0 +1,28 @@
+{
+  "id": "m_c53d605d5d9de95a",
+  "objectPath": "DeltaForce/Content/Models/Vehicles/RCB_BOSS/RCB_BOSS.RCB_BOSS",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Vehicles\\RCB_BOSS\\RCB_BOSS.glb",
+  "sourceSHA256": "0E98E60495A221CE52C42929AD7DA23A0FE569F63FD840D8F8FB76BCBB87DF07",
+  "model": "models/df_v24/m_c53d605d5d9de95a.vmdl",
+  "materials": {
+    "mat_e709e6a7fde8283e": "DeltaForce/Content/Models/Vehicles/RCB_BOSS/Materials/MI_RCB_BOSS_01.MI_RCB_BOSS_01",
+    "mat_8d96957bf05a19ee": "DeltaForce/Content/Models/Vehicles/RCB_BOSS/Materials/MI_RCB_BOSS_02.MI_RCB_BOSS_02",
+    "mat_5ea12a46305609e1": "DeltaForce/Content/Models/Vehicles/RCB_BOSS/Materials/MI_RCB_Boss_Glass.MI_RCB_Boss_Glass"
+  },
+  "vertices": 36745,
+  "polygons": 32513,
+  "bounds": [
+    [
+      -262.1863098144531,
+      -71.48004150390625,
+      1.080159306526184
+    ],
+    [
+      289.96087646484375,
+      71.48004150390625,
+      216.5885467529297
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

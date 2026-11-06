@@ -1,0 +1,26 @@
+{
+  "id": "m_1281ab62dab3734b",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/SM_BS_Daisy_Yellow_100cm_HD.SM_BS_Daisy_Yellow_100cm_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Bush\\SM_BS_Daisy_Yellow_100cm_HD.glb",
+  "sourceSHA256": "B335B39A74D80BC64CC3E53D1D005D27DE6F70FEF5CD023F1D6F2FB795EE8E1B",
+  "model": "models/df_v24/m_1281ab62dab3734b.vmdl",
+  "materials": {
+    "mat_138e0334cf2a30c7": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/00_Materials/MI_BS_Daisy_Yellow_100cm_Leaf_HD.MI_BS_Daisy_Yellow_100cm_Leaf_HD"
+  },
+  "vertices": 1604,
+  "polygons": 1180,
+  "bounds": [
+    [
+      -51.02233123779297,
+      -42.159019470214844,
+      -12.323040962219238
+    ],
+    [
+      37.59184646606445,
+      37.45360565185547,
+      34.80794906616211
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

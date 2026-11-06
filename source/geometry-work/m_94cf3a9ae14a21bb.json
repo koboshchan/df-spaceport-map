@@ -1,0 +1,32 @@
+{
+  "id": "m_94cf3a9ae14a21bb",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_WatchTower_01a.SM_H_Building_FutureTech_WatchTower_01a",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_WatchTower_01a.glb",
+  "sourceSHA256": "11C6CB3B5699088E68DA125D420B337DCCF2A0CA33021211E7B87B532BDC518A",
+  "model": "models/df_v24/m_94cf3a9ae14a21bb.vmdl",
+  "materials": {
+    "mat_8b5d279a6d2e73a7": "DeltaForce/Content/Environment/Structures/IRIS/WalkwaySystem/00_Materials/HD/MI_I_WalkwaySystem_MetalFloor_01_D_HD.MI_I_WalkwaySystem_MetalFloor_01_D_HD",
+    "mat_e64c75564598dea4": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_WatchTower_01_01_HD.MI_H_Building_FutureTech_WatchTower_01_01_HD",
+    "mat_7c9fd56c8f9b482a": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Concrete_Smooth_01_HD.MI_GEN_Concrete_Smooth_01_HD",
+    "mat_27d83f1b28aedb60": "DeltaForce/Content/Environment/Props/HAAVK/Government/Tide/00_Materials/HD/MI_H_Building_Tide_Brick_03_HD.MI_H_Building_Tide_Brick_03_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_b7e3e85d249d055f": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Brakkesh/00_Materials/HD/MI_GEN_Metal_Painting_10_HD.MI_GEN_Metal_Painting_10_HD",
+    "mat_de3fe7bdb321717b": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_WatchTower_01_02_HD.MI_H_Building_FutureTech_WatchTower_01_02_HD"
+  },
+  "vertices": 24409,
+  "polygons": 18914,
+  "bounds": [
+    [
+      -6.560595989227295,
+      -389.8885192871094,
+      -40.73851013183594
+    ],
+    [
+      1633.5528564453125,
+      544.6074829101562,
+      608.055908203125
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

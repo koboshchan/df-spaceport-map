@@ -1,0 +1,32 @@
+{
+  "id": "m_2ed22cc5f6098033",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_AutomaticWorkshop_02.SM_H_Building_FutureTech_AutomaticWorkshop_02",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_AutomaticWorkshop_02.glb",
+  "sourceSHA256": "2A7C3ED905898B18446A4C257205D71CF2FCB091775F0EAA6681CF2478FBD48D",
+  "model": "models/df_v24/m_2ed22cc5f6098033.vmdl",
+  "materials": {
+    "mat_aece11ccbb1a9e1b": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01C_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01C_HD",
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_b9a0bc913f1d308d": "DeltaForce/Content/Environment/Structures/Building/storage/00_Materials/HD/MI_Building_Storage_Metal_05_HD.MI_Building_Storage_Metal_05_HD",
+    "mat_614bf2b314f717d5": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01B_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01B_HD",
+    "mat_ce515409d0a82492": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/00_Materials/HD/MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD.MI_H_Building_FutureTech_AutomaticWorkshop_01_Decal_HD",
+    "mat_3cc637236057ece1": "DeltaForce/Content/Environment/Decal/Abrasion/00_Materials/HD/MI_I_Abrasion_Decal_01a_HD.MI_I_Abrasion_Decal_01a_HD",
+    "mat_618dce10771d7cb5": "DeltaForce/Content/Environment/Decal/Connect/00_Materials/HD/MI_I_Connect_Decal_04_HD.MI_I_Connect_Decal_04_HD"
+  },
+  "vertices": 8591,
+  "polygons": 8414,
+  "bounds": [
+    [
+      -0.003208007663488388,
+      -0.005954589694738388,
+      -0.0019306745380163193
+    ],
+    [
+      190.3382568359375,
+      190.34085083007812,
+      186.96035766601562
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

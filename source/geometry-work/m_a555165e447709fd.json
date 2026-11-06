@@ -1,0 +1,27 @@
+{
+  "id": "m_a555165e447709fd",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS_Ma1/SM_H_Industrial_ISS_Rocket_02G_Ruin.SM_H_Industrial_ISS_Rocket_02G_Ruin",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Industrial\\ISS_Ma1\\SM_H_Industrial_ISS_Rocket_02G_Ruin.glb",
+  "sourceSHA256": "E6E727E890AB2B5ECD41084498D647230F3D60AA4DA0D3884DB6D40E0FA34793",
+  "model": "models/df_v24/m_a555165e447709fd.vmdl",
+  "materials": {
+    "mat_1af41cccc3b54fd0": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS_Ma1/00_Materials/HD/MI_H_Industrial_ISS_Rocket_02a_Ruin_HD.MI_H_Industrial_ISS_Rocket_02a_Ruin_HD",
+    "mat_3f10ab179ef5e56a": "DeltaForce/Content/Environment/Props/HAAVK/Industrial/ISS_Ma1/00_Materials/HD/MI_H_Industrial_ISS_Rocket_02c_Ruin_HD.MI_H_Industrial_ISS_Rocket_02c_Ruin_HD"
+  },
+  "vertices": 10763,
+  "polygons": 9961,
+  "bounds": [
+    [
+      -303.269287109375,
+      -236.42218017578125,
+      -59.63532638549805
+    ],
+    [
+      111.68383026123047,
+      198.57215881347656,
+      -23.23335838317871
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

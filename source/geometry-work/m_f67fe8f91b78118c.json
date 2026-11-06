@@ -1,0 +1,28 @@
+{
+  "id": "m_f67fe8f91b78118c",
+  "objectPath": "DeltaForce/Content/Environment/Props/Vegetation/SM_TR_ChristmasTree_2m.SM_TR_ChristmasTree_2m",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Vegetation\\SM_TR_ChristmasTree_2m.glb",
+  "sourceSHA256": "4EA7CC7190FD2909D2B037A23D3E5949C3886C9E433F2F408B518B1D008B1767",
+  "model": "models/df_v24/m_f67fe8f91b78118c.vmdl",
+  "materials": {
+    "mat_df72f70364d50ec2": "DeltaForce/Content/Environment/Props/Vegetation/00_Materials/HD/MI_TR_ChristmasTree_WoodBox_HD.MI_TR_ChristmasTree_WoodBox_HD",
+    "mat_c818d00f7b68f016": "DeltaForce/Content/Environment/Props/Vegetation/00_Materials/HD/MI_TR_ChristmasTree_4m_Leaf_HD.MI_TR_ChristmasTree_4m_Leaf_HD",
+    "mat_6d91c2b50f41ddf9": "DeltaForce/Content/Environment/Props/Vegetation/00_Materials/HD/MI_TR_ChristmasTree_Decoration_HD.MI_TR_ChristmasTree_Decoration_HD"
+  },
+  "vertices": 15238,
+  "polygons": 15789,
+  "bounds": [
+    [
+      -21.38990592956543,
+      -22.686824798583984,
+      -0.009255927056074142
+    ],
+    [
+      20.200878143310547,
+      21.20475959777832,
+      72.99488830566406
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

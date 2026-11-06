@@ -1,0 +1,27 @@
+{
+  "id": "m_8b9809b7a85d5f1a",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Tree/SM_TR_PaperFlower_Vine_3m_HD.SM_TR_PaperFlower_Vine_3m_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Tree\\SM_TR_PaperFlower_Vine_3m_HD.glb",
+  "sourceSHA256": "29E4C1FC446F3B0B3B6236D85BE62328B83EF4D1DE8B0C1132E3BF4993BB1D1B",
+  "model": "models/df_v24/m_8b9809b7a85d5f1a.vmdl",
+  "materials": {
+    "mat_810592ad6e7118f3": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Tree/00_Materials/MI_TR_PaperFlower_Vine_3m_Leaf_HD.MI_TR_PaperFlower_Vine_3m_Leaf_HD",
+    "mat_cac17092dc6e8f74": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Tree/00_Materials/MI_TR_PaperFlower_Vine_3m_Trunk_01_HD.MI_TR_PaperFlower_Vine_3m_Trunk_01_HD"
+  },
+  "vertices": 9177,
+  "polygons": 6283,
+  "bounds": [
+    [
+      -114.90990447998047,
+      -77.08326721191406,
+      80.10291290283203
+    ],
+    [
+      134.2226104736328,
+      81.77590942382812,
+      202.34902954101562
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

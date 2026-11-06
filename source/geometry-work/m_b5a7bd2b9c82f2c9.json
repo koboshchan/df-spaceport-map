@@ -1,0 +1,29 @@
+{
+  "id": "m_b5a7bd2b9c82f2c9",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_ToolHouse_02_InterWall_01B.SM_H_Building_FutureTech_ToolHouse_02_InterWall_01B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_ToolHouse_02_InterWall_01B.glb",
+  "sourceSHA256": "1948ABD5FCFC41BB3BACEFE6AF53156481479CCF6E7DB4B8D40D083C6530D9C9",
+  "model": "models/df_v24/m_b5a7bd2b9c82f2c9.vmdl",
+  "materials": {
+    "mat_ebe2c68b91602cff": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Road_Decal_02_HD.MI_H_FutureTech_Road_Decal_02_HD",
+    "mat_7c0efa449b148484": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Transparent_08_HD.MI_H_FutureTech_Transparent_08_HD",
+    "mat_b2cce2838c324de6": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Industrial/00_Materials/HD/MI_H_Building_Industrial_Posun_02_HD.MI_H_Building_Industrial_Posun_02_HD",
+    "mat_0c598fa3c01b4fca": "DeltaForce/Content/Environment/Decal/WallDamaged/00_Materials/MI_I_WallDamaged_Decal_03_HD.MI_I_WallDamaged_Decal_03_HD"
+  },
+  "vertices": 2273,
+  "polygons": 1739,
+  "bounds": [
+    [
+      17.322675704956055,
+      -632.3062744140625,
+      -192.05006408691406
+    ],
+    [
+      1432.4212646484375,
+      -100.64483642578125,
+      -34.18449020385742
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

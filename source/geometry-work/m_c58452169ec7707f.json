@@ -1,0 +1,28 @@
+{
+  "id": "m_c58452169ec7707f",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Government/Office/SM_M_Government_Office_WoodenCabinet_01.SM_M_Government_Office_WoodenCabinet_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Government\\Office\\SM_M_Government_Office_WoodenCabinet_01.glb",
+  "sourceSHA256": "D1DC035E4BD989486081AB414D26C01EC351683939091437B472C0DF6BCAC7B0",
+  "model": "models/df_v24/m_c58452169ec7707f.vmdl",
+  "materials": {
+    "mat_4d150b869e4838d1": "DeltaForce/Content/Environment/Props/Morocco/Government/Office/00_Materials/HD/MI_M_Government_Office_WoodenCabinet_01B_HD.MI_M_Government_Office_WoodenCabinet_01B_HD",
+    "mat_fe4a219780f02569": "DeltaForce/Content/Environment/Props/Morocco/Government/Office/00_Materials/HD/MI_M_Government_Office_WoodenCabinet_01C_HD.MI_M_Government_Office_WoodenCabinet_01C_HD",
+    "mat_b0f65964a2b8a6b3": "DeltaForce/Content/Environment/Props/Morocco/Government/Office/00_Materials/HD/MI_M_Government_Office_WoodenCabinet_01_HD.MI_M_Government_Office_WoodenCabinet_01_HD"
+  },
+  "vertices": 639,
+  "polygons": 448,
+  "bounds": [
+    [
+      -0.006568450480699539,
+      -2.3510231971740723,
+      0.008717651478946209
+    ],
+    [
+      61.233177185058594,
+      26.560413360595703,
+      36.0
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

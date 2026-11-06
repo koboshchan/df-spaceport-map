@@ -1,0 +1,26 @@
+{
+  "id": "m_4a0cf52960d5f6a8",
+  "objectPath": "DeltaForce/Content/Maps/Iceland/Asset/Structures/SM_H_IceLand_Building_Industrial_TowerModule_02a.SM_H_IceLand_Building_Industrial_TowerModule_02a",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Maps\\Iceland\\Asset\\Structures\\SM_H_IceLand_Building_Industrial_TowerModule_02a.glb",
+  "sourceSHA256": "FDBCED2DD07D0BF90AA2912749ADA051CFB320770775BDF4864B615DAE9FB832",
+  "model": "models/df_v24/m_4a0cf52960d5f6a8.vmdl",
+  "materials": {
+    "mat_16f1b92468252915": "DeltaForce/Content/Maps/Iceland/Asset/Structures/00_Materials/HD/MI_H_IceLand_Building_Industrial_TowerModule_02a_HD.MI_H_IceLand_Building_Industrial_TowerModule_02a_HD"
+  },
+  "vertices": 567,
+  "polygons": 704,
+  "bounds": [
+    [
+      0.24313154816627502,
+      -6.524601459503174,
+      -6.524602890014648
+    ],
+    [
+      4.136739730834961,
+      6.524596214294434,
+      6.524598598480225
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

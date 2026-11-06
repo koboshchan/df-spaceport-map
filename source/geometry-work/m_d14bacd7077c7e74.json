@@ -1,0 +1,26 @@
+{
+  "id": "m_d14bacd7077c7e74",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/SM_BS_CelosiaMA1_78cm_HD.SM_BS_CelosiaMA1_78cm_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Bush\\SM_BS_CelosiaMA1_78cm_HD.glb",
+  "sourceSHA256": "38DDD437433F610F217BD1E9F92E18A2544DAABACFC810B86F3DC0081B7E6666",
+  "model": "models/df_v24/m_d14bacd7077c7e74.vmdl",
+  "materials": {
+    "mat_05fca60c5bdbf42d": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Bush/00_Materials/MI_BS_CelosiaMA1_78cm_Leaf_HD.MI_BS_CelosiaMA1_78cm_Leaf_HD"
+  },
+  "vertices": 924,
+  "polygons": 582,
+  "bounds": [
+    [
+      -14.536151885986328,
+      -18.432220458984375,
+      -4.69800329208374
+    ],
+    [
+      18.971660614013672,
+      10.73386001586914,
+      27.776079177856445
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "m_79599b4583accc4a",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/Transport/Utility/SM_H_Transport_Utility_ParkingPole_01B.SM_H_Transport_Utility_ParkingPole_01B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\Transport\\Utility\\SM_H_Transport_Utility_ParkingPole_01B.glb",
+  "sourceSHA256": "96D0E5DADFC9CBC64D05B4BDEB48D9D47A6EAB0DA7876B952CADFC944A72A244",
+  "model": "models/df_v24/m_79599b4583accc4a.vmdl",
+  "materials": {
+    "mat_f3650b3ed3a771f6": "DeltaForce/Content/Environment/Props/HAAVK/Transport/Utility/00_Materials/HD/MI_H_Transport_Utility_ParkingPole_01B_HD.MI_H_Transport_Utility_ParkingPole_01B_HD",
+    "mat_6399dd822b2b64f9": "DeltaForce/Content/Environment/Props/HAAVK/Transport/Utility/00_Materials/HD/MI_H_Transport_Utility_ParkingPole_01_HD.MI_H_Transport_Utility_ParkingPole_01_HD",
+    "mat_a67b28d28e36cf00": "DeltaForce/Content/Environment/Props/HAAVK/Government/Office/00_Materials/HD/MI_H_Government_Office_CoffeeMachine_01A_HD.MI_H_Government_Office_CoffeeMachine_01A_HD"
+  },
+  "vertices": 928,
+  "polygons": 664,
+  "bounds": [
+    [
+      -3.1090469360351562,
+      -142.150634765625,
+      3.261566234868951e-06
+    ],
+    [
+      1.9183988571166992,
+      -2.7465819130156888e-06,
+      4.6735405921936035
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

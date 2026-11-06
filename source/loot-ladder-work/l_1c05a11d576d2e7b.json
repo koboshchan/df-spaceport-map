@@ -1,0 +1,29 @@
+{
+  "canonical": "props_collect_box_559_3P",
+  "state": "opened",
+  "id": "l_1c05a11d576d2e7b",
+  "objectPath": "DeltaForce/Content/Models/Props/Collect/props_collect_box_559/props_collect_box_559_3P.uasset|opened",
+  "source": "E:\\df-extract-20261105\\loot-skeletal\\static-paired-v3\\props_collect_box_559_3P\\opened.glb",
+  "sourceSHA256": "4c757fd4dcf4921a5d6361ddf25db0dc280735390ddbf4a3418c9c2d1f95ebc6",
+  "model": "models/df_v24/l_1c05a11d576d2e7b.vmdl",
+  "materials": {
+    "mat_f2dffda1f883e1e9": "DeltaForce/Content/Models/Props/Collect/props_collect_box_559/Materials/props_collect_box_559.props_collect_box_559",
+    "mat_65537d6abfc5495c": "DeltaForce/Content/Models/Props/Collect/props_collect_box_559/Materials/props_collect_box_559_Glass.props_collect_box_559_Glass"
+  },
+  "vertices": 3715,
+  "polygons": 2566,
+  "bounds": [
+    [
+      -14.962191581726074,
+      -10.25825023651123,
+      0.13292083144187927
+    ],
+    [
+      5.4000043869018555,
+      10.236797332763672,
+      21.732919692993164
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

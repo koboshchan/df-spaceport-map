@@ -1,0 +1,26 @@
+{
+  "id": "m_f8b650390246bb0d",
+  "objectPath": "DeltaForce/Content/Environment/Props/Commercial/Resort/SM_Building_VisitorCenter_Sculpture_02B.SM_Building_VisitorCenter_Sculpture_02B",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Commercial\\Resort\\SM_Building_VisitorCenter_Sculpture_02B.glb",
+  "sourceSHA256": "64FB7B0FA910F2C9B205F133CEA262CBF3CBCFB72DC0E0019958A6886899672C",
+  "model": "models/df_v24/m_f8b650390246bb0d.vmdl",
+  "materials": {
+    "mat_601af150147a7d52": "DeltaForce/Content/Environment/Props/Commercial/00_Materials/HD/MI_Building_VisitorCenter_Sculpture_02_HD.MI_Building_VisitorCenter_Sculpture_02_HD"
+  },
+  "vertices": 1546,
+  "polygons": 1618,
+  "bounds": [
+    [
+      -119.62240600585938,
+      -42.42665100097656,
+      -155.68939208984375
+    ],
+    [
+      116.43551635742188,
+      45.39417266845703,
+      -5.536582193599315e-06
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

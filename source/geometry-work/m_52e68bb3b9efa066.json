@@ -1,0 +1,26 @@
+{
+  "id": "m_52e68bb3b9efa066",
+  "objectPath": "DeltaForce/Content/Environment/Props/Branding/LocationSign/SM_Branding_LocationSign_02C.SM_Branding_LocationSign_02C",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Branding\\LocationSign\\SM_Branding_LocationSign_02C.glb",
+  "sourceSHA256": "9C1044697ED2B9B02FE90489F1F598477FE41F6CD50CFDFC5501DC81971B0B28",
+  "model": "models/df_v24/m_52e68bb3b9efa066.vmdl",
+  "materials": {
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD"
+  },
+  "vertices": 620,
+  "polygons": 772,
+  "bounds": [
+    [
+      -19.112014770507812,
+      -3.239999771118164,
+      -16.123573303222656
+    ],
+    [
+      18.857295989990234,
+      3.433227391269611e-07,
+      16.11091423034668
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

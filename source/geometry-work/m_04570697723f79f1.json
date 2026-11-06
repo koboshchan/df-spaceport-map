@@ -1,0 +1,26 @@
+{
+  "id": "m_04570697723f79f1",
+  "objectPath": "DeltaForce/Content/Models/Vehicles/Weapon/ADS/Appearance_Base/ADS_3P0.ADS_3P0",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Models\\Vehicles\\Weapon\\ADS\\Appearance_Base\\ADS_3P0.glb",
+  "sourceSHA256": "F22DA4AAB3CBEBE69D70C38FDE3D6C978AA54C4479DE46431F19E7D015B6D919",
+  "model": "models/df_v24/m_04570697723f79f1.vmdl",
+  "materials": {
+    "mat_37a76f9d4193d268": "DeltaForce/Content/Models/Vehicles/Weapon/ADS/Appearance_Base/Materials/ADS.ADS"
+  },
+  "vertices": 4224,
+  "polygons": 3332,
+  "bounds": [
+    [
+      -5.458320617675781,
+      -5.458320140838623,
+      -1.2874602361989673e-07
+    ],
+    [
+      5.458320140838623,
+      5.458320617675781,
+      18.32040786743164
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

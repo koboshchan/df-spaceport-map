@@ -1,0 +1,26 @@
+{
+  "id": "m_2e51658138d5f30e",
+  "objectPath": "DeltaForce/Content/Environment/Props/Morocco/Commercial/Tools/SM_M_Commercial_Smoke_Signal_01.SM_M_Commercial_Smoke_Signal_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\Morocco\\Commercial\\Tools\\SM_M_Commercial_Smoke_Signal_01.glb",
+  "sourceSHA256": "B9AF7D04B49D6584D7B38D0C8E33168DCC99D4D2D25D82F598ADB70BB4EF21F3",
+  "model": "models/df_v24/m_2e51658138d5f30e.vmdl",
+  "materials": {
+    "mat_bbac71c2722fd31a": "DeltaForce/Content/Environment/Props/Morocco/Commercial/00_Materials/HD/MI_M_Commercial_Smoke_Signal_01_HD.MI_M_Commercial_Smoke_Signal_01_HD"
+  },
+  "vertices": 270,
+  "polygons": 280,
+  "bounds": [
+    [
+      -0.7919999957084656,
+      -0.7919999957084656,
+      0.0
+    ],
+    [
+      0.7919999957084656,
+      0.7919999957084656,
+      8.991334915161133
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "m_5d5fbdbb5aa8cdb6",
+  "objectPath": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Decoration/SM_DECOR_LeavesThin_01_HD.SM_DECOR_LeavesThin_01_HD",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Biome\\Vegetation_HD\\Decoration\\SM_DECOR_LeavesThin_01_HD.glb",
+  "sourceSHA256": "5D5B1C41C90AF91EC6932E493615FC0ED923BB10298E9D3EDB55DCBCCE80D7FD",
+  "model": "models/df_v24/m_5d5fbdbb5aa8cdb6.vmdl",
+  "materials": {
+    "mat_222c9336b163d9ef": "DeltaForce/Content/Environment/Biome/Vegetation_HD/Decoration/00_Materials/MI_DECOR_LeavesThin_01_Leaf_HD.MI_DECOR_LeavesThin_01_Leaf_HD"
+  },
+  "vertices": 149,
+  "polygons": 100,
+  "bounds": [
+    [
+      -35.39858627319336,
+      -32.68990707397461,
+      0.10103752464056015
+    ],
+    [
+      39.60000228881836,
+      31.651840209960938,
+      1.5939313173294067
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ãƒâ€”36, no reflection or winding change"
+}

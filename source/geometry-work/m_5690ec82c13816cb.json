@@ -1,0 +1,27 @@
+{
+  "id": "m_5690ec82c13816cb",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_AgainstWar_01a_Damaged_01_Decal.SM_H_Building_FutureTech_AgainstWar_01a_Damaged_01_Decal",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_AgainstWar_01a_Damaged_01_Decal.glb",
+  "sourceSHA256": "578BC0AF91C01FBDD6D1D880FD8215B3E7C25392FA623DF728A50B4EE015426D",
+  "model": "models/df_v24/m_5690ec82c13816cb.vmdl",
+  "materials": {
+    "mat_cc9ee146d6b8b8f9": "DeltaForce/Content/Environment/Structures/HAAVK/Building/Tide/00_Materials/HD/MI_H_Building_Tide_Decal_08_HD.MI_H_Building_Tide_Decal_08_HD",
+    "mat_69b9ff7a811ece89": "DeltaForce/Content/Environment/Structures/Morocco/Decal/00_Materials/MI_C_WallDamaged_Decal_01A_HD.MI_C_WallDamaged_Decal_01A_HD"
+  },
+  "vertices": 10644,
+  "polygons": 7666,
+  "bounds": [
+    [
+      975.97021484375,
+      -75.02055358886719,
+      -109.68221282958984
+    ],
+    [
+      1185.3984375,
+      68.51575469970703,
+      2.6649205684661865
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

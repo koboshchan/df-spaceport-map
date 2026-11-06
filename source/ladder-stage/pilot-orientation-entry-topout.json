@@ -1,0 +1,170 @@
+{
+  "sourceID": "DeltaForce/Content/Maps/SpaceCenter_Ma1/InterActors/Gameplay/Gameplay_x26_y18_0.Gameplay_x26_y18_0:PersistentLevel.BP_Interactor_ClimbLadder_TemplateNew2_2",
+  "webID": "Ladder1",
+  "frontFace": 4,
+  "frontNormal": [
+    0.9999999999994517,
+    1.0471975523766257e-06,
+    0.0
+  ],
+  "vertices": [
+    [
+      -1313.5320150796201,
+      -298.821613732921,
+      843.2531999999997
+    ],
+    [
+      -1313.5319849203306,
+      -327.6216137329052,
+      843.2531999999997
+    ],
+    [
+      -1312.5320150796206,
+      -298.8216126857234,
+      843.2531999999997
+    ],
+    [
+      -1312.531984920331,
+      -327.6216126857076,
+      360.1331999999997
+    ],
+    [
+      -1312.5320150796206,
+      -298.8216126857234,
+      360.1331999999997
+    ],
+    [
+      -1312.531984920331,
+      -327.6216126857076,
+      843.2531999999997
+    ],
+    [
+      -1313.5319849203306,
+      -327.6216137329052,
+      360.1331999999997
+    ],
+    [
+      -1313.5320150796201,
+      -298.821613732921,
+      360.1331999999997
+    ]
+  ],
+  "thicknessCS2": 1,
+  "sourceClimbVolume": {
+    "matrixCS2": [
+      [
+        -3.769911184026142e-07,
+        0.3599999999998026,
+        0.0,
+        -1299.1319999999832
+      ],
+      [
+        0.3599999999998026,
+        3.769911184026142e-07,
+        0.0,
+        -313.2215986532683
+      ],
+      [
+        0.0,
+        0.0,
+        0.36,
+        601.6931999999997
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "halfExtentsLocalUEcm": {
+      "X": 40.0,
+      "Y": 40.0,
+      "Z": 671.0
+    },
+    "frontNormalCS2": [
+      0.9999999999994518,
+      1.047197551118373e-06,
+      0.0
+    ],
+    "source": "LadderBox source extents and full socket-composed transform",
+    "backPlaneSignedDistanceCS2": 1.680255934388697e-11,
+    "mustStayFrontOfRungPlane": true,
+    "faces": {
+      "front": "ONLY_CLIMBABLE_FACE aligned intendedFrontNormalCS2",
+      "back": "NONCLIMBABLE",
+      "sides": "NONCLIMBABLE",
+      "top": "NONCLIMBABLE",
+      "bottom": "NONCLIMBABLE",
+      "source2FaceEntitySemanticsVerification": "PENDING_IMPLEMENTATION_QA"
+    },
+    "material": "materials/tools/toolsinvisibleladder.vmat",
+    "materialEvidence": "E:\\df-extract-20261105\\placements\\validation\\door-ladder-audit\\source2-ladder-material-proof.json"
+  },
+  "endpoints": {
+    "LadderBottomEndTransform": [
+      -1295.290800000017,
+      -313.22158089786535,
+      373.5756000000001
+    ],
+    "LadderBottomStartTransform": [
+      -1289.411999999982,
+      -313.2215747415903,
+      360.1332000000002
+    ],
+    "LadderTopEndTransform": [
+      -1294.8393599999836,
+      -313.22158042513183,
+      784.075319999999
+    ],
+    "LadderTopStartTransform": [
+      -1326.5125199999893,
+      -313.2216135931667,
+      869.6426569200003
+    ]
+  },
+  "clearanceEvidence": {
+    "sourceBottomBoxZRange": [
+      360.49320000000006,
+      382.0932000000001
+    ],
+    "sourceTopBoxZRange": [
+      835.9754399999998,
+      900.7754399999998
+    ],
+    "contingencyClipZRange": [
+      384.0932000000001,
+      833.9754399999998
+    ],
+    "sourceBottomArrowCrossesRungPlane": null,
+    "sourceTopArrowCrossesRungPlane": {
+      "t": 0.4098271217643089,
+      "positionCS2": [
+        -1313.5320000000065,
+        -313.22160000000645,
+        834.5748415130392
+      ]
+    },
+    "frontApproachRayMinDistanceCS2": 76.97345439943058,
+    "frontApproachRaysNotPlayerHull": true,
+    "topoutWarning": "Top transition crosses the ladder plane. Do not extend a backing clip through the source TopBox/top-out corridor.",
+    "liveClimbabilityVerified": false
+  },
+  "runtimeVerified": false,
+  "sideBackTopBottomMaterial": "materials/tools/toolsnodraw.vmat",
+  "bounds": {
+    "min": [
+      -1313.5320150796201,
+      -327.6216137329052,
+      360.1331999999997
+    ],
+    "max": [
+      -1312.531984920331,
+      -298.8216126857234,
+      843.2531999999997
+    ]
+  },
+  "climbableFaceWindingOutwardNormalDot": 1.0,
+  "sourceEndpointStatus": "SOCKET_CHAIN_VALIDATED; PLAYER_HULL_RUNTIME_UNVERIFIED",
+  "geometryPolicy": "1-CS2-unit sheet within SOURCE front climb volume; front only ladder face, no backing wall added"
+}

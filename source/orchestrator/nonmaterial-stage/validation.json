@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "utc": "2026-11-06T16:14:13.552722+00:00",
+  "visibility": 360,
+  "parentReceiptVerified": true,
+  "frozenFiles": 19,
+  "notPromoted": true,
+  "notCompiled": true,
+  "centralLock": "49f09f11",
+  "materialOwner": "9b9f7b1c exclusive frozen table parse",
+  "independentReviewer": "d007b190 receipt review only",
+  "materialGate": "BLOCKED no guessed bindings"
+}

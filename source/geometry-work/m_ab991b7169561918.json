@@ -1,0 +1,34 @@
+{
+  "id": "m_ab991b7169561918",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech/SM_H_Building_FutureTech_ToolHouse_01_ExterWall_01.SM_H_Building_FutureTech_ToolHouse_01_ExterWall_01",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech\\SM_H_Building_FutureTech_ToolHouse_01_ExterWall_01.glb",
+  "sourceSHA256": "44CE4D639DAAF073D70E5762F6B562507324222047A84B022726B233BC846359",
+  "model": "models/df_v24/m_ab991b7169561918.vmdl",
+  "materials": {
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_38b39ab9bd6e8fae": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_03_HD.MI_GEN_Metal_Painting_03_HD",
+    "mat_9257e7010dd18b27": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Concrete_Checkred_05_HD.MI_GEN_Concrete_Checkred_05_HD",
+    "mat_c2007be28888a6c9": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Continuous_Metal_09_Black_B_HD.MI_H_FutureTech_Continuous_Metal_09_Black_B_HD",
+    "mat_31c3b94e803e1374": "DeltaForce/Content/Environment/Structures/Window/00_Materials/HD/MI_Window_Glass_01_HD.MI_Window_Glass_01_HD",
+    "mat_d1f97030bbe55113": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_ToolHouse_01_ExterWall_01b_HD.MI_H_Building_FutureTech_ToolHouse_01_ExterWall_01b_HD",
+    "mat_f66a1f435167ce28": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_ToolHouse_01_ExterWall_01a_HD.MI_H_Building_FutureTech_ToolHouse_01_ExterWall_01a_HD",
+    "mat_635da925508effce": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Painting_07_HD.MI_GEN_Metal_Painting_07_HD",
+    "mat_cc3fdc6503104420": "DeltaForce/Content/Environment/Props/HAAVK/FutureTech/00_Materials/HD/MI_H_FutureTech_Continuous_Metal_09_Black_A_HD.MI_H_FutureTech_Continuous_Metal_09_Black_A_HD"
+  },
+  "vertices": 22127,
+  "polygons": 19970,
+  "bounds": [
+    [
+      2.931833267211914,
+      -600.2572631835938,
+      -0.039067380130290985
+    ],
+    [
+      644.3857421875,
+      -21.002212524414062,
+      417.3497619628906
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

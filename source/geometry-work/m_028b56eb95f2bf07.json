@@ -1,0 +1,26 @@
+{
+  "id": "m_028b56eb95f2bf07",
+  "objectPath": "DeltaForce/Content/Environment/Props/HAAVK/NavalBattle/SM_H_Building_Militarily_NavalBattle_S6_Rock_04.SM_H_Building_Militarily_NavalBattle_S6_Rock_04",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Props\\HAAVK\\NavalBattle\\SM_H_Building_Militarily_NavalBattle_S6_Rock_04.glb",
+  "sourceSHA256": "F9A0D46D0DB0AAF6E1E3D3178BB388BD5502BFCC0ABEA5B2B3BCFEFB15416DFC",
+  "model": "models/df_v24/m_028b56eb95f2bf07.vmdl",
+  "materials": {
+    "mat_e0f26f84a8ba7013": "DeltaForce/Content/Environment/Props/HAAVK/NavalBattle/00_Materials/HD/MI_H_Building_Militarily_NavalBattle_S6_Rock_04_HD.MI_H_Building_Militarily_NavalBattle_S6_Rock_04_HD"
+  },
+  "vertices": 8102,
+  "polygons": 13441,
+  "bounds": [
+    [
+      -52.38935852050781,
+      -37.6317024230957,
+      -0.32237574458122253
+    ],
+    [
+      51.49003982543945,
+      38.36796951293945,
+      9.240188598632812
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

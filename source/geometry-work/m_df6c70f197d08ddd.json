@@ -1,0 +1,28 @@
+{
+  "id": "m_df6c70f197d08ddd",
+  "objectPath": "DeltaForce/Content/Environment/Structures/HAAVK/Building/FutureTech_Ma1/SM_H_Building_FutureTech_Dock_06_04.SM_H_Building_FutureTech_Dock_06_04",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Structures\\HAAVK\\Building\\FutureTech_Ma1\\SM_H_Building_FutureTech_Dock_06_04.glb",
+  "sourceSHA256": "31B852F21B22E6654B20608B7125F586D6580120D10DE9CB19219CD1E7443269",
+  "model": "models/df_v24/m_df6c70f197d08ddd.vmdl",
+  "materials": {
+    "mat_34c70337903a6a40": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_SpaceCenter_Trim_05_HD.MI_SpaceCenter_Trim_05_HD",
+    "mat_45c818e9c23d8949": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_H_Building_FutureTech_HOrange_01_ExterWall_01_01A_HD.MI_H_Building_FutureTech_HOrange_01_ExterWall_01_01A_HD",
+    "mat_2a70599a3d718051": "DeltaForce/Content/Environment/Structures/HAAVK/00_Materials/SpaceCenter/HD/MI_GEN_Metal_Base_01_HD.MI_GEN_Metal_Base_01_HD"
+  },
+  "vertices": 1994,
+  "polygons": 1802,
+  "bounds": [
+    [
+      -321.5592041015625,
+      -77.8708267211914,
+      2.197265530412551e-05
+    ],
+    [
+      321.5592041015625,
+      4.486695289611816,
+      37.65049743652344
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}

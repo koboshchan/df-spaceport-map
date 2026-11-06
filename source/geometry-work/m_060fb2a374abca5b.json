@@ -1,0 +1,27 @@
+{
+  "id": "m_060fb2a374abca5b",
+  "objectPath": "DeltaForce/Content/Environment/Gameplay/Feature/SM_Feature_Mound_03.SM_Feature_Mound_03",
+  "source": "E:\\df-extract-20261105\\meshes\\DeltaForce\\Content\\Environment\\Gameplay\\Feature\\SM_Feature_Mound_03.glb",
+  "sourceSHA256": "274DE6FA990D4F18965D4375E0F37748DE82FA944B65660FE78A5D0D2A74AB1D",
+  "model": "models/df_v24/m_060fb2a374abca5b.vmdl",
+  "materials": {
+    "mat_c07facee73f5a73a": "DeltaForce/Content/Environment/Gameplay/Feature/00_Materials/HD/MI_Feature_Mound_01B_HD.MI_Feature_Mound_01B_HD",
+    "mat_c967cccf90782414": "DeltaForce/Content/Environment/Gameplay/Feature/00_Materials/HD/MI_Feature_Mound_01A_HD.MI_Feature_Mound_01A_HD"
+  },
+  "vertices": 8024,
+  "polygons": 9271,
+  "bounds": [
+    [
+      -45.174354553222656,
+      -44.296302795410156,
+      -0.03967660665512085
+    ],
+    [
+      45.174354553222656,
+      44.296302795410156,
+      26.220672607421875
+    ]
+  ],
+  "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+  "basis": "local imported glTF Ã—36, no reflection or winding change"
+}
