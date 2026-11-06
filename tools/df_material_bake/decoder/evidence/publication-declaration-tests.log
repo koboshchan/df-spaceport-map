@@ -1,0 +1,25 @@
+test_count_limit (test_decoder.Tests.test_count_limit) ... ok
+test_deterministic_mutations_no_crash (test_decoder.Tests.test_deterministic_mutations_no_crash) ... ok
+test_every_truncation (test_decoder.Tests.test_every_truncation) ... ok
+test_hash (test_decoder.Tests.test_hash) ... ok
+test_negative_offset (test_decoder.Tests.test_negative_offset) ... ok
+test_offset_header (test_decoder.Tests.test_offset_header) ... ok
+test_program_length (test_decoder.Tests.test_program_length) ... ok
+test_size_overrun (test_decoder.Tests.test_size_overrun) ... ok
+test_unknown_version (test_decoder.Tests.test_unknown_version) ... ok
+test_valid (test_decoder.Tests.test_valid) ... ok
+test_bad_length (test_optional.OptionalTests.test_bad_length) ... ok
+test_blocks (test_optional.OptionalTests.test_blocks) ... ok
+test_strings (test_optional.OptionalTests.test_strings) ... ok
+test_duplicates (test_declarations.Tests.test_duplicates) ... ok
+test_sparse (test_declarations.Tests.test_sparse) ... ok
+test_unsupported (test_declarations.Tests.test_unsupported) ... ok
+test_optional_negative_length (test_structural_bounds.Bounds.test_optional_negative_length) ... ok
+test_prefix_negative_and_overrun (test_structural_bounds.Bounds.test_prefix_negative_and_overrun) ... ok
+test_prefix_truncated (test_structural_bounds.Bounds.test_prefix_truncated) ... ok
+test_strings_negative_length (test_structural_bounds.Bounds.test_strings_negative_length) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.057s
+
+OK

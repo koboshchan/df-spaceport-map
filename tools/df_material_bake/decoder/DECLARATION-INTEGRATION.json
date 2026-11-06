@@ -1,0 +1,7 @@
+{
+  "sourceCommit": "42918c3ce23492458671b73638667329786d7801",
+  "bundleSHA256": "2671f982a624ce7d67a64933142d4249b5d0b9a9f70e7bf160bb963ea965b96c",
+  "reproduction": "detached D3DDisassemble; exact full report equality for all157 and48comparisons",
+  "semanticDecodes": 0,
+  "interpretation": "dataset discrimination only; no Tencent field semantics, named bindings, uniform members, recipes or operation IR enabled"
+}
