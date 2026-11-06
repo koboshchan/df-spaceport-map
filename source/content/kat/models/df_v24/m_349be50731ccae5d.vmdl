@@ -1,0 +1,8 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc36:version{972dada4-b828-45a4-bb93-7795cf0585da} -->
+{ rootNode = { _class = "RootNode" children = [ { _class = "RenderMeshList" children = [ { _class = "RenderMeshFile" name = "mesh" filename = "models/df_v24/m_349be50731ccae5d.fbx" import_scale = 1.0 import_filter = { exclude_by_default = false exception_list = [] } } ] }, { _class = "MaterialGroupList" children = [ { _class = "DefaultMaterialGroup" name = "default" remaps = [ { from = "mat_87e7a199edab1636" to = "materials/df_v24/mat_87e7a199edab1636.vmat" },
+{ from = "mat_ccf7d54540b23a7e" to = "materials/df_v24/mat_ccf7d54540b23a7e.vmat" },
+{ from = "mat_e6d0b663f205024c" to = "materials/df_v24/mat_e6d0b663f205024c.vmat" },
+{ from = "mat_7c9fd56c8f9b482a" to = "materials/df_v24/mat_7c9fd56c8f9b482a.vmat" },
+{ from = "mat_0a6904cc74e0ac7d" to = "materials/df_v24/mat_0a6904cc74e0ac7d.vmat" },
+{ from = "mat_25b241559015761b" to = "materials/df_v24/mat_25b241559015761b.vmat" },
+{ from = "mat_0f829f2c69af8004" to = "materials/df_v24/mat_0f829f2c69af8004.vmat" } ] use_global_default = false global_default_material = "" } ] }, { _class = "PhysicsShapeList" children = [ { _class = "PhysicsMeshFromRender" parent_bone = "" surface_prop = "default" collision_prop = "default" tool_material = "" renderMeshList = [] } ] leave_body_collision_unmodified = false } ] model_archetype = "" primary_associated_entity = "" anim_graph_name = "" document_sub_type = "ModelDocSubType_None" } }
