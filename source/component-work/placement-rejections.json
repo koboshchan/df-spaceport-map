@@ -1,0 +1,7 @@
+[
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_TODLight.SpaceCenter_TODLight:PersistentLevel.SkyDomeMesh.StaticMeshComponent0",
+    "meshObjectPath": "/Game/Maps/StandardScene/HDRIBackdrop/Meshes/EnviroDome.EnviroDome",
+    "reason": "SOURCE_GLB_MISSING"
+  }
+]

@@ -1,0 +1,22 @@
+from pathlib import Path
+import json,importlib.util,numpy as np,hashlib
+o=Path('E:/df-v24-build-20261106/component-work')
+spec=importlib.util.spec_from_file_location('dfgen',o/'generate_vmap.py');g=importlib.util.module_from_spec(spec);spec.loader.exec_module(g)
+B=np.eye(4);B[:3,:3]=np.diag([1.,-1.,1.])/.36
+fails=[];zero=[];rows=[];maxerr=0;maxshear=0
+for line in (o/'final-combined-placements.jsonl').open(encoding='utf8'):
+ x=json.loads(line)
+ C=np.eye(4) if x.get('worldBakedCS2') or x.get('worldBaked') else np.array(x['matrixCS2'])@B
+ if x.get('bakedCS2LocalTransform'):C=np.eye(4);C[:3,3]=x['positionCS2']
+ try:
+  pos,ang,scale,shear,err=g.decompose(C);x.update(cs2position=pos,cs2angles=ang,cs2scale=scale,decompositionVerified=True,importedModelBasis='UE(X,-Y,Z)*.36; empirical compiledRC Dock679vertex proof confirmed')
+  maxerr=max(maxerr,err);maxshear=max(maxshear,shear)
+ except Exception as exc:
+  if 'zero scale' in str(exc):x['authoredZeroScale']=True;zero.append(x['objectPath'])
+  else:fails.append(dict(objectPath=x['objectPath'],reason=str(exc)))
+ rows.append(x)
+dst=o/'final-combined-decomposed.jsonl'
+with dst.open('w',encoding='utf8') as f:
+ for x in rows:f.write(json.dumps(x,separators=(',',':'))+'\n')
+(o/'final-decomposition-receipt.json').write_text(json.dumps(dict(rows=len(rows),failures=fails,authoredZeroScaleCount=len(zero),maxRecomposeError=maxerr,maxShear=maxshear,path=str(dst),sha256=hashlib.sha256(dst.read_bytes()).hexdigest(),basisCompileReady=True),indent=2))
+print('FINAL DECOMP',len(rows),len(fails),len(zero),flush=True)

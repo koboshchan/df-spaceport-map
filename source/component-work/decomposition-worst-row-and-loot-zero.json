@@ -1,0 +1,150 @@
+{
+  "worst": {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube111.StaticMeshComponent0",
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "maxLinearCoefficientError": 0.10385557475650274,
+    "maxLinearCoefficientMagnitude": 1733.9937608153402,
+    "shear": 5.98938572347144e-05,
+    "matrixModelToCS2": [
+      [
+        -0.0007050327999997317,
+        -2.2042853563809226e-05,
+        0.0,
+        2931.209999999992
+      ],
+      [
+        4.22360964537938e-08,
+        -1733.9937608153402,
+        0.0,
+        -3068.877035170939
+      ],
+      [
+        0.0,
+        0.0,
+        1.5634563642369,
+        1633.9162647744824
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "model": {
+      "id": "m_ef43b23de4958867",
+      "objectPath": "Engine/Content/BasicShapes/Cube.Cube",
+      "source": "E:\\df-extract-20261105\\meshes\\Engine\\Content\\BasicShapes\\Cube.glb",
+      "sourceSHA256": "42B20974B0F2675B61524041B82473FBBA04FDFA3B48C37B62F82FA72AA21371",
+      "model": "models/df_v24/m_ef43b23de4958867.vmdl",
+      "materials": {
+        "mat_87fa7d325eb743c4": "Engine/Content/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+      },
+      "vertices": 54,
+      "polygons": 48,
+      "bounds": [
+        [
+          -18.0,
+          -18.0,
+          -18.0
+        ],
+        [
+          18.0,
+          18.0,
+          18.0
+        ]
+      ],
+      "collisionMode": "render-triangle candidate; component policy must select collision before final map",
+      "basis": "local imported glTF \u00c3\u201436, no reflection or winding change"
+    },
+    "positionCS2": [
+      2931.209999999992,
+      -3068.877035170939,
+      1633.9162647744824
+    ],
+    "angles": [
+      -0.0,
+      179.99656760640494,
+      0.0
+    ],
+    "scales": [
+      0.0007050328012648414,
+      1733.9937608153402,
+      1.5634563642369
+    ]
+  },
+  "sourceZeroLoot": [
+    {
+      "selectionId": "selection-286",
+      "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_\u822a\u5929\u57ce_\u5408\u540c_\u53d1\u5c04\u533a_\u822a\u7a7a\u50a8\u7269\u7bb1_29-53false.InteractorSkeletalMesh",
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/GenericConfig/SpaceCenter_BFR.SpaceCenter_BFR:PersistentLevel.BP_InteractorContainer_Rocket_C_\u822a\u5929\u57ce_\u5408\u540c_\u53d1\u5c04\u533a_\u822a\u7a7a\u50a8\u7269\u7bb1_29-53false",
+      "meshObjectPath": "DeltaForce/Content/Models/Props/Collect/props_collect_box_657/props_collect_box_657_3P.uasset",
+      "canonicalType": null,
+      "category": "ORDINARY_CONTAINER",
+      "fullSourceWorldMatrix": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          660139.4801160129
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          -416381.320397915
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          -21076.05489
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "positionCS2": [
+        -3333.7871582353837,
+        -14910.724656750594,
+        465.46023960000093
+      ],
+      "collisionEnabled": true,
+      "matrixCS2": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          -3333.7871582353837
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          -14910.724656750594
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          465.46023960000093
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "model": "models/df_v24/l_4fe5a0319818107c.vmdl",
+      "openedModel": "models/df_v24/l_fd8372af72392028.vmdl",
+      "state": "closed",
+      "futureSwapOnly": true,
+      "placedModelState": "closed",
+      "openedModelPlacement": "NOT_PLACED_PRECOMPILED_FUTURE_PLUGIN_SWAP_ONLY"
+    }
+  ]
+}

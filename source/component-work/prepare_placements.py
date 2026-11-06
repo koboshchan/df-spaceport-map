@@ -1,0 +1,27 @@
+import importlib.util,json,hashlib,numpy as np
+from pathlib import Path
+o=Path('E:/df-v24-build-20261106/component-work')
+spec=importlib.util.spec_from_file_location('dfgen',o/'generate_vmap.py');g=importlib.util.module_from_spec(spec);spec.loader.exec_module(g)
+rows=[json.loads(l) for l in (o/'selected-placements.jsonl').open(encoding='utf8')];models={x['objectPath']:x for x in (json.loads(l) for l in Path('E:/df-v24-build-20261106/geometry-work/models.jsonl').open(encoding='utf8'))}
+B=np.eye(4);B[:3,:3]=np.diag([1.,-1.,1.])/.36
+G=np.array([[.36,0,0,-240984],[0,-.36,0,-164808],[0,0,.36,8052.84],[0,0,0,1.]])
+fails=[];zeros=[];ready=[]
+for row in rows:
+ C=np.array(row['matrixCS2'])
+ if row.get('fullSourceWorldMatrix') is None:row['fullSourceWorldMatrix']=(np.linalg.inv(G)@C).tolist()
+ model=models.get(row['meshObjectPath'])
+ if model:row['model']=model['model']
+ else:fails.append(dict(objectPath=row['objectPath'],reason='MODEL_NOT_IN_CURRENT_INDEX',mesh=row['meshObjectPath']))
+ try:
+  pos,angles,scale,shear,error=g.decompose(C@B)
+  row.update(cs2position=pos,cs2angles=angles,cs2scale=scale,decompositionVerified=True)
+ except Exception as exc:
+  if 'zero scale' in str(exc):zeros.append(row['objectPath']);row['authoredZeroScale']=True
+  else:fails.append(dict(objectPath=row['objectPath'],reason=str(exc),matrixCS2=row['matrixCS2']))
+ if row.get('requiresSourceDeformation'):fails.append(dict(objectPath=row['objectPath'],reason='SOURCE_SPLINE_DEFORMATION_REQUIRED'))
+ ready.append(row)
+f=o/'selected-placements-decomposed.jsonl'
+with f.open('w',encoding='utf8') as h:
+ for row in ready:h.write(json.dumps(row,separators=(',',':'))+'\n')
+(o/'decomposition-receipt.json').write_text(json.dumps(dict(rows=len(rows),failures=fails,authoredZeroScale=zeros,output=str(f),sha256=hashlib.sha256(f.read_bytes()).hexdigest()),indent=2))
+print('DONE',len(rows),'failures',len(fails),'authoredzero',len(zeros),flush=True)

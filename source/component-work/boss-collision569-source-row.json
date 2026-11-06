@@ -1,0 +1,147 @@
+{
+  "package": "DeltaForce/Content/Maps/SpaceCenter_Ma1/DynamicRequest/EventSOL/PortBoss/LD/BOSS07_Template_Generic.umap",
+  "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/DynamicRequest/EventSOL/PortBoss/LD/BOSS07_Template_Generic.BOSS07_Template_Generic:PersistentLevel.Collision569.StaticMeshComponent0",
+  "className": "StaticMeshComponent",
+  "metadata": "DeltaForce/Content/Maps/SpaceCenter_Ma1/DynamicRequest/EventSOL/PortBoss/LD/BOSS07_Template_Generic/000095-StaticMeshComponent0.metadata.json",
+  "worldVerified": false,
+  "sourceJson": "DeltaForce/Content/Maps/SpaceCenter_Ma1/DynamicRequest/EventSOL/PortBoss/LD/BOSS07_Template_Generic/000095-StaticMeshComponent0.source.json",
+  "component": {
+    "mesh": "DeltaForce/Content/Maps/TestMap/Level_Prototype/BSP_Resorce/LDmesh/BlockWallCube.BlockWallCube",
+    "chain": [
+      {
+        "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/DynamicRequest/EventSOL/PortBoss/LD/BOSS07_Template_Generic.BOSS07_Template_Generic:PersistentLevel.Collision569.StaticMeshComponent0",
+        "translation": {
+          "X": 653813.75,
+          "Y": -444220.78,
+          "Z": -22145.996
+        },
+        "rotationEuler": {
+          "Pitch": 0,
+          "Yaw": -314.9304,
+          "Roll": 0
+        },
+        "rotationQuaternion": {
+          "IsNormalized": true,
+          "Size": 1,
+          "SizeSquared": 1,
+          "X": 0,
+          "Y": 0,
+          "Z": -0.38324466,
+          "W": -0.92364687
+        },
+        "scale": {
+          "X": 1,
+          "Y": 6.303222,
+          "Z": 3.959436
+        },
+        "attachParent": null,
+        "template": null,
+        "serializedPropertyNames": [
+          "StaticMesh",
+          "bUseDefaultCollision",
+          "LightmassSettings",
+          "OverrideMaterials",
+          "BodyInstance",
+          "RelativeLocation",
+          "RelativeRotation",
+          "RelativeScale3D",
+          "bAbsoluteLocation",
+          "PrimaryComponentTick",
+          "bCanEverAffectNavigation"
+        ]
+      }
+    ],
+    "chainBlocker": null,
+    "instances": null,
+    "worldVerified": false,
+    "status": "component-local/attachment-chain captured; runtime cell offset unresolved",
+    "absoluteFlags": "see source serialized bAbsoluteLocation/Rotation/Scale; defaults not assumed",
+    "units": "UE centimeters",
+    "originRouting": "UNKNOWN CustomOpenWorldStreaming; not merged across candidate levels"
+  },
+  "serializedSource": {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMeshComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "StaticMeshActor'BOSS07_Template_Generic:PersistentLevel.Collision569'",
+      "ObjectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/DynamicRequest/EventSOL/PortBoss/LD/BOSS07_Template_Generic.90"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'BlockWallCube'",
+        "ObjectPath": "DeltaForce/Content/Maps/TestMap/Level_Prototype/BSP_Resorce/LDmesh/BlockWallCube.1"
+      },
+      "bUseDefaultCollision": false,
+      "LightmassSettings": {
+        "bJoinLocalLightBake": false
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'Base_LD_BlockVolume'",
+          "ObjectPath": "DeltaForce/Content/Maps/TestMap/Level_Prototype/BSP_Resorce/LDMaterial/Base_LD_BlockVolume.0"
+        }
+      ],
+      "BodyInstance": {
+        "ObjectType": "ECC_Pawn",
+        "CollisionProfileName": "Custom",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "EngineTraceChannel1",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "VehicleCamera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OnlyOverlapCharacterTrace",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Weapon",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "ProjectileShootable",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 653813.75,
+        "Y": -444220.78,
+        "Z": -22145.996
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -314.9304,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 6.303222,
+        "Z": 3.959436
+      },
+      "bAbsoluteLocation": true,
+      "PrimaryComponentTick": {
+        "AggregateClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      "bCanEverAffectNavigation": false
+    }
+  }
+}

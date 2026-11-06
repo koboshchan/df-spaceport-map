@@ -1,0 +1,164 @@
+<!-- dmx encoding keyvalues2 4 format vmap 40 -->
+"CMapRootElement"
+{
+	"id" "elementid" "86bb082b-9d5f-4900-97a0-cd0374f06b2c"
+	"name" "string" ""
+	"isprefab" "bool" "0"
+	"editorbuild" "int" "10112"
+	"editorversion" "int" "400"
+	"itemFile" "string" ""
+	"world" "element" "560f325f-baca-44d6-b706-31ba3a7984f0"
+	"m_referencedmeshsnapshots" "element_array"
+	[
+	]
+	"m_bIsCordoning" "bool" "0"
+	"m_bCordonsVisible" "bool" "0"
+	"nodeinstancedata" "element_array"
+	[
+	]
+}
+
+"CMapWorld"
+{
+	"id" "elementid" "560f325f-baca-44d6-b706-31ba3a7984f0"
+	"name" "string" "world"
+	"nodeID" "int" "1"
+	"referenceID" "uint64" "0x0"
+	"children" "element_array"
+	[
+		"element" "928066e2-dcad-5387-94bf-27dc78855757",
+		"element" "f3f8e256-c611-51c0-8931-a9127b13871b"
+	]
+	"variableTargetKeys" "string_array"
+	[
+	]
+	"variableNames" "string_array"
+	[
+	]
+	"relayPlugData" "element" "97c3a816-8517-4b89-ab8d-191873cbfc12"
+	"connectionsData" "element_array"
+	[
+	]
+	"entity_properties" "element" "474dd790-5f0b-4930-aa41-4ed9aa01a086"
+	"nextDecalID" "int" "0"
+	"fixupEntityNames" "bool" "1"
+	"mapUsageType" "string" "standard"
+	"origin" "vector3" "0 0 0"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"transformLocked" "bool" "0"
+	"force_hidden" "bool" "0"
+	"editorOnly" "bool" "0"
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "928066e2-dcad-5387-94bf-27dc78855757"
+	"name" "string" "df_78a3aeacaed98ec04d03"
+	"nodeID" "int" "4000000"
+	"origin" "vector3" "0 0 0"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "0afcfa6f-fbba-4322-ab4b-e1672f075d49"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"CMapEntity"
+{
+	"id" "elementid" "f3f8e256-c611-51c0-8931-a9127b13871b"
+	"name" "string" "df_v24_origin"
+	"nodeID" "int" "4000001"
+	"origin" "vector3" "0 0 0"
+	"angles" "qangle" "0 0 0"
+	"scales" "vector3" "1 1 1"
+	"children" "element_array"
+	[
+	]
+	"entity_properties" "element" "8d784dcf-2244-4bf5-bc68-bd1d7d70f45b"
+	"connectionsData" "element_array"
+	[
+	]
+}
+
+"DmePlugList"
+{
+	"id" "elementid" "97c3a816-8517-4b89-ab8d-191873cbfc12"
+	"name" "string" "relayPlugData"
+	"names" "string_array"
+	[
+	]
+	"dataTypes" "int_array"
+	[
+	]
+	"plugTypes" "int_array"
+	[
+	]
+	"descriptions" "string_array"
+	[
+	]
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "474dd790-5f0b-4930-aa41-4ed9aa01a086"
+	"name" "string" "entity_properties"
+	"classname" "string" "worldspawn"
+	"targetname" "string" ""
+	"skyname" "string" "sky_day01_01"
+	"startdark" "string" "0"
+	"startcolor" "string" "0 0 0"
+	"pvstype" "string" "0"
+	"newunit" "string" "0"
+	"maxpropscreenwidth" "string" "-1"
+	"minpropscreenwidth" "string" "0"
+	"vrchaperone" "string" "0"
+	"vrmovement" "string" "0"
+	"baked_light_index_min" "string" "0"
+	"baked_light_index_max" "string" "256"
+	"max_lightmap_resolution" "string" "0"
+	"lightmap_queries" "string" "1"
+	"steamaudio_reverb_rebake_option" "string" "1"
+	"steamaudio_reverb_grid_type" "string" "0"
+	"steamaudio_reverb_grid_spacing" "string" "6"
+	"steamaudio_reverb_height_above_floor" "string" "1.5"
+	"steamaudio_reverb_rays" "string" "32768"
+	"steamaudio_reverb_bounces" "string" "32"
+	"steamaudio_reverb_ir_duration" "string" "1.0"
+	"steamaudio_reverb_ambisonic_order" "string" "1"
+	"steamaudio_pathing_rebake_option" "string" "1"
+	"steamaudio_pathing_grid_type" "string" "0"
+	"steamaudio_pathing_grid_spacing" "string" "6"
+	"steamaudio_pathing_height_above_floor" "string" "1.5"
+	"steamaudio_pathing_visibility_samples" "string" "1"
+	"steamaudio_pathing_visibility_radius" "string" "0.0"
+	"steamaudio_pathing_visibility_threshold" "string" "0.1"
+	"steamaudio_pathing_visibility_pathrange" "string" "100.0"
+	"prefab_has_runtime_entity_by_default" "string" "0"
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "0afcfa6f-fbba-4322-ab4b-e1672f075d49"
+	"name" "string" "entity_properties"
+	"classname" "string" "prop_static"
+	"targetname" "string" "df_78a3aeacaed98ec04d03"
+	"model" "string" "models/df_v24/s_c3a87451d10e4a46.vmdl"
+	"solid" "string" "0"
+	"disableshadows" "string" "0"
+	"baketoworld" "string" "false"
+	"disablemerging" "string" "false"
+	"materialoverride" "string" ""
+}
+
+"EditGameClassProps"
+{
+	"id" "elementid" "8d784dcf-2244-4bf5-bc68-bd1d7d70f45b"
+	"name" "string" "entity_properties"
+	"classname" "string" "info_spawngroup_landmark"
+	"targetname" "string" "df_v24_origin"
+}

@@ -1,0 +1,211 @@
+{
+  "schema": "df-v24-component-contract-1",
+  "createdUTC": "2026-11-06T10:37:06.784713+00:00",
+  "authorization": "CURRENT_USER_V24_CONVERSION_COMPILE_AUTHORIZED_FULL_RAM_SUPERSEDES_OLD_NOAPPROVAL_FIELDS",
+  "baseSelection": "hardest3902 Level2 canonical source component selection supplied by geometry owner; overlay exact component IDs only",
+  "sourceRoot": "E:\\df-extract-20261105",
+  "baseSelectionFile": "E:\\df-v24-build-20261106\\component-work\\selected-placements.jsonl",
+  "baseSelectionNotProducedByThisOverlay": false,
+  "coordinateFrameUEcmToCS2": [
+    [
+      0.36,
+      0.0,
+      0.0,
+      -240984.0
+    ],
+    [
+      0.0,
+      -0.36,
+      0.0,
+      -164808.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.36,
+      8052.84
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "precedence": [
+    "exact launch excludes",
+    "exact East hidden blocker excludes",
+    "canonical passage leaf component excludes only",
+    "structure overrides",
+    "preserve ALL mixed/static unassigned geometry",
+    "base geometry owner selected components"
+  ],
+  "files": {
+    "doors": {
+      "path": "E:\\df-v24-build-20261106\\component-work\\door-exact-component-actions.json",
+      "sha256": "515cb00d0aed83c41d7f67ed68bcaeb94c877548a8e36882f7211737f15399ac",
+      "bytes": 1816854
+    },
+    "ladders": {
+      "path": "E:\\df-v24-build-20261106\\component-work\\ladders-preserve.json",
+      "sha256": "eb38c662c32ceb8410cdaa21354812e4822d27a36cfd1f4c500529878b7a3bc0",
+      "bytes": 4094609
+    },
+    "boss": {
+      "path": "E:\\df-v24-build-20261106\\component-work\\boss-once-policy.json",
+      "sha256": "1e1a5e86bdde0e0a41905233f17582e17f645e93d04744e0ebdad2d0d88323ab",
+      "bytes": 1517
+    }
+  },
+  "counts": {
+    "passageActors": 132,
+    "canonicalActorLeafExclusions": 208,
+    "launchAdditions": 1,
+    "launchExclusions": 16,
+    "eastHiddenBlockerExclusions": 2,
+    "staticComponentsPreserved": 500,
+    "mixedStaticPreserved": 295,
+    "uncertainCombinedPreserved": 37,
+    "structureComponentTransforms": 14,
+    "authoredSingularMatrices": 80,
+    "actorRetainedAppend": 283,
+    "bossAbsoluteSourceRecovery": 1
+  },
+  "limitations": [
+    "No precise static semantic triangle removal mask proven. Every static component retains all triangles and collision. No full door-gap completion claim.",
+    "West pivot deferred, source matrix is not proven OPEN.",
+    "East join/ground and exact player hull/employee step deferred, no passability claims.",
+    "Door authored zero-scale matrices are source-derived; do not guess nonzero replacements."
+  ],
+  "deployment": "No install restart server game Docker WSL actions",
+  "selectedPlacements": {
+    "schema": "df-v24-selected-placement-1",
+    "path": "E:\\df-v24-build-20261106\\component-work\\selected-placements.jsonl",
+    "rows": 55038,
+    "sha256": "697b1a2703099160f07332cc83b3051cf38471ea824707e50278be8da8780926",
+    "matrixConvention": "column vectors row-major 4x4; model geometry owner must apply local GLB meters axis conversion BEFORE fullSourceWorldMatrix",
+    "stats": {
+      "selectedInventoryComponents": 55277,
+      "placementRows": 54744,
+      "meshless": 781,
+      "ismRows": 286,
+      "splineRowsNeedDeformation": 11,
+      "exactExcluded": 8,
+      "sourceNoCollisionRows": 855
+    },
+    "rejectionsPath": "E:\\df-v24-build-20261106\\component-work\\placement-rejections.json"
+  },
+  "collisionSources": [
+    {
+      "path": "E:\\df-extract-20261105\\structures\\preflight\\collision-classification-summary.json",
+      "sha256": "e836a05a85ba696dda210f460587ad6ab85adeb1bbdb5f14bd6f2742f1ff9700"
+    },
+    {
+      "path": "E:\\df-extract-20261105\\structures\\preflight\\collision-classification-records.jsonl",
+      "sha256": "2abbf833bb4f7c8af7304e9466bad3d6afbe14bc2f30a27489154e829cd0e200"
+    },
+    {
+      "path": "E:\\df-extract-20261105\\structures\\preflight\\collision-classification-receipt.json",
+      "sha256": "823584fac053e0e234a6566e90d21a40bd9a913c41e241d7168548dbcd006646"
+    },
+    {
+      "path": "E:\\df-extract-20261105\\structures\\preflight\\collision-classification-proven-no-collision-components.json",
+      "sha256": "edeff0ea47a1d8bc4211d5236f48aa479bdb2378b5b7581cc3bd680777cf21a3"
+    }
+  ],
+  "collisionPolicy": "Exact component overrides only. Preserve QueryOnly Liquid source fields, mixed GlassDestructible/BlockAll, profile-dependent foliage; no mesh/category blanket disable. Leaf-only intentional user override is not source proof.",
+  "decomposition": {
+    "receipt": "E:\\df-v24-build-20261106\\component-work\\decomposition-receipt.json",
+    "rows": 55028,
+    "sourceAuthoredZeroScale": 81,
+    "sourceSplineDeformationRequired": 0,
+    "exactAffineBakesRequired": 108,
+    "requests": "E:\\df-v24-build-20261106\\component-work\\exact-affine-bake-requests.json",
+    "output": "E:\\df-v24-build-20261106\\component-work\\selected-placements-decomposed.jsonl",
+    "geometryClosure": false,
+    "sourceSplineBakesApplied": 11
+  },
+  "generator": {
+    "path": "E:\\df-v24-build-20261106\\component-work\\generate_vmap.py",
+    "rowsArgument": "--rows JSONarray or JSONL",
+    "outmapArgument": "--outmap targetchild.vmap",
+    "modelsIndex": "E:/df-v24-build-20261106/geometry-work/models.jsonl",
+    "interpreter": "E:/spaceport-kat-rebuild-20261105/material-venv/Scripts/python.exe",
+    "oldGeometryCopied": false
+  },
+  "splineOverridesSource": "E:\\df-v24-build-20261106\\geometry-work\\spline-models.json",
+  "ladderCollisionReplacement": {
+    "receipt": "E:\\df-v24-build-20261106\\component-work\\ladder-exact-collision-replacement-receipt.json",
+    "sourceBoxes": 536,
+    "sourceModels": 10,
+    "renderCollisionReplacedByExactComponentIdentity": true,
+    "nativeBasisProof": {
+      "path": "E:\\df-v24-build-20261106\\loot-ladder-work\\ladder-fbx-local-basis-proof.json",
+      "sha256": "ec9ee81b7108c5f106010f711d598cc071cd6b4cb9b0de2f20badeaa8711e7c7",
+      "allPass": true,
+      "placement": "identity linear plus positionCS2"
+    }
+  },
+  "orientationProof": {
+    "path": "E:\\df-v24-build-20261106\\geometry-work\\dock-basis-empirical.json",
+    "sha256": "3efb65ac5c07c1f0a956e5ff7c5258ea88b64dd3ec298a2a2c11da33f33db980",
+    "vertices": 679,
+    "basis": "compiledFBXlocal UE(X,-Y,Z)*.36; use matrixCS2@diag(1,-1,1)/.36",
+    "maxFBXLocalToNative": 8.11012937626029e-06,
+    "basisCompileReady": true
+  },
+  "finalCombined": {
+    "baseRows": 55038,
+    "inputLootRows": 306,
+    "addedClosedLoot": 306,
+    "exactComponentDuplicates": [],
+    "finalRows": 55344,
+    "bigSafeTotal": 13,
+    "smallSafeTotal": 8,
+    "closedOnly": true,
+    "openedModelsOnlyPrecompiledForFuturePlugin": true,
+    "sha256": "5663a9e3970228db68ee02fd5c43493fa8512083d64cee22322cc79d0c3c40fd",
+    "basisCompileReady": true,
+    "orientationProof": "E:\\df-v24-build-20261106\\geometry-work\\dock-basis-empirical.json",
+    "ladderProof": "E:\\df-v24-build-20261106\\loot-ladder-work\\ladder-fbx-local-basis-proof.json",
+    "lootReceipt": "E:\\df-v24-build-20261106\\loot-ladder-work\\loot-all306-ready.json",
+    "precisionMergeReceipt": "E:\\df-v24-build-20261106\\component-work\\precision-merge-receipt.json",
+    "selectedRows": 55344,
+    "collapsedRows": 82,
+    "expectedGeneratedProps": 55262,
+    "precisionModelsRCCompiled": false
+  },
+  "precisionMerge": {
+    "path": "E:\\df-v24-build-20261106\\component-work\\precision-merge-receipt.json",
+    "exactRows": 2,
+    "RCCompiled": false
+  },
+  "vertexPrecisionProof": {
+    "rows": 55344,
+    "expectedGeneratedProps": 55262,
+    "sourceCollapsed": 82,
+    "maxUnbakedVertexCoordinateErrorBoundCS2": 0.09144583189730933,
+    "rowsExceedingPointOne": 0,
+    "precisionModels": 2,
+    "derivedBakesBypassDecomposition": true,
+    "RCCompiled": false
+  },
+  "sourceCollapsedLoot286": {
+    "proof": "E:\\df-v24-build-20261106\\loot-ladder-work\\loot-selection286-source-collapse-proof.json",
+    "sha256": "62ec80a4eeaa12e4e02031e21a73452bed2ecea2dac8e461c893de8cdfbd3662",
+    "sourceCollapsedProven": true,
+    "selectionRecordRetained": true,
+    "renderAction": "SKIP_SOURCE_ZERO_NOT_IDENTITY",
+    "runtimeExclusionContractAssociation": "NOT_PROVEN"
+  },
+  "finalDecomposition": {
+    "rows": 55344,
+    "failures": [],
+    "authoredZeroScaleCount": 82,
+    "maxRecomposeError": 0.005080323994294963,
+    "maxShear": 7.187262863026742e-05,
+    "path": "E:\\df-v24-build-20261106\\component-work\\final-combined-decomposed.jsonl",
+    "sha256": "e664aec58e48c0dfa3d8d05e96815499774fef5842a5f0d5544e01fcd2ddfc95",
+    "basisCompileReady": true
+  }
+}

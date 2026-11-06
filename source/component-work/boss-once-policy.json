@@ -1,0 +1,49 @@
+{
+  "schema": "df-v24-boss-minimal-policy-1",
+  "bossActor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/DynamicRequest/EventSOL/PortBoss/LD/WithPortBoss_Interactor.WithPortBoss_Interactor:PersistentLevel.BP_Interactor_Container_SafeBox_2",
+  "selection": "selection-030",
+  "action": "RETAIN_EXISTING_LEVEL2_SAFE_ONCE_DO_NOT_APPEND_SECOND_SAFE",
+  "verifiedDuplicates": [
+    {
+      "actor": "DeltaForce/Content/Maps/SpaceCenter_Ma1/DynamicRequest/EventSOL/PortBoss/LD/WithPortBoss_Interactor.WithPortBoss_Interactor:PersistentLevel.BP_Interactor_Container_SafeBox_2",
+      "sameSourceIdentity": true,
+      "canonicalType": "c_safe",
+      "mesh": [
+        "DeltaForce/Content/Models/Props/Collect/props_collect_box_546/props_collect_box_546_3P.uasset"
+      ],
+      "matrixUEcm": [
+        [
+          0.290285011289637,
+          -0.9569402344036827,
+          0.0,
+          664060.0
+        ],
+        [
+          0.9569402344036827,
+          0.290285011289637,
+          0.0,
+          -440627.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -21364.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_guid_fields": {}
+    }
+  ],
+  "deleteOverlapCandidates": false,
+  "appendWholeBossLayer": false,
+  "bigSafeTotalIncludesBoss": 13,
+  "smallSafeTotal": 8,
+  "collisionVerified": false,
+  "sourceAuditStatus": "BOUNDED_LOCAL_AUDIT_COMPLETE_SOLID_COLLISION_UNRESOLVED"
+}

@@ -1,0 +1,192 @@
+[
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube103_9.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "fullSourceWorldMatrix": [
+      [
+        0.0007050327999999893,
+        -4.4085711736688595e-06,
+        0.0,
+        660123.3725
+      ],
+      [
+        8.44721928879727e-09,
+        1733.993760815974,
+        0.0,
+        -459611.4687170096
+      ],
+      [
+        0.0,
+        0.0,
+        1.5634563642369002,
+        -17830.3437588927
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "matrixCS2": [
+      [
+        0.0002538118079999961,
+        -1.5870856225207893e-06,
+        0.0,
+        -3339.5858999999764
+      ],
+      [
+        -3.0409989439670167e-09,
+        -624.2377538937506,
+        0.0,
+        652.1287381234579
+      ],
+      [
+        0.0,
+        0.0,
+        0.562844291125284,
+        1633.916246798628
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "sourceMatrixSpace": "UE centimeters local to world; ISM matrices already world composed",
+    "positionCS2": [
+      -3339.5858999999764,
+      652.1287381234579,
+      1633.916246798628
+    ],
+    "collisionEnabled": true,
+    "collisionProof": "PRESERVE_SOURCE_COLLISION_NOT_VERIFIED_RUNTIME",
+    "collisionClassification": null,
+    "sourceCollisionFields": null,
+    "meshSource": {
+      "mesh": "Engine/Content/BasicShapes/Cube.Cube",
+      "available": true,
+      "outputs": [
+        "E:\\df-extract-20261105\\meshes\\Engine\\Content\\BasicShapes\\Cube.glb"
+      ],
+      "sections": [
+        {
+          "MaterialIndex": 0,
+          "FirstIndex": 0,
+          "NumFaces": 48
+        }
+      ],
+      "collisionSidecar": {
+        "path": "Engine/Content/BasicShapes/Cube.collision.json",
+        "bytes": 937
+      }
+    },
+    "sourceMetadata": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion/000263-StaticMeshComponent0.metadata.json",
+    "sourceJson": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion/000263-StaticMeshComponent0.source.json",
+    "className": "StaticMeshComponent",
+    "selectionReason": "3902_COOKED_CELL",
+    "triangleMask": "KEEP_ALL_UNLESS_EXACT_COMPONENT_EXCLUDED",
+    "transformOverride": null,
+    "requiresSourceDeformation": false,
+    "bakeReason": "vertex error bound exceeds0.1CS2units",
+    "maxVertexCoordinateErrorBound": 0.37388006967109105,
+    "maxLinearCoefficientError": 0.02077111498172728
+  },
+  {
+    "objectPath": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion.SpaceCenter_Lighting_Occlusion:PersistentLevel.Cube111.StaticMeshComponent0",
+    "instanceIndex": null,
+    "meshObjectPath": "Engine/Content/BasicShapes/Cube.Cube",
+    "fullSourceWorldMatrix": [
+      [
+        -0.0007050327999997317,
+        2.2042853563809226e-05,
+        0.0,
+        677542.25
+      ],
+      [
+        -4.22360964537938e-08,
+        -1733.9937608153405,
+        0.0,
+        -449275.3415689696
+      ],
+      [
+        0.0,
+        0.0,
+        1.5634563642369002,
+        -17830.343708959772
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "matrixCS2": [
+      [
+        -0.0002538118079999034,
+        7.935427282971321e-06,
+        0.0,
+        2931.209999999992
+      ],
+      [
+        1.5204994723365767e-08,
+        624.2377538935225,
+        0.0,
+        -3068.877035170939
+      ],
+      [
+        0.0,
+        0.0,
+        0.562844291125284,
+        1633.9162647744824
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "sourceMatrixSpace": "UE centimeters local to world; ISM matrices already world composed",
+    "positionCS2": [
+      2931.209999999992,
+      -3068.877035170939,
+      1633.9162647744824
+    ],
+    "collisionEnabled": true,
+    "collisionProof": "PRESERVE_SOURCE_COLLISION_NOT_VERIFIED_RUNTIME",
+    "collisionClassification": null,
+    "sourceCollisionFields": null,
+    "meshSource": {
+      "mesh": "Engine/Content/BasicShapes/Cube.Cube",
+      "available": true,
+      "outputs": [
+        "E:\\df-extract-20261105\\meshes\\Engine\\Content\\BasicShapes\\Cube.glb"
+      ],
+      "sections": [
+        {
+          "MaterialIndex": 0,
+          "FirstIndex": 0,
+          "NumFaces": 48
+        }
+      ],
+      "collisionSidecar": {
+        "path": "Engine/Content/BasicShapes/Cube.collision.json",
+        "bytes": 937
+      }
+    },
+    "sourceMetadata": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion/000272-StaticMeshComponent0.metadata.json",
+    "sourceJson": "DeltaForce/Content/Maps/SpaceCenter_Ma1/ClientConfig/SpaceCenter_Lighting_Occlusion/000272-StaticMeshComponent0.source.json",
+    "className": "StaticMeshComponent",
+    "selectionReason": "3902_COOKED_CELL",
+    "triangleMask": "KEEP_ALL_UNLESS_EXACT_COMPONENT_EXCLUDED",
+    "transformOverride": null,
+    "requiresSourceDeformation": false,
+    "bakeReason": "vertex error bound exceeds0.1CS2units",
+    "maxVertexCoordinateErrorBound": 1.8694003456170494,
+    "maxLinearCoefficientError": 0.10385557475650274
+  }
+]
