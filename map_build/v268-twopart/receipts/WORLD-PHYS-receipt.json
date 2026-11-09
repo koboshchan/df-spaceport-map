@@ -1,0 +1,30 @@
+{
+  "blocks": [
+    {
+      "map": "df_spaceport_v268_twopart",
+      "resource": "maps/df_spaceport_v268_twopart/world_physics.vmdl_c",
+      "serializedBytes": 0,
+      "margin512MiB": 536870912,
+      "margin450MiB": 471859200,
+      "sha256": "e67b9da9861853febed89e3bdf265bee3c2db5f6bff589e4003dff0d433462cf"
+    },
+    {
+      "map": "df_spaceport_v268_twopart_part0",
+      "resource": "maps/df_spaceport_v268_twopart_part0/world_physics.vmdl_c",
+      "serializedBytes": 334273022,
+      "margin512MiB": 202597890,
+      "margin450MiB": 137586178,
+      "sha256": "95c1ef2f7d8df1fbbcd9a267b01b660eaaea3107935ea92997f6f6c24c3b9296"
+    },
+    {
+      "map": "df_spaceport_v268_twopart_part1",
+      "resource": "maps/df_spaceport_v268_twopart_part1/world_physics.vmdl_c",
+      "serializedBytes": 417739881,
+      "margin512MiB": 119131031,
+      "margin450MiB": 54119319,
+      "sha256": "0e099b5f6a87dce477f1c3e1202927534d27c2c5e4e6f4aa94ca220889755853"
+    }
+  ],
+  "total": 752012903,
+  "measuredNative": true
+}

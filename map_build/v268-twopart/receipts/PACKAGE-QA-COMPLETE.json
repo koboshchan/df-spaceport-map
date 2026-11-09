@@ -1,0 +1,37 @@
+{
+  "packages": [
+    {
+      "path": "TWOPART_ROOT\\ready\\maps\\df_spaceport_v268_twopart.vpk",
+      "bytes": 1258995626,
+      "sha256": "9192d9713067ee8521e2e284964856791164c1f0f9852ece2f6bff2961ba707f",
+      "CRC": true,
+      "resources": 10492
+    },
+    {
+      "path": "TWOPART_ROOT\\ready\\maps\\df_spaceport_v268_twopart_part0.vpk",
+      "bytes": 375114949,
+      "sha256": "150aa9f18cbece6abb091f152f8c261ae9afcfe97712f5821bb85f3ef190a2aa",
+      "CRC": true,
+      "resources": 381
+    },
+    {
+      "path": "TWOPART_ROOT\\ready\\maps\\df_spaceport_v268_twopart_part1.vpk",
+      "bytes": 492821522,
+      "sha256": "53a32f555cf8cce0bcac51cf678ca95bfa9444431d38b3ed7b049c0d178ac1e6",
+      "CRC": true,
+      "resources": 534
+    }
+  ],
+  "CRC": true,
+  "assetSHA": true,
+  "compiledScope": true,
+  "allWORLDunder512MiB": true,
+  "fullClosurePass": false,
+  "expectedNoBakedVisibilityMissing": [
+    "maps/df_spaceport_v268_twopart/world_visibility.vvis_c",
+    "maps/df_spaceport_v268_twopart_part0/world_visibility.vvis_c",
+    "maps/df_spaceport_v268_twopart_part1/world_visibility.vvis_c"
+  ],
+  "noInstall": true,
+  "runtimeUnverified": true
+}

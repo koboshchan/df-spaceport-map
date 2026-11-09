@@ -1,0 +1,29 @@
+{
+  "perMap": {
+    "df_spaceport_v268_twopart": {
+      "worldspawn": 1,
+      "info_spawngroup_landmark": 2,
+      "light_environment": 1,
+      "env_sky": 1,
+      "info_player_terrorist": 16,
+      "info_player_counterterrorist": 16,
+      "trigger_hurt": 1847,
+      "info_spawngroup_load_unload": 2,
+      "logic_auto": 1
+    },
+    "df_spaceport_v268_twopart_part0": {
+      "worldspawn": 1
+    },
+    "df_spaceport_v268_twopart_part1": {
+      "worldspawn": 1
+    }
+  },
+  "total": 1889,
+  "triggers1847Exact": true,
+  "native32Float32Exact": true,
+  "zeroDynamic": true,
+  "loaders": [
+    "df_spaceport_v268_twopart_part0",
+    "df_spaceport_v268_twopart_part1"
+  ]
+}

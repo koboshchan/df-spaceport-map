@@ -1,0 +1,165 @@
+{
+  "rows": [
+    {
+      "uuid": "52e197b6-2b26-5525-9f7e-2dbd739a99d7",
+      "type": "CMapEntity",
+      "classname": "prop_static"
+    },
+    {
+      "uuid": "a816726d-0695-4134-86b5-3e46b6ba2e8c",
+      "type": "EditGameClassProps",
+      "classname": null
+    },
+    {
+      "uuid": "bfa4f890-ab0b-40e5-b225-6e23aba6412f",
+      "type": "CMapMesh",
+      "classname": null
+    },
+    {
+      "uuid": "06deffd5-cb66-4cde-b83f-0624bef19ccc",
+      "type": "DmePlugList",
+      "classname": null
+    },
+    {
+      "uuid": "30fb56ca-1488-4c6b-9708-aed4b7f9f02c",
+      "type": "EditGameClassProps",
+      "classname": null
+    },
+    {
+      "uuid": "208bb63b-6fb8-4ac3-8a1e-b87c8c17541f",
+      "type": "CDmePolygonMesh",
+      "classname": null
+    },
+    {
+      "uuid": "bb0d207f-ec72-4d74-8b02-6cb109648ca3",
+      "type": "CDmePolygonMeshDataArray",
+      "classname": null
+    },
+    {
+      "uuid": "7e18fe1d-de63-494d-9c67-f086fe938884",
+      "type": "CDmePolygonMeshDataArray",
+      "classname": null
+    },
+    {
+      "uuid": "698be7fb-bb7f-46dd-a2ad-b97ef4234994",
+      "type": "CDmePolygonMeshDataArray",
+      "classname": null
+    },
+    {
+      "uuid": "bf7893b1-bb64-4ede-9c54-b5d9ecd6d91d",
+      "type": "CDmePolygonMeshDataArray",
+      "classname": null
+    },
+    {
+      "uuid": "db7dce4d-4dd2-4560-8e42-eba139bc0584",
+      "type": "CDmePolygonMeshSubdivisionData",
+      "classname": null
+    },
+    {
+      "uuid": "b6bb6835-be18-46ef-87c9-829628fbc1fc",
+      "type": "CDmePolygonMeshDataStream",
+      "classname": null
+    },
+    {
+      "uuid": "a056200b-a333-4b88-beef-0f39e8bfa441",
+      "type": "CDmePolygonMeshDataStream",
+      "classname": null
+    },
+    {
+      "uuid": "05ad8dba-8b0f-420c-a065-47282c08e767",
+      "type": "CDmePolygonMeshDataStream",
+      "classname": null
+    },
+    {
+      "uuid": "6b1fc2ba-af2c-4a31-8705-c0132a48d7f5",
+      "type": "CDmePolygonMeshDataStream",
+      "classname": null
+    },
+    {
+      "uuid": "07258a5d-15c7-4373-8a71-b7cc709c503c",
+      "type": "CDmePolygonMeshDataStream",
+      "classname": null
+    },
+    {
+      "uuid": "e343ec99-1099-49a9-abe0-d712a07fe6b9",
+      "type": "CDmePolygonMeshDataStream",
+      "classname": null
+    },
+    {
+      "uuid": "a1df7a43-6822-43f9-a8b6-10926f5ef2f0",
+      "type": "CDmePolygonMeshDataStream",
+      "classname": null
+    },
+    {
+      "uuid": "c1d22969-33be-41dc-92f9-086ff599a5c4",
+      "type": "CDmePolygonMeshDataStream",
+      "classname": null
+    },
+    {
+      "uuid": "2e9af978-a6c2-41f5-bc39-8e583d438a65",
+      "type": "CDmePolygonMeshDataStream",
+      "classname": null
+    },
+    {
+      "uuid": "2466ef00-f88d-4936-b181-9c7658ac9fde",
+      "type": "CDmePolygonMeshDataStream",
+      "classname": null
+    },
+    {
+      "uuid": "116249f8-3665-49ba-9503-dde0d866bcb5",
+      "type": "CDmePolygonMeshDataStream",
+      "classname": null
+    },
+    {
+      "uuid": "3fdb2dc6-f1f7-598b-8d9b-d6a521967920",
+      "type": "CMapEntity",
+      "classname": "prop_static"
+    },
+    {
+      "uuid": "d0be8fd2-7eed-4d3c-9edd-a885dfbd3baf",
+      "type": "EditGameClassProps",
+      "classname": null
+    },
+    {
+      "uuid": "b5246727-eea3-43be-b258-df135ab6f3ae",
+      "type": "EditGameClassProps",
+      "classname": null
+    },
+    {
+      "uuid": "c245076e-0861-4c20-aca7-ee89c0fb46fe",
+      "type": "EditGameClassProps",
+      "classname": null
+    },
+    {
+      "uuid": "12cc66df-b168-5211-b6fc-d7b6de01ff7e",
+      "type": "CMapEntity",
+      "classname": "prop_static"
+    },
+    {
+      "uuid": "11be8c64-e8b9-430a-9886-4ec85dac365c",
+      "type": "EditGameClassProps",
+      "classname": null
+    },
+    {
+      "uuid": "ba59e1e0-8e7f-4f1d-91a1-0f132fe2b843",
+      "type": "EditGameClassProps",
+      "classname": null
+    },
+    {
+      "uuid": "a99974fb-5b5c-4589-8157-d75f799a4241",
+      "type": "EditGameClassProps",
+      "classname": null
+    },
+    {
+      "uuid": "527818aa-6752-4333-9b1f-eeedde8fc0eb",
+      "type": "EditGameClassProps",
+      "classname": null
+    },
+    {
+      "uuid": "cda6a1c6-2f5a-4bd7-890c-18df5d81e943",
+      "type": "EditGameClassProps",
+      "classname": null
+    }
+  ],
+  "policy": "Preserved byte-exact as unreferenced records in parent; never activated as world children."
+}

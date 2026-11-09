@@ -1,0 +1,35 @@
+[
+  {
+    "package": "df_spaceport_v268_twopart.vpk",
+    "resource": "maps/df_spaceport_v268_twopart/world_physics.vmdl_c",
+    "PHYS": [],
+    "noPHYSBlock": true,
+    "resourceBytes": 1896
+  },
+  {
+    "package": "df_spaceport_v268_twopart_part0.vpk",
+    "resource": "maps/df_spaceport_v268_twopart_part0/world_physics.vmdl_c",
+    "PHYS": [
+      {
+        "serializedBytes": 334273022,
+        "resourceOffset": 64,
+        "packageOffset": 263791
+      }
+    ],
+    "noPHYSBlock": false,
+    "resourceBytes": 334275248
+  },
+  {
+    "package": "df_spaceport_v268_twopart_part1.vpk",
+    "resource": "maps/df_spaceport_v268_twopart_part1/world_physics.vmdl_c",
+    "PHYS": [
+      {
+        "serializedBytes": 417739881,
+        "resourceOffset": 64,
+        "packageOffset": 280084
+      }
+    ],
+    "noPHYSBlock": false,
+    "resourceBytes": 417742112
+  }
+]

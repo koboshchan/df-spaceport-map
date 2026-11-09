@@ -1,0 +1,22 @@
+{
+  "map": "df_spaceport_v268_twopart",
+  "files": [
+    {
+      "path": "source/maps/df_spaceport_v268_twopart.vmap",
+      "sha256": "420bc649d36885f1fd7be2c2abed0a2af2c436a7ccf5ba104bdd3d7b4a1d89be",
+      "bytes": 85495221
+    },
+    {
+      "path": "source/maps/df_spaceport_v268_twopart_part0.vmap",
+      "sha256": "ad1c7f01830b182724b660bce039e1c2fc67bde99f18093c9b181f24549aefbe",
+      "bytes": 27841152
+    },
+    {
+      "path": "source/maps/df_spaceport_v268_twopart_part1.vmap",
+      "sha256": "4e52b128be152ea595d1d870fdc3f92967c05b37218a90d67cec6386e135efa0",
+      "bytes": 32286801
+    }
+  ],
+  "canonicalSourcesUnmodified": true,
+  "publicationCopiesSanitized": true
+}

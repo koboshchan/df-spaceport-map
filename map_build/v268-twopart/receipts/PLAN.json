@@ -1,0 +1,101 @@
+{
+  "ancestry": "Actual AggGeom-only AGGGEOM_STAGE with measured six WORLD PHYS753782938; no shared source",
+  "axis": "y",
+  "plane": -1006.5512160000001,
+  "weights": [
+    675567158,
+    675572207
+  ],
+  "projectedPartPHYS": [
+    376890060.6145468,
+    376892877.3854532
+  ],
+  "method": "Native model PHYS payload minus fixed1700 per model at every placement plus mesh vertex/face geometry proxy; spatial weighted sweep X/Y. Estimates not native marginal bytes. Whole nodes unchanged global frame.",
+  "classes": {
+    "info_spawngroup_landmark": 2,
+    "light_environment": 1,
+    "env_sky": 1,
+    "info_player_terrorist": 16,
+    "info_player_counterterrorist": 16,
+    "prop_static": 55066,
+    "trigger_hurt": 1847
+  },
+  "sources": [
+    {
+      "path": "AGGGEOM_STAGE\\content\\kat\\maps\\df_spaceport_v267.vmap",
+      "sha256": "d560c6e4e0f3bc7522d6c71677d2b5b72963893afe296774ce65508106579ec4"
+    },
+    {
+      "path": "AGGGEOM_STAGE\\content\\kat\\maps\\df_spaceport_v267_part0.vmap",
+      "sha256": "d2aec6d936c4936f2b8e3e72c5d90363f299610a0a936233f74ddc3c7b6066b0"
+    },
+    {
+      "path": "AGGGEOM_STAGE\\content\\kat\\maps\\df_spaceport_v267_part1.vmap",
+      "sha256": "f6a4aa8bf396c6e45d0f41f98935c940e4bcd09c04e175f23a799587748781fc"
+    },
+    {
+      "path": "AGGGEOM_STAGE\\content\\kat\\maps\\df_spaceport_v267_part2.vmap",
+      "sha256": "e744f857d37307ed12b818fcd360786257a98b25b07ad52a6320afeb9b4671a6"
+    },
+    {
+      "path": "AGGGEOM_STAGE\\content\\kat\\maps\\df_spaceport_v267_part3.vmap",
+      "sha256": "472da85ec1e8680bf015b85fdd6332e70594944536c05eaf6ee0d23c9960cbb3"
+    },
+    {
+      "path": "AGGGEOM_STAGE\\content\\kat\\maps\\df_spaceport_v267_part4.vmap",
+      "sha256": "3ef0bd4e39bc840efb3fca9ae27cbac8d66bcb6086733c3ab8185fba5cc712ac"
+    },
+    {
+      "path": "AGGGEOM_STAGE\\content\\kat\\maps\\df_spaceport_v267_part5.vmap",
+      "sha256": "54156db53ce08d8f7e31e3c065cc2369761555e34b29ab99fe9df42b79e67668"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "df_spaceport_v268_twopart",
+      "sourceSHA256": "420bc649d36885f1fd7be2c2abed0a2af2c436a7ccf5ba104bdd3d7b4a1d89be",
+      "classes": {
+        "info_spawngroup_landmark": 2,
+        "light_environment": 1,
+        "env_sky": 1,
+        "info_player_terrorist": 16,
+        "info_player_counterterrorist": 16,
+        "prop_static": 3,
+        "trigger_hurt": 1847,
+        "info_spawngroup_load_unload": 2,
+        "logic_auto": 1
+      },
+      "elements": 124840,
+      "rootChildren": 1886
+    },
+    {
+      "name": "df_spaceport_v268_twopart_part0",
+      "sourceSHA256": "ad1c7f01830b182724b660bce039e1c2fc67bde99f18093c9b181f24549aefbe",
+      "classes": {
+        "prop_static": 23920
+      },
+      "elements": 54491,
+      "rootChildren": 24289
+    },
+    {
+      "name": "df_spaceport_v268_twopart_part1",
+      "sourceSHA256": "4e52b128be152ea595d1d870fdc3f92967c05b37218a90d67cec6386e135efa0",
+      "classes": {
+        "prop_static": 31143
+      },
+      "elements": 65481,
+      "rootChildren": 31320
+    }
+  ],
+  "budget": {
+    "free": 87720345600,
+    "assetCopyBytes": 3745660998,
+    "compiledAndPackBudget": 12884901888,
+    "rollbackBudget": 4294967296,
+    "sourceAndLogs": 2147483648,
+    "reserveOnce": 21474836480,
+    "totalNeed": 44547850310,
+    "noCleanup": true
+  },
+  "noRuntime": true
+}
