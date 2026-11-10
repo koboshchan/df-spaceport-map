@@ -1,0 +1,32 @@
+
+from pathlib import Path
+import os,json,subprocess,shutil,time,traceback
+R=Path('@@DF_PATH_DF_V268_STAGE_20261109@@');P=R/'proof';G=R/'game/kat';C=R/'content/kat';G.mkdir(parents=True,exist_ok=True)
+def junction(dst,src):
+ if not dst.exists():
+  dst.parent.mkdir(parents=True,exist_ok=True);subprocess.run(['cmd','/c','mklink','/J',str(dst),str(src)],check=True,capture_output=True)
+try:
+ assert 'resourcecompiler.exe' not in subprocess.check_output(['tasklist','/FI','IMAGENAME eq resourcecompiler.exe','/FO','CSV','/NH'],text=True).lower()
+ free=shutil.disk_usage('@@DF_DRIVE_E@@').free;assert free>34*1024**3+6*1024**3+20*1024**3
+ (P/'native-model-budget.json').write_text(json.dumps({'freshEFree':free,'v268Cap':34*1024**3,'runtimeCap':6*1024**3,'sharedReserve':20*1024**3,'pid':os.getpid()}))
+ text=Path('@@DF_PATH_DF_V268_NATIVE_SHAPE_PROOF_20261109@@/game/pilot/gameinfo.gi').read_text().replace('pilot','kat');(G/'gameinfo.gi').write_text(text)
+ for n in ['csgo','core']:junction(R/'game'/n,Path('@@DF_PATH_PROGRAM_FILES_X86_STEAM_STEAMAPPS_COMMON_COUNTER_STRIKE_GLOBAL_OFFENSIVE@@/game')/n)
+ junction(C/'models/df_v24',Path('@@DF_PATH_DF_V25_BUILD_20261106@@/content/kat/models/df_v24'))
+ junction(C/'materials',Path('@@DF_PATH_DF_V25_BUILD_20261106@@/content/kat/materials'))
+ # Reuse already compiled immutable material dependencies only; output models remain isolated.
+ junction(G/'materials',Path('@@DF_PATH_DF_V267_BUILD_20261109@@/game/kat/materials'))
+ env=os.environ.copy()
+ for k in ['TEMP','TMP','LOCALAPPDATA','APPDATA','USERPROFILE']:d=R/'native-env'/k;d.mkdir(parents=True,exist_ok=True);env[k]=str(d)
+ models=json.loads((P/'materialized-agggeom-models.json').read_text())['models'];results=[]
+ for i,m in enumerate(models):
+  cmd=['@@DF_PATH_PROGRAM_FILES_X86_STEAM_STEAMAPPS_COMMON_COUNTER_STRIKE_GLOBAL_OFFENSIVE@@/game/bin/win64/resourcecompiler.exe','-i',str(C/m['newModel']),'-game',str(G),'-nop4']
+  log=P/('native-model-'+str(i)+'.log')
+  with log.open('w') as f:
+   child=subprocess.Popen(cmd,stdout=f,stderr=subprocess.STDOUT,env=env,cwd=R)
+   (P/'native-model-active.json').write_text(json.dumps({'wrapperPID':os.getpid(),'compilerPID':child.pid,'index':i,'model':m['newModel'],'log':str(log),'command':cmd}))
+   code=child.wait()
+  results.append({'model':m['newModel'],'exit':code,'compilerPID':child.pid,'log':str(log)})
+  (P/'native-model-progress.json').write_text(json.dumps({'finished':len(results),'total':len(models),'results':results}))
+ (P/'native-model-result.json').write_text(json.dumps({'results':results,'exit':0 if all(x['exit']==0 for x in results) else 1}))
+except:
+ (P/'native-model-error.txt').write_text(traceback.format_exc());raise

@@ -1,0 +1,44 @@
+from pathlib import Path
+import json,os,shutil,numpy as np
+D=Path('@@DF_PATH_DF_EXTRACT_20261105@@/loot-skeletal/states-priority-03909539')
+ns={'__name__':'proof_helpers'}
+exec((D/'bake-proof.py').read_text().split('report=[]')[0],ns)
+certify=ns['certify'];clean=ns['clean'];verts=ns['verts'];H=ns['H'];b=ns['b']
+proof=json.loads((D/'proof-manifest.json').read_text())
+out=D/'selected-mid-idle-v1';out.mkdir(exist_ok=True)
+selected=[];tiles=[]
+for row in proof:
+ name=row['canonical'];id=name.split('_')[3];directory=out/name;directory.mkdir(exist_ok=True);src=Path(row['sourceGLB'])
+ if id in ['548','660']:
+  clip=row['clips'][0];f0=clip['samples'][0];mid=next(x for x in clip['samples'] if x['frame']==(clip['frames']-1)//2);final=clip['samples'][-1]
+  choices=[('closed',f0,'CLOSED - clip start'),('opened',mid,'MIDDLE - selected opened'),('final-comparison',final,'FINAL - comparison only')]
+  provenance='USER_SELECTED_MID_INTERACTION_STATIC'
+  sourceClosed='Interaction frame0; initial resting source pose. No authored ClosedIdle; does not claim named closed-clip.'
+ else:
+  def c(s):return next(z for z in row['clips'] if z['animation'].endswith('/props_collect_box_557_'+s+'.uasset'))
+  choices=[('closed',c('Close_Idle')['samples'][0],'CLOSED'),('open-final-comparison',c('Open')['samples'][-1],'OPEN CLIP FINAL - comparison'),('opened',c('Open_Idle')['samples'][-1],'BP OPEN_IDLE - selected opened')]
+  provenance='BLUEPRINT_EXPLICIT_OPENED_IDLE_STATIC'
+  sourceClosed='Explicit BP ClosedIdle'
+ record={'canonical':name,'status':'PAIR_STATIC_VERIFIED_USER_SELECTION','provenance':provenance,'sourceGLB':str(src),'sourceSHA256':H(src),'closedProof':sourceClosed,'canonicalBasisPreserved':True,'units':'meters','states':{}}
+ for state,s,label in choices:
+  dest=directory/(state+'.glb');shutil.copy2(s['file'],dest);clean(dest,state.upper(),provenance)
+  cert=certify(src,dest)
+  clip=next(c for c in row['clips'] if any(p['file']==s['file'] for p in c['samples']))
+  evidence={'file':str(dest),'sourceClip':clip['animation'],'frame':s['frame'],'frameTime':s['seconds'],'frameCount':clip['frames'],'fps':clip['fps'],'certification':cert,'selectedBuildState':state in ['closed','opened']}
+  record['states'][state]=evidence
+  tiles.append({'canonical':name,'id':id,'state':state,'label':label,'file':str(dest),'sha256':H(dest),'clip':clip['animation'].split('/')[-1].replace('.uasset',''),'frame':s['frame'],'seconds':s['seconds'],'frameCount':clip['frames']})
+ assert record['states']['closed']['certification']['nodeMatrices']==record['states']['opened']['certification']['nodeMatrices']
+ va=verts(directory/'closed.glb');vb=verts(directory/'opened.glb');record['maxVertexDisplacementMeters']=float(np.linalg.norm(vb-va,axis=1).max())
+ record['changedVerticesAt1um']=int((np.linalg.norm(vb-va,axis=1)>1e-6).sum())
+ (directory/'state-manifest.json').write_text(json.dumps(record,indent=2));selected.append(record)
+manifest={'version':'selected-mid-idle-v1','userOverride':{'548':'frame35 of71 USE, 1.1666667s','660':'frame18 of37 3P_Anim, .6s','557':'Open_Idle final frame9 of10 .3s, NOT actual Open final'},'models':selected,'tiles':tiles}
+temp=out/'current-state-manifest.json.tmp';temp.write_text(json.dumps(manifest,indent=2));os.replace(temp,out/'current-state-manifest.json')
+old=json.loads((D.parent/'static-paired-v3/final-state-manifest.json').read_text());old['userSelectedOverrides']=str(out/'current-state-manifest.json')
+old['selectionPolicy']='548/660 midpoint interaction static;557 BP Open_Idle final. Source clip final comparisons are NOT selected.'
+for x in old['models']:
+ for y in selected:
+  if x['canonical'].lower()==y['canonical'].lower():
+   x.update({'status':'PAIR_STATIC_VERIFIED','manifest':str(out/y['canonical']/'state-manifest.json'),'closed':y['states']['closed']['certification'],'opened':y['states']['opened']['certification'],'selectedOpenedFile':y['states']['opened']['file'],'sourceOpen':y['states']['opened']['sourceClip'],'frame':y['states']['opened']['frame'],'frameTime':y['states']['opened']['frameTime'],'provenance':y['provenance']})
+temp=out/'final-state-manifest.json.tmp';temp.write_text(json.dumps(old,indent=2));os.replace(temp,out/'final-state-manifest.json')
+for x in selected: print(x['canonical'],x['provenance'],x['maxVertexDisplacementMeters'],x['changedVerticesAt1um'])
+print('READY',out)

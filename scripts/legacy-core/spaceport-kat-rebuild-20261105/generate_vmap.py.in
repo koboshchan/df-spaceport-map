@@ -1,0 +1,96 @@
+import argparse,copy,hashlib,io,json,math,re,uuid
+from collections import Counter
+from pathlib import Path
+import numpy as np
+from srctools.dmx import Element,Attribute,ValueType
+def key(mesh):return "m_"+hashlib.sha256(mesh.encode("utf8")).hexdigest()[:16]
+def parse(text):
+ text='<!-- dmx encoding keyvalues2 4 format vmap 40 -->\n'+text[text.index('"CMapRootElement"'):]
+ text=re.sub(r'"uint64"\s+"([^"]+)"',r'"string" "__U64__\1"',text)
+ return Element.parse(io.BytesIO(text.encode("utf8")),unicode=True)[0]
+def walk(root):
+ seen=set()
+ def visit(e):
+  if e.uuid in seen:return
+  seen.add(e.uuid);yield e
+  for a in e.values():
+   if a.type==ValueType.ELEMENT:
+    for c in (a.iter_elem() if a.is_array else [a.val_elem]):
+     if not c.is_null:yield from visit(c)
+ return visit(root)
+def cls(e):
+ return e["entity_properties"].val_elem["classname"].val_str if "entity_properties" in e else ""
+def decompose(matrix):
+ m=np.array(matrix,dtype=float)
+ assert m.shape==(4,4) and np.isfinite(m).all()
+ assert np.max(np.abs(m[3]-[0,0,0,1]))<1e-6
+ a=m[:3,:3];s=np.linalg.norm(a,axis=0)
+ if min(s)<1e-10:raise ValueError("zero scale")
+ r=a/s
+ if np.linalg.det(r)<0:s[0]*=-1;r[:,0]*=-1
+ shear=float(np.max(np.abs(r.T@r-np.eye(3))))
+ if shear>1e-4:raise ValueError(f"shear={shear}")
+ p=math.atan2(-r[2,0],math.hypot(r[0,0],r[1,0]))
+ if math.hypot(r[0,0],r[1,0])>1e-8:y=math.atan2(r[1,0],r[0,0]);z=math.atan2(r[2,1],r[2,2])
+ else:y=math.atan2(-r[0,1],r[1,1]);z=0
+ cp,sp,cy,sy,cr,sr=math.cos(p),math.sin(p),math.cos(y),math.sin(y),math.cos(z),math.sin(z)
+ rr=np.array([[cy*cp,cy*sp*sr-sy*cr,cy*sp*cr+sy*sr],[sy*cp,sy*sp*sr+cy*cr,sy*sp*cr-cy*sr],[-sp,cp*sr,cp*cr]])
+ error=float(np.max(np.abs(rr*s-a)))
+ if error>1e-4*max(1,float(np.max(np.abs(a)))):raise ValueError(f"recompose={error}")
+ return 36*(m[:3,3]+[-6694,-4578,223.69]),np.degrees([p,y,z]),s,shear,error
+def generate(template,audit,out,limit=0,bake=False,overrides_path=None):
+ overrides=json.loads(Path(overrides_path).read_text(encoding="utf8")) if overrides_path else {}
+ if not isinstance(overrides,dict):raise ValueError("overrides must be object->model dictionary")
+ if any(not isinstance(k,str) or not isinstance(v,str) or not re.fullmatch(r"models/kat_spaceport/[A-Za-z0-9_]+\.vmdl",v) for k,v in overrides.items()):raise ValueError("unsafe override model path")
+ root=parse(Path(template).read_text(encoding="utf8"));world=root["world"].val_elem
+ proto=next(e for e in walk(root) if cls(e)=="prop_static");removed=Counter()
+ def strip(e):
+  if "children" not in e:return
+  keep=[]
+  for child in e["children"].iter_elem():
+   c=cls(child)
+   if c in ("prop_static","prop_dynamic","prop_dynamic_override","prop_physics"):removed[c]+=1
+   else:strip(child);keep.append(child)
+  e["children"]=Attribute.array("children",ValueType.ELEMENT,keep)
+ strip(world)
+ next_id=1+max(e["nodeID"].val_int for e in walk(root) if "nodeID" in e)
+ data=json.loads(Path(audit).read_text(encoding="utf8"));objects=data["objects"]
+ unknown=set(overrides)-{o["name"] for o in objects}
+ if unknown:raise ValueError(f"unknown override objects: {sorted(unknown)}")
+ if limit:objects=objects[:limit]
+ props=[];problems=[];maxshear=0;maxerror=0;negative=0;mappings={}
+ for index,obj in enumerate(objects):
+  try:origin,angles,scales,shear,error=decompose(obj["matrix"])
+  except Exception as exc:problems.append({"name":obj["name"],"reason":str(exc)});continue
+  maxshear=max(maxshear,shear);maxerror=max(maxerror,error);negative+=int(any(scales<0))
+  fallback=key(obj["mesh"])
+  model=overrides.get(obj["name"],f"models/kat_spaceport/{fallback}.vmdl")
+  k=Path(model).stem
+  if k in mappings and mappings[k]!=obj["mesh"]:raise ValueError("model id collision")
+  mappings[k]=obj["mesh"];e=copy.deepcopy(proto)
+  for j,node in enumerate(walk(e)):node.uuid=uuid.uuid5(uuid.NAMESPACE_URL,f"kat-spaceport/{index}/{j}")
+  e["nodeID"]=next_id+index;e["referenceID"]="__U64__0x"+hashlib.sha256(obj["name"].encode()).hexdigest()[:16]
+  e["origin"]=Attribute.vec3("origin",origin.tolist());e["angles"]=Attribute.angle("angles",angles.tolist())
+  e["scales"]=Attribute.vec3("scales",scales.tolist());e["children"]=Attribute.array("children",ValueType.ELEMENT,[])
+  ep=e["entity_properties"].val_elem
+  for n,v in {"model":model,"classname":"prop_static","solid":"6","disableshadows":"0","baketoworld":"true" if bake else "false","disablemerging":"false","materialoverride":""}.items():ep[n]=v
+  if "targetname" in ep:del ep["targetname"]
+  props.append(e)
+ report={"input_objects":len(objects),"generated_props":len(props),"unique_models":len(mappings),"removed":dict(removed),
+ "transform_errors":problems,"max_shear":maxshear,"max_recompose_error":maxerror,"negative_scale_props":negative,"bake_to_world":bake,"override_objects":len(overrides),"override_manifest":str(overrides_path) if overrides_path else None}
+ out=Path(out);out.parent.mkdir(parents=True,exist_ok=True);out.with_suffix(".report.json").write_text(json.dumps(report,indent=2),encoding="utf8")
+ if problems:raise ValueError(f"{len(problems)} transforms unsupported; no VMAP written")
+ world["children"].extend(props)
+ b=io.BytesIO();root.export_kv2(b,fmt_name="vmap",fmt_ver=40,unicode="silent",flat=True)
+ text=re.sub(r'"string"\s+"__U64__([^"]+)"',r'"uint64" "\1"',b.getvalue().decode("utf8")).replace("encoding keyvalues2 1 format vmap 40","encoding keyvalues2 4 format vmap 40")
+ if "__U64__" in text:raise ValueError("uint64 restore failed")
+ check=parse(text);counts=Counter(cls(e) for e in walk(check) if cls(e))
+ assert counts["prop_static"]==len(props),(counts,len(props))
+ assert counts["prop_dynamic"]==0
+ assert text.count("models/kat_spaceport/")==len(props)
+ out.write_text(text,encoding="utf8");out.with_suffix(".models.json").write_text(json.dumps(mappings,ensure_ascii=False,indent=2),encoding="utf8")
+ print(json.dumps(report))
+if __name__=="__main__":
+ p=argparse.ArgumentParser();p.add_argument("--template",required=True);p.add_argument("--audit",required=True);p.add_argument("--output",required=True)
+ p.add_argument("--limit",type=int,default=0);p.add_argument("--bake-to-world",action="store_true");p.add_argument("--object-model-overrides");a=p.parse_args()
+ generate(a.template,a.audit,a.output,a.limit,a.bake_to_world,a.object_model_overrides)

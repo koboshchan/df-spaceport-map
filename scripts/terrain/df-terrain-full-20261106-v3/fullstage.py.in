@@ -1,0 +1,102 @@
+import json,math,hashlib
+from pathlib import Path
+import numpy as np
+from PIL import Image,ImageDraw,ImageFont
+P=Path(__file__).parent
+cov=json.loads((P/'coverage-blocker.json').read_text());cal=json.loads((P/'calibration.json').read_text());at=np.load(P/'atlas.npz');A,lo,coef=at['A'],at['lo'],at['coef']
+poses=json.loads((P/'poses.json').read_text());records=cov['records'];byname={Path(r['package']).name:r for r in records}
+O=P/'staged';O.mkdir(exist_ok=True);preview=P/'stage-preview-reference';preview.mkdir(exist_ok=True)
+def rg(x,y):
+ ix=(np.asarray(x)-lo[0])/8;iy=(np.asarray(y)-lo[1])/8;i=np.floor(ix).astype(int);j=np.floor(iy).astype(int)
+ # Allow outermost exact vertex by evaluating the preceding cell.
+ i=np.minimum(i,A.shape[1]-2);j=np.minimum(j,A.shape[0]-2)
+ ok=(i>=0)&(j>=0)&(i<A.shape[1]-1)&(j<A.shape[0]-1)
+ ic=np.clip(i,0,A.shape[1]-2);jc=np.clip(j,0,A.shape[0]-2);a=ix-i;b=iy-j
+ terms=[(A[jc,ic],(1-a)*(1-b)),(A[jc,ic+1],a*(1-b)),(A[jc+1,ic],(1-a)*b),(A[jc+1,ic+1],a*b)]
+ out=np.zeros((*ix.shape,2));valid=ok.copy()
+ for val,wt in terms:
+  active=abs(wt)>1e-12;valid&=(np.all(np.isfinite(val),axis=-1)|~active);out+=np.nan_to_num(val)*wt[...,None]
+ out[~valid]=np.nan
+ return out
+def coord(b):
+ o,e=b['Origin'],b['BoxExtent'];return ((o['X']-e['X'])/100,(o['X']+e['X'])/100,(o['Y']-e['Y'])/100,(o['Y']+e['Y'])/100)
+def convert(x,y,z):return np.c_[x.ravel()*36-240984,-y.ravel()*36-164808,z.ravel()*.9765625*.36+8052.84]
+def cdlod(r):
+ x0,x1,y0,y1=coord(r['bounds']);xs=np.unique(np.r_[x0,np.arange(math.ceil((x0-lo[0])/8),math.floor((x1-lo[0])/8)+1)*8+lo[0],x1]);ys=np.unique(np.r_[y0,np.arange(math.ceil((y0-lo[1])/8),math.floor((y1-lo[1])/8)+1)*8+lo[1],y1])
+ x,y=np.meshgrid(xs,ys);v=rg(x,y);h=v@coef[:2]+coef[2];verts=convert(x,y,h);faces=[];cols=len(xs)
+ for j in range(len(ys)-1):
+  for i in range(cols-1):
+   a=j*cols+i;b=a+1;c=a+cols;d=c+1
+   # Y reflection reverses orientation.
+   for tri in [(a,c,b),(b,c,d)]:
+    if np.all(np.isfinite(verts[list(tri)])):faces.append(tri)
+ return verts,np.array(faces,dtype=int).reshape(-1,3),dict(gridShape=list(x.shape),missingVertices=int(np.sum(~np.isfinite(h))),totalCells=(len(xs)-1)*(len(ys)-1),heightRangeCS=[float(np.nanmin(verts[:,2])),float(np.nanmax(verts[:,2]))],occupancy='source coarse availability only, DF fine hole semantics not decoded',triangulation='explicit anti-diagonal coarse triangulation, not proven native render convention')
+def collision(name):
+ d=json.loads((P/'decoded'/f'{name}.json').read_text())[0];pr=poses[name]['Properties'];pos=pr['Position'];r,c=np.indices((d['rows'],d['cols']));x=pos['X']/100+126-r;y=pos['Y']/100+c;h=np.array([v['h'] for v in d['samples']]).reshape(r.shape);v=convert(x,y,h);faces=[];C=d['cols'];holes=0
+ for rr in range(d['rows']-1):
+  for cc in range(C-1):
+   a=rr*C+cc;b=a+1;c=a+C;dd=c+1;s=d['samples'][a]
+   # after outer quaternion and UE->CS reflection, row,col axes both positive-Y/negative-X? x decreases row, CS y decreases col => determinant positive.
+   ts=[(a,c,b),(c,dd,b)] if not s['m0']&128 else [(a,c,dd),(a,dd,b)]
+   for tri,m in zip(ts,[s['m0'],s['m1']]):
+    if (m&127)==127:holes+=1;continue
+    faces.append(tri)
+ return v,np.array(faces),dict(holeTriangles=holes,sourceSamples=d['count'])
+def obj(path,v,f):
+ # Preserve every finite source triangle, normalize winding upward, no decimation.
+ valid=np.isfinite(v).all(axis=1);assert valid[f].all()
+ norm=np.cross(v[f[:,1]]-v[f[:,0]],v[f[:,2]]-v[f[:,0]])
+ flip=norm[:,2]<0;f=f.copy();f[flip]=f[flip][:,[0,2,1]]
+ used=np.unique(f);remap=np.full(len(v),-1,int);remap[used]=np.arange(len(used));vv=v[used];ff=remap[f]
+ with path.open('w') as out:
+  out.write('# DF terrain offline world-CS units, no decimation\n')
+  for x,y,z in vv:out.write(f'v {x:.9f} {y:.9f} {z:.9f}\n')
+  for a,b,c in ff+1:out.write(f'f {a} {b} {c}\n')
+ return dict(vertices=len(vv),triangles=len(ff),sha256=hashlib.sha256(path.read_bytes()).hexdigest(),bytes=path.stat().st_size)
+# Select adjacent missing slots then greedy farthest-point sampling across actual map.
+present=[r for r in records if r['payloadPresent']];missing=[r for r in records if not r['payloadPresent'] and r['bounds']['BoxExtent']['Z']!=0]
+def center(r):return np.array([r['bounds']['Origin'][k]/100 for k in 'XY'])
+adj=[]
+for r in missing:
+ ds=[np.linalg.norm(center(r)-center(p)) for p in present];idx=int(np.argmin(ds))
+ if ds[idx]<126.01:adj.append((r,present[idx]))
+sel=[max(adj,key=lambda t:t[0]['bounds']['BoxExtent']['Z'])]
+while len(sel)<6:
+ sel.append(max([a for a in adj if a not in sel],key=lambda t:min(np.linalg.norm(center(t[0])-center(s[0])) for s in sel)))
+panels=[]
+for i,(r,neighbor) in enumerate(sel):
+ group=[]
+ for k,rec in [('CDLOD-derived',r),('collision',neighbor)]:
+  name=Path(rec['package']).name
+  v,f,meta=cdlod(rec) if k=='CDLOD-derived' else collision(name)
+  path=preview/f'{i}-{k}.obj';proof=obj(path,v,f)
+  group.append(dict(kind=k,name=name,path=path.name,bounds=rec['bounds'],**meta,**proof))
+ panels.append(dict(number=i+1,meshes=group))
+manifest=dict(panels=panels,calibration=cal,scope='Actual DF source geometry, LOD3 coarse fallback versus full exact collision. Neutral shaded colors, no textures, no height exaggeration. No map build/live edits.')
+(preview/'manifest.json').write_text(json.dumps(manifest,indent=2))
+# Whole canonical footprint mask overview.
+im=Image.new('RGB',(1600,1710),(20,25,32));dr=ImageDraw.Draw(im)
+font=ImageFont.truetype(('@@DF_PATH_WINDOWS@@/Fonts/arial.ttf' if __import__('os').name=='nt' else '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'),22);small=ImageFont.truetype(('@@DF_PATH_WINDOWS@@/Fonts/arial.ttf' if __import__('os').name=='nt' else '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'),16)
+allcent=np.array([center(r) for r in records]);mi=allcent.min(axis=0)-63;ma=allcent.max(axis=0)+63
+def pix(x,y):return (70+(x-mi[0])/(ma[0]-mi[0])*1460,90+(ma[1]-y)/(ma[1]-mi[1])*1460)
+for r in records:
+ x0,x1,y0,y1=coord(r['bounds']);a=pix(x0,y1);b=pix(x1,y0);color=(48,162,194) if r['payloadPresent'] else (201,131,63) if r['bounds']['BoxExtent']['Z']!=0 else (56,63,74)
+ dr.rectangle([*a,*b],fill=color,outline=(25,31,40))
+for i,(r,n) in enumerate(sel):
+ x,y=pix(*center(r));dr.ellipse((x-19,y-19,x+19,y+19),fill=(242,240,220),outline=(10,12,15),width=2);dr.text((x-7,y-13),str(i+1),font=font,fill=(0,0,0))
+dr.text((65,20),'SPACE CENTER / canonical terrain footprint',font=font,fill='white')
+dr.text((65,1570),'CYAN 168 exact-collision slots     OCHRE 681 CDLOD-derived candidates',font=font,fill='white')
+dr.text((65,1605),'GRAY 175 zero-extent slots, not certified empty    /    numbered preview locations',font=small,fill=(200,205,210))
+dr.text((65,1640),'Source XY bounds, not invented ground. Preview uses 800 cm coarse heights.',font=small,fill=(200,205,210))
+im.save(preview/'overview.png')
+print(json.dumps(dict(selected=[[g['name'] for g in p['meshes']] for p in panels],previewDir=str(preview)),indent=2))
+if '--full' in __import__('sys').argv:
+ receipts=[]
+ for i,r in enumerate(records):
+  if not r['payloadPresent'] and r['bounds']['BoxExtent']['Z']==0:continue
+  name=Path(r['package']).name;kind='collision' if r['payloadPresent'] else 'CDLOD-derived'
+  v,f,meta=collision(name) if r['payloadPresent'] else cdlod(r)
+  proof=obj(O/f'{name}.obj',v,f)
+  receipts.append(dict(name=name,kind=kind,worldFrame='CS world, UE *.36 translate(-240984,-164808,8052.84) Y reflection',**meta,**proof))
+  if i%50==0:print(i,len(receipts),flush=True)
+ (O/'stage-manifest.json').write_text(json.dumps(dict(artifacts=receipts,sourceCoverage={'collision':168,'CDLODderived':681,'uncertifiedZeroExtent':175},integrationReady=False,gates=['coarse collision transitions/seams must be measured','CDLOD fine hole occupancy unknown','props/roads resting surface validation pending','native PHYS partition compiler not run, each OBJ bounded below512MiB'],calibration=cal),indent=2))

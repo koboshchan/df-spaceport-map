@@ -1,0 +1,124 @@
+from pathlib import Path
+import os,json,hashlib,shutil,subprocess,socket,struct,re,datetime,threading,ctypes,traceback,time
+S=Path('@@DF_PATH_CS2_SPACEPORT_PRIVATE@@');Q=Path('@@DF_PATH_DF_V268_TWOPART_20261109@@/install-window');ID='@@DF_PRIVATE_CONTAINER_ID@@';MAP='df_spaceport_v268_twopart'
+def save(n,j):(Q/n).write_text(json.dumps(j,indent=2))
+def sha(p):
+ with p.open('rb')as f:return hashlib.file_digest(f,'sha256').hexdigest()
+def docker(*args,timeout=20):
+ p=subprocess.run(['docker',*args],timeout=timeout,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
+ if p.returncode:
+  (Q/'last-failed-docker-output.txt').write_text(p.stdout)
+  raise RuntimeError('docker command failed, output preserved')
+ return p.stdout
+def identity():
+ j=json.loads(docker('inspect',ID))[0];assert j['Id']==ID and '-port 27016'in' '.join(j['Args']);return j
+def restore():
+ identity()
+ subprocess.run(['docker','stop','-t','10',ID],timeout=25,capture_output=True)
+ b=json.loads((Q/'BACKUP-COMPLETE.json').read_text())
+ for r in b['files']:
+  dst=Path(r['source']);src=Path(r['backup'])
+  assert sha(src)==r['sha256']
+  # Restore protected configs/plugin/VPKs, but the external source copy never changed.
+  if dst.is_relative_to(S):shutil.copy2(src,dst);assert sha(dst)==r['sha256']
+ cfg=S/'fast-baseline/cfg/debugtest.cfg';txt=cfg.read_text();txt=re.sub(r'(?m)^(nextlevel|map) df_spaceport_v26[67]$',r'\1 df_spaceport_v267',txt);cfg.write_text(txt)
+ docker('start',ID)
+ save('RECOVERED.json',dict(utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),state=identity()['State'],startupMap='df_spaceport_v267',v267SevenHashesVerified=True))
+# Independent deadline watchdog blocks on named Win32 event, no polling.
+if '--guard'in __import__('sys').argv:
+ k=ctypes.windll.kernel32;k.OpenEventW.restype=ctypes.c_void_p
+ ev=k.OpenEventW(0x100000,False,'Local\\DF268TwoPartInstallDone')
+ result=k.WaitForSingleObject(ctypes.c_void_p(ev),900000)
+ if result==258:restore()
+ raise SystemExit
+k=ctypes.windll.kernel32;k.CreateEventW.restype=ctypes.c_void_p
+ev=k.CreateEventW(None,True,False,'Local\\DF268TwoPartInstallDone')
+try:
+ baseline=json.loads((Q/'BACKUP-COMPLETE.json').read_text());assert baseline['container']==ID
+ # Actual installed assembly hash must match the source-linked repaired build.
+ dll=S/'addons-safe7/counterstrikesharp/plugins/PrivateDefaultSpawn/PrivateDefaultSpawn.dll'
+ assert sha(dll)=='40eeafeab8dc346f0e9eb1de6edaff99679736f24e74ee41805d0298227cf39c'
+ src=Path('@@DF_PATH_DF_V267_REPAIR_20261109@@/Plugin.cs').read_text();assert 'StartsWith("df_spaceport_"'in src
+ packages=json.loads(Path('@@DF_PATH_DF_V268_TWOPART_20261109@@/proof/PACKAGE-QA-COMPLETE.json').read_text())['packages'];assert len(packages)==3
+ client=Path('@@DF_PATH_PROGRAM_FILES_X86_STEAM_STEAMAPPS_COMMON_COUNTER_STRIKE_GLOBAL_OFFENSIVE@@/game/csgo/maps');assert client.is_dir()
+ assert shutil.disk_usage('@@DF_DRIVE_C@@').free>sum(r['bytes']for r in packages)+2*1024**3
+ for r in packages:assert sha(Path(r['path']))==r['sha256']
+ # First persist docker stdout with timestamps before any load.
+ log=(Q/'persistent-console.log').open('ab',buffering=0);log.write(('CAPTURE VERIFIED '+datetime.datetime.now(datetime.timezone.utc).isoformat()+'\n').encode())
+ capture=subprocess.Popen(['docker','logs','--follow','--timestamps','--since','1m',ID],stdout=log,stderr=subprocess.STDOUT)
+ save('capture.json',dict(pid=capture.pid,path=str(Q/'persistent-console.log'),writtenBeforeLoad=(Q/'persistent-console.log').stat().st_size>0))
+ # Detached task guard was registered separately; starts before any private mutation.
+ dockerid=identity()['Id']
+ guard=subprocess.run(['schtasks','/Run','/TN','DF-v268-TwoPart-Recovery'],capture_output=True,text=True);assert guard.returncode==0
+ save('guard-armed.json',dict(deadlineSeconds=900,pid=os.getpid(),utc=datetime.datetime.now(datetime.timezone.utc).isoformat()))
+ copied=[]
+ for r in packages:
+  p=Path(r['path']);dest=S/'latest-20261104'/p.name;cl=client/p.name
+  shutil.copy2(p,dest);shutil.copy2(p,cl)
+  assert sha(dest)==sha(cl)==r['sha256']
+  copied.append(dict(name=p.name,source=r['sha256'],server=sha(dest),client=sha(cl)))
+ save('TRIPLE-SHA.json',copied)
+ health=S/'a2s.py';txt=health.read_text();assert 'b"df_spaceport_v268"'in txt;health.write_text(txt.replace('b"df_spaceport_v268")','b"df_spaceport_v268",b"'+MAP+'")'))
+ cfg=S/'fast-baseline/cfg/debugtest.cfg';txt=cfg.read_text();txt=re.sub(r'(?m)^(nextlevel|map) df_spaceport_v26[67]$',lambda m:m[1]+' '+MAP,txt);assert '\nmap '+MAP in txt;cfg.write_text(txt)
+ save('load-start.json',dict(utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),before=identity()['State']))
+ docker('restart','-t','10',ID,timeout=45)
+ # Wait for readiness through existing health command, bounded blocking helper.
+ code="""import socket,time,json
+deadline=time.monotonic()+120
+while time.monotonic()<deadline:
+ try:
+  s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM);s.settimeout(4);q=b'\\xff\\xff\\xff\\xffTSource Engine Query\\x00';s.sendto(q,('127.0.0.1',27016));d=s.recv(65535)
+  if d[4:5]==b'A':s.sendto(q+d[5:9],('127.0.0.1',27016));d=s.recv(65535)
+  parts=d[6:].split(b'\\x00',4)
+  if d[4:5]==b'I' and parts[1]==b'df_spaceport_v268_twopart':print(json.dumps({'map':parts[1].decode(),'name':parts[0].decode()}));break
+ except OSError:pass
+else:raise RuntimeError('bounded A2S exact-map readiness failed')
+"""
+ result=docker('exec',ID,'python3','-c',code,timeout=130);save('A2S.json',dict(utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),result=result))
+ # Bounded blocking stability observation lets deferred spawn groups finish.
+ waiter0=subprocess.Popen(['docker','wait',ID],stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True)
+ try:
+  oo,ee=waiter0.communicate(timeout=45)
+  raise RuntimeError('private exited before RCON '+oo)
+ except subprocess.TimeoutExpired:waiter0.terminate()
+ # RCON read-only commands via existing private credentials, never print credential.
+ rcode="""import socket,struct,re
+from pathlib import Path
+password=re.search(r'rcon_password\\s+"([^"]+)"',Path('/debugtest/fast-baseline/cfg/debugtest-private-rcon.cfg').read_text())[1]
+s=socket.create_connection(('@@DF_PRIVATE_IP@@',27016),8);s.settimeout(12)
+def packet(i,t,b):
+ p=struct.pack('<ii',i,t)+b.encode()+b'\\0\\0';s.sendall(struct.pack('<i',len(p))+p)
+def receive():
+ h=s.recv(4)
+ if len(h)!=4:raise RuntimeError('RCON short header')
+ n=struct.unpack('<i',h)[0];b=b''
+ while len(b)<n:b+=s.recv(n-len(b))
+ return struct.unpack('<ii',b[:8]),b[8:-2].decode(errors='replace')
+packet(101,3,password)
+while True:
+ a,b=receive()
+ if a[1]==2:assert a[0]==101;break
+for i,c in enumerate(COMMANDS):
+ packet(200+i,2,c)
+ try:a,b=receive();print('COMMAND',c,'\\n',b)
+ except socket.timeout:print('COMMAND',c,'RESPONSE TIMEOUT')
+"""
+ cmds=['css_plugins list','cq_enable','css_defaultspawn_read','help entityreport','entityreport','status']
+ output=docker('exec',ID,'python3','-c','COMMANDS='+repr(cmds)+'\n'+rcode,timeout=60)
+ (Q/'live-readback.txt').write_text(output)
+ logs=docker('logs','--timestamps','--since','5m',ID,timeout=20);(Q/'load-console-snapshot.log').write_text(logs)
+ save('LIVE-EVIDENCE.json',dict(utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),state=identity()['State'],A2Sexact=True,joinableNotYetClaimed=True,liveEntityAndChildrenReviewRequired=True))
+ # Signal deadline guard only after server survives short blocking wait on docker wait subprocess.
+ waiter=subprocess.Popen(['docker','wait',ID],stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True)
+ try:
+  out,err=waiter.communicate(timeout=45)
+  raise RuntimeError('private exited during stable observe '+out)
+ except subprocess.TimeoutExpired:
+  waiter.terminate()
+ save('STABLE.json',dict(utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),state=identity()['State']))
+ k.SetEvent(ctypes.c_void_p(ev))
+except BaseException:
+ save('INSTALL-BLOCKER.json',dict(error=traceback.format_exc(),utc=datetime.datetime.now(datetime.timezone.utc).isoformat()))
+ try:restore();k.SetEvent(ctypes.c_void_p(ev))
+ except BaseException:save('RECOVERY-BLOCKER.json',dict(error=traceback.format_exc()))
+ raise

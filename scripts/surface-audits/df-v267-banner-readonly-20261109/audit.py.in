@@ -1,0 +1,34 @@
+
+from pathlib import Path
+import json,hashlib,os,datetime,traceback,re
+O=Path('@@DF_PATH_DF_V267_BANNER_READONLY_20261109@@')
+import sys
+sys.stdout=(O/'audit.log').open('a',buffering=1);sys.stderr=sys.stdout
+(O/'worker.json').write_text(json.dumps(dict(pid=os.getpid(),parent=os.getppid(),utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),ownership='READONLY inputs; writes ONLY this report directory')))
+try:
+ R=Path('@@DF_PATH_DF_V25_BUILD_20261106@@')
+ models={x['objectPath']:x for x in map(json.loads,(R/'geometry-work/models.jsonl').open(encoding='utf8'))}
+ hits=[]
+ for i,r in enumerate(map(json.loads,(R/'component-work/final-combined-decomposed.jsonl').open(encoding='utf8'))):
+  p=r['objectPath']
+  if 'BigMeshGroup_52_-36:'in p and any(p.endswith('.StaticMeshComponent'+str(n))for n in [44,38,37]):
+   hits.append(dict(rowIndex=i,instance=r,model=models.get(r['meshObjectPath'])))
+ (O/'lead-instance-provenance.json').write_text(json.dumps(hits,indent=2))
+ print('exactLeadMatches',len(hits),flush=True)
+ needles=['Branding_Poster_Banner','Branding08','HAAVK']
+ count=0
+ with (O/'archive-artwork-candidates.jsonl').open('w',encoding='utf8')as w:
+  for line in Path('@@DF_PATH_DF_EXTRACT_20261105@@/index-manifest.jsonl').open(encoding='utf8'):
+   if any(n.lower()in line.lower()for n in needles):w.write(line);count+=1
+ print('archiveCandidates',count,flush=True)
+ out=[]
+ for h in hits:
+  m=h['model']
+  if not m:continue
+  print('MODEL',m['model'],m['materials'],flush=True)
+  for mat in m['materials']:
+   out.append(dict(model=m['model'],material=mat))
+ (O/'lead-material-slots.json').write_text(json.dumps(out,indent=2))
+ (O/'INITIAL-READONLY-COMPLETE.json').write_text(json.dumps(dict(leadMatches=len(hits),archiveCandidates=count,cause='NOT_YET_VERIFIED',v266PackedChain='PENDING',stageEdits=False),indent=2))
+except BaseException:
+ (O/'BLOCKER.txt').write_text(traceback.format_exc());raise

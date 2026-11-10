@@ -1,0 +1,44 @@
+from pathlib import Path
+import numpy as np,json,hashlib
+from shapely.geometry import Polygon,Point,LineString
+O=Path('@@DF_PATH_DF_V26_BUILD_20261106@@/terrain-stage');P=Path('@@DF_PATH_DF_TERRAIN_FULL_20261106_V3@@')
+sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+h=json.loads((O/'exact-nine-authentic-historical-records.json').read_text());rec=next(x['record']for x in h['historicalSelectedPlacements']if x['historicalIndex']==12);pl=rec['placement']
+a=next(x for x in json.loads((O/'approved-nine-mapping.json').read_text())['objects']if x['historicalIndex']==12)
+d=np.load(a['triangleNPZ']);v=d['vertices'];f=d['triangles'];xy=np.array([-40104.,-21491.5087037]);pt=Point(xy)
+def plane(t):
+ n=np.cross(t[1]-t[0],t[2]-t[0]);n/=np.linalg.norm(n);coeff=np.linalg.solve(np.c_[t[:,:2],np.ones(3)],t[:,2])
+ return dict(unitNormalCS=n.tolist(),normalOffsetD=float(-n@t[0]),heightPlaneZeqAXplusBYplusC=coeff.tolist(),zAtXY=float(np.r_[xy,1]@coeff))
+hits=[];edges=[]
+for i,t in enumerate(v[f]):
+ poly=Polygon(t[:,:2])
+ if poly.distance(pt)<2e-6:hits.append(dict(triangleIndex=i,materialSection=0 if i<24 else 1,verticesCS=t.tolist(),plane=plane(t)))
+ for j in range(3):
+  l=LineString([t[j,:2],t[(j+1)%3,:2]])
+  if l.distance(pt)<2e-6:edges.append(dict(triangleIndex=i,edgeIndex=j,endpointsCS=[t[j].tolist(),t[(j+1)%3].tolist()],distanceXY=float(l.distance(pt))))
+# Unique edge incidence establishes exposed geometric boundary, not a tile border or centroid.
+counts={}
+for tri in f:
+ for j in range(3):
+  key=tuple(sorted([tuple(np.round(v[tri[j]],7)),tuple(np.round(v[tri[(j+1)%3]],7))]));counts[key]=counts.get(key,0)+1
+for e in edges:
+ key=tuple(sorted(tuple(np.round(x,7))for x in e['endpointsCS']));e['meshEdgeIncidence']=counts[key]
+row=next(x for x in json.loads((P/'seam-v4/next-build/integration-manifest.json').read_text())['artifacts']if x['canonicalID']=='LandscapeCollision_X885_Y-611_0')
+vs=[];fs=[]
+for l in Path(row['sourceOBJ']).read_text().splitlines():
+ s=l.split()
+ if s and s[0]=='v':vs.append(list(map(float,s[1:4])))
+ elif s and s[0]=='f':fs.append([int(x)-1 for x in s[1:]])
+vs=np.array(vs);terrain=[]
+for i,face in enumerate(fs):
+ t=vs[face]
+ if Polygon(t[:,:2]).distance(pt)<2e-6:terrain.append(dict(triangleIndex=i,verticesCS=t.tolist(),plane=plane(t)))
+normal=np.cross(v[f[:,1]]-v[f[:,0]],v[f[:,2]]-v[f[:,0]])
+source=Path(pl['meshSource']['outputs'][0]);col=source.with_suffix('.collision.json');collision=json.loads(col.read_text())
+meta=[]
+for k in ['sourceMetadata','sourceJson']:
+ p=Path('@@DF_PATH_DF_EXTRACT_20261105@@/placements')/pl[k]
+ meta.append(dict(path=str(p),exists=p.exists(),sha256=sha(p)if p.exists()else None,record=json.loads(p.read_text())if p.exists()else None))
+z=hits[0]['plane']['zAtXY'];tz=max(t['plane']['zAtXY']for t in terrain);target=z-1.5
+out=dict(status='READONLY_DECISION_PACKET_NOT_SUPPORT_CERTIFIED',historicalIndex=12,componentObjectPath=pl['objectPath'],componentRecordID='000028-StaticMeshComponent1',componentUUID='NOT_ESTABLISHED_FROM_AUTHENTIC_RECORD; BodySetupGuid is not component UUID',userMarkUUID='NONE_IN_HISTORICAL_CONTACT_OR_GROUND_SELECTION_RECORD; historical nine are automated contact diagnostics, not a proven user mark join',authenticPlacement=rec,authenticContact=next(x for x in h['historicalContactRecords']if x['index']==12),sourceGLBSHA256=sha(source),exportNPZSHA256=sha(a['triangleNPZ']),frame=dict(matrixCS2=pl['matrixCS2'],sourceWorldMatrix=pl['fullSourceWorldMatrix'],sourceToCS='UE local mesh centimeters -> matrixCS2; .36 scale, Y reflection; no added normal/vertical offset',pointLocalMeshUE=(np.linalg.inv(np.array(pl['matrixCS2']))@np.r_[xy,z,1])[:3].tolist(),pointWorldUE=((np.r_[xy,z]-np.array([-240984,-164808,8052.84]))/np.array([.36,-.36,.36])).tolist()),exactPoint=dict(XCS=float(xy[0]),YCS=float(xy[1]),roadZCS=z,originalApproxTerrainZCS=tz,targetTerrainZCS=target,existingTerrainAboveRoadCS=tz-z,requestedClearanceBelowRoadCS=1.5,computedDropCS=tz-target,interpretation='29.405763 is existing approximate penetration27.905763 plus requested clearance1.5, NOT requested clearance29.4'),roadTrianglesAtPoint=hits,roadEdgesAtPoint=edges,terrainTrianglesAtPoint=terrain,terrainProvenance=row,roadGeometry=dict(vertices=len(v),triangles=len(f),allTriangleNormalZPositive=bool(np.all(normal[:,2]>0)),minUnitNormalZ=float(np.min(normal[:,2]/np.linalg.norm(normal,axis=1))),bottomSurface='No downward-facing bottom triangles in exported57-triangle mesh; cannot infer a road thickness or separate lower support deck.',support='Upward render surface exists, but DF collision sidecar is QueryOnly Road profile with Pawn Ignore. It does NOT certify this mesh as the intended player-support collider.'),collisionSidecar=dict(path=str(col),sha256=sha(col),record=collision),componentMetadata=meta,decision=dict(known='Authentic same-frame asphalt render edge intersects approximate terrain ~27.906u above it; it is not a fine-tile hole or missing source surface at this XY.',unknown='Actual intended support surface and runtime collision; overpass/bridge semantic exclusion not certified by names or upward geometry alone. Component UUID and user mark join unestablished.',clipping='Exact road-union outer boundary is already the covered-interior boundary. Merely trimming to that same boundary cannot remove unequal one-sided height limits. Insetting further leaves some covered road edge with original terrain above asphalt; functional acceptability needs real support/hull evidence, not a geometric claim.',choices=['Preserve original coarse source here and HOLD road12 correction pending support/collision and mark identity evidence.','If lowering is confirmed necessary, explicitly authorize a boundary treatment after its slope/player-hull envelope is measured. No outside buffer width has been established.'],outsideBufferExtentCS=None,hullClearance='UNVERIFIED; no configured hull/slope values or traces checked; no invented blend width'))
+p=O/'road12-readonly-decision-packet.json';p.open('x').write(json.dumps(out,indent=2));print('PACKET',sha(p));print(json.dumps(dict(exactPoint=out['exactPoint'],edges=edges,roadTriangles=hits,terrainTriangles=terrain,collision=collision['Properties'],metadata=[dict(path=x['path'],exists=x['exists'])for x in meta]),indent=2))

@@ -1,0 +1,62 @@
+using CUE4Parse.UE4.Assets.Exports.Texture;
+using CUE4Parse_Conversion.Textures;
+using CUE4Parse_Conversion.Options;
+using CUE4Parse.UE4.Assets.Exports.StaticMesh;
+using CUE4Parse.UE4.Assets.Exports.Engine;
+using System.Text.Json;
+using CUE4Parse.FileProvider;
+using CUE4Parse.UE4.Versions;
+using CUE4Parse.Encryption.Aes;
+using CUE4Parse.Compression;
+using CUE4Parse.UE4.Assets;
+using CUE4Parse.UE4.Assets.Exports.Material;
+using Serilog;
+Log.Logger=new LoggerConfiguration().MinimumLevel.Error().WriteTo.Console().CreateLogger();
+var root=@"@@DF_PATH_DF_EXTRACT_20261105@@";
+var output=@"@@DF_PATH_DF_RED_ITEMS@@";
+void Check(bool force=false){if(new DriveInfo("D").AvailableFreeSpace<2_000_000_000L)throw new Exception("D reserve");}
+OodleHelper.Initialize(Path.Combine(root,"tools","oodle-data-shared.dll"));
+
+using var kj=JsonDocument.Parse(File.ReadAllText(Path.Combine(root,"community-aes-keys.json")));
+var keys=kj.RootElement.GetProperty("Keys").EnumerateArray().GroupBy(x=>x.GetProperty("guid").GetString()).Select(g=>g.First()).ToDictionary(x=>x.GetProperty("guid").GetString()!.Replace("-","").ToUpperInvariant(),x=>x.GetProperty("key").GetString()!);
+keys["00000000000000000000000000000000"]=kj.RootElement.GetProperty("MainKey").GetString()!;
+using var p=new StreamedFileProvider("DeltaForce",new VersionContainer(EGame.GAME_DeltaForce),StringComparer.OrdinalIgnoreCase);p.Initialize();
+foreach(var pak in File.ReadAllLines(Path.Combine(root,"pak-paths.txt"))){Check();p.RegisterVfs(pak.Trim());}
+foreach(var r in p.UnloadedVfs.ToArray()){Check();var guid=r.EncryptionKeyGuid.ToString().Replace("-","").ToUpperInvariant();if(keys.TryGetValue(guid,out var key))p.SubmitKey(r.EncryptionKeyGuid,new FAesKey(key));}
+
+CUE4Parse.UE4.Assets.ObjectTypeRegistry.RegisterClass("VirtualMaterialInstanceConstant",typeof(CUE4Parse.GameTypes.DFHO.Assets.Exports.UVirtualMaterialInstanceConstant));
+
+
+
+
+
+
+TextureDecoder.UseAssetRipperTextureDecoder=true;
+var opt=new ExportOptions(exportHdrTexturesAsHdr:false);
+void Save(string rel,byte[] bytes){Check();var f=Path.Combine(output,rel);Directory.CreateDirectory(Path.GetDirectoryName(f)!);File.WriteAllBytes(f,bytes);}
+void J(string rel,object obj)=>Save(rel,System.Text.Encoding.UTF8.GetBytes(JsonSerializer.Serialize(obj)));
+var queue=new Queue<string>();var seen=new HashSet<string>(StringComparer.OrdinalIgnoreCase);var results=new List<object>();
+void Add(string a){var s=a.Split('.')[0].Split(':')[0];if(s.StartsWith("/Game/"))s="DeltaForce/Content/"+s[6..];else if(s.StartsWith("/Engine/"))s="Engine/Content/"+s[8..];else if(!s.StartsWith("DeltaForce/Content/"))return;if(seen.Add(s+".uasset"))queue.Enqueue(s+".uasset");}
+using(var d=JsonDocument.Parse(File.ReadAllText(Path.Combine(output,"export-results.json"))))foreach(var e in d.RootElement.EnumerateArray())if(e.TryGetProperty("materials",out var ms))foreach(var m in ms.EnumerateArray())Add(m.GetString()!);
+// Include per-item material overrides, including the shared card meshes.
+using(var d=JsonDocument.Parse(File.ReadAllText(Path.Combine(output,"selection.json"))))foreach(var e in d.RootElement.EnumerateArray())if(e.GetProperty("mesh").GetString()!="None")foreach(System.Text.RegularExpressions.Match m in System.Text.RegularExpressions.Regex.Matches(e.GetProperty("assets").GetRawText(),"/Game/[^\\\" ]+"))if(m.Value.Contains("Material",StringComparison.OrdinalIgnoreCase)||m.Value.Contains("/MI_"))Add(m.Value);
+File.WriteAllText(Path.Combine(output,"textures.pid"),Environment.ProcessId.ToString());
+int done=0,textures=0,materials=0;
+while(queue.TryDequeue(out var path)){
+try{
+var pkg=p.LoadPackage(path) as Package??throw new Exception("no package");
+string Class(int i){var c=pkg.ExportMap[i].ClassIndex.Index;return c<0?pkg.ImportMap[-c-1].ObjectName.Text:"local";}
+var classes=Enumerable.Range(0,pkg.ExportMap.Length).Select(Class).ToArray();
+bool mat=classes.Any(c=>c.Contains("Material")),tex=classes.Any(c=>c=="Texture2D");
+if(mat){foreach(var a in pkg.ImportMap.Select(x=>x.ObjectName.Text).Concat(pkg.NameMap.Select(x=>x.Name)).Where(x=>x!=null&&(x.StartsWith("/Game/")||x.StartsWith("/Engine/"))).Distinct())Add(a!);}
+for(int i=0;i<classes.Length;i++){
+if(classes[i]=="Texture2D" && pkg.ExportsLazy[i].Value is UTexture2D tx){
+var bmp=tx.Decode(opt)??throw new Exception("null texture");var bytes=bmp.Encode(opt,out var ext);var rel="textures/"+path[..^7]+"/"+tx.Name+"."+ext;Save(rel,bytes);textures++;results.Add(new{path,status="ok",kind="texture",target=rel,width=bmp.Width,height=bmp.Height,tx.SRGB,tx.IsNormalMap});
+}else if(classes[i].Contains("Material")){
+var obj=pkg.ExportsLazy[i].Value;var rel="materials-closure/"+path[..^7]+"/"+obj.Name+".json";Save(rel,System.Text.Encoding.UTF8.GetBytes(Newtonsoft.Json.JsonConvert.SerializeObject(obj)));materials++;results.Add(new{path,status="ok",kind="material",target=rel});
+}
+}
+}catch(Exception e){results.Add(new{path,status="error",error=e.ToString()});}
+done++;J("texture-results.json",results);J("texture-progress.json",new{done,textures,materials,queued=queue.Count,pid=Environment.ProcessId,time=DateTime.UtcNow});Console.WriteLine(done+" textures="+textures+" materials="+materials+" queue="+queue.Count);if(done%5==0)GC.Collect();
+}
+J("textures-complete.json",new{done,textures,materials,time=DateTime.UtcNow});

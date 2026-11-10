@@ -1,0 +1,43 @@
+
+using System.Reflection;
+using System.Text.Json;
+using CounterStrikeSharp.API;
+using CounterStrikeSharp.API.Core;
+using CounterStrikeSharp.API.Modules.Cvars;
+public sealed class LinkedSpawnDiag:BasePlugin {
+ public override string ModuleName=>"Private Linked Spawn Diagnostic";
+ public override string ModuleVersion=>"1.1.0";
+ public override string ModuleAuthor=>"koboshchan";
+ bool Allowed()=>(Server.MapName=="kat_linked_parent"||Server.MapName=="df_spaceport_kat_linked") && ConVar.Find("hostport")?.GetPrimitiveValue<int>()==27016;
+ static object? Prop(object? obj,string name) {
+  if(obj==null)return null;
+  var p=obj.GetType().GetProperty(name,BindingFlags.Instance|BindingFlags.Public);
+  if(p==null)return new {unavailable="public API property absent",property=name};
+  try {var v=p.GetValue(obj);if(v==null)return null;if(v is string || v.GetType().IsPrimitive || v.GetType().IsEnum)return v.ToString();
+   if(v.GetType().GetProperty("Raw") is {} raw)return new {type=v.GetType().Name,raw=raw.GetValue(v)?.ToString(),valid=v.GetType().GetProperty("IsValid")?.GetValue(v)?.ToString()};
+   return v.ToString();
+  }catch(Exception e){return new {unavailable=e.GetBaseException().Message,property=name};}
+ }
+ static object StepProperties(object? obj) {
+  if(obj==null)return new {unavailable="object null"};
+  var names=obj.GetType().GetProperties(BindingFlags.Instance|BindingFlags.Public).Where(p=>p.Name.Contains("step",StringComparison.OrdinalIgnoreCase)).Select(p=>p.Name).Distinct().ToArray();
+  return new {type=obj.GetType().FullName,properties=names.ToDictionary(n=>n,n=>Prop(obj,n)),status=names.Length==0?"no supported public Step property":"read only public API getters"};
+ }
+ public override void Load(bool hotReload) {
+  AddCommand("kat_linked_diag","Read-only private pawn state",(p,c)=>{
+   if(p!=null||!Allowed())return;
+   try {
+    var rows=Utilities.GetPlayers().Where(h=>h.IsValid&&!h.IsBot).Select(h=>{
+     var q=h.PlayerPawn.Value;
+     if(q==null||!q.IsValid)return (object)new {h.PlayerName,h.Index,steamID=h.SteamID.ToString(),pawnValid=false};
+     var origin=q.AbsOrigin;var angles=q.EyeAngles;
+     return (object)new {h.PlayerName,h.Index,steamID=h.SteamID.ToString(),pawnIndex=q.Index,pawnHandle=h.PlayerPawn.Raw,pawnValid=true,h.PawnIsAlive,health=q.Health,flags=q.Flags,
+      origin=origin==null?null:new float[]{origin.X,origin.Y,origin.Z},eyeAngles=new float[]{angles.X,angles.Y,angles.Z},
+      velocity=new float[]{q.AbsVelocity.X,q.AbsVelocity.Y,q.AbsVelocity.Z},groundEntity=Prop(q,"GroundEntity"),
+      movementService=StepProperties(q.MovementServices),pawnStepProperties=StepProperties(q)};
+    }).ToArray();
+    c.ReplyToCommand(JsonSerializer.Serialize(new {map=Server.MapName,utc=DateTime.UtcNow,players=rows,readOnly=true}));
+   }catch(Exception e){c.ReplyToCommand(JsonSerializer.Serialize(new {error=e.GetBaseException().Message,readOnly=true}));}
+  });
+ }
+}

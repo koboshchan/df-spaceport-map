@@ -1,0 +1,11 @@
+This is a source-only collection of inactive Spaceport pipeline scripts. Each stage has its own directory. The provenance manifest records original byte hashes, relative source locations, exact-copy deduplication, exclusions and validation status. Original folders were read, never moved or deleted.
+
+Files ending in .in are deliberately unconfigured script templates. Machine-specific roots, private addresses and container identities are @@CONFIG_KEY@@ placeholders. config.example.json lists required settings without personal defaults. Copy it outside the repository and fill only the values needed by a reviewed script. Render individual templates with scripts/render_template.py. Rendering only writes source text, never executes it.
+
+This is not a newly tested end-to-end build command. Historical scripts still expect their original manifests, sibling scripts, source asset exports, native toolchains, project dependencies and working-directory layout. Rendering does not relocate these dependencies. Read each script and its provenance before adapting it. Do not point old scripts at a live build, server or client. No server/client or container commands were run while collecting this package.
+
+The newest active v269 foliage correction was deliberately excluded. The foliage templates are historical candidates, with the raw-GLB/Blender basis issue unresolved in this snapshot. They are not the corrected production foliage pipeline. Older material approximations are omitted rather than presented as proven DF shader recipes.
+
+The v268 two-part packaging source is retained together with its prepare-single dependency. Superseded v266/v267 installer wrappers were omitted. The installer reference includes the historical installer and its separately corrected watchdog; the original timeout/RCON recovery bug is not silently repaired or endorsed. These files are reference material, not a current deployment entrypoint. New outputs and staging belong on E; desktop client files belong on C.
+
+The collection passed Python compilation checks without executing scripts, XML parsing for project templates and a secret scan. C# compilation, native builds, extraction, visual parity and installation were not rerun. This collection does not change the rights to existing game assets or third-party libraries. No blanket asset license is implied.

@@ -1,0 +1,44 @@
+using System.Drawing;
+using System.Text.Json;
+using CounterStrikeSharp.API;
+using CounterStrikeSharp.API.Core;
+using CounterStrikeSharp.API.Modules.Cvars;
+using CounterStrikeSharp.API.Modules.Utils;
+public sealed class Safe7Marker : BasePlugin {
+ public override string ModuleName => "Private Safe7 Marker";
+ public override string ModuleVersion => "1.0.0";
+ public override string ModuleAuthor => "koboshchan";
+ const string Model="models/props/de_dust/hr_dust/dust_soccerball/dust_soccer_ball001.vmdl";
+ CDynamicProp? marker;
+ bool Allowed()=>ConVar.Find("hostport")?.GetPrimitiveValue<int>()==27016 && Server.MapName=="df_spaceport_kat_fast";
+ public override void Load(bool hotReload) {
+  RegisterListener<Listeners.OnServerPrecacheResources>(m=>m.AddResource(Model));
+  RegisterListener<Listeners.OnMapStart>(map=>AddTimer(2f,Spawn));
+  RegisterListener<Listeners.OnMapEnd>(()=>{marker=null;});
+  AddCommand("kat_safe7_status","Report private marker entity",(p,c)=>{if(p==null)c.ReplyToCommand(Status());});
+  AddCommand("kat_safe7_remove","Remove private marker",(p,c)=>{if(p==null){Clear();c.ReplyToCommand("marker removed");}});
+  AddCommand("kat_safe7_spawn","Create private marker",(p,c)=>{if(p==null){Spawn();c.ReplyToCommand(Status());}});
+ }
+ void Spawn() {
+  if(!Allowed() || marker is {IsValid:true})return;
+  var e=Utilities.CreateEntityByName<CDynamicProp>("prop_dynamic");
+  if(e is not {IsValid:true})throw new Exception("prop_dynamic allocation failed");
+  marker=e;e.Entity!.Name="kat_safe7_marker";e.SetModel(Model);
+  e.Collision.SolidType=SolidType_t.SOLID_NONE;e.TakesDamage=false;
+  e.Render=Color.Yellow;e.Glow.GlowColorOverride=Color.Yellow;e.Glow.GlowType=3;e.Glow.GlowRange=10000;e.Glow.Glowing=true;
+  e.DispatchSpawn();
+  e.Collision.SolidType=SolidType_t.SOLID_NONE;e.MoveType=MoveType_t.MOVETYPE_NONE;
+  if(e.CBodyComponent?.SceneNode is {} node)node.Scale=3f;
+  e.Teleport(new Vector(-196.56f,-767.88f,868.32f),new QAngle(0,0,0),new Vector(0,0,0));
+  Console.WriteLine("SAFE7 "+Status());
+ }
+ string Status() {
+  if(marker is not {IsValid:true} e)return "{\"valid\":false}";
+  var p=e.AbsOrigin;var v=e.AbsVelocity;
+  return JsonSerializer.Serialize(new { valid=e.IsValid,index=e.Index,handle=e.EntityHandle.Raw,name=e.Entity?.Name,designer=e.DesignerName,
+   model=e.CBodyComponent?.SceneNode?.GetSkeletonInstance().ModelState.ModelName,
+   x=p?.X,y=p?.Y,z=p?.Z,vx=v.X,vy=v.Y,vz=v.Z,solid=e.Collision.SolidType.ToString(),move=e.MoveType.ToString(),map=Server.MapName,port=ConVar.Find("hostport")?.GetPrimitiveValue<int>()});
+ }
+ void Clear(){if(marker is {IsValid:true})marker.Remove();marker=null;}
+ public override void Unload(bool hotReload)=>Clear();
+}

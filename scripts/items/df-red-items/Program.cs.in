@@ -1,0 +1,63 @@
+using CUE4Parse_Conversion.Options;
+using CUE4Parse.UE4.Assets.Exports.StaticMesh;
+using CUE4Parse.UE4.Assets.Exports.Engine;
+using System.Text.Json;
+using CUE4Parse.FileProvider;
+using CUE4Parse.UE4.Versions;
+using CUE4Parse.Encryption.Aes;
+using CUE4Parse.Compression;
+using CUE4Parse.UE4.Assets;
+using CUE4Parse.UE4.Assets.Exports.Material;
+using Serilog;
+Log.Logger=new LoggerConfiguration().MinimumLevel.Error().WriteTo.Console().CreateLogger();
+var root=@"@@DF_PATH_DF_EXTRACT_20261105@@";
+var output=@"@@DF_PATH_DF_RED_ITEMS@@";
+void Check(bool force=false){if(new DriveInfo("D").AvailableFreeSpace<2_000_000_000L)throw new Exception("D reserve");}
+OodleHelper.Initialize(Path.Combine(root,"tools","oodle-data-shared.dll"));
+
+using var kj=JsonDocument.Parse(File.ReadAllText(Path.Combine(root,"community-aes-keys.json")));
+var keys=kj.RootElement.GetProperty("Keys").EnumerateArray().GroupBy(x=>x.GetProperty("guid").GetString()).Select(g=>g.First()).ToDictionary(x=>x.GetProperty("guid").GetString()!.Replace("-","").ToUpperInvariant(),x=>x.GetProperty("key").GetString()!);
+keys["00000000000000000000000000000000"]=kj.RootElement.GetProperty("MainKey").GetString()!;
+using var p=new StreamedFileProvider("DeltaForce",new VersionContainer(EGame.GAME_DeltaForce),StringComparer.OrdinalIgnoreCase);p.Initialize();
+foreach(var pak in File.ReadAllLines(Path.Combine(root,"pak-paths.txt"))){Check();p.RegisterVfs(pak.Trim());}
+foreach(var r in p.UnloadedVfs.ToArray()){Check();var guid=r.EncryptionKeyGuid.ToString().Replace("-","").ToUpperInvariant();if(keys.TryGetValue(guid,out var key))p.SubmitKey(r.EncryptionKeyGuid,new FAesKey(key));}
+
+CUE4Parse.UE4.Assets.ObjectTypeRegistry.RegisterClass("VirtualMaterialInstanceConstant",typeof(CUE4Parse.GameTypes.DFHO.Assets.Exports.UVirtualMaterialInstanceConstant));
+
+
+
+
+
+File.WriteAllText(Path.Combine(output,"export.pid"),Environment.ProcessId.ToString());
+using var selection=JsonDocument.Parse(File.ReadAllText(Path.Combine(output,"selection.json")));
+var refs=selection.RootElement.EnumerateArray().Select(x=>x.GetProperty("mesh").GetString()!).Where(x=>x!="None").Distinct(StringComparer.OrdinalIgnoreCase).ToArray();
+var opt=new ExportOptions(meshFormat:EMeshFormat.Gltf2,meshQuality:EMeshQuality.Highest,exportMaterials:false,socketFormat:ESocketFormat.None,includeDisabledMeshSections:true);
+void Save(string rel,byte[] bytes){Check();var f=Path.Combine(output,rel);Directory.CreateDirectory(Path.GetDirectoryName(f)!);File.WriteAllBytes(f,bytes);}
+void J(string rel,object obj)=>Save(rel,System.Text.Encoding.UTF8.GetBytes(JsonSerializer.Serialize(obj)));
+int done=0,ok=0;var results=new List<object>();
+foreach(var asset in refs){
+try{
+var path=asset.Split('.')[0].Replace("/Game/","DeltaForce/Content/")+".uasset";
+var pkg=p.LoadPackage(path) as Package ?? throw new Exception("package missing");
+var mesh=pkg.ExportsLazy.Select(x=>x.Value).First(x=>x is UStaticMesh || x is USkinnedAsset);
+var name=mesh.Name;var stem="render/"+name;
+var matrefs=new List<string>();
+if(mesh is UStaticMesh sm){
+ matrefs.AddRange(sm.StaticMaterials.Select(x=>x.MaterialInterface?.ResolvedObject?.GetPathName()).Where(x=>x!=null)!);
+ using var dto=new CUE4Parse_Conversion.Dto.StaticMeshDto(sm,opt);
+ foreach(var f in new CUE4Parse_Conversion.Formats.Meshes.GltfMeshFormat().BuildStaticMesh(name,sm.GetPathName(),opt,dto))Save(stem+(f.NameSuffix??"")+"."+f.Extension,f.Data);
+}else if(mesh is USkinnedAsset sk){
+ matrefs.AddRange(sk.SkeletalMaterials.Select(x=>x.MaterialInterface?.ResolvedObject?.GetPathName()).Where(x=>x!=null)!);
+ using var dto=new CUE4Parse_Conversion.Dto.SkeletalMeshDto(sk,opt);
+ foreach(var f in new CUE4Parse_Conversion.Formats.Meshes.GltfMeshFormat().BuildSkeletalMesh(name,sk.GetPathName(),opt,dto))Save(stem+(f.NameSuffix??"")+"."+f.Extension,f.Data);
+}
+foreach(var m in matrefs.Distinct()){
+try{var mp=m.Split('.')[0].Replace("/Game/","DeltaForce/Content/");var mat=p.LoadPackage(mp+".uasset");Save("materials/"+Path.GetFileName(mp)+".json",System.Text.Encoding.UTF8.GetBytes(Newtonsoft.Json.JsonConvert.SerializeObject(mat.GetExports().ToArray())));}catch(Exception e){Console.WriteLine("MAT "+m+" "+e.Message);}}
+var glbs=Directory.GetFiles(Path.Combine(output,"render"),name+"*.glb");
+foreach(var f in glbs){var model=SharpGLTF.Schema2.ModelRoot.Load(f);if(model.LogicalMeshes.Count==0)throw new Exception("empty GLB");}
+results.Add(new{asset,status="ok",stem,materials=matrefs,glbs,collision=false});ok++;
+}catch(Exception e){results.Add(new{asset,status="error",error=e.ToString()});}
+done++;J("export-results.json",results);J("progress.json",new{done,ok,total=refs.Length,pid=Environment.ProcessId,time=DateTime.UtcNow});Console.WriteLine(done+"/"+refs.Length+" ok="+ok);
+if(done%10==0)GC.Collect();
+}
+J("export-complete.json",new{done,ok,total=refs.Length,time=DateTime.UtcNow});

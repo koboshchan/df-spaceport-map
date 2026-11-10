@@ -1,0 +1,67 @@
+
+from pathlib import Path
+import json,subprocess,hashlib,re,os,time,psutil,traceback
+import numpy as np
+from scipy.spatial import ConvexHull, distance
+R=Path('@@DF_PATH_DF_V268_STAGE_20261109@@');P=R/'proof';D=P/'native-readback';D.mkdir(exist_ok=True)
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def raw(s,key,last=False):
+ a=re.findall(r'\b'+key+r'\s*=\s*#\[(.*?)\]',s,re.S)
+ assert a,key
+ return bytes.fromhex(a[-1 if last else 0])
+try:
+ # Wait only for this verified batch wrapper. No compiler is started here.
+ try:
+  proc=psutil.Process(182560)
+  assert 'native-models.py' in ' '.join(proc.cmdline())
+  proc.wait()
+ except psutil.NoSuchProcess:pass
+ results=json.loads((P/'native-model-result.json').read_text())['results']
+ models=json.loads((P/'materialized-agggeom-models.json').read_text())['models']
+ tool=Path('@@DF_PATH_SPACEPORT_KAT_REBUILD_20261105@@/vrf/Source2Viewer-CLI.exe')
+ rows=[]
+ for m,rc in zip(models,results):
+  row={'model':m['newModel'],'instances':len(m['instances']),'status':'FAIL','tests':[]}
+  try:
+   assert rc['model']==m['newModel'] and rc['exit']==0
+   assert sha(Path(m['sourceJSON']))==m['sourceSHA256']
+   assert sha(R/'content/kat'/m['newModel'])==m['newVMDLSHA256']
+   f=R/'game/kat'/(m['newModel']+'_c');dump=D/(f.stem+'.txt')
+   with dump.open('w') as out:
+    code=subprocess.run([str(tool),'-i',str(f),'-a','-b','PHYS'],stdout=out,stderr=subprocess.STDOUT).returncode
+   assert code==0
+   s=dump.read_text(errors='replace')
+   chunks=re.split(r'\bm_Hull\s*=',s)[1:]
+   assert len(chunks)==len(m['hulls']),(len(chunks),len(m['hulls']))
+   assert re.search(r'm_meshes\s*=\s*\[\s*\]',s)
+   assert re.search(r'm_spheres\s*=\s*\[\s*\]',s)
+   assert re.search(r'm_capsules\s*=\s*\[\s*\]',s)
+   native=[]
+   for c in chunks:
+    v=np.frombuffer(raw(c,'m_VertexPositions'),dtype='<f4').reshape(-1,3).astype(float)
+    edges=raw(c,'m_Edges');faces=raw(c,'m_Faces')
+    planes=np.frombuffer(raw(c.split('m_VertexPositions',1)[1],'m_Planes'),dtype='<f4').reshape(-1,4).astype(float)
+    assert len(edges)%4==0
+    e=np.frombuffer(edges,dtype=np.uint8).reshape(-1,4)
+    assert len(v)-len(e)//2+len(faces)==2
+    assert all(int(e[int(x[1])][1])==i for i,x in enumerate(e))
+    native.append((v,planes,len(e),len(faces)))
+   remaining=set(range(len(native)))
+   for h in m['hulls']:
+    expected=np.array(h['nativeExpectedVertices'],float);hull=ConvexHull(expected);expected=expected[hull.vertices]
+    pick=min(remaining,key=lambda i: max(distance.cdist(expected,native[i][0]).min(0).max(),distance.cdist(expected,native[i][0]).min(1).max()))
+    v,planes,ne,nf=native[pick];remaining.remove(pick)
+    err=max(distance.cdist(expected,v).min(0).max(),distance.cdist(expected,v).min(1).max())
+    tol=0.0001+np.max(np.abs(expected))*0.000002
+    residual=float(np.max(expected@planes[:,:3].T-planes[:,3]))
+    supporting=float(np.max(np.abs(np.max(expected@planes[:,:3].T,axis=0)-planes[:,3])))
+    assert np.isfinite(v).all() and np.isfinite(planes).all()
+    assert err<=tol and residual<=tol and supporting<=tol,(err,residual,supporting,tol)
+    row['tests'].append({'type':h['type'],'sourceIndex':h['index'],'nativeHull':pick,'expectedExtremeVertices':len(expected),'actualVertices':len(v),'hausdorff':float(err),'maxPlaneSupportError':supporting,'maxContainmentResidual':residual,'tolerance':float(tol),'halfedges':ne,'faces':nf})
+   assert not remaining
+   row.update(status='LOCAL_GEOMETRY_PASS_AFFINE_PENDING',modelSHA256=sha(f),dumpSHA256=sha(dump),sourceSHA256=m['sourceSHA256'],primitiveUnionCount=len(chunks))
+  except:row['error']=traceback.format_exc()
+  rows.append(row)
+  (P/'native-local-geometry-progress.json').write_text(json.dumps({'models':len(rows),'total':len(models),'rows':rows}))
+ (P/'native-local-geometry-result.json').write_text(json.dumps({'toolSHA256':sha(tool),'rows':rows,'localPass':sum(x['status'].startswith('LOCAL_GEOMETRY_PASS') for x in rows),'fail':sum(x['status']=='FAIL' for x in rows),'affineValidated':0,'applied':0,'sphereExcluded':True,'note':'Local model shape proof only. Placement affine proof mandatory before VMAP patch. Two materializer exclusions unchanged.'}))
+except:(P/'native-local-geometry-error.txt').write_text(traceback.format_exc());raise

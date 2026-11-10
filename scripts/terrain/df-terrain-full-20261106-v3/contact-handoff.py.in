@@ -1,0 +1,18 @@
+from pathlib import Path
+import numpy as np,json,hashlib,collections
+from terrain_query import Terrain
+P=Path(__file__).parent;O=P/'next-build';T=Terrain(P);G=P/'ground-all85';proof=json.loads((G/'ground-vertices/manifest.json').read_text());groups={};flags=[];nc=collections.Counter()
+def metrics(a):
+ a=np.concatenate(a) if isinstance(a,list) else a
+ return dict(count=len(a),minimum=float(a.min()),p05=float(np.percentile(a,5)),p50=float(np.percentile(a,50)),p95=float(np.percentile(a,95)),p99=float(np.percentile(a,99)),maximum=float(a.max()),belowMinus1=int(sum(a< -1)),withinPlusMinus1=int(sum(abs(a)<=1)),abovePlus1=int(sum(a>1)))
+for r in proof['objects']:
+ d=np.load(G/'ground-vertices'/f"{r['index']}.npz");v=d['vertices'];c=d['triangleCentroids'];z,k,ids=T.world(v);zc,kc,ic=T.world(c);good=np.isfinite(z);gc=np.isfinite(zc);gap=v[:,2]-z;cg=c[:,2]-zc
+ bins=np.floor(v[:,:2]/18).astype(np.int64);order=np.lexsort((v[:,2],bins[:,1],bins[:,0]));b=bins[order];foot=order[np.r_[True,np.any(b[1:]!=b[:-1],axis=1)]];foot=foot[good[foot]]
+ classes=[r['type'],'all'];nc[r['type']]+=1
+ if 'Asphalt_Mesh_'in r['meshObjectPath'] and 'Decal'not in r['meshObjectPath']:classes+=['asphalt16']
+ for cl in classes:
+  a=groups.setdefault(cl,dict(objects=0,vertices=[],centroids=[],lowerEnvelope=[],unsupportedVertices=0,unsupportedCentroids=0))
+  a['objects']+=1;a['vertices'].append(gap[good]);a['centroids'].append(cg[gc]);a['lowerEnvelope'].append(gap[foot]);a['unsupportedVertices']+=int(sum(~good));a['unsupportedCentroids']+=int(sum(~gc))
+ flags.append(dict(index=r['index'],sourceClass=r['type'],meshObjectPath=r['meshObjectPath'],unsupportedVertices=int(sum(~good)),unsupportedCentroids=int(sum(~gc)),lowerEnvelope=metrics(gap[foot]),centroids=metrics(cg[gc]),status='MEASURED_NOT_CONTACT_CERTIFIED',diagnosticFlags=dict(penetrationOver1CS=bool(np.any(gap[foot]< -1)),elevationOver1CS=bool(np.any(gap[foot]>1)),unsupported=bool(np.any(~good)|np.any(~gc)))))
+out=dict(status='CHECKS_EXECUTED_MEASURED_CONTACT_NOT_CERTIFIED',scope='All67 road/ground and18 prop/rock/street-class placements selected by pivot inside681coarse slots; actual geometry vertices+triangle centroids tested. Not all object classes or all map contacts.',metric='Signed vertical clearance CS units, sourcePoint.z minus staged triangle-surface z; NOT nearest Euclidean support distance. Lower envelope selects actual lowest vertex in each50UEcm XY bin. +-1CS flags are diagnostic only, not acceptance criteria.',groups={cl:dict(objects=a['objects'],unsupportedVertices=a['unsupportedVertices'],unsupportedCentroids=a['unsupportedCentroids'],vertices=metrics(a['vertices']),centroids=metrics(a['centroids']),lowerEnvelope=metrics(a['lowerEnvelope'])) for cl,a in groups.items()},flagCounts={n:sum(r['diagnosticFlags'][n]for r in flags)for n in ['penetrationOver1CS','elevationOver1CS','unsupported']},objects=flags,existingRoadsPropsChanged=False,integrationStatus='STAGE_APPROVED_NOT_SAFE_INTEGRATION_APPROVAL; mixed seam/fine hole decisions unresolved',inputs={str(O/n):hashlib.sha256((O/n).read_bytes()).hexdigest()for n in ['integration-manifest.json','ground-all85-qa.json','native-triangle-qa.json','native-PHYS-sizes.json','qa.json']})
+f=O/'contact-handoff-summary.json';f.write_text(json.dumps(out,indent=2));print(json.dumps(dict(path=str(f),sha256=hashlib.sha256(f.read_bytes()).hexdigest(),groups=out['groups'],flagCounts=out['flagCounts']),indent=2))

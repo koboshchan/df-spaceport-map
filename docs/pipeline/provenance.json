@@ -1,0 +1,2403 @@
+{
+  "policy": "Copy-only stable inactive script snapshots. No source folder modification. No assets, keys, binaries, active v269/v270 build outputs or runtime inspection.",
+  "files": [
+    {
+      "destination": "scripts/surface-audits/df-door-glass-proof-20261109/prepare-assets.py.in",
+      "source": "df-door-glass-proof-20261109/prepare-assets.py",
+      "source_sha256": "795ff6b3ba37ac5a8bbbcde2fe2c0b6a32957d1fc5b272ab3605e7ab59bc1b68",
+      "copied_template_sha256": "5119973a0abdbe8fa7f7e54ad4f9db8c8f258b55c6bf76c7adbc08815feff8b7",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_DOOR_GLASS_PROOF_20261109",
+        "DF_PATH_DF_DOOR_PROOF_20261109",
+        "DF_PATH_PROGRAM_FILES_X86_STEAM_STEAMAPPS_COMMON_COUNTER_STRIKE_GLOBAL_OFFENSIVE"
+      ]
+    },
+    {
+      "destination": "scripts/install-reference/df-v268-twopart-20261109/install-window/corrected-guard.py.in",
+      "source": "df-v268-twopart-20261109/install-window/corrected-guard.py",
+      "source_sha256": "7c40b70473db39ea23caee7f053b9fefb96cbf4470610cc1fbd4c9d964c838b0",
+      "copied_template_sha256": "1d169bd083758aff3a62d20b5f22fa9d597d687bb4a9171e2241d00268aa2537",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "historical-installer-original-timeout-RCON-recovery-bug-read-corrected-guard-not-deployable",
+      "config_keys": [
+        "DF_PATH_CS2_SPACEPORT_PRIVATE",
+        "DF_PATH_DF_V268_TWOPART_20261109",
+        "DF_PRIVATE_CONTAINER_ID"
+      ]
+    },
+    {
+      "destination": "scripts/install-reference/df-v268-twopart-20261109/install-window/install.py.in",
+      "source": "df-v268-twopart-20261109/install-window/install.py",
+      "source_sha256": "690ead244fd0c8c32c54bc9a717ccf2ee3e5aabf39bd7ac3f7a22168939e60ec",
+      "copied_template_sha256": "04fffcc69c6dc42236e2c53b29c5212ff1d712508db645d5beefab760554f3d7",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "historical-installer-original-timeout-RCON-recovery-bug-read-corrected-guard-not-deployable",
+      "config_keys": [
+        "DF_DRIVE_C",
+        "DF_PATH_CS2_SPACEPORT_PRIVATE",
+        "DF_PATH_DF_V267_REPAIR_20261109",
+        "DF_PATH_DF_V268_TWOPART_20261109",
+        "DF_PATH_PROGRAM_FILES_X86_STEAM_STEAMAPPS_COMMON_COUNTER_STRIKE_GLOBAL_OFFENSIVE",
+        "DF_PRIVATE_CONTAINER_ID",
+        "DF_PRIVATE_IP"
+      ]
+    },
+    {
+      "destination": "scripts/install-reference/df-v268-twopart-20261109/proof/backup-install.py.in",
+      "source": "df-v268-twopart-20261109/proof/backup-install.py",
+      "source_sha256": "fa97e88aa354a253ec5c7e9774eb659bf890d5fd9cd4076619224f545c4054c8",
+      "copied_template_sha256": "3571d94dfe22d5ff007ff74aa38a0bc0e020084ab1580ececf7d9c37b8732a1f",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "historical-installer-original-timeout-RCON-recovery-bug-read-corrected-guard-not-deployable",
+      "config_keys": [
+        "DF_DRIVE_E",
+        "DF_PATH_CS2_SPACEPORT_PRIVATE",
+        "DF_PATH_DF_V267_REPAIR_20261109",
+        "DF_PATH_DF_V268_TWOPART_20261109",
+        "DF_PRIVATE_CONTAINER_ID"
+      ]
+    },
+    {
+      "destination": "scripts/qa/df-v268-twopart-20261109/proof/qa-twopart.py.in",
+      "source": "df-v268-twopart-20261109/proof/qa-twopart.py",
+      "source_sha256": "f00a6758df8bfbfb21abb2f552d2a80ff75fbd2ea1d80c1317e2df7313900588",
+      "copied_template_sha256": "b1c17c5386d419258b2d9ada2ad02dfd0ae1fcf50f4b55c9b2af439bb48738c4",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V267_BUILD_20261109",
+        "DF_PATH_DF_V268_TWOPART_20261109",
+        "DF_PATH_SPACEPORT_KAT_REBUILD_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/packaging/df-v268-twopart-20261109/proof/compile-world.py.in",
+      "source": "df-v268-twopart-20261109/proof/compile-world.py",
+      "source_sha256": "06c829fbca03ef27d155431d14b5fe3fe601d29d02c1b3ad6c0cc4d8754e2e73",
+      "copied_template_sha256": "7e99cd6c4138bc6025f6d7e01549fb7f553f9b333dc86d34641fe8e57b978cd9",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V262_BUILD_20261107",
+        "DF_PATH_DF_V263_STAGE_20261107",
+        "DF_PATH_DF_V268_TWOPART_20261109",
+        "DF_PATH_PROGRAM_FILES_X86_STEAM_STEAMAPPS_COMMON_COUNTER_STRIKE_GLOBAL_OFFENSIVE"
+      ]
+    },
+    {
+      "destination": "scripts/packaging/df-v268-twopart-20261109/proof/prepare-twopart.py.in",
+      "source": "df-v268-twopart-20261109/proof/prepare-twopart.py",
+      "source_sha256": "f663d5213453dfd0f14dd4c753ad49caecd74b469a5ddde4b08c6ac96b476ceb",
+      "copied_template_sha256": "01a8f7118cf1be0511d4445769d885fb59e2c89b112167d3b5829c7082f27fe7",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_DRIVE_E",
+        "DF_PATH_DF_V268_SINGLEMAP_20261109",
+        "DF_PATH_DF_V268_STAGE_20261109",
+        "DF_PATH_DF_V268_TWOPART_20261109",
+        "DF_USER_HOME"
+      ]
+    },
+    {
+      "destination": "scripts/packaging/df-v268-twopart-20261109/proof/prepare-with-roof-fix-preserved.py.in",
+      "source": "df-v268-twopart-20261109/proof/prepare-with-roof-fix-preserved.py",
+      "source_sha256": "cb8cec037dee1bad29db1e90e0acb994c6319ee04bb426e1e28383086043e187",
+      "copied_template_sha256": "e4f6384989531f1f8ce712a5924a0b25d394342c15b5a952bdefbfad3ebc6553",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_DRIVE_E",
+        "DF_PATH_DF_V268_SINGLEMAP_20261109",
+        "DF_PATH_DF_V268_STAGE_20261109",
+        "DF_PATH_DF_V268_TWOPART_20261109",
+        "DF_USER_HOME"
+      ]
+    },
+    {
+      "destination": "scripts/packaging/df-v268-twopart-20261109/proof/finish-twopart.py.in",
+      "source": "df-v268-twopart-20261109/proof/finish-twopart.py",
+      "source_sha256": "6938464c2b20ea4f70a268f1d229eba4dfa382ccc924b21a7ac003376a928a21",
+      "copied_template_sha256": "0a294885b5e04663403d9cf72ececb05e443c22c4aee22ed968f04ae76ba66d5",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V268_TWOPART_20261109",
+        "DF_USER_HOME"
+      ]
+    },
+    {
+      "destination": "scripts/packaging/df-v268-singlemap-20261109/proof/scope-single.py.in",
+      "source": "df-v268-singlemap-20261109/proof/scope-single.py",
+      "source_sha256": "3033d30837dbdc0de586088216c83c83fdb6a86e0efba79ddd669c85612b5893",
+      "copied_template_sha256": "520287a7587d7a598f73a97c53044966cadf83194fa746c8969964e14989c4de",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V267_BUILD_20261109",
+        "DF_PATH_DF_V268_SINGLEMAP_20261109",
+        "DF_PATH_SPACEPORT_KAT_REBUILD_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/packaging/df-v268-singlemap-20261109/proof/prepare-single.py.in",
+      "source": "df-v268-singlemap-20261109/proof/prepare-single.py",
+      "source_sha256": "f6b084eccda50a50d2851081afbbfe8506dd645c1197d8d5ba3b5251ce7fbfd4",
+      "copied_template_sha256": "6f954e67104560e3df0570d9116103779db87b323aad51d6644c143b999f6d1c",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_DRIVE_E",
+        "DF_PATH_DF_V268_SHARED_STAGE_20261109",
+        "DF_PATH_DF_V268_SINGLEMAP_20261109",
+        "DF_USER_HOME"
+      ]
+    },
+    {
+      "destination": "scripts/packaging/df-v268-stage-20261109/proof/compile-world.py.in",
+      "source": "df-v268-stage-20261109/proof/compile-world.py",
+      "source_sha256": "a92b7f73e1a816c001e7e196aebc6f587c61f6f40ab287015022f3efbfe6c2cf",
+      "copied_template_sha256": "65420db375802d7379a77f191fbd1546b81cbda6a5abe14da893a7ed94628d14",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V262_BUILD_20261107",
+        "DF_PATH_DF_V263_STAGE_20261107",
+        "DF_PATH_DF_V268_STAGE_20261109",
+        "DF_PATH_PROGRAM_FILES_X86_STEAM_STEAMAPPS_COMMON_COUNTER_STRIKE_GLOBAL_OFFENSIVE"
+      ]
+    },
+    {
+      "destination": "scripts/qa/df-v268-stage-20261109/proof/validate-native.py.in",
+      "source": "df-v268-stage-20261109/proof/validate-native.py",
+      "source_sha256": "81bbd1436a0dd9d6dad71671f1f1a44a1c6f88a52c0d3b3ce6f7f12c179efffa",
+      "copied_template_sha256": "bc01d21f02c25def8c54deabf20f4a7f7ee553c6595684b985c8f17eeea5c9af",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V268_STAGE_20261109",
+        "DF_PATH_SPACEPORT_KAT_REBUILD_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/packaging/df-v268-stage-20261109/proof/native-models.py.in",
+      "source": "df-v268-stage-20261109/proof/native-models.py",
+      "source_sha256": "fb5d7b279179beb80a4746c4f985b160b8af66a9d3d50df4e4a46500b68e05de",
+      "copied_template_sha256": "a3bd7c190c81bdb620877d37472b5267566a3731dcb2efd0598c59d79eac0a12",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_DRIVE_E",
+        "DF_PATH_DF_V25_BUILD_20261106",
+        "DF_PATH_DF_V267_BUILD_20261109",
+        "DF_PATH_DF_V268_NATIVE_SHAPE_PROOF_20261109",
+        "DF_PATH_DF_V268_STAGE_20261109",
+        "DF_PATH_PROGRAM_FILES_X86_STEAM_STEAMAPPS_COMMON_COUNTER_STRIKE_GLOBAL_OFFENSIVE"
+      ]
+    },
+    {
+      "destination": "scripts/packaging/df-v268-stage-20261109/proof/materialize-models.py.in",
+      "source": "df-v268-stage-20261109/proof/materialize-models.py",
+      "source_sha256": "dd2a1b6f7ccbb85b33191090589f674252ec63c45f643dcc040eea154abf7980",
+      "copied_template_sha256": "e51ce9b912c311831b18445bd73075771786dc9a6f24711ecc5905d00db2696a",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V25_BUILD_20261106",
+        "DF_PATH_DF_V268_SOURCE_COVERAGE_20261109",
+        "DF_PATH_DF_V268_STAGE_20261109"
+      ]
+    },
+    {
+      "destination": "scripts/plugins/df-v267-repair-20261109/PrivateDefaultSpawn.csproj.in",
+      "source": "df-v267-repair-20261109/PrivateDefaultSpawn.csproj",
+      "source_sha256": "ebeb98e7dbd6ac2fbf509e80914d3e407b70fb48f72d41b6c1e7e40bec756223",
+      "copied_template_sha256": "375ca76120b806dd0b21c9745bd53b8f55c658a1deb379112696f4e40de1d8d7",
+      "also_observed": [],
+      "validation": "xml-parse-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_CS2_SPACEPORT_PRIVATE"
+      ]
+    },
+    {
+      "destination": "scripts/plugins/df-v267-repair-20261109/Plugin.cs.in",
+      "source": "df-v267-repair-20261109/Plugin.cs",
+      "source_sha256": "2fddb6d3181ffa4373d0a030efb65e48c6c951e6a5ab801ff4fd794bc94757f6",
+      "copied_template_sha256": "cd8746818d2a711109a7733cb304410c46bbd2b30561388cf53ca4a7ed21934e",
+      "also_observed": [],
+      "validation": "text-template",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/radar/df-radar-20261109/Program.cs.in",
+      "source": "df-radar-20261109/Program.cs",
+      "source_sha256": "dfad6d34cdd032f372fcafa46130f1275c70881e73923559cd935a397358bf3a",
+      "copied_template_sha256": "c03dc57e8ddfe726322d887d68fb41a33f546bdb10a810bc45be7b6bbc0bcb82",
+      "also_observed": [],
+      "validation": "text-template",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_DF_RADAR_20261109"
+      ]
+    },
+    {
+      "destination": "scripts/radar/df-radar-20261109/Radar.csproj.in",
+      "source": "df-radar-20261109/Radar.csproj",
+      "source_sha256": "af100e6049239df1d3308711d2691a445f22dfcfb66fef8659d81d57261f58df",
+      "copied_template_sha256": "c14193ed6558be4e2a1bea94fde3253c82915ddfb45dbf7db1de2a32cb656712",
+      "also_observed": [
+        "df-red-items/texture-worker/Textures.csproj",
+        "df-red-items/RedItems.csproj"
+      ],
+      "validation": "xml-parse-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/orchestration/df-v266-native-spawn-fix-20261109/entity-repack-tool/Program.cs.in",
+      "source": "df-v266-native-spawn-fix-20261109/entity-repack-tool/Program.cs",
+      "source_sha256": "c86e4b3b4cf3c075d670fdc7565461b1dad057a5b120f57ccb67f7ba3d3c6dfe",
+      "copied_template_sha256": "726686c5db51deb6ac61b9d49e5ac2a1b0bcd63cc2cb0c06cd99f61a97620ef9",
+      "also_observed": [],
+      "validation": "text-template",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/foliage/df-foliage-20261108/inventory/aggregate.py.in",
+      "source": "df-foliage-20261108/inventory/aggregate.py",
+      "source_sha256": "665309c43beb6974f47aa84cd94f8f8c6afcf2beeabaa07e67372460efd7e58d",
+      "copied_template_sha256": "20a249707986bb3de04c0069064cb15f1455235936f78abcd6b133b8fedf251b",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "historical-candidate-basis-known-suspect-do-not-use-for-current-foliage",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_DF_FOLIAGE_20261108"
+      ]
+    },
+    {
+      "destination": "scripts/foliage/df-foliage-20261108/inventory/finalize.py.in",
+      "source": "df-foliage-20261108/inventory/finalize.py",
+      "source_sha256": "04573cc071debc0a6baf857660895bfd5fe86a630ea610caaf45eb58ce4455d9",
+      "copied_template_sha256": "2cfe69b26b67318ca91cca7522780397dd5e940f4ac887bdc93b206c7e00c645",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "historical-candidate-basis-known-suspect-do-not-use-for-current-foliage",
+      "config_keys": [
+        "DF_PATH_DF_FOLIAGE_20261108"
+      ]
+    },
+    {
+      "destination": "scripts/items/df-red-items/finish-textured.py.in",
+      "source": "df-red-items/finish-textured.py",
+      "source_sha256": "294be2225edc1d95be60403b1efd1caebe93bad0e308dbb1a87da3e4def1ec9d",
+      "copied_template_sha256": "c658606991a7c13cb185110ac3849d8628e53528b06300d2ced2c03b7b68bd09",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_RED_ITEMS",
+        "DF_PATH_WINDOWS"
+      ]
+    },
+    {
+      "destination": "scripts/items/df-red-items/textured.py.in",
+      "source": "df-red-items/textured.py",
+      "source_sha256": "64cc68f9cd55bca2cd8bfa1f0451cc6e2a7eaaf7492092508e8aaab7930eac49",
+      "copied_template_sha256": "5ef3ada729b70a371000526a1e045ebf99081b54bae7fc058aea02da7c95a40c",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_RED_ITEMS",
+        "DF_PATH_WINDOWS"
+      ]
+    },
+    {
+      "destination": "scripts/foliage/df-foliage-20261108/inventory/Program.cs.in",
+      "source": "df-foliage-20261108/inventory/Program.cs",
+      "source_sha256": "eaa1df7bf541440f7470adc378504e692afffb47d66b7fd1e0739e4d393f3222",
+      "copied_template_sha256": "66dcef3b9af0fd0f0b088212281734edd60308944184761ef09057834a0e4c44",
+      "also_observed": [],
+      "validation": "text-template",
+      "status": "historical-candidate-basis-known-suspect-do-not-use-for-current-foliage",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_DF_FOLIAGE_20261108"
+      ]
+    },
+    {
+      "destination": "scripts/foliage/df-foliage-20261108/inventory/Inventory.csproj.in",
+      "source": "df-foliage-20261108/inventory/Inventory.csproj",
+      "source_sha256": "9c1075965d8dfee9863f6fc234e8c26adb826fac1f09276595f84b5e3cd5de34",
+      "copied_template_sha256": "35dc191fe10cf53c7a5f6def8806c746c8e8fcedb8a901f8e2753ce6335b373a",
+      "also_observed": [
+        "df-foliage-20261108/Probe.csproj"
+      ],
+      "validation": "xml-parse-pass",
+      "status": "historical-candidate-basis-known-suspect-do-not-use-for-current-foliage",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/items/df-red-items/manifest.py.in",
+      "source": "df-red-items/manifest.py",
+      "source_sha256": "9df4de5459c12bb8687b135b1e78bd01c5bdcd10847fb95fc5d0bab81786a5c0",
+      "copied_template_sha256": "28e0c35eb06ad42a0cd164655682cad43b8f03e8e057f535c926d7ae20f73a0b",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_RED_ITEMS"
+      ]
+    },
+    {
+      "destination": "scripts/items/df-red-items/contact.py.in",
+      "source": "df-red-items/contact.py",
+      "source_sha256": "5a8643686f35adab921d8b6b4909223fc262bb272ffe37c3e891508eb6b7b321",
+      "copied_template_sha256": "00d7b9eaa4b7ab99d5324b90b4438b24d9ef36c479f496e0bc1e3776c0694021",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_RED_ITEMS",
+        "DF_PATH_WINDOWS"
+      ]
+    },
+    {
+      "destination": "scripts/items/df-red-items/texture-worker/Program.cs.in",
+      "source": "df-red-items/texture-worker/Program.cs",
+      "source_sha256": "38e4d0919d790a8e474484fee7a894f39d704f0532dc3868d2d136e6c0786d09",
+      "copied_template_sha256": "1da292f72d4618871dbc007110bc1aa047538bc8477d3a9934e8cf2e5d1b7388",
+      "also_observed": [],
+      "validation": "text-template",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_DF_RED_ITEMS"
+      ]
+    },
+    {
+      "destination": "scripts/items/df-red-items/Program.cs.in",
+      "source": "df-red-items/Program.cs",
+      "source_sha256": "39e4d79e29704c169e9948191f92dad209c930a2e811df23d3be10d359de3028",
+      "copied_template_sha256": "dfce60dfd39360cba97eaebb88bc12dba549e61def72c870e17016a075cea0a5",
+      "also_observed": [],
+      "validation": "text-template",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_DF_RED_ITEMS"
+      ]
+    },
+    {
+      "destination": "scripts/foliage/df-foliage-20261108/preview_extract.py.in",
+      "source": "df-foliage-20261108/preview_extract.py",
+      "source_sha256": "d90b0c22a81778c98d03da01a5c30c90142bfe9587ddf62f4770af4a7f622a92",
+      "copied_template_sha256": "af1e5e3192a415e7db658308b6f9ce6d8b9998cdb7ca7259c8ce46e693ef901b",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "historical-candidate-basis-known-suspect-do-not-use-for-current-foliage",
+      "config_keys": [
+        "DF_PATH_DF_FOLIAGE_20261108",
+        "DF_PATH_DF_V266_R3_STAGE_20261108"
+      ]
+    },
+    {
+      "destination": "scripts/foliage/df-foliage-20261108/decode-native.py.in",
+      "source": "df-foliage-20261108/decode-native.py",
+      "source_sha256": "65fdb906ebaea41c345c244158841ea0a502c2cda4a14ec4b3b188d2aaef320a",
+      "copied_template_sha256": "7de4ece7e09912aad2ea12197ef068e9d690c58e4d6f64405039a6642aa7ec68",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "historical-candidate-basis-known-suspect-do-not-use-for-current-foliage",
+      "config_keys": [
+        "DF_PATH_DF_FOLIAGE_20261108"
+      ]
+    },
+    {
+      "destination": "scripts/foliage/df-foliage-20261108/worker.py.in",
+      "source": "df-foliage-20261108/worker.py",
+      "source_sha256": "6e32faed1d1fd6596ad33b805a3eb0d7007d2e5d62a1408d57112037fd5b3714",
+      "copied_template_sha256": "12a6fac5b7dccee0259ee1badee3619f335ffa0adab6f18386468a8a818fc572",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "historical-candidate-basis-known-suspect-do-not-use-for-current-foliage",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/foliage/df-foliage-20261108/Program.cs.in",
+      "source": "df-foliage-20261108/Program.cs",
+      "source_sha256": "b642fc3398c8891d758aba41bd6fa41c903351207a22ddb25613a1a3a4947466",
+      "copied_template_sha256": "2d50e14e450d6214bc995db1842f735875baab406b9df3354a3f308e95072da2",
+      "also_observed": [],
+      "validation": "text-template",
+      "status": "historical-candidate-basis-known-suspect-do-not-use-for-current-foliage",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_DF_FOLIAGE_20261108"
+      ]
+    },
+    {
+      "destination": "scripts/surface-audits/df-v267-beam-readonly-20261109/audit.py.in",
+      "source": "df-v267-beam-readonly-20261109/audit.py",
+      "source_sha256": "d8d046bfabec0a9e158f4bfba72d5cf80f821973770da88a832cee852ca25239",
+      "copied_template_sha256": "afeaa7bd263a0a14395765f2f5b46fc696c79c95bb0fce719b8016becd9d0f32",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V25_BUILD_20261106",
+        "DF_PATH_DF_V267_BEAM_READONLY_20261109"
+      ]
+    },
+    {
+      "destination": "scripts/surface-audits/df-v267-water-readonly-20261109/second-basin-audit.py.in",
+      "source": "df-v267-water-readonly-20261109/second-basin-audit.py",
+      "source_sha256": "744a8fe154a635b81a9d83b5170da9a62226774e3bd5166b83f3eae95cd8cd6d",
+      "copied_template_sha256": "c6fc771760654a9b955e28ec10bf1a9c652f861394f47dba905c35a7e278b1d7",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V25_BUILD_20261106",
+        "DF_PATH_DF_V267_WATER_READONLY_20261109"
+      ]
+    },
+    {
+      "destination": "scripts/surface-audits/df-v267-water-readonly-20261109/audit.py.in",
+      "source": "df-v267-water-readonly-20261109/audit.py",
+      "source_sha256": "274ea5c8a52c38dc9225d297af0563e37d00d9f88d4017a56502e277914451e9",
+      "copied_template_sha256": "d8054493fc1f39c1abc188415a88aad221ed0a76b7f0cd46c296e075b7d3c27c",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V25_BUILD_20261106",
+        "DF_PATH_DF_V267_WATER_READONLY_20261109"
+      ]
+    },
+    {
+      "destination": "scripts/surface-audits/df-v267-banner-readonly-20261109/audit.py.in",
+      "source": "df-v267-banner-readonly-20261109/audit.py",
+      "source_sha256": "422f821cbcd33b52eeabfed6e1ec085c16f660179b0fe05d8214ea9f3ff04d87",
+      "copied_template_sha256": "44f62f437b95fc3e9abce4d3c6e50b11dec8e0bcc6a89a8989bc5ca8cbad5f04",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_DF_V25_BUILD_20261106",
+        "DF_PATH_DF_V267_BANNER_READONLY_20261109"
+      ]
+    },
+    {
+      "destination": "scripts/skeletal/df-extract-20261105/loot-skeletal/material-cloth-readiness/dumpster-explainer.py.in",
+      "source": "df-extract-20261105/loot-skeletal/material-cloth-readiness/dumpster-explainer.py",
+      "source_sha256": "39341ad718078f6db3556c1067ffb0218ec764821fc7ba940d9c53809fb09c89",
+      "copied_template_sha256": "0921d93fe0c3e1a1b73d90522db49fe84ad97d24cce48689d5cb7954914dc587",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/orchestration/df-v26-build-20261106/orchestrator/central-vis-final.py.in",
+      "source": "df-v26-build-20261106/orchestrator/central-vis-final.py",
+      "source_sha256": "97ea9433189156745aa05c4b0dddb5a5e61a4ed36dc484d9637d9ed35992291f",
+      "copied_template_sha256": "bb35f096d4a6f54961eb710af3863d389d188be08bc1c4c736e76e01361b870a",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_CS2_SPACEPORT_PRIVATE",
+        "DF_PATH_DF_V26_BUILD_20261106",
+        "DF_PATH_SPACEPORT_KAT_REBUILD_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/qa/df-v26-build-20261106/orchestrator/central-payload-audit.py.in",
+      "source": "df-v26-build-20261106/orchestrator/central-payload-audit.py",
+      "source_sha256": "9475020ff3d374ae85ce4e3f91fd3ceaa0edfb05958ecb386fa1d4ae4dd35ff5",
+      "copied_template_sha256": "fc5ed7235e6f7f1129b45c898d0524e04e919869531541f55b155c6bdbaf3398",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V25_BUILD_20261106",
+        "DF_PATH_DF_V26_BUILD_20261106",
+        "DF_PATH_SPACEPORT_KAT_REBUILD_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/qa/df-v26-build-20261106/orchestrator/central-packqa-17052918.py.in",
+      "source": "df-v26-build-20261106/orchestrator/central-packqa-17052918.py",
+      "source_sha256": "52b95fceae2c1e22ecf4816ab7272b137b880879a2a22f99faec597ae34927ed",
+      "copied_template_sha256": "a90c3595a31c7b8ce22971760536c059ca653db68a527190ae9d3c9c8b392c0c",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V26_BUILD_20261106",
+        "DF_PATH_SPACEPORT_KAT_REBUILD_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/orchestration/df-v26-build-20261106/orchestrator/central-full-17052918.py.in",
+      "source": "df-v26-build-20261106/orchestrator/central-full-17052918.py",
+      "source_sha256": "af6f9424453196f5874b7774257f0ac71610ec821d0fd5688dbccd917c51ca51",
+      "copied_template_sha256": "2d181158abae79afb2f0cd21791089e7970ccea7cd20e56623abd8acd330d161",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_NATIVE_COMPILER_EXCLUSIVE_LEASE_JSON",
+        "DF_PATH_DF_V25_BUILD_20261106",
+        "DF_PATH_DF_V26_BUILD_20261106",
+        "DF_PATH_SPACEPORT_KAT_REBUILD_20261105",
+        "DF_PATH_STEAMLIBRARY"
+      ]
+    },
+    {
+      "destination": "scripts/orchestration/df-v26-build-20261106/orchestrator/central-integ-17052918.py.in",
+      "source": "df-v26-build-20261106/orchestrator/central-integ-17052918.py",
+      "source_sha256": "34410f18ae92fe4df8e211b4642f5c9308315c9050cc6ef031f3a9a5218d005e",
+      "copied_template_sha256": "64f74a8df6ca3beee9e2ed6304fae68f67126bd1e710dc4f90e2d9039326cac5",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V25_BUILD_20261106",
+        "DF_PATH_DF_V26_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/orchestration/df-v26-build-20261106/orchestrator/central-prep-17052918.py.in",
+      "source": "df-v26-build-20261106/orchestrator/central-prep-17052918.py",
+      "source_sha256": "8ea7682686cdc64845b845c38953d90502e47a457609538ef3c9b1a1bb4a60b6",
+      "copied_template_sha256": "5765be37da293ad7e574b0c0ab1c6d0bfe7f2789d07014a809d122576b84ea7a",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_TERRAIN_FULL_20261106_V3",
+        "DF_PATH_DF_V26_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/orchestration/df-v26-build-20261106/orchestrator/central-stage-17052918.py.in",
+      "source": "df-v26-build-20261106/orchestrator/central-stage-17052918.py",
+      "source_sha256": "1a7afe9d6e96360bc89ead6e887daae82d1b2362ac01df8f7963e0abb7d78c42",
+      "copied_template_sha256": "a1eacf25c7a5ba853320fe706049e7ebd51cf7ad32bd20730c0a767a4ddff9c5",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V25_BUILD_20261106",
+        "DF_PATH_DF_V26_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/ropes/df-zipline-readonly-20261106/investigate.py.in",
+      "source": "df-zipline-readonly-20261106/investigate.py",
+      "source_sha256": "f49a91afce98c8cc8ecaa0c51d0bb105f7f27ab1d3bc9275371f884f6d93fc0e",
+      "copied_template_sha256": "b13db41458a4c58a907d7323b833f931f9bbb7750ea56b44ee07f32ae1935bb1",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_DF_V25_BUILD_20261106",
+        "DF_PATH_DF_ZIPLINE_READONLY_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/orchestration/df-v26-build-20261106/orchestrator/terrain-road12-bounded.py.in",
+      "source": "df-v26-build-20261106/orchestrator/terrain-road12-bounded.py",
+      "source_sha256": "536688ea5f4fe0262db4645515beb2d64fe703f01036ca18c8fa079b7fbe1dad",
+      "copied_template_sha256": "ae758bd6866d57049b08c9149db879558c5636f3c18445ee438b51df62d2be36",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_DF_TERRAIN_FULL_20261106_V3",
+        "DF_PATH_DF_V25_BUILD_20261106",
+        "DF_PATH_DF_V26_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/orchestration/df-v26-build-20261106/orchestrator/terrain-road12-packet.py.in",
+      "source": "df-v26-build-20261106/orchestrator/terrain-road12-packet.py",
+      "source_sha256": "011825ab236ee75de5c831fca524c6a07d7327a8c320aba10bb8634b4b2b49b4",
+      "copied_template_sha256": "bffeba3fa1e0c54775a8fec0adde6e62559ed61581390648d829d3894e4a0218",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_DF_TERRAIN_FULL_20261106_V3",
+        "DF_PATH_DF_V26_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/orchestration/df-v26-build-20261106/orchestrator/terrain-perimeter-conflict.py.in",
+      "source": "df-v26-build-20261106/orchestrator/terrain-perimeter-conflict.py",
+      "source_sha256": "cd14d626e283f7cfedcded5c6170a60844676f63ff9ab7916f3bb396ba4faa3d",
+      "copied_template_sha256": "7ed2f198b2b90817d58edfa9044c2153746f8364946f5550c9f92a958849f14d",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_TERRAIN_FULL_20261106_V3",
+        "DF_PATH_DF_V26_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/orchestration/df-v26-build-20261106/orchestrator/terrain-stage-checkpoint.py.in",
+      "source": "df-v26-build-20261106/orchestrator/terrain-stage-checkpoint.py",
+      "source_sha256": "eb39245c035d41e81f1415460af988e26b06da42e2aadb07ca9041339e346f29",
+      "copied_template_sha256": "05e7131495e1f0858f9ba8452eba9457855a2e825cd616e65665f8ace945038c",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_TERRAIN_FULL_20261106_V3",
+        "DF_PATH_DF_V26_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/orchestration/df-v26-build-20261106/orchestrator/terrain-zero175-atlas.py.in",
+      "source": "df-v26-build-20261106/orchestrator/terrain-zero175-atlas.py",
+      "source_sha256": "910d2e3131f718c7ddc384cb69c54820919ec14383255cb77c2bce569878dcd4",
+      "copied_template_sha256": "ba34623b458a2baeac5e15a2a6a990b43972cf1448f224d48bc758919de8342d",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_TERRAIN_FULL_20261106_V3",
+        "DF_PATH_DF_V26_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/orchestration/df-v26-build-20261106/orchestrator/terrain-topology-diagnostic.py.in",
+      "source": "df-v26-build-20261106/orchestrator/terrain-topology-diagnostic.py",
+      "source_sha256": "3eed56579b15a2f737fd52bf5ae1c1c34c357967b84559fe4fb4ac9be5a413b4",
+      "copied_template_sha256": "27457c19402377fb25ef7d55a3ecba819e672f65674eac8f6081b3ab033cd067",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V26_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/orchestration/df-v26-build-20261106/orchestrator/terrain-lower-nine-v4.py.in",
+      "source": "df-v26-build-20261106/orchestrator/terrain-lower-nine-v4.py",
+      "source_sha256": "9362f3e803f84a99b3529b84d79a09ebc68e7cf08f5f7f3e5d480822affb98ef",
+      "copied_template_sha256": "d3e8917ebe2dbedc8c75c52aba9b5e87751b73278bdbf528f2d3ac6871e9e1eb",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_TERRAIN_FULL_20261106_V3",
+        "DF_PATH_DF_V26_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/orchestration/df-v26-build-20261106/orchestrator/terrain-full168-proof.py.in",
+      "source": "df-v26-build-20261106/orchestrator/terrain-full168-proof.py",
+      "source_sha256": "0c3712e767e5ef769ab2f265664039dfb940fb749918cb8668c45db3c1b468f9",
+      "copied_template_sha256": "59e35af53469149a5f4b9c5f5ed09725cf213798a0f14d86e3a81e789a97c3a3",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_TERRAIN_FULL_20261106_V3",
+        "DF_PATH_DF_V26_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/qa/df-v26-build-20261106/orchestrator/terrain-resume-audit.py.in",
+      "source": "df-v26-build-20261106/orchestrator/terrain-resume-audit.py",
+      "source_sha256": "4087fe9f67645029d351d0dbce5457f8e0955afce38c5a33c11cd4750e84e0e5",
+      "copied_template_sha256": "665b6014d5cfeac7a9d57900d768d0673cc35c8bf237f3e82ce994db245c0e69",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_DRIVE_E",
+        "DF_PATH_DF_TERRAIN_FULL_20261106_V3",
+        "DF_PATH_DF_TERRAIN_GENERAL_20261106_V2",
+        "DF_PATH_DF_V26_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/orchestration/df-v26-build-20261106/orchestrator/asphalt-exact-triangles.py.in",
+      "source": "df-v26-build-20261106/orchestrator/asphalt-exact-triangles.py",
+      "source_sha256": "6be809d3c27b838c78282301bf19ee28b06876ce9528950ab2dbbce0ff879aaf",
+      "copied_template_sha256": "5b4e3b6b37de0fcea5f681fa14e7a0eeb17d4ce1603746412f9069ba5ffa9a47",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_TERRAIN_FULL_20261106_V3",
+        "DF_PATH_DF_V26_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/placement/df-v25-build-20261106/component-work/generate_vmap.py.in",
+      "source": "df-v25-build-20261106/component-work/generate_vmap.py",
+      "source_sha256": "e6732e2a0bf8445f5fdb80a288d7aa761de49e8cefc869e27ffff5b257108dc9",
+      "copied_template_sha256": "bc1ef34bce8d411d1d7fe433f3f17f5de6e335ce85f9e0ffd19e2a4b9d704fea",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V25_BUILD_20261106",
+        "DF_PATH_SPACEPORT_KAT_REBUILD_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/asphalt-export.py.in",
+      "source": "df-terrain-full-20261106-v3/asphalt-export.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copied_template_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/seam-handoff.py.in",
+      "source": "df-terrain-full-20261106-v3/seam-handoff.py",
+      "source_sha256": "cbfe8282dd7b042b4cee2175aa62720043c6b63da3da64ea4ba220ab09bb148e",
+      "copied_template_sha256": "cbfe8282dd7b042b4cee2175aa62720043c6b63da3da64ea4ba220ab09bb148e",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/seam-native-boundary.py.in",
+      "source": "df-terrain-full-20261106-v3/seam-native-boundary.py",
+      "source_sha256": "e525659dba3b341e42b832c164e6394eea1ba32284a30b92db9f40294c6c635c",
+      "copied_template_sha256": "e525659dba3b341e42b832c164e6394eea1ba32284a30b92db9f40294c6c635c",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/seam-native-qa.py.in",
+      "source": "df-terrain-full-20261106-v3/seam-native-qa.py",
+      "source_sha256": "47a7153e0ec24d46105b96f1efe7561f553e399cedc573fddf248febf12614d5",
+      "copied_template_sha256": "47a7153e0ec24d46105b96f1efe7561f553e399cedc573fddf248febf12614d5",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/seam-native.py.in",
+      "source": "df-terrain-full-20261106-v3/seam-native.py",
+      "source_sha256": "22cb79762b5c30ba544f3174158e30704351ec4bec98dd7ed3b5bb48c4607aeb",
+      "copied_template_sha256": "56ff12d262ea5cacc93b20fbc56170c0b8c82c2f158dee7102e638a6bcafb51f",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_SOURCE_SETUP_20261106",
+        "DF_PATH_DF_V25_BUILD_20261106",
+        "DF_PATH_SPACEPORT_KAT_REBUILD_20261105",
+        "DF_PATH_STEAMLIBRARY"
+      ]
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/seam-contact.py.in",
+      "source": "df-terrain-full-20261106-v3/seam-contact.py",
+      "source_sha256": "82b20afd114a21fb03a52be303585da51d3267182a4d95ee2c89970e778ac89b",
+      "copied_template_sha256": "82b20afd114a21fb03a52be303585da51d3267182a4d95ee2c89970e778ac89b",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/seam-query.py.in",
+      "source": "df-terrain-full-20261106-v3/seam-query.py",
+      "source_sha256": "8ff538374b90f0c406e205daa066259f0adc0037ed75195e36eaca36df8d5699",
+      "copied_template_sha256": "8ff538374b90f0c406e205daa066259f0adc0037ed75195e36eaca36df8d5699",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/zero-classification.py.in",
+      "source": "df-terrain-full-20261106-v3/zero-classification.py",
+      "source_sha256": "2b17dafe645998bb309ac2a2fed13c34985cf39c9e5049e69ca544d2489b3b5e",
+      "copied_template_sha256": "2b17dafe645998bb309ac2a2fed13c34985cf39c9e5049e69ca544d2489b3b5e",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/seam-package.py.in",
+      "source": "df-terrain-full-20261106-v3/seam-package.py",
+      "source_sha256": "c31ee61f1c4d199e9e3962cdd2fa257820ad4640d0c8bcb1b26fc8a710964c20",
+      "copied_template_sha256": "c31ee61f1c4d199e9e3962cdd2fa257820ad4640d0c8bcb1b26fc8a710964c20",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/seam-qa.py.in",
+      "source": "df-terrain-full-20261106-v3/seam-qa.py",
+      "source_sha256": "09493235742b32fd4c6789af9644cd277f5fbd49497528b02611fa26c6b54547",
+      "copied_template_sha256": "09493235742b32fd4c6789af9644cd277f5fbd49497528b02611fa26c6b54547",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/seam-stage.py.in",
+      "source": "df-terrain-full-20261106-v3/seam-stage.py",
+      "source_sha256": "3cbd460ad208ee2f9b4de1a1421ab3caf16594127a05b93ba2bad81c8c722480",
+      "copied_template_sha256": "3cbd460ad208ee2f9b4de1a1421ab3caf16594127a05b93ba2bad81c8c722480",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/contact-handoff.py.in",
+      "source": "df-terrain-full-20261106-v3/contact-handoff.py",
+      "source_sha256": "15ba9f9c23a9583bdff2a307a0877950ac50a9c20ca32848ef7b67893ba3cc2c",
+      "copied_template_sha256": "15ba9f9c23a9583bdff2a307a0877950ac50a9c20ca32848ef7b67893ba3cc2c",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/native-compare.py.in",
+      "source": "df-terrain-full-20261106-v3/native-compare.py",
+      "source_sha256": "040fa94089fce71fe60a3a435d9be23b78e305d6cdf7f8c279120fd301177aaf",
+      "copied_template_sha256": "040fa94089fce71fe60a3a435d9be23b78e305d6cdf7f8c279120fd301177aaf",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/native-pilot-qa.py.in",
+      "source": "df-terrain-full-20261106-v3/native-pilot-qa.py",
+      "source_sha256": "67e6af61df262a3cc00e05bb8e01ac1c482b0fa469dfd3b75518b762067074d2",
+      "copied_template_sha256": "556db7e5a52e468927f2d52e2ef60a49d7239eea808fd80e96c4c0cc78736b79",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_SPACEPORT_KAT_REBUILD_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/all85-select.py.in",
+      "source": "df-terrain-full-20261106-v3/all85-select.py",
+      "source_sha256": "4dfdc09b94e47ee8b75c8dcc399cccac6bcae5a562da61050531b90627359c34",
+      "copied_template_sha256": "66e52de8143c3c67408937197448a5af9e49b5a070de0f870bc6eb12cfdbb24a",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V25_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/all85-qa.py.in",
+      "source": "df-terrain-full-20261106-v3/all85-qa.py",
+      "source_sha256": "827d82bebc41cb638583d04f61e05a9152f90b67cb654732ff86916ee6d0f7dd",
+      "copied_template_sha256": "827d82bebc41cb638583d04f61e05a9152f90b67cb654732ff86916ee6d0f7dd",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/all85-export.py.in",
+      "source": "df-terrain-full-20261106-v3/all85-export.py",
+      "source_sha256": "fa62ad15b4623463fa85f027b2297a3333adc2801f72316d3ddab78629571b7e",
+      "copied_template_sha256": "fa62ad15b4623463fa85f027b2297a3333adc2801f72316d3ddab78629571b7e",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/native-stage.py.in",
+      "source": "df-terrain-full-20261106-v3/native-stage.py",
+      "source_sha256": "5ebfba9b1fafcfb2823509af52713a6d24ea3ec2803f0746a9483277fe153ca9",
+      "copied_template_sha256": "b64bc0b042e9367e25d6dacc402afc00d76c0f0027a87fc572eb225a2b9b129a",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_SOURCE_SETUP_20261106",
+        "DF_PATH_DF_V25_BUILD_20261106",
+        "DF_PATH_SPACEPORT_KAT_REBUILD_20261105",
+        "DF_PATH_STEAMLIBRARY"
+      ]
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/mesh-audit.py.in",
+      "source": "df-terrain-full-20261106-v3/mesh-audit.py",
+      "source_sha256": "913b14dd0fe53308dbd0b659c2c2afa99788e47412c1da8994137eeba502214a",
+      "copied_template_sha256": "913b14dd0fe53308dbd0b659c2c2afa99788e47412c1da8994137eeba502214a",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/montage.py.in",
+      "source": "df-terrain-full-20261106-v3/montage.py",
+      "source_sha256": "38838ce8bb3d7692291100f4e018acdc9f2e56f02f9d57425215a0b77a06d166",
+      "copied_template_sha256": "1dcd9d33de4dc06d0e8caa7e642b1e1b6b01938eb7cac78cad2d1e015bf20f9c",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_SANDBOX_HOME"
+      ]
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/qa.py.in",
+      "source": "df-terrain-full-20261106-v3/qa.py",
+      "source_sha256": "9cd33713a740a01f1883dbff24370ff3a468db88ed1e284f7ff0684ead54ff2b",
+      "copied_template_sha256": "9cd33713a740a01f1883dbff24370ff3a468db88ed1e284f7ff0684ead54ff2b",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/calibrate.py.in",
+      "source": "df-terrain-full-20261106-v3/calibrate.py",
+      "source_sha256": "8f82bc103a70e1443c3be80a67b8046ea7eb83db1fac37b424adebae2f2b34ca",
+      "copied_template_sha256": "8f82bc103a70e1443c3be80a67b8046ea7eb83db1fac37b424adebae2f2b34ca",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/package-stage.py.in",
+      "source": "df-terrain-full-20261106-v3/package-stage.py",
+      "source_sha256": "f33da13f3defc012cacf61874cb5f7e0904aa5e34afbb47e41653866de3252fc",
+      "copied_template_sha256": "f33da13f3defc012cacf61874cb5f7e0904aa5e34afbb47e41653866de3252fc",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/ground-qa.py.in",
+      "source": "df-terrain-full-20261106-v3/ground-qa.py",
+      "source_sha256": "8d5935820c8d13d63155ef0ada35e9c75aeb667a68a98a53c702a7234e748fd3",
+      "copied_template_sha256": "8d5935820c8d13d63155ef0ada35e9c75aeb667a68a98a53c702a7234e748fd3",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/terrain_query.py.in",
+      "source": "df-terrain-full-20261106-v3/terrain_query.py",
+      "source_sha256": "312920700de029c82dbe75de0d945f39b4c8351b6fb11716d163b655f57ed056",
+      "copied_template_sha256": "312920700de029c82dbe75de0d945f39b4c8351b6fb11716d163b655f57ed056",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/ground-export.py.in",
+      "source": "df-terrain-full-20261106-v3/ground-export.py",
+      "source_sha256": "38d4270ddd749e87b0aaff45b8004c354bc884d8fd18ddc91c9542ee941ae126",
+      "copied_template_sha256": "38d4270ddd749e87b0aaff45b8004c354bc884d8fd18ddc91c9542ee941ae126",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/select-ground-check.py.in",
+      "source": "df-terrain-full-20261106-v3/select-ground-check.py",
+      "source_sha256": "7b1d2fd04ce52883c1440f75bb36e22514272675b68aefeeef0ea2612cf7b894",
+      "copied_template_sha256": "af7ae1f25fd5097dbbf5381900c0088f5240ec1394fbed2f1192b3b6318d25ac",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V25_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/fullstage.py.in",
+      "source": "df-terrain-full-20261106-v3/fullstage.py",
+      "source_sha256": "dec6b1652b351ceb83a3abec18f6dc6bbc399e30d4a9201ea434b618f47a288a",
+      "copied_template_sha256": "72ebcd1c47b3ff8195ae5352eafd458ee1bad3512ac1fd3ea1a9bfcbfdb0eb34",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_WINDOWS"
+      ]
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/preview/render.py.in",
+      "source": "df-terrain-full-20261106-v3/preview/render.py",
+      "source_sha256": "a25a28b259c0852899597a3706b7d739abd8587ccca6f67fb5adfb8b5ac6974d",
+      "copied_template_sha256": "a25a28b259c0852899597a3706b7d739abd8587ccca6f67fb5adfb8b5ac6974d",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/Program.cs.in",
+      "source": "df-terrain-full-20261106-v3/Program.cs",
+      "source_sha256": "00a83c6450a0ebdafe40b4c7c715881a5f84bb2f7574f5d8978e4a86d3b96fb1",
+      "copied_template_sha256": "23e7738e05b4ae3b34ae1461beac4883dc1026737d3efb919fd5611ee792334b",
+      "also_observed": [],
+      "validation": "text-template",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_DF_TERRAIN_FULL_20261106_V3",
+        "DF_PATH_DF_TERRAIN_STAGE_20261106_V1"
+      ]
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-general-20261106-v2/coverage-audit.py.in",
+      "source": "df-terrain-general-20261106-v2/coverage-audit.py",
+      "source_sha256": "de5a0f85d3fe447ae28844411df9324a6323de301150a19d065b4fc9524a6381",
+      "copied_template_sha256": "8a4ac3480252691055309ca4e61d98b83571a38d9e6ca52419cbaa5cac684054",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_TERRAIN_GENERAL_20261106_V2",
+        "DF_PATH_DF_TERRAIN_STAGE_20261106_V1"
+      ]
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-general-20261106-v2/fixture-tests.py.in",
+      "source": "df-terrain-general-20261106-v2/fixture-tests.py",
+      "source_sha256": "b50e1d8ba6488b8f0bfa9d0852cfed1d5cf17950735aee0bf8b0b079a11f36fd",
+      "copied_template_sha256": "0c8cb15315980c770de1e4ca9724e70bb188e6ce68ca15b669c0366423d7e293",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_LANDSCAPE_PLAN_20261106",
+        "DF_PATH_DF_TERRAIN_GENERAL_20261106_V2"
+      ]
+    },
+    {
+      "destination": "scripts/terrain/df-terrain-full-20261106-v3/PayloadReader.csproj.in",
+      "source": "df-terrain-full-20261106-v3/PayloadReader.csproj",
+      "source_sha256": "c453794f458d65827933b1a523d9627773f3585fcd37873526f33a2317545f92",
+      "copied_template_sha256": "f9f159547f1272e59a705082d177a2358960f5bc53405bf8a75c3dd066cea25e",
+      "also_observed": [],
+      "validation": "xml-parse-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/conversion/df-v25-build-20261106/geometry-work/material_fix.py.in",
+      "source": "df-v25-build-20261106/geometry-work/material_fix.py",
+      "source_sha256": "75fef8ddbd610f1e39cdcf9772e5ac12fc41f0cba3964a46f5cc50440ee6bd90",
+      "copied_template_sha256": "3be655a729c9ee07373269e080cfc776cea18531c7bd969a490247d98b52bd34",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V24_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/conversion/df-v25-build-20261106/geometry-work/precision_affine.py.in",
+      "source": "df-v25-build-20261106/geometry-work/precision_affine.py",
+      "source_sha256": "3b0ef2420c27e3f1f0e78a8e7a6504ace1629874864e3d2eee18a318f8d9f7c6",
+      "copied_template_sha256": "8dc3889c4e0c6ad0ee1ef3ced7f48305e1bbc3acd2171b7b8ddf57f18c6d840a",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V24_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/placement/df-v25-build-20261106/component-work/final_decomposition.py.in",
+      "source": "df-v25-build-20261106/component-work/final_decomposition.py",
+      "source_sha256": "521cf7d7195eebc118e76378dd153808023dad4f7848038ffed7b3aad3f5099c",
+      "copied_template_sha256": "3fe2c1454d4f1a58f9adb3d4046612fb940ec541f051c8d96104dcd78829ae8a",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V24_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/skeletal/df-v25-build-20261106/loot-ladder-work/finalize_placements.py.in",
+      "source": "df-v25-build-20261106/loot-ladder-work/finalize_placements.py",
+      "source_sha256": "8d590043e396684412eef3cf1797e08d0853d4d5a8817a339af509bf6ee9c8cd",
+      "copied_template_sha256": "117185dc2de2870e73dd54c66ac5b992a23cda8f3cc1e86a4ea7150c7338e530",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V24_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/skeletal/df-v25-build-20261106/loot-ladder-work/verify_ladder_fbx.py.in",
+      "source": "df-v25-build-20261106/loot-ladder-work/verify_ladder_fbx.py",
+      "source_sha256": "9293608664f64dd7b1593f54603b4aee94f85d46be8c6cd052cef8fde4169d83",
+      "copied_template_sha256": "497a16b0e36fdafe0f324532527b95a5984050fc9178aa6637fe375a090e9e46",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V24_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/skeletal/df-v25-build-20261106/loot-ladder-work/convert_extension.py.in",
+      "source": "df-v25-build-20261106/loot-ladder-work/convert_extension.py",
+      "source_sha256": "86277ea597cb40651b236ebfa2b11f9d7e0a7ad0efea232023c424d6d773bf5a",
+      "copied_template_sha256": "3826b2928ee2aef43b0dbdc37ebf5687c4b6dd8f2410db0c1540c859a82f7664",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_DF_V24_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/skeletal/df-v25-build-20261106/loot-ladder-work/bake_extension_states.py.in",
+      "source": "df-v25-build-20261106/loot-ladder-work/bake_extension_states.py",
+      "source_sha256": "514c94bbbc8effec05059e42b7c3dd544a83d218a10889f557454a5e9eea9622",
+      "copied_template_sha256": "7ef58dca2a579b54357c96810787fb681bca1edb5ca5eab1fd8b1a3995f717f9",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_DF_V24_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/placement/df-v25-build-20261106/component-work/spawn_scan.py.in",
+      "source": "df-v25-build-20261106/component-work/spawn_scan.py",
+      "source_sha256": "a2a046eb9bb42fb8c74bee572d4c056537a6fe3574a24a9b9cc7177af0dc8190",
+      "copied_template_sha256": "5228e487ed6bc915f94070a19762da126028c481d0eef6d14bab6046573a329e",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_DF_V24_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/conversion/df-v25-build-20261106/geometry-work/basis_probe.py.in",
+      "source": "df-v25-build-20261106/geometry-work/basis_probe.py",
+      "source_sha256": "ade5d4190900a3c837eeb10ccc37cf4c78abac733a3862048ff8cc430229cde6",
+      "copied_template_sha256": "c9d34e9eee5c7cdd14e1c8c3375ff54bc4c4ae87db6cd737648f197227f403ee",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V24_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/placement/df-v25-build-20261106/component-work/prepare_placements.py.in",
+      "source": "df-v25-build-20261106/component-work/prepare_placements.py",
+      "source_sha256": "b32573e23f3ca1dcfdc759fe5f29535f50d9f5810606398da01fa549da59d61c",
+      "copied_template_sha256": "c4459c3690ed4bf8e8df6d3492d4205c8f69e43383358e830e2fb869609c78c7",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V24_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/conversion/df-v25-build-20261106/geometry-work/affine.py.in",
+      "source": "df-v25-build-20261106/geometry-work/affine.py",
+      "source_sha256": "069a9812d6bb05576f4ab3590e1fadc93e1a9a437a36a27461e14a931f4760ea",
+      "copied_template_sha256": "c8ac2d8ca02a6efdc82cb9fdb511f2dd5fbba20c6ff63dd2aee9bc0ec3f2b4a2",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_V24_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/skeletal/df-v25-build-20261106/loot-ladder-work/convert_ladders.py.in",
+      "source": "df-v25-build-20261106/loot-ladder-work/convert_ladders.py",
+      "source_sha256": "d2ad475b93f2f7f2368e93eed4f57b528bc966c8af95fb25a881045cab8a1834",
+      "copied_template_sha256": "a081e48a0580a0a5df68dc6a90613c6633912c52e77fabef528424aad074e4fd",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_DF_V24_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/conversion/df-v25-build-20261106/geometry-work/spline.py.in",
+      "source": "df-v25-build-20261106/geometry-work/spline.py",
+      "source_sha256": "adfc39a3a54a7d311a7583ba294890cedcbbae7b625747cda0a17fcc031c7931",
+      "copied_template_sha256": "462ae2ccd61cbb7de5edd843cd0bb2f35270ed0a8a2dff76f423d3b06eee561f",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_DF_V24_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/skeletal/df-v25-build-20261106/loot-ladder-work/convert_loot.py.in",
+      "source": "df-v25-build-20261106/loot-ladder-work/convert_loot.py",
+      "source_sha256": "9928ebd75efe97e3b1fea73c136ea8666fa20baa4463bee815ebb8ff462d9fc8",
+      "copied_template_sha256": "11cb7923c0bbfe9ecb66449272d8c122df0d28e562a6c443014399afd30a73ed",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_DF_V24_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/conversion/df-v25-build-20261106/geometry-work/convert.py.in",
+      "source": "df-v25-build-20261106/geometry-work/convert.py",
+      "source_sha256": "4260530888cd1cf5cde2e712839508e2a4ef613c03ae122e19c7d416f99ffd08",
+      "copied_template_sha256": "379291af9cbdb7edf161ed3feddc321a2637ae2c08d1882e7cc296ba40cb69ff",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_DF_V24_BUILD_20261106"
+      ]
+    },
+    {
+      "destination": "scripts/conversion/df-v25-build-20261106/geometry-work/partition_physics.py.in",
+      "source": "df-v25-build-20261106/geometry-work/partition_physics.py",
+      "source_sha256": "04de02a3e3ccd18f0e3437c1916333ab3ebe96837fc5264502dab2b9c9d6b5f5",
+      "copied_template_sha256": "59c61827e4cd4ab33a4e3cd79efd44adc52b833edbda91fbbcb9f3d44f104f3b",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/structures/employee-1/render-employee.py.in",
+      "source": "df-extract-20261105/structures/employee-1/render-employee.py",
+      "source_sha256": "2a893f13cdd4331acfef81932daf26ff49846eed0581f400a79535451ec4c363",
+      "copied_template_sha256": "b20e06c2edc1e9c424046fe89a2adc00883b41f11e65e9a54f0124a4d11ec2b7",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/structures/ladder-sockets-8d2e/Program.cs.in",
+      "source": "df-extract-20261105/structures/ladder-sockets-8d2e/Program.cs",
+      "source_sha256": "3f6c5fe9bfa67114bdb27486dc904d57b8c1b746a5c4929d8fe11c717b701dc4",
+      "copied_template_sha256": "afb7c547bd96b5f22eb854d606314c98bf2795a9d0a5f6e311b686d95fbbf764",
+      "also_observed": [],
+      "validation": "text-template",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/structures/native/Program.cs.in",
+      "source": "df-extract-20261105/structures/native/Program.cs",
+      "source_sha256": "423fe23b71651939ea9a61db9f492d18050a2173f48af107ac78ff2b850c1497",
+      "copied_template_sha256": "aa07c2839733f92542004cab48d01d5fe1356e583669040c9c596c39e5944b6e",
+      "also_observed": [],
+      "validation": "text-template",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/structures/ladder-sockets-8d2e/Routing.csproj.in",
+      "source": "df-extract-20261105/structures/ladder-sockets-8d2e/Routing.csproj",
+      "source_sha256": "a4bd873bd97a4f045fb6ffeacdf982af52448b8282ad34ae82a046b075c3d290",
+      "copied_template_sha256": "d40b39f5c04b573e74ea1764e0ee7a36dd991cbe3ca7eec5415f93d9a84b981b",
+      "also_observed": [],
+      "validation": "xml-parse-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/skeletal/df-extract-20261105/loot-skeletal/states-priority-03909539/compose-mid-idle.py.in",
+      "source": "df-extract-20261105/loot-skeletal/states-priority-03909539/compose-mid-idle.py",
+      "source_sha256": "91953acdb1d7e481323aadbf83e983da8d1e245cbff3bca2e82bd7b79e07ea18",
+      "copied_template_sha256": "c9cd45c02698d6a05dee7785739a3f36d4f53b90bae258b353a324c0538698f6",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_WINDOWS"
+      ]
+    },
+    {
+      "destination": "scripts/skeletal/df-extract-20261105/loot-skeletal/states-priority-03909539/render-mid-idle.py.in",
+      "source": "df-extract-20261105/loot-skeletal/states-priority-03909539/render-mid-idle.py",
+      "source_sha256": "03c8ecf773065dacfa0cb1f01a0103459499e55c13abd1263d45c30520ec3c49",
+      "copied_template_sha256": "f449a77ed6968f1d867584cb72525fe7c62c34b511456a61abefa3fde4bb921a",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/skeletal/df-extract-20261105/loot-skeletal/states-priority-03909539/select-mid-idle.py.in",
+      "source": "df-extract-20261105/loot-skeletal/states-priority-03909539/select-mid-idle.py",
+      "source_sha256": "9dd49eb2d8e442e63929986ff7fd8903e763273c30a29ba5f4dceb53d0dc0f45",
+      "copied_template_sha256": "7a621e1670abb2cb26c3c78f6e8c23f0407eec0349c286ec50be657b21a44dea",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/skeletal/df-extract-20261105/loot-skeletal/states-priority-03909539/bake-proof.py.in",
+      "source": "df-extract-20261105/loot-skeletal/states-priority-03909539/bake-proof.py",
+      "source_sha256": "349223076a27704d0f4c8f9fe587fc0603de23139407bc5cd5ce251ea4748628",
+      "copied_template_sha256": "4c1be1bf5a56f1ac7ecab8cd00c3f77d90db44f47b1620ea1e8fb72777a2fe2b",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/skeletal/df-extract-20261105/loot-skeletal/renders-opened/compose-opened.py.in",
+      "source": "df-extract-20261105/loot-skeletal/renders-opened/compose-opened.py",
+      "source_sha256": "10d4836393bf2a53f13aa9b5b08564e0f823456657c04ecaebb8fcae86314092",
+      "copied_template_sha256": "8e7963f2bfaeb36b1bc31c9d5a18b5f8071cfb3dc3dd1b38dec64257af6d42ab",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_WINDOWS"
+      ]
+    },
+    {
+      "destination": "scripts/skeletal/df-extract-20261105/loot-skeletal/renders-opened/render-opened.py.in",
+      "source": "df-extract-20261105/loot-skeletal/renders-opened/render-opened.py",
+      "source_sha256": "b562b342a7db21935540fc54c312e87d0e170308e2130bd59ddca233c2188897",
+      "copied_template_sha256": "764378e2c194e99e47884d1c04794a63d1c73adfbe016e364a1f09e099898584",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/skeletal/df-extract-20261105/loot-skeletal/renders-opened/prepare.py.in",
+      "source": "df-extract-20261105/loot-skeletal/renders-opened/prepare.py",
+      "source_sha256": "f1656df03d5b2ac3a1c980f23f3dfbcf549364fd47a4e02f12db3e76e9dcadec",
+      "copied_template_sha256": "53fb65a5b9de9776d108326ca04272ed3702ea1be16efbf2a25af54450be22ec",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/skeletal/df-extract-20261105/loot-skeletal/static-paired-v3/aggregate.py.in",
+      "source": "df-extract-20261105/loot-skeletal/static-paired-v3/aggregate.py",
+      "source_sha256": "dac4d71d9bacc77074008b86144262a3123fb6d2e9f6f3e50747d0eb39f8647a",
+      "copied_template_sha256": "fe1dff6995c478c426583b2378aca0046b04ebcc3798d8fe82b6882a9a187f13",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/skeletal/df-extract-20261105/loot-skeletal/static-paired-v3/bake-pairs.py.in",
+      "source": "df-extract-20261105/loot-skeletal/static-paired-v3/bake-pairs.py",
+      "source_sha256": "03ff2f3e0c8c9e469c52b5324c973fa5cf91f672cbc93942956d15f61d18ae10",
+      "copied_template_sha256": "acf189680d9b27d3930d44f94487f3b7db2f78df3d395fb5220c4b038976934b",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/tools/LootDump/Program.cs.in",
+      "source": "df-extract-20261105/tools/LootDump/Program.cs",
+      "source_sha256": "49de700378c271e76150caa1289729fb45b79d42ffde7bebe783477417429e27",
+      "copied_template_sha256": "a916afd466f499815515babf56b9750dff550668f00566f370d67206e70a85aa",
+      "also_observed": [],
+      "validation": "text-template",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/skeletal/df-extract-20261105/loot-skeletal/renders/compose.py.in",
+      "source": "df-extract-20261105/loot-skeletal/renders/compose.py",
+      "source_sha256": "76fc44cb7dca26479b6033877ba9c4e91670466ae77c4e9ee047bc78973532e6",
+      "copied_template_sha256": "d628319d58169f32f5f8eb8600f8cc95fa0c4f7fd6f941e8e09237efdd8443a4",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_WINDOWS"
+      ]
+    },
+    {
+      "destination": "scripts/skeletal/df-extract-20261105/loot-skeletal/renders/repair.py.in",
+      "source": "df-extract-20261105/loot-skeletal/renders/repair.py",
+      "source_sha256": "422f9d7c3403e011a2ad93d3ccdbb164435af06ba3d18271815678c2ac5931a2",
+      "copied_template_sha256": "7e73a0fadb51c27149b91ab5f78c44e0b442fe14b9e9d60e354392cd29859dab",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/skeletal/df-extract-20261105/loot-skeletal/renders/render27.py.in",
+      "source": "df-extract-20261105/loot-skeletal/renders/render27.py",
+      "source_sha256": "db2a4ccf5e182061b01854348c4df80d23c723530fe4b9df3a62020fc0d5e13a",
+      "copied_template_sha256": "1d215ab59502460f97862bfe2ce65e3ec78ca1ee11d54501b71a8354d86f33d0",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/skeletal/df-extract-20261105/loot-skeletal/bake-static.py.in",
+      "source": "df-extract-20261105/loot-skeletal/bake-static.py",
+      "source_sha256": "b6bcdaeeb72af9da10004cc579a1cb156dc8ab371e918f95450bfd1210eb73af",
+      "copied_template_sha256": "5460c295a4af878154f400641f12affe0628ec20c27a3cdd3825bde90c8a2dc0",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/tools/LootDump/LootDump.csproj.in",
+      "source": "df-extract-20261105/tools/LootDump/LootDump.csproj",
+      "source_sha256": "d7014b420a740d07f7506e71c31a57bd783811f87f4382eb79b2c6f1b61c1aba",
+      "copied_template_sha256": "cccfd9fb0e43d56afe2c55aa20851a40b2f8ae8846a616e5bc63b7d10541994f",
+      "also_observed": [
+        "df-extract-20261105/structures/native/Structures.csproj",
+        "df-extract-20261105/tools/ResolveMetadata/ResolveMetadata.csproj",
+        "df-extract-20261105/tools/PlacementParallel/PlacementParallel.csproj",
+        "df-extract-20261105/tools/MeshParallel/MeshParallel.csproj",
+        "df-extract-20261105/tools/PlacementDump/PlacementDump.csproj",
+        "df-extract-20261105/tools/MeshDump/MeshDump.csproj",
+        "df-extract-20261105/mesh-placement-plan/index-probe/PlanIndex.csproj",
+        "df-extract-20261105/analysis-smallsafe-802-3p/metadata-probe/SafeProbe.csproj"
+      ],
+      "validation": "xml-parse-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/tools/ResolveMetadata/Program.cs.in",
+      "source": "df-extract-20261105/tools/ResolveMetadata/Program.cs",
+      "source_sha256": "aa42616cb6cdb51a0e2572fe569e4bd5ebe6ec0e7f373ed78e99ab9cf7efb7b2",
+      "copied_template_sha256": "bcb2855a5d4b981f940fed0855811a6fa69e270546bc99019956669c33b13041",
+      "also_observed": [],
+      "validation": "text-template",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/placements/validation/validate.py.in",
+      "source": "df-extract-20261105/placements/validation/validate.py",
+      "source_sha256": "20f0b57483528a63a4658f0551b4a820b0370ae994e97155d6a9b72739da1f6f",
+      "copied_template_sha256": "a6dc9b116464d67599da9ef60eb3fac28d1acea7ffab46fd42e5cfe47a8d3015",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_SPACEPORT_KAT_REBUILD_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/placements/parallel/summarize.py.in",
+      "source": "df-extract-20261105/placements/parallel/summarize.py",
+      "source_sha256": "4cdaa8b8cc86c00b86d7aac0ef4fbd10bf67a9e86ffe25b24aa06bd21c74e1d4",
+      "copied_template_sha256": "1fa42080b1dcb21f76f0e9d89969d27cfc84a4e927b12eac7e61fe71b62d6e44",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/tools/PlacementParallel/Program.cs.in",
+      "source": "df-extract-20261105/tools/PlacementParallel/Program.cs",
+      "source_sha256": "a0f2dac3c18fd4f4548f754d88424a098e2bd18cef2b5bb25ad5ea8c7932c8bc",
+      "copied_template_sha256": "f6c41784260947c532d97eeac8ae0ee492ccf9f870fb7bc3f323a563394f0dd3",
+      "also_observed": [],
+      "validation": "text-template",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/tools/MeshParallel/Program.cs.in",
+      "source": "df-extract-20261105/tools/MeshParallel/Program.cs",
+      "source_sha256": "dd2f7c651be5a94affb396f55a547c83132fe0e103c1fe378295175c880e2c47",
+      "copied_template_sha256": "929173495524e8490946d772b3ab237d96c9ae34ee69f2fb0e50c2766ca4b7fd",
+      "also_observed": [],
+      "validation": "text-template",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/tools/PlacementDump/Program.cs.in",
+      "source": "df-extract-20261105/tools/PlacementDump/Program.cs",
+      "source_sha256": "314c74f749365acc460ed9ff55a62d2890ea51f879146e800ef48683957da892",
+      "copied_template_sha256": "852af33b50561aeeaf5f1c8ef6a6c08c870385eddf31796f3847a94de78cefd5",
+      "also_observed": [],
+      "validation": "text-template",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/tools/MeshDump/Program.cs.in",
+      "source": "df-extract-20261105/tools/MeshDump/Program.cs",
+      "source_sha256": "a381f21e5feb2be06f2962855b30f7cb27eb4d51e91f0b168dc1439f0ace8813",
+      "copied_template_sha256": "ef44b5c9a2ad03854d4041ce9504aee34f9356a02aecfe3adc8274079de93ca5",
+      "also_observed": [],
+      "validation": "text-template",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/mesh-placement-plan/index-probe/Program.cs.in",
+      "source": "df-extract-20261105/mesh-placement-plan/index-probe/Program.cs",
+      "source_sha256": "20f36ccdeef6a02cb4045bdbff700bad1d0e77fecb86b9be78110ffe654e9c73",
+      "copied_template_sha256": "892b73312fd0e8c7e65ffb1f9cbc53ea21ab9c08bf9ecfcdc0869daaea663270",
+      "also_observed": [],
+      "validation": "text-template",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/analysis-smallsafe-802-3p/metadata-probe/Program.cs.in",
+      "source": "df-extract-20261105/analysis-smallsafe-802-3p/metadata-probe/Program.cs",
+      "source_sha256": "d7a74c907c71598ec29a28efff44e2d364a118d8f137f4f8585a592c59016cf1",
+      "copied_template_sha256": "7817dbd6174d588cf8bfa397dc698364b947dc1856c68df54316a77ac7773561",
+      "also_observed": [],
+      "validation": "text-template",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/analysis-smallsafe-802-3p/validate.py.in",
+      "source": "df-extract-20261105/analysis-smallsafe-802-3p/validate.py",
+      "source_sha256": "a9278ae08a75108667f5584ccf35e4046fe2cec99c03450d5548ef271aca9cd9",
+      "copied_template_sha256": "469cfc23995558df3716d6ab75bfcbbef29944e634917bfd7a4da584e10fcaa4",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_CS2_SPACEPORT_PRIVATE",
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_SPACEPORT_KAT_REBUILD_20261105",
+        "DF_PATH_STEAMLIBRARY"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/material-coverage-refine.py.in",
+      "source": "df-extract-20261105/material-coverage-refine.py",
+      "source_sha256": "b292711e1b393625d31da40ed650a44b9d18c2f5778de3444ec6f5f7e342e213",
+      "copied_template_sha256": "4cf9b59cb684a990c51e506ca5984733803baeb955c0c88646d9db3434a38e0f",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_SPACEPORT_KAT_REBUILD_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/material-coverage-analysis.py.in",
+      "source": "df-extract-20261105/material-coverage-analysis.py",
+      "source_sha256": "2c3160fd3dca1f278f851b2527b260653f92dffd8db3787b6d6e4d9098f4425e",
+      "copied_template_sha256": "185e4c255141fa56cde3cf1f311e6db83fb163f57c9c1d09af5f93e751bf604d",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105",
+        "DF_PATH_SPACEPORT_KAT_REBUILD_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/tools/MetadataOnly/Program.cs.in",
+      "source": "df-extract-20261105/tools/MetadataOnly/Program.cs",
+      "source_sha256": "2ce258df07658a22d7f00f5550d6cf0470b7c2ba9fc1c49d8ce1e04158678ec3",
+      "copied_template_sha256": "cba8161793f6dd079cc94a0e98b905f629df3ea66c0ba7cca59711dd9c586792",
+      "also_observed": [],
+      "validation": "text-template",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/tools/MetadataOnly/Superset.csproj.in",
+      "source": "df-extract-20261105/tools/MetadataOnly/Superset.csproj",
+      "source_sha256": "11d4ce977bfbae132496958c1db90f5a82666c479486d97f9d2627111d746cbc",
+      "copied_template_sha256": "11d4ce977bfbae132496958c1db90f5a82666c479486d97f9d2627111d746cbc",
+      "also_observed": [
+        "df-extract-20261105/tools/Superset/Superset.csproj",
+        "df-extract-20261105/tools/Pilot/Pilot.csproj"
+      ],
+      "validation": "xml-parse-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/tools/Superset/Program.cs.in",
+      "source": "df-extract-20261105/tools/Superset/Program.cs",
+      "source_sha256": "9c784f980bcc15a659273a5a52fe2ea4c41965f34fae22d138a34f31ed3b608d",
+      "copied_template_sha256": "423eb8d3b1709121c5f894381cab6bfd9d582ab4a7aeb7b370e98b7043bf9495",
+      "also_observed": [],
+      "validation": "text-template",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/tools/Pilot/Program.cs.in",
+      "source": "df-extract-20261105/tools/Pilot/Program.cs",
+      "source_sha256": "7bdf8fc473115bf8abab7cdaa6f521c83b7bf7d882220efe85f661cb8ca39fd7",
+      "copied_template_sha256": "89b9d763b0f0083552306ca89a9173f89c098e650fdea452845684e1ce9f9540",
+      "also_observed": [],
+      "validation": "text-template",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/tools/select-textures.py.in",
+      "source": "df-extract-20261105/tools/select-textures.py",
+      "source_sha256": "6270511df92710e513d3ced5e189d57a250543fef31916e57c60f88eb1ae0b11",
+      "copied_template_sha256": "7695fc6397113349001d0f834bab133654422b19bfac24a141461dce74f526ad",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/tools/summarize.py.in",
+      "source": "df-extract-20261105/tools/summarize.py",
+      "source_sha256": "b67c53cd717b37652536dd9e1ee57ca3381848a09c7ab282d4a9b36fdae63a96",
+      "copied_template_sha256": "773195b3b187615ced38a8775914dcdfad9c78c5c33ba81c930bba71488d079a",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/tools/select-water.py.in",
+      "source": "df-extract-20261105/tools/select-water.py",
+      "source_sha256": "c9079134960f96dd262e953df29076d88036b70a978a67615c8d2fce076539e3",
+      "copied_template_sha256": "535da1d18ede9d2a3116e120e2b46084db3faec36a820d40d923e1d77a9053dd",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/tools/select-second.py.in",
+      "source": "df-extract-20261105/tools/select-second.py",
+      "source_sha256": "1e6cfb605e973bfca55a4b0c6b2f9cba4ce2a008b0310e0f2f34278ec1def1b2",
+      "copied_template_sha256": "b284793a2125856f980d3fbf8e704fd583dab96606201977e70f54af28130bc6",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/tools/dlc-search.py.in",
+      "source": "df-extract-20261105/tools/dlc-search.py",
+      "source_sha256": "9f034ce0f4742ae6bb2a14988aa6847dbf85ee94b783e3b333896ddc403f0ea5",
+      "copied_template_sha256": "4e38154530275ef2bbcb904b0bb152563322fcfe5f091c9e989b7138d91f6b8b",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/tools/select-materials.py.in",
+      "source": "df-extract-20261105/tools/select-materials.py",
+      "source_sha256": "68f66f85a6272d7e133d2a18312fefd0a9c88f7fa0b19493f54036278520a516",
+      "copied_template_sha256": "872f6d4bf20d1b0b51d971ea2e9b9e316cb1f94938d4831fa1247c471ebf7f43",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/extraction/df-extract-20261105/tools/inspect-manifest.py.in",
+      "source": "df-extract-20261105/tools/inspect-manifest.py",
+      "source_sha256": "eaeb7b60e1804ff82ade0fa03f5cf5c125bbb58e0f96f87b6dde12dc5876c9d0",
+      "copied_template_sha256": "1a076433c480d5a532f7b0e938310a3afa134f1229976cff7a0bea7eb97e8a61",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_DF_EXTRACT_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/plugins/spaceport-kat-rebuild-20261105/linked-spawn-diag/LinkedSpawnDiagReadOnly.csproj.in",
+      "source": "spaceport-kat-rebuild-20261105/linked-spawn-diag/LinkedSpawnDiagReadOnly.csproj",
+      "source_sha256": "9a1e2e2c7c26ef3698ff85153ef7a7842bc6f42e7c8faccdeea2d69cf95a1057",
+      "copied_template_sha256": "61029ddc0e2102eb7b1b7167d48e5d1b394bf12b8e8c8e6ae312874e917b0a46",
+      "also_observed": [],
+      "validation": "xml-parse-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_CS2_SPACEPORT_PRIVATE"
+      ]
+    },
+    {
+      "destination": "scripts/plugins/spaceport-kat-rebuild-20261105/linked-spawn-diag/LinkedSpawnDiag.cs.in",
+      "source": "spaceport-kat-rebuild-20261105/linked-spawn-diag/LinkedSpawnDiag.cs",
+      "source_sha256": "e7a97da852cba9c96a4d7863f3bef856853825c2db477a90ef00f3001b0e5451",
+      "copied_template_sha256": "18d52e13822d322a8b8f3dd70bd5863e1335e571d7b4978091e4ca3e3bd27c20",
+      "also_observed": [],
+      "validation": "text-template",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/legacy-core/spaceport-kat-rebuild-20261105/partition_surface_diff.py.in",
+      "source": "spaceport-kat-rebuild-20261105/partition_surface_diff.py",
+      "source_sha256": "2645272365e9c3e84333ee7c5493873f7afee71260f959e76bd3a0da1cd89721",
+      "copied_template_sha256": "ee2153449b13c2a191ba066936ca7127e81cfe7b6ed44c53fa801cc824d873cb",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_SPACEPORT_KAT_REBUILD_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/plugins/spaceport-kat-rebuild-20261105/linked-spawn-diag/LinkedSpawnDiag.csproj.in",
+      "source": "spaceport-kat-rebuild-20261105/linked-spawn-diag/LinkedSpawnDiag.csproj",
+      "source_sha256": "bfa19c4214ee3d88e3abc4488cedd0c79b221ecdb2fadfcc2b5bde1df9b63e2e",
+      "copied_template_sha256": "af0a2d82e7b21d0dc7c9eff6f6f5e642f5c0dad17d9a61f213143307ef4eaac3",
+      "also_observed": [],
+      "validation": "xml-parse-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_CS2_SPACEPORT_PRIVATE"
+      ]
+    },
+    {
+      "destination": "scripts/orchestration/df-v266-native-spawn-fix-20261109/entity-repack-tool/Pack.csproj.in",
+      "source": "df-v266-native-spawn-fix-20261109/entity-repack-tool/Pack.csproj",
+      "source_sha256": "d1838f39c15f51af946598e765f2943d230cae38cb554f63984e341712466af4",
+      "copied_template_sha256": "d1838f39c15f51af946598e765f2943d230cae38cb554f63984e341712466af4",
+      "also_observed": [],
+      "validation": "xml-parse-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/legacy-core/spaceport-kat-rebuild-20261105/build_vpk_dependency_packer.py.in",
+      "source": "spaceport-kat-rebuild-20261105/build_vpk_dependency_packer.py",
+      "source_sha256": "3d0a77ff877f2e72f8995adfb9fb08139cbe317d2a1c0534df8a23b361bbec62",
+      "copied_template_sha256": "7c20c1ecf2af3acd3c2c50b0cb0d64cfd692f88f241198c807a7395655fef997",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_SPACEPORT_KAT_REBUILD_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/legacy-core/spaceport-kat-rebuild-20261105/physics_weights.py.in",
+      "source": "spaceport-kat-rebuild-20261105/physics_weights.py",
+      "source_sha256": "329dfcf1782b74ac8caea9d1fca1b1cebd781f2dbd0a40d5c5ae557c5fb8e781",
+      "copied_template_sha256": "762648c0194f695a817e5050442a7db929736d551f1eb6caf9828344a80bad0a",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_CS2_SPACEPORT_PRIVATE",
+        "DF_PATH_SPACEPORT_KAT_REBUILD_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/legacy-core/spaceport-kat-rebuild-20261105/physics_parse.py.in",
+      "source": "spaceport-kat-rebuild-20261105/physics_parse.py",
+      "source_sha256": "4a39cc1ba9d950f979346a657fb7ad04b7cea7b09e6c7d3068e4fd822fc2e86d",
+      "copied_template_sha256": "201404e3a0d8e8102bc8190dfbf9dcdd4232dc59be65130dc0c0e75ace7ae22a",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_CS2_SPACEPORT_PRIVATE",
+        "DF_PATH_SPACEPORT_KAT_REBUILD_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/plugins/spaceport-kat-rebuild-20261105/safe7-marker-plugin/Safe7Marker.cs.in",
+      "source": "spaceport-kat-rebuild-20261105/safe7-marker-plugin/Safe7Marker.cs",
+      "source_sha256": "f04d1d30847bca936c7abec2a0c7133032d0dbfd956fc695cf8a5777f31b78fe",
+      "copied_template_sha256": "21abaae3b94146a616c7dc24297103e9dc1c42d204f0c60903c99af3674a828f",
+      "also_observed": [],
+      "validation": "text-template",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/plugins/spaceport-kat-rebuild-20261105/safe7-marker-plugin/Safe7Marker.csproj.in",
+      "source": "spaceport-kat-rebuild-20261105/safe7-marker-plugin/Safe7Marker.csproj",
+      "source_sha256": "90a482ff099ff24537d0e2ff8d32b0ee8746e893364eb38b7875d261935b9edd",
+      "copied_template_sha256": "4ad209d23329f9b312d60a4f2e72df77375e069a88ae9d5bb7874f07ba918619",
+      "also_observed": [],
+      "validation": "xml-parse-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_CS2_SPACEPORT_PRIVATE"
+      ]
+    },
+    {
+      "destination": "scripts/legacy-core/spaceport-kat-rebuild-20261105/export_geometry.py.in",
+      "source": "spaceport-kat-rebuild-20261105/export_geometry.py",
+      "source_sha256": "dd00d26ba8ed138082cea59bb100e8d2a38cfe784e8eeba6f8049035e949aacc",
+      "copied_template_sha256": "bd4e0e7faf3a05c3a564c2f3a9d38e5f9fe7902262d94774638c3df0c3398156",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_DRIVE_E",
+        "DF_PATH_SPACEPORT_KAT_REBUILD_20261105"
+      ]
+    },
+    {
+      "destination": "scripts/legacy-core/spaceport-kat-rebuild-20261105/generate_vmap.py.in",
+      "source": "spaceport-kat-rebuild-20261105/generate_vmap.py",
+      "source_sha256": "d26063a1fd9b0fd85180b0bde3a238f0b8fa5e819ab8d389a308ef9813381388",
+      "copied_template_sha256": "beb6fc4efe725ccd38cfabb93d23f8ebf3d7466d2c4f65fd93120fb911db2f91",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": []
+    },
+    {
+      "destination": "scripts/legacy-core/spaceport-kat-rebuild-20261105/material_convert.py.in",
+      "source": "spaceport-kat-rebuild-20261105/material_convert.py",
+      "source_sha256": "91d4c4879e99640a1ac85a6c0d8275b32c8a9ca67a45b476ab51b1e70720c38e",
+      "copied_template_sha256": "6cb771ca17f205a53d8d9b6ed6aae4220a49679570577401ab182d2b712b5675",
+      "also_observed": [],
+      "validation": "python-syntax-pass",
+      "status": "inactive-reference-not-runtime-revalidated",
+      "config_keys": [
+        "DF_PATH_SPACEPORT_KAT_REBUILD_20261105"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "source": "df-extract-20261105/audit-footer-scan.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/analysis-smallsafe-802-3p/metadata-probe/guard.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/loot-skeletal/bake-closed-v2.py",
+      "reason": "paired-v3 skeletal state workflow selected instead"
+    },
+    {
+      "source": "df-extract-20261105/loot-skeletal/finalize-closed-v2.py",
+      "reason": "paired-v3 skeletal state workflow selected instead"
+    },
+    {
+      "source": "df-extract-20261105/loot-skeletal/finalize-report.py",
+      "reason": "paired-v3 skeletal state workflow selected instead"
+    },
+    {
+      "source": "df-extract-20261105/loot-skeletal/guard.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/loot-skeletal/run-pilot.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/loot-skeletal/start-pilot.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/loot-skeletal/closed-v1/guard.ps1",
+      "reason": "paired-v3 skeletal state workflow selected instead"
+    },
+    {
+      "source": "df-extract-20261105/loot-skeletal/closed-v2/guard.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/loot-skeletal/material-cloth-readiness/run.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/loot-skeletal/material-cloth-readiness/sample-super.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/loot-skeletal/material-cloth-readiness/sample2.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/loot-skeletal/pilot/guard.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/loot-skeletal/renders-opened/launch.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/material-metadata-supplement/guard.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/mesh-placement-plan/index-probe/guard.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/meshes/guard.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/meshes/run.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/meshes/parallel/run.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/placements/guard.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/placements/run.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/placements/parallel/run.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/spacecenter-superset/guard.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/spacecenter-superset/run.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/structures/ladder-sockets-8d2e/guard.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/structures/native/guard.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/structures/preflight/launch-connectivity-geometry.py",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/tools/build.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/tools/run-index.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-extract-20261105/tools/run-textures.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-terrain-full-20261106-v3/all85-runner.py",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-terrain-full-20261106-v3/audit-runner.py",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-terrain-full-20261106-v3/finalize-runner.py",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-terrain-full-20261106-v3/fullstage-runner.py",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-terrain-full-20261106-v3/ground-runner.py",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-terrain-full-20261106-v3/guard.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-terrain-full-20261106-v3/native-runner.py",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-terrain-full-20261106-v3/package-runner.py",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-terrain-full-20261106-v3/run.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-terrain-full-20261106-v3/seam-final-runner.py",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-terrain-full-20261106-v3/seam-runner.py",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-terrain-full-20261106-v3/preview/runner.py",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-terrain-general-20261106-v2/fixture.ps1",
+      "reason": "terrain v3 selected instead"
+    },
+    {
+      "source": "df-terrain-general-20261106-v2/guard.ps1",
+      "reason": "terrain v3 selected instead"
+    },
+    {
+      "source": "df-terrain-general-20261106-v2/PayloadReader.csproj",
+      "reason": "terrain v3 selected instead"
+    },
+    {
+      "source": "df-terrain-general-20261106-v2/Program.cs",
+      "reason": "terrain v3 selected instead"
+    },
+    {
+      "source": "df-terrain-general-20261106-v2/run.ps1",
+      "reason": "terrain v3 selected instead"
+    },
+    {
+      "source": "df-v26-build-20261106/orchestrator/asphalt-runner.py",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-v26-build-20261106/orchestrator/terrain-lower-nine-v2.py",
+      "reason": "v4 selected; earlier experiment"
+    },
+    {
+      "source": "df-v26-build-20261106/orchestrator/terrain-lower-nine-v3.py",
+      "reason": "v4 selected; earlier experiment"
+    },
+    {
+      "source": "df-v26-build-20261106/orchestrator/terrain-lower-nine.py",
+      "reason": "v4 selected; earlier experiment"
+    },
+    {
+      "source": "df-v267-build-20261109/install-window/install.py",
+      "reason": "superseded v267 build/install wrapper"
+    },
+    {
+      "source": "df-v267-build-20261109/proof/compile-runner.py",
+      "reason": "superseded v267 build/install wrapper"
+    },
+    {
+      "source": "df-v267-build-20261109/proof/package-qa.py",
+      "reason": "superseded v267 build/install wrapper"
+    },
+    {
+      "source": "df-v267-build-20261109/proof/prepare.py",
+      "reason": "superseded v267 build/install wrapper"
+    },
+    {
+      "source": "df-v267-build-20261109/proof/scope-qa.py",
+      "reason": "superseded v267 build/install wrapper"
+    },
+    {
+      "source": "df-zipline-readonly-20261106/run.cmd",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-foliage-20261108/run.cmd",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-foliage-20261108/inventory/run-final.cmd",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-foliage-20261108/inventory/run-repair.cmd",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-foliage-20261108/inventory/run-textures.cmd",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-foliage-20261108/inventory/run.cmd",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-red-items/contact.cmd",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-red-items/export.cmd",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-red-items/run-index.cmd",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-red-items/textured.cmd",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-red-items/textures.cmd",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-v266-native-spawn-fix-20261109/attempt3-worker.py",
+      "reason": "superseded v266 build/install wrapper"
+    },
+    {
+      "source": "df-v266-native-spawn-fix-20261109/audit-new-parent.py",
+      "reason": "superseded v266 build/install wrapper"
+    },
+    {
+      "source": "df-v266-native-spawn-fix-20261109/final-qa.py",
+      "reason": "superseded v266 build/install wrapper"
+    },
+    {
+      "source": "df-v266-native-spawn-fix-20261109/install-window-cqon-resume.py",
+      "reason": "superseded v266 build/install wrapper"
+    },
+    {
+      "source": "df-v266-native-spawn-fix-20261109/install-window-resume.py",
+      "reason": "superseded v266 build/install wrapper"
+    },
+    {
+      "source": "df-v266-native-spawn-fix-20261109/install-window-worker.py",
+      "reason": "superseded v266 build/install wrapper"
+    },
+    {
+      "source": "df-v266-native-spawn-fix-20261109/worker-interactive.py",
+      "reason": "superseded v266 build/install wrapper"
+    },
+    {
+      "source": "df-v266-native-spawn-fix-20261109/worker.py",
+      "reason": "superseded v266 build/install wrapper"
+    },
+    {
+      "source": "df-v266-native-spawn-fix-20261109/install-window/backup-protected/init.py",
+      "reason": "superseded v266 build/install wrapper"
+    },
+    {
+      "source": "df-v266-r3-build-20261108/install-coordinated/backup-stop.py",
+      "reason": "superseded v266 build/install wrapper"
+    },
+    {
+      "source": "df-v266-r3-build-20261108/install-coordinated/map-copy.py",
+      "reason": "superseded v266 build/install wrapper"
+    },
+    {
+      "source": "df-v266-r3-build-20261108/install-coordinated/poststart-qa.py",
+      "reason": "superseded v266 build/install wrapper"
+    },
+    {
+      "source": "df-v266-r3-build-20261108/install-coordinated/runtime-final.py",
+      "reason": "superseded v266 build/install wrapper"
+    },
+    {
+      "source": "df-v266-r3-build-20261108/install-coordinated/start-only.py",
+      "reason": "superseded v266 build/install wrapper"
+    },
+    {
+      "source": "df-v266-r3-build-20261108/proof/compile-runner.py",
+      "reason": "superseded v266 build/install wrapper"
+    },
+    {
+      "source": "df-v266-r3-build-20261108/proof/controller.py",
+      "reason": "superseded v266 build/install wrapper"
+    },
+    {
+      "source": "df-v266-r3-build-20261108/proof/final-audit.py",
+      "reason": "superseded v266 build/install wrapper"
+    },
+    {
+      "source": "df-v266-r3-build-20261108/proof/package-qa.py",
+      "reason": "superseded v266 build/install wrapper"
+    },
+    {
+      "source": "df-v266-r3-build-20261108/proof/source-scope-audit.py",
+      "reason": "superseded v266 build/install wrapper"
+    },
+    {
+      "source": "df-v266-rope-export-20261109/export.py",
+      "reason": "superseded v266 build/install wrapper"
+    },
+    {
+      "source": "df-v266-rope-export-20261109/join.py",
+      "reason": "superseded v266 build/install wrapper"
+    },
+    {
+      "source": "df-v25-build-20261106/component-work/build-component-contract.py",
+      "reason": "placeholder not implementation"
+    },
+    {
+      "source": "df-v25-build-20261106/material-work/build_approximation_stage.py",
+      "reason": "unproven material approximation excluded; exact recipe required"
+    },
+    {
+      "source": "df-v25-build-20261106/loot-ladder-work/launch.ps1",
+      "reason": "machine-specific launcher or supervisor; not a reusable pipeline stage"
+    },
+    {
+      "source": "df-v268-singlemap-20261109/proof/compile-world.py",
+      "reason": "single-map experiment superseded; only two-part dependencies retained"
+    },
+    {
+      "source": "df-v268-singlemap-20261109/proof/finish-single.py",
+      "reason": "single-map experiment superseded; only two-part dependencies retained"
+    },
+    {
+      "source": "df-v268-singlemap-20261109/proof/package-qa.py",
+      "reason": "single-map experiment superseded; only two-part dependencies retained"
+    }
+  ]
+}

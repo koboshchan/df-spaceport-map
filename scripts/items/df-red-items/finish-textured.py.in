@@ -1,0 +1,24 @@
+from pathlib import Path
+import json,collections,ctypes
+from PIL import Image,ImageDraw,ImageFont
+r=Path('@@DF_PATH_DF_RED_ITEMS@@')
+# Wait on this exact renderer process handle rather than polling.
+import subprocess
+ps="Get-CimInstance Win32_Process -Filter \"name='python.exe'\" | Where-Object {$_.CommandLine -match 'textured.py' -and $_.CommandLine -notmatch 'finish'} | Select-Object -ExpandProperty ProcessId"
+pids=subprocess.run(['powershell','-NoProfile','-Command',ps],capture_output=True,text=True).stdout.split()
+for pid in pids:
+ h=ctypes.windll.kernel32.OpenProcess(0x100000,False,int(pid))
+ if h:ctypes.windll.kernel32.WaitForSingleObject(h,0xffffffff);ctypes.windll.kernel32.CloseHandle(h)
+report=json.loads((r/'textured-bindings.json').read_text(encoding='utf8'));font=ImageFont.truetype('@@DF_PATH_WINDOWS@@/Fonts/msyh.ttc',12)
+for section in ['red_loot','keycards']:
+ im=Image.open(r/'preview'/(section+'_textured.png')).convert('RGB');d=ImageDraw.Draw(im)
+ for i,row in enumerate(x for x in report if x['section']==section):
+  alpha_unknown=any('TransparentMap' in x.get('otherBindings',{}) for x in row['slots'])
+  if alpha_unknown:
+   row['alpha_status']='Separate TransparentMap binding exists; channel/shader interpretation unresolved. Base-color alpha used only.'
+   if row['status']=='BOUND':row['status']='ALPHA UNRESOLVED'
+   x=i%6*210;y=105+i//6*250;d.rectangle((x,y+226,x+209,y+249),fill=(15,19,27));d.text((x+4,y+228),row['status'],font=font,fill=(255,175,90))
+  else:row['alpha_status']='Base-color PNG alpha preserved; no separate TransparentMap binding found.'
+ im.save(r/'preview'/(section+'_textured.png'))
+(r/'textured-bindings.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf8')
+print(json.dumps(dict(groups=len(report),status=dict(collections.Counter(x['status'] for x in report)),unresolved=[dict(ids=x['ids'],status=x['status'],slots=x['slots']) for x in report if x['status']!='BOUND']),ensure_ascii=True))

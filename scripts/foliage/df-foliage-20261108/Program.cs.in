@@ -1,0 +1,52 @@
+using CUE4Parse.FileProvider;
+using CUE4Parse.UE4.Versions;
+using CUE4Parse.Encryption.Aes;
+using CUE4Parse.Compression;
+using CUE4Parse.UE4.Assets;
+using CUE4Parse.UE4.Assets.Exports;
+using CUE4Parse.UE4.Assets.Readers;
+using System.Text.Json;
+using System.Security.Cryptography;
+using Serilog;
+Log.Logger=new LoggerConfiguration().MinimumLevel.Error().WriteTo.Console().CreateLogger();
+var root=@"@@DF_PATH_DF_EXTRACT_20261105@@";
+var dest=@"@@DF_PATH_DF_FOLIAGE_20261108@@";
+Directory.CreateDirectory(dest);
+void Json(string n,object o)=>File.WriteAllText(Path.Combine(dest,n),JsonSerializer.Serialize(o,new JsonSerializerOptions{IncludeFields=true,WriteIndented=true}));
+OodleHelper.Initialize(root+"/tools/oodle-data-shared.dll");
+using var kj=JsonDocument.Parse(File.ReadAllText(root+"/community-aes-keys.json"));
+var keys=kj.RootElement.GetProperty("Keys").EnumerateArray().GroupBy(x=>x.GetProperty("guid").GetString()).Select(g=>g.First()).ToDictionary(x=>x.GetProperty("guid").GetString()!.Replace("-","").ToUpperInvariant(),x=>x.GetProperty("key").GetString()!);
+keys["00000000000000000000000000000000"]=kj.RootElement.GetProperty("MainKey").GetString()!;
+using var p=new StreamedFileProvider("DeltaForce",new VersionContainer(EGame.GAME_DeltaForce),StringComparer.OrdinalIgnoreCase);p.Initialize();
+foreach(var pak in File.ReadAllLines(root+"/pak-paths.txt"))p.RegisterVfs(pak.Trim());
+foreach(var r in p.UnloadedVfs.ToArray())if(keys.TryGetValue(r.EncryptionKeyGuid.ToString().Replace("-","").ToUpperInvariant(),out var key))p.SubmitKey(r.EncryptionKeyGuid,new FAesKey(key));
+ObjectTypeRegistry.RegisterClass("OpenWorldFoliageAsset",typeof(ProbeAsset));
+var inputs=JsonDocument.Parse(File.ReadAllText(dest+"/inputs.json")).RootElement.EnumerateArray().Select(x=>x.GetString()!).ToArray();
+long used=0;
+foreach(var path in inputs){
+ var label=Convert.ToHexString(SHA256.HashData(System.Text.Encoding.UTF8.GetBytes(path)))[..12]+"-"+Path.GetFileNameWithoutExtension(path);
+ try{
+ var files=new List<object>();
+ foreach(var ext in new[]{".uasset",".uexp",".ubulk"}){
+ var fp=Path.ChangeExtension(path,ext).Replace('\\','/');
+ if(!p.Files.TryGetValue(fp,out var f))continue;
+ if(f.Size>4_000_000 || used+f.Size>500_000_000)throw new Exception("bounded payload budget exceeded");
+ var b=f.Read();used+=b.Length;File.WriteAllBytes(dest+"/"+label+ext,b);
+ files.Add(new{path=fp,bytes=b.Length,sha256=Convert.ToHexString(SHA256.HashData(b)),archive=(f as CUE4Parse.UE4.VirtualFileSystem.VfsEntry)?.Vfs.Path});
+ }
+ var pkg=p.LoadPackage(path) as Package ?? throw new Exception("not Package");
+ var exports=new List<object>();
+ for(int i=0;i<pkg.ExportMap.Length;i++){
+ var e=pkg.ExportMap[i]; var o=pkg.ExportsLazy[i].Value;
+ File.WriteAllText(dest+"/"+label+"-"+i+".json",Newtonsoft.Json.JsonConvert.SerializeObject(o,Newtonsoft.Json.Formatting.Indented));
+ if(o is ProbeAsset a && a.Tail!=null)File.WriteAllBytes(dest+"/"+label+"-"+i+".native.bin",a.Tail);
+ exports.Add(new{index=i,name=o.Name,className=o.ExportType,parserType=o.GetType().FullName,e.SerialOffset,e.SerialSize,baseEnd=(o as ProbeAsset)?.BaseEnd,tailBytes=(o as ProbeAsset)?.Tail?.Length,propertyNames=o.Properties.Select(x=>x.Name.Text).ToArray(),classPath=o.Class?.GetPathName(),template=o.Template?.GetPathName()});
+ }
+ Json(label+"-proof.json",new{path,files,header=pkg.Summary.TotalHeaderSize,imports=pkg.ImportMap.Select(x=>new{name=x.ObjectName.Text,cls=x.ClassName.Text,outer=x.OuterIndex.Index}).ToArray(),exports,names=pkg.NameMap.Select(x=>x.Name).ToArray()});
+ }catch(Exception ex){Json(label+"-error.json",new{path,error=ex.ToString()});}
+}
+Json("completed.json",new{inputs,used,utc=DateTime.UtcNow,placementsRecovered=0,notes="Tail bytes captured only. No guessed transforms, flags, counts or membership."});
+public class ProbeAsset:UObject{
+ public long BaseEnd; public byte[]? Tail;
+ public override void Deserialize(FAssetArchive ar,long validPos){base.Deserialize(ar,validPos);BaseEnd=ar.Position;Tail=ar.ReadBytes((int)(validPos-ar.Position));}
+}

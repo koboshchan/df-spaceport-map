@@ -1,0 +1,10 @@
+import json
+from pathlib import Path
+r=Path(r'@@DF_PATH_DF_EXTRACT_20261105@@')
+for d in ['first-materials','second-materials']:
+ for f in sorted((r/'pilot'/d).glob('*.json')):
+  a=json.loads(f.read_text(encoding='utf-8-sig'))
+  for x in a:
+   if 'MaterialInstanceConstant' in x.get('Type',''):
+    p=x.get('Properties',{})
+    print(d,f.name,x['Name'],[(v['ParameterInfo']['Name'],v.get('ParameterValue',{})) for v in p.get('TextureParameterValues',[])])

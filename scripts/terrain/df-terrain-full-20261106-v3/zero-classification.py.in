@@ -1,0 +1,19 @@
+from pathlib import Path
+import json,numpy as np,struct,hashlib,collections
+P=Path(__file__).parent;O=P/'seam-v4';O.mkdir(exist_ok=True)
+C=json.loads((P/'coverage-blocker.json').read_text());A=np.load(P/'atlas.npz');lo=A['lo'];a=A['A'];nodes=json.loads((P/'cdlod-nodes-v9.json').read_text())['nodes']
+fl=lambda u:struct.unpack('<f',struct.pack('<I',u))[0]
+rows=[]
+for r in C['records']:
+ if r['payloadPresent']or r['bounds']['BoxExtent']['Z']!=0:continue
+ o=r['bounds']['Origin'];x0,x1=(o['X']-6300)/100,(o['X']+6300)/100;y0,y1=(o['Y']-6300)/100,(o['Y']+6300)/100
+ xs=np.arange(np.ceil((x0-lo[0])/8),np.floor((x1-lo[0])/8)+1).astype(int);ys=np.arange(np.ceil((y0-lo[1])/8),np.floor((y1-lo[1])/8)+1).astype(int)
+ valid=xs.min()>=0 and ys.min()>=0 and xs.max()<a.shape[1]and ys.max()<a.shape[0];v=a[np.ix_(ys,xs)] if valid else np.array([])
+ overlap=[]
+ for i,n in enumerate(nodes):
+  if n[20]!=3:continue
+  cx,cy,ex,ey=map(fl,[n[5],n[6],n[8],n[9]])
+  if cx+ex>=x0 and cx-ex<=x1 and cy+ey>=y0 and cy-ey<=y1:overlap.append(i)
+ rows.append(dict(canonicalID=Path(r['package']).name,classification='UNRESOLVED',collisionPayloadPresent=False,sourceHeightExtent=0,coarseSamples=int(np.prod(v.shape[:2]))if valid else 0,finiteCoarseSamples=int(np.isfinite(v).all(axis=-1).sum())if valid else 0,overlappingLOD3Nodes=overlap,coarseChannelRange=[v.reshape(-1,2).min(axis=0).tolist(),v.reshape(-1,2).max(axis=0).tolist()]if valid else None,evidence='Registry slot exists without payload, extentZ=0; archive closure complete. Coarse heights and overlapping nodes do NOT certify land occupancy or void. Native collision omission intent/hole flag semantics undecoded.'))
+out=dict(counts=dict(certifiedEmpty=0,certifiedMissingRequiredTerrain=0,unresolved=len(rows)),status='NO_POSITIVE_EMPTY_OR_MISSING_CERTIFICATE',sources=dict(collisionRegistry='coverage-blocker.json,1024slot registry from all333mounted archives,0unloaded0diskpakomitted',CDLOD='cdlod-nodes-v9.json21,845nodes24uint/node and coarse-v9 RGBA8,LOD3 height decode calibrated; occupancy/hole bits NOT decoded'),emptyCertificationRequires='Source occupancy/hole flag semantics or source collision registry generation logic proving intentional no-surface. Height zero, bounds flat, no payload, or coarse coverage alone explicitly rejected.',missingCertificationRequires='Source occupancy logic explicitly requires collision/render support at slot, not mere no-payload observation.',slots=rows,inputSHA256={n:hashlib.sha256((P/n).read_bytes()).hexdigest()for n in ['coverage-blocker.json','cdlod-nodes-v9.json','cdlod-coarse-v9.json']})
+(O/'zero-slot-classification.json').write_text(json.dumps(out,indent=2));print(out['counts'])

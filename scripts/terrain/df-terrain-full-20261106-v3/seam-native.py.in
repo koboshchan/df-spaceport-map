@@ -1,0 +1,31 @@
+import pathlib,json,subprocess,datetime,hashlib,shutil,struct,os,traceback
+P=pathlib.Path(__file__).parent;O=P/'seam-v4/next-build';G=O/'game/kat';R=pathlib.Path('@@DF_PATH_DF_V25_BUILD_20261106@@')
+def save(n,x):(O/n).write_text(json.dumps(x,indent=2))
+def now():return datetime.datetime.now(datetime.timezone.utc).isoformat()
+def main():
+ release=json.loads((R/'typed17-exact/pipe-instance-variant/RC-RELEASE.json').read_text());assert 'resourcecompiler.exe' not in release['activeRC'].lower()
+ active=subprocess.run(['tasklist','/FI','IMAGENAME eq resourcecompiler.exe','/FO','CSV','/NH'],capture_output=True,text=True).stdout;assert 'resourcecompiler.exe'not in active.lower(),'Other RC owner active'
+ audit=pathlib.Path('@@DF_PATH_DF_SOURCE_SETUP_20261106@@/dependency-audit.py').read_text();assert 'resourcecompiler'not in audit.lower()
+ save('RC-START.json',dict(pid=os.getpid(),time=now(),scope='Isolated terrain MODEL assets only, no map compile no live install',previousOwnerRelease=release,activeRC=active))
+ G.mkdir(parents=True,exist_ok=True);shutil.copy2(R/'game/kat/gameinfo.gi',G/'gameinfo.gi')
+ M=json.loads((O/'changed-integration-manifest.json').read_text());rows=M['artifacts'];manifest={};proof=[]
+ for i,row in enumerate(rows):
+  src=O/'content/kat'/row['model'];dst=G/(row['model']+'_c');cmd=['@@DF_PATH_STEAMLIBRARY@@/steamapps/common/Counter-Strike Global Offensive/game/bin/win64/resourcecompiler.exe','-i',str(src),'-game',str(G),'-nop4','-maxthreads','2']
+  log=O/'native-logs'/(row['canonicalID']+'.log');log.parent.mkdir(exist_ok=True)
+  with log.open('w')as f:
+   p=subprocess.Popen(cmd,stdout=f,stderr=subprocess.STDOUT);save('native-current-process.json',dict(pid=p.pid,asset=row['canonicalID'],index=i,cmd=cmd));rc=p.wait()
+  assert rc==0 and dst.exists(),f'Native compile failed {row["canonicalID"]}, rc {rc}, see {log}'
+  b=dst.read_bytes();off,n=struct.unpack_from('<II',b,8);blocks=[struct.unpack_from('<4sII',b,8+off+j*12)for j in range(n)];sizes=[sz for ty,rel,sz in blocks if ty==b'PHYS'];assert sizes,'No native PHYS';assert all(sz<512*1024*1024 for sz in sizes)
+  row.update(nativePHYS='COMPILED',physicsLimitVerified=True,nativePHYSBlockBytes=sizes,compiledFile=str(dst),compiledSHA256=hashlib.sha256(b).hexdigest());proof.append(dict(canonicalID=row['canonicalID'],physBlockBytes=sizes,sha256=row['compiledSHA256']))
+  phys=O/'native-physics'/(row['canonicalID']+'.physbin');phys.parent.mkdir(exist_ok=True);manifest[str(dst)]=str(phys)
+  save('native-compile-progress.json',dict(done=i+1,total=len(rows),time=now(),maxPHYSbytes=max(max(x['physBlockBytes'])for x in proof)));print('NATIVE',i+1,row['canonicalID'],sizes,flush=True)
+ save('native-reader-manifest.json',manifest)
+ reader='@@DF_PATH_SPACEPORT_KAT_REBUILD_20261105@@/partition-full/phys-reader/bin/Release/net10.0/Reader.dll'
+ with (O/'native-reader.log').open('w')as f:
+  rc=subprocess.run(['dotnet',reader,'--manifest',str(O/'native-reader-manifest.json')],stdout=f,stderr=subprocess.STDOUT).returncode
+ assert rc==0,'Native physics read failed'
+ M.update(status='OFFLINE_NATIVE_ASSETS_STAGED_TRIANGLE_COMPARISON_PENDING',physicsGate='ALL native PHYS blocks measured <512MiB',nativeCompileCount=len(rows));save('changed-integration-manifest.json',M);save('native-PHYS-sizes.json',dict(tests='PASS',assets=proof,maxPHYSBytes=max(max(x['physBlockBytes'])for x in proof),limitBytes=512*1024*1024))
+if __name__=='__main__':
+ try:main();save('native-exit.json',dict(exitCode=0,time=now()))
+ except:save('native-exit.json',dict(exitCode=1,time=now(),traceback=traceback.format_exc()));raise
+ finally:save('RC-RELEASE.json',dict(time=now(),pid=os.getpid(),activeRC=subprocess.run(['tasklist','/FI','IMAGENAME eq resourcecompiler.exe','/FO','CSV','/NH'],capture_output=True,text=True).stdout))

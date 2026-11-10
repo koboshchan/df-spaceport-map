@@ -1,0 +1,38 @@
+import pathlib,json,hashlib,textwrap
+from PIL import Image,ImageDraw,ImageFont,ImageStat
+R=pathlib.Path('@@DF_PATH_DF_EXTRACT_20261105@@/loot-skeletal/renders')
+d=json.loads((R/'manifest.json').read_text())
+certpath=R.parent/'static-closed-v2/closed-certification.json'
+cert=json.loads(certpath.read_text(encoding='utf-8'))
+different=[x['mesh'].rsplit('/',1)[-1].rsplit('.',1)[0] for x in cert['models'] if x.get('referencePoseDifferent')]
+d['closedCertificationNote']={'report':str(certpath),'certifiedClosed':25,'equivalent':19,'different':6,'unresolved':2,'differentNames':different,'allSixAlreadyRendered':True,'sourcePolicy':'Original static-baked outputs preserved; not silently replaced with certified closed v2'}
+sheet=Image.new('RGB',(3000,2500),(39,43,49))
+draw=ImageDraw.Draw(sheet)
+for tile in d['tiles']:
+ i=tile['index'];x=(i%6)*500;y=(i//6)*500
+ im=Image.open(tile['tile']).convert('RGB')
+ sheet.paste(im,(x,y))
+ font=ImageFont.truetype('@@DF_PATH_WINDOWS@@/Fonts/consola.ttf',18)
+ label=tile['name']
+ size=18
+ while draw.textlength(label,font=font)>480 and size>12:
+  size-=1; font=ImageFont.truetype('@@DF_PATH_WINDOWS@@/Fonts/consola.ttf',size)
+ lines=[label]
+ for j,line in enumerate(lines[:2]):
+  width=draw.textlength(line,font=font)
+  draw.text((x+(500-width)/2,y+442+19*j),line,font=font,fill=(238,240,244))
+ if any(b['status'].startswith('UNKNOWN') for b in tile['bindings']):
+  draw.text((x+12,y+482),'Layer shader UNKNOWN',font=ImageFont.truetype('@@DF_PATH_WINDOWS@@/Fonts/consola.ttf',14),fill=(255,200,100))
+ stat=ImageStat.Stat(im.crop((80,70,420,360)))
+ tile['imageStddev']=stat.stddev
+ tile['imageSHA256']=hashlib.sha256(pathlib.Path(tile['tile']).read_bytes()).hexdigest()
+ assert max(stat.stddev)>3
+ # Preserve source/slot evidence, no claim of full shader equivalence
+ tile['poseProvenance']='original static-baked reference pose'
+ tile['closedV2Different']=tile['name'].lower() in [s.lower() for s in different]
+out=R/'df-loot-27.png';sheet.save(out)
+d['contactSheet']={'path':str(out),'dimensions':[3000,2500],'bytes':out.stat().st_size,'sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'count':27,'columns':6,'rows':5,'lastThreeBlank':True}
+bindings=[b for t in d['tiles'] for b in t['bindings']]
+d['materialCoverage']={'metadataSlots':len(bindings),'directBasecolorSlots':sum(b['status']=='basecolor' for b in bindings),'unknownLayeredSlots':sum(b['status']!='basecolor' for b in bindings),'packedChannels':'not fabricated','shaderFaithfulness':'basecolor preview only'}
+(R/'manifest.json').write_text(json.dumps(d,indent=2))
+print(json.dumps({'sheet':d['contactSheet'],'coverage':d['materialCoverage'],'different':different},indent=2))

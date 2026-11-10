@@ -1,0 +1,26 @@
+
+import re,os,json,glob,sys
+os.makedirs(r"@@DF_PATH_DF_FOLIAGE_20261108@@/preview",exist_ok=True)
+out=open(r"@@DF_PATH_DF_FOLIAGE_20261108@@/preview/v266-r3-props.tsv","w")
+log=open(r"@@DF_PATH_DF_FOLIAGE_20261108@@/preview/extract.log","w")
+ent=re.compile(r'"CMapEntity"\s*\{(.*?)\n\t"connectionsData"',re.S)
+pr=re.compile(r'"EditGameClassProps"\s*\{\s*"id" "elementid" "([0-9a-f-]+)"(.*?)\n\}',re.S)
+tot=0
+for f in sorted(glob.glob(r"@@DF_PATH_DF_V266_R3_STAGE_20261108@@/content/kat/maps/*.vmap")):
+    t=open(f,errors='replace').read().replace('\r','')
+    props={}
+    for m in pr.finditer(t):
+        b=m.group(2)
+        g=lambda k:(re.search('"'+k+'" "string" "([^"]*)"',b) or [0,''])[1]
+        props[m.group(1)]=(g('classname'),g('model'),g('solid'))
+    n=0
+    for m in ent.finditer(t):
+        b=m.group(1)
+        o=re.search(r'"origin" "vector3" "([^"]+)"',b); a=re.search(r'"angles" "qangle" "([^"]+)"',b); s=re.search(r'"scales" "vector3" "([^"]+)"',b)
+        p=re.search(r'"entity_properties" "element" "([^"]+)"',b)
+        nm=re.search(r'"name" "string" "([^"]*)"',b)
+        if not(o and p): continue
+        c=props.get(p.group(1),('','',''))
+        out.write("\t".join([os.path.basename(f),nm.group(1) if nm else '',c[0],c[1],c[2],o.group(1),a.group(1) if a else '',s.group(1) if s else ''])+"\n"); n+=1
+    tot+=n; log.write(f+" "+str(n)+"\n"); log.flush()
+log.write("DONE "+str(tot)+"\n"); log.close(); out.close()

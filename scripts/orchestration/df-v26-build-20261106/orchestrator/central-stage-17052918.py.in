@@ -1,0 +1,34 @@
+import pathlib,json,hashlib,sys,io,re,shutil,os,traceback,datetime
+R=pathlib.Path('@@DF_PATH_DF_V26_BUILD_20261106@@');O=R/'orchestrator';S=R/'central-stage-17052918';S.mkdir(exist_ok=True)
+sys.stdout=(S/'stage.log').open('w',buffering=1);sys.stderr=sys.stdout
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def save(n,x):(S/n).write_text(json.dumps(x,indent=2))
+save('process.json',{'pid':os.getpid(),'parent':os.getppid(),'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'purpose':'offline exact visibility integration only, no compiler'})
+try:
+ sys.path.insert(0,'@@DF_PATH_DF_V25_BUILD_20261106@@/component-work')
+ import generate_vmap as g
+ A=R/'visibility-full-audit-20261106-sole/CENTRAL-49f09f11-EXACT-1259-INTEGRATION-ACTIONS.json'
+ actions=json.loads(A.read_text());assert len(actions)==1259
+ for a in actions:
+  for key,h in [('independentSource','independentSourceSHA256'),('compiled','compiledSHA256'),('FBX','FBXsha256')]:assert sha(pathlib.Path(a[key]))==a[h],a[key]
+  assert a['PHYSsha256']==a['originalPHYSsha256']
+  for src,dest in [(pathlib.Path(a['independentSource']),S/'content/kat'/a['independentAlias']),(pathlib.Path(a['compiled']),S/'game/kat'/(a['independentAlias']+'_c'))]:
+   dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(src,dest)
+ print('1259 source/compiled/FBX SHA passes, 2518 assets staged',flush=True)
+ parts=[];matched=[]
+ for i in range(6):
+  p=pathlib.Path('@@DF_PATH_DF_V25_BUILD_20261106@@/content/kat/maps')/f'df_spaceport_v25_part{i}.vmap'
+  root=g.parse(p.read_text(encoding='utf8'));nodes={str(e.uuid):e for e in g.walk(root['world'].val_elem)}
+  subset=[a for a in actions if a['part']==i]
+  for a in subset:
+   e=nodes[a['entityUUID']];ep=e['entity_properties'].val_elem
+   assert ep['model'].val_str==a['expectedModel'],a
+   ep['model']=a['independentAlias'];matched.append(a['entityUUID'])
+  b=io.BytesIO();root.export_kv2(b,fmt_name='vmap',fmt_ver=40,unicode='silent',flat=True)
+  t=re.sub(r'"string"\s+"__U64__([^"]+)"',r'"uint64" "\1"',b.getvalue().decode()).replace('encoding keyvalues2 1 format vmap 40','encoding keyvalues2 4 format vmap 40')
+  out=S/'content/kat/maps'/f'df_spaceport_v26_part{i}.vmap';out.parent.mkdir(parents=True,exist_ok=True);out.write_text(t,encoding='utf8');g.parse(t)
+  parts.append({'part':i,'source':str(p),'sourceSHA256':sha(p),'candidate':str(out),'sha256':sha(out),'actions':len(subset)})
+  print('part',i,'staged',len(subset),flush=True)
+ assert len(matched)==len(set(matched))==1259
+ save('visibility-stage.json',{'pass':True,'actions':1259,'sourceActionsSHA256':sha(A),'parts':parts,'noCompiler':True,'notFinalBuildInputs':True,'pending':['water correctness','base168 terrain','exact Cube103','ERROR independentPHYS','typedmarks qualified only','parent v26 chain and package closure'],'old360Preserved':'no nodes removed, model changes only exact new1259','sixlocks':'untouched','effectiveUnknown':53719})
+except BaseException:save('failure.json',{'error':traceback.format_exc()});raise

@@ -1,0 +1,21 @@
+import json,pathlib,hashlib,collections
+P=pathlib.Path(__file__).parent
+cov=json.loads((P/'coverage-blocker.json').read_text())['records']
+selections=[];counts=collections.Counter();seen=set()
+for line in pathlib.Path('@@DF_PATH_DF_V25_BUILD_20261106@@/component-work/final-combined-decomposed.jsonl').open():
+ r=json.loads(line);mesh=r['meshObjectPath'];low=mesh.lower()
+ typ='road' if any(k in low for k in ['/road','_road','/ground/','_ground_']) else 'prop' if any(k in low for k in ['/props/','/prop/','/rock/','_rock_','/stone/','/street/']) else None
+ if not typ:continue
+ p=r['positionCS2'];x=(p[0]+240984)/.36;y=-(p[1]+164808)/.36
+ slot=next((c for c in cov if abs(x-c['bounds']['Origin']['X'])<=6300 and abs(y-c['bounds']['Origin']['Y'])<=6300),None)
+ if not slot:continue
+ kind='collision' if slot['payloadPresent'] else 'CDLODderived' if slot['bounds']['BoxExtent']['Z'] else 'uncertified'
+ counts[(typ,kind)]+=1
+ key=(mesh,kind)
+ if kind=='uncertified' or key in seen:continue
+ if sum(s['type']==typ and s['terrainKind']==kind for s in selections)>=12:continue
+ outs=r['meshSource'].get('outputs',[])
+ if not outs or not pathlib.Path(outs[0]).exists():continue
+ seen.add(key);selections.append(dict(type=typ,terrainKind=kind,slot=pathlib.Path(slot['package']).name,placement=r))
+out=dict(counts={str(k):v for k,v in counts.items()},selected=selections,source='Read-only existing final-combined-decomposed.jsonl',purpose='Stratified geometry-ground checks, not whole-map resting certification')
+(P/'ground-selection.json').write_text(json.dumps(out,indent=2));print(json.dumps(dict(counts=out['counts'],selected=len(selections))))

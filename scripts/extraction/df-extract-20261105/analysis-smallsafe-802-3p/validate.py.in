@@ -1,0 +1,64 @@
+from pathlib import Path
+import json,hashlib,subprocess,struct
+from PIL import Image,ImageChops,ImageStat
+from srctools.vpk import VPK
+W=Path('@@DF_PATH_SPACEPORT_KAT_REBUILD_20261105@@');S=W/'next-build-20261105/loot-stage';D=Path('@@DF_PATH_DF_EXTRACT_20261105@@');X=D/'spacecenter-superset'
+O=D/'analysis-smallsafe-802-3p';O.mkdir(exist_ok=True)
+def sha(b):return hashlib.sha256(b).hexdigest()
+def load(p):return json.loads(p.read_text(encoding='utf8'))
+def save(n,d):(O/n).write_text(json.dumps(d,indent=2,ensure_ascii=False),encoding='utf8')
+def refs(b):
+ _,_,_,off,count=struct.unpack_from('<IHHII',b);out=[]
+ for i in range(count):
+  q=8+off+12*i
+  if b[q:q+4]!=b'RERL':continue
+  start=q+4+struct.unpack_from('<I',b,q+4)[0];rel,n=struct.unpack_from('<II',b,start)
+  for j in range(n):
+   q=start+rel+16*j;ss=q+8+struct.unpack_from('<q',b,q+8)[0];s=b[ss:b.index(0,ss)].decode();out.append(s if s.endswith('_c') else s+'_c')
+ return out
+def dump(path,block):
+ r=subprocess.run([str(W/'vrf/Source2Viewer-CLI.exe'),'-i',str(path),'-b',block],capture_output=True,encoding='utf8',errors='replace',timeout=25)
+ (O/(path.name+'-'+block+'.txt')).write_text(r.stdout+r.stderr,encoding='utf8');return dict(block=block,exit=r.returncode,text=r.stdout)
+assets=load(S/'exported-assets.json');asset=next(a for a in assets if a['mesh']=='props_collect_SmallSafeBox_802_3P')
+mat=load(S/'extracted-materials.json')['props_collect_SmallSafeBox_802'];stage=next(a for a in load(S/'material-native-stage.json')if a['source']==mat['source'])
+effective=load(D/'material-coverage/effective-material-parameters.json')
+dfmat=next(v for k,v in effective.items() if '/props_collect_SmallSafeBox_802.' in k)
+save('source-identity.json',dict(asset=asset,blender_material=mat,native_stage=stage,DF_material=dfmat,source_slot=next(a for a in load(S/'units-material-slots-verified.json')if a['mesh']==asset['mesh']),main_material_map_has_safe=mat['source'] in load(W/'material-map.json')))
+textures=[json.loads(l)for l in (X/'textures.jsonl').read_text().splitlines()if 'props_collect_SmallSafeBox_802/' in l]
+pairs=[]
+for t in textures:
+ src=next(i for i in mat['images']if i['name']==t['Name']+'.png');p=Path(src['path']);q=X/t['target']
+ a=Image.open(p);b=Image.open(q);aa=a.convert('RGBA');bb=b.convert('RGBA');diff=ImageChops.difference(aa,bb);stats=ImageStat.Stat(diff)
+ pairs.append(dict(DF=t,original_source=src,source_file_sha256=sha(p.read_bytes()),DF_file_sha256=sha(q.read_bytes()),source_mode=a.mode,DF_mode=b.mode,source_dimensions=a.size,DF_dimensions=b.size,source_pixel_sha256=sha(aa.tobytes()),DF_pixel_sha256=sha(bb.tobytes()),pixel_equal=aa.tobytes()==bb.tobytes(),per_channel_mean_abs_difference=stats.mean,per_channel_extrema_difference=diff.getextrema(),source_extrema=aa.getextrema(),DF_extrema=bb.getextrema()))
+save('paired-textures.json',pairs)
+# Only the known self-contained loot package. Read installed resource bytes, never query the game/server.
+server=Path('@@DF_PATH_CS2_SPACEPORT_PRIVATE@@/latest-20261104');client=Path('@@DF_PATH_STEAMLIBRARY@@/steamapps/common/Counter-Strike Global Offensive/game/csgo')
+archives={}
+for label,p in [('server',server/'kat_linked_loot.vpk'),('client',client/'kat_linked_loot.vpk'),('validated',S/'bottomcenter-v2/ready/kat_linked_loot.vpk')]:
+ if p.exists():archives[label]=(p,VPK(p))
+paths=[asset['model']+'_c','materials/kat_linked_loot/'+mat['key']+'.vmat_c'];records=[]
+todo=list(paths);done=set()
+while todo:
+ key=todo.pop(0)
+ if key in done:continue
+ done.add(key);row=dict(resource=key,archives={})
+ data=None
+ for label,(p,v)in archives.items():
+  if key in v:
+   blob=v[key].read();row['archives'][label]=dict(archive=str(p),sha256=sha(blob),bytes=len(blob))
+   if data is None:data=blob
+ for label,root in [('server',server),('client',client)]:
+  p=root/key
+  if p.is_file():row[label+'_loose']=dict(path=str(p),sha256=sha(p.read_bytes()))
+ if data is None:row['status']='not_found';records.append(row);continue
+ p=O/Path(key).name;p.write_bytes(data);row['refs']=refs(data)
+ if key.endswith('.vmdl_c'):
+  row['dumps']=[dump(p,'MDAT'),dump(p,'DATA')]
+ elif key.endswith('.vmat_c'):
+  row['dumps']=[dump(p,'DATA')]
+  todo.extend(r for r in row['refs'] if r.endswith('.vtex_c'))
+ elif key.endswith('.vtex_c'):row['dumps']=[dump(p,'DATA')]
+ records.append(row)
+save('compiled-resource-evidence.json',records)
+save('source-vmat.json',dict(path=str(S/'content/kat/materials/kat_linked_loot'/ (mat['key']+'.vmat')),text=(S/'content/kat/materials/kat_linked_loot'/(mat['key']+'.vmat')).read_text(),sha256=sha((S/'content/kat/materials/kat_linked_loot'/(mat['key']+'.vmat')).read_bytes())))
+print(json.dumps(dict(artifact=str(O),pairs=[dict(name=p['DF']['Name'],pixels_equal=p['pixel_equal'],difference=p['per_channel_mean_abs_difference'])for p in pairs],compiled=[dict(path=r['resource'],archives=r['archives'],dumps=[dict(block=d['block'],exit=d['exit'],text=d['text'][:10000])for d in r.get('dumps',[])])for r in records]),ensure_ascii=False))

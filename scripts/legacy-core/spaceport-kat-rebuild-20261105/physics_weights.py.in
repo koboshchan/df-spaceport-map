@@ -1,0 +1,26 @@
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
+from pathlib import Path
+import json,struct,collections,hashlib
+from srctools.vpk import VPK
+W=Path('@@DF_PATH_SPACEPORT_KAT_REBUILD_20261105@@');R=W/'analysis/physics-readonly'
+m=json.loads((W/'geometry-manifest.json').read_text(encoding='utf8'))['meshes'];by={x['model']:x for x in m}
+print('MANIFESTKEYS',list(m[0]),m[0]['model'])
+def bs(d):
+ _,_,_,off,n=struct.unpack_from('<IHHII',d)
+ return [(d[b:b+4].decode(),struct.unpack_from('<I',d,b+8)[0]) for i in range(n) for b in [8+off+12*i]]
+sizes=[]
+for x in m:
+ key=Path(x['model']).stem
+ p=W/'compile-full/game/kat/models/kat_spaceport'/ (key+'.vmdl_c')
+ if not p.exists():
+  print('missinglookup',str(p));break
+ s=next(s for k,s in bs(p.read_bytes()) if k=='PHYS');sizes.append((s,len(x['objects'])))
+print('PHYS_SIZES',len(sizes),'unique',sum(s for s,n in sizes),'instance_weighted',sum(s*n for s,n in sizes))
+v=VPK('@@DF_PATH_CS2_SPACEPORT_PRIVATE@@/latest-20261104/df_spaceport_kat_fast.vpk');c=collections.Counter();phys=[]
+for n in v.filenames():
+ if n.endswith('.vmdl_c'):
+  blocks=bs(v[n].read());c[str(tuple(k for k,s in blocks))]+=1
+  if any(k=='PHYS' and s>0 for k,s in blocks):phys.append(n)
+print('MAPMODELBLOCKS',dict(c),'NONEMPTYPHYSFILES',phys[:30])
+print('VPKHASH',hashlib.sha256(Path('@@DF_PATH_CS2_SPACEPORT_PRIVATE@@/latest-20261104/df_spaceport_kat_fast.vpk').read_bytes()).hexdigest())

@@ -1,0 +1,27 @@
+
+import json,math,traceback
+from pathlib import Path
+import numpy as np,trimesh
+from PIL import Image,ImageDraw,ImageFont
+r=Path('@@DF_PATH_DF_RED_ITEMS@@');sel=json.loads((r/'selection.json').read_text(encoding='utf8'));ex={x['asset']:x for x in json.loads((r/'export-results.json').read_text())};out=r/'preview';out.mkdir(exist_ok=True)
+font=ImageFont.truetype('@@DF_PATH_WINDOWS@@/Fonts/msyh.ttc',13);head=ImageFont.truetype('@@DF_PATH_WINDOWS@@/Fonts/msyh.ttc',24)
+qa=[]
+def thumb(e):
+ f=e['glbs'][0];sc=trimesh.load(f,force='scene',process=False);mesh=sc.to_geometry();v=np.array(mesh.vertices);faces=np.array(mesh.faces);qa.append(dict(asset=e['asset'],vertices=len(v),triangles=len(faces),finite=bool(np.isfinite(v).all())))
+ v-=np.mean(mesh.bounds,axis=0);az=.65;el=.35;rot=np.array([[math.cos(az),0,math.sin(az)],[0,1,0],[-math.sin(az),0,math.cos(az)]])@np.array([[1,0,0],[0,math.cos(el),-math.sin(el)],[0,math.sin(el),math.cos(el)]]);v=v@rot;v*=140/max(np.ptp(v[:,:2],axis=0).max(),1e-8);xy=v[:,:2]*[1,-1]+[100,90];img=Image.new('RGB',(200,175),(24,29,38));d=ImageDraw.Draw(img);tri=v[faces];n=np.cross(tri[:,1]-tri[:,0],tri[:,2]-tri[:,0]);n/=np.maximum(np.linalg.norm(n,axis=1)[:,None],1e-9);light=np.abs(n@np.array([.3,.5,.8]));order=np.argsort(tri[:,:,2].mean(axis=1));
+ for i in order:
+  shade=int(80+150*light[i]);d.polygon([tuple(a) for a in xy[faces[i]]],fill=(int(shade*.74),int(shade*.87),shade))
+ return img
+cache={}
+for section,title in [('red_loot','RED ITEMS'),('keycards','ALL KEY ITEMS / KEYCARDS')]:
+ groups={}
+ for x in sel:
+  if x['section']==section and ex.get(x['mesh'],{}).get('status')=='ok':groups.setdefault(x['mesh'],[]).append(x)
+ W=1200;H=90+math.ceil(len(groups)/6)*225;im=Image.new('RGB',(W,H),(15,19,27));d=ImageDraw.Draw(im);d.text((20,12),title,font=head,fill='white');d.text((20,48),'Render geometry only, neutral clay. Shared meshes shown once; item variants mapped in manifest.',font=font,fill=(170,180,200))
+ for i,(asset,rows) in enumerate(groups.items()):
+  if asset not in cache:
+   try:cache[asset]=thumb(ex[asset])
+   except Exception as e:cache[asset]=Image.new('RGB',(200,175),'darkred');qa.append(dict(asset=asset,error=str(e)))
+  x=i%6*200;y=90+i//6*225;im.paste(cache[asset],(x,y));d.text((x+5,y+176),str(rows[0]['name_cn'] or 'unnamed')[:16],font=font,fill='white');d.text((x+5,y+198),rows[0]['id']+(' +'+str(len(rows)-1) if len(rows)>1 else ''),font=font,fill=(160,177,200))
+ im.save(out/(section+'.png'));print(section,len(groups),flush=True)
+(r/'geometry-qa.json').write_text(json.dumps(qa),encoding='utf8')

@@ -1,0 +1,79 @@
+
+from pathlib import Path
+import re,json,hashlib,shutil,subprocess,os,traceback,psutil
+S=Path('@@DF_PATH_DF_V268_SINGLEMAP_20261109@@');B=Path('@@DF_PATH_DF_V268_SHARED_STAGE_20261109@@');Q=S/'proof'
+def sha(p):
+ with p.open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
+def save(n,v):(Q/n).write_text(json.dumps(v,indent=2))
+def field(b,k):
+ m=re.search('"'+re.escape(k)+'" "[^"]+" "([^"]*)"',b);return m.group(1) if m else None
+try:
+ free=shutil.disk_usage('@@DF_DRIVE_E@@').free;assert free>60*1024**3
+ assert not any((p.info['name'] or '').lower()=='resourcecompiler.exe' for p in psutil.process_iter(['name']))
+ save('budget.json',dict(free=free,buildRollbackLogsBudget=40*1024**3,reserveOnce=20*1024**3))
+ maps=[B/'content/kat/maps/df_spaceport_v267.vmap']+sorted((B/'content/kat/maps').glob('*part*.vmap'))
+ parsed=[];sources=[]
+ for p in maps:
+  blocks={}
+  for m in re.finditer(r'^"([^"]+)"\s*\n\{(.*?)^\}',p.read_text(),re.M|re.S):
+   k,b=m.groups();u=field(b,'id');assert u and u not in blocks;blocks[u]=(k,m.group())
+  assert blocks;parsed.append(blocks);sources.append(dict(path=str(p),sha256=sha(p)))
+ removed=set()
+ for u,(k,b) in parsed[0].items():
+  if k=='CMapEntity':
+   prop=field(b,'entity_properties');pb=parsed[0][prop][1]
+   if field(pb,'classname')=='info_spawngroup_load_unload':
+    assert field(b,'origin')=='0 0 0' and field(b,'angles')=='0 0 0' and field(b,'scales')=='1 1 1'
+    removed.update([u,prop])
+   if field(pb,'targetname')=='df_v25_load_children':
+    removed.update([u,prop]);removed.update(re.findall(r'"element" "([^"]+)"',b))
+ merged={};children=[];dedup=[]
+ for index,blocks in enumerate(parsed):
+  for u,(k,b) in blocks.items():
+   if k=='CMapWorld':
+    worldid=u;m=re.search(r'"children" "element_array"\s*\[(.*?)\]',b,re.S);assert m
+    children+=re.findall(r'"element" "([^"]+)"',m[1])
+    if index==0:merged[u]=(k,b)
+    continue
+   if u in removed:continue
+   if u in merged and merged[u][1]!=b:
+    assert u=='f3f8e256-c611-51c0-8931-a9127b13871b' and k=='CMapEntity'
+    old=merged[u][1];assert all(field(old,key)==field(b,key) for key in ['origin','angles','scales','name'])
+    op=field(old,'entity_properties');np=field(b,'entity_properties')
+    assert re.sub(r'"id" "elementid" "[^"]+"','',merged[op][1])==re.sub(r'"id" "elementid" "[^"]+"','',blocks[np][1])
+    dedup.append(dict(uuid=u,property=np,reason='identical landmark except editor nodeID and equivalent property UUID'));continue
+   if u not in merged:merged[u]=(k,b)
+ children=list(dict.fromkeys(u for u in children if u not in removed));assert all(u in merged for u in children)
+ k,w=merged[worldid]
+ w=re.sub(r'("children" "element_array"\s*\[).*?(\])',lambda m:m[1]+'\n'+',\n'.join('\t\t"element" "'+u+'"' for u in children)+'\n\t'+m[2],w,count=1,flags=re.S)
+ merged[worldid]=(k,w);entities={u:b for u,(k,b) in merged.items() if k=='CMapEntity'};classes={}
+ for blocks in parsed:
+  for u,(k,b) in blocks.items():
+   if k=='CMapEntity' and u not in removed and u!='f3f8e256-c611-51c0-8931-a9127b13871b':assert merged[u][1]==b
+ for u,b in entities.items():
+  cl=field(merged[field(b,'entity_properties')][1],'classname');classes[cl]=classes.get(cl,0)+1
+ assert classes.get('trigger_hurt')==1847
+ assert classes.get('info_player_terrorist')==16 and classes.get('info_player_counterterrorist')==16
+ assert not classes.get('info_spawngroup_load_unload')
+ assert float(field(entities['3bc584b4-b0ac-5394-bfa2-d89d8e422c6a'],'origin').split()[2])==147.892578125
+ text='<!-- dmx encoding keyvalues2 4 format vmap 40 -->\n\n'+'\n\n'.join(b for k,b in merged.values())+'\n'
+ assert 'df_spaceport_v267_part' not in text and 'df_v25_load_children' not in text
+ dst=S/'content/kat/maps/df_spaceport_v268.vmap';dst.parent.mkdir(parents=True);dst.write_text(text)
+ save('flatten-proof.json',dict(sources=sources,outputSHA256=sha(dst),entityCount=len(entities),classes=classes,removedPartitionOnly=list(removed),deduplicated=dedup,allOtherEntityBlocksExact=True,partitionTransformsIdentity=True,orphanPropertyPreserved='30fb56ca-1488-4c6b-9708-aed4b7f9f02c' in merged))
+ for typ in ['content','game']:
+  for n in ['models','materials']:shutil.copytree(B/typ/'kat'/n,S/typ/'kat'/n)
+  for n in ['csgo','core']:
+   src=B/typ/n;dst=S/typ/n
+   if src.exists():
+    r=subprocess.run(['cmd','/c','mklink','/J',str(dst),str(src.resolve())],capture_output=True,text=True);assert r.returncode==0
+ shutil.copy2(B/'game/kat/gameinfo.gi',S/'game/kat/gameinfo.gi')
+ original=(B/'proof/compile-world.py').read_text().replace("S=Path('@@DF_PATH_DF_V268_SHARED_STAGE_20261109@@')","S=Path('@@DF_PATH_DF_V268_SINGLEMAP_20261109@@')")
+ start=original.index(" for i in range(6):native(");end=original.index(" save('NATIVE-SEVEN-FINISHED.json'",start)
+ original=original[:start]+" native('world-single','maps/df_spaceport_v268.vmap',True)\n"+original[end:]
+ original=original.replace('NATIVE-SEVEN-FINISHED.json','NATIVE-SINGLE-FINISHED.json')
+ runner=Q/'compile-world.py';runner.write_text(original)
+ save('prepare-complete.json',dict(pid=os.getpid(),noInstall=True,compileRunnerSHA256=sha(runner)))
+ r=subprocess.run(['@@DF_USER_HOME@@/miniconda3/python.exe',str(runner)],cwd=S,timeout=21600);assert r.returncode==0
+ save('single-compile-complete.json',dict(exit=0,QA_PENDING=True,noInstall=True))
+except:
+ save('SINGLE-BLOCKER.json',dict(error=traceback.format_exc(),noInstall=True));raise

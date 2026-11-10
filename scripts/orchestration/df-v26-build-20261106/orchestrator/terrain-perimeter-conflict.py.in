@@ -1,0 +1,48 @@
+from pathlib import Path
+import json,numpy as np,hashlib
+from shapely import set_precision
+from shapely.geometry import Polygon,Point
+from shapely.ops import unary_union
+from shapely.strtree import STRtree
+O=Path('@@DF_PATH_DF_V26_BUILD_20261106@@/terrain-stage');P=Path('@@DF_PATH_DF_TERRAIN_FULL_20261106_V3@@')
+def mesh(p):
+ v=[];f=[]
+ for l in Path(p).read_text().splitlines():
+  s=l.split()
+  if s and s[0]=='v':v.append(list(map(float,s[1:4])))
+  elif s and s[0]=='f':f.append([int(x)-1 for x in s[1:]])
+ return np.array(v),np.array(f)
+m=json.loads((O/'approved-nine-mapping.json').read_text())['objects'];roads=[];planes=[];ids=[]
+for a in m:
+ d=np.load(a['triangleNPZ'])
+ for t in d['vertices'][d['triangles']]:
+  p=set_precision(Polygon(t[:,:2]),1e-7)
+  if p.area<1e-8:continue
+  roads.append(p);planes.append(np.linalg.solve(np.c_[t[:,:2],np.ones(3)],t[:,2]));ids.append(a['historicalIndex'])
+foot=unary_union(roads);boundary=foot.boundary;tree=STRtree(roads);pts={i:{}for i in ids}
+rows=json.loads((P/'seam-v4/next-build/integration-manifest.json').read_text())['artifacts']
+def lines(g):
+ if g.is_empty:return[]
+ if g.geom_type in['LineString','LinearRing']:return[g]
+ return[x for gg in getattr(g,'geoms',[])for x in lines(gg)]
+for a in rows:
+ if a['kind']!='CDLOD-derived':continue
+ v,f=mesh(a['sourceOBJ']);lo=v[:,:2].min(axis=0);hi=v[:,:2].max(axis=0)
+ if hi[0]<foot.bounds[0]or hi[1]<foot.bounds[1]or lo[0]>foot.bounds[2]or lo[1]>foot.bounds[3]:continue
+ for t in v[f]:
+  p=set_precision(Polygon(t[:,:2]),1e-7)
+  if not p.intersects(boundary):continue
+  c=np.linalg.solve(np.c_[t[:,:2],np.ones(3)],t[:,2])
+  for ln in lines(p.intersection(boundary)):
+   for xy in ln.coords:
+    pt=Point(xy);near=tree.query(pt.buffer(2e-6),predicate='intersects')
+    if not len(near):continue
+    rz=min(float(np.r_[xy,1]@planes[i])for i in near);oz=float(np.r_[xy,1]@c);gap=max(0,oz-rz+1.5)
+    for ri in near:
+     k=ids[ri];key=tuple(np.round(xy,6));rec=dict(xCS=xy[0],yCS=xy[1],originalTerrainZCS=oz,asphaltZCS=rz,requiredBoundaryDropCS=gap,tile=a['canonicalID'])
+     if key not in pts[k]or pts[k][key]['requiredBoundaryDropCS']<gap:pts[k][key]=rec
+out=[]
+for k,d in pts.items():
+ vv=list(d.values());out.append(dict(historicalIndex=k,uniqueExactPerimeterIntersectionVertices=len(vv),positiveDropVertices=sum(x['requiredBoundaryDropCS']>1e-4 for x in vv),dropOver18CSVertices=sum(x['requiredBoundaryDropCS']>18 for x in vv),maxRequiredBoundaryDropCS=max([x['requiredBoundaryDropCS']for x in vv],default=0),worst=sorted(vv,key=lambda x:x['requiredBoundaryDropCS'],reverse=True)[:5]))
+p=O/'exact-road-perimeter-scope-conflict.json';p.open('x').write(json.dumps(dict(status='STRICT_CONTINUOUS_HEIGHTFIELD_SCOPE_CONFLICT',roads=out,method='Exact all9 union outer perimeter intersects original coarse triangle boundaries. Asphalt plane lower envelope at intersection vertices, original terrain plane minus (asphalt-1.5). Coordinates rounded only1e-7 for robust polygon predicates, not terrain source edits.',meaning='Positive boundary drop means min(original,asphalt-1.5) inside cannot join unchanged outside as a continuous single-valued heightfield. Vertical wall stitch would add a cliff; extending a blend band would relax user footprint-only scope. Neither silently staged.',threshold18='Diagnostic height metric only, no claim of actual configured game movement setting.',action='Do not integrate or compile road candidate until central/user agrees on boundary treatment; exact168 and roads remain unchanged.'),indent=2))
+print('PERIMETER',hashlib.sha256(p.read_bytes()).hexdigest());print(json.dumps(out,indent=2))

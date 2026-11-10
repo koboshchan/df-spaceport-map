@@ -1,0 +1,66 @@
+import pathlib,json,hashlib,collections,struct,math
+P=pathlib.Path('@@DF_PATH_DF_FOLIAGE_20261108@@'); W=P/'inventory'; E=pathlib.Path('@@DF_PATH_DF_EXTRACT_20261105@@')
+def load(p):return json.loads(p.read_text(encoding='utf8'))
+def sha(p):
+ h=hashlib.sha256()
+ with p.open('rb') as f:
+  for b in iter(lambda:f.read(1048576),b''):h.update(b)
+ return h.hexdigest()
+def norm(s):return s.split('.')[0]
+def dump(n,x):(W/n).write_text(json.dumps(x,indent=2,ensure_ascii=False),encoding='utf8')
+S=load(P/'decode-summary.json'); types=load(P/'type-mapping.json')
+eff=load(E/'material-coverage/effective-material-parameters.json'); effnorm={norm(k):v for k,v in eff.items()}
+cat=collections.Counter(); perType=collections.Counter(); meshType=collections.defaultdict(collections.Counter)
+for line in (P/'transforms-candidate-ue.jsonl').open(encoding='utf8'):
+ r=json.loads(line);perType[r['sourceType']]+=1;meshType[r['mesh']][r['sourceType']]+=1
+def kind(path):
+ if '/Nature_HD/' in path:return 'rock'
+ if '/Decoration/' in path:return 'decor'
+ if '/Tree/' in path:return 'tree'
+ if '/Grass/' in path:return 'grass'
+ return 'bush'
+rows=[];materialPaths=set();overrides={}
+for typ,t in types.items():
+ for key,v in t['props'].items():
+  if 'OverrideMaterial' in key:
+   overrides.setdefault(typ,{})[key]=v
+   for ref in v:
+    if isinstance(ref,dict) and ref.get('ObjectPath'):materialPaths.add(norm(ref['ObjectPath']))
+for path,n in S['perMesh'].items():
+ base=norm(path);mdpath=E/'meshes'/(base+'.metadata.json');gpath=E/'meshes'/(base+'.glb');md=load(mdpath) if mdpath.exists() else None
+ probe=W/(hashlib.sha256((base+'.uasset').encode()).hexdigest()[:12].upper()+'.json')
+ pr=load(probe) if probe.exists() else {}
+ mr=next((x for x in pr.get('results',[]) if x['kind']=='mesh'),None)
+ for x in (md or {}).get('slots',[]):
+  if x.get('material'):materialPaths.add(norm(x['material']))
+ k=kind(path);cat[k]+=n
+ row={'mesh':path,'instances':n,'semanticClass':k,'sourceTypes':dict(meshType[path]),'collisionPolicy':('SOLID' if k=='tree' else 'NONE' if k in ['grass','bush'] else 'SEPARATE_DECISION_NOT_BOTANICAL'),'sourcePackages':pr.get('files',[]),'probeError':pr.get('error'),'lods':mr.get('lods') if mr else None,'screenSizes':mr.get('screenSize') if mr else None,'serializedMeshProperties':mr.get('properties') if mr else None,'slots':(md or {}).get('slots'),'metadataFile':str(mdpath),'metadataSHA256':sha(mdpath) if mdpath.exists() else None}
+ if gpath.exists():
+  with gpath.open('rb') as f:
+   header=f.read(12);ln,typ=struct.unpack('<II',f.read(8));g=json.loads(f.read(ln))
+  row['glb']={'path':str(gpath),'bytes':gpath.stat().st_size,'sha256':sha(gpath),'triangles':sum(g['accessors'][v['indices']]['count']//3 for m in g['meshes'] for v in m['primitives']),'accessorPayloadBytes':sum(v['count']*{'SCALAR':1,'VEC2':2,'VEC3':3,'VEC4':4,'MAT4':16}[v['type']]*{5120:1,5121:1,5122:2,5123:2,5125:4,5126:4}[v['componentType']] for v in g['accessors']),'sourceLOD':md['sourceLOD'],'sourceLODCount':md['sourceLODCount']}
+ rows.append(row)
+materials={};textures=set()
+for path in sorted(materialPaths):
+ e=effnorm.get(path)
+ if not e:materials[path]={'status':'NOT_IN_EFFECTIVE_MATERIAL_REPORT'};continue
+ refs=[]
+ for par in e.get('effective_parameters',[]):
+  if par.get('kind')=='TextureParameterValues' and isinstance(par.get('value'),dict):
+   ref=par['value'].get('ObjectPath')
+   if ref:textures.add(norm(ref));refs.append({'parameter':par.get('parameter_info'),'texture':ref,'source':par.get('source')})
+ materials[path]={'status':e.get('parent_resolution'),'parentChain':e.get('parent_chain'),'effectiveTextures':refs,'alphaShading':e.get('effective_alpha_shading_explicit'),'staticOverrides':e.get('effective_static_overrides'),'graphStatus':e.get('graph_connection_status'),'declaredDefaultsNotEvaluated':e.get('declared_graph_parameter_defaults',[])}
+textureInfo={}
+for name in ['textures.jsonl','texture-flags.jsonl']:
+ f=E/'spacecenter-superset'/name
+ for line in f.open(encoding='utf8'):
+  t=json.loads(line);base=norm(t['path'])
+  if base in textures:textureInfo.setdefault(base,{}).update(t)
+typeEvidence={}
+for typ,t in types.items():
+ props=t['props']
+ typeEvidence[typ]={'instances':perType[typ],'mesh':t['mesh'],'shadowSerialized':{k:v for k,v in props.items() if 'hadow' in k},'shadowAbsentMeaning':'unknown inherited/default, not false','collisionSerialized':{k:v for k,v in props.items() if 'ollision' in k or 'BodyInstance' in k},'materialOverrides':overrides.get(typ,{}),'visibilitySerialized':{k:v for k,v in props.items() if 'isible' in k or 'ensity' in k or 'Cull' in k}}
+missing=[x for x in textures if not textureInfo.get(x,{}).get('width')]
+dump('texture-probe-inputs.json',[x+'.uasset' for x in sorted(textures)])
+dump('asset-inventory-preliminary.json',{'meshes':rows,'materials':materials,'textures':textureInfo,'types':typeEvidence,'semanticCounts':cat,'textureTargets':sorted(textures),'missingTextureDimensions':missing})
+print(json.dumps({'meshRows':len(rows),'probeMeshSuccess':sum(bool(x['lods']) for x in rows),'materials':len(materials),'textures':len(textures),'missingTextureDimensions':len(missing),'counts':cat}))

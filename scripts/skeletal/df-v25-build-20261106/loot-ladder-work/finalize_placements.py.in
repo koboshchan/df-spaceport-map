@@ -1,0 +1,14 @@
+from pathlib import Path
+import json,hashlib,numpy as np
+w=Path('@@DF_PATH_DF_V24_BUILD_20261106@@/loot-ladder-work')
+rows=[json.loads(l)for l in(w/'loot-placements.jsonl').read_text(encoding='utf8').splitlines()]
+bad=json.loads((w/'loot-placement-unresolved.json').read_text(encoding='utf8'))
+models=[json.loads(l)for l in(w/'models.jsonl').read_text(encoding='utf8').splitlines()]
+bykey={v['objectPath']:v for v in models}
+for v in bad:
+ mesh=v['meshObjectPath'];M=np.array(v['fullSourceWorldMatrix'],float);C=np.eye(4);C[:3,:]=np.diag([.36,-.36,.36])@M[:3,:];C[:3,3]=v['positionCS2']
+ v.pop('reason',None);v.update(matrixCS2=C.tolist(),model=bykey[mesh+'|closed']['model'],openedModel=bykey[mesh+'|opened']['model'],state='closed',futureSwapOnly=True)
+ rows.append(v)
+assert len(rows)==306 and len({v['selectionId']for v in rows})==306
+(w/'loot-placements.jsonl').write_text(''.join(json.dumps(v,ensure_ascii=False)+'\n'for v in rows),encoding='utf8')
+(w/'loot-all306-ready.json').write_text(json.dumps(dict(placements=len(rows),models=len(models),bigSafeTotal=sum(v['canonicalType']=='c_safe'for v in rows),smallSafeTotal=sum(v['canonicalType']=='c_small_safe'for v in rows),extensions=len(bad),approvedLockUnchanged=True)))

@@ -1,0 +1,10 @@
+import json,re,collections
+from pathlib import Path
+r=Path(r'@@DF_PATH_DF_EXTRACT_20261105@@')
+rows=[json.loads(l) for l in (r/'index-manifest.jsonl').open()]
+print('manifest rows',len(rows))
+for pattern in ['SpaceCity','SpaceCenter','BrokenGlass','Buxus','Branding_08','Ground_A_12','Container','Supply','Water','Grass']:
+ matches=[x for x in rows if re.search(pattern,x['path'],re.I)]
+ print('\nPATTERN',pattern,'count',len(matches))
+ for x in matches[:16]: print(x['path'],Path(x['pak']).name)
+(r/'texture-candidates.json').write_text(json.dumps([x for x in rows if re.search('SpaceCity|SpaceCenter|BrokenGlass|Buxus|Branding|Ground_A_12|Container|Supply|Water|Grass',x['path'],re.I)],indent=2))

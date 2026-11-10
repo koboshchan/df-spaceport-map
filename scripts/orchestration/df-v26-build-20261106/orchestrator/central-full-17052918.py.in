@@ -1,0 +1,73 @@
+import os,sys,json,pathlib,subprocess,datetime,traceback,hashlib,shutil
+R=pathlib.Path('@@DF_PATH_DF_V26_BUILD_20261106@@');S=R/'central-stage-17052918';W=S/'fullcompile';W.mkdir(exist_ok=True)
+sys.stdout=(W/'runner.log').open('w',buffering=1);sys.stderr=sys.stdout
+def now():return datetime.datetime.now(datetime.timezone.utc).isoformat()
+def save(n,x):(W/n).write_text(json.dumps(x,indent=2))
+save('runner-process.json',{'pid':os.getpid(),'stage':'integration','UTC':now()})
+try:
+ sys.path.insert(0,'@@DF_PATH_SPACEPORT_KAT_REBUILD_20261105@@')
+ from generate_vmap import parse,walk,cls
+ from next_partition_lib import write
+ from srctools.dmx import Attribute,ValueType
+ h=json.loads((R/'water-contact-owner/ACCEPTED-WATER-HANDOFF-17052918.json').read_text());assert h['accepted']
+ p=pathlib.Path(h['acceptedVmap']);assert hashlib.sha256(p.read_bytes()).hexdigest()==h['sourceSHA256']
+ water=parse(p.read_text(encoding='utf8'));we=[e for e in walk(water['world'].val_elem)if cls(e)=='trigger_hurt'];assert len(we)==1848,len(we)
+ G=S/'game/kat';C=S/'content/kat';B=pathlib.Path('@@DF_PATH_DF_V25_BUILD_20261106@@');counts=[]
+ for i in range(6):
+  root=parse((S/'prewater-maps'/f'df_spaceport_v26_part{i}.vmap').read_text(encoding='utf8'));world=root['world'].val_elem
+  children=list(world['children'].iter_elem());old=[e for e in walk(world)if cls(e)=='trigger_hurt']
+  # prior water entities are direct children in generated partition maps
+  oldids={e.uuid for e in old};children=[e for e in children if e.uuid not in oldids]
+  assert not any(cls(e)=='trigger_hurt'for e in children)
+  add=we[i::6];children.extend(add);world['children']=Attribute.array('children',ValueType.ELEMENT,children)
+  out=C/'maps'/f'df_spaceport_v26_part{i}.vmap';write(root,out)
+  counts.append({'part':i,'removedHurt':len(old),'water':len(add),'allEntities':sum(1 for e in walk(world)if 'entity_properties'in e)})
+  print('integrated',counts[-1],flush=True)
+ shutil.copy2(S/'prewater-maps/df_spaceport_v26.vmap',C/'maps/df_spaceport_v26.vmap')
+ # baseline assets mounted read-only fallback, staged overrides remain first
+ gi=(R/'error-native-pilot-1a46fd2d/game/kat/gameinfo.gi').read_text()
+ gi=gi.replace('Game\tkat','Game\tkat\n            Game "'+str(B/'game/kat')+'"')
+ assert str(B/'game/kat')in gi,'baseline mount absent'
+ (G/'gameinfo.gi').write_text(gi)
+ for n in ['core','csgo']:
+  dst=S/'game'/n
+  if not dst.exists():
+   q=subprocess.run(['cmd','/c','mklink','/J',str(dst),str(R/'error-native-pilot-1a46fd2d/game'/n)],capture_output=True,text=True);assert q.returncode==0,q.stdout+q.stderr
+ # source fallback directories only where staged directory absent
+ for top in ['materials','models']:
+  for d in (B/'content/kat'/top).iterdir():
+   dest=C/top/d.name
+   if not dest.exists():
+    dest.parent.mkdir(parents=True,exist_ok=True)
+    if d.is_dir():
+     q=subprocess.run(['cmd','/c','mklink','/J',str(dest),str(d)],capture_output=True,text=True);assert q.returncode==0
+    else:shutil.copy2(d,dest)
+ # merge missing baseline files in shared staged folders
+ for top in ['models','materials']:
+  for p in (B/'game/kat'/top).rglob('*'):
+   if p.is_file():
+    dst=G/p.relative_to(B/'game/kat')
+    if not dst.exists():dst.parent.mkdir(parents=True,exist_ok=True);os.link(p,dst)
+  for p in (B/'content/kat'/top).rglob('*'):
+   if p.is_file():
+    dst=C/p.relative_to(B/'content/kat')
+    if not dst.exists():dst.parent.mkdir(parents=True,exist_ok=True);os.link(p,dst)
+ save('integration.json',{'pass':True,'UTC':now(),'counts':counts,'totalWater':1848,'overshootWaiverOnly':h['overshootWaiver'],'noInstall':True})
+ leases=[R/'native-compiler-exclusive.lock',pathlib.Path('@@DF_PATH_DF_NATIVE_COMPILER_EXCLUSIVE_LEASE_JSON@@')]
+ assert not any(p.exists()for p in leases),'lease busy'
+ assert 'resourcecompiler.exe'not in subprocess.check_output(['tasklist','/FO','CSV','/NH'],text=True).lower(),'compiler busy'
+ for p in leases:
+  with p.open('x')as f:json.dump({'owner':'17052918','pid':os.getpid(),'purpose':'full v26'},f)
+ sys.path.insert(0,str(B/'compile-work'));from compile_runner import env
+ for name in [f'df_spaceport_v26_part{i}'for i in range(6)]+['df_spaceport_v26']:
+  cmd=['@@DF_PATH_STEAMLIBRARY@@/steamapps/common/Counter-Strike Global Offensive/game/bin/win64/resourcecompiler.exe','-i',str(C/'maps'/(name+'.vmap')),'-fshallow','-world','-entities','-phys','-nobakedlighting','-game',str(G),'-nop4']
+  log=W/(name+'.log')
+  with log.open('w')as f:
+   proc=subprocess.Popen(cmd,cwd=B,env=env(),stdout=f,stderr=subprocess.STDOUT);save('current.json',{'stage':name,'pid':proc.pid,'runnerPID':os.getpid(),'UTC':now(),'command':cmd,'log':str(log)});rc=proc.wait()
+  text=log.read_text(errors='replace').lower();assert rc==0 and 'failed to create physics hull'not in text,(name,rc)
+  save(name+'-exit.json',{'exitCode':rc,'UTC':now()})
+ save('complete.json',{'pass':True,'UTC':now(),'noInstall':True,'packQAStillRequired':True})
+except BaseException:save('failure.json',{'UTC':now(),'error':traceback.format_exc()});raise
+finally:
+ for p in [R/'native-compiler-exclusive.lock',pathlib.Path('@@DF_PATH_DF_NATIVE_COMPILER_EXCLUSIVE_LEASE_JSON@@')]:
+  if p.exists()and json.loads(p.read_text()).get('pid')==os.getpid():p.unlink()

@@ -1,0 +1,8 @@
+import json,re
+from pathlib import Path
+r=Path(r'@@DF_PATH_DF_EXTRACT_20261105@@')
+rows=[json.loads(l) for l in (r/'index-manifest.jsonl').open()]
+names=['MI_GEN_Grass_Base_01C.uasset','SM_SpaceCenter_WaterMesh_x13_y4.uasset']
+selected=[x for x in rows if x['path'].split('/')[-1] in names and ('SpaceCenter' in x['path'] or 'FutureTech_Ma1' in x['path'])]
+(r/'materials-selected-first.json').write_bytes((r/'materials-selected.json').read_bytes())
+(r/'materials-selected.json').write_text(json.dumps(selected))

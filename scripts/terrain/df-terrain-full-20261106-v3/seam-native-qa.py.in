@@ -1,0 +1,31 @@
+# Reuse audited binary parsing, never recompiles.
+exec(open(__import__('pathlib').Path(__file__).parent/'native-compare.py').read().split('M=json.loads')[0])
+V4=P/'seam-v4';O=V4/'next-build';M=json.loads((O/'changed-integration-manifest.json').read_text());results=[]
+for row in M['artifacts']:
+ n=row['canonicalID'];source=readobj(V4/'staged'/(n+'.obj'));native=readphys(O/'native-physics'/(n+'.physbin'));d,idx=cKDTree(source.mean(axis=1)).query(native.mean(axis=1),k=1);cyclic=np.stack([np.max(np.linalg.norm(native-np.roll(source[idx],j,axis=1),axis=2),axis=1) for j in range(3)]).min(axis=0)
+ ns=np.cross(source[idx,1]-source[idx,0],source[idx,2]-source[idx,0]);nn=np.cross(native[:,1]-native[:,0],native[:,2]-native[:,0]);norm=np.einsum('ij,ij->i',ns,nn)/(np.linalg.norm(ns,axis=1)*np.linalg.norm(nn,axis=1))
+ ok=len(source)==len(native)==len(np.unique(idx))and max(cyclic)<.02 and min(norm)>.99999
+ r=dict(canonicalID=n,sourceTriangles=len(source),nativeTriangles=len(native),uniqueSourceMatches=len(np.unique(idx)),maxCyclicVertexErrorCS=float(max(cyclic)),minOrientedNormalAgreement=float(min(norm)),tests='PASS'if ok else'FAIL');results.append(r);row['nativeTriangleComparison']=r;assert ok,n
+ print('V4 NATIVE',n,'PASS',flush=True)
+(O/'native-triangle-delta-qa.json').write_text(json.dumps(dict(tests='PASS',assets=results,maxVertexErrorCS=max(r['maxCyclicVertexErrorCS']for r in results)),indent=2))
+# Full849 integration manifest reuses unchanged native assets and original proof by exact hash, not recompiles.
+base=json.loads((P/'next-build/integration-manifest.json').read_text());delta={r['canonicalID']:r for r in M['artifacts']}
+old={r['canonicalID']:r for r in base['artifacts']};base['artifacts']=[delta.get(r['canonicalID'],r)for r in base['artifacts']]
+for r in base['artifacts']:
+ r['sourceGeneration']='SEAM_V4'if r['canonicalID']in delta else'UNCHANGED_V3'
+ r['seamModified']=r['canonicalID']in delta
+ for k in ['sourceOBJ','fbx','compiledFile']:
+  assert pathlib.Path(r[k]).exists(),(r['canonicalID'],k)
+ assert hashlib.sha256(pathlib.Path(r['sourceOBJ']).read_bytes()).hexdigest()==r['sourceOBJsha256']
+ assert hashlib.sha256(pathlib.Path(r['compiledFile']).read_bytes()).hexdigest()==r['compiledSHA256']
+for r in base['artifacts']:
+ if not r['approximate']:assert r==dict(old[r['canonicalID']],sourceGeneration='UNCHANGED_V3',seamModified=False)
+base.update(status='OFFLINE_SEAM_V4_NATIVE_GEOMETRY_PASS_OCCUPANCY_CONTACT_WARNINGS',nativeRecompiledCount=len(delta),nativeCompileCount=849,seamQA=str(V4/'seam-source-qa.json'),seamDelta=str(V4/'seam-delta.json'),zeroClassification=str(V4/'zero-slot-classification.json'),contactQA=str(V4/'contact-handoff-summary.json'),mixedSeams='52 original mixed boundaries conforming identical segment topology PASS, no visual-only skirt,168fine unchanged',blockers=['681 fine hole occupancy unknown;175 zeroextent slots unresolved, not certified empty','Contact metrics identify road penetrations/elevation; no object moved, structural support not certified','Neutral stock terrain materials approximate','No fullmap compile/runtime player hull test/install authorized or performed'])
+(O/'integration-manifest.json').write_text(json.dumps(base,indent=2))
+full=[r['nativeTriangleComparison'] for r in base['artifacts']]
+(O/'native-triangle-qa.json').write_text(json.dumps(dict(tests='PASS',assets=full,source='56 seam-native assets newly compared plus793unchanged V3native assets hash-verified;168fine untouched',totalTriangles=sum(r['triangles']for r in base['artifacts']),maxVertexErrorCS=max(r['maxCyclicVertexErrorCS']for r in full)),indent=2))
+sizes=[dict(canonicalID=r['canonicalID'],physBlockBytes=r['nativePHYSBlockBytes'],sha256=r['compiledSHA256']) for r in base['artifacts']]
+(O/'native-PHYS-sizes-full.json').write_text(json.dumps(dict(tests='PASS',count=849,maxPHYSBytes=max(max(r['physBlockBytes'])for r in sizes),limitBytes=512*1024*1024,assets=sizes),indent=2))
+for n in ['seam-source-qa.json','seam-delta.json','zero-slot-classification.json','contact-handoff-summary.json']:(O/n).write_bytes((V4/n).read_bytes())
+hashes={str(f):hashlib.sha256(f.read_bytes()).hexdigest()for f in list(O.glob('*.json'))+list((O/'content/kat/models/df_terrain_v3').glob('*'))+list((O/'game/kat/models/df_terrain_v3').glob('*'))if f.is_file()}
+(O/'output-sha256.json').write_text(json.dumps(hashes,indent=2));print('FULL INTEGRATION849 QA PASS',flush=True)

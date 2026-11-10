@@ -1,0 +1,57 @@
+from pathlib import Path
+import pathlib,json,numpy as np,struct
+R=Path('@@DF_PATH_DF_V25_BUILD_20261106@@')
+O=Path('@@DF_PATH_DF_V267_WATER_READONLY_20261109@@')
+
+models={x['objectPath']:x for x in map(json.loads,(R/'geometry-work/models.jsonl').open(encoding='utf8'))}
+rows=list(map(json.loads,(R/'component-work/final-combined-decomposed.jsonl').open(encoding='utf8')))
+B=np.eye(4);B[:3,:3]=np.diag([1,-1,1])/.36
+cache={}
+def tris(path):
+ if path in cache:return cache[path]
+ raw=pathlib.Path(path).read_bytes();n=struct.unpack_from('<I',raw,12)[0];g=json.loads(raw[20:20+n]);b=raw[28+n:]
+ def acc(i):
+  a=g['accessors'][i];v=g['bufferViews'][a['bufferView']];dt={5126:'<f4',5125:'<u4',5123:'<u2',5121:'u1'}[a['componentType']];k={'VEC3':3,'SCALAR':1}[a['type']]
+  return np.ndarray((a['count'],k),dtype=dt,buffer=b,offset=v.get('byteOffset',0)+a.get('byteOffset',0),strides=(v.get('byteStride',np.dtype(dt).itemsize*k),np.dtype(dt).itemsize)).copy()
+ ts=[];slots=[]
+ for me in g['meshes']:
+  for pi,pr in enumerate(me['primitives']):
+   v=acc(pr['attributes']['POSITION'])[:,[0,2,1]]*np.array([36,-36,36]);ix=acc(pr['indices']).reshape(-1,3);ts.append(v[ix]);slots.extend([dict(primitive=pi,materialIndex=pr.get('material'),material=g.get('materials',[])[pr['material']] if 'material'in pr else None)]*len(ix))
+ cache[path]=(np.concatenate(ts),slots);return cache[path]
+def nearest(t,p,normal):
+ a=t[:,0];u=t[:,1]-a;v=t[:,2]-a;n=np.cross(u,v);ln=np.linalg.norm(n,axis=1);n/=np.maximum(ln[:,None],1e-30);plane=np.sum((p-a)*n,axis=1);q=p-plane[:,None]*n;uu=np.sum(u*u,axis=1);uv=np.sum(u*v,axis=1);vv=np.sum(v*v,axis=1);w=q-a;wu=np.sum(w*u,axis=1);wv=np.sum(w*v,axis=1);den=uu*vv-uv*uv;s=(wu*vv-wv*uv)/np.maximum(den,1e-30);z=(wv*uu-wu*uv)/np.maximum(den,1e-30);inside=(s>=0)&(z>=0)&(s+z<=1)&(ln>1e-10);ds=np.where(inside,abs(plane),np.inf)
+ for j in range(3):
+  e=t[:,(j+1)%3]-t[:,j];f=np.clip(np.sum((p-t[:,j])*e,axis=1)/np.maximum(np.sum(e*e,axis=1),1e-30),0,1);ds=np.minimum(ds,np.linalg.norm(t[:,j]+f[:,None]*e-p,axis=1))
+ k=int(np.argmin(ds));return dict(triangleIndex=k,triangle=t[k].tolist(),distance=float(ds[k]),normal=n[k].tolist(),normalAgreement=float(abs(n[k]@normal)))
+
+
+
+import os,datetime,sys
+sys.stdout=(O/'second-basin.log').open('a',buffering=1);sys.stderr=sys.stdout
+(O/'second-worker.json').write_text(json.dumps(dict(pid=os.getpid(),parent=os.getppid(),utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),ownership='READONLY report outputs only')))
+eye=np.array([-117.69,-2629.90,304.92]);pitch,yaw=np.radians([53.38,169.14]);direction=np.array([np.cos(pitch)*np.cos(yaw),np.cos(pitch)*np.sin(yaw),-np.sin(pitch)])
+candidates=[];role=[]
+for ri,row in enumerate(rows):
+ m=models.get(row['meshObjectPath'])
+ if not m:continue
+ if any(any(n in str(v).lower()for n in ['water','pool','boundless','caustic'])for v in m['materials'].values()):
+  role.append(dict(rowIndex=ri,instance=row,model=m,classification='CANDIDATE_ONLY_NOT_WATER_PROOF'))
+ C=np.array(row['matrixCS2'])@B
+ special=any(row.get(k)for k in ['bakedCS2LocalTransform','worldBakedCS2','worldBaked','sourceDeformedModel'])
+ if row.get('bakedCS2LocalTransform'):C=np.eye(4);C[:3,3]=row['positionCS2']
+ if row.get('worldBakedCS2')or row.get('worldBaked'):C=np.eye(4)
+ ml,mh=np.array(m['bounds']);corn=np.array([[x,y,z]for x in [ml[0],mh[0]]for y in [ml[1],mh[1]]for z in [ml[2],mh[2]]])@C[:3,:3].T+C[:3,3]
+ a=corn.min(0);b=corn.max(0);d0=(a-eye)/direction;d1=(b-eye)/direction
+ near=np.maximum(np.minimum(d0,d1).max(),0);far=np.maximum(d0,d1).min()
+ if far<near or near>2500:continue
+ if special:continue
+ try:t,slots=tris(m['source'])
+ except Exception:continue
+ t=t@C[:3,:3].T+C[:3,3];e1=t[:,1]-t[:,0];e2=t[:,2]-t[:,0];h=np.cross(direction,e2);det=np.einsum('ij,ij->i',e1,h);good=abs(det)>1e-10;f=np.divide(1,det,out=np.zeros_like(det),where=good);v=eye-t[:,0];u=f*np.einsum('ij,ij->i',v,h);q=np.cross(v,e1);z=f*(q@direction);dist=f*np.einsum('ij,ij->i',e2,q);ok=good&(u>=0)&(z>=0)&(u+z<=1)&(dist>0)&(dist<2500)
+ for k in np.where(ok)[0]:
+  candidates.append(dict(rowIndex=ri,distance=float(dist[k]),triangleIndex=int(k),slot=slots[k],position=(eye+dist[k]*direction).tolist(),model=m,instance=row))
+candidates.sort(key=lambda x:x['distance'])
+(O/'second-basin-view-ray-source-hits.json').write_text(json.dumps(candidates,indent=2))
+
+print('rayHits',len(candidates),'roleCandidateInstances',len(role),flush=True)
+print(json.dumps([dict(rowIndex=x['rowIndex'],distance=x['distance'],slot=x['slot'],model=x['model']['model'],mesh=x['instance']['meshObjectPath'])for x in candidates[:15]],indent=2))

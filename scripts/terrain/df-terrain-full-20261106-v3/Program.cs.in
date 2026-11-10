@@ -1,0 +1,121 @@
+using System.Text.Json;
+using System.Diagnostics;
+using System.Reflection;
+using System.Security.Cryptography;
+using CUE4Parse.FileProvider;
+using CUE4Parse.UE4.Versions;
+using CUE4Parse.Encryption.Aes;
+using CUE4Parse.Compression;
+using CUE4Parse.UE4.Assets;
+using CUE4Parse.UE4.Assets.Exports.Texture;
+
+using CUE4Parse.UE4.Assets.Exports.Material;
+using CUE4Parse_Conversion;
+using CUE4Parse_Conversion.Options;
+using CUE4Parse_Conversion.Textures;
+using CUE4Parse_Conversion.Exporters;
+using Serilog;
+Log.Logger=new LoggerConfiguration().MinimumLevel.Error().WriteTo.Console().CreateLogger();
+var root=@"@@DF_PATH_DF_EXTRACT_20261105@@";
+var output=@"@@DF_PATH_DF_TERRAIN_FULL_20261106_V3@@";
+Directory.CreateDirectory(output);
+const long cap=2_000_000_000L;
+long used=0;
+var lastCheck=DateTime.MinValue;
+void Check(bool force=false){
+ if(used>cap-16_000_000)throw new OperationCanceledException("60GB cumulative cap reached");
+ if(new DriveInfo("E").AvailableFreeSpace<1_000_000_000L)throw new OperationCanceledException("20GB disk reserve reached");
+ if(!force && (DateTime.UtcNow-lastCheck).TotalSeconds<10)return;
+ var psi=new ProcessStartInfo("powershell.exe"){UseShellExecute=false,RedirectStandardOutput=true,RedirectStandardError=true,CreateNoWindow=true};
+ psi.ArgumentList.Add("-NoProfile");psi.ArgumentList.Add("-File");psi.ArgumentList.Add(Path.Combine(output,"guard.ps1"));
+ using var proc=Process.Start(psi)!;var result=proc.StandardOutput.ReadToEnd();proc.WaitForExit();
+ if(proc.ExitCode!=0)throw new OperationCanceledException("DF/ACE guard stop "+result);
+ lastCheck=DateTime.UtcNow;
+}
+void Write(string relative,byte[] bytes){
+ Check(); var path=Path.GetFullPath(Path.Combine(output,relative));
+ if(!path.StartsWith(output+Path.DirectorySeparatorChar,StringComparison.OrdinalIgnoreCase))throw new Exception("unsafe output path");
+ if(used+bytes.LongLength+16_000_000>cap)throw new OperationCanceledException("60GB cumulative cap");
+ Directory.CreateDirectory(Path.GetDirectoryName(path)!); File.WriteAllBytes(path,bytes); used+=bytes.LongLength;
+}
+void Json(string relative,object value)=>Write(relative,System.Text.Encoding.UTF8.GetBytes(JsonSerializer.Serialize(value)));
+void Append(string relative,object value){
+ Check();var text=JsonSerializer.Serialize(value)+Environment.NewLine;
+ var bytes=System.Text.Encoding.UTF8.GetByteCount(text);if(used+bytes+16_000_000>cap)throw new OperationCanceledException("60GB cap");
+ File.AppendAllText(Path.Combine(output,relative),text);used+=bytes;
+}
+Check(true);
+File.WriteAllText(Path.Combine(output,"worker.pid"),Environment.ProcessId.ToString());
+OodleHelper.Initialize(Path.Combine(root,"tools","oodle-data-shared.dll"));
+
+using var kj=JsonDocument.Parse(File.ReadAllText(Path.Combine(root,"community-aes-keys.json")));
+var keys=kj.RootElement.GetProperty("Keys").EnumerateArray().GroupBy(x=>x.GetProperty("guid").GetString()).Select(g=>g.First()).ToDictionary(x=>x.GetProperty("guid").GetString()!.Replace("-","").ToUpperInvariant(),x=>x.GetProperty("key").GetString()!);
+keys["00000000000000000000000000000000"]=kj.RootElement.GetProperty("MainKey").GetString()!;
+using var p=new StreamedFileProvider("DeltaForce",new VersionContainer(EGame.GAME_DeltaForce),StringComparer.OrdinalIgnoreCase);p.Initialize();
+foreach(var pak in File.ReadAllLines(Path.Combine(root,"pak-paths.txt"))){Check();p.RegisterVfs(pak.Trim());}
+foreach(var r in p.UnloadedVfs.ToArray()){Check();var guid=r.EncryptionKeyGuid.ToString().Replace("-","").ToUpperInvariant();if(keys.TryGetValue(guid,out var key))p.SubmitKey(r.EncryptionKeyGuid,new FAesKey(key));}
+
+CUE4Parse.UE4.Assets.ObjectTypeRegistry.RegisterClass("VirtualMaterialInstanceConstant",typeof(CUE4Parse.GameTypes.DFHO.Assets.Exports.UVirtualMaterialInstanceConstant));
+
+
+
+var requested=JsonDocument.Parse(File.ReadAllText(@"@@DF_PATH_DF_TERRAIN_STAGE_20261106_V1@@/closure-input.json")).RootElement.GetProperty("tiles").EnumerateArray().Select(x=>x.GetProperty("package").GetString()!).ToHashSet(StringComparer.OrdinalIgnoreCase);
+Json("mounted-inventory.json",new { mounted=p.MountedVfs.Select(x=>x.Name).ToArray(),unloaded=p.UnloadedVfs.Select(x=>x.Name).ToArray(), archiveInputs=File.ReadAllLines(Path.Combine(root,"pak-paths.txt"))});
+bool fixture=args.Contains("--fixtures");
+var selected=p.Files.Where(x=>requested.Contains(x.Key.EndsWith(".uasset",StringComparison.OrdinalIgnoreCase)?x.Key[..^7]:"")).OrderBy(x=>x.Key).ToArray();
+if(fixture)selected=selected.Where(x=>x.Key.Contains("X1043_Y-729_1")||x.Key.Contains("X1004_Y-729_0")).ToArray();
+Json("selection.json",new{tableSlots=requested.Count,actualUniqueAssets=selected.Length,files=selected.Select(x=>x.Key),notResolved=requested.Where(x=>!p.Files.ContainsKey(x+".uasset")).ToArray(),classification="unresolved slots are NOT certified empty"});
+int decoded=0,failed=0;
+foreach(var entry in selected){
+ Check();
+ var name=Path.GetFileNameWithoutExtension(entry.Key);var rec=new Dictionary<string,object?> {["package"]=entry.Key};
+ try{
+  var payloads=new Dictionary<string,byte[]>();
+  foreach(var ext in new[]{".uasset",".uexp",".ubulk",".uptnl"}){
+   var key=entry.Key[..^7]+ext;
+   if(!p.Files.TryGetValue(key,out var gf))continue;
+   var bytes=p.SaveAsset(key);payloads[ext]=bytes;
+   Write("payloads/"+name+ext,bytes);
+   Append("payload-provenance.jsonl",new{package=entry.Key,key,size=bytes.Length,sha256=Convert.ToHexString(SHA256.HashData(bytes)).ToLowerInvariant(),pak=(gf as CUE4Parse.UE4.Pak.Objects.FPakEntry)?.PakFileReader?.Name});
+  }
+  if(!payloads.TryGetValue(".uexp",out var exp))throw new Exception("missing inline export; external storage unresolved");
+  var pkg=(Package)p.LoadPackage(entry.Key);var results=new List<object>();
+  foreach(var lazy in pkg.ExportsLazy) {
+   var obj=lazy.Value;
+   Write("metadata/"+name+"/"+obj.Name+".json",System.Text.Encoding.UTF8.GetBytes(Newtonsoft.Json.JsonConvert.SerializeObject(obj,Newtonsoft.Json.Formatting.Indented)));
+  }
+  foreach(var e in pkg.ExportMap.Where(x=>x.ObjectName.Text.StartsWith("BodySetup"))){
+   long local=e.SerialOffset-payloads[".uasset"].Length;
+   if(local<0||e.SerialSize<0||local+e.SerialSize>exp.Length)throw new Exception("export range invariant");
+   var b=exp.AsSpan((int)local,(int)e.SerialSize).ToArray();
+   var starts=Enumerable.Range(0,Math.Max(0,b.Length-3)).Where(i=>b[i]==83&&b[i+1]==69&&b[i+2]==66&&b[i+3]==68).ToArray();
+   if(starts.Length!=1)throw new Exception("collection header count unsupported");
+   int at=starts[0];if(at+376>b.Length)throw new Exception("truncated collection header");
+   int rows=BitConverter.ToInt32(b,at+312),cols=BitConverter.ToInt32(b,at+316),count=BitConverter.ToInt32(b,at+364);
+   if(rows<2||cols<2||(long)rows*cols!=count||count>(b.Length/4))throw new Exception("dimension/count/length invariant");
+   float lo=BitConverter.ToSingle(b,at+368),hi=BitConverter.ToSingle(b,at+372);
+   if(!float.IsFinite(lo)||!float.IsFinite(hi)||lo>hi)throw new Exception("extrema header invariant");
+   var candidates=new List<int>();
+   for(int off=376;at+(long)off+count*4L<=b.Length;off+=4){
+    int min=32767,max=-32768;bool good=true;
+    for(int i=0;i<count;i++){int h=BitConverter.ToInt16(b,at+off+i*4);if(h<lo||h>hi){good=false;break;}min=Math.Min(min,h);max=Math.Max(max,h);}
+    if(good&&min==lo&&max==hi)candidates.Add(off);
+   }
+   rec["layoutCandidates"]=candidates;
+   if(candidates.Count!=1)throw new Exception("sample layout not uniquely established by bounds/extrema; no guessed offset");
+   int begin=at+candidates[0];
+   // PhysX 3.4 Win64 three-object collection schema already established on authentic fixtures.
+   // Fail closed on changed object table, shape type or non-finite geometry.
+   if(BitConverter.ToInt32(b,at+32)!=3||BitConverter.ToInt32(b,at+48)!=3||BitConverter.ToInt32(b,at+552)!=6)throw new Exception("unsupported collection/shape schema");
+   float[] Floats(int o,int n)=>Enumerable.Range(0,n).Select(i=>BitConverter.ToSingle(b,at+o+4*i)).ToArray();
+   var shapeQ=Floats(512,4);var shapeT=Floats(528,3);var geometryScale=Floats(568,3);
+   if(!shapeQ.Concat(shapeT).Concat(geometryScale).All(float.IsFinite)||geometryScale.Any(x=>x<=0)||Math.Abs(shapeQ.Sum(x=>(double)x*x)-1)>1e-5)throw new Exception("invalid native pose/geometry");
+
+   results.Add(new{rows,cols,count,exportLocal=local,collectionLocal=at,sampleOffset=candidates[0],min=lo,max=hi,shapeQ,shapeT,geometryScale,samples=Enumerable.Range(0,count).Select(i=>new{h=BitConverter.ToInt16(b,begin+i*4),m0=b[begin+i*4+2],m1=b[begin+i*4+3]}),frameStatus="requires per-asset pose/scale validation before mesh generation"});
+  }
+  if(results.Count==0)throw new Exception("no supported BodySetup heightfield");
+  Json("decoded/"+name+".json",results);decoded++;rec["status"]="samples-decoded-NOT-stage-ready";
+ }catch(Exception ex){failed++;rec["status"]="blocked";rec["error"]=ex.ToString();}
+ Append("assets.jsonl",rec);
+}
+Json("decode-exit.json",new{decoded,failed,actualUniqueAssets=selected.Length,stageReady=false,reason="frame/holes/winding/regressions/closure/material QA pending",pid=Environment.ProcessId,time=DateTime.UtcNow});

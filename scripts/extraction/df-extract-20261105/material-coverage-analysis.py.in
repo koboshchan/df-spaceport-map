@@ -1,0 +1,123 @@
+import json,csv,re,collections,pathlib,datetime
+ROOT=pathlib.Path(r'@@DF_PATH_DF_EXTRACT_20261105@@')
+SRC=ROOT/'spacecenter-superset'
+OUT=ROOT/'material-coverage'
+OUT.mkdir(exist_ok=True)
+def load(p): return json.loads(p.read_text(encoding='utf-8-sig'))
+def lines(p): return [json.loads(l) for l in p.open(encoding='utf-8-sig') if l.strip()]
+def save(n,d): (OUT/n).write_text(json.dumps(d,ensure_ascii=False,indent=2),encoding='utf-8')
+def table(n,rows):
+ if not rows:return
+ with (OUT/n).open('w',newline='',encoding='utf-8-sig') as f:
+  w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader()
+  for r in rows:w.writerow({k:json.dumps(v,ensure_ascii=False) if isinstance(v,(dict,list)) else v for k,v in r.items()})
+def stem(s):return pathlib.PurePosixPath(s.replace('\\','/')).stem
+def normalize(s):return re.sub(r'\.\d{3}$','',s).casefold()
+a=load(pathlib.Path(r'@@DF_PATH_SPACEPORT_KAT_REBUILD_20261105@@\audit.json'))
+tx={}
+for r in lines(SRC/'textures.jsonl'):
+ if r.get('ok'):tx[r['path']]=r
+flags={r['path']:r for r in lines(SRC/'texture-flags.jsonl')}
+ei=collections.defaultdict(set);ni=collections.defaultdict(set)
+for p in tx:
+ ei[stem(p)].add(p);ni[normalize(stem(p))].add(p)
+def match(keys,exact,norm):
+ candidates=set()
+ for k in keys:candidates.update(exact.get(k,()))
+ if candidates:return ('exact' if len(candidates)==1 else 'ambiguous',sorted(candidates))
+ for k in keys:candidates.update(norm.get(normalize(k),()))
+ return ('normalized' if len(candidates)==1 else 'ambiguous' if candidates else 'unmatched',sorted(candidates))
+rows=[]
+for i,im in enumerate(a['images']):
+ keys=list(dict.fromkeys([stem(im['name']),stem(im['path'])]))
+ status,cs=match(keys,ei,ni)
+ rows.append(dict(image_index=i,image_name=im['name'],source_path=im['path'],colorspace_blender=im.get('colorspace'),match=status,candidate_paths=cs,semantic_suffix_preserved=True,binding_verified=False,candidates=[dict(path=p,export=tx[p],texture_flags=flags.get(p),provenance=('dlc_archive' if 'packcontent' in str(tx[p].get('pak','')).lower() else 'base_archive' if tx[p].get('pak') else 'pilot_provenance_pending')) for p in cs]))
+save('texture-match-table.json',rows);table('texture-match-table.csv',[{k:v for k,v in r.items() if k!='candidates'} for r in rows])
+byimage=collections.defaultdict(list)
+for r in rows:byimage[r['image_name']].append(r)
+# Parse JSON files only, never revisit game archives or geometry.
+objects={};packages=collections.defaultdict(list);mis={};ms=collections.defaultdict(set);mn=collections.defaultdict(set)
+for f in list((SRC/'materials').rglob('*.json')) + list((ROOT/'material-metadata-supplement'/'materials').rglob('*.json')):
+ d=load(f);base=SRC/'materials' if f.is_relative_to(SRC/'materials') else ROOT/'material-metadata-supplement'/'materials'
+ d=load(f);pkg=d.get('Package') or f.parent.relative_to(base).as_posix();name=d.get('Name',f.stem)
+ d['_CanonicalPackage']=pkg;objects[(pkg,name)]=d
+ if d.get('Type') in ('Material','MaterialInstanceConstant','MaterialInstance','VirtualMaterialInstanceConstant','LandscapeMaterialInstanceConstant','MaterialInstanceDynamic'):
+  key=pkg+'.'+name;mis[key]=d;ms[name].add(key);mn[normalize(name)].add(key)
+for (pkg,name),d in objects.items():packages[pkg].append(d)
+def resolve(ref):
+ if not isinstance(ref,dict):return None
+ path=ref.get('ObjectPath','');pkg=path.rsplit('.',1)[0]
+ n=ref.get('ObjectName','').split("'")[-2] if "'" in ref.get('ObjectName','') else ''
+ n=n.split(':')[-1].split('.')[-1]
+ d=objects.get((pkg,n))
+ if d:return d
+ cand=[x for x in packages.get(pkg,[]) if x.get('Type') in ('Material','MaterialInstanceConstant','MaterialInstance','VirtualMaterialInstanceConstant','LandscapeMaterialInstanceConstant','MaterialInstanceDynamic')]
+ return cand[0] if len(cand)==1 else None
+def paramkey(p):
+ info=p.get('ParameterInfo',{})
+ return (info.get('Name',p.get('ParameterName','')),info.get('Association','GlobalParameter'),info.get('Index',-1))
+effective={}
+for key,d in mis.items():
+ chain=[];seen=set();cur=d;issue=None
+ while cur:
+  ck=(cur.get('_CanonicalPackage'),cur.get('Name'))
+  if ck in seen:issue='parent_cycle';break
+  seen.add(ck);chain.append(cur)
+  pref=cur.get('Properties',{}).get('Parent')
+  if not pref:break
+  nxt=resolve(pref)
+  if nxt is None:issue='parent_missing';break
+  cur=nxt
+ params={};levels=[]
+ for lvl in reversed(chain):
+  pp=lvl.get('Properties',{});lp=lvl.get('_CanonicalPackage','')+'.'+lvl.get('Name','')
+  levels.append(dict(source=lp,base_property_overrides=pp.get('BasePropertyOverrides'),explicit_base_properties={k:pp[k] for k in ['BlendMode','ShadingModel','ShadingModels','TwoSided','bTwoSided','OpacityMaskClipValue','bIsMasked'] if k in pp}))
+  for field in ['TextureParameterValues','ScalarParameterValues','VectorParameterValues']:
+   for par in pp.get(field,[]):
+    pk=(field,)+paramkey(par)
+    params[pk]=dict(kind=field,parameter_info=par.get('ParameterInfo'),value=par.get('ParameterValue'),source=lp,relation='override' if lvl is d else 'inherited')
+  # Static switch data is kept with its actual cooked wrapper, no guessing at override flags.
+ root=chain[-1] if chain else d
+ graph=[x for x in packages.get(root.get('_CanonicalPackage',''),[]) if x.get('Type','').startswith('MaterialExpression')]
+ effective[key]=dict(material=key,parent_chain=[x.get('_CanonicalPackage','')+'.'+x.get('Name','') for x in chain],parent_resolution=issue or ('complete' if root.get('Type')=='Material' else 'root_not_base_material'),effective_parameters=list(params.values()),property_evidence=levels,static_switch_evidence=[dict(source=x.get('_CanonicalPackage'),data={k:v for k,v in x.get('Properties',{}).items() if 'Static' in k}) for x in chain],root_explicit_inputs={k:v for k,v in root.get('Properties',{}).items() if k in ['BaseColor','Normal','Roughness','Metallic','AmbientOcclusion','Opacity','OpacityMask','EmissiveColor','MaterialAttributes']},root_graph_object_count=len(graph),graph_connection_status='graph_present_not_yet_translated' if graph else 'graph_missing_or_stripped',packed_channel_mapping='unknown_until_graph_trace',binding_to_blender_slot='not_verified_by_name_match',parser_defaults_verified=False)
+save('effective-material-parameters.json',effective)
+table('effective-texture-parameters.csv',[dict(material=k,parameter_info=p['parameter_info'],texture=p['value'],source=p['source'],relation=p['relation'],parent_resolution=e['parent_resolution']) for k,e in effective.items() for p in e['effective_parameters'] if p['kind']=='TextureParameterValues'])
+# Name candidates only. Prefix stripping is recorded normalization, not proof of a slot assignment.
+matrows=[];channelrows=[]
+CHANNELS=['Base Color','Normal','Roughness','Metallic','Ambient Occlusion','Alpha']
+for m in a['materials']:
+ name=m['name'];keys=[name]
+ mi=re.search(r'(MI_.+)',name)
+ if mi:keys.append(mi.group(1))
+ status,cs=match(keys,ms,mn)
+ if status=='exact' and name not in ms:status='normalized'
+ imgs=sorted(set(n['image'] for n in m.get('nodes',[]) if n.get('image')))
+ counts=collections.Counter()
+ for im in imgs:
+  rs=byimage.get(im,[])
+  counts.update([rs[0]['match'] if len(rs)==1 else 'ambiguous' if rs else 'unmatched'])
+ texture_coverage=('ambiguous' if counts['ambiguous'] else 'complete' if imgs and counts['exact']+counts['normalized']==len(imgs) else 'partial' if counts['exact']+counts['normalized'] else 'missing')
+ # Traverse actual Blender links only to identify current graph dependencies, not DF shader packing.
+ nodes={n['name']:n for n in m.get('nodes',[])}
+ incoming=collections.defaultdict(list)
+ for l in m.get('links',[]):incoming[l['to_node']].append(l)
+ def deps(n,seen=None):
+  seen=set() if seen is None else seen
+  if n in seen:return set()
+  seen.add(n);found={nodes[n]['image']} if n in nodes and nodes[n].get('image') else set()
+  for l in incoming.get(n,[]):found.update(deps(l['from_node'],seen))
+  return found
+ for ch in CHANNELS:
+  imset=set()
+  for n in m.get('nodes',[]):
+   if n.get('type')=='ShaderNodeBsdfPrincipled':
+    for l in incoming.get(n['name'],[]):
+     if l['to_socket']==ch:imset.update(deps(l['from_node']))
+  states=[byimage[x][0]['match'] if len(byimage.get(x,[]))==1 else 'ambiguous' if byimage.get(x) else 'unmatched' for x in sorted(imset)]
+  cov='ambiguous' if 'ambiguous' in states else 'complete_texture_candidates_only' if states and all(x in ('exact','normalized') for x in states) else 'partial_texture_candidates_only' if any(x in ('exact','normalized') for x in states) else 'missing' if states else 'no_blender_image_connection'
+  channelrows.append(dict(material=name,channel=ch,blender_graph_images=sorted(imset),texture_candidate_coverage=cov,DF_effective_slot_binding='pending',DF_packed_channel_graph='pending',verified_complete=False))
+ matrows.append(dict(material=name,DF_material_name_match=status,DF_material_candidates=cs,blender_image_count=len(imgs),texture_candidate_counts=dict(counts),texture_candidate_coverage=texture_coverage,material_binding_verified=False,all_channel_verified_coverage='pending',DF_parent_resolution=[effective[k]['parent_resolution'] for k in cs],DF_graph_status=[effective[k]['graph_connection_status'] for k in cs]))
+save('material-coverage.json',matrows);table('material-coverage.csv',matrows);save('channel-coverage.json',channelrows);table('channel-coverage.csv',channelrows)
+summary=dict(measured=datetime.datetime.now(datetime.timezone.utc).isoformat(),scope='Blender audit metadata; no geometry opened/modified; no game archives read',texture_denominator=len(rows),unique_source_paths=len({r['source_path'] for r in rows}),texture_matches=dict(collections.Counter(r['match'] for r in rows)),normalization='Casefold and trailing Blender .NNN duplicate suffix only; no semantic channel suffix or HD removal',unique_export_texture_assets=len(tx),material_denominator=len(matrows),material_name_candidates=dict(collections.Counter(r['DF_material_name_match'] for r in matrows)),material_texture_candidate_coverage=dict(collections.Counter(r['texture_candidate_coverage'] for r in matrows)),DF_material_objects=len(effective),DF_parent_resolution=dict(collections.Counter(x['parent_resolution'] for x in effective.values())),verified_material_slot_bindings=0,verified_channel_complete_materials=0,channel_denominator=len(channelrows),note='PRELIMINARY name-candidate coverage, not approval to swap. Missing graph, override semantics, texture alpha inspection, channel packing and actual Blender slot binding remain pending; no automatic fallback for ambiguity.')
+save('summary.json',summary);print(json.dumps(summary))
+

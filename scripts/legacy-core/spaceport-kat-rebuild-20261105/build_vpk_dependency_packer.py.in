@@ -1,0 +1,33 @@
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
+from pathlib import Path
+import subprocess,json
+W=Path('@@DF_PATH_SPACEPORT_KAT_REBUILD_20261105@@');P=W/'fixed-build/pack-tool';P.mkdir(exist_ok=True)
+(P/'Pack.csproj').write_text('<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net10.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable></PropertyGroup><ItemGroup><PackageReference Include="ValvePak" Version="7.2.0.221" /></ItemGroup></Project>')
+(P/'Program.cs').write_text('''using ValvePak;
+using System.Security.Cryptography;
+using System.Text.Json;
+if(args.Length != 3) throw new Exception("input map, files manifest, output map required");
+using var p = new Package();
+p.Read(args[0]);
+var manifest=JsonSerializer.Deserialize<Dictionary<string,string>>(File.ReadAllText(args[1]))!;
+foreach(var item in manifest.OrderBy(x=>x.Key,StringComparer.Ordinal)){
+ if(item.Key.Contains("..") || Path.IsPathRooted(item.Key)) throw new Exception("unsafe resource path");
+ var existing=p.FindEntry(item.Key);
+ var bytes=File.ReadAllBytes(item.Value);
+ if(existing != null){
+  p.ReadEntry(existing,out byte[] previous);
+  if(!previous.AsSpan().SequenceEqual(bytes)) throw new Exception("conflicting packed entry "+item.Key);
+ } else p.AddFile(item.Key,bytes);
+}
+p.Write(args[2]);
+using var verify = new Package();
+verify.Read(args[2]);verify.VerifyHashes();verify.VerifyFileChecksums();
+foreach(var item in manifest){
+ var e=verify.FindEntry(item.Key)??throw new Exception("missing "+item.Key);
+ verify.ReadEntry(e,out byte[] b);
+ if(!SHA256.HashData(b).AsSpan().SequenceEqual(SHA256.HashData(File.ReadAllBytes(item.Value)))) throw new Exception("bytes differ "+item.Key);
+}
+Console.WriteLine(JsonSerializer.Serialize(new { addedOrVerified=manifest.Count,bytes=new FileInfo(args[2]).Length,sha256=Convert.ToHexStringLower(SHA256.HashData(File.ReadAllBytes(args[2]))), verified=true }));
+''')
+r=subprocess.run(['dotnet','build',str(P/'Pack.csproj'),'-c','Release','--nologo'],cwd=P,capture_output=True,text=True,encoding='utf8');print('BUILD',r.returncode,r.stdout[-4500:],r.stderr[-1000:])

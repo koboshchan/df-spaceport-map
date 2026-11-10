@@ -1,0 +1,17 @@
+import json,hashlib,numpy as np
+from pathlib import Path
+P=Path(__file__).parent;M=json.loads((P/'staged/stage-manifest.json').read_text());rows=[]
+for r in M['artifacts']:
+ path=P/'staged'/(r['name']+'.obj');raw=path.read_bytes();assert hashlib.sha256(raw).hexdigest()==r['sha256']
+ vs=[];fs=[]
+ for line in raw.decode().splitlines():
+  sp=line.split()
+  if sp[0]=='v':vs.append(list(map(float,sp[1:4])))
+  elif sp[0]=='f':fs.append([int(v)-1 for v in sp[1:]])
+ v=np.array(vs);f=np.array(fs);cross=np.cross(v[f[:,1]]-v[f[:,0]],v[f[:,2]]-v[f[:,0]])
+ edges=np.sort(np.concatenate([f[:,[0,1]],f[:,[1,2]],f[:,[2,0]]]),axis=1);unique,ct=np.unique(edges,axis=0,return_counts=True)
+ row=dict(canonicalID=r['name'],approximate=r['kind']=='CDLOD-derived',sha256=r['sha256'],vertices=len(v),triangles=len(f),nonfiniteVertices=int((~np.isfinite(v).all(axis=1)).sum()),degenerateTriangles=int((np.linalg.norm(cross,axis=1)<=1e-10).sum()),downwardTriangles=int((cross[:,2]<-1e-9).sum()),openEdges=int((ct==1).sum()),nonmanifoldEdges=int((ct>2).sum()),holesRemoved=r.get('holeTriangles',0),boundsCS=[v.min(axis=0).tolist(),v.max(axis=0).tolist()])
+ assert not any(row[k] for k in ['nonfiniteVertices','degenerateTriangles','downwardTriangles','nonmanifoldEdges'])
+ rows.append(row)
+(P/'mesh-audit.json').write_text(json.dumps(dict(tests='PASS',canonicalSlots=1024,generated=len(rows),exact=sum(not r['approximate'] for r in rows),approximate=sum(r['approximate'] for r in rows),unsupportedZeroExtent=175,vertices=sum(r['vertices'] for r in rows),triangles=sum(r['triangles'] for r in rows),nativeHoleTrianglesRemoved=sum(r['holesRemoved'] for r in rows),artifacts=rows,openEdgeInterpretation='Tile exterior edges and preserved source holes are deliberately open. Boundary counts alone do not certify missing fine-hole semantics. Coarse681 occupancy not known; no inferred hole fill.'),indent=2))
+print('MESH AUDIT PASS',len(rows),flush=True)

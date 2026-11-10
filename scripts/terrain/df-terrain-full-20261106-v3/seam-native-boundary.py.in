@@ -1,0 +1,22 @@
+exec(open(__import__('pathlib').Path(__file__).parent/'native-compare.py').read().split('M=json.loads')[0])
+V=P/'seam-v4';O=V/'next-build';M=json.loads((O/'integration-manifest.json').read_text());by={r['canonicalID']:r for r in M['artifacts']};D=json.loads((V/'seam-delta.json').read_text());cache={}
+def edges(n,axis,fixed):
+ if n not in cache:
+  p=O/'native-physics'/(n+'.physbin')if by[n]['seamModified']else P/'next-build/native-physics'/(n+'.physbin')
+  cache[n]=readphys(p)
+ t=cache[n];segments=[]
+ for tri in t:
+  for a,b in zip(tri,np.roll(tri,-1,axis=0)):
+   if abs(a[axis]-fixed)<.001 and abs(b[axis]-fixed)<.001:
+    if a[1-axis]>b[1-axis]:a,b=b,a
+    segments.append(np.stack([a,b]))
+ # native fine interioredges not onboundaryduplicated? only outerplane edges so unique.
+ return np.array(segments)
+rows=[]
+for r in D['mixed']:
+ a=edges(r['coarse'],r['axis'],r['fixed']);b=edges(r['fine'],r['axis'],r['fixed']);dist,idx=cKDTree(b.mean(axis=1)).query(a.mean(axis=1),k=1)
+ err=np.linalg.norm(a-b[idx],axis=2).max(axis=1);ok=len(a)==len(b)==len(np.unique(idx))and max(err)<.001
+ rows.append(dict(coarse=r['coarse'],fine=r['fine'],segmentsCoarse=len(a),segmentsFine=len(b),maxEndpointDistanceCS=float(max(err)),passSegmentsBijective=bool(ok)))
+out=dict(tests='PASS'if all(r['passSegmentsBijective']for r in rows)else'FAIL',pairs=52,maxEndpointDistanceCS=max(r['maxEndpointDistanceCS']for r in rows),toleranceCS=.001,meaning='Nativecompiled triangles retain conforming boundaryedge topology; endpoint difference float32 only. No crossing gap beyond tolerance.',boundaries=rows)
+(O/'native-seam-boundary-qa.json').write_text(json.dumps(out,indent=2));print(json.dumps({k:v for k,v in out.items()if k!='boundaries'}));assert out['tests']=='PASS'
+h={str(f):hashlib.sha256(f.read_bytes()).hexdigest()for f in O.glob('*.json')if f.name!='handoff-sha256.json'};(O/'handoff-sha256.json').write_text(json.dumps(h,indent=2))

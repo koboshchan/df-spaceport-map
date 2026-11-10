@@ -1,0 +1,43 @@
+using System.Text.Json;
+using CUE4Parse.FileProvider;
+using CUE4Parse.UE4.Versions;
+using CUE4Parse.Encryption.Aes;
+using CUE4Parse.Compression;
+using CUE4Parse.UE4.Assets.Exports.Texture;
+using CUE4Parse_Conversion.Options;
+using CUE4Parse_Conversion.Textures;
+using Serilog;
+Log.Logger=new LoggerConfiguration().WriteTo.Console().CreateLogger();
+var root=@"@@DF_PATH_DF_EXTRACT_20261105@@";
+const long cap=512L*1024*1024;
+long OutputBytes()=>Directory.GetFiles(root,"*",SearchOption.AllDirectories).Where(f=>!new[]{"tools","cache","temp"}.Any(d=>Path.GetRelativePath(root,f).StartsWith(d+Path.DirectorySeparatorChar,StringComparison.OrdinalIgnoreCase))).Sum(f=>new FileInfo(f).Length);
+if(OutputBytes()>cap-2*1024*1024)throw new Exception("output cap");
+if(new DriveInfo("E").AvailableFreeSpace<1024L*1024*1024)throw new Exception("insufficient disk");
+OodleHelper.Initialize(Path.Combine(root,"tools","oodle-data-shared.dll"));
+TextureDecoder.UseAssetRipperTextureDecoder=true;
+var j=JsonDocument.Parse(File.ReadAllText(Path.Combine(root,"community-aes-keys.json")));
+var keys=j.RootElement.GetProperty("Keys").EnumerateArray().GroupBy(x=>x.GetProperty("guid").GetString()).Select(g=>g.First()).ToDictionary(x=>x.GetProperty("guid").GetString()!.Replace("-","").ToUpperInvariant(),x=>x.GetProperty("key").GetString()!);
+keys["00000000000000000000000000000000"]=j.RootElement.GetProperty("MainKey").GetString()!;
+var selected=JsonDocument.Parse(File.ReadAllText(Path.Combine(root,"textures-selected.json"))).RootElement.EnumerateArray().ToArray();
+if(selected.Length>12)throw new Exception("count cap");
+using var p=new StreamedFileProvider("DeltaForce",new VersionContainer(EGame.GAME_DeltaForce),StringComparer.OrdinalIgnoreCase);
+p.Initialize();
+foreach(var pak in File.ReadLines(Path.Combine(root,"pilot-all-sidecars.jsonl")).Select(l=>JsonDocument.Parse(l).RootElement.GetProperty("pak").GetString()!).Distinct()){
+ p.RegisterVfs(pak);
+ var optional=Path.Combine(Path.GetDirectoryName(pak)!,Path.GetFileNameWithoutExtension(pak)+".o.pak");
+ if(File.Exists(optional))p.RegisterVfs(optional);
+}
+foreach(var reader in p.UnloadedVfs.ToArray()){var guid=reader.EncryptionKeyGuid.ToString().Replace("-","").ToUpperInvariant();if(keys.TryGetValue(guid,out var key))p.SubmitKey(reader.EncryptionKeyGuid,new FAesKey(key));}
+var options=new ExportOptions(exportHdrTexturesAsHdr:false);
+using var results=new StreamWriter(Path.Combine(root,"texture-channel-vt-metadata.jsonl"));
+foreach(var s in selected){
+ var path=s.GetProperty("path").GetString()!;var association=s.GetProperty("association").GetString();
+ try{
+  var pkg=p.LoadPackage(path);
+  var texture=pkg.GetExports().OfType<UTexture2D>().Single();
+  var metadata=new {path,texture.PlatformData.SizeX,texture.PlatformData.SizeY,texture.PlatformData.FirstMipToSerialize,texture.PlatformData.PixelFormat,virtualTexture=texture.PlatformData.VTData!=null,mips=texture.PlatformData.Mips.Select((m,i)=>new {i,m.SizeX,m.SizeY,m.SizeZ,flags=m.BulkData?.Header.BulkDataFlags.ToString(),offset=m.BulkData?.Header.OffsetInFile,size=m.BulkData?.Header.SizeOnDisk,cookedIndex=m.BulkData?.Header.CookedIndex.ToString()})}; File.AppendAllText(Path.Combine(root,"mip-metadata.jsonl"),JsonSerializer.Serialize(metadata)+Environment.NewLine);
+ var vt=texture.PlatformData.VTData;
+ results.WriteLine(JsonSerializer.Serialize(new{path,width=texture.PlatformData.SizeX,height=texture.PlatformData.SizeY,texture.SRGB,compression=texture.CompressionSettings.ToString(),virtualTexture=vt!=null,vtWidth=vt?.Width,vtHeight=vt?.Height,vtMips=vt?.NumMips,chunks=vt?.Chunks.Select(c=>new{c.SizeInBytes,flags=c.BulkData.Header.BulkDataFlags.ToString(),c.BulkData.Header.OffsetInFile,c.BulkData.Header.SizeOnDisk,cookedIndex=c.BulkData.Header.CookedIndex.ToString()})}));results.Flush();
+ }catch(Exception e){results.WriteLine(JsonSerializer.Serialize(new{path,association,ok=false,error=e.ToString()}));}
+ results.Flush();GC.Collect();
+}

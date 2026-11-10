@@ -1,0 +1,20 @@
+import bpy,json,hashlib,numpy as np
+from pathlib import Path
+from mathutils import Matrix
+P=Path(__file__).parent/'ground-all85'
+bpy.ops.wm.read_factory_settings(use_empty=True)
+sel=json.loads((P/'ground-selection.json').read_text());out=P/'ground-vertices';out.mkdir(exist_ok=True)
+proof=[]
+for i,rec in enumerate(sel['selected']):
+ bpy.ops.object.select_all(action='SELECT');bpy.ops.object.delete(use_global=False)
+ r=rec['placement'];src=Path(r['meshSource']['outputs'][0]);bpy.ops.import_scene.gltf(filepath=str(src))
+ allv=[];allcent=[]
+ for ob in bpy.context.scene.objects:
+  if ob.type!='MESH':continue
+  coords=np.empty(len(ob.data.vertices)*3,dtype=np.float32);ob.data.vertices.foreach_get('co',coords);v=coords.reshape(-1,3)
+  bm=np.array(ob.matrix_world);v=v@bm[:3,:3].T+bm[:3,3]
+  ue=v*np.array([100,-100,100]);mat=np.array(r['matrixCS2']);world=ue@mat[:3,:3].T+mat[:3,3];allv.append(world);ob.data.calc_loop_triangles();tri=np.array([list(t.vertices) for t in ob.data.loop_triangles]);allcent.append(world[tri].mean(axis=1))
+ vs=np.concatenate(allv);target=out/f'{i}.npz';np.savez_compressed(target,vertices=vs,triangleCentroids=np.concatenate(allcent))
+ proof.append(dict(index=i,objectPath=r['objectPath'],meshObjectPath=r['meshObjectPath'],source=str(src),sourceSHA256=hashlib.sha256(src.read_bytes()).hexdigest(),type=rec['type'],slot=rec['slot'],terrainKind=rec['terrainKind'],vertices=len(vs),basis='Blender imported GLB (UE x,-y,z)/100 multiplied(100,-100,100), then existing validated matrixCS2',matrixCS2=r['matrixCS2']))
+ (out/'progress.json').write_text(json.dumps(dict(done=len(proof))))
+(out/'manifest.json').write_text(json.dumps(dict(objects=proof),indent=2));print('GROUND EXPORT DONE',len(proof))

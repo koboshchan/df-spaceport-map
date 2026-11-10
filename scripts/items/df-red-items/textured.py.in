@@ -1,0 +1,72 @@
+import json,math,collections
+from pathlib import Path
+import numpy as np,trimesh
+from PIL import Image,ImageDraw,ImageFont
+r=Path('@@DF_PATH_DF_RED_ITEMS@@');rows=json.loads((r/'manifest.json').read_text(encoding='utf8'));tr=json.loads((r/'texture-results.json').read_text());lookup={};tex={};cache={}
+def norm(x):
+ x=x.split('.')[0].split(':')[0]
+ if x.startswith('/Game/'):x='DeltaForce/Content/'+x[6:]
+ elif x.startswith('/Engine/'):x='Engine/Content/'+x[8:]
+ return x if x.endswith('.uasset') else x+'.uasset'
+for x in tr:
+ if x['status']=='ok':
+  if x['kind']=='material':lookup[norm(x['path'])]=x['target']
+  elif x['kind']=='texture':tex[norm(x['path'])]=x['target']
+def params(path,seen=None):
+ seen=set() if seen is None else seen
+ if path in seen or path not in lookup:return {}
+ seen.add(path);p=json.loads((r/lookup[path]).read_text(encoding='utf8')).get('Properties',{})
+ result=params(norm(p['Parent']['ObjectPath']),seen) if p.get('Parent',{}).get('ObjectPath') else {}
+ for z in p.get('TextureParameterValues',[]):
+  v=z.get('ParameterValue') or {};name=z.get('ParameterInfo',{}).get('Name')
+  if name and v.get('ObjectPath'):result[name]=norm(v['ObjectPath'])
+ return result
+font=ImageFont.truetype('@@DF_PATH_WINDOWS@@/Fonts/msyh.ttc',12);head=ImageFont.truetype('@@DF_PATH_WINDOWS@@/Fonts/msyh.ttc',24);report=[]
+def thumb(row):
+ mats={m.split('.')[-1]:m for m in row['materials']};ovs={}
+ for key in ['ItemBaseList','ItemDroppedMeshList']:
+  for ov in (row.get('material_overrides') or {}).get(key,[]):ovs[ov['MatSlotName']]=ov['MatOverride']['AssetPathName']
+ scene=trimesh.load(r/row['glbs'][0],force='scene',process=False);parts=[];notes=[]
+ for node in scene.graph.nodes_geometry:
+  transform,gn=scene.graph[node];g=scene.geometry[gn];v=trimesh.transform_points(g.vertices,transform);mn=g.visual.material.name;ref=ovs.get(mn,mats.get(mn));ps=params(norm(ref)) if ref else {};base=ps.get('BaseColorMap');target=tex.get(base);uv=getattr(g.visual,'uv',None);reason=None
+  if not ref:reason='material slot unresolved'
+  elif not base:reason='BaseColorMap absent'
+  elif not target:reason='bound texture not exported'
+  elif uv is None:reason='UV0 absent'
+  arr=None
+  if reason is None:
+   if target not in cache:cache[target]=np.array(Image.open(r/target).convert('RGBA'))
+   arr=cache[target]
+  notes.append(dict(slot=mn,material=ref,baseColor=base,texture=target,resolved=reason is None,reason=reason,override=mn in ovs,alpha=bool(arr is not None and np.any(arr[:,:,3]<255)),otherBindings=ps))
+  parts.append((v,np.array(g.faces),np.array(uv) if uv is not None else None,arr))
+ allv=np.concatenate([p[0] for p in parts]);center=(allv.min(0)+allv.max(0))/2;az=.65;el=.35
+ rot=np.array([[math.cos(az),0,math.sin(az)],[0,1,0],[-math.sin(az),0,math.cos(az)]])@np.array([[1,0,0],[0,math.cos(el),-math.sin(el)],[0,math.sin(el),math.cos(el)]])
+ projected=(allv-center)@rot;scale=166/max(np.ptp(projected[:,:2],axis=0).max(),1e-8);image=np.full((190,210,3),[24,29,38],dtype=float);depth=np.full((190,210),-np.inf)
+ for verts,faces,uv,arr in parts:
+  v=(verts-center)@rot*scale;xy=v[:,:2]*[1,-1]+[105,95];tri=v[faces];n=np.cross(tri[:,1]-tri[:,0],tri[:,2]-tri[:,0]);n/=np.maximum(np.linalg.norm(n,axis=1)[:,None],1e-9);lights=.70+.30*np.abs(n@np.array([.3,.5,.8]))
+  for fi in np.argsort(tri[:,:,2].mean(axis=1)):
+   ids=faces[fi];t=xy[ids];xmin=max(0,int(np.floor(t[:,0].min())));xmax=min(209,int(np.ceil(t[:,0].max())));ymin=max(0,int(np.floor(t[:,1].min())));ymax=min(189,int(np.ceil(t[:,1].max())))
+   if xmin>xmax or ymin>ymax:continue
+   a,b,c=t;den=(b[1]-c[1])*(a[0]-c[0])+(c[0]-b[0])*(a[1]-c[1])
+   if abs(den)<1e-9:continue
+   yy,xx=np.mgrid[ymin:ymax+1,xmin:xmax+1];xx=xx+.5;yy=yy+.5;w0=((b[1]-c[1])*(xx-c[0])+(c[0]-b[0])*(yy-c[1]))/den;w1=((c[1]-a[1])*(xx-c[0])+(a[0]-c[0])*(yy-c[1]))/den;w2=1-w0-w1;zz=w0*v[ids[0],2]+w1*v[ids[1],2]+w2*v[ids[2],2];mask=(w0>=-1e-6)&(w1>=-1e-6)&(w2>=-1e-6)&(zz>depth[ymin:ymax+1,xmin:xmax+1])
+   if not mask.any():continue
+   if arr is not None:
+    u=w0*uv[ids[0],0]+w1*uv[ids[1],0]+w2*uv[ids[2],0];vv=w0*uv[ids[0],1]+w1*uv[ids[1],1]+w2*uv[ids[2],1];h,w=arr.shape[:2];tx=np.floor(np.mod(u,1)*w).astype(int).clip(0,w-1);ty=np.floor(np.mod(1-vv,1)*h).astype(int).clip(0,h-1);rgba=arr[ty,tx];alpha=rgba[:,:,3]/255;rgb=rgba[:,:,:3]*lights[fi]
+   else:rgb=np.full((*xx.shape,3),[155,45,130]);alpha=np.ones(xx.shape)
+   mask&=alpha>.01;tile=image[ymin:ymax+1,xmin:xmax+1];tile[mask]=rgb[mask]*alpha[mask,None]+tile[mask]*(1-alpha[mask,None]);depth[ymin:ymax+1,xmin:xmax+1][mask]=zz[mask]
+ return Image.fromarray(np.clip(image,0,255).astype('uint8')),notes
+for section,title in [('red_loot','RED ITEMS'),('keycards','KEY ITEMS / KEYCARDS')]:
+ groups={}
+ for row in rows:
+  if row['section']==section:groups.setdefault((row['mesh'],json.dumps(row.get('material_overrides'),sort_keys=True)),[]).append(row)
+ im=Image.new('RGB',(1260,105+math.ceil(len(groups)/6)*250),(15,19,27));d=ImageDraw.Draw(im);d.text((15,12),title+' - DF BASE COLOR',font=head,fill='white');d.text((15,49),'Exact source binding + UV0; base-color alpha preserved. Not full DF shader parity.',font=font,fill=(180,190,205));d.text((15,69),'Magenta / UNRESOLVED = no guessed texture. Shared mesh + binding variants grouped.',font=font,fill=(245,150,200))
+ for i,group in enumerate(groups.values()):
+  row=group[0];x=i%6*210;y=105+i//6*250
+  try:
+   if row['status']!='ok':raise ValueError('mesh package absent')
+   pic,notes=thumb(row);im.paste(pic,(x,y));unresolved=sum(not a['resolved'] for a in notes);status='BOUND' if not unresolved else 'UNRESOLVED '+str(unresolved)+' SLOT(S)'
+  except Exception as e:notes=[dict(resolved=False,reason=str(e))];status='UNRESOLVED';d.rectangle((x,y,x+209,y+189),fill=(70,20,65))
+  d.text((x+4,y+192),str(row['name_cn'] or 'unnamed')[:16],font=font,fill='white');d.text((x+4,y+210),row['id']+(' +'+str(len(group)-1) if len(group)>1 else ''),font=font,fill=(170,183,204));d.text((x+4,y+228),status,font=font,fill=(120,215,160) if status=='BOUND' else (255,130,190));report.append(dict(ids=[a['id'] for a in group],section=section,mesh=row['mesh'],status=status,slots=notes));print(section,i+1,len(groups),status,flush=True)
+ im.save(r/'preview'/(section+'_textured.png'))
+(r/'textured-bindings.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf8');print('DONE',collections.Counter(x['status'] for x in report),flush=True)

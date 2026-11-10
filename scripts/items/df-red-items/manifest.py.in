@@ -1,0 +1,40 @@
+
+from pathlib import Path
+import json,csv,re,collections,hashlib
+r=Path('@@DF_PATH_DF_RED_ITEMS@@');sel=json.loads((r/'selection.json').read_text(encoding='utf8'));exports={x['asset']:x for x in json.loads((r/'export-results.json').read_text())};tr=json.loads((r/'texture-results.json').read_text());lookup={};tex={}
+for x in tr:
+ if x['status']=='ok':
+  if x['kind']=='material':lookup[x['path']]=x['target']
+  else:tex[x['path']]=x['target']
+def norm(s):
+ s=s.split('.')[0].split(':')[0]
+ if s.startswith('/Game/'):s='DeltaForce/Content/'+s[6:]
+ elif s.startswith('/Engine/'):s='Engine/Content/'+s[8:]
+ return s+'.uasset'
+def refs(obj):
+ if isinstance(obj,dict):
+  for k,v in obj.items():
+   if k in ['ObjectPath','AssetPathName'] and isinstance(v,str):yield norm(v)
+   else:yield from refs(v)
+ elif isinstance(obj,list):
+  for x in obj:yield from refs(x)
+def closure(roots):
+ seen=set();textures=set();queue=list(roots)
+ while queue:
+  x=queue.pop()
+  if x in seen:continue
+  seen.add(x)
+  if x in tex:textures.add(tex[x])
+  if x in lookup:
+   try:queue.extend(refs(json.loads((r/lookup[x]).read_text(encoding='utf8'))))
+   except:pass
+ return sorted(textures)
+rows=[];excluded=[]
+for x in sel:
+ if x['mesh']=='None':excluded.append(dict(id=x['id'],name_cn=x['name_cn'],quality=x['quality'],section=x['section'],reason='No CommonItemAssets_Prop dropped-mesh reference; includes reserved/unreleased/non-world items'));continue
+ e=exports[x['mesh']];mat=e.get('materials',[]);textures=closure([norm(m) for m in mat]+list(refs(x['assets'])));row={k:x[k] for k in ['id','name_cn','name_localized','quality','section','mesh','tag_main','tag_sub']};row.update(status=e['status'],glbs=[str(Path(f).relative_to(r)) for f in e.get('glbs',[])],materials=mat,textures=textures,material_overrides=x['assets'].get('ItemMatOverrideConfig'),collision=False,physics=False);rows.append(row)
+(r/'manifest.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2),encoding='utf8');(r/'excluded-no-world-mesh.json').write_text(json.dumps(excluded,ensure_ascii=False,indent=2),encoding='utf8')
+with (r/'manifest.csv').open('w',encoding='utf-8-sig',newline='') as f:
+ w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows({k:json.dumps(v,ensure_ascii=False) if isinstance(v,(list,dict)) else v for k,v in x.items()} for x in rows)
+summary=dict(item_rows=len(rows),sections=dict(collections.Counter(x['section'] for x in rows)),exported_item_rows=sum(x['status']=='ok' for x in rows),unique_meshes=sum(x['status']=='ok' for x in exports.values()),mesh_errors=[x for x in exports.values() if x['status']!='ok'],textures=len(tex),material_packages=len(lookup),excluded_no_world_mesh=len(excluded),unmapped_keys=sum(x['section']=='keycards' for x in excluded),rows_with_textures=sum(bool(x['textures']) for x in rows),collision_exported=False,physics_exported=False,shader_translation=False,english_names='Only if present in game localization; no invented translations')
+(r/'summary.json').write_text(json.dumps(summary,indent=2),encoding='utf8');print(json.dumps(summary))

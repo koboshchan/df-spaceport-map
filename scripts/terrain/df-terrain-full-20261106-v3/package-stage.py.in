@@ -1,0 +1,30 @@
+import bpy,json,hashlib,time,traceback
+from pathlib import Path
+P=Path(__file__).parent;S=P/'staged';O=P/'next-build/content/kat/models/df_terrain_v3';O.mkdir(parents=True,exist_ok=True);receipts=P/'next-build/receipts';receipts.mkdir(parents=True,exist_ok=True)
+H='<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc36:version{972dada4-b828-45a4-bb93-7795cf0585da} -->\n'
+manifest=json.loads((S/'stage-manifest.json').read_text())
+q=lambda x:json.dumps(x)
+for rec in manifest['artifacts']:
+ name=rec['name'];receipt=receipts/(name+'.json')
+ if receipt.exists():continue
+ src=S/(name+'.obj');assert hashlib.sha256(src.read_bytes()).hexdigest()==rec['sha256']
+ verts=[];faces=[]
+ for line in src.read_text().splitlines():
+  parts=line.split()
+  if parts[0]=='v':verts.append(tuple(map(float,parts[1:4])))
+  elif parts[0]=='f':faces.append(tuple(int(v.split('/')[0])-1 for v in parts[1:]))
+ assert len(verts)==rec['vertices'] and len(faces)==rec['triangles']
+ bpy.ops.wm.read_factory_settings(use_empty=True)
+ mesh=bpy.data.meshes.new(name);mesh.from_pydata(verts,[],faces);mesh.update();ob=bpy.data.objects.new(name,mesh);bpy.context.collection.objects.link(ob);ob.select_set(True);bpy.context.view_layer.objects.active=ob
+ mat=bpy.data.materials.new('terrain_neutral_approximate' if rec['kind']=='CDLOD-derived' else 'terrain_neutral_source');mesh.materials.append(mat)
+ mid='t_'+hashlib.sha256(name.encode()).hexdigest()[:16];fbx=O/(mid+'.fbx')
+ bpy.ops.export_scene.fbx(filepath=str(fbx),global_scale=1.0,apply_unit_scale=False,apply_scale_options='FBX_SCALE_ALL',axis_forward='-X',axis_up='Z',use_space_transform=False,bake_space_transform=False,use_selection=True,object_types={'MESH'},use_mesh_modifiers=False,bake_anim=False,add_leaf_bones=False,use_triangles=True,mesh_smooth_type='FACE',path_mode='STRIP',embed_textures=False)
+ # One original tile per PHYS partition. No source triangle reduction, convex hull, or subdivision.
+ text=H+'{ rootNode = { _class = "RootNode" children = [ { _class = "RenderMeshList" children = [ { _class = "RenderMeshFile" name = "mesh" filename = '+q('models/df_terrain_v3/'+mid+'.fbx')+' import_scale = 1.0 import_filter = { exclude_by_default = false exception_list = [] } } ] }, { _class = "MaterialGroupList" children = [ { _class = "DefaultMaterialGroup" name = "default" remaps = [] use_global_default = true global_default_material = "materials/dev/reflectivity_50.vmat" } ] }, { _class = "PhysicsShapeList" children = [ { _class = "PhysicsMeshFromRender" parent_bone = "" surface_prop = "default" collision_prop = "default" tool_material = "" renderMeshList = [] } ] leave_body_collision_unmodified = false } ] model_archetype = "" primary_associated_entity = "" anim_graph_name = "" document_sub_type = "ModelDocSubType_None" } }'
+ vmdl=O/(mid+'.vmdl');vmdl.write_text(text)
+ row=dict(**rec,canonicalID=name,sourceOBJ=str(src),sourceOBJsha256=rec['sha256'],model='models/df_terrain_v3/'+mid+'.vmdl',fbx=str(fbx),fbxSHA256=hashlib.sha256(fbx.read_bytes()).hexdigest(),vmdlSHA256=hashlib.sha256(vmdl.read_bytes()).hexdigest(),renderSource='FBX full indexed mesh',collisionSource='PhysicsMeshFromRender same full mesh',partition=name,physicsLimitBytes=512*1024*1024,physicsLimitVerified=False,nativePHYS='NOT_COMPILED',approximate=rec['kind']=='CDLOD-derived',material='EXPLICIT_NEUTRAL_APPROXIMATION no DF material attribution',entity=dict(classname='prop_static',origin=[0,0,0],angles=[0,0,0],scales=[1,1,1],solid='6',model='models/df_terrain_v3/'+mid+'.vmdl'))
+ receipt.write_text(json.dumps(row,indent=2))
+ print('STAGED',name,len(faces),flush=True)
+rows=[json.loads(p.read_text()) for p in sorted(receipts.glob('*.json'))];assert len(rows)==849 and sum(r['approximate'] for r in rows)==681
+(P/'next-build/integration-manifest.json').write_text(json.dumps(dict(status='OFFLINE_SOURCE_STAGED_NATIVE_COMPILE_NOT_RUN',artifacts=rows,additiveOnly=True,worldSpaceGeometry=True,preserveExisting=['168 exact source terrain collision geometries','v251 ladders','cliffs','roads','props','decals','fog exclusions'],unsupportedZeroExtentSlots=175,physicsGate='Every compiled PHYS block must be <512MiB. Native size not yet certified.',noDecimation=True,installAuthorized=False,mapCompileAuthorized=False,mixedSeams='52 boundaries need explicit acceptance or terrain-only seam strategy; original168 unchanged',holeMask='Native168 material127 holes preserved;681 coarse source fine hole/occupancy mask UNRESOLVED, no claim fully occupied;175 not filled',patchOrder='Add terrain entities only to next-build candidate; apply typed17-exact/collision-all15-final exact-property-patches AFTER terrain/poster; never replace full map'),indent=2))
+print('PACKAGE STAGE DONE',len(rows),flush=True)

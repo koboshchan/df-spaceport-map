@@ -1,0 +1,28 @@
+from pathlib import Path
+import json,datetime,subprocess
+r=Path('@@DF_PATH_DF_EXTRACT_20261105@@');o=r/'placements';par=o/'parallel'
+now=datetime.datetime.now(datetime.timezone.utc);handoff=json.loads((par/'handoff.json').read_text());base=handoff['previousStatus'];rows=[]
+for i in range(8):
+ d=par/('shard-'+str(i));p=d/'status.json'
+ if not p.exists():continue
+ row=json.loads(p.read_text());row['shard']=i
+ e=d/'run.err'
+ if e.exists() and e.stat().st_size:row['stderr']=e.read_text()[-1200:]
+ rows.append(row)
+doneRows=[]
+failureCounts={}
+for d in [o]+[par/('shard-'+str(i)) for i in range(8)]:
+ p=d/'levels.jsonl'
+ if p.exists():doneRows.extend(json.loads(x) for x in p.read_text().splitlines() if x.strip())
+ for n in ['failures.jsonl','export-failures.jsonl']:
+  p=d/n
+  if p.exists():failureCounts[n]=failureCounts.get(n,0)+len(p.read_text().splitlines())
+unique={x['package'].lower() for x in doneRows}
+start=min((datetime.datetime.fromisoformat(x['time'].replace('Z','+00:00'))-datetime.timedelta(seconds=x.get('elapsedSeconds',0)) for x in rows),default=now)
+elapsed=(now-start).total_seconds();new=sum(x['processed'] for x in rows);rate=new/elapsed*60 if elapsed else 0
+v=subprocess.run(['powershell','-NoProfile','-Command',"Get-Process dotnet -ErrorAction SilentlyContinue | Select Id,CPU,WorkingSet64 | ConvertTo-Json -Compress"],capture_output=True,text=True)
+procs=json.loads(v.stdout);procs=procs if isinstance(procs,list) else [procs];ids={x['pid'] for x in rows};procs=[x for x in procs if x['Id'] in ids]
+before=json.loads((par/'cpu-before.json').read_text());prev={x['Id']:x['CPU'] for x in before['processes']};dt=(now-datetime.datetime.fromisoformat(before['time'])).total_seconds();cpu=sum(x['CPU']-prev.get(x['Id'],x['CPU']) for x in procs)/dt
+summary={'time':now.isoformat(),'preservedLevels':handoff['preservedLevels'],'newProcessed':new,'uniqueLevelRecords':len(unique),'duplicateLevelRecords':len(doneRows)-len(unique),'totalProcessed':base['processed']+new,'levelParseFailures':base['failed']+sum(x['failed'] for x in rows),'failureManifests':failureCounts,'components':base['components']+sum(x.get('components',0) for x in rows),'ismComponents':base['ismComponents']+sum(x.get('ismComponents',0) for x in rows),'instances':base['instances']+sum(x.get('instances',0) for x in rows),'verifiedWorldTransforms':0,'elapsedSeconds':elapsed,'levelsPerMinute':rate,'etaMinutes':(1847-base['processed']-new)/rate if rate else None,'cpuSampleSeconds':dt,'hostCpuPercent':cpu/32*100,'workingSetBytes':sum(x['WorkingSet64'] for x in procs),'pids':sorted(ids),'shards':rows}
+(par/'summary.json').write_text(json.dumps(summary,indent=2))
+print(json.dumps(summary))

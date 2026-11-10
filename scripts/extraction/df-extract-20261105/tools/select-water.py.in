@@ -1,0 +1,7 @@
+import json
+from pathlib import Path
+r=Path(r'@@DF_PATH_DF_EXTRACT_20261105@@')
+rows=[json.loads(l) for l in (r/'index-manifest.jsonl').open()]
+s=[x for x in rows if x['path'].endswith('/MI_WaterHD_FutureTech_01.uasset')]
+(r/'materials-selected.json').write_text(json.dumps(s))
+print(s)

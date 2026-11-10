@@ -1,0 +1,8 @@
+using ValvePak;
+using var p=new Package();p.Read(args[0]);var entry=p.FindEntry(args[1])??throw new Exception("missing exact entry");
+if(!p.RemoveFile(entry))throw new Exception("remove failed");
+p.AddFile(args[1],File.ReadAllBytes(args[2]));p.Write(args[3]);
+using var v=new Package();v.Read(args[3]);v.VerifyHashes();v.VerifyFileChecksums();
+v.ReadEntry(v.FindEntry(args[1])!,out byte[] b);
+if(!b.AsSpan().SequenceEqual(File.ReadAllBytes(args[2])))throw new Exception("payload differs");
+Console.WriteLine("EXACT_ENTITY_REPLACEMENT_AND_VPK_CHECKS_PASS");

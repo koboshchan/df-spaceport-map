@@ -1,0 +1,130 @@
+using System.Text.Json;
+using System.Diagnostics;
+using System.Reflection;
+using System.Security.Cryptography;
+using CUE4Parse.FileProvider;
+using CUE4Parse.UE4.Versions;
+using CUE4Parse.Encryption.Aes;
+using CUE4Parse.Compression;
+using CUE4Parse.UE4.Assets;
+using CUE4Parse.UE4.Assets.Exports.Texture;
+using CUE4Parse.UE4.Assets.Exports.StaticMesh;
+using CUE4Parse.UE4.Assets.Exports.Material;
+using CUE4Parse_Conversion;
+using CUE4Parse_Conversion.Options;
+using CUE4Parse_Conversion.Textures;
+using CUE4Parse_Conversion.Exporters;
+using Serilog;
+Log.Logger=new LoggerConfiguration().MinimumLevel.Error().WriteTo.Console().CreateLogger();
+var root=@"@@DF_PATH_DF_EXTRACT_20261105@@";
+var output=Path.Combine(root,"spacecenter-superset");
+Directory.CreateDirectory(output);
+const long cap=60_000_000_000L;
+long used=Directory.EnumerateFiles(root,"*",SearchOption.AllDirectories).Sum(f=>new FileInfo(f).Length);
+var lastCheck=DateTime.MinValue;
+void Check(bool force=false){
+ if(used>cap-16_000_000)throw new OperationCanceledException("60GB cumulative cap reached");
+ if(new DriveInfo("E").AvailableFreeSpace<20_000_000_000L)throw new OperationCanceledException("20GB disk reserve reached");
+ if(!force && (DateTime.UtcNow-lastCheck).TotalSeconds<10)return;
+ var psi=new ProcessStartInfo("powershell.exe"){UseShellExecute=false,RedirectStandardOutput=true,RedirectStandardError=true,CreateNoWindow=true};
+ psi.ArgumentList.Add("-NoProfile");psi.ArgumentList.Add("-File");psi.ArgumentList.Add(Path.Combine(output,"guard.ps1"));
+ using var proc=Process.Start(psi)!;var result=proc.StandardOutput.ReadToEnd();proc.WaitForExit();
+ if(proc.ExitCode!=0)throw new OperationCanceledException("DF/ACE guard stop "+result);
+ lastCheck=DateTime.UtcNow;
+}
+void Write(string relative,byte[] bytes){
+ Check(); var path=Path.GetFullPath(Path.Combine(output,relative));
+ if(!path.StartsWith(output+Path.DirectorySeparatorChar,StringComparison.OrdinalIgnoreCase))throw new Exception("unsafe output path");
+ if(used+bytes.LongLength+16_000_000>cap)throw new OperationCanceledException("60GB cumulative cap");
+ Directory.CreateDirectory(Path.GetDirectoryName(path)!); File.WriteAllBytes(path,bytes); used+=bytes.LongLength;
+}
+void Json(string relative,object value)=>Write(relative,System.Text.Encoding.UTF8.GetBytes(JsonSerializer.Serialize(value)));
+void Append(string relative,object value){
+ Check();var text=JsonSerializer.Serialize(value)+Environment.NewLine;
+ var bytes=System.Text.Encoding.UTF8.GetByteCount(text);if(used+bytes+16_000_000>cap)throw new OperationCanceledException("60GB cap");
+ File.AppendAllText(Path.Combine(output,relative),text);used+=bytes;
+}
+Check(true);
+File.WriteAllText(Path.Combine(output,"worker.pid"),Environment.ProcessId.ToString());
+var index=new Dictionary<string,Entry>(StringComparer.OrdinalIgnoreCase);
+foreach(var line in File.ReadLines(Path.Combine(root,"index-manifest.jsonl"))){
+ using var doc=JsonDocument.Parse(line);var e=doc.RootElement;
+ index[e.GetProperty("path").GetString()!]=new(e.GetProperty("path").GetString()!,e.GetProperty("pak").GetString()!,e.GetProperty("size").GetInt64());
+}
+var roots=index.Keys.Where(s=>s.Contains("SpaceCenter",StringComparison.OrdinalIgnoreCase)&&(s.EndsWith(".uasset",StringComparison.OrdinalIgnoreCase)||s.EndsWith(".umap",StringComparison.OrdinalIgnoreCase))).ToArray();
+var named=index.Values.Where(s=>s.path.Contains("SpaceCenter",StringComparison.OrdinalIgnoreCase)).ToArray();
+Json("estimate.json",new{scope="SpaceCenter named-path SUPERSET, not exact runtime map closure",rootPackages=roots.Length,namedFiles=named.Length,namedSourceBytes=named.Sum(e=>e.size),convertedOutputBytes=(long?)null,reason="Source archive entry bytes are NOT decoded PNG/mesh size. Transitive references pending discovery.",cap,usedBytes=used,freeBytes=new DriveInfo("E").AvailableFreeSpace,started=DateTime.UtcNow});
+Json("running-config.json",new{mode="TEXTURES_ONLY",meshPhase=false,materialJson=true,cap,time=DateTime.UtcNow});
+OodleHelper.Initialize(Path.Combine(root,"tools","oodle-data-shared.dll"));
+TextureDecoder.UseAssetRipperTextureDecoder=true;
+using var kj=JsonDocument.Parse(File.ReadAllText(Path.Combine(root,"community-aes-keys.json")));
+var keys=kj.RootElement.GetProperty("Keys").EnumerateArray().GroupBy(x=>x.GetProperty("guid").GetString()).Select(g=>g.First()).ToDictionary(x=>x.GetProperty("guid").GetString()!.Replace("-","").ToUpperInvariant(),x=>x.GetProperty("key").GetString()!);
+keys["00000000000000000000000000000000"]=kj.RootElement.GetProperty("MainKey").GetString()!;
+using var p=new StreamedFileProvider("DeltaForce",new VersionContainer(EGame.GAME_DeltaForce),StringComparer.OrdinalIgnoreCase);p.Initialize();
+foreach(var pak in File.ReadAllLines(Path.Combine(root,"pak-paths.txt"))){Check();p.RegisterVfs(pak.Trim());}
+foreach(var r in p.UnloadedVfs.ToArray()){Check();var guid=r.EncryptionKeyGuid.ToString().Replace("-","").ToUpperInvariant();if(keys.TryGetValue(guid,out var key))p.SubmitKey(r.EncryptionKeyGuid,new FAesKey(key));}
+Json("mounted.json",new{files=p.Files.Count,remainingUnloaded=p.UnloadedVfs.Count(),time=DateTime.UtcNow});
+roots=p.Files.Keys.Where(s=>s.Contains("SpaceCenter",StringComparison.OrdinalIgnoreCase)&&(s.EndsWith(".uasset",StringComparison.OrdinalIgnoreCase)||s.EndsWith(".umap",StringComparison.OrdinalIgnoreCase))).ToArray();
+var fullNamed=p.Files.Values.Where(f=>f.Path.Contains("SpaceCenter",StringComparison.OrdinalIgnoreCase)).ToArray();
+Json("mounted-estimate.json",new{scope="SUPERSET",rootPackages=roots.Length,namedFiles=fullNamed.Length,namedSourceEntryBytes=fullNamed.Sum(f=>f.Size),convertedOutputBytes=(long?)null,note="Source package+sidecar entry bytes only, transitive references and decoded output pending",time=DateTime.UtcNow});
+var existingTextures=File.Exists(Path.Combine(output,"textures.jsonl"))?File.ReadLines(Path.Combine(output,"textures.jsonl")).Select(l=>JsonDocument.Parse(l).RootElement.GetProperty("path").GetString()!).ToHashSet(StringComparer.OrdinalIgnoreCase):new HashSet<string>();
+var pilot=JsonDocument.Parse(File.ReadAllText(Path.Combine(root,"pilot-final-manifest.json"))).RootElement.EnumerateArray().ToDictionary(e=>e.GetProperty("asset").GetString()!,e=>e.GetProperty("png").GetString()!,StringComparer.OrdinalIgnoreCase);
+var seen=new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+var queue=new Queue<string>();
+void Enqueue(string path){if(seen.Add(path))queue.Enqueue(path);}
+foreach(var path in roots.OrderBy(s=>s.Contains("/Maps/",StringComparison.OrdinalIgnoreCase)?1:0))Enqueue(path);
+var meshes=new List<string>();int parsed=0,failed=0,textureCount=0;long sourceBytes=0;
+var options=new ExportOptions(exportHdrTexturesAsHdr:false);
+string? Resolve(string reference){
+ var t=reference.Split('.')[0].Split(':')[0];
+ if(t.StartsWith("/Game/"))t="DeltaForce/Content/"+t[6..];
+ else if(t.StartsWith("/Engine/"))t="Engine/Content/"+t[8..];
+ else return null;
+ foreach(var ext in new[]{".uasset",".umap"})if(p.Files.ContainsKey(t+ext))return t+ext;
+ return null;
+}
+while(queue.TryDequeue(out var path)){
+ Check();
+ try{
+  if(index.TryGetValue(path,out var ent))sourceBytes+=ent.size;
+  var pkg=p.LoadPackage(path) as Package??throw new Exception("not regular UE4 Package");
+  var hard=pkg.ImportMap.Select(e=>e.ObjectName.Text).Where(s=>s!=null&&(s.StartsWith("/Game/")||s.StartsWith("/Engine/"))).Distinct().ToArray();
+  var names=pkg.NameMap.Select(e=>e.Name).Where(s=>s.StartsWith("/Game/")||s.StartsWith("/Engine/")).Distinct().ToArray();
+  foreach(var reference in hard.Concat(names).Distinct()){
+   var resolved=Resolve(reference);if(resolved!=null)Enqueue(resolved);
+   else Append("unresolved-refs.jsonl",new{from=path,reference,kind=hard.Contains(reference)?"import":"name-table-candidate",reason="not resolved in mounted virtual file index"});
+  }
+  string Class(int i){var c=pkg.ExportMap[i].ClassIndex.Index;return c<0?pkg.ImportMap[-c-1].ObjectName.Text:"local-export-class";}
+  var classes=Enumerable.Range(0,pkg.ExportMap.Length).Select(Class).ToArray();
+  Append("packages.jsonl",new{path,pak=index.GetValueOrDefault(path)?.pak,sourceBytes=index.GetValueOrDefault(path)?.size,classes,hardImports=hard,nameTableCandidates=names,scope=roots.Contains(path)?"named-root":"transitive-reference",runtimeRouting="UNKNOWN CustomOpenWorldStreaming"});
+  // Mesh extraction prohibited by latest user override.
+  var selected=Enumerable.Range(0,classes.Length).Where(i=>classes[i]=="Texture2D"||classes[i].StartsWith("Material")).ToArray();
+  foreach(var i in selected){
+   Check(); var obj=pkg.ExportsLazy[i].Value;
+   if(obj is UTexture2D texture){
+    var rawTexture=Newtonsoft.Json.Linq.JObject.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(obj));
+    Append("texture-flags.jsonl",new{path,obj.Name,cookedProperties=rawTexture["Properties"],sRGB=texture.SRGB,compression=texture.CompressionSettings.ToString(),pixelFormat=texture.PlatformData.PixelFormat.ToString(),width=texture.PlatformData.SizeX,height=texture.PlatformData.SizeY,virtualTexture=texture.PlatformData.VTData!=null,normalMap=texture.IsNormalMap,note="Absent cooked properties are parser defaults, not verified serialized flags. PNG alpha inspection is separate from shader semantics."});
+    if(existingTextures.Contains(path))continue;
+    if(pilot.TryGetValue(path,out var existing)){Append("textures.jsonl",new{path,reusedPilot=existing,ok=true});continue;}
+    long pixels=(long)texture.PlatformData.SizeX*texture.PlatformData.SizeY;
+    if(pixels<=0||pixels>134_217_728)throw new Exception("texture dimensions unsafe for single decode");
+    var bitmap=texture.Decode(options)??throw new Exception("null decoded texture");var png=bitmap.Encode(options,out var ext);
+    if(ext!="png")throw new Exception("unexpected texture format");
+    string target="textures/"+path[..path.LastIndexOf('.')]+"/"+obj.Name+".png";
+    Write(target,png);
+    Append("textures.jsonl",new{path,obj.Name,pak=index.GetValueOrDefault(path)?.pak,ok=true,target,bytes=png.LongLength,width=bitmap.Width,height=bitmap.Height,texture.SRGB,texture.IsNormalMap,compression=texture.CompressionSettings.ToString(),pixelFormat=texture.PlatformData.PixelFormat,virtualTexture=texture.PlatformData.VTData!=null,sha256=Convert.ToHexString(SHA256.HashData(png))});textureCount++;
+   }else if(classes[i].StartsWith("Material")){
+    var raw=Newtonsoft.Json.Linq.JObject.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(obj));
+    if(obj is UMaterial material)raw["ParserMaterialFields"]=Newtonsoft.Json.Linq.JObject.FromObject(new{material.TwoSided,material.bIsMasked,blendMode=material.BlendMode.ToString(),shadingModel=material.ShadingModel.ToString(),material.OpacityMaskClipValue,note="Parser fields may contain defaults. Only cooked Properties are explicit evidence."});
+    var json=raw.ToString(Newtonsoft.Json.Formatting.None);
+    Write("materials/"+path[..path.LastIndexOf('.')]+"/"+obj.Name+".json",System.Text.Encoding.UTF8.GetBytes(json));
+    Append("materials.jsonl",new{path,obj.Name,ok=true});
+   }else Append("unsupported-exports.jsonl",new{path,obj.Name,obj.ExportType,reason="not Texture2D/material"});
+  }
+  parsed++;
+ }catch(OperationCanceledException){throw;}catch(Exception e){failed++;Append("failures.jsonl",new{path,phase="metadata-textures",error=e.ToString()});}
+ if((parsed+failed)%50==0){Json("progress.json",new{phase="metadata-textures",parsed,failed,queued=queue.Count,candidatePackages=seen.Count,textureCount,sourcePackageHeaderBytes=sourceBytes,usedBytes=used,time=DateTime.UtcNow});GC.Collect();}
+}
+Json("dependency-summary.json",new{scope="SUPERSET",namedRoots=roots.Length,candidatePackages=seen.Count,parsed,failed,textureCount,meshPackages=meshes.Count,sourcePackageHeaderBytes=sourceBytes,runtimeRouting="UNKNOWN, not map closure",time=DateTime.UtcNow});
+Json("completed.json",new{mode="TEXTURES_ONLY_NO_MESH_CODE",parsed,failed,textureCount,usedBytes=used,time=DateTime.UtcNow});
+record Entry(string path,string pak,long size);

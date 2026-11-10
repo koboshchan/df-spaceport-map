@@ -1,0 +1,42 @@
+
+from pathlib import Path
+import json,hashlib,numpy as np,itertools,re,os,traceback
+from scipy.spatial import ConvexHull
+R=Path('@@DF_PATH_DF_V268_STAGE_20261109@@');S=Path('@@DF_PATH_DF_V268_SOURCE_COVERAGE_20261109@@');base=Path('@@DF_PATH_DF_V25_BUILD_20261106@@/content/kat')
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+a={x['mesh']:x for x in json.loads((S/'readable-source-coverage.json').read_text())['meshes']}
+cl=json.loads((R/'proof/source-affine-classification.json').read_text());groups={}
+for x in cl['instances']:
+ if x['status']!='HELD':groups.setdefault(x['model'],[]).append(x)
+receipts=[];errors=[]
+for model,inst in groups.items():
+ try:
+  src=base/model;old=src.read_text();g=a[inst[0]['sourceMesh']];assert sha(Path(g['sourceJSON']))==g['sourceSHA256']
+  ident=Path(model).stem;name='ag_'+ident;dest=R/'content/kat/models/df_v268'/ (name+'.vmdl');dest.parent.mkdir(parents=True,exist_ok=True);nodes=[];expected=[]
+  assert set(g['geometry'])<=set(['BoxElems','ConvexElems','SphereElems'])
+  for typ,els in g['geometry'].items():
+   for i,e in enumerate(els):
+    if typ=='SphereElems':raise ValueError('SPHERE_DEFER_UNTIL_EFFECTIVE_SCALE_VALIDATED')
+    if typ=='BoxElems':
+     P,Y,W=np.radians([e['Rotation'][k] for k in ['Pitch','Yaw','Roll']]);sp,sy,sr=np.sin([P,Y,W]);cp,cy,cr=np.cos([P,Y,W])
+     rot=np.array([[cp*cy,cp*sy,sp],[sr*sp*cy-cr*sy,sr*sp*sy+cr*cy,-sr*cp],[-(cr*sp*cy+sr*sy),cy*sr-cr*sp*sy,cr*cp]])
+     v=np.array(list(itertools.product(*[[-e[k]/2,e[k]/2] for k in ['X','Y','Z']])) )@rot+np.array([e['Center'][k] for k in ['X','Y','Z']])
+    else:
+     v=np.array([[v[k] for k in ['X','Y','Z']] for v in e['VertexData']]);t=e.get('Transform',{});assert all(abs(t.get('Rotation',{}).get(k,d)-d)<1e-8 for k,d in [('X',0),('Y',0),('Z',0),('W',1)])
+     assert all(abs(t.get('Scale3D',{}).get(k,1)-1)<1e-8 and abs(t.get('Translation',{}).get(k,0))<1e-8 for k in ['X','Y','Z'])
+    target=v@np.diag([.36,-.36,.36]);obj=target[:,[1,2,0]];h=ConvexHull(obj);fn=name+'_'+typ+'_'+str(i)+'.obj';op=dest.with_name(fn)
+    lines=['v '+' '.join(format(z,'.17g') for z in row) for row in obj]
+    for f,eq in zip(h.simplices,h.equations):
+     f=f.copy()
+     if np.dot(np.cross(obj[f[1]]-obj[f[0]],obj[f[2]]-obj[f[0]]),eq[:3])<0:f=f[::-1]
+     lines.append('f '+' '.join(str(int(z)+1) for z in f))
+    op.write_text('\n'.join(lines)+'\n')
+    nodes.append('{ _class = "PhysicsHullFile" name = "'+typ+str(i)+'" parent_bone = "" surface_prop = "default" collision_tags = "solid" recenter_on_parent_bone = false offset_origin = [0,0,0] offset_angles = [0,0,0] align_origin_x_type = "None" align_origin_y_type = "None" align_origin_z_type = "None" filename = "models/df_v268/'+fn+'" import_scale = 1.0 faceMergeAngle = 0.0 maxHullVertices = 0 import_mode = "SingleHull" optimization_algorithm = "Exact" import_filter = { exclude_by_default = false exception_list = [] } }')
+    expected.append({'type':typ,'index':i,'sourceVertices':v.tolist(),'nativeExpectedVertices':target.tolist(),'sourceConvexExtremeVertexCount':len(h.vertices),'objSHA256':sha(op)})
+  pat=r'\{ _class = "PhysicsMeshFromRender".*?renderMeshList = \[\] \}'
+  new,n=re.subn(pat,', '.join(nodes),old);assert n==1 and nodes
+  dest.write_text(new)
+  receipts.append({'originalModel':model,'newModel':str(dest.relative_to(R/'content/kat')).replace('\\','/'),'originalVMDLSHA256':sha(src),'newVMDLSHA256':sha(dest),'sourceMesh':g['mesh'],'sourceJSON':g['sourceJSON'],'sourceSHA256':g['sourceSHA256'],'bodyGuid':g['bodyGuid'],'instances':[x['uuid'] for x in inst],'hulls':expected,'nativeGeometryStatus':'PENDING','appliedInstances':0})
+ except Exception as e:errors.append({'model':model,'instances':[x['uuid'] for x in inst],'error':str(e)})
+p=R/'proof/materialized-agggeom-models.json';p.write_text(json.dumps({'pid':os.getpid(),'models':receipts,'errors':errors,'materializedModels':len(receipts),'materializedCandidateInstances':sum(len(x['instances']) for x in receipts),'nativeValidatedInstances':0,'VMAPAppliedInstances':0,'policy':'SOLID_ONLY_FULL_UNION_NO_PROFILE_GATE'},separators=(',',':')))
+(R/'proof/materialization-result.json').write_text(json.dumps({'manifest':str(p),'sha256':sha(p),'models':len(receipts),'instances':sum(len(x['instances']) for x in receipts),'errors':errors},indent=2))

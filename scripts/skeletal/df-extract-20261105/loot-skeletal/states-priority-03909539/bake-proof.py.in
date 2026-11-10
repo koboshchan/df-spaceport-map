@@ -1,0 +1,79 @@
+from pathlib import Path
+import json,numpy as np,hashlib,os,copy
+R=Path('@@DF_PATH_DF_EXTRACT_20261105@@/loot-skeletal')
+D=R/'states-priority-03909539'
+ns={'__name__':'priority_helper'}
+exec((R/'static-paired-v3/bake-pairs.py').read_text().split("if __name__=='__main__':")[0],ns)
+b=ns['b'];pose=ns['pose'];clean=ns['clean'];verts=ns['verts'];H=ns['H']
+samples=[json.loads(l) for l in (D/'samples/samples.jsonl').read_text().splitlines()]
+native=[json.loads(l) for l in (D/'samples/native.jsonl').read_text().splitlines()]
+targets=json.loads((R/'static-paired-v3/targets.json').read_text())
+def certify(src,p):
+ sg,sb=b.read(src);g,data=b.read(p)
+ assert not g.get('skins') and not g.get('animations')
+ assert all('skin' not in n and 'children' not in n for n in g['nodes'])
+ assert sg.get('materials')==g.get('materials')
+ assert sg.get('images')==g.get('images') and sg.get('textures')==g.get('textures') and sg.get('samplers')==g.get('samplers')
+ stats=[]
+ for sm,m in zip(sg['meshes'],g['meshes']):
+  for sp,q in zip(sm['primitives'],m['primitives']):
+   assert sp.get('material')==q.get('material')
+   assert np.array_equal(b.acc(sg,sb,sp['indices']),b.acc(g,data,q['indices']))
+   for a,idx in q['attributes'].items():
+    assert not a.startswith(('JOINTS_','WEIGHTS_'))
+    v=b.acc(g,data,idx);assert np.isfinite(v).all()
+    if a not in ['POSITION','NORMAL','TANGENT']:assert np.array_equal(v,b.acc(sg,sb,sp['attributes'][a]))
+    if a in ['NORMAL','TANGENT']:assert np.max(abs(np.linalg.norm(v[:,:3],axis=1)-1))<1e-5
+   if 'NORMAL' in q['attributes'] and 'TANGENT' in q['attributes']:
+    n=b.acc(g,data,q['attributes']['NORMAL']);t=b.acc(g,data,q['attributes']['TANGENT'])
+    assert np.max(abs(np.sum(n*t[:,:3],axis=1)))<1e-5
+   stats.append({'vertices':g['accessors'][q['attributes']['POSITION']]['count'],'materialSlot':q.get('material')})
+ for image in g.get('images',[]):
+  if 'bufferView' in image:
+   a=sg['bufferViews'][image['bufferView']];c=g['bufferViews'][image['bufferView']]
+   assert sb[a.get('byteOffset',0):a.get('byteOffset',0)+a['byteLength']]==data[c.get('byteOffset',0):c.get('byteOffset',0)+c['byteLength']]
+ return {'sha256':H(p),'staticMeshNodes':len(g['nodes']),'skins':0,'animations':0,'jointAttributes':0,'materialUVIndexColorImageBytesPreserved':True,'normalsTangentsFiniteNormalizedOrthogonal':True,'primitives':stats,'nodeMatrices':[n['matrix'] for n in g['nodes']]}
+report=[]
+for id in ['548','557','660']:
+ canonical='props_collect_box_'+id+'_3P'
+ ss=[x for x in samples if '/props_collect_box_'+id+'/' in x['mesh']]
+ mesh=ss[0]['mesh']
+ srcs=list((R/'parallel').glob('shard-*/'+mesh[:-7]+'.glb'))+list((R/'pilot').glob(mesh[:-7]+'.glb'))
+ assert len(srcs)==1
+ src=srcs[0];out=D/'bakes'/canonical;out.mkdir(parents=True,exist_ok=True)
+ row={'canonical':canonical,'mesh':mesh,'sourceGLB':str(src),'sourceSHA256':H(src),'native':[x for x in native if x['mesh']==mesh],'clips':[]}
+ for x in ss:
+  name=x['animation'].split('/')[-1].replace('.uasset','')
+  frames=sorted(set([0,x['frames']//2,x['frames']-1]))
+  fs=[]
+  for fi in frames:
+   p=out/(name+'-frame'+str(fi)+'.glb')
+   rep,err=pose(src,x,fi,p);clean(p,'SOURCE_CLIP_FRAME_NOT_STATE_CERTIFICATION',x['animation'])
+   fs.append({'frame':fi,'seconds':fi/x['fps'],'file':str(p),'restMatrixMaxError':err,'certification':certify(src,p),'bake':rep})
+  start=verts(Path(fs[0]['file']));end=verts(Path(fs[-1]['file']))
+  dd=np.linalg.norm(end-start,axis=1)
+  row['clips'].append({'animation':x['animation'],'frames':x['frames'],'duration':x['duration'],'fps':x['fps'],'missingBones':x['missing'],'additive':x['additive'],'samples':fs,'startToFinalMaxMeters':float(dd.max()),'startToFinalChangedVerticesAt1um':int((dd>1e-6).sum()),'startBounds':[start.min(0).tolist(),start.max(0).tolist()],'finalBounds':[end.min(0).tolist(),end.max(0).tolist()]})
+ if id=='557':
+  pair=D/'pairs'/canonical;pair.mkdir(parents=True,exist_ok=True)
+  def c(s):return next(z for z in row['clips'] if z['animation'].endswith('/props_collect_box_557_'+s+'.uasset'))
+  import shutil
+  shutil.copy2(c('Close_Idle')['samples'][0]['file'],pair/'closed.glb')
+  shutil.copy2(c('Open')['samples'][-1]['file'],pair/'opened.glb')
+  shutil.copy2(c('Open_Idle')['samples'][-1]['file'],pair/'opened-idle-alternative.glb')
+  clean(pair/'closed.glb','CLOSED',c('Close_Idle')['animation'])
+  clean(pair/'opened.glb','OPEN_CLIP_FINAL_FRAME',c('Open')['animation'])
+  clean(pair/'opened-idle-alternative.glb','BLUEPRINT_OPENED_IDLE',c('Open_Idle')['animation'])
+  cl=verts(pair/'closed.glb');op=verts(pair/'opened.glb');iv=verts(pair/'opened-idle-alternative.glb')
+  certs={k:certify(src,pair/k) for k in ['closed.glb','opened.glb','opened-idle-alternative.glb']}
+  assert certs['closed.glb']['nodeMatrices']==certs['opened.glb']['nodeMatrices']==certs['opened-idle-alternative.glb']['nodeMatrices']
+  row['pair']={'status':'STATIC_AUTHORED_OPEN_CLIP_ENDPOINT_VERIFIED_NOT_BLUEPRINT_IDLE','directory':str(pair),'closedSource':c('Close_Idle')['animation'],'closedFrame':0,'openedSource':c('Open')['animation'],'openedFrame':30,'openedTimeSeconds':1,'blueprintPersistentIdleSource':c('Open_Idle')['animation'],'openFinalVsIdleMaxMeters':float(np.linalg.norm(op-iv,axis=1).max()),'closedVsOpenFinalMaxMeters':float(np.linalg.norm(op-cl,axis=1).max()),'closedVsIdleMaxMeters':float(np.linalg.norm(iv-cl,axis=1).max()),'changedVertices':int((np.linalg.norm(op-cl,axis=1)>1e-6).sum()),'certification':certs,'samePivotUnitsAxis':True,'units':'meters','axis':'original CUE4Parse glTF Y-up, no component transform/recenter','sourceBinding':next(x['semanticEvidence'] for x in targets if x['canonical']==canonical),'note':'User requested final frame of open clip. This actual named Open sequence is NOT the Militarybox6 OpenForward override (Hit) or its persistent OpenedIdle. Both source-bound alternatives provided; no runtime state equivalence claimed.'}
+  tmp=pair/'state-manifest.json.tmp';tmp.write_text(json.dumps(row['pair'],indent=2));os.replace(tmp,pair/'state-manifest.json')
+ else:
+  row['status']='BLOCKED_NO_AUTHORED_DISTINCT_PERSISTENT_OPEN_ENDPOINT'
+  row['blocker']='Sole USE/search clip referenced by BOTH OpenForward and CloseForward. No ClosedIdle/OpenedIdle in component/template/ABP. Full decode succeeds; no missing decoder or morph curve. End-frame is not demonstrated as distinct semantic opened state. See vertex residuals.'
+ report.append(row)
+tmp=D/'proof-manifest.json.tmp';tmp.write_text(json.dumps(report,indent=2));os.replace(tmp,D/'proof-manifest.json')
+for r in report:
+ print(r['canonical'],r.get('status',r.get('pair',{}).get('status')))
+ for c in r['clips']: print(c['animation'].split('/')[-1],c['startToFinalMaxMeters'],c['startToFinalChangedVerticesAt1um'])
+ if 'pair' in r: print(json.dumps({k:v for k,v in r['pair'].items() if k not in ['certification','sourceBinding']}))

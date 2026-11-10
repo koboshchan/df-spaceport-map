@@ -1,0 +1,78 @@
+
+from pathlib import Path
+import json,collections,re,time,sys
+import numpy as np
+sys.stdout.reconfigure(encoding='utf-8')
+r=Path('@@DF_PATH_DF_EXTRACT_20261105@@');o=r/'placements';v=o/'validation'
+v.mkdir(exist_ok=True);(v/'analysis.pid').write_text(str(__import__('os').getpid()))
+def save(n,d): (v/n).write_text(json.dumps(d,ensure_ascii=True,indent=2),encoding='utf-8')
+def vec(d):return np.array([d[k] for k in 'XYZ'],dtype=float)
+def mat(c):
+ q=c['rotationQuaternion'];x,y,z,w=[q[k] for k in 'XYZW']
+ R=np.array([[1-2*(y*y+z*z),2*(x*y-z*w),2*(x*z+y*w)],[2*(x*y+z*w),1-2*(x*x+z*z),2*(y*z-x*w)],[2*(x*z-y*w),2*(y*z+x*w),1-2*(x*x+y*y)]])
+ a=np.eye(4);a[:3,:3]=R@np.diag(vec(c['scale']));a[:3,3]=vec(c['translation']);return a
+def norm(s):return re.sub(r'\.(?:\d{3,}|md|mo)$','',s)
+rows=[]
+for d in [o]+[o/'parallel'/('shard-'+str(i)) for i in range(8)]:rows.extend(json.loads(x) for x in (d/'exports.jsonl').read_text().splitlines())
+audit=json.loads(Path('@@DF_PATH_SPACEPORT_KAT_REBUILD_20261105@@/audit.json').read_text(encoding='utf-8'))
+bl=collections.defaultdict(list)
+for a in audit['objects']:bl[norm(a['mesh'])].append(a)
+meshes=collections.defaultdict(list);safes=[];counts=collections.Counter()
+start=time.monotonic()
+fout=(v/'component-composed-candidates.jsonl').open('w',encoding='utf-8')
+for i,x in enumerate(rows):
+ # All parsed scene subclasses recognized by component presence; do not read mesh/level sources needlessly.
+ if x['className'] not in ['StaticMeshComponent','GPStaticMeshComponent','InstancedStaticMeshComponent','HierarchicalInstancedStaticMeshComponent','SceneComponent','InteractorAsyncStaticMeshComponent']:continue
+ m=json.loads((o/x['metadata']).read_text(encoding='utf-8'));c=m['component']
+ if c is None:continue
+ if c['chainBlocker'] or not c['chain']:counts['blockedChains']+=1;continue
+ M=np.eye(4)
+ for t in c['chain']:M=mat(t)@M
+ counts['composedChains']+=1
+ flags=[]
+ for t in c['chain']:
+  if any(n in t['serializedPropertyNames'] for n in ['bAbsoluteLocation','bAbsoluteRotation','bAbsoluteScale']):flags.append(t['objectPath'])
+ item=dict(x,matrixUEcm=M.tolist(),positionUEcm=M[:3,3].tolist(),explicitAbsoluteFlagObjects=flags,chainDepth=len(c['chain']),worldVerified=False,templateReferences=[t['template'] for t in c['chain'] if t['template']])
+ if c['mesh']:
+  item['mesh']=c['mesh'];mesh=c['mesh'].rsplit('.',1)[-1];meshes[mesh].append(item);fout.write(json.dumps(item)+'\n');counts['meshComponents']+=1
+ # root only, don't double-count several child/interactor points at same safe.
+ if 'safebox' in x['objectPath'].lower() and x['className']=='SceneComponent' and x['objectPath'].endswith('.DefaultSceneRoot'):
+  item['sourceJson']=m['sourceJson'];safes.append(item)
+ if i%1000==0:save('status.json',dict(phase='composing-existing-metadata',processedManifestIndex=i,total=len(rows),counts=dict(counts),elapsedSeconds=time.monotonic()-start))
+fout.close()
+save('safe-root-candidates.json',safes)
+# Compare only sole Blender mesh-name objects against all distinct DF candidates, no automatic identity selection.
+# Candidate hypothesis inferred independently from observed UE/Unity coordinate magnitudes; validate before usage.
+A=np.diag([.36,-.36,.36]);t=np.array([-36*6694,-36*4578,36*223.69])
+unique=[];landmarks=[]
+for name,objs in bl.items():
+ if len(objs)!=1 or name not in meshes:continue
+ b=objs[0];dst=36*(np.array(b['matrix'])[:3,3]-np.array([6694,4578,-223.69]))
+ groups={}
+ for d in meshes[name]:
+  key=tuple(np.round(np.array(d['positionUEcm']),2))
+  groups.setdefault(key,[]).append(d)
+ comparisons=[]
+ for key,ds in groups.items():
+  src=np.array(ds[0]['positionUEcm']);pred=A@src+t;err=float(np.linalg.norm(pred-dst))
+  comparisons.append(dict(DFPosition=src.tolist(),CS2Predicted=pred.tolist(),CS2Reference=dst.tolist(),errorCS2=err,provenance=[d['objectPath'] for d in ds],packages=[d['package'] for d in ds],metadata=[d['metadata'] for d in ds],absoluteFlagObjects=ds[0]['explicitAbsoluteFlagObjects'],templates=ds[0]['templateReferences']))
+ comparisons.sort(key=lambda x:x['errorCS2'])
+ entry=dict(mesh=name,blenderObject=b['name'],distinctDFPositions=len(groups),candidates=comparisons)
+ unique.append(entry)
+ if len(groups)==1:landmarks.append(entry)
+save('unique-blender-mesh-comparisons.json',unique)
+save('single-position-mesh-anchors.json',landmarks)
+# Safe7 independently referenced from webdump, not from Blender.
+loot=json.loads((v/'web-loot-reference.json').read_text(encoding='utf-8'))
+safe7=next(x for x in loot if x['id']=='2030201035');ref=np.array([safe7[k] for k in ['x','y','z']])
+safelist=[]
+for s in safes:
+ p=np.array(s['positionUEcm']);pred=A@p+t
+ safelist.append(dict(errorCS2=float(np.linalg.norm(pred-ref)),predictedCS2=pred.tolist(),referenceCS2=ref.tolist(),**s))
+safelist.sort(key=lambda x:x['errorCS2'])
+save('safe7-candidate-comparisons.json',dict(reference=safe7,candidates=safelist))
+# No fitting to repeated/ambiguous instances. Independent sole-location landmarks assess proposed frame.
+anchor_errors=[x['candidates'][0]['errorCS2'] for x in landmarks]
+good=[x for x in landmarks if x['candidates'][0]['errorCS2']<.1]
+report=dict(phase='initial-candidate-frame-validation-complete',manifestExports=len(rows),counts=dict(counts),candidateUEcmToCS2Matrix=A.tolist(),candidateTranslationCS2=t.tolist(),uniqueBlenderMeshNames=len(unique),singleDFPositionAnchors=len(landmarks),singlePositionResidualStatsCS2=dict(median=float(np.median(anchor_errors)) if anchor_errors else None,max=max(anchor_errors,default=None),RMS=float(np.sqrt(np.mean(np.square(anchor_errors)))) if anchor_errors else None),singlePositionAnchorsBelowPoint1CS2=len(good),safeRootCount=len(safes),nearestSafe7Candidates=[dict(errorCS2=x['errorCS2'],objectPath=x['objectPath'],package=x['package'],positionUEcm=x['positionUEcm']) for x in safelist[:5]],verifiedWorldTransforms=0,limits=['comparison hypothesis only, no auto selection or application','actor template defaults/absolute flags unresolved until anchor source checks','runtime map variant closure not established; provenance never unioned','safe root may differ from bottom-center mesh reference','rotation/scale/source pivot validation pending'],elapsedSeconds=time.monotonic()-start)
+save('world-frame-report.json',report);print(json.dumps(report))

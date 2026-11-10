@@ -1,0 +1,48 @@
+import pathlib,sys,os,json,hashlib,subprocess,shutil,datetime,traceback
+R=pathlib.Path('@@DF_PATH_DF_V26_BUILD_20261106@@');S=R/'central-stage-17052918';G=S/'game/kat';Q=S/'packqa';Q.mkdir(exist_ok=True);sys.stdout=(Q/'worker.log').open('w',buffering=1);sys.stderr=sys.stdout
+def save(n,x):(Q/n).write_text(json.dumps(x,indent=2))
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+save('process.json',{'pid':os.getpid(),'UTC':datetime.datetime.now(datetime.timezone.utc).isoformat(),'stage':'packaging','noInstall':True})
+try:
+ sys.path.insert(0,'@@DF_PATH_SPACEPORT_KAT_REBUILD_20261105@@');from next_partition_lib import blocks,refs
+ from srctools.vpk import VPK
+ assert json.loads((S/'fullcompile/complete.json').read_text())['pass']
+ ready=S/'ready/maps';ready.mkdir(parents=True,exist_ok=True)
+ manifest={}
+ for top in ['models','materials','panorama','scripts','particles','resource']:
+  if (G/top).exists():
+   for p in (G/top).rglob('*'):
+    if p.is_file()and p.name.endswith('_c'):manifest[p.relative_to(G).as_posix()]=str(p)
+ assert manifest
+ save('assets-manifest.json',manifest)
+ tool='@@DF_PATH_SPACEPORT_KAT_REBUILD_20261105@@/fixed-build/pack-tool/bin/Release/net10.0/Pack.dll'
+ with(Q/'pack.log').open('w')as log:
+  cmd=['dotnet',tool,str(G/'maps/df_spaceport_v26.vpk'),str(Q/'assets-manifest.json'),str(ready/'df_spaceport_v26.vpk')]
+  p=subprocess.Popen(cmd,stdout=log,stderr=subprocess.STDOUT);save('pack-process.json',{'pid':p.pid,'command':cmd});assert p.wait()==0
+ for i in range(6):shutil.copy2(G/'maps'/f'df_spaceport_v26_part{i}.vpk',ready/f'df_spaceport_v26_part{i}.vpk')
+ providers={};packages=[];allrefs=set();phys=[]
+ for p in sorted(ready.glob('*.vpk')):
+  v=VPK(p);names=list(v.filenames());assert all(v[n].verify()for n in names),'CRC '+str(p)
+  for n in names:
+   data=v[n].read();providers[n.lower()]=str(p)
+   if n.endswith('_c'):
+    for dep in refs(data):allrefs.add(dep.lower()if dep.endswith('_c')else dep.lower()+'_c')
+    for k,b in blocks(data).items():
+     if k=='PHYS':assert len(b)<512*1024*1024;phys.append({'resource':n,'bytes':len(b)})
+  packages.append({'path':str(p),'bytes':p.stat().st_size,'sha256':sha(p),'crcPass':True,'resources':len(names)})
+ save('seven-packages.json',packages);save('PHYS-budget.json',phys)
+ unresolved=allrefs-set(providers);stock={}
+ for folder in ['core','csgo']:
+  for p in (S/'game'/folder).glob('*dir.vpk'):
+   v=VPK(p)
+   for n in v.filenames():
+    if n.lower()in unresolved:stock[n.lower()]=str(p)
+ missing=sorted(unresolved-set(stock))
+ save('closure.json',{'referenced':len(allrefs),'packagedProviders':len(providers),'stockProviders':stock,'missing':missing,'pass':not missing})
+ # Verify acceptance manifests against exact staged and packed payloads.
+ checks={}
+ for name in ['visibility-stage.json','terrain168-prepared.json','error-cube-assets-prepared.json','prewater-integration.json']:
+  obj=json.loads((S/name).read_text());checks[name]={'sha256':sha(S/name),'receipt':obj}
+ save('manifest-evidence.json',checks)
+ save('receipt.json',{'packagingPass':True,'packages':packages,'closurePass':not missing,'missing':missing,'PHYSunder512MiB':True,'waterAccepted1848':json.loads((R/'water-contact-owner/ACCEPTED-WATER-HANDOFF-17052918.json').read_text()),'manifestPayloadRecheckPending':True,'noInstall':True})
+except BaseException:save('failure.json',{'error':traceback.format_exc()});raise

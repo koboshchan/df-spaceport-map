@@ -1,0 +1,78 @@
+from pathlib import Path
+import json,hashlib,numpy as np,struct,os,datetime,traceback,collections
+from scipy.spatial import cKDTree
+P=Path('@@DF_PATH_DF_TERRAIN_FULL_20261106_V3@@');O=Path('@@DF_PATH_DF_V26_BUILD_20261106@@/terrain-stage')
+B=P/'seam-v4/next-build'
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def readobj(p):
+ v=[];f=[]
+ for l in Path(p).read_text().splitlines():
+  s=l.split()
+  if s and s[0]=='v':v.append(list(map(float,s[1:4])))
+  elif s and s[0]=='f':f.append([int(i)-1 for i in s[1:]])
+ return np.array(v),np.array(f)
+def readphys(p):
+ raw=p.read_bytes();magic,n=struct.unpack_from('<II',raw);assert magic==0x3150484b;offset=8;parts=[]
+ for i in range(n):
+  nv,nt=struct.unpack_from('<II',raw,offset);offset+=8
+  v=np.frombuffer(raw,dtype='<f4',count=nv*3,offset=offset).reshape(-1,3);offset+=nv*12
+  f=np.frombuffer(raw,dtype='<i4',count=nt*3,offset=offset).reshape(-1,3);offset+=nt*12;parts.append(v[f])
+ assert offset==len(raw)
+ return np.concatenate(parts)
+def rot(q):
+ x,y,z,w=q;q=np.array(q);assert abs(q@q-1)<1e-6
+ return np.array([[1-2*(y*y+z*z),2*(x*y-z*w),2*(x*z+y*w)],[2*(x*y+z*w),1-2*(x*x+z*z),2*(y*z-x*w)],[2*(x*z-y*w),2*(y*z+x*w),1-2*(x*x+y*y)]])
+def save(n,d):
+ p=O/n
+ with p.open('x')as f:json.dump(d,f,indent=2)
+ return dict(path=str(p),sha256=sha(p))
+def main():
+ poses=json.loads((P/'poses.json').read_text());rows=json.loads((B/'integration-manifest.json').read_text())['artifacts']
+ fine=[r for r in rows if r['kind']!='CDLOD-derived'];assert len(fine)==168;results=[];boundary=collections.defaultdict(list);totalholes=0
+ for r in fine:
+  name=r['canonicalID'];d=json.loads((P/'decoded'/(name+'.json')).read_text())[0];pr=poses[name]['Properties'];assert len(pr['SerialBodyInstances'])==1
+  body=pr['SerialBodyInstances'][0];q=[body['Rotation'][k]for k in 'XYZW'];rotation=rot(q)
+  assert np.max(abs(np.array(d['shapeQ'])-[0,0,0,1]))<1e-8
+  loc=np.array([body['Location'][k]for k in 'XYZ']);scale=np.array([body['Scaling'][k]for k in 'XYZ']);assert np.max(abs(loc))<1e-8 and np.max(abs(scale-1))<1e-8
+  assert d['geometryScale']==[.9765625,100,100] and d['shapeT']==[-12600,0,0]
+  nr,nc=d['rows'],d['cols'];rr,cc=np.indices((nr,nc));h=np.array([s['h']for s in d['samples']]).reshape(rr.shape)
+  local=np.c_[rr.ravel()*d['geometryScale'][1],h.ravel()*d['geometryScale'][0],cc.ravel()*d['geometryScale'][2]]+d['shapeT']
+  pos=np.array([pr['Position'][k]for k in 'XYZ'])
+  # Normalize tiny serialized quaternion length error before applying physical rotation.
+  rotation=rot(np.array(q)/np.linalg.norm(q))
+  ue=(local@rotation.T)*scale+loc+pos
+  expected=ue*np.array([.36,-.36,.36])+np.array([-240984,-164808,8052.84])
+  canonical=np.c_[(pos[0]+12600-100*rr.ravel())*.36-240984,-(pos[1]+100*cc.ravel())*.36-164808,h.ravel()*.9765625*.36+8052.84]
+  assert np.max(abs(expected-canonical))<1e-5
+  faces=[];holes=0;holecells=[]
+  for ri in range(nr-1):
+   for ci in range(nc-1):
+    a=ri*nc+ci;b=a+1;c=a+nc;e=c+1;s=d['samples'][a]
+    ts=[(a,c,b),(c,e,b)]if not s['m0']&128 else[(a,c,e),(a,e,b)]
+    for t,m in zip(ts,[s['m0'],s['m1']]):
+     if m&127==127:holes+=1;holecells.append(t);continue
+     faces.append(t)
+  faces=np.array(faces);normal=np.cross(canonical[faces[:,1]]-canonical[faces[:,0]],canonical[faces[:,2]]-canonical[faces[:,0]])
+  flip=normal[:,2]<0;faces[flip]=faces[flip][:,[0,2,1]]
+  used=np.unique(faces);remap=np.full(len(canonical),-1);remap[used]=np.arange(len(used));ev=canonical[used];ef=remap[faces]
+  sv,sf=readobj(r['sourceOBJ']);assert ev.shape==sv.shape and np.array_equal(ef,sf);maxpose=float(np.max(abs(ev-sv)));assert maxpose<1e-7
+  assert sha(r['sourceOBJ'])==r['sourceOBJsha256'] and sha(r['compiledFile'])==r['compiledSHA256']
+  phys=P/'next-build/native-physics'/(name+'.physbin');assert sha(phys)==r['nativeTriangleComparison']['physbinSHA256']
+  source=sv[sf];native=readphys(phys);dist,idx=cKDTree(source.mean(axis=1)).query(native.mean(axis=1))
+  cyclic=np.stack([np.max(np.linalg.norm(native-np.roll(source[idx],j,axis=1),axis=2),axis=1)for j in range(3)]).min(axis=0)
+  assert len(source)==len(native)==len(np.unique(idx)) and cyclic.max()<.02
+  ns=np.cross(source[idx,1]-source[idx,0],source[idx,2]-source[idx,0]);nn=np.cross(native[:,1]-native[:,0],native[:,2]-native[:,0])
+  agree=np.einsum('ij,ij->i',ns,nn)/(np.linalg.norm(ns,axis=1)*np.linalg.norm(nn,axis=1));assert agree.min()>.99999
+  # Every original sample on a tile border, actual excluded holes remain excluded by exact face identity.
+  for a,b in set([(0,i)for i in range(nc)]+[(nr-1,i)for i in range(nc)]+[(i,0)for i in range(nr)]+[(i,nc-1)for i in range(nr)]):
+   v=canonical[a*nc+b];boundary[tuple(np.round(v[:2],6))].append(float(v[2]))
+  totalholes+=holes;results.append(dict(name=name,pose='PASS_PHYSX_HEIGHTFIELD_SHAPE_BODY_AND_WORLD_FRAME',poseMaxVertexErrorCS=maxpose,shapeQ=d['shapeQ'],shapeT=d['shapeT'],geometryScale=d['geometryScale'],outerQuaternion=q,positionUE=pos.tolist(),sourceOBJsha256=r['sourceOBJsha256'],nativeSHA256=r['compiledSHA256'],physbinSHA256=sha(phys),triangles=len(source),exactSourceFacesIncludingHoleExclusions=True,holeTriangles=holes,nativeMaxCyclicVertexErrorCS=float(cyclic.max()),nativeMinNormalAgreement=float(agree.min()),nativeBijectiveTriangleMatch=True))
+  print('FULL168',len(results),name,'PASS',flush=True)
+ shared=[max(v)-min(v)for v in boundary.values()if len(v)>1];assert max(shared,default=0)<1e-7 and totalholes==864
+ save('full168-pose-holes-native-proof.json',dict(status='PASS_ALL168_SOURCE_FRAME_SHAPE_BODY_HOLES_WINDING_NATIVE_TRIANGLE_EQUIVALENCE',assets=results,totalHoleTrianglesPreserved=totalholes,sharedFineBoundarySamples=len(shared),maxFineBoundaryHeightDeltaCS=max(shared,default=0),method='Independent quaternion matrix application of PhysX rowScale-heightScale-columnScale coordinates, shapeQ/T, body scale/location then explicit UE-CS. Exact compacted vertices+triangle identities excluding hole material127 and tessellation-bit diagonal. Fresh native physbin bijective cyclic triangle comparison.',limits=['Existing native PHYS decode tied by recorded SHA to compiled files, no new native decoder invocation','Multires coarse-fine/road modified seams and player-hull/bridge validation remain separate; not full integration clearance'],inputs=dict(poses=sha(P/'poses.json'),integration=sha(B/'integration-manifest.json'))))
+if __name__=='__main__':
+ import sys
+ with (O/'full168-proof.log').open('x',buffering=1)as log:
+  sys.stdout=log;sys.stderr=log
+  try:save('full168-process.json',dict(pid=os.getpid(),utc=datetime.datetime.now(datetime.timezone.utc).isoformat()));main();save('full168-exit.json',dict(exitCode=0))
+  except BaseException:traceback.print_exc();save('full168-exit.json',dict(exitCode=1));raise

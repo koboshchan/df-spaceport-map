@@ -1,0 +1,15 @@
+import pathlib,json,os,hashlib,datetime
+D=pathlib.Path('@@DF_PATH_DF_EXTRACT_20261105@@/loot-skeletal/static-paired-v3')
+rows=[]
+for p in D.glob('*/state-manifest.json'):
+ x=json.loads(p.read_text());x['manifest']=str(p)
+ if x['status']=='PAIR_STATIC_VERIFIED':
+  for k in ['closed','opened']:
+   a=p.parent/(k+'.glb');assert hashlib.sha256(a.read_bytes()).hexdigest()==x[k]['sha256']
+ rows.append(x)
+pairs=[x for x in rows if x['status']=='PAIR_STATIC_VERIFIED']
+blocked=[x for x in rows if x['status']!='PAIR_STATIC_VERIFIED']
+complete=all((D/('worker-'+str(i))/'bake-completed.json').exists() for i in range(8))
+report=dict(time=datetime.datetime.now(datetime.timezone.utc).isoformat(),targetModels=27,targetStates=54,completedStates=len(pairs)*2+sum('closedAvailable' in x for x in blocked),confirmedPairs=len(pairs),blockedModels=len(blocked),allWorkersComplete=complete,renderReady=complete,status='COMPLETE_WITH_BLOCKERS' if complete and blocked else ('COMPLETE' if complete else 'RUNNING'),models=rows,clothPolicy='UNKNOWN is not verified non-openable. Do not show closed as opened.',sourceClipHash='Unavailable raw package hash. Semantic package paths and decoded bind/sample evidence recorded, not claimed as source-byte certification.',scope='Asset-only static offline. No map/runtime/render changes.')
+tmp=D/('final-state-manifest.'+str(os.getpid())+'.tmp');tmp.write_text(json.dumps(report,indent=2));os.replace(tmp,D/'final-state-manifest.json')
+print(json.dumps({k:v for k,v in report.items() if k!='models'}))

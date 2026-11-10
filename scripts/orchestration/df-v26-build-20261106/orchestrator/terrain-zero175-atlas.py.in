@@ -1,0 +1,13 @@
+from pathlib import Path
+import json,numpy as np,collections,hashlib
+P=Path('@@DF_PATH_DF_TERRAIN_FULL_20261106_V3@@');O=Path('@@DF_PATH_DF_V26_BUILD_20261106@@/terrain-stage')
+at=np.load(P/'atlas.npz');A,lo,coef=at['A'],at['lo'],at['coef'];cov=json.loads((P/'coverage-blocker.json').read_text())['records'];out=[]
+for r in cov:
+ if r['payloadPresent']or r['bounds']['BoxExtent']['Z']!=0:continue
+ o=r['bounds']['Origin'];e=r['bounds']['BoxExtent'];x0,x1=(o['X']-e['X'])/100,(o['X']+e['X'])/100;y0,y1=(o['Y']-e['Y'])/100,(o['Y']+e['Y'])/100
+ ix0,ix1=int(np.ceil((x0-lo[0])/8)),int(np.floor((x1-lo[0])/8));iy0,iy1=int(np.ceil((y0-lo[1])/8)),int(np.floor((y1-lo[1])/8))
+ box=A[max(iy0,0):min(iy1+1,A.shape[0]),max(ix0,0):min(ix1+1,A.shape[1])];finite=np.isfinite(box).all(axis=-1);h=box[finite]@coef[:2]+coef[2]
+ out.append(dict(slot=Path(r['package']).name,bounds=r['bounds'],coarseAtlasSamples=int(finite.size),finiteCoarseHeightSamples=int(finite.sum()),derivedHeightRangeCS=[float(h.min()*.3515625+8052.84),float(h.max()*.3515625+8052.84)]if len(h)else None,heightVaries=bool(len(h)and h.max()-h.min()>1e-8),status='UNRESOLVED_OCCUPANCY_NOT_EMPTY',interpretation='Coarse height data presence/variation is not collision or render occupancy proof; missing payload+zero Z bounds alone never certify empty'))
+assert len(out)==175
+p=O/'zero175-coarse-atlas-evidence.json';p.open('x').write(json.dumps(dict(slots=out,counts=dict(unresolved=175,withFiniteCoarseHeightData=sum(x['finiteCoarseHeightSamples']>0 for x in out),withVaryingCoarseHeights=sum(x['heightVaries']for x in out),certifiedEmpty=0),sourceHashes={n:hashlib.sha256((P/n).read_bytes()).hexdigest()for n in ['coverage-blocker.json','atlas.npz']},note='CDLOD empirical height calibration not encoding/occupancy proof. Leaf field23 same values observed on fine occupied regions; no occupancy classification from flags.'),indent=2))
+print('ZERO175 EVIDENCE',hashlib.sha256(p.read_bytes()).hexdigest())

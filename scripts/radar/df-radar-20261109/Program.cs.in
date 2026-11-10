@@ -1,0 +1,39 @@
+using CUE4Parse_Conversion.Textures;
+using CUE4Parse.UE4.Assets.Exports.Texture;
+using CUE4Parse_Conversion.Options;
+using CUE4Parse.UE4.Assets.Exports.StaticMesh;
+using CUE4Parse.UE4.Assets.Exports.Engine;
+using System.Text.Json;
+using CUE4Parse.FileProvider;
+using CUE4Parse.UE4.Versions;
+using CUE4Parse.Encryption.Aes;
+using CUE4Parse.Compression;
+using CUE4Parse.UE4.Assets;
+using CUE4Parse.UE4.Assets.Exports.Material;
+using Serilog;
+Log.Logger=new LoggerConfiguration().MinimumLevel.Error().WriteTo.Console().CreateLogger();
+var root=@"@@DF_PATH_DF_EXTRACT_20261105@@";
+var output=@"@@DF_PATH_DF_RADAR_20261109@@\metadata";Directory.CreateDirectory(output);
+void Check(bool force=false){if(new DriveInfo("E").AvailableFreeSpace<25_000_000_000L)throw new Exception("D reserve");}
+OodleHelper.Initialize(Path.Combine(root,"tools","oodle-data-shared.dll"));
+
+using var kj=JsonDocument.Parse(File.ReadAllText(Path.Combine(root,"community-aes-keys.json")));
+var keys=kj.RootElement.GetProperty("Keys").EnumerateArray().GroupBy(x=>x.GetProperty("guid").GetString()).Select(g=>g.First()).ToDictionary(x=>x.GetProperty("guid").GetString()!.Replace("-","").ToUpperInvariant(),x=>x.GetProperty("key").GetString()!);
+keys["00000000000000000000000000000000"]=kj.RootElement.GetProperty("MainKey").GetString()!;
+using var p=new StreamedFileProvider("DeltaForce",new VersionContainer(EGame.GAME_DeltaForce),StringComparer.OrdinalIgnoreCase);p.Initialize();
+foreach(var pak in File.ReadAllLines(Path.Combine(root,"pak-paths.txt"))){Check();p.RegisterVfs(pak.Trim());}
+foreach(var r in p.UnloadedVfs.ToArray()){Check();var guid=r.EncryptionKeyGuid.ToString().Replace("-","").ToUpperInvariant();if(keys.TryGetValue(guid,out var key))p.SubmitKey(r.EncryptionKeyGuid,new FAesKey(key));}
+
+CUE4Parse.UE4.Assets.ObjectTypeRegistry.RegisterClass("VirtualMaterialInstanceConstant",typeof(CUE4Parse.GameTypes.DFHO.Assets.Exports.UVirtualMaterialInstanceConstant));
+
+
+
+
+
+
+
+
+
+var paths=p.Files.Keys.Where(x=>x.EndsWith(".uasset") && (x.Contains("BP_LevelSubsystems_SOL_SpaceCenter") || x.Contains("BP_LevelSubsystems_SOL.") || x.Contains("BP_MapSubsystem"))).ToArray();
+foreach(var path in paths)try{File.WriteAllText(Path.Combine(output,path.Replace('/','_')+".json"),Newtonsoft.Json.JsonConvert.SerializeObject(p.LoadPackage(path).GetExports().ToArray()));}catch(Exception e){File.AppendAllText(Path.Combine(output,"subsystem-errors.txt"),path+" "+e+"\n");}
+File.WriteAllText(Path.Combine(output,"subsystem-complete.txt"),DateTime.UtcNow.ToString("O"));

@@ -1,0 +1,88 @@
+"""Conform ONLY coarse boundary triangles to preserved fine vertices. No fine edits."""
+from pathlib import Path
+import json,hashlib,numpy as np,collections
+P=Path(__file__).parent;O=P/'seam-v4';S=O/'staged';S.mkdir(parents=True,exist_ok=True)
+C=json.loads((P/'coverage-blocker.json').read_text());recs=C['records'];names={Path(r['package']).name:r for r in recs}
+base=json.loads((P/'staged/stage-manifest.json').read_text());meta={r['name']:r for r in base['artifacts']}
+def read(p):
+ v=[];f=[]
+ for l in p.read_text().splitlines():
+  a=l.split()
+  if a[0]=='v':v.append(list(map(float,a[1:])))
+  elif a[0]=='f':f.append([int(x)-1 for x in a[1:]])
+ return np.array(v),np.array(f)
+def key(p):return tuple(np.round(p[:2],6))
+edges=collections.defaultdict(list);loaded={}
+for n,r in names.items():
+ o=r['bounds']['Origin'];x=o['X']*.36-240984;y=-o['Y']*.36-164808;e=2268
+ for ax,val,a,b,side in [(0,x-e,y-e,y+e,'l'),(0,x+e,y-e,y+e,'r'),(1,y-e,x-e,x+e,'b'),(1,y+e,x-e,x+e,'t')]:edges[(ax,round(val,6),round(a,6),round(b,6))].append(n)
+mixed=[];constraints={};fine_edges={}
+for ek,ns in edges.items():
+ if len(ns)!=2:continue
+ fine=[n for n in ns if names[n]['payloadPresent']];coarse=[n for n in ns if n in meta and meta[n]['kind']=='CDLOD-derived']
+ if not fine or not coarse:continue
+ fn,cn=fine[0],coarse[0];ax,fixed,lo,hi=ek
+ if fn not in loaded:loaded[fn]=read(P/'staged'/(fn+'.obj'))
+ v,f=loaded[fn];mask=np.abs(v[:,ax]-fixed)<1e-5;inds=np.where(mask)[0];vs=v[inds];vs=vs[np.argsort(vs[:,1-ax])]
+ # Actual native boundary edges, NOT all sample coordinates, certify hole exclusions.
+ counts=collections.Counter()
+ for tri in f:
+  for a,b in zip(tri,np.roll(tri,-1)):
+   if mask[a] and mask[b]:counts[tuple(sorted((a,b)))]+=1
+ segments=[]
+ for (a,b),count in counts.items():
+  if count==1:segments.append(sorted([float(v[a,1-ax]),float(v[b,1-ax])]))
+ for p in vs:
+  k=key(p)
+  if k in constraints:assert abs(constraints[k]-p[2])<1e-6
+  constraints[k]=float(p[2])
+ fine_edges[(cn,ax,fixed)]=dict(vertices=vs.tolist(),supportedSegments=segments,fine=fn)
+ mixed.append(dict(coarse=cn,fine=fn,axis=ax,fixed=fixed,low=lo,high=hi,fineVertices=len(vs),nativeBoundarySegments=len(segments)))
+# Constraints at common corner propagate to every incident coarse tile through the shared XY key.
+def boundary(r,p):
+ o=r['bounds']['Origin'];x=o['X']*.36-240984;y=-o['Y']*.36-164808
+ return any(abs(p[a]-b)<1e-5 for a,b in [(0,x-2268),(0,x+2268),(1,y-2268),(1,y+2268)])
+out=[];proof=[]
+for n,m in meta.items():
+ if m['kind']!='CDLOD-derived':out.append(m);continue
+ r=names[n];v,f=read(P/'staged'/(n+'.obj'));orig=v.copy();changed=False;nf=[];nv=v.tolist();lookup={key(p):i for i,p in enumerate(v)};removed=0;split=0
+ for i,p in enumerate(v):
+  if key(p)in constraints and boundary(r,p):v[i,2]=constraints[key(p)];nv[i][2]=v[i,2];changed|=abs(v[i,2]-orig[i,2])>1e-9
+ for tri in f:
+  polygon=[];affected=False;exclude=False
+  for a,b in zip(tri,np.roll(tri,-1)):
+   polygon.append(int(a));pa,pb=v[a],v[b]
+   for (tn,ax,fixed),ed in fine_edges.items():
+    if tn!=n or abs(pa[ax]-fixed)>1e-5 or abs(pb[ax]-fixed)>1e-5:continue
+    varying=1-ax;lo,hi=sorted([pa[varying],pb[varying]])
+    seg=ed['supportedSegments']
+    # No native boundary segment at a subinterval means a protected native hole.
+    breaks=sorted(set([lo,hi]+[float(p[varying]) for p in ed['vertices'] if lo<float(p[varying])<hi]))
+    for left,right in zip(breaks,breaks[1:]):
+     mid=(left+right)/2
+     if not any(s0-1e-6<=mid<=s1+1e-6 for s0,s1 in seg):exclude=True
+    ins=[np.array(p) for p in ed['vertices'] if lo+1e-6<p[varying]<hi-1e-6];ins.sort(key=lambda p:p[varying],reverse=pa[varying]>pb[varying])
+    for p in ins:
+     k=key(p)
+     if k not in lookup:lookup[k]=len(nv);nv.append(p.tolist())
+     polygon.append(lookup[k])
+    affected|=bool(ins)
+  if exclude:removed+=1;changed=True;continue
+  if affected:
+   center=orig[tri].mean(axis=0);ci=len(nv);nv.append(center.tolist())
+   for a,b in zip(polygon,polygon[1:]+polygon[:1]):nf.append([ci,a,b])
+   split+=1;changed=True
+  else:nf.append(tri.tolist())
+ if not changed:out.append(m);continue
+ vv=np.array(nv);ff=np.array(nf);cross=np.cross(vv[ff[:,1]]-vv[ff[:,0]],vv[ff[:,2]]-vv[ff[:,0]])
+ assert (cross[:,2]>1e-8).all(),n
+ path=S/(n+'.obj')
+ with path.open('w')as h:
+  h.write('# CDLOD approximate, conforming fine-boundary seam modification, no fine geometry altered\n')
+  for p in vv:h.write('v '+' '.join(f'{a:.9f}'for a in p)+'\n')
+  for t in ff+1:h.write('f '+' '.join(map(str,t))+'\n')
+ rec=dict(m);rec.update(vertices=len(vv),triangles=len(ff),sha256=hashlib.sha256(path.read_bytes()).hexdigest(),bytes=path.stat().st_size,seamModified=True)
+ out.append(rec);proof.append(dict(name=n,sourceSHA256=m['sha256'],modifiedSHA256=rec['sha256'],originalTriangles=len(f),modifiedTriangles=len(ff),splitBoundaryTriangles=split,protectedHoleBoundaryTrianglesExcluded=removed,originalInteriorVerticesUnchanged=True,snappedOriginalVertices=int(sum(np.abs(v[:,2]-orig[:,2])>1e-9))))
+(O/'seam-delta.json').write_text(json.dumps(dict(status='SOURCE_STAGED_QA_PENDING',mixed=mixed,changed=proof,changedAssets=len(proof),fineAssetsChanged=0,algorithm='Split coarse boundary triangles at every actual fine boundary vertex; snap heights, center fan only original boundary triangles. Propagate shared corner height constraints. Exclude triangles abutting native hole boundary segments; no visual-only skirt.'),indent=2))
+(S/'stage-manifest.json').write_text(json.dumps(dict(artifacts=out,sourceCoverage=base['sourceCoverage']),indent=2))
+print('SEAM SOURCE',len(mixed),len(proof),'hole excluded',sum(r['protectedHoleBoundaryTrianglesExcluded']for r in proof),flush=True)

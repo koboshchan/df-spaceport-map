@@ -1,0 +1,12 @@
+import json,pathlib,collections
+P=pathlib.Path(__file__).parent;cov=json.loads((P/'coverage-blocker.json').read_text())['records'];sel=[]
+for line in pathlib.Path('@@DF_PATH_DF_V25_BUILD_20261106@@/component-work/final-combined-decomposed.jsonl').open():
+ r=json.loads(line);lo=r['meshObjectPath'].lower();typ='road' if any(k in lo for k in ['/road','_road','/ground/','_ground_']) else 'prop' if any(k in lo for k in ['/props/','/prop/','/rock/','_rock_','/stone/','/street/']) else None
+ if not typ:continue
+ p=r['positionCS2'];x=(p[0]+240984)/.36;y=-(p[1]+164808)/.36
+ slot=next((c for c in cov if abs(x-c['bounds']['Origin']['X'])<=6300 and abs(y-c['bounds']['Origin']['Y'])<=6300),None)
+ if slot and not slot['payloadPresent'] and slot['bounds']['BoxExtent']['Z']!=0:
+  sel.append(dict(type=typ,terrainKind='CDLODderived',slot=pathlib.Path(slot['package']).name,placement=r))
+out=P/'ground-all85';out.mkdir(exist_ok=True)
+(out/'ground-selection.json').write_text(json.dumps(dict(selected=sel,scope='ALL85 placements selected by road/ground or prop/rock/street mesh-path classes whose pivot lies on any681coarse slots; vertex and triangle centroids tested. Not all object types. No pivot-as-contact assumption.'),indent=2))
+print('SELECT',len(sel),dict(collections.Counter(r['type']for r in sel)))

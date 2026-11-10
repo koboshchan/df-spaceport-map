@@ -1,0 +1,86 @@
+using System.Text.Json;
+using System.Diagnostics;
+using System.Reflection;
+using System.Security.Cryptography;
+using CUE4Parse.FileProvider;
+using CUE4Parse.UE4.Versions;
+using CUE4Parse.Encryption.Aes;
+using CUE4Parse.Compression;
+using CUE4Parse.UE4.Assets;
+using CUE4Parse.UE4.Assets.Exports.Texture;
+
+using CUE4Parse.UE4.Assets.Exports.Material;
+using CUE4Parse_Conversion;
+using CUE4Parse_Conversion.Options;
+using CUE4Parse_Conversion.Textures;
+using CUE4Parse_Conversion.Exporters;
+using Serilog;
+Log.Logger=new LoggerConfiguration().MinimumLevel.Error().WriteTo.Console().CreateLogger();
+var root=@"@@DF_PATH_DF_EXTRACT_20261105@@";
+var output=Path.Combine(root,"structures","ladder-sockets-8d2e");
+Directory.CreateDirectory(output);
+const long cap=60_000_000_000L;
+long used=Directory.EnumerateFiles(root,"*",SearchOption.AllDirectories).Sum(f=>new FileInfo(f).Length);
+var lastCheck=DateTime.MinValue;
+void Check(bool force=false){
+ if(used>cap-256_000_000)throw new OperationCanceledException("60GB cumulative cap reached");
+ if(new DriveInfo("E").AvailableFreeSpace<20_000_000_000L)throw new OperationCanceledException("20GB disk reserve reached");
+ if(!force && (DateTime.UtcNow-lastCheck).TotalSeconds<10)return;
+ var psi=new ProcessStartInfo("powershell.exe"){UseShellExecute=false,RedirectStandardOutput=true,RedirectStandardError=true,CreateNoWindow=true};
+ psi.ArgumentList.Add("-NoProfile");psi.ArgumentList.Add("-File");psi.ArgumentList.Add(Path.Combine(output,"guard.ps1"));
+ using var proc=Process.Start(psi)!;var result=proc.StandardOutput.ReadToEnd();proc.WaitForExit();
+ if(proc.ExitCode!=0)throw new OperationCanceledException("DF/ACE guard stop "+result);
+ lastCheck=DateTime.UtcNow;
+}
+void Write(string relative,byte[] bytes){
+ Check(); var path=Path.GetFullPath(Path.Combine(output,relative));
+ if(!path.StartsWith(output+Path.DirectorySeparatorChar,StringComparison.OrdinalIgnoreCase))throw new Exception("unsafe output path");
+ if(used+bytes.LongLength+256_000_000>cap)throw new OperationCanceledException("60GB cumulative cap");
+ Directory.CreateDirectory(Path.GetDirectoryName(path)!); File.WriteAllBytes(path,bytes); used+=bytes.LongLength;
+}
+void Json(string relative,object value)=>Write(relative,System.Text.Encoding.UTF8.GetBytes(Newtonsoft.Json.JsonConvert.SerializeObject(value)));
+void Append(string relative,object value){
+ Check();var text=Newtonsoft.Json.JsonConvert.SerializeObject(value)+Environment.NewLine;
+ var bytes=System.Text.Encoding.UTF8.GetByteCount(text);if(used+bytes+16_000_000>cap)throw new OperationCanceledException("60GB cap");
+ File.AppendAllText(Path.Combine(output,relative),text);used+=bytes;
+}
+Check(true);
+File.WriteAllText(Path.Combine(output,"worker.pid"),Environment.ProcessId.ToString());
+var index=new Dictionary<string,Entry>(StringComparer.OrdinalIgnoreCase);
+foreach(var line in File.ReadLines(Path.Combine(root,"index-manifest.jsonl"))){
+ using var doc=JsonDocument.Parse(line);var e=doc.RootElement;
+ index[e.GetProperty("path").GetString()!]=new(e.GetProperty("path").GetString()!,e.GetProperty("pak").GetString()!,e.GetProperty("size").GetInt64());
+}
+OodleHelper.Initialize(Path.Combine(root,"tools","oodle-data-shared.dll"));
+
+using var kj=JsonDocument.Parse(File.ReadAllText(Path.Combine(root,"community-aes-keys.json")));
+var keys=kj.RootElement.GetProperty("Keys").EnumerateArray().GroupBy(x=>x.GetProperty("guid").GetString()).Select(g=>g.First()).ToDictionary(x=>x.GetProperty("guid").GetString()!.Replace("-","").ToUpperInvariant(),x=>x.GetProperty("key").GetString()!);
+keys["00000000000000000000000000000000"]=kj.RootElement.GetProperty("MainKey").GetString()!;
+using var p=new StreamedFileProvider("DeltaForce",new VersionContainer(EGame.GAME_DeltaForce),StringComparer.OrdinalIgnoreCase);p.Initialize();
+foreach(var pak in File.ReadAllLines(Path.Combine(root,"pak-paths.txt"))){Check();p.RegisterVfs(pak.Trim());}
+foreach(var r in p.UnloadedVfs.ToArray()){Check();var guid=r.EncryptionKeyGuid.ToString().Replace("-","").ToUpperInvariant();if(keys.TryGetValue(guid,out var key))p.SubmitKey(r.EncryptionKeyGuid,new FAesKey(key));}
+
+
+
+
+
+
+Json("mounted-audit.json",new{registered=File.ReadAllLines(Path.Combine(root,"pak-paths.txt")).Length,mounted=p.MountedVfs.Count,unloaded=p.UnloadedVfs.Count,files=p.Files.Count});
+
+if(p.MountedVfs.Count!=333 || p.UnloadedVfs.Count!=0)throw new Exception("full333 mount required");
+var selected=new[]{
+"DeltaForce/Content/Environment/Props/Industrial/Tools/SM_Industrial_Tools_Stepladder_02A.uasset",
+"DeltaForce/Content/Environment/Props/Industrial/Tools/SM_Industrial_Tools_Stepladder_02B.uasset",
+"DeltaForce/Content/Environment/Props/Industrial/Tools/SM_Industrial_Tools_Stepladder_02C.uasset"};
+foreach(var path in selected)if(!index.ContainsKey(path))throw new Exception("missing canonical package "+path);
+Json("selected.json",selected);
+foreach(var path in selected){
+ Check(true);
+ var pkg=p.LoadPackage(path);
+ var exps=pkg.GetExports().ToArray();
+ var raw=p.Files[path].Read();
+ Json("metadata/"+Path.GetFileName(path)+".json",new{path,sourceBytes=raw.Length,sourceSha256=Convert.ToHexString(SHA256.HashData(raw)),values=exps.Select((e,i)=>new{index=i,source=Newtonsoft.Json.Linq.JToken.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(e))}).ToArray()});
+ Console.WriteLine(path+" records="+exps.Length);
+}
+Json("complete.json",new{time=DateTime.UtcNow,packages=selected.Length});
+record Entry(string path,string pak,long size);

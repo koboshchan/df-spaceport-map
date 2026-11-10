@@ -1,0 +1,52 @@
+from pathlib import Path
+import json,struct,math,collections,hashlib
+p=Path('@@DF_PATH_DF_FOLIAGE_20261108@@')
+types={}
+for f in p.glob('*-0.json'):
+ d=json.loads(f.read_text())
+ if d.get('Type')=='FoliageType_InstancedStaticMesh':
+  props=d.get('Properties',{});types[d['Package']]=dict(props=props,mesh=props.get('HDMesh',props.get('Mesh')))
+def quat(r,p,y):
+ r,p,y=[math.radians(t)*.5 for t in [r,p,y]]
+ sr,cr=math.sin(r),math.cos(r);sp,cp=math.sin(p),math.cos(p);sy,cy=math.sin(y),math.cos(y)
+ return [cr*sp*sy-sr*cp*cy,-cr*sp*cy-sr*cp*sy,cr*cp*sy-sr*sp*cy,cr*cp*cy+sr*sp*sy]
+counts=collections.Counter();cat=collections.Counter();errors=[];cells=[];checks=[];mapping=[];scaleRange=[999,-999]
+with open(p/'transforms-candidate-ue.jsonl','w') as out:
+ for f in sorted(p.glob('*-0.native.bin')):
+  label=f.name.replace('-0.native.bin','');d=json.loads((p/(label+'-0.json')).read_text());props=d.get('Properties',{})
+  fol=props.get('FoliageData',[]);b=f.read_bytes();o=4;rows=[]
+  try:
+   assert struct.unpack_from('<i',b,0)[0]==1
+   for gi,t in enumerate(fol):
+    n=struct.unpack_from('<i',b,o)[0];assert 0<=n<1000000,(o,n)
+    origin=struct.unpack_from('<3f',b,o+4);extent,maxscale=struct.unpack_from('<2f',b,o+16);start=o;o+=24
+    typepath=t['SourcePath']['AssetPathName'].split('.')[0].replace('/Game/','DeltaForce/Content/')
+    typeinfo=types.get(typepath,{});mesh=typeinfo.get('mesh');meshpath=mesh.get('ObjectPath') if mesh else None
+    mapping.append(dict(cell=d['Package'],group=gi,sourceType=typepath,mesh=meshpath,count=n,headerOffset=start,extent=extent,maxscale=maxscale))
+    for i in range(n):
+     raw=struct.unpack_from('<7h',b,o);o+=14
+     loc=[origin[j]+raw[j]/32767*extent for j in range(3)]
+     angles=[raw[j]/32767*360 for j in range(3,6)]
+     sc=raw[6]/127*maxscale;scaleRange=[min(scaleRange[0],raw[6]),max(scaleRange[1],raw[6])]
+     row=dict(cell=d['Package'],group=gi,index=i,sourceType=typepath,mesh=meshpath,location=loc,rollPitchYaw=angles,quaternion=quat(*angles),scale=[sc]*3,packed=list(raw))
+     out.write(json.dumps(row,separators=(',',':'))+'\n');rows.append(row)
+    overrides=struct.unpack_from('<i',b,o+12)[0];assert 0<=overrides<64;footerlen=53+4*overrides;footer=b[o:o+footerlen];assert len(footer)==footerlen;o+=footerlen
+    counts[meshpath or typepath]+=n;cat[d['Package'].split('/Runtime/')[1].split('/')[0]]+=n
+   trailer=b[o:];assert len(trailer)>=4
+   trailerlen=struct.unpack_from('<i',trailer)[0]
+   assert len(trailer)==4+trailerlen,(o,len(b),len(trailer),trailerlen)
+   phys=props.get('PhysicsData',{});pos=phys.get('Position',{})
+   for body in phys.get('SerialBodyInstances',[])[:5]:
+    if len(checks)>=1200:break
+    q=[body['Rotation'][a] for a in 'XYZW'];s=[body['Scaling'][a] for a in 'XYZ'];loc=[pos[a]+body['Location'][a] for a in 'XYZ']
+    match=min(rows,key=lambda r:sum((a-z)**2 for a,z in zip(loc,r['location']))) if rows else None
+    if match:
+     dist=math.sqrt(sum((a-z)**2 for a,z in zip(loc,match['location'])))
+     dot=abs(sum(a*z for a,z in zip(q,match['quaternion'])));angle=math.degrees(2*math.acos(min(1,dot)))
+     checks.append(dict(cell=d['Package'],body=body['BodySetup']['ObjectName'],group=match['group'],mesh=match['mesh'],distanceCm=dist,rotationDegrees=angle,scaleError=max(abs(a-z) for a,z in zip(s,match['scale']))))
+   cells.append(dict(cell=d['Package'],groups=len(fol),instances=len(rows),nativeBytes=len(b),trailerBytes=trailerlen,sha256=hashlib.sha256(b).hexdigest()))
+  except Exception as e:errors.append(dict(file=f.name,error=repr(e),offset=o,bytes=len(b)))
+summary=dict(cells=len(cells),instances=sum(cat.values()),categories=dict(cat),perMesh=dict(counts),errors=errors,scalePackedRange=scaleRange,checks=len(checks),validationMax={k:max((c[k] for c in checks),default=0) for k in ['distanceCm','rotationDegrees','scaleError']},scope='Ma1 cells only. Level2 membership unverified. Transform formulas candidate until independently validated.')
+for name,obj in [('decode-summary.json',summary),('cell-groups.json',mapping),('cells.json',cells),('body-validation.json',checks),('type-mapping.json',types)]:
+ (p/name).write_text(json.dumps(obj,indent=2))
+print(json.dumps(summary,indent=2))

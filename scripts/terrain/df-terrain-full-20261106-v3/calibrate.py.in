@@ -1,0 +1,84 @@
+import json,struct,math,hashlib
+from pathlib import Path
+import numpy as np
+P=Path(__file__).parent
+load=lambda n:json.loads((P/n).read_text(encoding='utf-8-sig'))
+f=lambda u:struct.unpack('<f',struct.pack('<I',u))[0]
+nodes=load('cdlod-nodes-v9.json')['nodes'];words=load('cdlod-coarse-v9.json')['words'];poses=load('poses.json')
+atlas={};duplicates=[]
+for ni,n in enumerate(nodes):
+ if n[20]!=3:continue
+ x,y,ex,ey=f(n[5]),f(n[6]),f(n[8]),f(n[9]);u,v=f(n[12]),f(n[13]);w,h=round(f(n[14])),round(f(n[15]))
+ for j in range(h):
+  for i in range(w):
+   key=(round(x-ex+(u+i)*8),round(y-ey+(v+j)*8));word=words[n[16]//4+(j+1)*(w+2)+i+1];rg=(word&255,(word>>8)&255)
+   if key in atlas:duplicates.append([rg[0]-atlas[key][0],rg[1]-atlas[key][1]])
+   else:atlas[key]=rg
+lo=np.min(list(atlas),axis=0);hi=np.max(list(atlas),axis=0)
+A=np.full(((hi[1]-lo[1])//8+1,(hi[0]-lo[0])//8+1,2),np.nan)
+for (x,y),rg in atlas.items():A[(y-lo[1])//8,(x-lo[0])//8]=rg
+def sample_rg(x,y):
+ ix=(np.asarray(x)-lo[0])/8;iy=(np.asarray(y)-lo[1])/8;i=np.floor(ix).astype(int);j=np.floor(iy).astype(int)
+ valid=(i>=0)&(j>=0)&(i<A.shape[1]-1)&(j<A.shape[0]-1);ic=np.clip(i,0,A.shape[1]-2);jc=np.clip(j,0,A.shape[0]-2);a=ix-i;b=iy-j
+ out=A[jc,ic]*(1-a)[...,None]*(1-b)[...,None]+A[jc,ic+1]*a[...,None]*(1-b)[...,None]+A[jc+1,ic]*(1-a)[...,None]*b[...,None]+A[jc+1,ic+1]*a[...,None]*b[...,None]
+ out[~valid]=np.nan
+ return out
+def gettile(path):
+ d=load(str(path.relative_to(P)))[0];name=path.stem;pr=poses[name]['Properties'];inst=pr['SerialBodyInstances']
+ assert len(inst)==1
+ ins=inst[0];q=ins['Rotation'];assert np.allclose([q[k] for k in 'XYZW'],[0,2**-.5,2**-.5,0],atol=1e-6)
+ assert all(abs(ins['Location'][k])<1e-6 for k in 'XYZ') and all(abs(ins['Scaling'][k]-1)<1e-6 for k in 'XYZ')
+ assert d['shapeQ']==[0,0,0,1] and d['shapeT']==[-12600,0,0] and d['geometryScale']==[.9765625,100,100]
+ pos=pr['Position'];r,c=np.indices((d['rows'],d['cols']));x=pos['X']/100+126-r;y=pos['Y']/100+c
+ h=np.array([v['h'] for v in d['samples']]).reshape(r.shape);m=np.array([[v['m0'],v['m1']] for v in d['samples']]).reshape((*r.shape,2))
+ hole=np.any((m[:-1,:-1]&127)==127,axis=2);bad=np.zeros(r.shape,bool)
+ for dr,dc in [(0,0),(0,1),(1,0),(1,1)]:bad[dr:dr+hole.shape[0],dc:dc+hole.shape[1]]|=hole
+ return d,x,y,h,m,bad
+records=[];tiledata={};seam={}
+for ti,path in enumerate(sorted((P/'decoded').glob('*.json'))):
+ d,x,y,h,m,bad=gettile(path);name=path.stem;tiledata[name]=(d,x,y,h,m,bad)
+ coinc=(np.mod(x-lo[0],8)==0)&(np.mod(y-lo[1],8)==0)&~bad
+ rr,cc=np.where(coinc)
+ for r,c in zip(rr,cc):
+  rg=atlas.get((int(x[r,c]),int(y[r,c])))
+  if rg is not None:records.append([*rg,h[r,c],ti,x[r,c],y[r,c],r,c])
+ for r,c in list(zip(np.zeros(d['cols'],int),range(d['cols'])))+list(zip(np.full(d['cols'],d['rows']-1),range(d['cols'])))+list(zip(range(d['rows']),np.zeros(d['rows'],int)))+list(zip(range(d['rows']),np.full(d['rows'],d['cols']-1))):
+  if not bad[r,c]:seam.setdefault((x[r,c],y[r,c]),[]).append(h[r,c])
+data=np.array(records);X=np.c_[data[:,:2],np.ones(len(data))];target=data[:,2]
+names=list(tiledata);centers=np.array([[np.mean(v[1]),np.mean(v[2])] for v in tiledata.values()])
+spatial=centers[:,0]>np.quantile(centers[:,0],.8);inter=(np.arange(len(names))%5==0)&~spatial
+trtile=~(spatial|inter);train=trtile[data[:,3].astype(int)]
+coef=np.linalg.lstsq(X[train],target[train],rcond=None)[0]
+def metrics(e):
+ e=np.asarray(e);e=e[np.isfinite(e)]*.9765625*.36
+ return dict(count=len(e),rmse=float(np.sqrt(np.mean(e*e))),medianAbs=float(np.median(abs(e))),p95Abs=float(np.percentile(abs(e),95)),p99Abs=float(np.percentile(abs(e),99)),maxAbs=float(np.max(abs(e))),bias=float(np.mean(e)))
+models={}
+for mode in ['freeRG','bigEndian','littleEndian','normalized255']:
+ v=data[:,0]*(256 if mode=='bigEndian' else 1 if mode=='littleEndian' else 255)+data[:,1]*(256 if mode=='littleEndian' else 1)
+ if mode=='freeRG':cf=coef;pred=X@cf
+ else:
+  cf=np.linalg.lstsq(np.c_[v[train],np.ones(sum(train))],target[train],rcond=None)[0];pred=v*cf[0]+cf[1]
+ models[mode]=dict(coefficients=cf.tolist(),training=metrics(pred[train]-target[train]),heldout=metrics(pred[~train]-target[~train]))
+pred=X@coef;errors=pred-target
+per=[]
+for ti,name in enumerate(names):
+ mask=data[:,3]==ti
+ per.append(dict(tile=name,split='spatial' if spatial[ti] else 'interleaved' if inter[ti] else 'training',**metrics(errors[mask])))
+interp=[];curv=[]
+for ti,(name,(d,x,y,h,m,bad)) in enumerate(tiledata.items()):
+ rg=sample_rg(x,y);ph=rg@coef[:2]+coef[2]
+ ok=np.isfinite(ph)&~bad
+ # All collision vertices that are not coarse-coincident, report fidelity independently.
+ ok&=~((np.mod(x-lo[0],8)==0)&(np.mod(y-lo[1],8)==0))
+ interp.append((ph[ok]-h[ok]))
+ if h.shape[0]>2:
+  lap=h[1:-1,:-2]+h[1:-1,2:]+h[:-2,1:-1]+h[2:,1:-1]-4*h[1:-1,1:-1]
+  err=ph[1:-1,1:-1]-h[1:-1,1:-1];mask=np.isfinite(err)&~bad[1:-1,1:-1]
+  curv.extend(zip(err[mask][::17],lap[mask][::17]))
+curv=np.array(curv)
+q=.9765625*.36
+tol=.5*q+.5*abs(coef[1])*q+1e-4
+out=dict(tilesDecoded=168,frameValidatedTiles=len(tiledata),coincidentVertices=len(data),excludedHoleAdjacentVertices=sum(int(v[-1].sum()) for v in tiledata.values()),coarseSpacingUEcm=800,collisionSpacingUEcm=100,coefficients=coef.tolist(),channelRatio=float(coef[0]/coef[1]),models=models,trainingTiles=int(sum(trtile)),interleavedHeldoutTiles=int(sum(inter)),spatialHeldoutTiles=int(sum(spatial)),training=metrics(errors[train]),interleavedHeldout=metrics(errors[inter[data[:,3].astype(int)]]),spatialHeldout=metrics(errors[spatial[data[:,3].astype(int)]]),allCoincident=metrics(errors),interpolatedCollisionVertices=metrics(np.concatenate(interp)),residualLaplacianCorrelation=float(np.corrcoef(curv.T)[0,1]),quantizationCS=q,effectivelyExactToleranceCS=tol,toleranceDefinition='half collision signed16 step + half fitted fine RG byte step + 0.0001 float allowance; conditional quantization model, not encoding proof',fractionCoincidentWithinTolerance=float(np.mean(abs(errors)*q<=tol)),effectivelyExactCoincident=bool(np.all(abs(errors)*q<=tol)),perTile=per,CDLODInternalPackedDuplicateCount=len(duplicates),CDLODInternalMaxByteDifference=int(np.max(abs(np.array(duplicates)))),collisionBoundarySharedPoints=sum(len(v)>1 for v in seam.values()),collisionBoundaryMaxDifferenceCS=float(max([max(v)-min(v) for v in seam.values() if len(v)>1],default=0)*q),claims='Empirical global train-only calibration, all available tiles evaluated. Not shader encoding proof. Interpolated errors are resolution fidelity, not encoding residual. Missing slots do not certify hole semantics.')
+(P/'calibration.json').write_text(json.dumps(out,indent=2));np.savez_compressed(P/'atlas.npz',A=A,lo=lo,coef=coef)
+print(json.dumps({k:v for k,v in out.items() if k not in ['perTile','models']},indent=2))
+if __name__=='__main__':pass

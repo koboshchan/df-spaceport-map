@@ -1,0 +1,99 @@
+
+import os,json,re,hashlib,struct,collections,glob,traceback
+from pathlib import Path
+O=Path('@@DF_PATH_DF_ZIPLINE_READONLY_20261106@@'); O.mkdir(exist_ok=True)
+P=Path('@@DF_PATH_DF_EXTRACT_20261105@@/placements'); B=Path('@@DF_PATH_DF_V25_BUILD_20261106@@')
+load=lambda p:json.loads(Path(p).read_text(encoding='utf-8-sig'))
+rows=[json.loads(l) for l in (B/'component-work/selected-placements.jsonl').open(encoding='utf8')]
+final=[json.loads(l) for l in (B/'component-work/final-combined-placements.jsonl').open(encoding='utf8')]
+actorid=lambda x:x.split(':PersistentLevel.')[0]+':PersistentLevel.'+x.split(':PersistentLevel.')[1].split('.')[0]
+z=[r for r in rows if 'Zipline' in r['objectPath']]
+groups=collections.defaultdict(list)
+for r in z:groups[actorid(r['objectPath'])].append(r)
+models={r['objectPath']:r for r in map(json.loads,(B/'geometry-work/models.jsonl').open(encoding='utf8'))}
+tiles=load(P/'validation/streaming-readiness-v3/SpaceCenter_Level2.tiles-partial.json')
+tilepaths={x['path'].replace('/Game/','DeltaForce/Content/') for x in tiles['tileFieldCandidates']}
+mroot=P/'validation/resolution/metadata'
+ix=[json.loads(l) for l in (mroot/'objects.jsonl').open(encoding='utf8') if '/Zipline/' in l]
+templates={r['objectPath']:load(mroot/r['metadata']) for r in ix}
+cdo={v['source']['Name']:v for v in templates.values() if v['source']['Name'].startswith('Default__')}
+# Read VPK directory only; payload access only small world resources below.
+def vpk_index(p):
+ f=open(p,'rb');sig,ver,size=struct.unpack('<III',f.read(12));assert sig==0x55aa1234
+ header=28 if ver==2 else 12; f.seek(header);tree=f.read(size);i=0;out={}
+ def s():
+  nonlocal i
+  j=tree.index(b'\0',i);v=tree[i:j].decode();i=j+1;return v
+ while True:
+  ext=s()
+  if not ext:break
+  while True:
+   folder=s()
+   if not folder:break
+   while True:
+    name=s()
+    if not name:break
+    crc,pre,arc,off,n,term=struct.unpack_from('<IHHIIH',tree,i);i+=18
+    preload=tree[i:i+pre];i+=pre
+    path=(folder+'/' if folder!=' ' else '')+name+'.'+ext
+    out[path]=dict(archive=arc,offset=off,length=n,preload=preload,header=header,treesize=size)
+ f.close();return out
+vpks={}
+for p in (B/'game/kat/maps').glob('df_spaceport_v25*.vpk'):
+ vpks[str(p)]=vpk_index(p)
+def packed(path):return [p for p,idx in vpks.items() if path in idx]
+vmaptexts={str(p):p.read_text(encoding='utf8') for p in (B/'content/kat/maps').glob('df_spaceport_v25_part*.vmap')}
+def vec(d):return [d[k] for k in 'XYZ']
+def mul(M,v):return [sum(M[i][j]*v[j] for j in range(3))+M[i][3] for i in range(3)]
+G=[[.36,0,0,-240984],[0,-.36,0,-164808],[0,0,.36,8052.84],[0,0,0,1]]
+inventory=[]
+for aid,rs in sorted(groups.items()):
+ spline=next(r for r in rs if r['className']=='SplineMeshComponent')
+ directory=P/Path(spline['sourceJson']).parent
+ # All metadata from only selected actors' existing directories; no tree-wide crawl.
+ md={};sources={}
+ for p in directory.glob('*.metadata.json'):
+  d=load(p)
+  if d['objectPath']==aid or d['objectPath'].startswith(aid+'.'):
+   md[d['objectPath']]=d;sources[d['objectPath']]=load(P/d.get('sourceJson',str(p.relative_to(P)).replace('.metadata.json','.source.json')))
+ actor=sources[aid];props=actor['Properties'];stype=actor['Type']
+ sd=sources[aid+'.Spline1']
+ # source spline parent matrix equals selected spline-mesh matrix iff no local mesh transform
+ sp=sources[spline['objectPath']]['Properties']
+ loc=sp.get('RelativeLocation',dict(X=0,Y=0,Z=0));rot=sp.get('RelativeRotation',dict(Pitch=0,Yaw=0,Roll=0));sc=sp.get('RelativeScale3D',dict(X=1,Y=1,Z=1))
+ assert all(v==0 for v in loc.values()) and all(v==0 for v in rot.values()) and all(v==1 for v in sc.values())
+ assert sp['AttachParent']['ObjectName'].endswith(".Spline1'")
+ M=spline['fullSourceWorldMatrix']
+ pts=sd['Properties']['SplineCurves']['Position']['Points']
+ ends=[]
+ for tag,pt in [('start',pts[0]),('end',pts[-1])]:
+  v=vec(pt['OutVal']);w=mul(M,v);cs=mul(G,w)
+  ends.append(dict(label=tag,localUEcm=v,UEcm=w,CS2=cs,proof=str(P/md[aid+'.Spline1']['sourceJson'])+' SplineCurves.Position.Points '+tag))
+ anchors={}
+ for nm in ['GreenTopPoint1','RedTopPoint1','GreenStartPoint1','RedStartPoint1','RopeGreenPoint','RopeRedPointExit','BotStart','BotEnd']:
+  a=sources.get(aid+'.'+nm)
+  if a and a['Properties'].get('AttachParent',{}).get('ObjectName','').endswith(".Spline1'") and 'RelativeLocation' in a['Properties']:
+   w=mul(M,vec(a['Properties']['RelativeLocation']));anchors[nm]=dict(UEcm=w,CS2=mul(G,w),source=str(P/md[aid+'.'+nm]['sourceJson']))
+ c=cdo.get('Default__'+stype,{})
+ settings=dict(c.get('source',{}).get('Properties',{}));settings.update(props)
+ ms=[]
+ for r in rs:
+  model=r.get('sourceDeformedModel') or r.get('model') or models.get(r['meshObjectPath'],{}).get('model')
+  target='df_'+hashlib.sha256((r['objectPath']+'#'+str(r.get('instanceIndex'))).encode()).hexdigest()[:20]
+  ms.append(dict(component=r['objectPath'],meshSource=r['meshObjectPath'],exports=[dict(path=p,exists=Path(p).is_file()) for p in r['meshSource']['outputs']],model=model,sourceVMAPs=[p for p,t in vmaptexts.items() if target in t],targetname=target,packedIn=packed(model+'_c') if model else [],inFinalCombined=any(x['objectPath']==r['objectPath'] for x in final),collision=r['collisionEnabled']))
+ directionkeys={k:v for k,v in settings.items() if any(s.lower() in k.lower() for s in ['direction','greeninteractor','redinteractor','verticalzipline','disablegreen','disablered','geton','oneway'])}
+ inventory.append(dict(shortID=hashlib.sha256(aid.encode()).hexdigest()[:8],actorIdentity=aid,BPName=actor['Name'],BPClass=stype,sourceAsset=actor['Class'],actorSource=str(P/md[aid]['sourceJson']),inLevel2CookedClosure=actorid(spline['objectPath']).split('.')[0] in tilepaths,endpoints=ends,anchors=anchors,endpointConfidence='high source spline coordinate reconstruction, not runtime test',direction='unknown actual directional permissions; both green/red get-on interactor classes configured, not proof of runtime bidirectionality',directionEvidence=directionkeys,vertical=settings.get('bIsVerticalZipline','not explicitly serialized'),gameplaySettings={k:v for k,v in settings.items() if any(t in k.lower() for t in ['ziplinemove','autonomous','verticalzipline'])},meshes=ms))
+# broad independent manifest scan, do not equate exports.jsonl with full extraction
+rx=re.compile('zip.?line|rope.?slide|cable|rope|滑索|索道|滑绳|滑行|绳索|滑轨',re.I)
+coverage={}
+for p in [P/'exports.jsonl',P/'validation/resolution/component-inventory.jsonl']:
+ n=0;hit=0;strong=set()
+ for l in p.open(encoding='utf8'):
+  n+=1
+  if rx.search(l):
+   hit+=1;d=json.loads(l);op=d['objectPath']
+   if re.search('zip.?line|rope.?slide',op,re.I) and ':PersistentLevel.' in op:strong.add(actorid(op))
+ coverage[str(p)]=dict(rows=n,keywordHits=hit,strongActorIdentities=sorted(strong))
+report=dict(readOnly=True,selectedRows=len(rows),finalRows=len(final),actorCount=len(inventory),meshPlacementCount=len(z),uniqueMeshAssets=len(set(r['meshObjectPath'] for r in z)),inventory=inventory,coverage=coverage,templatesRead=len(templates),closureCandidateCount=len(tilepaths),transform=G,transformProvenance=str(B/'component-work/prepare_placements.py'),closureProof=str(P/'validation/hard-mode-routing-fe41/hard-mode-proof.json'),limits=['DF and CS2 runtime not queried/launched. Configured gameplay ziplines are not decorative-only rope actors.','VMAP entity inclusion plus model packed in existing compiled VPK is separately reported, not a runtime visibility test.','Direction remains unknown rather than inferring bidirectionality from two endpoint interactors.','Level2 candidate closure does not establish simultaneous runtime activation.','Exports manifest is partial, independent component inventory used too.'])
+(O/'inventory.json').write_text(json.dumps(report,ensure_ascii=True,indent=2),encoding='utf8')
+print(json.dumps(dict(report=str(O/'inventory.json'),actorCount=len(inventory),placements=len(z),allRows=[dict(id=x['shortID'],name=x['BPName'],closure=x['inLevel2CookedClosure'],start=x['endpoints'][0]['CS2'],end=x['endpoints'][1]['CS2'],placements=len(x['meshes']),vmap=sum(bool(m['sourceVMAPs']) for m in x['meshes']),packed=sum(bool(m['packedIn']) for m in x['meshes'])) for x in inventory]),ensure_ascii=True),flush=True)

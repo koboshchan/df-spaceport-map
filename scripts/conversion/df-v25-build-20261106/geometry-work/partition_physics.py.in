@@ -1,0 +1,37 @@
+"""Exact compiled PHYS-size partition helper, no RAM guard or geometry decimation."""
+import struct,json,math
+from pathlib import Path
+CAP=512*1024**2
+TARGET=400*1024**2
+def physics_bytes(path):
+ b=Path(path).read_bytes()
+ _,_,_,off,count=struct.unpack_from('<IHHII',b)
+ values=[struct.unpack_from('<I',b,q+8)[0] for i in range(count) for q in [8+off+12*i] if b[q:q+4]==b'PHYS']
+ return sum(values)
+def partition(rows,game,minimum=6):
+ weights={}
+ for r in rows:
+  m=r['model']
+  if m not in weights:weights[m]=physics_bytes(Path(game)/(m+'_c'))
+ total=sum(weights[r['model']] for r in rows if r.get('collisionEnabled',True))
+ count=max(minimum,math.ceil(total/TARGET))
+ bins=[[] for _ in range(count)];loads=[0]*count
+ for r in sorted(rows,key=lambda r:weights[r['model']] if r.get('collisionEnabled',True) else 0,reverse=True):
+  i=min(range(count),key=lambda i:(loads[i],len(bins[i])))
+  cost=weights[r['model']] if r.get('collisionEnabled',True) else 0
+  if loads[i]+cost>=TARGET:bins.append([]);loads.append(0);i=len(bins)-1
+  bins[i].append(r);loads[i]+=cost
+ assert sum(map(len,bins))==len(rows)
+ assert all(n<TARGET for n in loads),'individual model/partition requires split, never decimate'
+ return bins,{'targetBytes':TARGET,'hardCapBytes':CAP,'estimatedPHYSBytes':loads,'componentCount':len(rows),'modelCount':len(weights),'policy':'compiled-model PHYS weighted; verify actual final VPK world physics under hardCap'}
+def require_final_phys(path):
+ size=physics_bytes(path)
+ assert size<CAP,(str(path),size,CAP)
+ return size
+if __name__=='__main__':
+ import sys
+ source=Path(sys.argv[1]);rows=json.loads(source.read_text())
+ bins,receipt=partition(rows,sys.argv[2])
+ out=Path(sys.argv[3]);out.mkdir(parents=True,exist_ok=True)
+ for i,b in enumerate(bins):(out/('part-'+str(i)+'.json')).write_text(json.dumps(b,ensure_ascii=False))
+ (out/'receipt.json').write_text(json.dumps(receipt,indent=2))

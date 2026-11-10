@@ -1,0 +1,30 @@
+from pathlib import Path
+import json,hashlib,shutil,subprocess,datetime,os
+S=Path('@@DF_PATH_CS2_SPACEPORT_PRIVATE@@');Q=Path('@@DF_PATH_DF_V268_TWOPART_20261109@@/install-window');Q.mkdir(parents=True,exist_ok=True)
+ID='@@DF_PRIVATE_CONTAINER_ID@@'
+def sha(p):
+ with p.open('rb')as f:return hashlib.file_digest(f,'sha256').hexdigest()
+def save(n,j):(Q/n).write_text(json.dumps(j,indent=2))
+j=json.loads(subprocess.check_output(['docker','inspect',ID],timeout=12,text=True))[0]
+assert j['Id']==ID and '-port 27016' in ' '.join(j['Args']) and j['State']['Running'] and 'df_spaceport_v267' in json.dumps(j['State']['Health'])
+save('before-inspect.json',j)
+ids=subprocess.check_output(['docker','ps','-aq','--no-trunc'],text=True,timeout=12).split()
+states={}
+for i in ids:
+ r=json.loads(subprocess.check_output(['docker','inspect','--format','{{json .State}}',i],text=True,timeout=8))
+ states[i]={k:r[k]for k in ['Status','Running','Paused','Restarting','Pid','StartedAt']}
+save('other-container-states-before.json',states)
+root=S/'latest-20261104';vpks=sorted(root.glob('df_spaceport_v267*.vpk'));assert len(vpks)==7
+files=list(vpks)
+for d in [S/'addons-safe7/counterstrikesharp/plugins',S/'addons-safe7/counterstrikesharp/configs',S/'fast-baseline/cfg']:
+ files += [p for p in d.rglob('*')if p.is_file()]
+for n in ['init.py','a2s.py','compose.yaml']:files.append(S/n)
+files.append(Path('@@DF_PATH_DF_V267_REPAIR_20261109@@/Plugin.cs'))
+actual=sum(p.stat().st_size for p in files)
+assert shutil.disk_usage('@@DF_DRIVE_E@@').free>actual+4*1024**3+20*1024**3
+receipt=[]
+for p in files:
+ rel=p.relative_to(S)if p.is_relative_to(S)else Path('source/Plugin.cs')
+ dest=Q/'rollback'/rel;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,dest)
+ h=sha(p);assert sha(dest)==h;receipt.append(dict(source=str(p),backup=str(dest),bytes=p.stat().st_size,sha256=h))
+save('BACKUP-COMPLETE.json',dict(utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),pid=os.getpid(),files=receipt,knownGoodV267=[p.name for p in vpks],container=ID))

@@ -1,0 +1,167 @@
+from pathlib import Path
+import re,json,hashlib,shutil,subprocess,os,traceback,struct,collections,uuid
+S=Path('@@DF_PATH_DF_V268_TWOPART_20261109@@');Q=S/'proof';Q.mkdir(parents=True,exist_ok=True)
+B=Path('@@DF_PATH_DF_V268_STAGE_20261109@@')
+def sha(p):
+ with p.open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
+def save(n,j):(Q/n).write_text(json.dumps(j,indent=2))
+def field(b,k):
+ m=re.search('"'+re.escape(k)+'" "[^"]+" "([^"]*)"',b);return m.group(1) if m else None
+def refs(b):return re.findall(r'"(?:[^"]+)" "element" "([^"]+)"|"element" "([^"]+)"',b)
+def children(b):
+ m=re.search(r'"children" "element_array"\s*\[(.*?)\]',b,re.S);return re.findall(r'"element" "([^"]+)"',m[1]) if m else []
+def arr(b,key,ids):return re.sub(r'("'+key+r'" "element_array"\s*\[).*?(\])',lambda m:m[1]+'\n'+',\n'.join('\t\t"element" "'+u+'"'for u in ids)+'\n\t'+m[2],b,count=1,flags=re.S)
+try:
+ save('runner.json',dict(pid=os.getpid(),phase='SOURCE_PLAN',noInstall=True))
+ assert not 'resourcecompiler.exe' in subprocess.check_output(['tasklist','/FI','IMAGENAME eq resourcecompiler.exe','/FO','CSV','/NH'],text=True).lower()
+ free=shutil.disk_usage('@@DF_DRIVE_E@@').free
+ # Actual asset copy inventory, output estimate conservatively doubled, all existing rollback immutable.
+ assetbytes=sum(p.stat().st_size for typ in ['content','game']for n in ['models','materials']for p in (B/typ/'kat'/n).rglob('*')if p.is_file())
+ need=assetbytes+12*1024**3+4*1024**3+2*1024**3+20*1024**3
+ assert free>need,(free,need)
+ save('budget.json',dict(free=free,assetCopyBytes=assetbytes,compiledAndPackBudget=12*1024**3,rollbackBudget=4*1024**3,sourceAndLogs=2*1024**3,reserveOnce=20*1024**3,totalNeed=need,noCleanup=True))
+ # Execute the already used exact flattening algorithm on AGGGEOM stage, stopping before any writing/copy/compile.
+ code=Path('@@DF_PATH_DF_V268_SINGLEMAP_20261109@@/proof/prepare-single.py').read_text(encoding='utf8')
+ start=code.index(' maps=');end=code.index(' dst=S/')
+ flat=code[start:end]
+ flat='\n'.join(x[1:]if x.startswith(' ')else x for x in flat.splitlines())
+ ns=dict(B=B,S=S,Q=Q,Path=Path,re=re,json=json,sha=sha,field=field)
+ exec(flat,ns)
+ merged=ns['merged'];worldid=ns['worldid'];originalchildren=ns['children'];sources=ns['sources'];parsed=ns['parsed']
+ ents={u:b for u,(k,b) in merged.items()if k=='CMapEntity'}
+ classes=collections.Counter(field(merged[field(b,'entity_properties')][1],'classname')for b in ents.values())
+ assert classes['prop_dynamic']==0 and classes['prop_static']==55066 and classes['trigger_hurt']==1847,classes
+ assert len(ents)==56949
+ # Source stage receipt is authoritative for all replacements, including held fallbacks.
+ pres=json.loads((B/'proof/agggeom-stage-preservation.json').read_text())
+ assert len(pres['changes'])==15191
+ roof=json.loads((B/'proof/roof-integrated.json').read_text())
+ for r in pres['manifest']:
+  expected=r['stageSHA256']
+  if Path(r['destination']).name=='df_spaceport_v267.vmap':
+   assert expected==roof['oldParentSHA256'] and roof['other31ByteIdentical'] and roof['onlyExactEntityBlockChanged']
+   expected=roof['newParentSHA256']
+  assert sha(Path(r['destination']))==expected
+ # Every referenced entity and mesh descendant has one owner; graphs preserve complete unchanged blocks.
+ direct=set(originalchildren);assert all(u in merged for u in direct)
+ save('runner.json',dict(pid=os.getpid(),phase='PLACEMENT_INVENTORY',noInstall=True))
+ placement=[u for u in originalchildren if merged[u][0]=='CMapMesh' or (merged[u][0]=='CMapEntity'and field(merged[field(merged[u][1],'entity_properties')][1],'classname') in ['prop_static','prop_dynamic','prop_dynamic_override'])]
+ placementset=set(placement)
+ parentnodes=[u for u in originalchildren if u not in placementset]
+ cache={}
+ def modelweight(model):
+  if not model:return 0
+  if model not in cache:
+   p=B/'game/kat'/(model+'_c')
+   with p.open('rb')as f:
+    h=f.read(16);off,n=struct.unpack_from('<II',h,8);f.seek(8+off);tab=f.read(n*12)
+   z=next((struct.unpack_from('<I',tab,i*12+8)[0]for i in range(n)if tab[i*12:i*12+4]==b'PHYS'),0)
+   cache[model]=max(0,z-1700)
+  return cache[model]
+ def meshdata(u):
+  b=merged[u][1];d=merged[field(b,'meshData')][1];a=merged[field(d,'vertexData')][1];ids=re.findall(r'"element" "([^"]+)"',a)
+  stream=next(merged[x][1]for x in ids if field(merged[x][1],'semanticName')=='position')
+  m=re.search(r'"data" "vector3_array"\s*\[(.*?)\]',stream,re.S);pts=[list(map(float,s.split()))for s in re.findall(r'"([^"]+)"',m[1])]
+  assert pts
+  # These baked mesh vertices use global frame; do not apply an invented extra transform.
+  assert field(b,'origin')=='0 0 0'and field(b,'angles')=='0 0 0'and field(b,'scales')=='1 1 1'
+  center=[sum(p[i]for p in pts)/len(pts)for i in range(3)]
+  faces=re.search(r'"faceEdgeIndices" "int_array"\s*\[(.*?)\]',d,re.S);nf=len(re.findall(r'"-?\d+"',faces[1]))
+  return center,len(pts)*12+nf*48+128
+ save('runner.json',dict(pid=os.getpid(),phase='PHYS_WEIGHT_INVENTORY',noInstall=True))
+ rows=[]
+ for u in placement:
+  k,b=merged[u];model=None
+  if k=='CMapEntity':
+   pb=merged[field(b,'entity_properties')][1];model=field(pb,'model');origin=list(map(float,field(b,'origin').split()));w=modelweight(model)
+  else:origin,w=meshdata(u)
+  rows.append(dict(uuid=u,type=k,model=model,origin=origin,weight=w,entitySHA256=hashlib.sha256(b.encode()).hexdigest()))
+ save('runner.json',dict(pid=os.getpid(),phase='PARTITION_SWEEP',noInstall=True))
+ total=sum(r['weight']for r in rows);assert total>0
+ sweeps=[]
+ for axis in [0,1]:
+  ordered=sorted(rows,key=lambda r:(r['origin'][axis],r['uuid']));acc=0;best=None
+  for i,r in enumerate(ordered[:-1]):
+   acc+=r['weight']
+   if r['origin'][axis]==ordered[i+1]['origin'][axis]:continue
+   candidate=(abs(acc-total/2),i,acc,(r['origin'][axis]+ordered[i+1]['origin'][axis])/2)
+   if best is None or candidate<best:best=candidate
+  sweeps.append((best[0],axis,best[3],best[2],total-best[2]))
+ _,axis,plane,w0,w1=min(sweeps)
+ assignments={r['uuid']:int(r['origin'][axis]>=plane)for r in rows}
+ for r in rows:r['newPart']='df_spaceport_v268_twopart_part'+str(assignments[r['uuid']])
+ # Parent loaders are re-used from proven baseline with exactly two selected children and two output connections.
+ extras={};loadernodes=[];parentblocks=parsed[0]
+ for u,(k,b)in parentblocks.items():
+  if k!='CMapEntity':continue
+  pr=field(b,'entity_properties');pb=parentblocks[pr][1];cl=field(pb,'classname')
+  if cl=='info_spawngroup_load_unload'and field(pb,'targetname')in ['df_v25_child0','df_v25_child1']:
+   i=int(field(pb,'targetname')[-1]);extras[u]=(k,b.replace('df_v25_child', 'df_v268_twopart_child'));extras[pr]=(parentblocks[pr][0],pb.replace('df_spaceport_v267_part'+str(i),'df_spaceport_v268_twopart_part'+str(i)).replace('df_v25_child','df_v268_twopart_child'));loadernodes.append(u)
+  if field(pb,'targetname')=='df_v25_load_children':
+   conns=re.findall(r'"element" "([^"]+)"',re.search(r'"connectionsData" "element_array"\s*\[(.*?)\]',b,re.S)[1])[:2]
+   extras[u]=(k,arr(b,'connectionsData',conns).replace('df_v25_load_children','df_v268_twopart_load_children'));extras[pr]=(parentblocks[pr][0],pb.replace('df_v25_load_children','df_v268_twopart_load_children'));loadernodes.append(u)
+   for c in conns:extras[c]=(parentblocks[c][0],parentblocks[c][1].replace('df_v25_child','df_v268_twopart_child'))
+ assert len(loadernodes)==3
+ # Follow DMX element references rather than raw classname literals.
+ def closure(blocks,roots):
+  seen=set();todo=list(roots)
+  while todo:
+   u=todo.pop()
+   if not u or u in seen:continue
+   assert u in blocks,('missing ref',u)
+   seen.add(u)
+   for pair in refs(blocks[u][1]):
+    x=pair[0]or pair[1]
+    if x:todo.append(x)
+  return seen
+ # Only use canonical parent root/skeleton, whose world UUID is common to all baseline chunks.
+ root=next(u for u,(k,b)in parsed[0].items()if k=='CMapRootElement')
+ assert field(merged[root][1],'world')==worldid
+ allblocks=dict(merged);allblocks.update(extras)
+ # Determine graph-unreachable auxiliaries once. Preserve all orphan property records in parent, never treat as entities.
+ save('runner.json',dict(pid=os.getpid(),phase='GRAPH_SCOPE',noInstall=True))
+ originalreachable=closure(merged,[root])
+ orphanaux=[u for u in merged if u not in originalreachable and merged[u][0]not in ['CMapRootElement','CMapWorld']]
+ save('unreachable-records-preserved.json',dict(rows=[dict(uuid=u,type=merged[u][0],classname=field(merged[field(merged[u][1],'entity_properties')][1],'classname')if merged[u][0]=='CMapEntity'else None)for u in orphanaux],policy='Preserved byte-exact as unreferenced records in parent; never activated as world children.'))
+ stageproof=[]
+ alluuid=[]
+ for ix,name in [(-1,'df_spaceport_v268_twopart'),(0,'df_spaceport_v268_twopart_part0'),(1,'df_spaceport_v268_twopart_part1')]:
+  chosen=parentnodes+loadernodes if ix<0 else [u for u in placement if assignments[u]==ix]
+  blocks=dict(allblocks);k,w=blocks[worldid];blocks[worldid]=(k,arr(w,'children',chosen))
+  keep=closure(blocks,[root])
+  if ix<0:keep.update(closure(blocks,orphanaux))
+  selected={u:blocks[u]for u in blocks if u in keep}
+  # Parent-only light/sky/spawns/triggers, no entity partition duplication.
+  cls=collections.Counter(field(selected[field(b,'entity_properties')][1],'classname')for k,b in selected.values()if k=='CMapEntity')
+  if ix<0:assert cls['trigger_hurt']==1847 and cls['info_player_terrorist']==16 and cls['info_player_counterterrorist']==16 and cls['info_spawngroup_load_unload']==2
+  else:assert not cls['trigger_hurt']and not cls['info_player_terrorist']and not cls['env_sky']
+  assert not cls['prop_dynamic']
+  for u,(k,b)in selected.items():
+   if k in ['CMapEntity','CMapMesh']and u not in loadernodes:alluuid.append(u);assert merged[u][1]==b
+  text='<!-- dmx encoding keyvalues2 4 format vmap 40 -->\n\n'+'\n\n'.join(b for k,b in selected.values())+'\n'
+  assert not re.search('df_spaceport_v267_part|df_v25_child[2-5]',text)
+  dst=S/'content/kat/maps'/(name+'.vmap');dst.parent.mkdir(parents=True,exist_ok=True);dst.write_text(text)
+  stageproof.append(dict(name=name,sourceSHA256=sha(dst),classes=dict(cls),elements=len(selected),rootChildren=len(chosen)))
+ assert len(alluuid)==len(set(alluuid))
+ expect={u for u,(k,b)in merged.items()if k in ['CMapEntity','CMapMesh']}
+ assert set(alluuid)==expect,(len(alluuid),len(expect),list(expect-set(alluuid))[:10])
+ save('UUID-partition-manifest.json',dict(sourceAncestry=sources,allPlacementRows=rows,allEntityAndMeshUUIDOwnershipCount=len(alluuid),exactlyOnce=True,allNodeBlocksExact=True,noDynamicConversions=True,originalDynamics=classes['prop_dynamic'],validatedAggGeomModels=333,validatedAggGeomPlacements=15191,orphanPropertiesPreservedParent=True))
+ projected=[753782938*w0/total,753782938*w1/total]
+ save('PLAN.json',dict(ancestry='Actual AggGeom-only @@DF_PATH_DF_V268_STAGE_20261109@@ with measured six WORLD PHYS753782938; no shared source',axis='xy'[axis],plane=plane,weights=[w0,w1],projectedPartPHYS=projected,method='Native model PHYS payload minus fixed1700 per model at every placement plus mesh vertex/face geometry proxy; spatial weighted sweep X/Y. Estimates not native marginal bytes. Whole nodes unchanged global frame.',classes=dict(classes),sources=sources,outputs=stageproof,budget=json.loads((Q/'budget.json').read_text()),noRuntime=True))
+ save('runner.json',dict(pid=os.getpid(),phase='COPY_ASSETS',noInstall=True))
+ for typ in ['content','game']:
+  for n in ['models','materials']:shutil.copytree(B/typ/'kat'/n,S/typ/'kat'/n)
+  for n in ['csgo','core']:
+   src=B/typ/n;dst=S/typ/n
+   if src.exists():
+    r=subprocess.run(['cmd','/c','mklink','/J',str(dst),str(src.resolve())],capture_output=True,text=True);assert r.returncode==0
+ shutil.copy2(B/'game/kat/gameinfo.gi',S/'game/kat/gameinfo.gi')
+ code=(B/'proof/compile-world.py').read_text().replace("S=Path('@@DF_PATH_DF_V268_STAGE_20261109@@')","S=Path('@@DF_PATH_DF_V268_TWOPART_20261109@@')")
+ code=code.replace("for i in range(6):native('world-part'+str(i),'maps/df_spaceport_v267_part'+str(i)+'.vmap',True)","for i in range(2):native('world-part'+str(i),'maps/df_spaceport_v268_twopart_part'+str(i)+'.vmap',True)")
+ code=code.replace("'maps/df_spaceport_v267.vmap'","'maps/df_spaceport_v268_twopart.vmap'").replace('NATIVE-SEVEN-FINISHED','NATIVE-THREE-FINISHED')
+ (Q/'compile-world.py').write_text(code)
+ save('PREPARE-COMPLETE.json',dict(pid=os.getpid(),compilerScriptSHA256=sha(Q/'compile-world.py'),noInstall=True))
+ r=subprocess.run(['@@DF_USER_HOME@@/miniconda3/python.exe',str(Q/'compile-world.py')],cwd=S);assert r.returncode==0
+ save('THREE-COMPILED.json',dict(exit=0,noInstall=True,QA_PENDING=True))
+except BaseException:
+ save('TWOPART-BLOCKER.json',dict(error=traceback.format_exc(),noInstall=True));raise

@@ -1,0 +1,30 @@
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
+from pathlib import Path
+import subprocess,json,struct,collections,re
+from srctools.vpk import VPK
+W=Path('@@DF_PATH_SPACEPORT_KAT_REBUILD_20261105@@');R=W/'analysis/physics-readonly'
+vrf=str(W/'vrf/Source2Viewer-CLI.exe')
+for p,block in [(R/'world_physics.vmdl_c','PHYS'),(R/'world_physics.vmdl_c','CTRL'),(R/'world_physics.vmdl_c','DATA'),(R/'m_000bc41480b2c9d7.vmdl_c','PHYS')]:
+ r=subprocess.run([vrf,'-i',str(p),'-b',block],capture_output=True,text=True,encoding='utf8',errors='replace',timeout=40)
+ s=r.stdout+'\n'+r.stderr;(R/(p.stem+'-'+block+'.txt')).write_text(s,encoding='utf8');print('VRF',p.name,block,'exit',r.returncode,s[:6500])
+def blocks(d):
+ _,_,_,off,n=struct.unpack_from('<IHHII',d)
+ return [(d[b:b+4].decode(),struct.unpack_from('<I',d,b+8)[0]) for i in range(n) for b in [8+off+12*i]]
+counts=collections.Counter();empty=[]
+for p in (W/'compile-full/game/kat/models/kat_spaceport').glob('*.vmdl_c'):
+ bs=blocks(p.read_bytes());sz=next((sz for k,sz in bs if k=='PHYS'),None);counts['nonempty' if sz else 'empty']+=1
+ if not sz:empty.append(p.name)
+print('ALLMODELSPHYS',dict(counts),empty[:20])
+(R/'models-physics-count.json').write_text(json.dumps(dict(counts=counts,empty=empty),indent=2))
+v=VPK('@@DF_PATH_CS2_SPACEPORT_PRIVATE@@/latest-20261104/df_spaceport_player_scale_raytrace.vpk')
+print('OCEANPHYS',[(n,v[n].size) for n in v.filenames() if 'physics' in n])
+for n in v.filenames():
+ if n.endswith('world_physics.vmdl_c'):
+  p=R/'ocean-world_physics.vmdl_c';d=v[n].read();p.write_bytes(d);print('OCEANBLOCKS',blocks(d),'crc',v[n].verify())
+  r=subprocess.run([vrf,'-i',str(p),'-b','PHYS'],capture_output=True,text=True,encoding='utf8',errors='replace',timeout=45)
+  s=r.stdout+'\n'+r.stderr;(R/'ocean-PHYS.txt').write_text(s,encoding='utf8');print('OCEANPARSE',r.returncode,s[:3500])
+text=(W/'addon/maps/df_spaceport_kat_fast.vmap').read_text(encoding='utf8')
+print('PROP_SAMPLE',text[text.index('"classname" "string" "prop_static"')-500:text.index('"classname" "string" "prop_static"')+4000])
+print('PHYSKEYS',collections.Counter(re.findall(r'^\s*"([^"]*(?:phys|collision|solid)[^"]*)"[^\n]*',text,re.I|re.M)))
+print('WORLDSPAWN',text[text.index('"classname" "string" "worldspawn"')-400:text.index('"classname" "string" "worldspawn"')+4500])

@@ -1,0 +1,50 @@
+import runpy,json,numpy as np
+from pathlib import Path
+P=Path(__file__).parent
+ctx=runpy.run_path(str(P/'calibrate.py'));data=ctx['data'];sample=ctx['sample_rg'];coef=ctx['coef'];tiles=ctx['tiledata'];train=ctx['train'];q=.9765625*.36;metric=ctx['metrics']
+out={'xyShiftControls':{},'seamTypes':{},'limitation':'Geometry QA, no compiled engine physics test, no source CDLOD fine occupancy mask. No snap, smoothing or collision decimation.'}
+for dx,dy in [(0,0),(4,0),(-4,0),(0,4),(0,-4),(4,4),(-4,-4)]:
+ v=sample(data[:,4]+dx,data[:,5]+dy);X=np.c_[v,np.ones(len(v))];ok=np.isfinite(X).all(axis=1);t=train&ok
+ c=np.linalg.lstsq(X[t],data[t,2],rcond=None)[0];e=X[ok&~train]@c-data[ok&~train,2]
+ out['xyShiftControls'][f'{dx*100},{dy*100}UEcm']=dict(coefficients=c.tolist(),heldout=metric(e))
+records=json.loads((P/'coverage-blocker.json').read_text())['records']
+def name(r):return Path(r['package']).name
+def bounds(r):
+ o,e=r['bounds']['Origin'],r['bounds']['BoxExtent']
+ return [(o['X']-e['X'])/100,(o['X']+e['X'])/100,(o['Y']-e['Y'])/100,(o['Y']+e['Y'])/100]
+def kind(r):return 'collision' if r['payloadPresent'] else 'CDLODderived' if r['bounds']['BoxExtent']['Z'] else 'uncertified'
+edges={}
+for r in records:
+ x0,x1,y0,y1=bounds(r)
+ for axis,fixed,a,b,side in [('x',x0,y0,y1,'left'),('x',x1,y0,y1,'right'),('y',y0,x0,x1,'bottom'),('y',y1,x0,x1,'top')]:
+  edges.setdefault((axis,fixed,a,b),[]).append((r,side))
+def heights(r,side,axis,fixed,ts):
+ if kind(r)=='CDLODderived':
+  rg=sample(np.full(ts.shape,fixed) if axis=='x' else ts,ts if axis=='x' else np.full(ts.shape,fixed));return rg@coef[:2]+coef[2],np.all(np.isfinite(rg),axis=1)
+ d,x,y,h,m,bad=tiles[name(r)]
+ # collision row0 is maximumX, row126 minimumX, col0 minimumY
+ if side=='left':vals=h[-1,:];bad=bad[-1,:];pos=y[-1,:]
+ elif side=='right':vals=h[0,:];bad=bad[0,:];pos=y[0,:]
+ elif side=='bottom':vals=h[::-1,0];bad=bad[::-1,0];pos=x[::-1,0]
+ else:vals=h[::-1,-1];bad=bad[::-1,-1];pos=x[::-1,-1]
+ idx=np.minimum(np.searchsorted(pos,ts,side='right')-1,len(pos)-2);idx=np.maximum(idx,0)
+ valid=~(bad[idx]|bad[idx+1])
+ return np.interp(ts,pos,vals),valid
+seamrecords=[];agg={}
+for (axis,fixed,a,b),items in edges.items():
+ if len(items)!=2:continue
+ (r,s),(rr,ss)=items;ks=sorted([kind(r),kind(rr)]);key='/'.join(ks)
+ if 'uncertified' in ks:
+  agg.setdefault(key,dict(pairs=0));agg[key]['pairs']+=1;continue
+ ts=np.unique(np.r_[np.linspace(a,b,127),np.arange(np.ceil((a-ctx['lo'][1 if axis=='x' else 0])/8),np.floor((b-ctx['lo'][1 if axis=='x' else 0])/8)+1)*8+ctx['lo'][1 if axis=='x' else 0]])
+ v,valid=heights(r,s,axis,fixed,ts);w,ok=heights(rr,ss,axis,fixed,ts);good=valid&ok
+ e=v[good]-w[good];rec=dict(a=name(r),b=name(rr),type=key,axis=axis,fixedUEcm=fixed*100,**metric(e))
+ seamrecords.append(rec);agg.setdefault(key,dict(pairs=0,errors=[]));agg[key]['pairs']+=1;agg[key]['errors'].extend(e.tolist())
+out['seamTypes']={k:dict(pairs=v['pairs'],**(metric(v['errors']) if 'errors' in v else {})) for k,v in agg.items()}
+out['seams']=seamrecords
+out['maxErrorSeams']=sorted(seamrecords,key=lambda r:r['maxAbs'],reverse=True)[:20]
+out['tileBiasRangeCS']=[min(r['bias'] for r in ctx['out']['perTile']),max(r['bias'] for r in ctx['out']['perTile'])]
+out['heightfieldExclusion']=dict(holeMaterial=127,sourceCollisionHoleTriangles=864,holeAdjacentVerticesExcludedFromFit=511)
+out['sourceFrame']=dict(tilesValidated=168,allOuterRotations=[0,.7071068,.7071068,0],shapeRotation=[0,0,0,1],shapeTranslation=[-12600,0,0],geometryScale=[.9765625,100,100],UEtoCSScale=.36,YReflection=True,translation=[-240984,-164808,8052.84])
+(P/'qa.json').write_text(json.dumps(out,indent=2))
+print('QARESULT',json.dumps({k:v for k,v in out.items() if k not in ['seams','maxErrorSeams']},indent=2))

@@ -1,0 +1,459 @@
+"""Guarded, resumable Spaceport local-coordinate geometry export. Never saves source.
+Run via launch_geometry.py, which places every writable Blender path on E.
+Default action is preflight ONLY. Export requires --execute --axis-approval FILE.
+"""
+import argparse, bpy, ctypes, hashlib, json, os, shutil, sys, threading, time, traceback
+from collections import Counter, defaultdict
+from pathlib import Path
+from mathutils import Matrix
+
+ROOT = Path("@@DF_PATH_SPACEPORT_KAT_REBUILD_20261105@@")
+SOURCE = ROOT / "original.blend"
+EXPECTED = "e4a4582c8756c5e855500a910a7d0f2751caa89b25bc58b4770fac8f1fea920d"
+OUT = ROOT / "addon/models/kat_spaceport"
+SETTINGS = dict(global_scale=1.0, apply_unit_scale=False,
+    apply_scale_options="FBX_SCALE_ALL", axis_forward="-X", axis_up="Z",
+    use_space_transform=False, bake_space_transform=False,
+    use_selection=True, object_types={"MESH"}, use_mesh_modifiers=False,
+    use_mesh_modifiers_render=False, bake_anim=False, add_leaf_bones=False,
+    use_custom_props=False, use_triangles=True, use_tspace=False,
+    mesh_smooth_type="FACE", path_mode="STRIP", embed_textures=False)
+HEADER = "<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc36:version{972dada4-b828-45a4-bb93-7795cf0585da} -->\n"
+MESH_SCALE = 36.0
+START = time.monotonic()
+argsv = sys.argv[sys.argv.index("--")+1:] if "--" in sys.argv else []
+ap = argparse.ArgumentParser()
+ap.add_argument("--execute", action="store_true")
+ap.add_argument("--axis-approval", type=Path)
+ap.add_argument("--timeout-hours", type=float, default=6)
+ap.add_argument("--limit", type=int, default=0, help="Explicit pilot limit, 0 exports all")
+args = ap.parse_args(argsv)
+
+def canonical(o):
+    return json.dumps(o, ensure_ascii=False, sort_keys=True, separators=(",",":"),
+                      default=lambda x: sorted(x) if isinstance(x,set) else str(x))
+def sha(p):
+    h=hashlib.sha256()
+    with Path(p).open("rb") as f:
+        for chunk in iter(lambda:f.read(8*1024*1024),b""): h.update(chunk)
+    return h.hexdigest()
+def atomic(p, data):
+    p=Path(p)
+    assert p.resolve().drive.upper()=="E:", str(p)
+    p.parent.mkdir(parents=True,exist_ok=True)
+    t=p.with_name(p.name+".tmp")
+    with t.open("w",encoding="utf8",newline="\n") as f:
+        f.write(data if isinstance(data,str) else json.dumps(data,ensure_ascii=False,indent=2))
+    os.replace(t,p)
+def event(kind, **kw):
+    row=dict(time=time.time(),pid=os.getpid(),event=kind,**kw)
+    with (ROOT/"geometry-status.jsonl").open("a",encoding="utf8") as f:
+        f.write(canonical(row)+"\n"); f.flush()
+    print(canonical(row),flush=True)
+
+class MEMORYSTATUSEX(ctypes.Structure):
+    _fields_=[("dwLength",ctypes.c_ulong),("dwMemoryLoad",ctypes.c_ulong),
+        ("ullTotalPhys",ctypes.c_ulonglong),("ullAvailPhys",ctypes.c_ulonglong),
+        ("ullTotalPageFile",ctypes.c_ulonglong),("ullAvailPageFile",ctypes.c_ulonglong),
+        ("ullTotalVirtual",ctypes.c_ulonglong),("ullAvailVirtual",ctypes.c_ulonglong),
+        ("ullAvailExtendedVirtual",ctypes.c_ulonglong)]
+def guard():
+    while True:
+        reason=None
+        try:
+            m=MEMORYSTATUSEX();m.dwLength=ctypes.sizeof(m)
+            if not ctypes.windll.kernel32.GlobalMemoryStatusEx(ctypes.byref(m)):
+                reason="GlobalMemoryStatusEx failed"
+            elif m.ullAvailPhys<8*1024**3: reason="available physical RAM below 8GiB"
+            elif shutil.disk_usage(ROOT).free<8*1024**3: reason="E free space below 8GiB"
+            elif time.monotonic()-START>args.timeout_hours*3600: reason="own worker timeout"
+            if reason:
+                event("guard_abort",reason=reason,available_physical_bytes=m.ullAvailPhys)
+                os._exit(75) # This Blender process only. Never searches/kills other processes.
+        except BaseException:
+            os._exit(76)
+        time.sleep(1)
+
+def safe(name):
+    return "m_"+hashlib.sha256(name.encode("utf8")).hexdigest()[:16]
+def quote(s): return json.dumps(s,ensure_ascii=False)
+def vmdl(rel, mats):
+    remaps=",\n".join("{ from = "+quote(m)+" to = "+quote("materials/kat_spaceport/"+m+".vmat")+" }" for m in mats)
+    return HEADER+"""{
+ rootNode = {
+  _class = "RootNode"
+  children = [
+   { _class = "RenderMeshList" children = [
+    { _class = "RenderMeshFile" name = "mesh" filename = """+quote(rel)+"""
+      import_scale = 1.0
+      import_filter = { exclude_by_default = false exception_list = [ ] }
+    }
+   ] },
+   { _class = "MaterialGroupList" children = [
+    { _class = "DefaultMaterialGroup" name = "default"
+      remaps = [ """+remaps+""" ]
+      use_global_default = false global_default_material = ""
+    }
+   ] },
+   { _class = "PhysicsShapeList" children = [
+    { _class = "PhysicsMeshFromRender" parent_bone = "" surface_prop = "default"
+      collision_prop = "default" tool_material = "" renderMeshList = [ ] }
+   ] leave_body_collision_unmodified = false }
+  ]
+  model_archetype = "" primary_associated_entity = "" anim_graph_name = ""
+  document_sub_type = "ModelDocSubType_None"
+ }
+}
+"""
+
+def mesh_signature(mesh, material_names):
+    """Exact current-frame geometry and rendered layer bytes, never rounded."""
+    from array import array
+    h=hashlib.sha256()
+    def vals(label, collection, prop, width, code="f"):
+        a=array(code,[0])*(len(collection)*width)
+        if a: collection.foreach_get(prop,a)
+        h.update(canonical([label,len(collection),width,code]).encode());h.update(a.tobytes())
+    h.update(canonical(material_names).encode())
+    vals("vertex.co",mesh.vertices,"co",3)
+    vals("edge.vertices",mesh.edges,"vertices",2,"i")
+    vals("loop.vertex_index",mesh.loops,"vertex_index",1,"i")
+    vals("loop.edge_index",mesh.loops,"edge_index",1,"i")
+    for prop in ("loop_start","loop_total","material_index"):
+        vals("polygon."+prop,mesh.polygons,prop,1,"i")
+    vals("polygon.use_smooth",mesh.polygons,"use_smooth",1,"b")
+    vals("corner_normal",mesh.corner_normals,"vector",3)
+    for uv in mesh.uv_layers:
+        h.update(canonical(["uv",uv.name,uv.active_render]).encode())
+        vals("uv."+uv.name,uv.data,"uv",2)
+    for color in mesh.color_attributes:
+        h.update(canonical(["color",color.name,color.domain,color.data_type]).encode())
+        vals("color."+color.name,color.data,"color",4)
+    # Exportable generic named attributes; ignore internal dot-prefixed storage.
+    props={"FLOAT":("value",1,"f"),"INT":("value",1,"i"),"BOOLEAN":("value",1,"b"),
+        "FLOAT_VECTOR":("vector",3,"f"),"FLOAT2":("vector",2,"f"),
+        "FLOAT_COLOR":("color",4,"f"),"BYTE_COLOR":("color",4,"f"),
+        "INT8":("value",1,"b"),"QUATERNION":("value",4,"f")}
+    for attr in sorted(mesh.attributes,key=lambda a:a.name):
+        if (attr.name=="custom_normal" and attr.data_type=="INT16_2D"): continue # decoded evaluated corner normals already hashed above
+        if attr.name.startswith(".") or attr.name in {x.name for x in mesh.uv_layers} | {x.name for x in mesh.color_attributes}: continue
+        if attr.data_type not in props: raise RuntimeError("Unsupported mesh attribute signature "+attr.name+" "+attr.data_type)
+        p,w,c=props[attr.data_type]
+        h.update(canonical(["attr",attr.name,attr.domain,attr.data_type]).encode())
+        vals("attr."+attr.name,attr.data,p,w,c)
+    return h.hexdigest()
+
+def evaluated_preflight(plans, groups, materialmap, unsupported):
+    scene=bpy.context.scene
+    frame=dict(frame=scene.frame_current,subframe=scene.frame_subframe)
+    activegroups={name for name,objects in groups.items() if objects[0].data.shape_keys or any(
+        m.show_render for o in objects for m in o.modifiers)}
+    # Currently only ARMATURE has been inspected. Other modifier types remain fail-closed.
+    unsupported[:]=[u for u in unsupported if u["reason"] not in {
+        "render modifiers need evaluated geometry decision","shape keys need evaluated geometry decision"}]
+    for name in activegroups:
+        for o in groups[name]:
+            for m in o.modifiers:
+                if m.show_render and m.type!="ARMATURE":
+                    unsupported.append(dict(object=o.name,mesh=name,reason="unreviewed render modifier",modifier=m.type))
+                # depsgraph is viewport context, explicitly match render visibility in-memory.
+                m.show_viewport=m.show_render
+    depsgraph=bpy.context.evaluated_depsgraph_get()
+    depsgraph.update()
+    output=[];overrides={};tests=[];byobj={};variants=[];affectedobjects=0
+    for plan in plans:
+        name=plan["mesh"]
+        if name not in activegroups: output.append(plan);continue
+        signatures=defaultdict(list);records={}
+        for obj in sorted(groups[name],key=lambda o:o.name):
+            eo=obj.evaluated_get(depsgraph)
+            mesh=eo.to_mesh(preserve_all_data_layers=True,depsgraph=depsgraph)
+            try:
+                mats=[s.material.name if s.material else None for s in obj.material_slots]
+                sig=mesh_signature(mesh,mats)
+                record=dict(object=obj.name,evaluated_signature=sig,vertices=len(mesh.vertices),
+                    polygons=len(mesh.polygons),materials=mats,
+                    source_matrix=[list(row) for row in obj.matrix_world],
+                    evaluated_matrix=[list(row) for row in eo.matrix_world],
+                    shape_keys=[dict(name=k.name,value=k.value,mute=k.mute) for k in obj.data.shape_keys.key_blocks] if obj.data.shape_keys else [],
+                    armature_modifiers=[dict(name=m.name,armature=m.object.name if m.object else None) for m in obj.modifiers if m.show_render])
+                if not len(mesh.polygons):
+                    unsupported.append(dict(object=obj.name,reason="evaluated mesh has no faces"))
+                for i in range(4):
+                    for j in range(4):
+                        if abs(obj.matrix_world[i][j]-eo.matrix_world[i][j])>1e-6:
+                            unsupported.append(dict(object=obj.name,reason="evaluated object matrix differs, placement must use evaluated matrix"));break
+                # Compare every evaluated local vertex world coordinate with the planned
+                # identity-local*36 model composed with original matrix and Ocean offset.
+                offset=(6694.0,4578.0,-223.69)
+                srcmin=[float("inf")]*3;srcmax=[-float("inf")]*3
+                dstmin=[float("inf")]*3;dstmax=[-float("inf")]*3;error=0.0
+                for vertex in mesh.vertices:
+                    v=vertex.co
+                    a=eo.matrix_world@v
+                    source=[36*(a[i]-offset[i]) for i in range(3)]
+                    # mathutils uses float32; compute source and composition consistently in float64.
+                    exact=[36*(sum(float(eo.matrix_world[i][j])*float(v[j]) for j in range(3))+float(eo.matrix_world[i][3])-offset[i]) for i in range(3)]
+                    composed=[sum(float(obj.matrix_world[i][j])*(36*float(v[j])) for j in range(3))+36*(float(obj.matrix_world[i][3])-offset[i]) for i in range(3)]
+                    error=max(error,max(abs(exact[i]-composed[i]) for i in range(3)))
+                    for i in range(3):
+                        srcmin[i]=min(srcmin[i],exact[i]);srcmax[i]=max(srcmax[i],exact[i])
+                        dstmin[i]=min(dstmin[i],composed[i]);dstmax[i]=max(dstmax[i],composed[i])
+                record.update(max_world_composition_error=error,source_evaluated_ocean_bounds=[srcmin,srcmax],
+                    planned_export_composed_ocean_bounds=[dstmin,dstmax])
+                if error>1e-5: unsupported.append(dict(object=obj.name,reason="evaluated world composition mismatch",error=error))
+                tests.append(record);signatures[sig].append(obj.name);records[obj.name]=record
+            finally: eo.to_mesh_clear()
+            affectedobjects+=1
+        for i,(sig,objects) in enumerate(sorted(signatures.items())):
+            new=dict(plan)
+            # Deterministically retain original mesh ID for first geometry variant.
+            stem=plan["id"] if i==0 else safe(name+"\0evaluated\0"+sig)
+            new.update(id=stem,objects=objects,model="models/kat_spaceport/"+stem+".vmdl",
+                evaluation="current_frame_render",evaluated_signature=sig,
+                source_object=objects[0],frame=frame,
+                vertices=records[objects[0]]["vertices"],polygons=records[objects[0]]["polygons"])
+            output.append(new)
+            variants.append(dict(mesh=name,id=stem,signature=sig,objects=objects))
+            for objectname in objects:
+                byobj[objectname]=new
+                if stem!=plan["id"]: overrides[objectname]=new["model"]
+    # Five source landmarks including tilted container and one armature, same loaded source.
+    names=["SM_H_Industrial_Container_02.mo.001"]
+    affected=sorted(byobj)
+    if affected:names.append(affected[0])
+    regular=[o for n,objs in sorted(groups.items()) if n not in activegroups for o in objs]
+    regular.sort(key=lambda o:o.name)
+    # Require distinct geometry models, not repeated instances of one mesh.
+    used_meshes={bpy.data.objects[n].data.name for n in names}
+    for axis in (0,1,2):
+        candidates=[o for o in regular if o.data.name not in used_meshes]
+        if not candidates:raise RuntimeError("Insufficient distinct landmark meshes")
+        choice=max(candidates,key=lambda o:(o.matrix_world.translation[axis],o.name))
+        names.append(choice.name);used_meshes.add(choice.data.name)
+    if len(names)!=5 or len(used_meshes)!=5:raise RuntimeError("Expected five unique landmark meshes")
+    landmarks=[]
+    for objectname in dict.fromkeys(names):
+        obj=bpy.data.objects.get(objectname)
+        if obj is None: unsupported.append(dict(object=objectname,reason="required landmark missing"));continue
+        eo=obj.evaluated_get(depsgraph) if obj.data.name in activegroups else None
+        mesh=eo.to_mesh(preserve_all_data_layers=True,depsgraph=depsgraph) if eo else obj.data
+        try:
+            n=len(mesh.vertices);indices=sorted(set([0,n//4,n//2,3*n//4,n-1]))
+            plan=byobj.get(objectname)
+            landmarks.append(dict(name=objectname,mesh=obj.data.name,
+                model=plan["model"] if plan else "models/kat_spaceport/"+safe(obj.data.name)+".vmdl",
+                evaluated=bool(eo),frame=frame,matrix=[list(row) for row in obj.matrix_world],
+                vertices=[dict(index=i,local=list(mesh.vertices[i].co),
+                    exported_local36=[36*float(v) for v in mesh.vertices[i].co]) for i in indices]))
+        finally:
+            if eo:eo.to_mesh_clear()
+    atomic(ROOT/"object-model-overrides.json",overrides)
+    atomic(ROOT/"geometry-evaluated-tests.json",dict(frame=frame,affected_meshes=len(activegroups),
+        affected_objects=affectedobjects,model_variants=variants,tests=tests,
+        override_count=len(overrides),all_vertex_world_composition_max_error=max((x["max_world_composition_error"] for x in tests),default=0),
+        evaluation_api="evaluated_get(depsgraph).to_mesh(preserve_all_data_layers=True,depsgraph=depsgraph); current stored frame; modifier viewport visibility matched to render; no animation export"))
+    atomic(ROOT/"landmark-source.json",dict(frame=frame,source_sha256=EXPECTED,
+        origin=[6694,4578,-223.69],world_formula="36*(p-(6694,4578,-223.69))",
+        note="Original local vertices for plain objects, evaluated local current-pose vertices for affected objects. Export local coordinates explicitly times36, identity FBX object.",
+        objects=landmarks))
+    event("evaluated_preflight",affected_meshes=len(activegroups),affected_objects=affectedobjects,
+        variants=len(variants),override_count=len(overrides),landmarks=len(landmarks))
+
+    if not args.execute:
+        # Authorized tiny samples only, not full export. Same source load and frame.
+        sample_scene=bpy.data.scenes.new("__kat_landmark_samples")
+        OUT.mkdir(parents=True,exist_ok=True)
+        sample_mats={}
+        sample_report=[]
+        for row in landmarks:
+            obj=bpy.data.objects[row["name"]]
+            evaluated=obj.evaluated_get(depsgraph) if row["evaluated"] else None
+            em=evaluated.to_mesh(preserve_all_data_layers=True,depsgraph=depsgraph) if evaluated else obj.data
+            try: mesh=em.copy()
+            finally:
+                if evaluated:evaluated.to_mesh_clear()
+            mesh.transform(Matrix.Scale(MESH_SCALE,4));mesh.update()
+            for i,slot in enumerate(obj.material_slots):
+                if slot.material is None: raise RuntimeError("Missing landmark material")
+                name=slot.material.name;safe_name=materialmap[name]
+                if safe_name not in sample_mats:
+                    if bpy.data.materials.get(safe_name): raise RuntimeError("Safe material name collision")
+                    sample_mats[safe_name]=bpy.data.materials.new(safe_name)
+                mesh.materials[i]=sample_mats[safe_name]
+            temp=bpy.data.objects.new("__kat_landmark",mesh)
+            sample_scene.collection.objects.link(temp);temp.matrix_world=Matrix.Identity(4)
+            temp.select_set(True,view_layer=sample_scene.view_layers[0])
+            sample_scene.view_layers[0].objects.active=temp
+            path=ROOT/"addon"/row["model"].replace(".vmdl",".fbx")
+            partial=path.with_name(path.stem+".pilot.partial.fbx")
+            try:
+                with bpy.context.temp_override(scene=sample_scene,view_layer=sample_scene.view_layers[0],
+                        object=temp,active_object=temp,selected_objects=[temp],selected_editable_objects=[temp]):
+                    result=bpy.ops.export_scene.fbx(filepath=str(partial),**SETTINGS)
+                if "FINISHED" not in result:raise RuntimeError("Landmark FBX export failed")
+                os.replace(partial,path)
+                mats=[materialmap[s.material.name] for s in obj.material_slots]
+                atomic(path.with_suffix(".vmdl"),vmdl(row["model"].replace(".vmdl",".fbx"),mats))
+                sample_report.append(dict(object=obj.name,model=row["model"],fbx=str(path),
+                    fbx_sha256=sha(path),evaluated=row["evaluated"]))
+            finally:
+                bpy.data.objects.remove(temp,do_unlink=True);bpy.data.meshes.remove(mesh)
+        for mat in sample_mats.values():bpy.data.materials.remove(mat)
+        atomic(ROOT/"geometry-landmark-samples.json",dict(full_export=False,samples=sample_report))
+        event("landmark_samples_complete",count=len(sample_report))
+    
+    return output, frame, depsgraph
+
+
+def main():
+    if Path.cwd().resolve().drive.upper()!="E:": raise RuntimeError("cwd must be E")
+    for env in ("TEMP","TMP","BLENDER_USER_CONFIG","BLENDER_USER_SCRIPTS","BLENDER_USER_DATAFILES"):
+        if not os.environ.get(env,"").upper().startswith(("@@DF_DRIVE_E@@","@@DF_DRIVE_E@@")):
+            raise RuntimeError(env+" must be E only")
+    threading.Thread(target=guard,daemon=True).start()
+    event("start",execute=args.execute)
+    if sha(SOURCE)!=EXPECTED: raise RuntimeError("Source SHA256 mismatch")
+    # No --enable-autoexec; embedded scripts/drivers must not execute.
+    bpy.ops.wm.open_mainfile(filepath=str(SOURCE),load_ui=False,use_scripts=False)
+    groups=defaultdict(list); unsupported=[]
+    modifiers=Counter(); alltypes=Counter(); hidden=Counter()
+    for o in bpy.data.objects:
+        alltypes[o.type]+=1
+        if o.type=="MESH": groups[o.data.name].append(o)
+        elif o.type in {"CURVE","SURFACE","META","FONT","CURVES","VOLUME","POINTCLOUD","GREASEPENCIL"} and not o.hide_render:
+            unsupported.append(dict(object=o.name,reason="renderable nonmesh "+o.type))
+        if o.instance_type!="NONE":
+            unsupported.append(dict(object=o.name,reason="object instancing "+o.instance_type))
+    if len(groups)!=4169: unsupported.append(dict(reason="unique mesh count mismatch",actual=len(groups),expected=4169))
+    if sum(map(len,groups.values()))!=54276:
+        unsupported.append(dict(reason="mesh object count mismatch",actual=sum(map(len,groups.values())),expected=54276))
+    materialmap=json.loads((ROOT/"material-map.json").read_text(encoding="utf8"))
+    if any(not isinstance(v,str) or v!=safe(k) for k,v in materialmap.items()):
+        raise RuntimeError("material-map is not expected original-name to m_sha16 mapping")
+    plans=[]
+    for meshname,objects in sorted(groups.items()):
+        mesh=objects[0].data
+        baseline=tuple(s.material.name if s.material else None for s in objects[0].material_slots)
+        for o in objects:
+            hidden[str(o.hide_render)]+=1
+            active=[m for m in o.modifiers if m.show_render]
+            modifiers.update(m.type for m in active)
+            if active:
+                unsupported.append(dict(object=o.name,mesh=meshname,reason="render modifiers need evaluated geometry decision",modifiers=[dict(name=m.name,type=m.type,viewport=m.show_viewport,render=m.show_render) for m in active]))
+            slots=tuple(s.material.name if s.material else None for s in o.material_slots)
+            if slots!=baseline:
+                unsupported.append(dict(object=o.name,mesh=meshname,reason="perobject material slots differ from shared mesh",materials=slots,baseline=baseline))
+            if o.particle_systems:
+                unsupported.append(dict(object=o.name,mesh=meshname,reason="particle systems require evaluation"))
+        if tuple(m.name if m else None for m in mesh.materials)!=baseline:
+            unsupported.append(dict(mesh=meshname,reason="object overrides differ from mesh slots",materials=baseline))
+        if mesh.shape_keys:
+            unsupported.append(dict(mesh=meshname,reason="shape keys need evaluated geometry decision"))
+        if not len(mesh.polygons):
+            unsupported.append(dict(mesh=meshname,reason="mesh has no renderable faces"))
+        if not baseline or None in baseline:
+            unsupported.append(dict(mesh=meshname,reason="missing material slot",materials=baseline))
+        for n in baseline:
+            if n is not None and n not in materialmap:
+                unsupported.append(dict(mesh=meshname,reason="material absent from material-map",material=n))
+        if any(p.material_index>=len(baseline) for p in mesh.polygons):
+            unsupported.append(dict(mesh=meshname,reason="polygon material index out of range"))
+        plans.append(dict(mesh=meshname,id=safe(meshname),objects=[o.name for o in objects],
+            materials=list(baseline),vertices=len(mesh.vertices),polygons=len(mesh.polygons),
+            uvlayers=[x.name for x in mesh.uv_layers],model="models/kat_spaceport/"+safe(meshname)+".vmdl"))
+    plans, storedframe, depsgraph = evaluated_preflight(plans, groups, materialmap, unsupported)
+    if len({x["id"] for x in plans})!=len(plans): raise RuntimeError("mesh-name hash collision")
+    report=dict(source_sha256=EXPECTED,mesh_objects=sum(map(len,groups.values())),
+        unique_meshes=len(groups),modifiers=dict(modifiers),object_types=dict(alltypes),
+        mesh_hide_render=dict(hidden),unsupported=unsupported,
+        policy="No render modifiers or shape keys silently discarded. Unsupported preflight aborts export.")
+    atomic(ROOT/"geometry-preflight.json",report)
+    atomic(ROOT/"geometry-manifest.json",dict(source_sha256=EXPECTED,settings=json.loads(canonical(SETTINGS)),mesh_scale=MESH_SCALE,stored_frame=storedframe,object_model_overrides="object-model-overrides.json",meshes=plans))
+    event("preflight",unique_meshes=len(groups),unsupported=len(unsupported),modifiers=dict(modifiers))
+    if not args.execute:
+        event("rigged_render_repair_start")
+        exec(compile((ROOT/"render_rigged44_repair.py").read_text(encoding="utf8"),str(ROOT/"render_rigged44_repair.py"),"exec"),{})
+        event("rigged_render_repair_complete")
+        return
+    if unsupported: raise RuntimeError("Unsupported geometry. Read geometry-preflight.json before proceeding")
+    if not args.axis_approval: raise RuntimeError("Explicit axis approval required")
+    gate=json.loads(args.axis_approval.read_text(encoding="utf8"))
+    axiskeys=("global_scale","apply_unit_scale","apply_scale_options","axis_forward","axis_up","use_space_transform","bake_space_transform")
+    if gate.get("approved") is not True or gate.get("settings")!={k:SETTINGS[k] for k in axiskeys}:
+        raise RuntimeError("Axis approval absent or does not match FBX settings")
+    if gate.get("mesh_scale")!=MESH_SCALE: raise RuntimeError("Axis approval mesh_scale mismatch")
+    if gate.get("source_sha256")!=EXPECTED: raise RuntimeError("Axis approval source SHA mismatch")
+    if not gate.get("evidence"): raise RuntimeError("Axis approval must state compiler numeric evidence")
+    settingshash=hashlib.sha256(canonical(dict(source=EXPECTED,settings=SETTINGS,
+        mesh_scale=MESH_SCALE,materials=materialmap,stored_frame=storedframe,evaluated_variants=[(p["id"],p.get("evaluated_signature")) for p in plans],script_sha256=sha(__file__),blender=bpy.app.version_string)).encode()).hexdigest()
+    previous={}
+    status=ROOT/"geometry-status.jsonl"
+    if status.exists():
+        for line in status.read_text(encoding="utf8").splitlines():
+            try: r=json.loads(line)
+            except json.JSONDecodeError: continue # interrupted final append never counts as completion
+            if r.get("event")=="complete" and r.get("settings_sha256")==settingshash:
+                previous[r["id"]]=r
+    # Rename only memory loaded from the original, NEVER save any .blend.
+    originalmats={m.name:m for m in bpy.data.materials}
+    for i,(name,mat) in enumerate(originalmats.items()): mat.name="__kat_temp_"+str(i)
+    for name,mat in originalmats.items():
+        if name in materialmap: mat.name=materialmap[name]
+    OUT.mkdir(parents=True,exist_ok=True)
+    exportscene=bpy.data.scenes.new("__kat_geometry_export")
+    done=0
+    for plan in plans:
+        if args.limit and done>=args.limit: break
+        meshname=plan["mesh"];stem=plan["id"];base=OUT/stem
+        fbx=base.with_suffix(".fbx");mdl=base.with_suffix(".vmdl")
+        old=previous.get(plan["id"])
+        if old and fbx.exists() and mdl.exists() and sha(fbx)==old["fbx_sha256"] and sha(mdl)==old["vmdl_sha256"]:
+            done+=1;event("resume_verified",mesh=meshname,count=done);continue
+        source_mesh=groups[meshname][0].data
+        if plan.get("evaluation"):
+            obj=bpy.data.objects[plan["source_object"]]
+            evaluated=obj.evaluated_get(depsgraph)
+            evaluated_mesh=evaluated.to_mesh(preserve_all_data_layers=True,depsgraph=depsgraph)
+            try:
+                sig=mesh_signature(evaluated_mesh,plan["materials"])
+                if sig!=plan["evaluated_signature"]: raise RuntimeError("Evaluated geometry changed since preflight "+obj.name)
+                mesh=evaluated_mesh.copy()
+            finally: evaluated.to_mesh_clear()
+        else:
+            mesh=source_mesh.copy()
+        source_mesh.name="__kat_source_"+stem
+        mesh.name=meshname
+        mesh.transform(Matrix.Scale(MESH_SCALE,4))
+        mesh.update()
+        temp=bpy.data.objects.new("__kat_export",mesh); exportscene.collection.objects.link(temp)
+        temp.matrix_world=Matrix.Identity(4)
+        temp.select_set(True,view_layer=exportscene.view_layers[0])
+        exportscene.view_layers[0].objects.active=temp
+        partial=fbx.with_name(fbx.stem+".partial.fbx")
+        try:
+            with bpy.context.temp_override(scene=exportscene,view_layer=exportscene.view_layers[0],
+                    object=temp,active_object=temp,selected_objects=[temp],selected_editable_objects=[temp]):
+                result=bpy.ops.export_scene.fbx(filepath=str(partial),**SETTINGS)
+            if "FINISHED" not in result or not partial.exists() or partial.stat().st_size==0:
+                raise RuntimeError("FBX export failed "+meshname)
+            os.replace(partial,fbx)
+            mats=[materialmap[n] for n in plan["materials"]]
+            atomic(mdl,vmdl("models/kat_spaceport/"+stem+".fbx",mats))
+            done+=1
+            event("complete",mesh=meshname,id=stem,count=done,settings_sha256=settingshash,
+                fbx_sha256=sha(fbx),vmdl_sha256=sha(mdl),fbx_bytes=fbx.stat().st_size)
+        finally:
+            bpy.data.objects.remove(temp,do_unlink=True)
+            bpy.data.meshes.remove(mesh)
+            source_mesh.name=meshname
+        if args.limit and done>=args.limit: break
+    atomic(ROOT/"geometry-summary.json",dict(source_sha256=EXPECTED,settings_sha256=settingshash,
+        completed=done,total=len(plans),pilot=bool(args.limit),complete=done==len(plans),
+        source_unchanged=sha(SOURCE)==EXPECTED))
+    event("finished",completed=done,total=len(plans))
+
+try: main()
+except BaseException as exc:
+    event("failed",error=str(exc),traceback=traceback.format_exc())
+    raise

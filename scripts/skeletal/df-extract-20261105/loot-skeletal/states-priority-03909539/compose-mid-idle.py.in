@@ -1,0 +1,27 @@
+from pathlib import Path
+import json,hashlib
+from PIL import Image,ImageDraw,ImageFont
+R=Path('@@DF_PATH_DF_EXTRACT_20261105@@/loot-skeletal/states-priority-03909539/renders-mid-idle-v1')
+m=json.loads((R/'manifest.json').read_text())
+font=lambda n:ImageFont.truetype('@@DF_PATH_WINDOWS@@/Fonts/segoeui.ttf',n)
+outs=[]
+for ids,name,title in [(['548','660'],'df-loot-548-660-mid.png','DF clothing states | midpoint selected for opened'),(['557'],'df-loot-557-open.png','DF Militarybox6 | Blueprint Open_Idle selected for opened')]:
+ w=1920;h=85+len(ids)*652+45;im=Image.new('RGB',(w,h),(22,25,30));d=ImageDraw.Draw(im)
+ d.text((24,18),title,font=font(29),fill=(245,245,245))
+ d.text((24,57),'32 samples | Cycles OptiX | RTX 4070 SUPER | shared camera, lighting and union-bound fit per model',font=font(18),fill=(175,185,195))
+ for ri,id in enumerate(ids):
+  ts=[t for t in m['tiles'] if t['id']==id];assert len(ts)==3
+  assert all(t['unionBounds']==ts[0]['unionBounds'] and t['sharedScale']==ts[0]['sharedScale'] and t['cameraMatrix']==ts[0]['cameraMatrix'] for t in ts)
+  for ci,t in enumerate(ts):
+   x=ci*640;y=85+ri*652
+   d.text((x+16,y+8),t['canonical']+('  jacket' if id=='548' else '  lab coat' if id=='660' else ''),font=font(23),fill=(245,245,245))
+   d.text((x+16,y+39),t['label'],font=font(23),fill=(139,220,168) if t['state']=='opened' else (215,220,225))
+   d.text((x+16,y+71),t['clip'],font=font(18),fill=(180,190,200))
+   d.text((x+16,y+96),'frame '+str(t['frame'])+' / '+str(t['frameCount']-1)+' (zero-based) | '+format(t['seconds'],'.4f')+' s',font=font(18),fill=(180,190,200))
+   tile=Image.open(t['tile']).convert('RGB');assert tile.size==(640,520)
+   im.paste(tile,(x,y+132))
+ d.text((24,h-32),'Source basis and pivots unchanged. DF direct-basecolor preview; full UE layered shader not reconstructed.',font=font(18),fill=(175,185,195))
+ p=R/name;im.save(p);digest=hashlib.sha256(p.read_bytes()).hexdigest()
+ outs.append({'file':str(p),'sha256':digest,'width':w,'height':h,'panels':len(ids)*3})
+(R/'output-receipt.json').write_text(json.dumps(outs,indent=2))
+print(json.dumps(outs))

@@ -1,0 +1,70 @@
+import pathlib,json,struct,importlib.util,numpy as np,hashlib,os,sys,shutil,traceback
+R=pathlib.Path('@@DF_PATH_DF_EXTRACT_20261105@@/loot-skeletal');D=R/'static-paired-v3'
+spec=importlib.util.spec_from_file_location('b',R/'bake-static.py');b=importlib.util.module_from_spec(spec);spec.loader.exec_module(b)
+H=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+def write(g,data,p):
+ jb=json.dumps(g,separators=(',',':')).encode();jb+=b' '*((-len(jb))%4);data+=b'\0'*((-len(data))%4)
+ p.write_bytes(struct.pack('<III',0x46546c67,2,28+len(jb)+len(data))+struct.pack('<II',len(jb),0x4e4f534a)+jb+struct.pack('<II',len(data),0x004e4942)+data)
+def clean(p,state,clip):
+ g,data=b.read(p);parents={c:i for i,n in enumerate(g['nodes']) for c in n.get('children',[])}
+ def W(i):return (W(parents[i]) if i in parents else np.eye(4))@b.local(g['nodes'][i])
+ nodes=[]
+ for i,n in enumerate(g['nodes']):
+  if 'mesh' not in n:continue
+  nn={k:v for k,v in n.items() if k not in ['children','skin','translation','rotation','scale','matrix']}
+  nn['matrix']=W(i).T.reshape(-1).tolist();nodes.append(nn)
+ g['nodes']=nodes;g['scenes']=[dict(nodes=list(range(len(nodes))))];g['scene']=0
+ g.pop('skins',None);g.pop('animations',None);g['extras']=dict(staticState=state,sourceClip=clip,noRuntimeAnimations=True)
+ write(g,data,p)
+ assert not any('skin' in n or 'children' in n for n in g['nodes'])
+ return dict(nodes=len(nodes),bones=0,skins=0,animations=0,sha256=H(p))
+def verts(p):
+ g,data=b.read(p);return np.concatenate([b.acc(g,data,q['attributes']['POSITION']).copy() for m in g['meshes'] for q in m['primitives']])
+def pose(src,x,which,out):
+ assert x['missing']==0 and not x.get('additive')
+ g,data=b.read(src);nodes={n.get('name'):i for i,n in enumerate(g['nodes'])}
+ def conv(p):
+  q=p['rotation'];t=p['translation'];s=p['scale'];return dict(rotation=[q[0],q[2],q[1],-q[3]],translation=[t[0]*.01,t[2]*.01,t[1]*.01],scale=[s[0],s[2],s[1]])
+ maxerr=0
+ for bone in x['bones']:
+  assert bone['name'] in nodes
+  n=g['nodes'][nodes[bone['name']]];maxerr=max(maxerr,float(np.max(np.abs(b.local(n)-b.local(conv(bone['rest']))))))
+ assert maxerr<1e-5
+ for bone in x['bones']:
+  n=g['nodes'][nodes[bone['name']]];n.pop('matrix',None);n.update(conv(bone['frames'][which]))
+ temp=out.with_name(out.stem+'-pose-working.glb');write(g,data,temp)
+ report=b.bake(temp,out);temp.unlink()
+ return report,maxerr
+def main():
+ i=int(sys.argv[1]);O=D/('worker-'+str(i));samples=[json.loads(l) for l in (O/'samples.jsonl').read_text().splitlines()]
+ rows=json.loads((D/'targets.json').read_text())
+ for j,x in enumerate(rows):
+  if j%8!=i:continue
+  dest=D/x['canonical'];work=D/(x['canonical']+'.pending');work.mkdir(exist_ok=True)
+  result=dict(canonical=x['canonical'],mesh=x['mesh'],pid=os.getpid(),status=x['status'])
+  try:
+   if x['status']!='PENDING':raise ValueError('No authored ClosedIdle/OpenedIdle pair. USE/cloth clip alone is not proof of opened state.')
+   a=next(z for z in samples if z['mesh']==x['mesh'] and z['animation']==x['open'])
+   idle=next(z for z in samples if z['mesh']==x['mesh'] and z['animation']==x['idle'])
+   srcs=list((R/'parallel').glob('shard-*/'+x['mesh'][:-7]+'.glb'))+list((R/'pilot').glob(x['mesh'][:-7]+'.glb'));assert len(srcs)==1
+   src=srcs[0];closed=pathlib.Path(x['closed']['report']['output']);assert H(closed)==x['closed']['report']['outputSHA256']
+   shutil.copy2(closed,work/'closed.glb')
+   rep,err=pose(src,a,-1,work/'opened.glb')
+   pose(src,idle,0,work/'idle-validation.glb')
+   op=verts(work/'opened.glb');cl=verts(work/'closed.glb');iv=verts(work/'idle-validation.glb')
+   delta=np.linalg.norm(op-cl,axis=1);res=np.linalg.norm(op-iv,axis=1)
+   result.update(closedReusedSHA256=H(closed),meshSourceSHA256=H(src),skeletonBindSHA256=hashlib.sha256(json.dumps([dict(name=q['name'],parent=q['parent'],rest=q['rest']) for q in a['bones']],sort_keys=True).encode()).hexdigest(),sourceOpen=x['open'],sourceIdle=x['idle'],semanticEvidence=x['semanticEvidence'],frame=a['frames']-1,frameTime=(a['frames']-1)/a['fps'],duration=a['duration'],fps=a['fps'],restMatrixMaxError=err,vertexCount=len(delta),changedVertices=int((delta>1e-6).sum()),maxDisplacementMeters=float(delta.max()),openIdleMaxResidualMeters=float(res.max()),closedBounds=[cl.min(0).tolist(),cl.max(0).tolist()],openedBounds=[op.min(0).tolist(),op.max(0).tolist()],bake=rep)
+   assert delta.max()>1e-6,'identical closed/opened needs investigation'
+   assert res.max()<.002,'OPEN final differs from authored OpenedIdle'
+   result['closed']=clean(work/'closed.glb','CLOSED',x['closed']['animation']);result['opened']=clean(work/'opened.glb','OPENED',x['open'])
+   (work/'idle-validation.glb').unlink();result['status']='PAIR_STATIC_VERIFIED'
+  except Exception as e:result['status']='BLOCKED';result['reason']=str(e);result['traceback']=traceback.format_exc()
+  (work/'state-manifest.json').write_text(json.dumps(result,indent=2))
+  if result['status']=='PAIR_STATIC_VERIFIED':work.rename(dest)
+  else:
+   block=D/(x['canonical']+'.blocked');work.rename(block)
+ (O/'bake-completed.json').write_text(json.dumps(dict(pid=os.getpid())))
+if __name__=='__main__':main()
+
+import subprocess
+subprocess.run([sys.executable,str(D/'aggregate.py')],check=True)

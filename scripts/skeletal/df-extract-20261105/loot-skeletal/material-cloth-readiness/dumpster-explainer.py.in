@@ -1,0 +1,75 @@
+
+import json,numpy as np,pathlib
+from PIL import Image
+R=pathlib.Path(r'@@DF_PATH_DF_EXTRACT_20261105@@/loot-skeletal/material-cloth-readiness')
+O=R/'dumpster-explainer';O.mkdir(exist_ok=True)
+rp=json.loads((R/'dumpster-shader-v2/resolved-parameters.json').read_text())
+N=1024
+def load(path,tile=1):
+    im=Image.open('\\\\?\\'+path).convert('RGBA')
+    s=N//tile if tile>1 else N
+    s=max(s,256)
+    a=np.asarray(im.resize((s,s),Image.LANCZOS)).astype(np.float32)/255
+    if tile>1:
+        a=np.tile(a,(tile,tile,1))
+        a=np.asarray(Image.fromarray((a*255).astype(np.uint8)).resize((N,N),Image.LANCZOS)).astype(np.float32)/255
+    return a
+def lin(c):return np.where(c<=.04045,c/12.92,((c+.055)/1.055)**2.4)
+def srgb(c):
+    c=np.clip(c,0,1);return np.where(c<=.0031308,c*12.92,1.055*c**(1/2.4)-.055)
+def save(name,a,isLinear=True):
+    a=srgb(a) if isLinear else np.clip(a,0,1)
+    Image.fromarray((a*255+.5).astype(np.uint8)).save(O/(name+'.png'))
+def sat(x):return np.clip(x,0,1)
+for src in rp:
+    s=src['slot'];p=src['parameters'];T=src['textures'];B=s==1;pre=f's{s}-'
+    t1=int(p['Texcoord_01_R']);t2=int(p['Texcoord_02_G'])
+    c1=load(T['01_R_Base'],t1);c2=load(T['02_G_Base'],t2)
+    mask=load(T['BlendMask'])[...,:3]
+    save(pre+'in-layer1-basecolor',lin(c1[...,:3]));save(pre+'in-layer2-basecolor',lin(c2[...,:3]))
+    save(pre+'in-mask',mask,False)
+    for i,ch in enumerate('RGB'):
+        save(pre+'in-mask-'+ch,np.repeat(mask[...,i:i+1],3,2),False)
+    h=c1[...,3]*p['Heightblend Base Scale']-c2[...,3]*p['Heightblend Cover Scale']
+    bias=(p['Heightblend Base Scale']-p['Heightblend Cover Scale']-1)*.5+p['Heightblend Offset']
+    adj=[]
+    for i in range(3):
+        o=p['HeightBlend Origin'] if i==0 else p['HeightBlend Origin_TintColor']
+        m=mask[...,i];v=(m+h+bias)*p['Heightblend Hardness'];adj.append(sat(v*(1-o)+m*o))
+    w=1-adj[0]
+    save(pre+'mask-adjusted-R-layer2weight',np.repeat(w[...,None],3,2),False)
+    save(pre+'mask-adjusted-G-tint1',np.repeat(adj[1][...,None],3,2),False)
+    save(pre+'mask-adjusted-B-tint2',np.repeat(adj[2][...,None],3,2),False)
+    L1=lin(c1[...,:3])*np.array(p['BaseColorScaler_01_R'][:3]);L2=lin(c2[...,:3])*np.array(p['BaseColorScaler_02_G'][:3])
+    save(pre+'step1-layers-blended',L1+(L2-L1)*w[...,None])
+    c=L1+(L2-L1)*w[...,None]
+    t1c=np.array(p['Layer01Tint'][:3]);t2c=np.array(p['Layer02Tint'][:3])
+    a1=(adj[1]*p['Layer01Tint'][3])[...,None];a2=(adj[2]*p['Layer02Tint'][3])[...,None]
+    c=c+(t1c-c)*a1;c=c+(t2c-c)*a2
+    save(pre+'step2-tinted-by-mask',c)
+    if B:
+        ov=load(T['Overlay_ColorMap'],1)
+        save(pre+'in-overlay-color',lin(ov[...,:3]));save(pre+'in-overlay-alpha',np.repeat(ov[...,3:4],3,2),False)
+        ovl=lin(ov[...,:3])
+        c=c*(ovl+(.5-ovl)*p['Overlay_Opcaity'])*2
+        save(pre+'step3-overlay-applied',c)
+    save(pre+'final-color',c)
+    m1=load(T['01_R_MRA'],t1);m2=load(T['02_G_MRA'],t2)
+    mra=m1+(m2-m1)*w[...,None]
+    rough=mra[...,1]+(p['Layer01Roughness']-mra[...,1])*adj[1];rough=rough+(p['Layer02Roughness']-rough)*adj[2]
+    if B:
+        oa=ov[...,3];low=oa*rough*2;high=1-(1-oa)*2*(1-rough);ge=(oa>.49999999)
+        rough=rough+(np.where(ge,high,low)-rough)*p['OverlayUseRoughness']
+    save(pre+'final-roughness',np.repeat(sat(rough)[...,None],3,2),False)
+    nm=load(T['NormalMap']);save(pre+'in-normal',nm[...,:3],False)
+    dn=load(T['DetailNormal'],1);save(pre+'in-detailnormal',dn[...,:3],False)
+for s in (2,3,4):
+    d=R/'dumpster-shader-v3'
+    for k in ('BaseColorMap','Metalic_Roughness_Alpha_Map'):
+        f=d/f'slot{s}-{k}.png'
+        if f.exists():
+            a=np.asarray(Image.open(f).convert('RGBA').resize((512,512))).astype(np.float32)/255
+            Image.fromarray((a[...,:3]*255).astype(np.uint8)).save(O/f'd{s}-{k}-rgb.png')
+            Image.fromarray((a[...,3]*255).astype(np.uint8)).save(O/f'd{s}-{k}-alpha.png')
+            if k.startswith('Metalic'):Image.fromarray((a[...,2]*255).astype(np.uint8)).save(O/f'd{s}-mrc-B.png')
+print('DONE')

@@ -1,0 +1,13 @@
+import json,re
+from pathlib import Path
+r=Path(r'@@DF_PATH_DF_EXTRACT_20261105@@')
+rows=[json.loads(l) for l in (r/'index-manifest.jsonl').open()]
+patterns=['MI_H_Industrial_Container_SupplyBox_01','MI_H_Industrial_Container_SupplyBox_02','MI_Window_BrokenGlass_01_HD','MI_Branding_08','MI_DECOR_BuxusBranch_01_Leaf_HD','MI_GEN_Grass_Base_01_HD','SM_I_RoadFacility_Ground_A_12.uasset']
+out=[]
+for p in patterns:
+ m=[x for x in rows if p.lower() in x['path'].lower()]
+ for x in m[:4]: out.append(x); print(x['path'],Path(x['pak']).name)
+water=[x for x in rows if re.search('SpaceCenter',x['path'],re.I) and re.search('Water|Ocean',x['path'],re.I)]
+for x in water[:30]: print(x['path'],Path(x['pak']).name)
+out+= [x for x in water if '/00_Materials/' in x['path'] or '/Materials' in x['path']][:3]
+(r/'materials-selected.json').write_text(json.dumps(out,indent=2))

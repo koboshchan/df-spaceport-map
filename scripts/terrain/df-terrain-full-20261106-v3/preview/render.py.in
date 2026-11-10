@@ -1,0 +1,43 @@
+import bpy,json,math,time,os
+from pathlib import Path
+from mathutils import Vector
+P=Path(__file__).parent
+man=json.loads((P/'manifest.json').read_text())
+bpy.ops.wm.read_factory_settings(use_empty=True)
+sc=bpy.context.scene;sc.render.engine='CYCLES';sc.cycles.samples=32;sc.cycles.use_denoising=True
+pref=bpy.context.preferences.addons['cycles'].preferences;pref.compute_device_type='OPTIX';pref.get_devices()
+dev=[]
+for d in pref.devices:
+ d.use=d.type=='OPTIX';dev.append(dict(name=d.name,type=d.type,use=d.use))
+assert any(d['use'] and '4070' in d['name'] for d in dev),dev
+sc.cycles.device='GPU';sc.render.resolution_x=900;sc.render.resolution_y=650;sc.render.resolution_percentage=100
+sc.world=bpy.data.worlds.new('neutral');sc.world.use_nodes=True;sc.world.node_tree.nodes['Background'].inputs[0].default_value=(.13,.16,.2,1);sc.world.node_tree.nodes['Background'].inputs[1].default_value=.65
+sc.view_settings.view_transform='AgX';sc.render.image_settings.file_format='PNG';sc.render.film_transparent=False
+def mat(name,color):
+ m=bpy.data.materials.new(name);m.diffuse_color=(*color,1);m.use_nodes=True;m.node_tree.nodes['Principled BSDF'].inputs['Base Color'].default_value=(*color,1);m.node_tree.nodes['Principled BSDF'].inputs['Roughness'].default_value=.85;return m
+mats={'CDLOD-derived':mat('coarse CDLOD ochre',(.58,.29,.075)),'collision':mat('exact collision cyan',(.055,.4,.49))}
+def parse(path):
+ vs=[];fs=[]
+ for l in path.read_text().splitlines():
+  t=l.split()
+  if t and t[0]=='v':vs.append([float(v) for v in t[1:]])
+  if t and t[0]=='f':fs.append([int(v)-1 for v in t[1:]])
+ return vs,fs
+camd=bpy.data.cameras.new('orthographic');cam=bpy.data.objects.new('camera',camd);sc.collection.objects.link(cam);sc.camera=cam;camd.type='ORTHO';camd.clip_end=100000
+sunD=bpy.data.lights.new('sun','SUN');sunD.energy=3.;sunD.angle=.15;sun=bpy.data.objects.new('sun',sunD);sc.collection.objects.link(sun);sun.rotation_euler=(.5,-.4,-.45)
+results=[]
+for panel in man['panels']:
+ objs=[];allv=[]
+ for rec in panel['meshes']:
+  vs,fs=parse(P/rec['path']);allv+=vs;me=bpy.data.meshes.new(rec['name']);me.from_pydata(vs,[],fs);me.update();ob=bpy.data.objects.new(rec['name'],me);sc.collection.objects.link(ob);ob.data.materials.append(mats[rec['kind']]);objs.append(ob)
+ mins=Vector([min(v[a] for v in allv) for a in range(3)]);maxs=Vector([max(v[a] for v in allv) for a in range(3)]);center=(mins+maxs)/2
+ # Work near origin for numerical stability, no scale changes or height exaggeration.
+ for ob in objs:ob.location=-center
+ extent=max(maxs.x-mins.x,maxs.y-mins.y);camd.ortho_scale=extent*1.33
+ for view,direction in [('top',(0,0,1)),('threequarter',(1,-1,1.15))]:
+  cam.location=Vector(direction).normalized()*extent*3;cam.rotation_euler=(-cam.location).to_track_quat('-Z','Y').to_euler()
+  if view=='threequarter':camd.ortho_scale=extent*1.45
+  out=P/f"{panel['number']}-{view}.png";sc.render.filepath=str(out);bpy.ops.render.render(write_still=True);results.append(str(out))
+ for ob in objs:bpy.data.objects.remove(ob,do_unlink=True)
+ (P/'render-progress.json').write_text(json.dumps(dict(completed=results,devices=dev,pid=os.getpid())))
+(P/'render-done.json').write_text(json.dumps(dict(completed=results,devices=dev,samples=32,pid=os.getpid())))

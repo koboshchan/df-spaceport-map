@@ -1,0 +1,10 @@
+import subprocess,json,os
+from pathlib import Path
+p=Path(__file__).parent
+os.chdir(p)
+with open('build.log','w') as f:
+ r=subprocess.run(['dotnet','build','Probe.csproj','-c','Release','--ignore-failed-sources'],stdout=f,stderr=subprocess.STDOUT)
+if r.returncode: raise SystemExit(r.returncode)
+with open('run.log','w') as f,open('run.err','w') as e:
+ r=subprocess.run(['dotnet','bin/Release/net10.0/Probe.dll'],stdout=f,stderr=e)
+(p/'worker-done.json').write_text(json.dumps({'exit':r.returncode}))

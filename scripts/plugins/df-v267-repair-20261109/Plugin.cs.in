@@ -1,0 +1,60 @@
+using System.Text.Json;
+using CounterStrikeSharp.API;
+using CounterStrikeSharp.API.Core;
+using CounterStrikeSharp.API.Modules.Cvars;
+using CounterStrikeSharp.API.Modules.Utils;
+
+public sealed class Plugin : BasePlugin {
+ public override string ModuleName => "PrivateDefaultSpawn";
+ public override string ModuleVersion => "1.0.0";
+ public override string ModuleAuthor => "koboshchan";
+ bool stopped;
+ int epoch, spawnMoves;
+ static bool PrivateProcess() {
+  var a=File.ReadAllText("/proc/1/cmdline").Split('\0');
+  var i=Array.IndexOf(a,"-port");
+  return a.Contains("-dedicated") && i>=0 && i+1<a.Length && a[i+1]=="27016";
+ }
+ static bool PrivatePort()=>PrivateProcess() && ConVar.Find("hostport")?.GetPrimitiveValue<int>()==27016;
+ bool Allowed()=>!stopped && PrivatePort() && Server.MapName.StartsWith("df_spaceport_",StringComparison.Ordinal);
+ static bool Eligible(CCSPlayerController? p)=>p!=null && p.IsValid && !p.IsBot && p.TeamNum is 2 or 3 && p.PawnIsAlive && p.PlayerPawn.Value is {IsValid:true};
+ static float[]? Pos(CCSPlayerController p) {var v=p.PlayerPawn.Value?.AbsOrigin;return v==null?null:new[]{v.X,v.Y,v.Z};}
+ static float[]? Eyes(CCSPlayerController p) {var v=p.PlayerPawn.Value?.EyeAngles;return v==null?null:new[]{v.X,v.Y,v.Z};}
+ string Move(CCSPlayerController p,string reason) {
+  if(!Allowed()||!Eligible(p))return "REFUSED";
+  var pawn=p.PlayerPawn.Value!;
+  pawn.Teleport(new Vector(-157.356323f,-1745.425659f,1383.517090f),new QAngle(8.740025f,97.000641f,0f),new Vector(0,0,0));
+  if(reason=="spawn")spawnMoves++;
+  var result=JsonSerializer.Serialize(new{utc=DateTime.UtcNow,reason,map=Server.MapName,p.Slot,position=Pos(p),eyes=Eyes(p),spawnMoves});
+  Console.WriteLine("[PrivateDefaultSpawn] "+result);
+  return result;
+ }
+ public override void Load(bool hotReload) {
+  if(!PrivateProcess())throw new InvalidOperationException("Private 27016 only");
+  stopped=false;
+  RegisterListener<Listeners.OnMapStart>(_=>epoch++);
+  RegisterListener<Listeners.OnMapEnd>(()=>epoch++);
+  RegisterEventHandler<EventPlayerSpawn>((e,_)=>{
+   var p=e.Userid;
+   if(!Allowed()||!Eligible(p))return HookResult.Continue;
+   var generation=epoch;var map=Server.MapName;var serial=p!.PlayerPawn.Raw;var controller=p.Handle;
+   Server.NextFrame(()=>{
+    if(generation!=epoch||map!=Server.MapName||!Allowed()||!Eligible(p)||p.Handle!=controller||p.PlayerPawn.Raw!=serial)return;
+    Move(p,"spawn");
+   });
+   return HookResult.Continue;
+  });
+  AddCommand("css_defaultspawn_read","Read fixed private default spawn",(p,c)=>{
+   if(p!=null||!Allowed())return;
+   c.ReplyToCommand(JsonSerializer.Serialize(new{map=Server.MapName,hostport=ConVar.Find("hostport")?.GetPrimitiveValue<int>(),cqEnable=ConVar.Find("cq_enable")?.StringValue,target=new[]{-157.356323f,-1745.425659f,1383.517090f},angles=new[]{8.740025f,97.000641f,0f},spawnMoves,players=Utilities.GetPlayers().Where(x=>x.IsValid).Select(x=>new{x.Slot,x.TeamNum,x.PawnIsAlive,position=Pos(x),eyes=Eyes(x)}),
+    T=Utilities.FindAllEntitiesByDesignerName<SpawnPoint>("info_player_terrorist").Where(x=>x.IsValid).Select(x=>new{x.Index,x.Enabled,x.Priority,pos=x.AbsOrigin==null?null:new[]{x.AbsOrigin.X,x.AbsOrigin.Y,x.AbsOrigin.Z}}),
+    CT=Utilities.FindAllEntitiesByDesignerName<SpawnPoint>("info_player_counterterrorist").Where(x=>x.IsValid).Select(x=>new{x.Index,x.Enabled,x.Priority,pos=x.AbsOrigin==null?null:new[]{x.AbsOrigin.X,x.AbsOrigin.Y,x.AbsOrigin.Z}})}));
+  });
+  AddCommand("css_defaultspawn_apply","Move one alive private player to fixed default",(p,c)=>{
+   if(p!=null||!Allowed()||c.ArgCount!=2||!int.TryParse(c.GetArg(1),out var slot)||slot<0||slot>=64)return;
+   var target=Utilities.GetPlayerFromSlot(slot); if(!Eligible(target)){c.ReplyToCommand("REFUSED not alive");return;}
+   c.ReplyToCommand(Move(target!,"requested-position"));
+  });
+ }
+ public override void Unload(bool hotReload){stopped=true;epoch++;}
+}

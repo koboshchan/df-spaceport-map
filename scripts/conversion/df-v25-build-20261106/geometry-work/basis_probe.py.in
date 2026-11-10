@@ -1,0 +1,24 @@
+import bpy,json,struct,math
+from pathlib import Path
+R=Path('@@DF_PATH_DF_V24_BUILD_20261106@@');W=R/'geometry-work'
+x=json.loads((W/'m_783746f82026f9b1.json').read_text(encoding='utf8'))
+raw=Path(x['source']).read_bytes();n=struct.unpack_from('<I',raw,12)[0];j=json.loads(raw[20:20+n]);offset=28+n
+pts=[]
+for me in j['meshes']:
+ for pr in me['primitives']:
+  a=j['accessors'][pr['attributes']['POSITION']];v=j['bufferViews'][a['bufferView']]
+  for i in range(a['count']):pts.append(struct.unpack_from('<fff',raw,offset+v.get('byteOffset',0)+a.get('byteOffset',0)+i*v.get('byteStride',12)))
+bpy.ops.object.select_all(action='SELECT');bpy.ops.object.delete(use_global=False)
+bpy.ops.import_scene.fbx(filepath=str(R/'content/kat/models/df_v24/m_783746f82026f9b1.fbx'),use_anim=False)
+fb=[list(v.co) for ob in bpy.context.scene.objects if ob.type=='MESH' for v in ob.data.vertices]
+world=[list(ob.matrix_world@v.co) for ob in bpy.context.scene.objects if ob.type=='MESH' for v in ob.data.vertices]
+native=json.loads((W/'dock-native-vertices.json').read_text())
+def err(a,b):
+ return max(min(math.dist(x,y) for y in b) for x in a)
+expected=[[p[0]*36,-p[2]*36,p[1]*36] for p in pts]
+rawbasis=[[p[0]*36,p[1]*36,p[2]*36] for p in pts]
+result={'sourceRawGLBCount':len(pts),'FBXCount':len(fb),'nativeCount':len(native),'rawToFBXLocalExpectedDiagUE':err(expected,fb),'FBXLocalToNative':err(fb,native),'FBXWorldToNative':err(world,native),'rawGLBx36ToNative':err(rawbasis,native),'rawGLBExpectedXnegZYToNative':err(expected,native),'samples':[]}
+for i in [0,17,111,333]:
+ p=pts[i];e=expected[i];f=min(fb,key=lambda q:math.dist(e,q));n=min(native,key=lambda q:math.dist(e,q))
+ result['samples'].append({'rawGLB':p,'expectedLocal':[p[0]*36,-p[2]*36,p[1]*36],'FBXLocal':f,'native':n})
+(W/'dock-basis-empirical.json').write_text(json.dumps(result,indent=2),encoding='utf8');print(json.dumps(result))

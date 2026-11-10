@@ -1,0 +1,21 @@
+from PIL import Image,ImageDraw,ImageFont
+import json,pathlib
+P=pathlib.Path(__file__).parent/'preview';O=pathlib.Path('@@DF_SANDBOX_HOME@@/out/terrain-preview');O.mkdir(parents=True,exist_ok=True)
+m=json.loads((P/'manifest.json').read_text());f='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
+font=ImageFont.truetype(f,27);big=ImageFont.truetype(f,42);small=ImageFont.truetype(f,21)
+im=Image.new('RGB',(2700,3240),(20,25,32));d=ImageDraw.Draw(im)
+d.text((40,24),'SPACE CENTER  /  actual CDLOD terrain previews',font=big,fill='white')
+d.text((40,84),'Ochre = CDLOD-derived 800 cm grid    Cyan = neighboring original collision 100 cm grid',font=font,fill=(215,221,228))
+d.text((40,124),'Top-down above, three-quarter below. No height exaggeration. Neutral shading, not game materials.',font=small,fill=(180,188,200))
+for i,p in enumerate(m['panels']):
+ col=i%3;row=i//3;xx=col*900;yy=190+row*1440
+ d.text((xx+20,yy),f"{i+1}  {p['meshes'][0]['name'].replace('LandscapeCollision_','')}",font=font,fill=(241,187,109))
+ for k,view in enumerate(['top','threequarter']):
+  tile=Image.open(P/f'{i+1}-{view}.png').convert('RGB');im.paste(tile,(xx,yy+48+k*650))
+ d.text((xx+20,yy+1358),'neighbor '+p['meshes'][1]['name'].replace('LandscapeCollision_',''),font=small,fill=(95,201,219))
+d.text((40,3132),'Calibration at shared XY vertices agrees below collision quantization, held-out max 0.114 CS units.',font=font,fill='white')
+d.text((40,3178),'Coarse interpolation is NOT exact. Fine holes, seams and props/road grounding are not yet certified.',font=small,fill=(241,187,109))
+im.save(O/'terrain-contact-sheet.png')
+Image.open(P/'overview.png').save(O/'terrain-overview.png')
+(O/'calibration.json').write_bytes((P.parent/'calibration.json').read_bytes());(O/'manifest.json').write_bytes((P/'manifest.json').read_bytes())
+print(O)

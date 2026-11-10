@@ -1,0 +1,35 @@
+import json,pathlib,hashlib
+o=pathlib.Path('@@DF_PATH_DF_TERRAIN_GENERAL_20261106_V2@@')
+checks=[]
+for tag in ['X1043','X1004']:
+ old=json.loads(pathlib.Path('@@DF_PATH_DF_LANDSCAPE_PLAN_20261106@@/bounded-v3/grid-'+tag+'.json').read_text())
+ files=list((o/'decoded').glob('*'+tag+'*.json'))
+ assert len(files)==1
+ new=json.loads(files[0].read_text())[0]
+ assert new['rows']==old['rows'] and new['cols']==old['cols'] and new['samples']==old['samples']
+ assert new['sampleOffset']==old['sampleCollectionOffset']
+ checks.append({'tile':tag,'vertices':len(new['samples']),'allSamplesAndMaterialBytesExact':True})
+# Positive and negative varying dimensions exercise layout contract with synthetic fixtures, not real tile claims.
+import struct
+def find(b):
+ rows,cols=struct.unpack_from('<ii',b,312);count=struct.unpack_from('<i',b,364)[0]
+ assert rows>=2 and cols>=2 and rows*cols==count and count<=len(b)//4
+ lo,hi=struct.unpack_from('<ff',b,368)
+ hits=[]
+ for off in range(376,len(b)-count*4+1,4):
+  h=[struct.unpack_from('<h',b,off+i*4)[0] for i in range(count)]
+  if min(h)==lo and max(h)==hi and all(lo<=x<=hi for x in h):hits.append(off)
+ assert len(hits)==1
+ return hits[0]
+for rows,cols in [(2,3),(5,7),(127,127)]:
+ b=bytearray(b'\xff'*848)
+ struct.pack_into('<ii',b,312,rows,cols);struct.pack_into('<i',b,364,rows*cols);struct.pack_into('<ff',b,368,2,9)
+ h=[2]+[5]*(rows*cols-2)+[9]
+ for v in h:b+=struct.pack('<hBB',v,0,0)
+ b+=bytes(33)
+ assert find(b)==848
+ bad=bytearray(b);struct.pack_into('<i',bad,364,rows*cols+1)
+ try:find(bad);raise RuntimeError('accepted corrupt count')
+ except AssertionError:pass
+json.dump({'pass':True,'authenticFixtures':checks,'varyingDimensionFixtures':'synthetic layout only','frameValidated':False},open(o/'fixtures-PASS.json','w'),indent=2)
+print('fixtures PASS',checks)

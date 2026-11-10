@@ -1,0 +1,49 @@
+using CUE4Parse.FileProvider;
+using CUE4Parse.UE4.Versions;
+using CUE4Parse.Encryption.Aes;
+using CUE4Parse.Compression;
+using CUE4Parse.UE4.Assets;
+using CUE4Parse.UE4.Assets.Exports.StaticMesh;
+using CUE4Parse.UE4.Assets.Exports.Texture;
+using System.Text.Json;
+using System.Security.Cryptography;
+using Serilog;
+Log.Logger=new LoggerConfiguration().MinimumLevel.Error().WriteTo.Console().CreateLogger();
+var root=@"@@DF_PATH_DF_EXTRACT_20261105@@"; var dest=@"@@DF_PATH_DF_FOLIAGE_20261108@@/inventory";
+File.WriteAllText(dest+"/worker.pid",Environment.ProcessId.ToString());
+void Json(string n,object o)=>File.WriteAllText(dest+"/"+n,JsonSerializer.Serialize(o,new JsonSerializerOptions{IncludeFields=true,WriteIndented=true}));
+OodleHelper.Initialize(root+"/tools/oodle-data-shared.dll");
+using var kj=JsonDocument.Parse(File.ReadAllText(root+"/community-aes-keys.json"));
+var keys=kj.RootElement.GetProperty("Keys").EnumerateArray().GroupBy(x=>x.GetProperty("guid").GetString()).Select(g=>g.First()).ToDictionary(x=>x.GetProperty("guid").GetString()!.Replace("-","").ToUpperInvariant(),x=>x.GetProperty("key").GetString()!);
+keys["00000000000000000000000000000000"]=kj.RootElement.GetProperty("MainKey").GetString()!;
+using var p=new StreamedFileProvider("DeltaForce",new VersionContainer(EGame.GAME_DeltaForce),StringComparer.OrdinalIgnoreCase);p.Initialize();
+foreach(var pak in File.ReadAllLines(root+"/pak-paths.txt"))p.RegisterVfs(pak.Trim());
+foreach(var r in p.UnloadedVfs.ToArray())if(keys.TryGetValue(r.EncryptionKeyGuid.ToString().Replace("-","").ToUpperInvariant(),out var key))p.SubmitKey(r.EncryptionKeyGuid,new FAesKey(key));
+Json("mounted.json",new{files=p.Files.Count,remaining=p.UnloadedVfs.Count(),utc=DateTime.UtcNow});
+var input=JsonDocument.Parse(File.ReadAllText(dest+"/probe-inputs.json")).RootElement.EnumerateArray().Select(x=>x.GetString()!).ToArray();
+long hashed=0;
+foreach(var path in input){
+ var label=Convert.ToHexString(SHA256.HashData(System.Text.Encoding.UTF8.GetBytes(path)))[..12];
+ try{
+ var files=new List<object>();
+ foreach(var ext in new[]{".uasset",".uexp",".ubulk"}){
+ var fp=Path.ChangeExtension(path,ext).Replace('\\','/'); if(!p.Files.TryGetValue(fp,out var f))continue;
+ if(f.Size>256_000_000 || hashed+f.Size>2_000_000_000){files.Add(new{path=fp,bytes=f.Size,sha256=(string?)null,status="bounded hash budget",archive=(f as CUE4Parse.UE4.VirtualFileSystem.VfsEntry)?.Vfs.Path});continue;}
+ var b=f.Read();hashed+=b.Length;files.Add(new{path=fp,bytes=b.Length,sha256=Convert.ToHexString(SHA256.HashData(b)),archive=(f as CUE4Parse.UE4.VirtualFileSystem.VfsEntry)?.Vfs.Path});
+ }
+ if(File.Exists(dest+"/hash-only-paths.json") && JsonDocument.Parse(File.ReadAllText(dest+"/hash-only-paths.json")).RootElement.EnumerateArray().Any(x=>x.GetString()==path)){Json(label+".json",new{path,files,results=Array.Empty<object>()});continue;}
+ var pkg=p.LoadPackage(path) as Package ?? throw new Exception("not Package");
+ var results=new List<object>();
+ foreach(var lazy in pkg.ExportsLazy){
+ var o=lazy.Value;
+ if(o is UStaticMesh m){
+ var lods=m.RenderData?.LODs.Select((l,i)=>new{lod=i,skip=l.SkipLod,vertices=l.NumVertices,positionVertices=l.PositionVertexBuffer?.NumVertices,positionStride=l.PositionVertexBuffer?.Stride,uvChannels=l.VertexBuffer?.NumTexCoords,vertexStride=l.VertexBuffer?.Strides,fullPrecisionUV=l.VertexBuffer?.UseFullPrecisionUVs,highPrecisionTangents=l.VertexBuffer?.UseHighPrecisionTangentBasis,indices=l.IndexBuffer?.Length,triangles=l.Sections.Sum(s=>s.NumTriangles),sections=l.Sections.Select(s=>new{s.MaterialIndex,s.FirstIndex,s.NumTriangles,s.MinVertexIndex,s.MaxVertexIndex,s.bCastShadow,s.bEnableCollision,s.bForceOpaque,s.bVisibleInRayTracing,s.bAffectDistanceFieldLighting}).ToArray(),auxiliaryIndices=new{reversed=l.ReversedIndexBuffer?.Length,depth=l.DepthOnlyIndexBuffer?.Length,reversedDepth=l.ReversedDepthOnlyIndexBuffer?.Length,wireframe=l.WireframeIndexBuffer?.Length,adjacency=l.AdjacencyIndexBuffer?.Length}}).ToArray();
+ results.Add(new{kind="mesh",o.Name,lods,screenSize=m.RenderData?.ScreenSize,properties=JsonDocument.Parse(Newtonsoft.Json.Linq.JObject.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(o))["Properties"]?.ToString() ?? "null").RootElement.Clone(),materials=JsonDocument.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(m.StaticMaterials)).RootElement.Clone()});
+ } else if(o is UTexture2D t){
+ var d=t.PlatformData;results.Add(new{kind="texture",o.Name,width=d.SizeX,height=d.SizeY,pixelFormat=d.PixelFormat,firstMip=d.FirstMipToSerialize,virtualTexture=d.VTData!=null,mips=d.Mips.Select((v,i)=>new{mip=i,v.SizeX,v.SizeY,v.SizeZ}).ToArray(),t.SRGB,t.CompressionSettings,properties=JsonDocument.Parse(Newtonsoft.Json.Linq.JObject.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(o))["Properties"]?.ToString() ?? "null").RootElement.Clone()});
+ } else {results.Add(new{kind="other",o.Name,className=o.ExportType,properties=JsonDocument.Parse(Newtonsoft.Json.Linq.JObject.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(o))["Properties"]?.ToString() ?? "null").RootElement.Clone()});}
+ }
+ Json(label+".json",new{path,files,results});Console.WriteLine(path);
+ }catch(Exception e){Json(label+".json",new{path,error=e.ToString()});}
+}
+Json("completed.json",new{inputs=input.Length,hashed,utc=DateTime.UtcNow});

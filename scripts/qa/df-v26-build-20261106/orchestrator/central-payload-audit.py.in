@@ -1,0 +1,41 @@
+import pathlib,sys,json,os,subprocess,hashlib,datetime,traceback,re
+S=pathlib.Path('@@DF_PATH_DF_V26_BUILD_20261106@@/central-stage-17052918');Q=S/'packqa';A=Q/'payload-audit';A.mkdir(exist_ok=True);sys.stdout=(A/'worker.log').open('w',buffering=1);sys.stderr=sys.stdout
+def save(n,x):(A/n).write_text(json.dumps(x,indent=2))
+def sha(b):return hashlib.sha256(b).hexdigest()
+save('process.json',{'pid':os.getpid(),'stage':'compiled payload verification','UTC':datetime.datetime.now(datetime.timezone.utc).isoformat()})
+try:
+ sys.path.insert(0,'@@DF_PATH_SPACEPORT_KAT_REBUILD_20261105@@');from next_partition_lib import blocks,refs
+ from srctools.vpk import VPK
+ parent=VPK(S/'ready/maps/df_spaceport_v26.vpk');pn=set(parent.filenames());fail=[];checked=[]
+ # Verify all staged custom compiled payloads byte-for-byte against parent package.
+ for folder in ['models/df_terrain_v3','models/df_v24']:
+  for p in (S/'game/kat'/folder).glob('*_c'):
+   n=p.relative_to(S/'game/kat').as_posix()
+   if n not in pn:fail.append({'missingPacked':n});continue
+   if sha(p.read_bytes())!=sha(parent[n].read()):fail.append({'payloadMismatch':n})
+   checked.append(n)
+ totals=0;fixture=[];logs=[]
+ for p in sorted((S/'ready/maps').glob('*.vpk')):
+  v=VPK(p)
+  for n in v.filenames():
+   if n.endswith('.vents_c'):
+    dst=A/(p.stem+'-'+pathlib.Path(n).name);dst.write_bytes(v[n].read())
+    q=subprocess.run(['dotnet','@@DF_PATH_SPACEPORT_KAT_REBUILD_20261105@@/partition-full/phys-reader/bin/Release/net10.0/Reader.dll','--entities',str(dst)],capture_output=True,text=True);assert q.returncode==0,q.stderr
+    (dst.with_suffix('.txt')).write_text(q.stdout)
+    count=len(re.findall(r'classname\s+"trigger_hurt"',q.stdout));totals+=count
+    fixture.append({'package':p.name,'entityLump':n,'triggerHurtCount':count})
+  log=S/'fullcompile'/(p.stem+'.log');text=log.read_text(errors='replace');logs.extend([{'log':str(log),'line':x}for x in text.splitlines()if re.search('visib|visibility|vvis|shallow',x,re.I)])
+ save('water-compiled-count.json',{'total':totals,'expected':1848,'pass':totals==1848,'lumps':fixture})
+ if totals!=1848:fail.append({'compiledWaterCount':totals,'expected':1848})
+ # Compare known previous functional packages for the same unresolved optional VIS references.
+ historical=[]
+ for p in pathlib.Path('@@DF_PATH_DF_V25_BUILD_20261106@@/ready/maps').glob('*.vpk'):
+  v=VPK(p);names=set(v.filenames());visrefs=set()
+  for n in names:
+   if n.endswith('_c'):
+    for ref in refs(v[n].read()):
+     if ref.endswith('world_visibility.vvis'):visrefs.add(ref+'_c')
+  historical.append({'package':str(p),'referencedVIS':sorted(visrefs),'missingVIS':[n for n in visrefs if n not in names]})
+ save('VIS-evidence.json',{'currentCompilerLines':logs,'previousFunctionalPackageEvidence':historical,'classification':'UNRESOLVED until compiler optional-resource behavior evidenced; not waived'})
+ save('payload-result.json',{'compiledPayloadsChecked':len(checked),'failures':fail,'water1848Pass':totals==1848,'VISclassificationPending':True,'noInstall':True})
+except BaseException:save('failure.json',{'error':traceback.format_exc()});raise

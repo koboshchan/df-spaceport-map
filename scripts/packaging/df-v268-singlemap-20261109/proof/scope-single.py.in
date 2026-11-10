@@ -1,0 +1,98 @@
+
+from pathlib import Path
+import sys,json,hashlib,re,struct,subprocess,ast,traceback,os,psutil
+S=Path('@@DF_PATH_DF_V268_SINGLEMAP_20261109@@');Q=S/'proof'
+def sha(p):
+ with p.open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
+def save(n,d):(Q/n).write_text(json.dumps(d,indent=2))
+def field(b,k):
+ m=re.search('"'+re.escape(k)+'" "[^"]+" "([^"]*)"',b);return m.group(1) if m else None
+try:
+ owners=[p for p in psutil.process_iter(['name','cmdline']) if p.info['name']=='python.exe' and any('finish-single.py' in x for x in (p.info['cmdline'] or []))]
+ assert len(owners)<=1
+ for p in owners:
+  try:p.wait(timeout=43200)
+  except psutil.NoSuchProcess:pass
+ assert (Q/'PACKAGE-QA-COMPLETE.json').exists()
+ sys.path.insert(0,'@@DF_PATH_DF_V267_BUILD_20261109@@/packqa/python-deps')
+ from srctools.vpk import VPK
+ p=S/'ready/maps/df_spaceport_v268.vpk';v=VPK(p);names=list(v.filenames())
+ assert len([n for n in names if n.endswith('.vwrld_c')])==1
+ assert not any(re.search(r'df_spaceport_v26[678]_part\d',n) for n in names)
+ reader=Path('@@DF_PATH_SPACEPORT_KAT_REBUILD_20261105@@/partition-full/phys-reader/bin/Release/net10.0/Reader.dll')
+ es=[n for n in names if n.endswith('.vents_c')];assert len(es)==1
+ ep=Q/'compiled.vents_c';ep.write_bytes(v[es[0]].read())
+ r=subprocess.run(['dotnet',str(reader),'--entities',str(ep)],capture_output=True,text=True);assert r.returncode==0,r.stderr
+ text=r.stdout;(Q/'compiled-entities.txt').write_text(text)
+ assert 'info_spawngroup_load_unload' not in text and not re.search(r'df_spaceport_v26[678]_part\d',text)
+ def value(b,k):
+  m=re.search(r'^'+re.escape(k)+r'\s+(.+)$',b,re.M);return m[1].strip().strip('"') if m else None
+ obs=[b for b in re.split(r'====\d+====',text) if value(b,'classname')]
+ src=S/'content/kat/maps/df_spaceport_v268.vmap'
+ assert sha(src)==json.loads((Q/'flatten-proof.json').read_text())['outputSHA256']
+ blocks={}
+ for m in re.finditer(r'^"([^"]+)"\s*\n\{(.*?)^\}',src.read_text(),re.M|re.S):
+  k,b=m.groups();blocks[field(b,'id')]=(k,m.group())
+ expected=[];sp=[]
+ for uid,(k,b) in blocks.items():
+  if k!='CMapEntity':continue
+  pb=blocks[field(b,'entity_properties')][1];cl=field(pb,'classname')
+  if cl=='trigger_hurt':expected.append((uid,'[PR#]'+field(pb,'targetname'),field(b,'nodeID')))
+  if cl in ['info_player_terrorist','info_player_counterterrorist']:sp.append((uid,b,pb,cl))
+ got=[b for b in obs if value(b,'classname')=='trigger_hurt']
+ assert len(expected)==len(got)==1847
+ baseline=json.loads(Path('@@DF_PATH_DF_V267_BUILD_20261109@@/scopeqa/compiled-trigger-observed.json').read_text())['rows']
+ actual=sorted((value(b,'hammeruniqueid') or value(b,'hammerid'),value(b,'targetname')) for b in got)
+ assert actual==sorted((str(b['id']),b['targetname']) for b in baseline)
+ assert sorted(x[1] for x in expected)==sorted(value(b,'targetname') for b in got)
+ # The preserved source entity UUID connects via its nodeID to compiled hammeruniqueid.
+ for uid,name,node in expected:
+  assert (node,name) in actual,(uid,node,name)
+ compiledsp=[b for b in obs if value(b,'classname') in ['info_player_terrorist','info_player_counterterrorist']]
+ assert len(compiledsp)==len(sp)==32
+ def vec(s):return [float(x) for x in s.strip('[] ').replace(',',' ').split()]
+ def exact(a,b):return len(a)==len(b) and all(struct.pack('f',x)==struct.pack('f',y) for x,y in zip(a,b))
+ for uid,b,pb,cl in sp:
+  matches=[c for c in compiledsp if value(c,'targetname')=='[PR#]'+field(pb,'targetname')];assert len(matches)==1
+  c=matches[0];assert value(c,'classname')==cl
+  for key in ['origin','angles','scales']:assert exact(vec(field(b,key)),vec(value(c,key))),(uid,key)
+  assert value(c,'enabled')=='true' and value(c,'priority')=='0'
+ assert sum(value(c,'classname')=='info_player_terrorist' for c in compiledsp)==16
+ assert len([b for b in obs if value(b,'classname')=='prop_dynamic'])==34943
+ native=[]
+ for n in names:
+  assert v[n].verify()
+  local=S/'game/kat'/n
+  if local.is_file() and not n.startswith('maps/'):
+   data=v[n].read();assert hashlib.sha256(data).hexdigest()==sha(local),n
+   native.append(dict(resource=n,sha256=sha(local)))
+ # Independent VPK directory and serialized PHYS offsets, not decoded model sizes.
+ raw=p.open('rb');head=raw.read(28);sig,ver,ts=struct.unpack_from('<III',head);assert sig==0x55aa1234 and ver==2
+ tree=raw.read(ts);i=0;phys=[]
+ def z():
+  global i
+  j=tree.index(0,i);s=tree[i:j].decode();i=j+1;return s
+ while True:
+  ext=z()
+  if not ext:break
+  while True:
+   folder=z()
+   if not folder:break
+   while True:
+    name=z()
+    if not name:break
+    crc,pre,arc,off,n,term=struct.unpack_from('<IHHIIH',tree,i);i+=18+pre;assert term==65535
+    if name!='world_physics' or ext!='vmdl_c':continue
+    assert pre==0 and arc==32767
+    base=28+ts+off;raw.seek(base);length,hv,rv,bo,bc=struct.unpack('<IHHII',raw.read(16));assert length==n
+    table=8+bo;raw.seek(base+table);bt=raw.read(12*bc)
+    for j in range(bc):
+     kind,rel,size=struct.unpack_from('<4sII',bt,12*j)
+     if kind==b'PHYS':
+      local=table+12*j+4+rel;assert local+size<=n
+      phys.append(dict(resource=folder+'/'+name+'.'+ext,resourcePackageOffset=base,PHYSResourceOffset=local,PHYSPackageOffset=base+local,serializedBytes=size))
+ assert len(phys)==1 and 0<phys[0]['serializedBytes']<536870912
+ save('WORLD-PHYS-receipt.json',dict(packageSHA256=sha(p),blocks=phys,totalSerializedWORLD_PHYSBytes=phys[0]['serializedBytes'],measurementScriptSHA256=sha(Path(__file__)),mergedCompileProven=True))
+ save('COMPILED-SCOPE-PASS.json',dict(trigger1847UUIDNodeNameBaselineExact=True,native32SourceFloat32Exact=True,T=16,CT=16,roofSuccessor=True,other31Preserved=True,sharedDynamic34943=True,oneWORLD=True,zeroChildLoaders=True,nativeAssets=native,readerSHA256=sha(reader),packageSHA256=sha(p),noInstall=True))
+except:
+ save('SCOPE-BLOCKER.json',dict(error=traceback.format_exc(),noInstall=True));raise

@@ -1,0 +1,79 @@
+import pathlib,json,struct,copy,numpy as np,hashlib,os,sys,datetime
+ROOT=pathlib.Path('@@DF_PATH_DF_EXTRACT_20261105@@/loot-skeletal')
+def read(p):
+ b=p.read_bytes();assert b[:4]==b'glTF';n,t=struct.unpack_from('<II',b,12);g=json.loads(b[20:20+n]);bn,bt=struct.unpack_from('<II',b,20+n);return g,bytearray(b[28+n:28+n+bn])
+def acc(g,b,i):
+ a=g['accessors'][i];v=g['bufferViews'][a['bufferView']];dt=np.dtype({5120:'i1',5121:'u1',5122:'<i2',5123:'<u2',5125:'<u4',5126:'<f4'}[a['componentType']]);w={'SCALAR':1,'VEC2':2,'VEC3':3,'VEC4':4,'MAT4':16}[a['type']]
+ return np.ndarray((a['count'],w),dtype=dt,buffer=b,offset=v.get('byteOffset',0)+a.get('byteOffset',0),strides=(v.get('byteStride',w*dt.itemsize),dt.itemsize))
+def local(n):
+ if 'matrix' in n:return np.array(n['matrix']).reshape(4,4).T
+ x,y,z,w=n.get('rotation',[0,0,0,1]);q=np.array([[1-2*(y*y+z*z),2*(x*y-z*w),2*(x*z+y*w)],[2*(x*y+z*w),1-2*(x*x+z*z),2*(y*z-x*w)],[2*(x*z-y*w),2*(y*z+x*w),1-2*(x*x+y*y)]])
+ a=np.eye(4);a[:3,:3]=q@np.diag(n.get('scale',[1,1,1]));a[:3,3]=n.get('translation',[0,0,0]);return a
+def bake(src,dst):
+ g,b=read(src);old=copy.deepcopy(g);parents={c:i for i,n in enumerate(g['nodes']) for c in n.get('children',[])};world={}
+ def W(i):
+  if i not in world:world[i]=(W(parents[i]) if i in parents else np.eye(4))@local(g['nodes'][i])
+  return world[i]
+ report=[];used=set()
+ for ni,node in enumerate(g['nodes']):
+  if 'mesh' not in node or 'skin' not in node:continue
+  skin=g['skins'][node['skin']];ib=acc(g,b,skin['inverseBindMatrices']).copy().reshape(-1,4,4).transpose(0,2,1)
+  mats=np.array([np.linalg.inv(W(ni))@W(j)@ib[k] for k,j in enumerate(skin['joints'])])
+  for p in g['meshes'][node['mesh']]['primitives']:
+   at=p['attributes'];pos=acc(g,b,at['POSITION']).copy().astype(float)
+   j=acc(g,b,at['JOINTS_0']).copy().astype(int);wei=acc(g,b,at['WEIGHTS_0']).copy().astype(float)
+   wa=g['accessors'][at['WEIGHTS_0']]
+   if wa.get('normalized'):wei/=np.iinfo(acc(g,b,at['WEIGHTS_0']).dtype).max
+   assert np.max(np.abs(wei.sum(axis=1)-1))<1e-5
+   blended=np.zeros((len(pos),4,4))
+   for aset in [0,1]:
+    if 'JOINTS_'+str(aset) not in at:continue
+    js=acc(g,b,at['JOINTS_'+str(aset)]).copy().astype(int);ws=acc(g,b,at['WEIGHTS_'+str(aset)]).copy().astype(float)
+    if g['accessors'][at['WEIGHTS_'+str(aset)]].get('normalized'):ws/=np.iinfo(acc(g,b,at['WEIGHTS_'+str(aset)]).dtype).max
+    for k in range(js.shape[1]):blended+=mats[js[:,k]]*ws[:,k,None,None]
+   out=np.einsum('nij,nj->ni',blended,np.c_[pos,np.ones(len(pos))])[:,:3]
+   assert np.isfinite(out).all()
+   key=at['POSITION'];assert key not in used;used.add(key)
+   acc(g,b,key)[:]=out;actual=acc(g,b,key);g['accessors'][key]['min']=actual.min(axis=0).astype(float).tolist();g['accessors'][key]['max']=actual.max(axis=0).astype(float).tolist()
+   for attr in ['NORMAL','TANGENT']:
+    if attr not in at:continue
+    v=acc(g,b,at[attr]);orig=v.copy();v3=orig[:,:3].astype(float)
+    normalm=np.linalg.inv(blended[:,:3,:3]).transpose(0,2,1)
+    tr=np.einsum('nij,nj->ni',normalm if attr=='NORMAL' else blended[:,:3,:3],v3)
+    if attr=='TANGENT' and 'NORMAL' in at:
+     nn=acc(g,b,at['NORMAL']).astype(float);nn/=np.linalg.norm(nn,axis=1)[:,None];tr-=nn*(tr*nn).sum(axis=1)[:,None]
+     deg=np.linalg.norm(tr,axis=1)<1e-6
+     if deg.any():
+      axis=np.eye(3)[np.argmin(np.abs(nn[deg]),axis=1)];tr[deg]=np.cross(nn[deg],axis)
+      report.append(dict(tangentDegenerateBasisRepairs=int(deg.sum()),policy='least-parallel-axis perpendicular fallback; source tangent parallel to normal; UV/POSITION unchanged'))
+    lens=np.linalg.norm(tr,axis=1);assert (lens>1e-10).all();tr/=lens[:,None];v[:,:3]=tr
+    if attr=='TANGENT':v[:,3]=orig[:,3]*np.sign(np.linalg.det(blended[:,:3,:3]))
+    a=g['accessors'][at[attr]]
+    if 'min' in a:a['min']=v.min(axis=0).astype(float).tolist()
+    if 'max' in a:a['max']=v.max(axis=0).astype(float).tolist()
+   for a in list(at):
+    if a.startswith(('JOINTS_','WEIGHTS_')):del at[a]
+   report.append(dict(vertices=len(pos),maxPositionDelta=float(np.max(np.abs(out-pos))),bounds=[out.min(axis=0).tolist(),out.max(axis=0).tolist()],weightSumMaxError=float(np.max(np.abs(wei.sum(axis=1)-1)))))
+  del node['skin']
+ g.pop('skins',None);g.pop('animations',None)
+ g.setdefault('extras',{})['poseCertification']='reference-pose static bake; CLOSED UNPROVEN'
+ dst.parent.mkdir(parents=True,exist_ok=True)
+ jb=json.dumps(g,separators=(',',':')).encode();jb+=b' '*((-len(jb))%4);b+=b'\0'*((-len(b))%4)
+ dst.write_bytes(struct.pack('<III',0x46546c67,2,12+8+len(jb)+8+len(b))+struct.pack('<II',len(jb),0x4e4f534a)+jb+struct.pack('<II',len(b),0x004e4942)+b)
+ ng,nb=read(dst);og,ob=read(src)
+ assert not ng.get('skins');assert not any('skin' in n for n in ng['nodes'])
+ for om,nm in zip(og['meshes'],ng['meshes']):
+  for op,np_ in zip(om['primitives'],nm['primitives']):
+   assert op.get('material')==np_.get('material');assert np.array_equal(acc(og,ob,op['indices']),acc(ng,nb,np_['indices']))
+   for a,i in np_['attributes'].items():
+    assert not a.startswith(('JOINTS_','WEIGHTS_'))
+    if a not in ['POSITION','NORMAL','TANGENT']:assert np.array_equal(acc(og,ob,op['attributes'][a]),acc(ng,nb,i)),a
+ assert og.get('materials')==ng.get('materials')
+ return dict(source=str(src),output=str(dst),sourceSHA256=hashlib.sha256(src.read_bytes()).hexdigest(),outputSHA256=hashlib.sha256(dst.read_bytes()).hexdigest(),bytes=dst.stat().st_size,skins=0,jointAttributes=0,uvSlotsIndicesColorsUnchanged=True,closedState='UNPROVEN',primitives=report)
+def main():
+ srcroot=pathlib.Path(sys.argv[1]);dstroot=pathlib.Path(sys.argv[2])
+ receipt=dict(pid=os.getpid(),phase='static-bake-started',time=datetime.datetime.now(datetime.timezone.utc).isoformat());(ROOT/'bake-progress.json').write_text(json.dumps(receipt))
+ rows=[bake(p,dstroot/p.relative_to(srcroot)) for p in srcroot.rglob('*.glb')]
+ (dstroot/'bake-report.json').write_text(json.dumps(dict(pid=os.getpid(),exports=len(rows),results=rows),indent=2))
+ print(json.dumps(dict(pid=os.getpid(),exports=len(rows),bytes=sum(r['bytes'] for r in rows),results=rows)))
+if __name__=='__main__':main()

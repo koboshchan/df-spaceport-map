@@ -1,0 +1,102 @@
+from pathlib import Path
+import json,hashlib,datetime,os,traceback,collections
+import numpy as np
+import sys
+sys.path.insert(0,'@@DF_PATH_DF_V26_BUILD_20261106@@/terrain-stage/geometry-deps')
+import mapbox_earcut as earcut
+from shapely import set_precision
+from shapely.geometry import Polygon,LineString
+from shapely.ops import triangulate,split,unary_union
+from shapely.strtree import STRtree
+P=Path('@@DF_PATH_DF_TERRAIN_FULL_20261106_V3@@');O=Path('@@DF_PATH_DF_V26_BUILD_20261106@@/terrain-stage')
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def save(n,d):
+ p=O/n
+ with p.open('x')as f:json.dump(d,f,indent=2)
+ return dict(path=str(p),sha256=sha(p))
+def mesh(p):
+ v=[];f=[]
+ for l in Path(p).read_text().splitlines():
+  s=l.split()
+  if s and s[0]=='v':v.append(list(map(float,s[1:4])))
+  elif s and s[0]=='f':f.append([int(x)-1 for x in s[1:]])
+ return np.array(v),np.array(f)
+def polys(g):
+ if g.is_empty:return []
+ if g.geom_type=='Polygon':return[g]if g.area>1e-8 else[]
+ return [p for part in getattr(g,'geoms',[])for p in polys(part)]
+def clipmin(p,current,target):
+ delta=current-target;xy=np.array(p.exterior.coords);d=np.c_[xy,np.ones(len(xy))]@delta
+ if max(d)<=1e-8:return[(p,current)]
+ if min(d)>=-1e-8:return[(p,target)]
+ norm=np.linalg.norm(delta[:2]);assert norm>1e-12
+ origin=-delta[2]*delta[:2]/norm**2;direction=np.array([-delta[1],delta[0]])/norm
+ L=max(abs(np.array(p.bounds)-np.tile(origin,2)))+1e5
+ chunks=polys(split(p,LineString([origin-direction*L,origin+direction*L])))
+ assert abs(sum(x.area for x in chunks)-p.area)<max(1e-5,p.area*1e-8)
+ return[(x,target if np.r_[x.representative_point().coords[0],1]@delta>0 else current)for x in chunks]
+def main():
+ rows=json.loads((P/'seam-v4/next-build/integration-manifest.json').read_text())['artifacts'];mapping=json.loads((O/'approved-nine-mapping.json').read_text())['objects']
+ rp=[];planes=[];roadids=[]
+ for m in mapping:
+  n=np.load(m['triangleNPZ']);v=n['vertices'];f=n['triangles']
+  for t in v[f]:
+   p=Polygon(t[:,:2])
+   if p.area<=1e-8:continue
+   rp.append(p);c=np.linalg.solve(np.c_[t[:,:2],np.ones(3)],t[:,2]);c[2]-=1.5;planes.append(c);roadids.append(m['historicalIndex'])
+ tree=STRtree(rp);foot=unary_union([set_precision(x,1e-7)for x in rp]);root=O/'lowered-source-v4';root.mkdir(exist_ok=False);changes=[];allpieces=[];totalbefore=0.;totalafter=0.
+ for row in rows:
+  if row['kind']!='CDLOD-derived':continue
+  v,f=mesh(row['sourceOBJ']);bb=Polygon([(v[:,0].min(),v[:,1].min()),(v[:,0].max(),v[:,1].min()),(v[:,0].max(),v[:,1].max()),(v[:,0].min(),v[:,1].max())])
+  if not bb.intersects(foot):continue
+  triangles=[];changed=0;maxdrop=0.;outsideError=0.;before=0.;after=0.;piecescount=0
+  for t in v[f]:
+   p=Polygon(t[:,:2]);original=np.linalg.solve(np.c_[t[:,:2],np.ones(3)],t[:,2]);chunks=[(p,original)];candidates=tree.query(p,predicate='intersects')
+   for ri in candidates:
+    rr=rp[ri];nxt=[]
+    for g,c in chunks:
+     inter=g.intersection(rr)
+     if inter.area<1e-8:nxt.append((g,c));continue
+     nxt.extend((x,c)for x in polys(g.difference(rr)))
+     for x in polys(inter):nxt.extend(clipmin(x,c,planes[ri]))
+    chunks=nxt
+   assert abs(sum(g.area for g,c in chunks)-p.area)<max(.0001,p.area*1e-8)
+   ischanged=any(np.max(abs(c-original))>1e-8 for g,c in chunks)
+   if not ischanged:triangles.append(t);continue
+   changed+=1;before+=p.area;piecescount+=len(chunks)
+   for g,c in chunks:
+    inside=not np.allclose(c,original,atol=1e-8,rtol=0)
+    assert not inside or set_precision(g,1e-7).difference(foot).area<max(1e-4,g.area*1e-9),('outside footprint',set_precision(g,1e-7).difference(foot).area,g.area,g.wkt)
+    rings=[np.array(g.exterior.coords)[:-1]]+[np.array(r.coords)[:-1]for r in g.interiors];xyear=np.concatenate(rings);ends=np.cumsum([len(r)for r in rings],dtype=np.uint32);earfaces=earcut.triangulate_float64(xyear,ends).reshape(-1,3);ts=[Polygon(xyear[ff])for ff in earfaces if Polygon(xyear[ff]).area>1e-10]
+    assert abs(sum(tt.area for tt in ts)-g.area)<max(.0001,g.area*1e-8),('triangulation coverage',row['name'])
+    for tt in ts:
+     xy=np.array(tt.exterior.coords)[:3];z=np.c_[xy,np.ones(3)]@c;originalz=np.c_[xy,np.ones(3)]@original
+     assert np.min(originalz-z)>-1e-6;maxdrop=max(maxdrop,float(max(originalz-z)))
+     nt=np.c_[xy,z]
+     if np.cross(nt[1]-nt[0],nt[2]-nt[0])[2]<0:nt=nt[[0,2,1]]
+     triangles.append(nt);after+=tt.area
+     allpieces.append(dict(asset=row['name'],xy=xy.tolist(),plane=c.tolist(),changed=inside))
+  if not changed:continue
+  assert abs(after-before)<max(.001,before*1e-8)
+  output=root/(row['canonicalID']+'.obj');points=[];faces=[];keys={}
+  for t in triangles:
+   face=[]
+   for vertex in t:
+    key=tuple(np.round(vertex,7))
+    if key not in keys:keys[key]=len(points);points.append(vertex)
+    face.append(keys[key]+1)
+   faces.append(face)
+  with output.open('x')as fo:
+   fo.write('# Exact9 road footprint lowering only approximate CDLOD, min(original,asphalt-1.5CS)\n')
+   for pt in points:fo.write('v '+' '.join(format(float(x),'.9f')for x in pt)+'\n')
+   for face in faces:fo.write('f '+' '.join(map(str,face))+'\n')
+  changes.append(dict(canonicalID=row['canonicalID'],originalSource=row['sourceOBJ'],originalSHA256=row['sourceOBJsha256'],stagedSource=str(output),stagedSHA256=sha(output),modifiedOriginalTriangles=changed,originalTriangles=len(f),stagedTriangles=len(faces),maxLocalLoweringCS=maxdrop,changedTriangleXYAreaBefore=before,changedTriangleXYAreaAfter=after))
+  print('LOWERED',row['name'],changed,'triangles',len(faces),'maxdrop',maxdrop,flush=True)
+ save('lowered-piece-v4-planes.json',dict(pieces=allpieces))
+ save('lowered-source-v4-manifest.json',dict(status='CANDIDATE_GEOMETRY_ONLY_NOT_COMPILE_READY_SEAM_STITCH_VALIDATION_PENDING',rule='Only exact approved9 asphalt footprint min(original approximate CDLOD,asphalt-1.5CS), never raise. Original fine168 and roads unchanged. Original sources not overwritten.',assets=changes,exactNineMappingSHA256=sha(O/'approved-nine-mapping.json'),fine168ProofSHA256=sha(O/'full168-pose-holes-native-proof.json'),remaining=['Stitch T junctions internal and tile seams','Check road perimeter discontinuities and preservation conflicts','Fresh native compile isolated central grant','Full849 seam/slope/playerhull/launchbridge ground proof','175 still unresolved, not empty']))
+if __name__=='__main__':
+ import sys
+ with (O/'lower-nine-v4.log').open('x',buffering=1)as log:
+  sys.stdout=log;sys.stderr=log
+  try:save('lower-nine-v4-process.json',dict(pid=os.getpid(),utc=datetime.datetime.now(datetime.timezone.utc).isoformat()));main();save('lower-nine-v4-exit.json',dict(exitCode=0))
+  except BaseException:traceback.print_exc();save('lower-nine-v4-exit.json',dict(exitCode=1));raise

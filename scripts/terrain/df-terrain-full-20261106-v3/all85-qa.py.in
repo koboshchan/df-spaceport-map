@@ -1,0 +1,17 @@
+from pathlib import Path
+import json,numpy as np,hashlib
+from terrain_query import Terrain
+Root=Path(__file__).parent;P=Root/'ground-all85';terrain=Terrain(Root);proof=json.loads((P/'ground-vertices/manifest.json').read_text());out=[]
+def metric(v):
+ return dict(count=len(v),minimum=float(min(v)),p05=float(np.percentile(v,5)),median=float(np.median(v)),p95=float(np.percentile(v,95)),maximum=float(max(v)))
+for rec in proof['objects']:
+ points=np.load(P/'ground-vertices'/f"{rec['index']}.npz")['vertices'];ground,kind,ids=terrain.world(points);valid=np.isfinite(ground);gap=points[:,2]-ground
+ # A local lower-envelope diagnostic uses actual vertices, not object pivot or AABB bottom.
+ bins=np.floor(points[:,:2]/18).astype(np.int64);order=np.lexsort((points[:,2],bins[:,1],bins[:,0]));b=bins[order];first=np.r_[True,np.any(b[1:]!=b[:-1],axis=1)];foot=order[first];foot=foot[valid[foot]]
+ cent=np.load(P/'ground-vertices'/f"{rec['index']}.npz")['triangleCentroids'];cz,ck,ci=terrain.world(cent);cg=cent[:,2]-cz;cok=np.isfinite(cz)
+ summary=dict(triangleCentroidCount=len(cent),centroidTerrainCovered=int(cok.sum()),triangleCentroidClearanceCS=metric(cg[cok]) if cok.any() else None,**rec,totalVertices=len(points),coveredVertices=int(valid.sum()),noSurfaceVertices=int((~valid).sum()),allVertexClearanceCS=metric(gap[valid]) if valid.any() else None,lowerEnvelopeClearanceCS=metric(gap[foot]) if len(foot) else None,lowerEnvelopeBinsUEcm=50,terrainKinds={k:int(sum(kind==k)) for k in set(kind)},interpretation='Negative below terrain; positive elevated. Foundations, bridges and non-contact vertices may be intentional. These measurements are NOT a resting/contact certification.')
+ out.append(summary)
+(P/'ground-qa.json').write_text(json.dumps(dict(objects=out,scope='All85 road/ground and prop/rock/street class placements with pivot on coarse681, all actual vertices + triangle centroids transformed, 50cm XY lower envelope; no automatic asset movement; no source-mesh edits; not exhaustive map contact certification',calibrationUsed=terrain.coef.tolist()),indent=2))
+print('GROUND QA',len(out),'objects',sum(x['totalVertices'] for x in out),'vertices',sum(x['coveredVertices'] for x in out),'terrain-covered')
+for r in out:
+ print(r['index'],r['type'],r['terrainKind'],r['meshObjectPath'].split('/')[-1],r['lowerEnvelopeClearanceCS'])

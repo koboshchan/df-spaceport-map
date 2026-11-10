@@ -1,0 +1,17 @@
+import json,pathlib,hashlib,datetime
+o=pathlib.Path('@@DF_PATH_DF_TERRAIN_GENERAL_20261106_V2@@')
+v1=pathlib.Path('@@DF_PATH_DF_TERRAIN_STAGE_20261106_V1@@')
+c=json.loads((v1/'closure-input.json').read_text(encoding='utf-8-sig'))
+a=json.loads((v1/'archive-catalogue.json').read_text(encoding='utf-8-sig'))
+inv=json.loads((o/'mounted-inventory.json').read_text(encoding='utf-8-sig'))
+available={x['path'][:-7].lower() for x in a if x['path'].lower().endswith('.uasset')}
+records=[]
+for t in c['tiles']:
+ b=t['streamerBounds'];present=t['package'].lower() in available
+ records.append({'package':t['package'],'payloadPresent':present,'bounds':b,'classification':'actual-payload' if present else ('zero-vertical-extent-not-certified-empty' if b['BoxExtent']['Z']==0 else 'nonzero-vertical-bounds-no-payload-unresolved')})
+inputs=[pathlib.Path(p) for p in inv['archiveInputs']]
+disk={str(p).lower() for parent in {p.parent for p in inputs} for p in parent.glob('*.pak')}
+listed={str(p).lower() for p in inputs}
+report={'timeUTC':datetime.datetime.now(datetime.timezone.utc).isoformat(),'stageReady':False,'canonicalSlots':len(records),'actualAssets':sum(r['payloadPresent'] for r in records),'unresolvedNonzeroBounds':sum(r['classification']=='nonzero-vertical-bounds-no-payload-unresolved' for r in records),'unresolvedZeroExtent':sum(r['classification']=='zero-vertical-extent-not-certified-empty' for r in records),'mountedArchives':len(inv['mounted']),'unmountedArchives':inv['unloaded'],'diskPaksMissingFromInputs':sorted(disk-listed),'sourceClosureSHA256':hashlib.sha256((v1/'closure-input.json').read_bytes()).hexdigest(),'blocker':'Cannot certify all canonical terrain coverage. Absence alone is not an empty-region certificate; 681 absent slots have nonzero serialized vertical bounds. CDLOD occupancy semantics still unresolved. No fabricated geometry or READY output.','fixtures':json.loads((o/'fixtures-PASS.json').read_text()),'records':records}
+(o/'coverage-blocker.json').write_text(json.dumps(report,indent=2))
+print(json.dumps({k:v for k,v in report.items() if k not in ['records','fixtures']}))

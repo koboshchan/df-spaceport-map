@@ -1,0 +1,38 @@
+import pathlib,json,sys,io,re,traceback,os,hashlib
+R=pathlib.Path('@@DF_PATH_DF_V26_BUILD_20261106@@');S=R/'central-stage-17052918';O=S/'prewater-maps';O.mkdir(exist_ok=True);sys.stdout=(S/'prewater-integration.log').open('w',buffering=1);sys.stderr=sys.stdout
+sys.path.insert(0,'@@DF_PATH_DF_V25_BUILD_20261106@@/component-work')
+import generate_vmap as g
+from srctools.dmx import Attribute,ValueType
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def write(root,p):
+ b=io.BytesIO();root.export_kv2(b,fmt_name='vmap',fmt_ver=40,unicode='silent',flat=True)
+ t=re.sub(r'"string"\s+"__U64__([^"]+)"',r'"uint64" "\1"',b.getvalue().decode()).replace('encoding keyvalues2 1 format vmap 40','encoding keyvalues2 4 format vmap 40')
+ p.write_text(t,encoding='utf8');g.parse(t)
+try:
+ assert json.loads((S/'visibility-stage.json').read_text())['pass']
+ t=json.loads((S/'terrain168-prepared.json').read_text());assert t['pass'] and t['count']==168
+ cube=json.loads((S/'error-cube-assets-prepared.json').read_text())['cube'];seenCube=0;existingTerrain=[];parts=[]
+ for i in range(6):
+  root=g.parse((S/'content/kat/maps'/f'df_spaceport_v26_part{i}.vmap').read_text(encoding='utf8'))
+  nodes=list(g.walk(root['world'].val_elem))
+  for e in nodes:
+   if 'entity_properties' not in e:continue
+   ep=e['entity_properties'].val_elem
+   if 'model' in ep and ep['model'].val_str.startswith('models/df_terrain'):existingTerrain.append(ep['model'].val_str)
+   if str(e.uuid)==cube['targetUUID']:
+    assert ep['model'].val_str.startswith('models/df_v24/');ep['model']='models/df_v24/'+pathlib.Path(cube['source']).name;seenCube+=1
+  children=list(root['world'].val_elem['children'].iter_elem());added=0
+  for k,a in enumerate(t['artifacts']):
+   if k%6!=i:continue
+   assert a['model'] not in existingTerrain,'already present terrain avoid duplication'
+   e=g.entity('prop_static','df_v26_terrain_'+a['canonicalID'],8000000+k);ep=e['entity_properties'].val_elem;ep['model']=a['model'];ep['solid']='6';children.append(e);added+=1
+  root['world'].val_elem['children']=Attribute.array('children',ValueType.ELEMENT,children)
+  p=O/f'df_spaceport_v26_part{i}.vmap';write(root,p);parts.append({'path':str(p),'sha256':sha(p),'terrainAdded':added});print('prewaterpart',i,'terrain',added,flush=True)
+ assert seenCube==1,seenCube
+ p=pathlib.Path('@@DF_PATH_DF_V25_BUILD_20261106@@/content/kat/maps/df_spaceport_v25.vmap')
+ txt=p.read_text(encoding='utf8');counts=[]
+ for i in range(6):
+  old=f'df_spaceport_v25_part{i}';assert old in txt;counts.append(txt.count(old));txt=txt.replace(old,f'df_spaceport_v26_part{i}')
+ out=O/'df_spaceport_v26.vmap';out.write_text(txt,encoding='utf8');g.parse(txt)
+ (S/'prewater-integration.json').write_text(json.dumps({'pass':True,'parts':parts,'cubeInstances':seenCube,'terrain168Added':168,'priorTerrainInstances':existingTerrain,'parent':str(out),'parentSHA256':sha(out),'parentChildReferenceCounts':counts,'waterNotIntegrated':True,'noCompiler':True,'pending':'accepted water and exact qualified typedmark handoffs; packclosure'},indent=2))
+except BaseException:(S/'prewater-integration-failure.json').write_text(json.dumps({'error':traceback.format_exc()}));raise

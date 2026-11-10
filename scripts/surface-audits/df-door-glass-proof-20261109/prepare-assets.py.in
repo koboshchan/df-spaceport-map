@@ -1,0 +1,41 @@
+
+from pathlib import Path
+import os,json,time,hashlib,shutil,traceback,datetime
+import numpy as np,trimesh,coacd
+R=Path('@@DF_PATH_DF_DOOR_GLASS_PROOF_20261109@@')
+def out(n,x):(R/n).write_text(json.dumps(x,indent=2))
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+out('prep-worker.json',dict(pid=os.getpid(),parent=os.getppid(),utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),phase='hinge-assets-and-merged-coacd',native=False))
+try:
+ d=json.loads(Path('@@DF_PATH_DF_DOOR_PROOF_20261109@@/hinge-identity-mapping.json').read_text())
+ entries=[]
+ for e in d['entries']:
+  role=e['role'];dst=R/role;dst.mkdir(exist_ok=True)
+  assert sha(e['sourceGLB'])==e['sourceGLBSHA256']
+  shutil.copy2(e['sourceGLB'],dst/'source.glb')
+  shutil.copy2(e['collisionSource'],dst/'source.collision.json')
+  mesh=trimesh.load(e['sourceGLB'],force='scene',process=False).to_geometry()
+  v=np.asarray(mesh.vertices);ue=np.column_stack([v[:,0],-v[:,2],v[:,1]])*100
+  M=np.array(e['componentMatrixCS2']);h=np.array(e['hingeWorldCS2'])
+  v=ue@M[:3,:3].T+M[:3,3]-h
+  expected=np.array(e['hingeLocalBounds'])
+  assert np.max(np.abs(np.array([v.min(0),v.max(0)])-expected))<1e-5
+  src=trimesh.Trimesh(v,mesh.faces,process=False);src.export(dst/'hinge-render.obj')
+  entry={k:e[k] for k in ['role','sourceGLB','sourceGLBSHA256','componentMatrixCS2','hingeWorldCS2','hingeLocalBounds']}
+  entry.update(vertices=len(v),triangles=len(mesh.faces),watertight=bool(src.is_watertight),renderSHA256=sha(dst/'hinge-render.obj'),collisionSHA256=sha(dst/'source.collision.json'))
+  entries.append(entry)
+ out('asset-prep.json',dict(entries=entries,nativeGate=False,phase='source-prepared'))
+ root=Path('@@DF_PATH_PROGRAM_FILES_X86_STEAM_STEAMAPPS_COMMON_COUNTER_STRIKE_GLOBAL_OFFENSIVE@@')
+ for rel in ['game/core/base.fgd','game/csgo/csgo.fgd','content/csgo/workshop/content_examples/breakable_glass/breakable_glass_01.vmdl']:
+  p=root/rel;dst=R/'sdk'/rel;dst.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,dst)
+ e=next(e for e in d['entries'] if e['role']=='keycard_locked')
+ src=trimesh.load(R/'keycard_locked/hinge-render.obj',force='mesh',process=False)
+ params=dict(threshold=0.005,real_metric=True,preprocess_mode='auto',preprocess_resolution=50,merge=True,max_convex_hull=64,extrude=False,seed=20261109,mcts_iterations=60,mcts_nodes=10,mcts_max_depth=3,resolution=2000)
+ out('merged-trial-input.json',dict(parameters=params,representation='render-mesh derived NOT cooked collision',nativeGate=False))
+ t=time.monotonic()
+ parts=coacd.run_coacd(coacd.Mesh(src.vertices/36.,np.asarray(src.faces)),**params)
+ P=R/'keycard_locked/merged-pieces';P.mkdir(exist_ok=True)
+ for i,(pv,pf) in enumerate(parts):trimesh.Trimesh(pv*36,pf,process=False).export(P/f'piece-{i:03}.obj')
+ out('prep-exit.json',dict(code=0,seconds=time.monotonic()-t,pieces=len(parts),complexityPass=1<len(parts)<=64,geometryCoverage='PENDING independent excess/openings/coverage validation',nativeGate=False,runtime=False))
+except BaseException:
+ out('prep-exit.json',dict(code=1,error=traceback.format_exc(),nativeGate=False));raise

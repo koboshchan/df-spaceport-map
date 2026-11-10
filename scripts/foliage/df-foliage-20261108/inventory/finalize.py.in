@@ -1,0 +1,81 @@
+exec(compile((__import__('pathlib').Path('@@DF_PATH_DF_FOLIAGE_20261108@@/inventory/aggregate.py')).read_text(encoding='utf8'),'aggregate.py','exec'))
+I=load(W/'asset-inventory-preliminary.json')
+def canonical(s):
+ s=norm(s)
+ return 'DeltaForce/Content/'+s[6:] if s.startswith('/Game/') else 'Engine/Content/'+s[8:] if s.startswith('/Engine/') else s
+tex={}
+for t in I['textureTargets']:
+ c=canonical(t);f=W/(hashlib.sha256((c+'.uasset').encode()).hexdigest()[:12].upper()+'.json');pr=load(f) if f.exists() else {}
+ tr=next((r for r in pr.get('results',[]) if r['kind']=='texture'),None)
+ tex[c]={'sourcePackages':pr.get('files',[]),'probe':tr,'otherExports':[r for r in pr.get('results',[]) if r['kind']=='other'],'error':pr.get('error'),'priorTextureManifest':I['textures'].get(t)}
+ def mipbytes(w,h,fmt):
+  return math.ceil(w/4)*math.ceil(h/4)*({'PF_DXT1':8,'PF_BC4':8}.get(fmt,16)) if fmt in ['PF_DXT1','PF_DXT5','PF_BC4','PF_BC7'] else w*h*{'PF_B8G8R8A8':4,'PF_FloatRGBA':8}[fmt]
+ if tr:
+  dims=[];w,h=tr['width'],tr['height']
+  while True:
+   dims.append((w,h))
+   if w==h==1:break
+   w,h=max(1,w//2),max(1,h//2)
+  tex[c]['memoryScenario']={'baseLevelBytes':mipbytes(tr['width'],tr['height'],tr['pixelFormat']),'fullMipChainBytes':sum(mipbytes(w,h,tr['pixelFormat']) for w,h in dims),'assumptions':'one 2D layer at recorded dimensions; retain format; all mips including VT fully resident, NOT actual residency; excludes alignment/page tables/tile borders/extra layers/runtime-generated allocation; reference closure includes all LOD material slots and effective texture parameters, not graph-live-only evaluation','virtual':tr['virtualTexture']}
+I['textures']=tex
+glo=ghi=alo=ahi=0;weighted=0;unique=0;lodcount=0;auxlo=auxhi=0;cross=[];sh=collections.Counter();sectionCount=0;highestSections=0
+for m in I['meshes']:
+ m['memoryScenario']={}
+ if m['semanticClass']=='tree':
+  m['collisionPolicy']='SOLID'
+  for v in m['instancingKeyCandidates'] if 'instancingKeyCandidates' in m else []:v['collisionPolicy']=m['collisionPolicy']
+ cp=pathlib.Path(m['metadataFile'].replace('.metadata.json','.collision.json'))
+ if cp.exists():
+  col=load(cp);m['serializedBodyCollision']={'path':str(cp),'bytes':cp.stat().st_size,'sha256':sha(cp),'properties':col.get('Properties'),'aggregateGeometry':col.get('AggGeom'),'cookedFormatData':col.get('CookedFormatData'),'note':'Source serialized settings, not usable Source2 PHYS; triangle sections bEnableCollision available per LOD are evidence only. Owner implements trees SOLID; no trunk-only or leaf exclusion inferred.'}
+ else:m['serializedBodyCollision']={'status':'no preexisting collision JSON'}
+
+ for l in m['lods']:
+  v=l.get('positionVertices') or 0;uv=l.get('uvChannels') or 0;idx=l.get('indices') or 0
+  tangent=16 if l['highPrecisionTangents'] else 8
+  stride=12+tangent+uv*(8 if l['fullPrecisionUV'] else 4)
+  low=v*stride+idx*2;high=v*(stride+4)+idx*4
+  ai=sum(x or 0 for x in l['auxiliaryIndices'].values())
+  l['memoryScenario']={'primaryBytesLow':low,'primaryBytesHigh':high,'auxiliaryIndicesBytesLow':ai*2,'auxiliaryIndicesBytesHigh':ai*4,'assumptions':'position vertices used, parser NumVertices is zero; tangent8/16 and UV4/8 from flags; optional color0/4; index2/4; excludes skin/wind custom streams, acceleration, physics, meshlets, allocator and engine overhead'}
+  alo+=low;ahi+=high;auxlo+=ai*2;auxhi+=ai*4;lodcount+=1
+  assert sum(s['NumTriangles'] for s in l['sections'])==l['triangles']
+  assert idx==3*l['triangles'],(m['mesh'],l['lod'])
+  for s in l['sections']:sh[str(s['bCastShadow'])]+=1;sectionCount+=1
+ l=m['lods'][0];glo+=l['memoryScenario']['primaryBytesLow'];ghi+=l['memoryScenario']['primaryBytesHigh'];weighted+=l['triangles']*m['instances'];unique+=l['triangles'];highestSections+=len(l['sections'])
+ glb=m.get('glb')
+ if glb:
+  selected=m['lods'][glb['sourceLOD']]
+  assert selected['triangles']==glb['triangles']
+  cross.append(m['mesh'])
+ # Native section collision comes from source. Destination policy is independent.
+ m['instancingKeyCandidates']=[{'sourceType':t,'instances':n,'materialOverrides':I['types'][t]['materialOverrides'],'serializedShadowSettings':I['types'][t]['shadowSerialized'],'collisionPolicy':m['collisionPolicy']} for t,n in m['sourceTypes'].items()]
+ m['materialShaderWarning']='GLB uses neutral placeholders only. Original masked alpha, wind, billboard/impostor and packed channels require Source2 material implementation; not supplied by inventory.'
+for t,v in I['types'].items():
+ path=t+'.uasset';label=hashlib.sha256(path.encode()).hexdigest()[:12].upper()+'-'+pathlib.Path(t).name
+ proof=P/(label+'-proof.json')
+ if proof.exists():v['sourcePackages']=load(proof).get('files',[]);v['proofSHA256']=sha(proof)
+ else:v['sourcePackages']=[];v['proofError']='missing matching extraction proof'
+inputfiles=['type-mapping.json','decode-summary.json','transforms-candidate-ue.jsonl','type-inputs.json','cells.json','body-transforms-exact-source.jsonl','all-body-scale-audit.json','level2-shared-ma1-evidence.json']
+inputs=[{'path':str(P/n),'bytes':(P/n).stat().st_size,'sha256':sha(P/n)} for n in inputfiles if (P/n).exists()]
+inputs += [{'path':str(E/'material-coverage/effective-material-parameters.json'),'bytes':(E/'material-coverage/effective-material-parameters.json').stat().st_size,'sha256':sha(E/'material-coverage/effective-material-parameters.json')}]
+allfiles={}
+materialPackages={}
+for path in load(W/'hash-only-paths.json'):
+ f=W/(hashlib.sha256(path.encode()).hexdigest()[:12].upper()+'.json')
+ pr=load(f) if f.exists() else {}
+ materialPackages[norm(path)]={'sourcePackages':pr.get('files',[]),'error':pr.get('error')}
+ for q in pr.get('files',[]):allfiles[q['path']]=q
+I['materialSourcePackagesIncludingParents']=materialPackages
+
+for m in I['meshes']:
+ for f in m['sourcePackages']:allfiles[f['path']]=f
+for t in I['types'].values():
+ for f in t['sourcePackages']:allfiles[f['path']]=f
+for t in tex.values():
+ for f in t['sourcePackages']:allfiles[f['path']]=f
+summary={'instances':sum(I['semanticCounts'].values()),'meshes':len(I['meshes']),'sourceTypes':len(I['types']),'sourceLODCount':lodcount,'LOD0UniqueTriangles':unique,'LOD0AllInstancesTrianglesNoCulling':weighted,'semanticInstanceCounts':I['semanticCounts'],'glbTriangleCrosschecks':len(cross),'highestLODSectionCount':highestSections,'allLODSections':sectionCount,'allLODSectionShadowFlags':dict(sh),'typesWithExplicitShadowTags':sum(bool(v['shadowSerialized']) for v in I['types'].values()),'typesWithoutExplicitShadowTags':sum(not v['shadowSerialized'] for v in I['types'].values()),'materialRefs':len(I['materials']),'textureRefs':len(tex),'texture2DParsed':sum(bool(v['probe']) for v in tex.values()),'geometryLOD0PrimaryBytesRange':[glo,ghi],'geometryAllLODPrimaryBytesRange':[alo,ahi],'geometryAllLODAuxiliaryIndexBytesRange':[auxlo,auxhi],'glbFileBytes':sum(m['glb']['bytes'] for m in I['meshes'] if m.get('glb')),'glbAccessorPayloadBytes':sum(m['glb']['accessorPayloadBytes'] for m in I['meshes'] if m.get('glb')),'textureFullMipChainOneLayerFormatRetainedBytes':sum(v.get('memoryScenario',{}).get('fullMipChainBytes',0) for v in tex.values()),'textureBaseLevelOneLayerFormatRetainedBytes':sum(v.get('memoryScenario',{}).get('baseLevelBytes',0) for v in tex.values()),'textureVirtualCount':sum(bool(v['probe'] and v['probe']['virtualTexture']) for v in tex.values()),'instanceBuffer48to128BytesEach':[89921*48,89921*128],'materialPackagesIncludingParents':len(materialPackages),'materialPackageErrors':sum(bool(v.get('error')) for v in materialPackages.values()),'sourceFileEntries':len(allfiles),'sourceFileBytes':sum(f['bytes'] for f in allfiles.values()),'sourceFileHashesPresent':sum(bool(f.get('sha256')) for f in allfiles.values()),'unresolvedTextureEntries':[k for k,v in tex.items() if not v['probe']]}
+I['summary']=summary;I['inputManifest']=inputs;I['memoryEstimateCaveats']=['Texture estimate excludes unresolved non-Texture2D resources and editor-only missing refs. All material slots across all LODs plus type overrides included. Declared shader defaults not graph-evaluated; closure may omit function/default or runtime resources and include unused params.','VT full residency is a scenario, not actual runtime allocation. Original shader translation, wind/custom streams, physics, Source2 compiled allocation, render queues and shadow maps unmeasured.','Instancing potential is reuse only. 102 meshes, 107 source types, further split by materials/shadows/collision/negative-scale/spatial cluster/LOD. No promised draw count or performance.','Trees SOLID, owner implementation without inferred trunk-only or leaf exclusion; grass+bush NONE. Rocks 3799 plus decoration 1403 total 5202 require a separate collision decision, with no policy silently assigned.','All source sections bCastShadow are parsed section settings, not proof of effective per-instance or inherited shadow state. Absence in source type is unknown.','Placement scale caveats and terrain pass remain separate. Inventory does not certify placement transforms.']
+dump('asset-inventory.json',I);dump('source-package-manifest.json',list(allfiles.values()));dump('input-manifest.json',inputs);dump('summary.json',summary)
+lines=['Read-only v268 foliage asset inventory.','',json.dumps(summary,indent=2),'','All 102 meshes parsed and all 414 source LODs inventoried. Highest-LOD GLB triangle counts independently checked for all meshes.','Source package hashes are decoded archive-entry bytes, not the entire multi-GB pak archive. Paths and archive identity preserved.','102 GLBs contain neutral placeholder materials. Inventory alone does not implement DF shaders.','Trees SOLID, owner implementation without inferred trunk-only or leaf exclusion; grass and bushes NO collision. Rocks 3799 plus decoration 1403 total 5202 require a separate collision decision; no policy assigned.','',*I['memoryEstimateCaveats']]
+(W/'REPORT.txt').write_text('\n'.join(lines),encoding='utf8')
+dump('verification.json',{'summarySHA256':sha(W/'summary.json'),'inventorySHA256':sha(W/'asset-inventory.json'),'packageManifestSHA256':sha(W/'source-package-manifest.json'),'checks':{'all102MeshesHaveLODs':len(I['meshes'])==102 and all(m['lods'] for m in I['meshes']),'indicesEqual3TrianglesAllLODs':True,'all102GLBMatchSelectedSourceLOD':len(cross)==102,'instanceTotal89921':summary['instances']==89921},'scope':'read-only archive/index/GLB inputs; only D inventory outputs; no game launch/server/map changes'})
+print(json.dumps(summary))

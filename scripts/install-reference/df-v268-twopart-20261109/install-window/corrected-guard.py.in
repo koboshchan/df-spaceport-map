@@ -1,0 +1,32 @@
+from pathlib import Path
+import subprocess,json,datetime,time,os,hashlib,ast
+Q=Path('@@DF_PATH_DF_V268_TWOPART_20261109@@/install-window');ID='@@DF_PRIVATE_CONTAINER_ID@@'
+def log(event,**kw):
+ with (Q/'corrected-guard.jsonl').open('a')as f:f.write(json.dumps(dict(utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),event=event,**kw))+'\n')
+def state():
+ return json.loads(subprocess.check_output(['docker','inspect','--format','{{json .State}}',ID],timeout=10,text=True))
+start=json.loads((Q/'guard-armed.json').read_text())['utc']
+remaining=max(0,900-(datetime.datetime.now(datetime.timezone.utc)-datetime.datetime.fromisoformat(start)).total_seconds())
+deadline=time.monotonic()+remaining
+log('armed',pid=os.getpid(),codeSHA=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),originalStart=start,remaining=remaining,conditions='verified exit/crash OR no exact-map A2S at deadline; never RCON failure',baseline=state())
+(Q/'CORRECTED-GUARD.json').write_text(json.dumps(dict(pid=os.getpid(),codeSHA=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),originalStart=start,remaining=remaining,conditions='actual verified exit OR no exact-map A2S at original deadline; RCON ignored'),indent=2))
+while True:
+ try:
+  st=state();reason=None
+  if not st['Running'] and st['Status'] in ['exited','dead']:reason='verified process exit'
+  p=subprocess.run(['docker','exec',ID,'python3','/debugtest/a2s.py'],timeout=9,capture_output=True,text=True)
+  exact=p.returncode==0 and 'df_spaceport_v268_twopart'in p.stdout
+  log('sample',state=st,A2Sexact=exact,A2S=p.stdout,error=p.stderr)
+  if time.monotonic()>=deadline:
+   if exact:log('deadline_healthy_keep');break
+   reason='no exact-map A2S at original 15 minute deadline'
+  if reason:
+   log('recovery_condition',reason=reason)
+   tree=ast.parse((Q/'install.py').read_text())
+   # Reuse only reviewed restore function and dependencies, never execute installer.
+   nodes=[n for n in tree.body if isinstance(n,(ast.Import,ast.ImportFrom)) or isinstance(n,ast.FunctionDef) and n.name in ['save','sha','docker','identity','restore']]
+   ns={};exec(compile(ast.Module(body=nodes,type_ignores=[]),'<reviewed-recovery>','exec'),ns)
+   ns.update(S=Path('@@DF_PATH_CS2_SPACEPORT_PRIVATE@@'),Q=Q,ID=ID)
+   ns['restore']();log('recovery_finished');break
+ except Exception as e:log('inspection_error_no_lifecycle',error=repr(e))
+ time.sleep(10)

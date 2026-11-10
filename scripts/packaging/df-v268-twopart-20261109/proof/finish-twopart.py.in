@@ -1,0 +1,15 @@
+from pathlib import Path
+import psutil,subprocess,json,os,traceback
+q=Path('@@DF_PATH_DF_V268_TWOPART_20261109@@/proof')
+try:
+ owner=json.loads((q/'runner.json').read_text())['pid']
+ try:
+  p=psutil.Process(owner)
+  assert any('prepare-twopart.py'in x for x in p.cmdline())
+  p.wait(timeout=43200)
+ except psutil.NoSuchProcess:pass
+ assert(q/'THREE-COMPILED.json').exists(),'preparation/compiler not completed'
+ r=subprocess.run(['@@DF_USER_HOME@@/miniconda3/python.exe',str(q/'qa-twopart.py')])
+ assert r.returncode==0
+except BaseException:
+ (q/'FINISH-BLOCKER.json').write_text(traceback.format_exc());raise

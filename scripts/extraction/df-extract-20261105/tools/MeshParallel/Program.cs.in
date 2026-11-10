@@ -1,0 +1,122 @@
+using System.Text.Json;
+using System.Diagnostics;
+using System.Reflection;
+using System.Security.Cryptography;
+using CUE4Parse.FileProvider;
+using CUE4Parse.UE4.Versions;
+using CUE4Parse.Encryption.Aes;
+using CUE4Parse.Compression;
+using CUE4Parse.UE4.Assets;
+using CUE4Parse.UE4.Assets.Exports.Texture;
+
+using CUE4Parse.UE4.Assets.Exports.Material;
+using CUE4Parse_Conversion;
+using CUE4Parse_Conversion.Options;
+using CUE4Parse_Conversion.Textures;
+using CUE4Parse_Conversion.Exporters;
+using Serilog;
+Log.Logger=new LoggerConfiguration().MinimumLevel.Error().WriteTo.Console().CreateLogger();
+var root=@"@@DF_PATH_DF_EXTRACT_20261105@@";
+var output=Path.Combine(root,"meshes");
+Directory.CreateDirectory(output);
+int shard=int.Parse(args[0]);int shardCount=int.Parse(args[1]);
+var state=Path.Combine(output,"parallel","shard-"+shard);Directory.CreateDirectory(state);
+string StatePath(string name)=>Path.Combine(state,name);
+
+const long cap=60_000_000_000L;
+long used=Directory.EnumerateFiles(root,"*",SearchOption.AllDirectories).Sum(f=>new FileInfo(f).Length);
+var lastCheck=DateTime.MinValue;
+void Check(bool force=false){
+ if(used>cap-256_000_000)throw new OperationCanceledException("60GB cumulative cap reached");
+ if(new DriveInfo("E").AvailableFreeSpace<20_000_000_000L)throw new OperationCanceledException("20GB disk reserve reached");
+ if(!force && (DateTime.UtcNow-lastCheck).TotalSeconds<10)return;
+ var psi=new ProcessStartInfo("powershell.exe"){UseShellExecute=false,RedirectStandardOutput=true,RedirectStandardError=true,CreateNoWindow=true};
+ psi.ArgumentList.Add("-NoProfile");psi.ArgumentList.Add("-File");psi.ArgumentList.Add(Path.Combine(output,"guard.original.ps1"));
+ using var proc=Process.Start(psi)!;var result=proc.StandardOutput.ReadToEnd();proc.WaitForExit();
+ if(proc.ExitCode!=0)throw new OperationCanceledException("DF/ACE guard stop "+result);
+ lastCheck=DateTime.UtcNow;
+}
+void Write(string relative,byte[] bytes){
+ Check(); var path=Path.GetFullPath(Path.Combine(output,relative));
+ if(!path.StartsWith(output+Path.DirectorySeparatorChar,StringComparison.OrdinalIgnoreCase))throw new Exception("unsafe output path");
+ if(used+bytes.LongLength+256_000_000>cap)throw new OperationCanceledException("60GB cumulative cap");
+ Directory.CreateDirectory(Path.GetDirectoryName(path)!); File.WriteAllBytes(path,bytes); used+=bytes.LongLength;
+}
+void Json(string relative,object value){
+var bytes=System.Text.Encoding.UTF8.GetBytes(JsonSerializer.Serialize(value));
+if(!relative.Contains('/')&&!relative.Contains('\\')){File.WriteAllBytes(StatePath(relative),bytes);return;}
+Write(relative,bytes);
+}
+void Append(string relative,object value){
+ Check();var text=JsonSerializer.Serialize(value)+Environment.NewLine;
+ var bytes=System.Text.Encoding.UTF8.GetByteCount(text);if(used+bytes+16_000_000>cap)throw new OperationCanceledException("60GB cap");
+ File.AppendAllText(StatePath(relative),text);used+=bytes;
+}
+Check(true);
+File.WriteAllText(StatePath("worker.pid"),Environment.ProcessId.ToString());
+var index=new Dictionary<string,Entry>(StringComparer.OrdinalIgnoreCase);
+foreach(var line in File.ReadLines(Path.Combine(root,"index-manifest.jsonl"))){
+ using var doc=JsonDocument.Parse(line);var e=doc.RootElement;
+ index[e.GetProperty("path").GetString()!]=new(e.GetProperty("path").GetString()!,e.GetProperty("pak").GetString()!,e.GetProperty("size").GetInt64());
+}
+OodleHelper.Initialize(Path.Combine(root,"tools","oodle-data-shared.dll"));
+
+using var kj=JsonDocument.Parse(File.ReadAllText(Path.Combine(root,"community-aes-keys.json")));
+var keys=kj.RootElement.GetProperty("Keys").EnumerateArray().GroupBy(x=>x.GetProperty("guid").GetString()).Select(g=>g.First()).ToDictionary(x=>x.GetProperty("guid").GetString()!.Replace("-","").ToUpperInvariant(),x=>x.GetProperty("key").GetString()!);
+keys["00000000000000000000000000000000"]=kj.RootElement.GetProperty("MainKey").GetString()!;
+using var p=new StreamedFileProvider("DeltaForce",new VersionContainer(EGame.GAME_DeltaForce),StringComparer.OrdinalIgnoreCase);p.Initialize();
+foreach(var pak in File.ReadAllLines(Path.Combine(root,"pak-paths.txt"))){Check();p.RegisterVfs(pak.Trim());}
+foreach(var r in p.UnloadedVfs.ToArray()){Check();var guid=r.EncryptionKeyGuid.ToString().Replace("-","").ToUpperInvariant();if(keys.TryGetValue(guid,out var key))p.SubmitKey(r.EncryptionKeyGuid,new FAesKey(key));}
+
+CUE4Parse.UE4.Assets.ObjectTypeRegistry.RegisterClass("VirtualMaterialInstanceConstant",typeof(CUE4Parse.GameTypes.DFHO.Assets.Exports.UVirtualMaterialInstanceConstant));
+
+
+var candidates=JsonDocument.Parse(File.ReadAllText(Path.Combine(output,"parallel","remaining.json"))).RootElement.EnumerateArray().Select(x=>x.GetString()!).Where((x,i)=>i%shardCount==shard).ToArray();
+Json("input-manifest.json",new{candidates,count=candidates.Length,sha256=Convert.ToHexString(SHA256.HashData(System.Text.Encoding.UTF8.GetBytes(string.Join("\n",candidates)))),time=DateTime.UtcNow});
+var opt=new ExportOptions(meshFormat:EMeshFormat.Gltf2,meshQuality:EMeshQuality.Highest,exportMaterials:false,socketFormat:ESocketFormat.None,includeDisabledMeshSections:true);
+Json("format.json",new{format="glTF2 binary GLB via official GltfMeshFormat/StaticMeshDto",sourceRevision="3d166bf4b3ad4eed458b641637089e2dd04c595d",units="source UEcm; output meters",basis="output=(UE.X,UE.Z,UE.Y)*0.01; normals/tangents swappedYZ and normalized by official converter",materialPolicy="slot names and exact DF references sidecars; GLB neutral placeholders only, no guessed PBR",lod="highest available sourceLOD, recorded per model",collision="GLB has no collision. BodySetup JSON sidecar when available, no promise native physics reconstruction",cap,textureDecode=false,placements=false});
+int ok=0,failed=0,processed=0,models=0;bool validated=false;var watch=Stopwatch.StartNew();
+Json("progress.json",new{phase="mounted-export-starting",pid=Environment.ProcessId,total=candidates.Length,ok,failed,processed,time=DateTime.UtcNow});
+foreach(var path in candidates){
+ Check();used=Directory.EnumerateFiles(root,"*",SearchOption.AllDirectories).Sum(f=>new FileInfo(f).Length);
+ try{
+ var pkg=p.LoadPackage(path) as Package??throw new Exception("Package unavailable");
+ int found=0;
+ foreach(var lazy in pkg.ExportsLazy){
+ Check(); if(lazy.Value is not CUE4Parse.UE4.Assets.Exports.StaticMesh.UStaticMesh mesh)continue;found++;models++;
+ using var dto=new CUE4Parse_Conversion.Dto.StaticMeshDto(mesh,opt);
+ if(dto.LODs.Count==0)throw new Exception("No render LOD");
+ var lod=dto.LODs[0];
+ if(lod.Vertices.Length==0||lod.Indices.Length==0)throw new Exception("Empty vertex/index buffer");
+ string stem=path[..path.LastIndexOf('.')];
+ if(!Path.GetFileName(stem).Equals(mesh.Name,StringComparison.OrdinalIgnoreCase))stem+="/"+mesh.Name;
+ var slots=mesh.StaticMaterials.Select((s,i)=>new{index=i,slot=s.MaterialSlotName?.Text,material=s.MaterialInterface?.ResolvedObject?.GetPathName(),resolved=s.MaterialInterface?.ResolvedObject!=null}).ToArray();
+ var files=new CUE4Parse_Conversion.Formats.Meshes.GltfMeshFormat().BuildStaticMesh(mesh.Name,mesh.GetPathName(),opt,dto);
+ var outputs=new List<object>(); 
+ foreach(var file in files){
+ Check();
+ var rel=stem+(file.NameSuffix??"")+"."+file.Extension;
+ Write(rel,file.Data);
+ var full=Path.Combine(output,rel);
+ var glb=SharpGLTF.Schema2.ModelRoot.Load(full);
+ long verts=0,indices=0;var attrs=new HashSet<string>();int primitives=0;
+ foreach(var gm in glb.LogicalMeshes)foreach(var prim in gm.Primitives){primitives++;verts+=prim.GetVertexAccessor("POSITION").Count;indices+=prim.GetIndices()?.Count??0;foreach(var k in prim.VertexAccessors.Keys)attrs.Add(k);}
+ if(verts==0||indices==0)throw new Exception("GLB roundtrip empty geometry");
+ outputs.Add(new{relative=rel,bytes=file.Data.LongLength,sha256=Convert.ToHexString(SHA256.HashData(file.Data)),vertices=verts,indices,primitives,attributes=attrs.ToArray(),materials=glb.LogicalMaterials.Select(m=>m.Name).ToArray(),roundtrip="SharpGLTF ModelRoot.Load validated"});
+ }
+ object? collision=null;string? collisionError=null;
+ try{var body=mesh.BodySetup?.ResolvedObject?.Object?.Value;if(body!=null){var bytes=System.Text.Encoding.UTF8.GetBytes(Newtonsoft.Json.JsonConvert.SerializeObject(body));Write(stem+".collision.json",bytes);collision=new{path=stem+".collision.json",bytes=bytes.Length};}}catch(Exception ex){collisionError=ex.Message;}
+ var meta=new{package=path,name=mesh.Name,objectPath=mesh.GetPathName(),archive=(p.Files[path] as CUE4Parse.UE4.VirtualFileSystem.VfsEntry)?.Vfs.Path,sourceLOD=lod.SourceLodIndex,sourceLODCount=mesh.RenderData?.LODs.Length,vertices=lod.Vertices.Length,indices=lod.Indices.Length,uvChannels=1+lod.ExtraUvs.Length,slots,sections=lod.Sections.Select(s=>new{s.MaterialIndex,s.FirstIndex,s.NumFaces}),collision,collisionError,outputs,materialMetadataRoot=Path.Combine(root,"material-metadata-supplement","materials"),effectiveParameterReport=Path.Combine(root,"material-coverage","effective-material-parameters.json"),textureManifest=Path.Combine(root,"spacecenter-superset","textures.jsonl"),materialShaderSemantics="not translated"};
+ Json(stem+".metadata.json",meta);Append("exports.jsonl",meta);
+ if(!validated){validated=true;Json("first-model-validated.json",meta);}
+ }
+ if(found==0)throw new Exception("Candidate package contained no StaticMesh exports");ok++;
+ }catch(OperationCanceledException){throw;}catch(Exception ex){failed++;Append("failures.jsonl",new{package=path,error=ex.ToString()});}
+ processed++;
+ Json("progress.json",new{phase="exporting",pid=Environment.ProcessId,total=candidates.Length,processed,ok,failed,models,firstModelValidated=validated,elapsedSeconds=watch.Elapsed.TotalSeconds,cumulativeBytes=used,time=DateTime.UtcNow});
+ if(processed%25==0)GC.Collect();
+ if(!validated&&processed>=5)throw new Exception("No validated pilot among first five candidates; stopped");
+}
+long outputBytes=Directory.EnumerateFiles(output,"*",SearchOption.AllDirectories).Sum(f=>new FileInfo(f).Length);
+Json("completed.json",new{total=candidates.Length,processed,ok,failed,models,outputBytes,elapsedSeconds=watch.Elapsed.TotalSeconds,time=DateTime.UtcNow});
+record Entry(string path,string pak,long size);

@@ -1,0 +1,36 @@
+import pathlib,json
+r=pathlib.Path('@@DF_PATH_DF_EXTRACT_20261105@@/loot-skeletal');o=r/'renders-opened'
+s=(r/'renders/repair.py').read_text()
+s=s.replace("R=P/'loot-skeletal/renders'","R=P/'loot-skeletal/renders-opened'")
+start=s.index('bpy.ops.wm.read_factory_settings')
+end=s.index("receipt={'pid'")
+setup=s[start:end]
+s=s[:start]+s[end:]
+s=s.replace("old=json.loads((R/'manifest.json').read_text());receipt=old;receipt['repairPID']=os.getpid()","")
+s=s.replace("'devices':devices,","'devices':[],")
+s=s.replace("for i,m in enumerate(models):\n if i not in [1,11,17,20]: continue", """statepath=P/'loot-skeletal/static-paired-v3/final-state-manifest.json'
+statebytes=statepath.read_bytes()
+states={m['canonical'].lower():m for m in json.loads(statebytes)['models']}
+receipt['sourceManifestSHA256']=hashlib.sha256(statebytes).hexdigest()
+receipt['orientation']='Canonical basis preserved; no actor/component placement baked; preview not world resting orientation; Source2 import unvalidated'
+receipt['rawSourceClipByteHash']='unavailable'
+for i,m in enumerate(models):
+ name=pathlib.Path(m['output']).stem
+ cert=states[name.lower()]
+ certpath=pathlib.Path(cert['manifest'])
+ certbytes=certpath.read_bytes()
+ if cert['status']!='PAIR_STATIC_VERIFIED':
+  receipt['tiles'].append({'index':i,'name':name,'state':'UNRESOLVED','reason':cert.get('reason'),'certificate':str(certpath),'certificateSHA256':hashlib.sha256(certbytes).hexdigest(),'bindings':[]})
+  save()
+  continue
+ m=dict(m);m['output']=str(certpath.parent/'opened.glb')
+ assert hashlib.sha256(pathlib.Path(m['output']).read_bytes()).hexdigest()==cert['opened']['sha256']
+ assert cert['opened']['skins']==0 and cert['opened']['animations']==0
+"""+"\n".join(" "+l for l in setup.splitlines())+"""
+ receipt['devices']=devices
+ receipt['pid']=os.getpid()
+ save()""")
+s=s.replace("'name':pathlib.Path(m['output']).stem,","'name':name,'state':'OPENED','certificate':str(certpath),'certificateSHA256':hashlib.sha256(certbytes).hexdigest(),'sourceClip':cert['sourceOpen'],'frame':cert['frame'],'frameTime':cert['frameTime'],")
+s=s.replace("'closedPose':'UNPROVEN original static-baked outputs'","'closedPose':'not used; certified opened inputs only'")
+(o/'render-opened.py').write_text(s)
+print('prepared',len(s))

@@ -1,0 +1,108 @@
+import json,pathlib,collections,csv,re,struct
+ROOT=pathlib.Path(r'@@DF_PATH_DF_EXTRACT_20261105@@');O=ROOT/'material-coverage';S=ROOT/'spacecenter-superset'
+def load(p):return json.loads(p.read_text(encoding='utf-8-sig'))
+def save(n,x):(O/n).write_text(json.dumps(x,ensure_ascii=False,indent=2),encoding='utf-8')
+def table(n,rows):
+ if not rows:return
+ with (O/n).open('w',newline='',encoding='utf-8-sig') as f:
+  w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader()
+  for r in rows:w.writerow({k:json.dumps(v,ensure_ascii=False) if isinstance(v,(dict,list)) else v for k,v in r.items()})
+a=load(pathlib.Path(r'@@DF_PATH_SPACEPORT_KAT_REBUILD_20261105@@\audit.json'));tr=load(O/'texture-match-table.json');mr=load(O/'material-coverage.json');eff=load(O/'effective-material-parameters.json')
+byim=collections.defaultdict(list)
+for r in tr:byim[r['image_name']].append(r)
+tx={}
+for l in (S/'textures.jsonl').open(encoding='utf-8'):
+ d=json.loads(l)
+ if d.get('ok'):tx[d['path'].removesuffix('.uasset')]=d
+objs={};pkgs=collections.defaultdict(list)
+for base in [S/'materials',ROOT/'material-metadata-supplement/materials']:
+ for f in base.rglob('*.json'):
+  d=load(f);pkg=d.get('Package') or f.parent.relative_to(base).as_posix();d['_pkg']=pkg;objs[pkg+'.'+d['Name']]=d
+for k,d in objs.items():pkgs[d['_pkg']].append(d)
+def canonical(ref):
+ if not isinstance(ref,dict):return None
+ p=ref.get('ObjectPath')
+ return p.rsplit('.',1)[0] if p else None
+# Explicit inherited scalar/vector/texture values already resolved. Add active static overrides, and property overrides only when cooked activation flag exists.
+alpha_keys={'BlendMode':['bOverride_BlendMode'],'OpacityMaskClipValue':['bOverride_OpacityMaskClipValue'],'TwoSided':['bOverride_TwoSided'],'ShadingModel':['bOverride_ShadingModel'],'ShadingModels':['bOverride_ShadingModel']}
+static=[]
+for key,e in eff.items():
+ prop={k:dict(status='unknown_not_explicit',value=None) for k in alpha_keys};switches={};layers=[]
+ for ck in reversed(e['parent_chain']):
+  d=objs.get(ck,{});p=d.get('Properties',{});bp=p.get('BasePropertyOverrides',{})
+  if d.get('Type')=='Material':
+   for k in prop:
+    alias='bTwoSided' if k=='TwoSided' and 'bTwoSided' in p else k
+    if alias in p:prop[k]=dict(status='explicit_base_property',value=p[alias],source=ck)
+  for k,fl in alpha_keys.items():
+   active=next((f for f in fl if bp.get(f) is True),None)
+   if active and k in bp:prop[k]=dict(status='active_explicit_MI_override',value=bp[k],source=ck,activation_flag=active)
+   elif k in bp:layers.append(dict(source=ck,property=k,value=bp[k],status='not_effective_without_explicit_activation_flag',activation_flags={f:bp.get(f,'absent') for f in fl}))
+  def collect(x,trail=''):
+   if isinstance(x,dict):
+    for k,v in x.items():
+     if k in ('StaticSwitchParameters','StaticComponentMaskParameters') and isinstance(v,list):
+      for q in v:
+       pi=q.get('ParameterInfo',{});sid=(k,pi.get('Name',q.get('ParameterName')),pi.get('Association'),pi.get('Index'))
+       static.append(dict(material=key,source=ck,container=trail+'.'+k,raw=q))
+       if q.get('bOverride') is True:switches[str(sid)]=dict(source=ck,raw=q,status='explicit_active_override')
+     collect(v,trail+'.'+k)
+   elif isinstance(x,list):
+    for v in x:collect(v,trail)
+  collect(p)
+ e['effective_alpha_shading_explicit']=prop;e['inactive_or_unknown_property_override_evidence']=layers;e['effective_static_overrides']=switches
+ # Root expression defaults are only declared graph defaults, not effective function-layer values.
+ root=e['parent_chain'][-1];rd=objs.get(root,{});expr=pkgs.get(rd.get('_pkg'),[])
+ e['declared_graph_parameter_defaults']=[dict(source=x['_pkg']+'.'+x['Name'],type=x.get('Type'),properties=x.get('Properties',{}),effective_status='declared_default_not_evaluated_through_function_switch_context') for x in expr if 'Parameter' in x.get('Type','') and x.get('Type','').startswith('MaterialExpression')]
+save('effective-material-parameters.json',eff);table('static-parameter-evidence.csv',static)
+slots=[];image_context=collections.defaultdict(set);image_pending=collections.Counter()
+for mrow,m in zip(mr,a['materials']):
+ cs=mrow['DF_material_candidates'];images=sorted({n['image'] for n in m.get('nodes',[]) if n.get('image')})
+ # No duplicate-named MI is chosen by count or best score.
+ sole=cs[0] if len(cs)==1 else None
+ refs={}
+ if sole:
+  for p in eff[sole]['effective_parameters']:
+   if p['kind']=='TextureParameterValues':
+    path=canonical(p['value'])
+    if path:refs.setdefault(path,[]).append(dict(parameter=p['parameter_info'],source=p['source'],relation=p['relation']))
+ for im in images:
+  rs=byim.get(im,[])
+  candidates=set(p.removesuffix('.uasset') for r in rs for p in r['candidate_paths'])
+  intersect=sorted(candidates.intersection(refs))
+  if len(intersect)==1:
+   status='unique_canonical_MI_parameter_context';selected=intersect[0];image_context[im].add(selected)
+  elif len(intersect)>1:status='ambiguous_multiple_MI_bound_candidates';selected=None;image_pending[im]+=1
+  else:status='no_MI_parameter_proof' if sole else 'MI_identity_ambiguous_or_unmatched';selected=None;image_pending[im]+=1
+  slots.append(dict(blender_material=m['name'],blender_image=im,DF_MI=sole,MI_candidates=cs,texture_candidates=sorted(candidates),canonical_MI_reference_intersection=intersect,context_status=status,selected_candidate_for_report_only=selected,parameter_evidence=refs.get(selected,[]),application_approved=False,shader_slot_semantics='unknown_until_actual_root_function_graph_trace'))
+ mrow['context_verified_texture_associations']=sum(s['context_status']=='unique_canonical_MI_parameter_context' for s in slots if s['blender_material']==m['name'])
+ mrow['DF_binding_status']='canonical_name_plus_parameter_evidence_only_not_mesh_slot_identity'
+slotimages=[]
+for r in tr:
+ choices=sorted(image_context[r['image_name']])
+ status=('resolved_in_all_using_MI_contexts' if len(choices)==1 and not image_pending[r['image_name']] else 'unique_in_some_MI_contexts_others_pending' if len(choices)==1 else 'context_conflict' if len(choices)>1 else 'pending')
+ slotimages.append(dict(image_name=r['image_name'],source_path=r['source_path'],initial_match=r['match'],MI_context_candidates=choices,MI_context_status=status,pending_context_count=image_pending[r['image_name']]))
+save('slot-texture-binding-evidence.json',slots);table('slot-texture-binding-evidence.csv',slots);save('image-context-resolution.json',slotimages);table('image-context-resolution.csv',slotimages);save('material-coverage.json',mr);table('material-coverage.csv',mr)
+# Full material/channel outcomes remain pending if shader context is not proved.
+channels=load(O/'channel-coverage.json')
+for c in channels:
+ ss=[s for s in slots if s['blender_material']==c['material'] and s['blender_image'] in c['blender_graph_images']]
+ c['canonical_MI_texture_context_count']=sum(s['context_status']=='unique_canonical_MI_parameter_context' for s in ss)
+ c['DF_effective_slot_binding']='canonical texture associations only; shader channel unresolved'
+ c['DF_packed_channel_graph']='unknown, no suffix inference'
+save('channel-coverage.json',channels);table('channel-coverage.csv',channels)
+# Metadata source provenance comes from archive manifest, not HD/DLC words in names.
+pkgpak={}
+for l in (S/'packages.jsonl').open(encoding='utf-8'):
+ d=json.loads(l);pkgpak[d['path'].removesuffix('.uasset')]=d.get('pak')
+prov=collections.Counter()
+for r in tx.values():
+ pak=r.get('pak') or pkgpak.get(r['path'].removesuffix('.uasset'))
+ prov['DLC PackContent archive' if pak and 'packcontent' in pak.lower() else 'shared base archive' if pak else 'unknown']+=1
+# Object-slot inventory from audit only, never modify geometry or UVs.
+objrows=[dict(object=o['name'],mesh=o['mesh'],material_slot_index=i,blender_material=m,DF_material_candidates=next((x['DF_material_candidates'] for x in mr if x['material']==m),[]),binding_status='source_slot_verified_DF_identity_pending') for o in a['objects'] for i,m in enumerate(o.get('materials',[]))]
+save('object-material-slot-inventory.json',objrows)
+summary=load(O/'summary.json')
+summary.update(unique_casefold_source_paths=len({r['source_path'].replace('/','\\').casefold() for r in tr}),unique_source_image_sha256=len({x.get('sha256') for x in a['images'] if x.get('sha256')}),source_image_sha256_is_not_asset_identity=True,material_name_candidates=dict(collections.Counter(r['DF_material_name_match'] for r in mr)),canonical_MI_texture_context_associations=dict(collections.Counter(x['context_status'] for x in slots)),ambiguous_image_context_outcomes=dict(collections.Counter(x['MI_context_status'] for x in slotimages if x['initial_match']=='ambiguous')),texture_archive_provenance=dict(prov),object_material_slot_count=len(objrows),parent_chains_complete=len(eff),metadata_pass=load(ROOT/'material-metadata-supplement/completed.json'),material_alpha_explicit_field_counts={k:sum(e['effective_alpha_shading_explicit'][k]['status']!='unknown_not_explicit' for e in eff.values()) for k in alpha_keys},remaining_blockers=['46 duplicate-named and 25 unmatched Blender material identities','Canonical name + MI parameter associations are not verified mesh-source identity','Shader function connections/static branches and packed channels need actual graph proof; stripped fields unknown','Some root defaults/function-layer texture bindings not evaluated','PNG alpha pixel range and explicit sRGB flags audit pending','No fallback for ambiguity; all modifications/builds blocked'])
+save('summary.json',summary);print(json.dumps(summary))
+

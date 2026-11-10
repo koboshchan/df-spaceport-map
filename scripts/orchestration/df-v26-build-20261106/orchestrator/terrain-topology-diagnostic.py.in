@@ -1,0 +1,50 @@
+from pathlib import Path
+import json,numpy as np,collections,hashlib,traceback,os
+from shapely.geometry import LineString,Point,Polygon
+from shapely.ops import unary_union
+from scipy.spatial import cKDTree
+O=Path('@@DF_PATH_DF_V26_BUILD_20261106@@/terrain-stage')
+def read(p):
+ v=[];f=[]
+ for l in Path(p).read_text().splitlines():
+  s=l.split()
+  if s and s[0]=='v':v.append(list(map(float,s[1:4])))
+  elif s and s[0]=='f':f.append([int(x)-1 for x in s[1:]])
+ return np.array(v),np.array(f)
+def main():
+ m=json.loads((O/'lowered-source-v4-manifest.json').read_text());out=[]
+ for a in m['assets']:
+  v,f=read(a['stagedSource']);sv,sf=read(a['originalSource']);mi=sv[:,:2].min(axis=0);ma=sv[:,:2].max(axis=0)
+  edges=collections.Counter();pairs={}
+  for t in f:
+   for i,j in [(t[0],t[1]),(t[1],t[2]),(t[2],t[0])]:
+    k=tuple(sorted([tuple(np.round(v[i],6)),tuple(np.round(v[j],6))]));edges[k]+=1;pairs[k]=(v[i],v[j])
+  boundary=[pairs[k]for k,n in edges.items()if n==1];inside=[];outside=[];tree=cKDTree(v[:,:2]);tj=[];gaps=[]
+  for u,w in boundary:
+   box=any(abs(u[j]-side)<1e-5 and abs(w[j]-side)<1e-5 for j in[0,1]for side in [mi[j],ma[j]])
+   if box:outside.append((u,w));continue
+   inside.append((u,w));d=w[:2]-u[:2];norm=d@d
+   if norm<1e-12:continue
+   idx=tree.query_ball_point((u[:2]+w[:2])/2,np.sqrt(norm)/2+1e-5)
+   vv=v[idx];t=((vv[:,:2]-u[:2])@d)/norm;perp=np.linalg.norm(vv[:,:2]-u[:2]-t[:,None]*d,axis=1)
+   relevant=(t>1e-7)&(t<1-1e-7)&(perp<1e-5)
+   if relevant.any():tj.append(dict(edge=[u.tolist(),w.tolist()],interiorCollinearVertices=int(relevant.sum())))
+   # Midpoint: source target other edge exact XY but heights may differ.
+   mid=(u+w)/2;other=[]
+   for e,z in boundary:
+    dd=z[:2]-e[:2];nn=dd@dd
+    if nn<1e-12:continue
+    tt=((mid[:2]-e[:2])@dd)/nn
+    if tt<-1e-7 or tt>1+1e-7:continue
+    if np.linalg.norm(e[:2]+tt*dd-mid[:2])<1e-5:
+     zz=e[2]+tt*(z[2]-e[2]);delta=abs(zz-mid[2])
+     if delta>1e-4:other.append(delta)
+   if other:gaps.append(dict(edge=[u.tolist(),w.tolist()],midpointVerticalGapCS=max(other)))
+  r=dict(name=a['canonicalID'],triangles=len(f),internalUnmatchedEdges=len(inside),tileBoundaryEdges=len(outside),tJunctionEdges=len(tj),heightDiscontinuityEdges=len(gaps),maxMidpointVerticalGapCS=max([g['midpointVerticalGapCS']for g in gaps],default=0),verticalDiscontinuities=gaps[:50],tJunctionExamples=tj[:10]);out.append(r);print(a['canonicalID'],r['internalUnmatchedEdges'],r['tJunctionEdges'],r['heightDiscontinuityEdges'],r['maxMidpointVerticalGapCS'],flush=True)
+ (O/'lowered-v4-topology-diagnostic.json').open('x').write(json.dumps(dict(assets=out,status='DIAGNOSTIC_NOT_FULL_STITCHED',note='Boundary unmatched edges interior to each tile separate height discontinuities and collinear Tjunctions, no fixing or certification.'),indent=2))
+if __name__=='__main__':
+ import sys
+ with (O/'topology-diagnostic.log').open('x',buffering=1)as log:
+  sys.stdout=log;sys.stderr=log
+  try:main();(O/'topology-diagnostic-exit.json').open('x').write('{"exitCode":0}')
+  except BaseException:traceback.print_exc();(O/'topology-diagnostic-exit.json').open('x').write('{"exitCode":1}');raise

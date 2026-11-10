@@ -1,0 +1,27 @@
+import pathlib,sys,json,hashlib,datetime
+sys.path.insert(0,'@@DF_PATH_SPACEPORT_KAT_REBUILD_20261105@@')
+from next_partition_lib import refs
+from srctools.vpk import VPK
+S=pathlib.Path('@@DF_PATH_DF_V26_BUILD_20261106@@/central-stage-17052918');Q=S/'packqa'
+evidence=[]
+for base,prefix in [(S/'ready/maps','df_spaceport_v26'),(pathlib.Path('@@DF_PATH_CS2_SPACEPORT_PRIVATE@@/latest-20261104'),'df_spaceport_v25')]:
+ for p in sorted(base.glob(prefix+'*.vpk')):
+  v=VPK(p);names=set(v.filenames());owners=[]
+  for n in names:
+   if n.endswith(('.vwrld_c','.vrman_c')):
+    for r in refs(v[n].read()):
+     if r.endswith('/world_visibility.vvis'):
+      owners.append({'owner':n,'ref':r,'present':r+'_c'in names})
+  evidence.append({'package':str(p),'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'VISreferences':owners})
+current=[x for x in evidence if 'v26'in x['package']]
+baseline=[x for x in evidence if 'v25'in x['package']]
+closure=json.loads((Q/'closure.json').read_text())
+assert len(current)==7 and len(baseline)==7
+assert len(closure['missing'])==7 and all(x.endswith('/world_visibility.vvis_c')for x in closure['missing'])
+assert all(x['VISreferences'] and all(not r['present']for r in x['VISreferences'])for x in evidence)
+classification={'classification':'optional ungenerated precomputed visibility stage output, not missing model/material/texture','evidence':evidence,'actualCompilerFlags':json.loads((S/'fullcompile/current.json').read_text())['command'],'stageNotRequested':'-vis absent; -world -entities -phys -nobakedlighting present','resourceSemantics':'RERL lists reference identifiers; absence alone does not establish mandatory load. Compiler emits world VIS reference even when optional VIS stage omitted. Exact same referenced-but-absent pattern in all seven installed v25.1 baseline packages.','documentation':[{'url':'https://developer.valvesoftware.com/wiki/Source_2_Docs/Level_Design/Visibility','quote':'Precomputed visibility improves the performance of rendering your map, but costs additional map compile time. If you would like to disable precomputed visibility for the entire map you can do that by setting the Precomputed Visibility property in the Map Properties dialog to Disabled.'},{'url':'https://www.source2.wiki/Basics/working-on-content/compiling-maps','finding':'Visibility is its own selectable build stage producing world_visibility.vvis_c, independent of world/entities/physics.'}],'qualification':'Offline equivalence classification, no new v26 runtime test. No precomputed VIS optimization; possible rendering performance and VIS-dependent feature limitations match baseline. No files fabricated or references stripped.'}
+(Q/'VIS-classification-final.json').write_text(json.dumps(classification,indent=2))
+payload=json.loads((Q/'payload-audit/payload-result.json').read_text());assert not payload['failures'] and payload['water1848Pass']
+receipt={'UTC':datetime.datetime.now(datetime.timezone.utc).isoformat(),'offlinePackageQAPass':True,'sevenPackages':json.loads((Q/'seven-packages.json').read_text()),'compiledPayloadsChecked':6324,'compiledWaterTriggers':1848,'requiredResourceClosurePass':True,'optionalUngeneratedVIS':closure['missing'],'VISclassificationEvidence':str(Q/'VIS-classification-final.json'),'rawClosurePreserved':str(Q/'closure.json'),'PHYSbudgetEvidence':str(Q/'PHYS-budget.json'),'runtimeTested':False,'noInstall':True,'scope':'Offline packaging/resource/payload QA. Not claim new runtime QA or additional typed mark promotion.'}
+(Q/'FINAL-OFFLINE-BUILD-RECEIPT.json').write_text(json.dumps(receipt,indent=2))
+print(json.dumps({'receipt':str(Q/'FINAL-OFFLINE-BUILD-RECEIPT.json'),'baselinePackages':len(baseline),'optionalVIS':7,'pass':True}))

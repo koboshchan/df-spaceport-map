@@ -1,0 +1,110 @@
+from pathlib import Path
+import json,hashlib,os,datetime,traceback,shutil,collections
+import numpy as np
+from shapely.geometry import Polygon
+from shapely.ops import unary_union
+P=Path('@@DF_PATH_DF_TERRAIN_FULL_20261106_V3@@'); B=P/'seam-v4/next-build'
+O=Path('@@DF_PATH_DF_V26_BUILD_20261106@@/terrain-stage')
+A=Path('@@DF_PATH_DF_V26_BUILD_20261106@@/terrain-asphalt-checkpoint')
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def save(n,d):
+ p=O/n
+ with p.open('x') as f:json.dump(d,f,indent=2)
+ return dict(path=str(p),sha256=sha(p))
+def mesh(p):
+ v=[];f=[]
+ for l in Path(p).read_text().splitlines():
+  s=l.split()
+  if not s:continue
+  if s[0]=='v':v.append(list(map(float,s[1:4])))
+  if s[0]=='f':f.append([int(x.split('/')[0])-1 for x in s[1:]])
+ return np.array(v),np.array(f)
+def main():
+ assert shutil.disk_usage('@@DF_DRIVE_E@@').free>=20*1024**3+256*1024**2
+ assert sha(B/'FINAL-HANDOFF.json')=='71184045cb0659689fda032e074b89dd45f7b4acec1782693169951704257f55'
+ assert sha(A/'road-triangle-manifest.json')=='abe1ec5898c6a9253f6cf0c82c41b7a957619e26f79a26c8f5976c352ec17016'
+ prov=Path('@@DF_PATH_DF_TERRAIN_GENERAL_20261106_V2@@/placement-provenance-v3-20261106T192742Z.json')
+ assert sha(prov)=='f5fbe5b3a754c2153aebcff3be0420eaa6963f791cce1210bd42c66888177947'
+ manifest=json.loads((B/'integration-manifest.json').read_text())
+ historical=json.loads((B/'contact-handoff-summary.json').read_text())
+ selected=json.loads((P/'ground-all85/ground-selection.json').read_text())['selected']
+ asphalt=json.loads((A/'road-triangle-manifest.json').read_text())['objects']
+ nine=[r for r in historical['objects'] if r['semanticClass']=='asphalt_ground_contact_candidate' and r['diagnosticFlags']['penetrationOver1CS']]
+ assert [r['index'] for r in nine]==[1,5,12,23,44,49,52,79,82]
+ mappings=[]
+ for r in nine:
+  i=r['index'];s=selected[i]['placement'];a=next(x for x in asphalt if x['objectPath']==r['objectPath'])
+  assert r['objectPath']==s['objectPath']==a['objectPath'] and r['meshObjectPath']==s['meshObjectPath']==a['meshObjectPath']
+  assert a['index']==i and a['matrixCS2']==s['matrixCS2'] and sha(a['source'])==a['sourceSHA256']
+  n=np.load(A/(str(i)+'.npz'));v=n['vertices'];f=n['triangles'];assert np.isfinite(v).all() and f.min()>=0 and f.max()<len(v)
+  mappings.append(dict(historicalIndex=i,objectPath=a['objectPath'],meshObjectPath=a['meshObjectPath'],matrixCS2=a['matrixCS2'],sourceSHA256=a['sourceSHA256'],triangleNPZ=str(A/(str(i)+'.npz')),triangleNPZSHA256=sha(A/(str(i)+'.npz'))))
+ mapping=save('approved-nine-mapping.json',dict(proof='Historical contact-handoff semantic+penetration filter exact9, ground-selection placement and new16 export objectPath+meshObjectPath+matrix+source SHA equality',historicalSHA256=sha(B/'contact-handoff-summary.json'),selectionSHA256=sha(P/'ground-all85/ground-selection.json'),objects=mappings))
+ print('MAPPING VERIFIED',mapping,flush=True)
+ checks=[];terrain=[]
+ for k,r in enumerate(manifest['artifacts']):
+  assert sha(r['sourceOBJ'])==r['sourceOBJsha256'],r['name']
+  assert sha(r['compiledFile'])==r['compiledSHA256'],r['name']
+  assert sha(r['fbx'])==r['fbxSHA256'],r['name']
+  q=Path(r['fbx']).with_suffix('.vmdl');assert sha(q)==r['vmdlSHA256'],r['name']
+  v,f=mesh(r['sourceOBJ']);assert np.isfinite(v).all() and f.min()>=0 and f.max()<len(v)
+  cross=np.cross(v[f[:,1]]-v[f[:,0]],v[f[:,2]]-v[f[:,0]])
+  assert np.all(cross[:,2]>0),r['name']
+  checks.append(dict(name=r['name'],kind=r['kind'],sourceOBJ=r['sourceOBJ'],sourceOBJSHA256=r['sourceOBJsha256'],compiledFile=r['compiledFile'],compiledSHA256=r['compiledSHA256'],fbxSHA256=r['fbxSHA256'],vmdlSHA256=r['vmdlSHA256'],vertices=len(v),triangles=len(f),minCrossZ=float(cross[:,2].min())))
+  terrain.append((r,v,f,v[:,:2].min(axis=0),v[:,:2].max(axis=0)))
+  if k%100==0:print('HASH+WINDING',k,flush=True)
+ protection=save('protected-baseline.json',dict(artifacts=checks,fineCount=sum(x['kind']!='CDLOD-derived' for x in checks),coarseCount=sum(x['kind']=='CDLOD-derived' for x in checks),roads=asphalt,noInputsChanged=True))
+ roadrows=[]
+ for a in mappings:
+  n=np.load(a['triangleNPZ']);rv=n['vertices'];rf=n['triangles'];rtris=rv[rf]
+  polygons=[Polygon(t[:,:2]) for t in rtris if abs(np.linalg.det(np.stack((t[1,:2]-t[0,:2],t[2,:2]-t[0,:2]))))>1e-8]
+  footprint=unary_union(polygons);over=[];maxpen=0.;fineconf=0;coarseconf=0
+  for r,v,f,lo,hi in terrain:
+   if np.any(rv[:,:2].max(axis=0)<lo) or np.any(rv[:,:2].min(axis=0)>hi):continue
+   tris=v[f];mask=np.all(tris[:,:,:2].max(axis=1)>=rv[:,:2].min(axis=0),axis=1)&np.all(tris[:,:,:2].min(axis=1)<=rv[:,:2].max(axis=0),axis=1)
+   areas=0.;bad=0;maxd=0.
+   for t in tris[mask]:
+    tp=Polygon(t[:,:2]);inter=tp.intersection(footprint)
+    if inter.area<1e-8:continue
+    areas+=inter.area
+    tc=np.linalg.solve(np.c_[t[:,:2],np.ones(3)],t[:,2])
+    for rt in rtris:
+     rp=Polygon(rt[:,:2])
+     if rp.area<1e-8 or not tp.intersects(rp):continue
+     g=tp.intersection(rp)
+     if g.area<1e-8:continue
+     rc=np.linalg.solve(np.c_[rt[:,:2],np.ones(3)],rt[:,2])
+     parts=[g] if g.geom_type=='Polygon' else list(g.geoms)
+     for gg in parts:
+      if gg.geom_type!='Polygon':continue
+      xy=np.array(gg.exterior.coords);d=np.c_[xy,np.ones(len(xy))]@(tc-rc);peak=float(d.max())
+      maxd=max(maxd,peak);bad+=int(peak> -1.)
+   if areas:
+    fine=r['kind']!='CDLOD-derived'
+    if fine:fineconf+=bad
+    else:coarseconf+=bad
+    maxpen=max(maxpen,maxd)
+    over.append(dict(name=r['name'],protectedFine=fine,overlapAreaCS2=areas,intersectionsCloserThan1u=bad,maxTerrainAboveRoadCS=maxd))
+  roadrows.append(dict(index=a['historicalIndex'],footprintAreaCS2=footprint.area,overlaps=over,protectedFineIntersectionsCloserThan1u=fineconf,coarseIntersectionsCloserThan1u=coarseconf,maxTerrainAboveRoadCS=maxpen))
+  print('ROAD EXACT OVERLAP',a['historicalIndex'],len(over),'fineconf',fineconf,'coarse',coarseconf,flush=True)
+ overlap=save('road-footprint-exact-overlap.json',dict(metric='Exact triangle XY intersections; extrema of terrain plane minus source asphalt plane at intersection vertices, not sparse samples. Positive means terrain above road. Fine intersections reported only, never edited.',roads=roadrows))
+ # Continue zero175 evidence without making occupancy assumptions.
+ nodes=np.asarray(json.loads((P/'cdlod-nodes-v9.json').read_text())['nodes'],dtype=np.uint32);leaf=nodes[nodes[:,20]==0];fl=leaf.view(np.float32)
+ registry=json.loads((P/'coverage-blocker.json').read_text());groups={};zeros=[]
+ for r in registry['records']:
+  o=r['bounds']['Origin'];mask=(abs(fl[:,5]-o['X']/100)<=63)&(abs(fl[:,6]-o['Y']/100)<=63)
+  g='fine168' if r['payloadPresent'] else 'zero175' if r['bounds']['BoxExtent']['Z']==0 else 'coarse681'
+  hist=collections.Counter(map(int,leaf[mask,23]));groups.setdefault(g,collections.Counter()).update(hist)
+  if g=='zero175':zeros.append(dict(slot=Path(r['package']).name,containedLeafCenters=int(mask.sum()),field23ValueCounts={hex(k):v for k,v in hist.items()},status='UNRESOLVED_NOT_EMPTY'))
+ assert len(zeros)==175
+ zero=save('zero175-new-checkpoint.json',dict(counts=dict(certifiedEmpty=0,certifiedMissingRequiredTerrain=0,unresolved=175),groupField23NodeCounts={g:{hex(k):v for k,v in c.items()} for g,c in groups.items()},slots=zeros,semantics='field23 remains undecoded; correlations not occupancy proof; original raw inputs preserved',sourceHashes={n:sha(P/n) for n in ['cdlod-nodes-v9.json','coverage-blocker.json']}))
+ save('checkpoint.json',dict(status='VERIFIED_RECOVERED_INPUTS_EXACT_NINE_MAPPING_AND_OVERLAP_AUDIT_COMPLETE_NO_LOWERING_YET',utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),pid=os.getpid(),mapping=mapping,protection=protection,overlap=overlap,zero175=zero,remaining=['lower only approximate terrain under exact road footprint; boundary conforming triangulation and fine seam protection','native changed-assets compile requires central isolated window','all pose/bodyframe verification, slope/playerhull and launchbridge-ground tests','175 occupancy semantics unresolved'],compiled=False,installed=False))
+if __name__=='__main__':
+ O.mkdir(parents=True,exist_ok=True)
+ with (O/'resume-audit.log').open('x',buffering=1) as log:
+  import sys;sys.stdout=log;sys.stderr=log
+  try:
+   save('process.json',dict(pid=os.getpid(),utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),scratchBudgetBytes=256*1024**2,reserveBytes=20*1024**3,scope='metadata exact geometry audit only; no native compiler'))
+   main()
+   save('exit.json',dict(exitCode=0,utc=datetime.datetime.now(datetime.timezone.utc).isoformat()))
+  except BaseException:
+   traceback.print_exc();save('exit.json',dict(exitCode=1,utc=datetime.datetime.now(datetime.timezone.utc).isoformat()));raise

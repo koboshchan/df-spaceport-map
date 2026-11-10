@@ -1,0 +1,203 @@
+import os,sys,json,hashlib,math,time,traceback,collections,re
+from pathlib import Path
+ROOT=Path('@@DF_PATH_SPACEPORT_KAT_REBUILD_20261105@@')
+os.environ.update(TEMP=str(ROOT/'tmp'),TMP=str(ROOT/'tmp'),PIP_CACHE_DIR=str(ROOT/'pip-cache'))
+sys.dont_write_bytecode=True
+import numpy as np
+from PIL import Image
+OUT=ROOT/'addon/materials/kat_spaceport';OUT.mkdir(parents=True,exist_ok=True)
+(OUT/'t').mkdir(exist_ok=True)
+P=json.load(open(ROOT/'audit.json',encoding='utf-8'));SUP=json.load(open(ROOT/'material-supplement.json',encoding='utf-8'));IM={i['name']:i for i in P['images']};MAPPING=json.load(open(ROOT/'material-map.json',encoding='utf-8'))
+CACHE=collections.OrderedDict();LIMIT=128*1024**2;SIZES={};MAXPIX=16*1024**2;BAKED={}
+LUMA=np.array([.2126,.7152,.0722],dtype=np.float32)
+def srgb(x):return np.where(x<=.04045,x/12.92,((x+.055)/1.055)**2.4)
+def encode(x):return np.where(x<=.0031308,12.92*x,1.055*np.maximum(x,0)**(1/2.4)-.055)
+def scalar(x):
+ x=np.asarray(x,dtype=np.float32);return np.sum(x[...,:3]*LUMA,axis=-1,keepdims=True) if x.shape[-1]>1 else x
+def color(x):
+ x=np.asarray(x,dtype=np.float32);return np.repeat(x,3,axis=-1) if x.shape[-1]==1 else x[...,:3]
+def const(x):return np.array(x[:3] if isinstance(x,list) else [x],dtype=np.float32).reshape(1,1,-1)
+def image_size(name):
+ if name not in SIZES:
+  with Image.open(IM[name]['output']) as im:
+   if im.width*im.height>MAXPIX:raise ValueError('image exceeds 16M pixel guard')
+   if im.mode not in ['1','L','LA','P','RGB','RGBA','RGBX']:raise ValueError('unsupported image mode '+im.mode)
+   SIZES[name]=im.size
+ return SIZES[name]
+def load(name):
+ key=IM[name]['sha256']
+ if key in CACHE:CACHE.move_to_end(key);return CACHE[key]
+ w,h=image_size(name);need=w*h*4
+ while CACHE and sum(a.nbytes for a in CACHE.values())+need>LIMIT:CACHE.popitem(last=False)
+ with Image.open(IM[name]['output']) as im:a=np.asarray(im.convert('RGBA')).copy()
+ CACHE[key]=a;return a
+
+def sample(name,ys,xs,W,H):
+ a=load(name);h,w=a.shape[:2];x=(xs+.5)*w/W-.5;y=(ys+.5)*h/H-.5;x0=np.floor(x).astype(int);y0=np.floor(y).astype(int);fx=(x-x0)[None,:,None];fy=(y-y0)[:,None,None]
+ def pixels(y,x):
+  v=a[y[:,None]%h,x[None,:]%w,:].astype(np.float32)/255
+  if IM[name]['colorspace']=='sRGB':v[...,:3]=srgb(v[...,:3])
+  elif IM[name]['colorspace'] not in ['Non-Color','Linear Rec.709']:raise ValueError('colorspace '+IM[name]['colorspace'])
+  return v
+ v0=pixels(y0,x0)*(1-fx)+pixels(y0,x0+1)*fx;v1=pixels(y0+1,x0)*(1-fx)+pixels(y0+1,x0+1)*fx
+ return (v0*(1-fy)+v1*fy).astype(np.float32)
+
+class Graph:
+ def __init__(self,m):
+  self.m=m;self.nodes={n['name']:n for n in m['nodes']};self.links={(l['to_node'],l['to_socket']):(l['from_node'],l['from_socket']) for l in m['links']};self.bsdf=None
+  if self.nodes:
+   outputs=[n for n in m['nodes'] if n['type']=='ShaderNodeOutputMaterial']
+   if len(outputs)!=1:raise ValueError('ambiguous output')
+   edge=self.links.get((outputs[0]['name'],'Surface'))
+   if not edge or self.nodes[edge[0]]['type']!='ShaderNodeBsdfPrincipled':raise ValueError('unsupported surface')
+   self.bsdf=edge[0]
+ def expr_input(self,name,socket):
+  if (name,socket) in self.links:return self.expr(*self.links[name,socket])
+  return ('const',next(i['value'] for i in self.nodes[name]['inputs'] if i['name']==socket))
+ def expr(self,name,socket):
+  n=self.nodes[name];t=n['type'];s=SUP[self.m['name']][name]
+  if t=='ShaderNodeTexImage':
+   if any(s.get(k)!=v for k,v in [('interpolation','Linear'),('extension','REPEAT'),('projection','FLAT')]):raise ValueError('unsupported image settings')
+   if (name,'Vector') in self.links:raise ValueError('mapped UV unsupported')
+   return ('image',n['image'],socket)
+  if t=='ShaderNodeSeparateColor':
+   if s['mode']!='RGB':raise ValueError('non-RGB separate')
+   return ('channel',self.expr_input(name,'Color'),['Red','Green','Blue'].index(socket))
+  if t=='ShaderNodeCombineColor':
+   if s['mode']!='RGB':raise ValueError('non-RGB combine')
+   return ('combine',*[self.expr_input(name,x) for x in ['Red','Green','Blue']])
+  if t=='ShaderNodeInvert':return ('invert',self.expr_input(name,'Fac'),self.expr_input(name,'Color'))
+  if t=='ShaderNodeMixRGB':
+   if s['use_alpha']:raise ValueError('mix alpha unsupported')
+   if n['blend_type'] not in ['MULTIPLY','OVERLAY']:raise ValueError('mix mode')
+   return ('mix',n['blend_type'],s['use_clamp'],*[self.expr_input(name,x) for x in ['Fac','Color1','Color2']])
+  if t=='ShaderNodeNormalMap':
+   if s['space']!='TANGENT' or s['uv_map']:raise ValueError('non-default normal UV/space')
+   return ('normal',self.expr_input(name,'Strength'),self.expr_input(name,'Color'))
+  raise ValueError('unsupported node '+t)
+ def input(self,socket):
+  if self.bsdf:return self.expr_input(self.bsdf,socket)
+  return ('const',{'Base Color':self.m['diffuse'][:3],'Alpha':self.m['diffuse'][3],'Metallic':0.,'Roughness':.5,'Normal':[0.,0.,1.]}[socket])
+
+def dependencies(e):
+ if e[0]=='image':return {e[1]}
+ out=set()
+ for v in e[1:]:
+  if isinstance(v,tuple):out.update(dependencies(v))
+ return out
+
+def evaluate(e,ys,xs,W,H,memo):
+ key=json.dumps(e,ensure_ascii=True)
+ if key in memo:return memo[key]
+ typ=e[0];ev=lambda x:evaluate(x,ys,xs,W,H,memo)
+ if typ=='const':v=const(e[1])
+ elif typ=='image':
+  rgba=sample(e[1],ys,xs,W,H);v=rgba[...,3:4] if e[2]=='Alpha' else rgba[...,:3]
+ elif typ=='channel':v=color(ev(e[1]))[...,e[2]:e[2]+1]
+ elif typ=='combine':v=np.concatenate(np.broadcast_arrays(*[scalar(ev(x)) for x in e[1:]]),axis=-1)
+ elif typ=='invert':
+  f=np.clip(scalar(ev(e[1])),0,1);c=color(ev(e[2]));v=c*(1-f)+(1-c)*f
+ elif typ=='mix':
+  f=np.clip(scalar(ev(e[3])),0,1);a=color(ev(e[4]));b=color(ev(e[5]));mixed=a*b if e[1]=='MULTIPLY' else np.where(a<.5,2*a*b,1-2*(1-a)*(1-b));v=a*(1-f)+mixed*f
+  if e[2]:v=np.clip(v,0,1)
+ elif typ=='normal':
+  c=color(ev(e[2]))*2-1;strength=scalar(ev(e[1]));v=c.copy();v[...,:2]*=strength;v[...,2:3]=1+(v[...,2:3]-1)*np.clip(strength,0,1);v=v/np.maximum(np.linalg.norm(v,axis=-1,keepdims=True),1e-20)
+ else:raise ValueError(typ)
+ memo[key]=v;return v
+
+def canonical(e):
+ if e[0]=='image':
+  i=IM[e[1]];return ('image',i['sha256'],i['colorspace'],e[2])
+ return tuple(canonical(x) if isinstance(x,tuple) else x for x in e)
+
+def linear_decode(v):return v/12.92 if v<=.04045 else ((v+.055)/1.055)**2.4
+def linear_encode(v):return 12.92*v if v<=.0031308 else 1.055*v**(1/2.4)-.055
+def as_rgb(v):return list(v)[:3] if isinstance(v,(list,tuple)) else [v]*3
+def as_scalar(v):return sum(x*w for x,w in zip(as_rgb(v),[.2126,.7152,.0722])) if isinstance(v,(list,tuple)) else v
+
+def reference(e,x,y,W,H):
+ # Pure Python point evaluator independent from vectorized evaluate/sample.
+ typ=e[0];ev=lambda z:reference(z,x,y,W,H)
+ if typ=='const':return e[1]
+ if typ=='image':
+  a=load(e[1]);h,w=a.shape[:2];u=(x+.5)*w/W-.5;v=(y+.5)*h/H-.5;xx=math.floor(u);yy=math.floor(v);fx=u-xx;fy=v-yy;out=[]
+  for ch in range(4):
+   z=0.
+   for dx,wx in [(0,1-fx),(1,fx)]:
+    for dy,wy in [(0,1-fy),(1,fy)]:
+     value=float(a[(yy+dy)%h,(xx+dx)%w,ch])/255
+     if ch<3 and IM[e[1]]['colorspace']=='sRGB':value=linear_decode(value)
+     z+=value*wx*wy
+   out.append(z)
+  return out[3] if e[2]=='Alpha' else out[:3]
+ if typ=='channel':return as_rgb(ev(e[1]))[e[2]]
+ if typ=='combine':return [as_scalar(ev(q)) for q in e[1:]]
+ if typ=='invert':
+  f=max(0,min(1,as_scalar(ev(e[1]))));return [a*(1-f)+(1-a)*f for a in as_rgb(ev(e[2]))]
+ if typ=='mix':
+  f=max(0,min(1,as_scalar(ev(e[3]))));a=as_rgb(ev(e[4]));b=as_rgb(ev(e[5]));out=[]
+  for aa,bb in zip(a,b):
+   blend=aa*bb if e[1]=='MULTIPLY' else (2*aa*bb if aa<.5 else 1-2*(1-aa)*(1-bb));v=aa*(1-f)+blend*f;out.append(max(0,min(1,v)) if e[2] else v)
+  return out
+ if typ=='normal':
+  v=[2*z-1 for z in as_rgb(ev(e[2]))];s=as_scalar(ev(e[1]));v=[v[0]*s,v[1]*s,1+(v[2]-1)*max(0,min(1,s))];l=math.sqrt(sum(z*z for z in v));return [z/l for z in v]
+ raise ValueError(typ)
+
+def bake(e,kind):
+ signature=hashlib.sha256(json.dumps((kind,canonical(e)),sort_keys=True).encode()).hexdigest()[:24];rel='materials/kat_spaceport/t/'+signature+'_'+kind+'.png';dest=ROOT/'addon'/rel
+ if rel in BAKED:return rel
+ deps=dependencies(e);dims=[image_size(x) for x in deps];W=max([d[0] for d in dims]+[1]);H=max([d[1] for d in dims]+[1]);channels=3 if kind in ['color','normal'] else 1
+ if W*H>MAXPIX:raise ValueError('output pixel guard')
+ a=np.empty((H,W,channels),dtype=np.uint8);rows=max(1,min(16,65536//W))
+ for y in range(0,H,rows):
+  ys=np.arange(y,min(y+rows,H));xs=np.arange(W);v=evaluate(e,ys,xs,W,H,{})
+  if kind=='color':v=encode(np.clip(color(v),0,1))
+  elif kind=='normal':v=color(v)*.5+.5
+  else:v=scalar(v)
+  a[y:y+len(ys)]=np.rint(np.clip(v,0,1)*255).astype(np.uint8)
+ errors=[]
+ for x,y in [(0,0),(W//2,H//2),(W-1,H-1)]:
+  expected=reference(e,x,y,W,H)
+  if kind=='color':expected=np.array([linear_encode(float(v)) for v in as_rgb(expected)])
+  elif kind=='normal':expected=np.array(as_rgb(expected))*.5+.5
+  else:expected=np.array([as_scalar(expected)])
+  errors.append(float(np.max(np.abs(a[y,x]/255-np.clip(expected,0,1)))))
+ if max(errors)>1/255+.00001:raise AssertionError(('independent sample mismatch',kind,errors))
+ Image.fromarray(a[...,0] if channels==1 else a).save(dest,compress_level=2)
+ BAKED[rel]={'width':W,'height':H,'samples':len(errors),'max_sample_error':max(errors),'bytes':dest.stat().st_size};return rel
+
+def validate_vmat(text):
+ lines=text.splitlines();assert lines[0]=='Layer0' and lines[1]=='{' and lines[-1]=='}';keys=[]
+ for line in lines[2:-1]:
+  match=re.fullmatch(r'\s*([A-Za-z_][A-Za-z_0-9]*)\s+(?:"([^"\n]*)"|([0-9.]+))\s*',line);assert match,line;key=match.group(1);assert key not in keys,key;keys.append(key)
+  if key.startswith('Texture'):
+   p=match.group(2);assert p.startswith('materials/kat_spaceport/') and (ROOT/'addon'/p).is_file(),p
+ assert 'shader' in keys
+
+def tests():
+ ev=lambda e:evaluate(e,np.array([0]),np.array([0]),1,1,{})
+ assert np.allclose(ev(('mix','MULTIPLY',False,('const',1.),('const',[.2,.4,.8]),('const',.5))),[.1,.2,.4])
+ assert np.allclose(ev(('combine',('const',.25),('invert',('const',1),('const',.75)),('const',1))),[.25,.25,1])
+ assert np.allclose(encode(srgb(np.array([0,.04,.2,.5,1]))),[0,.04,.2,.5,1])
+ assert np.allclose(ev(('mix','OVERLAY',False,('const',1),('const',[.25,.75,.5]),('const',.2))),[.1,.6,.2])
+ assert np.allclose(np.linalg.norm(ev(('normal',('const',1),('const',[.25,.75,1]))),axis=-1),1)
+ return ['multiply linear','combine inverted green','sRGB roundtrip','overlay both branches','normal unit length']
+
+def main():
+ started=time.time();report={'tests':tests(),'success':[],'failures':[],'nonnode_constants':[],'notes':['Source2 csgo_complex versus Blender Principled different BRDFs, shader input transfer not a pixel-identical renderer.','Baking at maximum upstream input dimensions with linear-filtered UV centers is not identical to evaluating graph after later GPU mip/filter operations.','AO white: source MRA blue multiplication already part of graph Base Color.','Normal normalized from connected Combine R/invertG/B=1 once, Source2 OpenGL tangent convention.','49 nonnode diffuse constants are explicit fallback, original surface engine shading not audited.','Disconnected input-image alpha ignored; only source Principled Alpha determines transparency.']}
+ for index,m in enumerate(P['materials']):
+  try:
+   g=Graph(m);safe=MAPPING[m['name']];fields=[('shader','csgo_complex.vfx'),('F_PAINT_VERTEX_COLORS',0),('F_ADDITIVE_BLEND',0),('F_ALPHA_TEST',0),('F_SELF_ILLUM',0),('F_METALNESS_TEXTURE',1),('g_bFogEnabled',1),('g_vColorTint','[1 1 1 1]')]
+   for socket,kind,key in [('Base Color','color','TextureColor'),('Metallic','metal','TextureMetalness'),('Roughness','rough','TextureRoughness')]:fields.append((key,bake(g.input(socket),kind)))
+   normal=g.input('Normal')
+   if not g.bsdf or (g.bsdf,'Normal') not in g.links:normal=('const',[0.,0.,1.])
+   fields.append(('TextureNormal',bake(normal,'normal')));fields.append(('TextureAmbientOcclusion',bake(('const',1.),'ao')))
+   alpha=as_scalar(reference(g.input('Alpha'),0,0,1,1))
+   if alpha<1:fields.extend([('F_TRANSLUCENT',1),('TextureTranslucency',bake(g.input('Alpha'),'trans')),('g_flOpacityScale',1)])
+   if not g.bsdf:report['nonnode_constants'].append({'name':m['name'],'diffuse':m['diffuse']})
+   text='Layer0\n{\n'+''.join('\t'+k+' '+('"'+v+'"' if isinstance(v,str) else str(v))+'\n' for k,v in fields)+'}\n';validate_vmat(text);(OUT/(safe+'.vmat')).write_text(text,encoding='utf-8');report['success'].append({'name':m['name'],'id':safe,'alpha':alpha})
+  except Exception as ex:report['failures'].append({'name':m['name'],'error':str(ex),'traceback':traceback.format_exc()})
+  if index%25==0:
+   print(json.dumps({'done':index+1,'total':len(P['materials']),'failures':len(report['failures']),'textures':len(BAKED),'seconds':round(time.time()-started,1)}),flush=True);(ROOT/'material-progress.json').write_text(json.dumps({'done':index+1,'failures':report['failures']},ensure_ascii=True))
+ report.update(texture_count=len(BAKED),textures=BAKED,elapsed_seconds=time.time()-started,vmat_count=len(report['success']),max_sample_error=max([v['max_sample_error'] for v in BAKED.values()]+[0]));(ROOT/'material-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8');print(json.dumps({k:v for k,v in report.items() if k not in ['textures','success','nonnode_constants']}),flush=True);return int(bool(report['failures']))
+if __name__=='__main__':sys.exit(main())

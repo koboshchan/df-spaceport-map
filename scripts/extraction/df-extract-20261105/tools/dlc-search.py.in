@@ -1,0 +1,21 @@
+import json,re,collections
+from pathlib import Path
+r=Path(r'@@DF_PATH_DF_EXTRACT_20261105@@')
+rows=[json.loads(l) for l in (r/'index-manifest.jsonl').open()]
+dlc=[x for x in rows if 'PackContent' in x['pak']]
+for pak in dict.fromkeys(x['pak'] for x in dlc):
+ arr=[x for x in dlc if x['pak']==pak]
+ maps=[x for x in arr if re.search('SpaceCenter|SpaceCity|Spaceport|Ma1|航天',x['path'],re.I)]
+ print(Path(pak).name,'assets',len(arr),'map-related',len(maps))
+ for x in maps[:9]:print(' ',x['path'])
+sel=[x for x in dlc if re.search('FutureTech.*MI_Window_BrokenGlass_01_HD|MI_H_Industrial_Container_SupplyBox_02A.uasset',x['path'],re.I)]
+print('DLC priorities')
+for x in sel:print(x['path'])
+# list DLC map water and grass exact materials, not every heightmap tile
+more=[x for x in dlc if re.search('SpaceCenter',x['path'],re.I) and re.search('/[^/]*MI_[^/]*(Water|Grass)|/[^/]*(Water|Grass)[^/]*MI_',x['path'],re.I)]
+for x in more[:25]:print(x['path'])
+(r/'dlc-provenance.json').write_text(json.dumps(dict(aliases=[x for x in dlc if re.search('SpaceCenter|SpaceCity|Spaceport|Ma1|航天',x['path'],re.I)],priority=sel),indent=2))
+print('material sample')
+for i in [4,8,10,12,13]:
+ data=json.loads((r/'pilot'/f'material-{i:02}.json').read_text())
+ print(i,json.dumps(data)[:12500])

@@ -1,0 +1,29 @@
+from terrain_query import Terrain as Base
+from pathlib import Path
+import json,numpy as np,collections
+class Terrain(Base):
+ def __init__(self,root):
+  super().__init__(root);self.delta=json.loads((Path(root)/'seam-v4/seam-delta.json').read_text());self.changed={r['name']for r in self.delta['changed']};self.seamcache={}
+ def source(self,index,x,y):
+  name=Path(self.records[index]['package']).name
+  if name not in self.changed:return super().source(index,x,y)
+  if name not in self.seamcache:
+   v=[];f=[]
+   for l in (self.root/'seam-v4/staged'/(name+'.obj')).read_text().splitlines():
+    s=l.split()
+    if s[0]=='v':v.append(list(map(float,s[1:])))
+    elif s[0]=='f':f.append([int(a)-1 for a in s[1:]])
+   t=np.array(v)[np.array(f)];b=collections.defaultdict(list)
+   for i,tri in enumerate(t):
+    lo=np.floor(tri[:,:2].min(axis=0)/288).astype(int);hi=np.floor(tri[:,:2].max(axis=0)/288).astype(int)
+    for a in range(lo[0],hi[0]+1):
+     for c in range(lo[1],hi[1]+1):b[(a,c)].append(i)
+   self.seamcache[name]=(t,b)
+  t,b=self.seamcache[name];pts=np.c_[x*36-240984,-y*36-164808];keys=np.floor(pts/288).astype(int);z=np.full(len(x),np.nan)
+  for k in set(map(tuple,keys)):
+   ids=np.where(np.all(keys==k,axis=1))[0];q=pts[ids]
+   for ti in b.get(k,[]):
+    tri=t[ti];u=tri[1,:2]-tri[0,:2];v=tri[2,:2]-tri[0,:2];w=q-tri[0,:2];den=u[0]*v[1]-u[1]*v[0]
+    a=(w[:,0]*v[1]-w[:,1]*v[0])/den;c=(u[0]*w[:,1]-u[1]*w[:,0])/den
+    ok=(a>=-1e-7)&(c>=-1e-7)&(a+c<=1+1e-7)&~np.isfinite(z[ids]);z[ids[ok]]=tri[0,2]+a[ok]*(tri[1,2]-tri[0,2])+c[ok]*(tri[2,2]-tri[0,2])
+  return (z-8052.84)/(.9765625*.36),np.isfinite(z)

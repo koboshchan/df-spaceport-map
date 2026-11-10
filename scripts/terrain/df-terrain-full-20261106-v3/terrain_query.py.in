@@ -1,0 +1,50 @@
+"""Read-only exact triangle queries over staged source terrains."""
+import json
+from pathlib import Path
+import numpy as np
+class Terrain:
+ def __init__(self,root):
+  self.root=Path(root);self.records=json.loads((self.root/'coverage-blocker.json').read_text())['records']
+  self.poses=json.loads((self.root/'poses.json').read_text());self.cache={}
+  z=np.load(self.root/'atlas.npz');self.A,self.lo,self.coef=z['A'],z['lo'],z['coef']
+  self.rect=np.array([[r['bounds']['Origin']['X']-6300,r['bounds']['Origin']['X']+6300,r['bounds']['Origin']['Y']-6300,r['bounds']['Origin']['Y']+6300] for r in self.records])/100
+ def _rg(self,x,y):
+  ix=(x-self.lo[0])/8;iy=(y-self.lo[1])/8
+  i=np.clip(np.floor(ix).astype(int),0,self.A.shape[1]-2);j=np.clip(np.floor(iy).astype(int),0,self.A.shape[0]-2);a=ix-i;b=iy-j
+  rg=self.A[j,i]*(1-a)[:,None]*(1-b)[:,None]+self.A[j,i+1]*a[:,None]*(1-b)[:,None]+self.A[j+1,i]*(1-a)[:,None]*b[:,None]+self.A[j+1,i+1]*a[:,None]*b[:,None]
+  return rg@self.coef[:2]+self.coef[2]
+ @staticmethod
+ def tris(h00,h10,h01,h11,a,b,tess):
+  # a is row, b is column
+  diagonalFalse=np.where(a+b<=1,h00+a*(h10-h00)+b*(h01-h00),h11+(1-a)*(h01-h11)+(1-b)*(h10-h11))
+  diagonalTrue=np.where(a>=b,h00+a*(h10-h00)+b*(h11-h10),h00+b*(h01-h00)+a*(h11-h01))
+  first=np.where(tess,a>=b,a+b<=1)
+  return np.where(tess,diagonalTrue,diagonalFalse),first
+ def source(self,index,x,y):
+  r=self.records[index];name=Path(r['package']).name
+  if r['payloadPresent']:
+   if name not in self.cache:
+    d=json.loads((self.root/'decoded'/f'{name}.json').read_text())[0];R,C=d['rows'],d['cols'];h=np.array([s['h'] for s in d['samples']]).reshape(R,C);m=np.array([[s['m0'],s['m1']] for s in d['samples']]).reshape(R,C,2);p=self.poses[name]['Properties']['Position']
+    self.cache[name]=(h,m,p,R,C)
+   h,m,p,R,C=self.cache[name];rr=p['X']/100+126-x;cc=y-p['Y']/100;i=np.clip(np.floor(rr).astype(int),0,R-2);j=np.clip(np.floor(cc).astype(int),0,C-2);a=rr-i;b=cc-j;ts=(m[i,j,0]&128)!=0
+   v,first=self.tris(h[i,j],h[i+1,j],h[i,j+1],h[i+1,j+1],a,b,ts);mat=np.where(first,m[i,j,0],m[i,j,1])&127
+   return v,mat!=127
+  if r['bounds']['BoxExtent']['Z']==0:return np.full(x.shape,np.nan),np.zeros(x.shape,bool)
+  x0,x1,y0,y1=self.rect[index]
+  if name not in self.cache:
+   xs=np.unique(np.r_[x0,np.arange(np.ceil((x0-self.lo[0])/8),np.floor((x1-self.lo[0])/8)+1)*8+self.lo[0],x1]);ys=np.unique(np.r_[y0,np.arange(np.ceil((y0-self.lo[1])/8),np.floor((y1-self.lo[1])/8)+1)*8+self.lo[1],y1])
+   self.cache[name]=(xs,ys)
+  xs,ys=self.cache[name];i=np.clip(np.searchsorted(ys,y,side='right')-1,0,len(ys)-2);j=np.clip(np.searchsorted(xs,x,side='right')-1,0,len(xs)-2)
+  a=(y-ys[i])/(ys[i+1]-ys[i]);b=(x-xs[j])/(xs[j+1]-xs[j])
+  h00=self._rg(xs[j],ys[i]);h10=self._rg(xs[j],ys[i+1]);h01=self._rg(xs[j+1],ys[i]);h11=self._rg(xs[j+1],ys[i+1])
+  v,_=self.tris(h00,h10,h01,h11,a,b,np.zeros(len(x),bool))
+  return v,np.isfinite(v)
+ def world(self,points):
+  points=np.asarray(points);x=(points[:,0]+240984)/36;y=-(points[:,1]+164808)/36
+  values=np.full(len(points),np.nan);kinds=np.full(len(points),'uncovered',dtype='<U16');ids=np.full(len(points),-1,dtype=int)
+  # Canonical shared edge candidates agree within their own sources. First valid owns edge.
+  for i,r in enumerate(self.records):
+   x0,x1,y0,y1=self.rect[i];mask=(ids<0)&(x>=x0-1e-7)&(x<=x1+1e-7)&(y>=y0-1e-7)&(y<=y1+1e-7)
+   if not mask.any():continue
+   h,ok=self.source(i,x[mask],y[mask]);idx=np.where(mask)[0][ok];values[idx]=h[ok]*.9765625*.36+8052.84;ids[idx]=i;kinds[idx]='collision' if r['payloadPresent'] else 'CDLODderived'
+  return values,kinds,ids

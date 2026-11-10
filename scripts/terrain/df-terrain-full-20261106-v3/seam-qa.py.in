@@ -1,0 +1,44 @@
+from pathlib import Path
+import json,numpy as np,collections,hashlib
+P=Path(__file__).parent;O=P/'seam-v4';D=json.loads((O/'seam-delta.json').read_text());M=json.loads((P/'next-build/integration-manifest.json').read_text());names={r['canonicalID']:r for r in M['artifacts']};changed={r['name']for r in D['changed']};cache={}
+def read(n):
+ if n in cache:return cache[n]
+ v=[];f=[];path=(O/'staged'if n in changed else P/'staged')/(n+'.obj')
+ for l in path.read_text().splitlines():
+  a=l.split()
+  if a[0]=='v':v.append(list(map(float,a[1:])))
+  elif a[0]=='f':f.append([int(x)-1 for x in a[1:]])
+ v=np.array(v);f=np.array(f);cache[n]=(v,f);return v,f
+def edge(n,ax,fixed):
+ v,f=read(n);mask=abs(v[:,ax]-fixed)<1e-5;c=collections.Counter()
+ for tri in f:
+  for a,b in zip(tri,np.roll(tri,-1)):
+   if mask[a] and mask[b]:c[tuple(sorted((a,b)))]+=1
+ return sorted([tuple(sorted((tuple(np.round(v[a],6)),tuple(np.round(v[b],6)))))for(a,b),ct in c.items()if ct==1])
+results=[]
+for r in D['mixed']:
+ a=edge(r['coarse'],r['axis'],r['fixed']);b=edge(r['fine'],r['axis'],r['fixed'])
+ sa,sb=set(a),set(b);diff=sa^sb
+ results.append(dict(**r,coarseBoundaryEdges=len(a),fineBoundaryEdges=len(b),unmatchedEdges=len(diff),passExactSharedSegments=not diff))
+# Audit EVERY canonical shared edge incident to a changed asset, including corner propagation.
+cov=json.loads((P/'coverage-blocker.json').read_text())['records'];emap=collections.defaultdict(list)
+for r in cov:
+ n=Path(r['package']).name
+ if n not in names:continue
+ o=r['bounds']['Origin'];x=o['X']*.36-240984;y=-o['Y']*.36-164808;e=2268
+ for ax,fixed,lo,hi in [(0,x-e,y-e,y+e),(0,x+e,y-e,y+e),(1,y-e,x-e,x+e),(1,y+e,x-e,x+e)]:emap[(ax,round(fixed,6),round(lo,6),round(hi,6))].append(n)
+adj=[]
+for (ax,fixed,lo,hi),ns in emap.items():
+ if len(ns)!=2 or not changed.intersection(ns):continue
+ a,b=edge(ns[0],ax,fixed),edge(ns[1],ax,fixed)
+ # Coarse/coarse segments identical after corner propagation.
+ adj.append(dict(a=ns[0],b=ns[1],axis=ax,fixed=fixed,unmatchedEdges=len(set(a)^set(b))))
+audit=[]
+for n in changed:
+ v,f=read(n);norm=np.cross(v[f[:,1]]-v[f[:,0]],v[f[:,2]]-v[f[:,0]]);ec=collections.Counter()
+ for t in f:
+  for a,b in zip(t,np.roll(t,-1)):ec[tuple(sorted((a,b)))]+=1
+ audit.append(dict(name=n,vertices=len(v),triangles=len(f),finite=bool(np.isfinite(v).all()),upward=bool((norm[:,2]>1e-8).all()),nonmanifoldEdges=sum(c>2 for c in ec.values()),degenerate=int(sum(np.linalg.norm(norm,axis=1)<1e-8))))
+out=dict(status='PASS'if all(r['passExactSharedSegments']for r in results)and all(r['unmatchedEdges']==0 for r in adj)and all(r['finite']and r['upward']and r['nonmanifoldEdges']==0 and r['degenerate']==0 for r in audit)else'FAIL',mixed=results,changedIncidentAdjacencies=adj,meshAudit=audit,unchangedFineHashes={n:r['sourceOBJsha256']for n,r in names.items()if not r['approximate']},protectedHoleBoundaryTrianglesExcluded=sum(r['protectedHoleBoundaryTrianglesExcluded']for r in D['changed']))
+(O/'seam-source-qa.json').write_text(json.dumps(out,indent=2));print('SEAM QA',out['status'],len(changed),len(adj),flush=True)
+assert out['status']=='PASS'

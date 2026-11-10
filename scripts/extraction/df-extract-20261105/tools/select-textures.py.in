@@ -1,0 +1,25 @@
+import json
+from pathlib import Path
+r=Path(r'@@DF_PATH_DF_EXTRACT_20261105@@')
+names=[
+('T_H_Industrial_Container_SupplyBox_02A_CA','DLC85 MI_H_Industrial_Container_SupplyBox_02A BaseColorMap'),
+('T_H_Industrial_Container_SupplyBox_02A_NRM','DLC85 MI_H_Industrial_Container_SupplyBox_02A NRMap'),
+('T_H_Industrial_Container_SupplyBox_02A_Mask_HD','MI_H_Industrial_Container_SupplyBox_02A_Black_HD BlendMask'),
+('T_H_Industrial_Container_SupplyBox_01_CA','MI_H_Industrial_Container_SupplyBox_01 BaseColorMap'),
+('T_H_Industrial_Container_SupplyBox_01A_Mask_HD','MI_H_Industrial_Container_SupplyBox_01A_HD BlendMask'),
+('T_WaterDetail_03','SpaceCenter WaterMesh -> MI_WaterHD_FutureTech_01 DetailWaveNormal'),
+('T_Seafoam_03_NSH','SpaceCenter WaterMesh -> MI_WaterHD_FutureTech_01 FoamNormalSoftHeightMap'),
+('T_ShatterMask_2','DLC96 FutureTech MI_Window_BrokenGlass_01_HD DetailMask'),
+('T_Window_BrokenGlass_01_N_HD','DLC96 FutureTech MI_Window_BrokenGlass_01_HD Normal'),
+('T_GEN_Grass_Base_01c_CA','Ground_A_12 material slot13 -> MI_GEN_Grass_Base_01C BaseColorMap'),
+('T_GEN_Grass_Base_01c_NRM','Ground_A_12 material slot13 -> MI_GEN_Grass_Base_01C NRMap'),
+('T_Branding_08_C','SM_Branding_08 -> MI_Branding_08 DecalTexture')]
+allrows=[json.loads(l) for l in (r/'index-manifest.jsonl').open()]
+selected=[]
+for name,association in names:
+ rows=[x for x in allrows if x['path'].lower().endswith('/'+name.lower()+'.uasset')]
+ if name in ['T_WaterDetail_03','T_Seafoam_03_NSH']: rows=[x for x in rows if '/Materials_HD/' in x['path']]
+ if len(rows)!=1: raise ValueError((name,rows))
+ selected.append(dict(rows[0],association=association))
+(r/'textures-selected.json').write_text(json.dumps(selected,indent=2))
+for x in selected: print(x['path'],x['pak'].split('\\')[-1])

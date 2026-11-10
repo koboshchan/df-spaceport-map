@@ -1,0 +1,28 @@
+import pathlib,json,hashlib,shutil,os,sys,traceback,datetime
+R=pathlib.Path('@@DF_PATH_DF_V26_BUILD_20261106@@');S=R/'central-stage-17052918';sys.stdout=(S/'terrain-prep.log').open('w',buffering=1);sys.stderr=sys.stdout
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def save(n,x):(S/n).write_text(json.dumps(x,indent=2))
+save('terrain-prep-process.json',{'pid':os.getpid(),'parent':os.getppid(),'utc':datetime.datetime.now(datetime.timezone.utc).isoformat()})
+try:
+ T=pathlib.Path('@@DF_PATH_DF_TERRAIN_FULL_20261106_V3@@/seam-v4/next-build/integration-manifest.json')
+ allrows=json.loads(T.read_text())['artifacts'];rows=[a for a in allrows if a['kind']=='collision'];assert len(rows)==168
+ proof=json.loads((R/'terrain-stage/full168-pose-holes-native-proof.json').read_text());assert proof['status'].startswith('PASS_ALL168')
+ copied=[]
+ for a in rows:
+  assert not a.get('approximate') and a['nativeTriangleComparison']['tests']=='PASS'
+  assert 'lowered' not in a['fbx'].lower() and 'lowered' not in a['compiledFile'].lower()
+  model=pathlib.Path(a['fbx']).with_suffix('.vmdl')
+  for src,key,dst in [(pathlib.Path(a['fbx']),'fbxSHA256',S/'content/kat'/pathlib.Path(a['model']).with_suffix('.fbx')),(model,'vmdlSHA256',S/'content/kat'/a['model']),(pathlib.Path(a['compiledFile']),'compiledSHA256',S/'game/kat'/(a['model']+'_c'))]:
+   assert sha(src)==a[key],str(src);dst.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(src,dst)
+  copied.append(a)
+ print('validated168 baseline model/fbx/compiled SHA allPASS, copied504 files',flush=True)
+ save('terrain168-prepared.json',{'pass':True,'count':168,'manifestSHA256':sha(T),'artifacts':copied,'excludeLowering':True,'excludeRoad12Patch':True,'notFinalIntegration':True,'coarse681Policy':'not added by this prep pending exact baseline scope; no removals'})
+ E=R/'error-native-pilot-1a46fd2d/independent-1144e9e6/HANDOFF.json';h=json.loads(E.read_text())
+ for k,dest in [('source',S/'content/kat'/h['asset']),('candidate',S/'game/kat'/(h['asset']+'_c'))]:
+  src=pathlib.Path(h[k]['path']);assert sha(src)==h[k]['sha256'];dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(src,dest)
+ H=R/'cable-exact-d68/native-one-instance-1144/evidence/HANDOFF.json';c=json.loads(H.read_text())
+ src=pathlib.Path(c['source']);dst=S/'content/kat/models/df_v24'/src.name;dst.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(src,dst)
+ src=pathlib.Path(c['candidate']);assert sha(src)==c['candidateSHA256'];dst=S/'game/kat/models/df_v24'/src.name;shutil.copyfile(src,dst)
+ save('error-cube-assets-prepared.json',{'error':h,'cube':c,'cubeSourceSHA256':sha(pathlib.Path(c['source'])),'cubeMapEditPending':True,'noCompiler':True})
+ print('independent ERROR+Cube PHYS models staged, no native compiler invoked',flush=True)
+except BaseException:save('terrain-prep-failure.json',{'error':traceback.format_exc()});raise

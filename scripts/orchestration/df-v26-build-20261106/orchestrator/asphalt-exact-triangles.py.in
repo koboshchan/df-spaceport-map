@@ -1,0 +1,21 @@
+import bpy,json,hashlib,numpy as np
+from pathlib import Path
+P=Path('@@DF_PATH_DF_TERRAIN_FULL_20261106_V3@@')
+O=Path('@@DF_PATH_DF_V26_BUILD_20261106@@/terrain-asphalt-checkpoint');O.mkdir(parents=True,exist_ok=False)
+sel=json.loads((P/'ground-all85/ground-selection.json').read_text())
+proof=[]
+for i,rec in enumerate(sel['selected']):
+ r=rec['placement']
+ if 'Asphalt_Mesh_'not in r['meshObjectPath'] or 'Decal'in r['meshObjectPath']:continue
+ bpy.ops.wm.read_factory_settings(use_empty=True)
+ src=Path(r['meshSource']['outputs'][0]);bpy.ops.import_scene.gltf(filepath=str(src));vs=[];fs=[];offset=0
+ for ob in bpy.context.scene.objects:
+  if ob.type!='MESH':continue
+  coords=np.empty(len(ob.data.vertices)*3,dtype=np.float32);ob.data.vertices.foreach_get('co',coords);v=coords.reshape(-1,3)
+  bm=np.array(ob.matrix_world);v=v@bm[:3,:3].T+bm[:3,3]
+  ue=v*np.array([100,-100,100]);mat=np.array(r['matrixCS2']);world=ue@mat[:3,:3].T+mat[:3,3]
+  ob.data.calc_loop_triangles();tri=np.array([list(t.vertices)for t in ob.data.loop_triangles]);vs.append(world);fs.append(tri+offset);offset+=len(world)
+ np.savez_compressed(O/f'{i}.npz',vertices=np.concatenate(vs),triangles=np.concatenate(fs))
+ proof.append(dict(index=i,objectPath=r['objectPath'],meshObjectPath=r['meshObjectPath'],source=str(src),sourceSHA256=hashlib.sha256(src.read_bytes()).hexdigest(),matrixCS2=r['matrixCS2']))
+(O/'road-triangle-manifest.json').write_text(json.dumps(dict(objects=proof),indent=2))
+print('EXACT ASPHALT TRIANGLES',len(proof),flush=True)

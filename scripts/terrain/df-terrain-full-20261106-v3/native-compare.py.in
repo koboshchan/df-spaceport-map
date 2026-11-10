@@ -1,0 +1,38 @@
+import json,struct,pathlib,hashlib,numpy as np
+from scipy.spatial import cKDTree
+P=pathlib.Path(__file__).parent;O=P/'next-build'
+def readobj(p):
+ v=[];f=[]
+ for l in p.read_text().splitlines():
+  s=l.split()
+  if s[0]=='v':v.append(list(map(float,s[1:])))
+  elif s[0]=='f':f.append([int(i)-1 for i in s[1:]])
+ return np.asarray(v)[np.asarray(f)]
+def readphys(p):
+ raw=p.read_bytes();magic,n=struct.unpack_from('<II',raw);assert magic==0x3150484b;offset=8;parts=[]
+ for i in range(n):
+  nv,nt=struct.unpack_from('<II',raw,offset);offset+=8
+  v=np.frombuffer(raw,dtype='<f4',count=nv*3,offset=offset).reshape(-1,3);offset+=nv*12
+  f=np.frombuffer(raw,dtype='<i4',count=nt*3,offset=offset).reshape(-1,3);offset+=nt*12;parts.append(v[f])
+ assert offset==len(raw)
+ return np.concatenate(parts)
+M=json.loads((O/'integration-manifest.json').read_text());results=[]
+assert M['nativeCompileCount']==849
+for row in M['artifacts']:
+ name=row['canonicalID'];source=readobj(P/'staged'/(name+'.obj'));native=readphys(O/'native-physics'/(name+'.physbin'))
+ tree=cKDTree(source.mean(axis=1));d,idx=tree.query(native.mean(axis=1),k=1)
+ cyclic=np.stack([np.max(np.linalg.norm(native-np.roll(source[idx],j,axis=1),axis=2),axis=1) for j in range(3)]).min(axis=0)
+ ns=np.cross(source[idx,1]-source[idx,0],source[idx,2]-source[idx,0]);nn=np.cross(native[:,1]-native[:,0],native[:,2]-native[:,0]);norm=np.einsum('ij,ij->i',ns,nn)/(np.linalg.norm(ns,axis=1)*np.linalg.norm(nn,axis=1))
+ passed=len(source)==len(native) and len(np.unique(idx))==len(source) and np.max(cyclic)<.02 and norm.min()>.99999
+ r=dict(canonicalID=name,sourceTriangles=len(source),nativeTriangles=len(native),uniqueSourceMatches=len(np.unique(idx)),maxCentroidErrorCS=float(max(d)),maxCyclicVertexErrorCS=float(max(cyclic)),minOrientedNormalAgreement=float(min(norm)),toleranceCS=.02,tests='PASS' if passed else 'FAIL',physbinSHA256=hashlib.sha256((O/'native-physics'/(name+'.physbin')).read_bytes()).hexdigest())
+ results.append(r);print(name,r['tests'],r['maxCyclicVertexErrorCS'],flush=True)
+ row['nativeTriangleComparison']=r
+(O/'native-triangle-qa.json').write_text(json.dumps(dict(tests='PASS' if all(r['tests']=='PASS' for r in results) else 'FAIL',assets=results,maxVertexErrorCS=max(r['maxCyclicVertexErrorCS'] for r in results),scope='All849 full source triangle counts, bijective centroid matching, cyclic winding vertex proximity and upward normals. Float32 compilation tolerance .02CS. No runtime player-hull map test.'),indent=2))
+assert all(r['tests']=='PASS' for r in results),'Compiled geometry differs from source; see native-triangle-qa.json'
+M.update(status='OFFLINE_NATIVE_ASSETS_STAGED_GEOMETRY_QA_PASS_INTEGRATION_WARNINGS',qa=dict(nativeTriangles='PASS849',meshAudit=str(P/'mesh-audit.json'),seams=str(P/'qa.json'),ground=str(P/'ground-qa.json'),allCoarseRoadProp=str(P/'ground-all85/ground-qa.json'),calibration=str(P/'calibration.json')),blockers=['52 mixed fine/coarse boundaries have measured gaps max45.141783CS; no original terrain altered','681 fine native hole/occupancy masks unavailable, coarse cell availability only;175 slots unsupported','DF material weights not mapped, neutral stock material approximation explicitly flagged','Contact tested43 control meshes plus all85 coarse-pivot road/ground/prop/rock/street-class placements using250172vertices+185357triangle-centroids, not all object classes. Road/prop penetration/elevation annotated; no moves','Full map compile, runtime player hull QA, install not authorized and not performed'])
+(O/'integration-manifest.json').write_text(json.dumps(M,indent=2))
+for n in ['qa.json','ground-qa.json','calibration.json','mesh-audit.json','coverage-blocker.json']:
+ (O/n).write_bytes((P/n).read_bytes())
+owned=list(O.glob('*.json'))+list((O/'content/kat/models/df_terrain_v3').glob('*'))+list((O/'game/kat/models/df_terrain_v3').glob('*'))+list((O/'native-physics').glob('*'));(O/'ground-all85-qa.json').write_bytes((P/'ground-all85/ground-qa.json').read_bytes());closure={str(f.relative_to(O)):hashlib.sha256(f.read_bytes()).hexdigest() for f in owned+[O/'ground-all85-qa.json'] if f.is_file() and f.name!='output-sha256.json'}
+(O/'output-sha256.json').write_text(json.dumps(closure,indent=2))
+print('NATIVE TRIANGLE QA COMPLETE849',flush=True)
